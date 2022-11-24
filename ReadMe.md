@@ -26,3 +26,10 @@ Data is still being collected and predictions are currently a work in progress.
 * Superstition, ex. 12 over 5
 * Colors
 * Randomly select one of the selection methods 
+
+## Backlog
+
+* Get city info
+* Backfill missing colors
+* Finish Rivals table
+* Work on prediction methods

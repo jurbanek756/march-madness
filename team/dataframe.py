@@ -8,12 +8,14 @@ from fuzzywuzzy import fuzz
 import pandas as pd
 import requests
 
-D1_SCHOOLS = "https://en.wikipedia.org/wiki/List_of_NCAA_Division_I_men%27s_basketball_programs"
+WIKIPEDIA = "https://en.wikipedia.org/wiki"
+D1_BASKETBALL_SCHOOLS = f"{WIKIPEDIA}/List_of_NCAA_Division_I_men%27s_basketball_programs"
+DI_SCHOOLS = f"{WIKIPEDIA}/List_of_NCAA_Division_I_institutions"
 AP_RANKINGS = "https://www.ncaa.com/rankings/basketball-men/d1/associated-press"
 
 
 def get_all_d1_schools():
-    table = get_table(D1_SCHOOLS)
+    table = get_table(D1_BASKETBALL_SCHOOLS)
     columns = [c.string.strip() for c in table.find_all("th")]
     additional_rows = ["AP Ranking", "Tournament Ranking"]
     for r in additional_rows:
