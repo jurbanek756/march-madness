@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from data.colors import get_all_school_colors
 from data.school_names import update_school_name
 from data.soup_helpers import get_table
 from bs4 import BeautifulSoup
@@ -50,6 +51,19 @@ def add_tournament_rankings_to_dataframe_from_csv(df, filename):
             tuple_list.append((update_school_name(content[0]), content[1]))
     return add_data_to_dataframe(df, tuple_list, "Tournament Ranking")
 
+
+def add_team_colors_to_dataframe(df):
+    for school, color1, color2 in get_all_school_colors():
+        best_ratio = 0
+        best_index = -1
+        for i, row in df.iterrows():
+            ap_name = update_school_name(school)
+            ratio = fuzz.ratio(row["School"], ap_name)
+            if ratio > best_ratio:
+                best_ratio = ratio
+                best_index = i
+        df.at[best_index, "primary_color"] = color1
+        df.at[best_index, "secondary_color"] = color2
 
 def filter_none_values(df, attribute):
     return df[df[attribute].notnull()]
