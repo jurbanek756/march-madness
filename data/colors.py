@@ -47,5 +47,3 @@ def get_all_school_colors():
         if name:
             colors.append((name, get_color_name(color1), get_color_name(color2)))
     return colors
-
-

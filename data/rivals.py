@@ -8,6 +8,6 @@ RIVALRIES = {
     "University of Kansas": "Kansas State University",
     "University of Michigan": "Michigan State University",
     "University of Pennsylvania": "Princeton University",
-    "Harvard University": "Yale University"
+    "Harvard University": "Yale University",
 }
 RIVALRIES = RIVALRIES | {v: k for k, v in RIVALRIES.items()}

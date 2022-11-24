@@ -65,6 +65,7 @@ def add_team_colors_to_dataframe(df):
         df.at[best_index, "primary_color"] = color1
         df.at[best_index, "secondary_color"] = color2
 
+
 def filter_none_values(df, attribute):
     return df[df[attribute].notnull()]
 
