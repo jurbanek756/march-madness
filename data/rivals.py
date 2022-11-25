@@ -5,11 +5,11 @@ Sources:
 
 RIVALRIES = {
     "Duke University": "University of North Carolina",
-    "University of Michiagan": "Ohio State University",
+    "University of Michigan": "Ohio State University",
     "University of Kentucky": "University of Louisville",
-    "University of Cincannati": "Xavier University",
-    "Indiana University": "Purdue University",
-    "Gonzaga University": "St. Mary's University",
+    "University of Cincinnati": "Xavier University",
+    "Indiana University Bloomington": "Purdue University",
+    "Gonzaga University": "Saint Mary's College of California",
     "University of Kansas": "Kansas State University",
     "University of Michigan": "Michigan State University",
     "University of Pennsylvania": "Princeton University",
@@ -18,16 +18,16 @@ RIVALRIES = {
     "Syracuse University": "University of Pittsburgh",
     "Marquette University": "University of Notre Dame",
     "University of Iowa": "Iowa State University",
-    "Stanford University": "University of California-Berkeley",
-    "University of Illinois-Urbana-Champagin": "University of Missouri",
-    "Marquette University": "University of Wisconsin",
+    "Stanford University": "University of California, Berkeley",
+    "University of Illinois Urbana–Champaign": "University of Missouri",
+    "Marquette University": "University of Wisconsin–Madison",
     "Villanova University": "LaSalle University",
     "University of Connecticut": "Syracuse University",
-    "Indiana University": "University of Kentucky",
-    "Duke University": "University of Maryland",
+    "Indiana University Bloomington": "University of Kentucky",
+    "Duke University": "University of Maryland, College Park",
     "Syracuse University": "Georgetown University",
     "University of Kentucky": "University of Florida",
     "Georgetown University": "Villanova University",
-    "University of California-Los Angeles": "Unversity of Arizona"
+    "University of California, Los Angeles": "University of Arizona"
 }
 RIVALRIES = RIVALRIES | {v: k for k, v in RIVALRIES.items()}

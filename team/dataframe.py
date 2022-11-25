@@ -80,7 +80,7 @@ def school_index_in_tuple(df_school, data):
         ap_name = update_school_name(school)
         for q, r in [("St.", "Saint"), ("The ", "")]:
             ap_name.replace(q, r)
-            school.replace(q, r)
+            df_school.replace(q, r)
         split_ap_name = ap_name.casefold().split(" ")
         split_df_school = df_school.casefold().split(" ")
         generic = "University"
