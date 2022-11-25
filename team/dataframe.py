@@ -95,6 +95,7 @@ def school_index_in_tuple(df_school, data):
             best_index = j
     return best_index, best_ratio
 
+
 def filter_none_values(df, attribute):
     return df[df[attribute].notnull()]
 

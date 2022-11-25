@@ -1,3 +1,5 @@
+from bs4 import BeautifulSoup
+import requests
 import webcolors
 
 from data.soup_helpers import get_table
@@ -35,6 +37,42 @@ def get_color_name(hex_color):
 
 
 def get_all_school_colors():
+    data = requests.get("https://www.caninejournal.com/college-colors/")
+    b = BeautifulSoup(data.text, "html.parser")
+    line_break_set = {
+        "Name",
+        "City",
+        "Mascot",
+        "Nickname",
+        "Location",
+        "Team Name",
+        "Home of the Catamounts",
+        "The Island University",
+        "Marching Highland Cavaliers",
+        "Senators",
+    }
+    color_data = list()
+    for line in b.find_all("li")[46:]:
+        if line and ":" in line.text:
+            sp = line.text.split(":")
+            school = sp[0].strip()
+            colors = sp[1]
+            for t in line_break_set:
+                colors = colors.split(t)[0].strip()
+            if "&" in colors:
+                color_split = colors.split("&")
+                primary_color = color_split[0].strip()
+                secondary_color = color_split[1].strip()
+            if "," in colors:
+                color_split = colors.split(",")
+                primary_color = color_split[0].strip()
+                secondary_color = color_split[1].split("&")[0].strip()
+            if school and school not in line_break_set:
+                color_data.append((school, primary_color, secondary_color))
+    return color_data
+
+
+def get_all_school_colors_from_mascot_names():
     color_table = get_table("https://en.wikipedia.org/wiki/Module:College_color", 3)
     colors = list()
     for i, row in enumerate(color_table.find_all("tr")[2:]):
