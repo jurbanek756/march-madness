@@ -56,33 +56,44 @@ def add_tournament_rankings_to_dataframe_from_csv(df, filename):
 
 
 def add_team_colors_to_dataframe(df):
-    for school, color1, color2 in get_all_school_colors():
-        best_ratio = 0
-        best_index = -1
-        for i, row in df.iterrows():
-            ap_name = update_school_name(school)
-            ratio = fuzz.ratio(row["School"], ap_name)
-            if ratio > best_ratio:
-                best_ratio = ratio
-                best_index = i
-        df.at[best_index, "primary_color"] = color1
-        df.at[best_index, "secondary_color"] = color2
+    data = get_all_school_colors()
+    for i, row in df.iterrows():
+        best_index, best_ratio = school_index_in_tuple(row["School"], data)
+        if best_ratio > 95:
+            df.at[i, "primary_color"] = data[best_index][1]
+            df.at[i, "secondary_color"] = data[best_index][2]
 
 
 def add_location_and_is_private_to_dataframe(df):
     data = create_location_status_tuple()
     for i, row in df.iterrows():
-        best_ratio = 0
-        best_index = -1
-        for j, (school, _, _) in enumerate(data):
-            ap_name = update_school_name(school)
-            ratio = fuzz.ratio(row["School"], ap_name)
-            if ratio > best_ratio:
-                best_ratio = ratio
-                best_index = j
-        df.at[i, "location"] = data[best_index][1]
-        df.at[i, "is_private"] = data[best_index][2]
+        best_index, best_ratio = school_index_in_tuple(row["School"], data)
+        if best_ratio > 95:
+            df.at[i, "location"] = data[best_index][1]
+            df.at[i, "is_private"] = data[best_index][2]
 
+
+def school_index_in_tuple(df_school, data):
+    best_ratio = 0
+    best_index = -1
+    for j, (school, _, _) in enumerate(data):
+        ap_name = update_school_name(school)
+        for q, r in [("St.", "Saint"), ("The ", "")]:
+            ap_name.replace(q, r)
+            school.replace(q, r)
+        split_ap_name = ap_name.casefold().split(" ")
+        split_df_school = df_school.casefold().split(" ")
+        generic = "University"
+        if split_ap_name[-1] == generic.casefold() and split_df_school[-1] == generic.casefold():
+            ratio = fuzz.ratio(" ".join(split_df_school[:-1]), " ".join(split_ap_name[:-1]))
+        elif split_ap_name[0] == generic.casefold() and split_df_school[0] == generic.casefold():
+            ratio = fuzz.ratio(" ".join(split_df_school[1:]), " ".join(split_ap_name[1:]))
+        else:
+            ratio = fuzz.ratio(df_school, ap_name)
+        if ratio > best_ratio:
+            best_ratio = ratio
+            best_index = j
+    return best_index, best_ratio
 
 def filter_none_values(df, attribute):
     return df[df[attribute].notnull()]

@@ -29,7 +29,6 @@ Data is still being collected and predictions are currently a work in progress.
 
 ## Backlog
 
-* Get city info
 * Backfill missing colors
 * Finish Rivals table
 * Work on prediction methods
