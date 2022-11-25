@@ -18,4 +18,4 @@ if TOURNAMENT_RANKINGS_AVAILABLE:
     add_tournament_rankings_to_dataframe_from_csv(df, None)
 
 df.to_pickle("saved_static_data/school_data_dataframe.pkl")
-df.to_json("saved_static_data/school_data_dataframe.json")
+df.to_json("saved_static_data/school_data_dataframe.json", orient="records")
