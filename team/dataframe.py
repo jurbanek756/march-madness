@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from data.colors import get_all_school_colors
+from data.location import create_location_status_tuple
 from data.school_names import update_school_name
 from data.soup_helpers import get_table
 from bs4 import BeautifulSoup
@@ -66,6 +67,21 @@ def add_team_colors_to_dataframe(df):
                 best_index = i
         df.at[best_index, "primary_color"] = color1
         df.at[best_index, "secondary_color"] = color2
+
+
+def add_location_and_is_private_to_dataframe(df):
+    data = create_location_status_tuple()
+    for i, row in df.iterrows():
+        best_ratio = 0
+        best_index = -1
+        for j, (school, _, _) in enumerate(data):
+            ap_name = update_school_name(school)
+            ratio = fuzz.ratio(row["School"], ap_name)
+            if ratio > best_ratio:
+                best_ratio = ratio
+                best_index = j
+        df.at[i, "location"] = data[best_index][1]
+        df.at[i, "is_private"] = data[best_index][2]
 
 
 def filter_none_values(df, attribute):
