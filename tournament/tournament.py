@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import json
 import logging
 from predict.select_team import weighted_random_selection
 
@@ -24,7 +25,7 @@ class Tournament:
                 encoding="UTF-8",
                 level="INFO",
                 handlers=[
-                    logging.FileHandler("NCAA_Tournament_Results.txt"),
+                    # logging.FileHandler("NCAA_Tournament_Results.txt"),
                     logging.StreamHandler(),
                 ],
                 format="%(message)s",
@@ -42,13 +43,13 @@ class Tournament:
     def run(self):
         if self.log_results:
             logging.info("West Group Rankings:")
-            logging.info(self.west.ranking_dict)
+            logging.info(json.dumps(self.west.ranking_dict, default=str, indent=2))
             logging.info("East Group Rankings:")
-            logging.info(self.east.ranking_dict)
+            logging.info(json.dumps(self.east.ranking_dict, default=str, indent=2))
             logging.info("South Group Rankings:")
-            logging.info(self.south.ranking_dict)
+            logging.info(json.dumps(self.south.ranking_dict, default=str, indent=2))
             logging.info("Midwest Group Rankings:")
-            logging.info(self.midwest.ranking_dict)
+            logging.info(json.dumps(self.midwest.ranking_dict, default=str, indent=2))
         west_winner, east_winner, south_winner, midwest_winner = self.group_winners()
         tournament_winner = self.tournament_winner(
             west_winner, east_winner, south_winner, midwest_winner
@@ -120,22 +121,22 @@ class Tournament:
         west_first_round = self.west.first_round()
         if self.log_results:
             logging.info("West First Round Results:")
-            logging.info(west_first_round)
+            logging.info(json.dumps(west_first_round, default=str, indent=2))
 
         east_first_round = self.east.first_round()
         if self.log_results:
             logging.info("East First Round Results:")
-            logging.info(east_first_round)
+            logging.info(json.dumps(east_first_round, default=str, indent=2))
 
         south_first_round = self.south.first_round()
         if self.log_results:
             logging.info("South First Round Results:")
-            logging.info(south_first_round)
+            logging.info(json.dumps(south_first_round, default=str, indent=2))
 
         midwest_first_round = self.midwest.first_round()
         if self.log_results:
             logging.info("Midwest First Round Results:")
-            logging.info(midwest_first_round)
+            logging.info(json.dumps(midwest_first_round, default=str, indent=2))
 
         return (
             west_first_round,
@@ -150,22 +151,22 @@ class Tournament:
         west_second_round = self.west.second_round(west_first_round)
         if self.log_results:
             logging.info("West Second Round Results:")
-            logging.info(west_second_round)
+            logging.info(json.dumps(west_second_round, default=str, indent=2))
 
         east_second_round = self.east.second_round(east_first_round)
         if self.log_results:
             logging.info("East Second Round Results:")
-            logging.info(east_second_round)
+            logging.info(json.dumps(east_second_round, default=str, indent=2))
 
         south_second_round = self.south.second_round(south_first_round)
         if self.log_results:
             logging.info("South Second Round Results:")
-            logging.info(south_second_round)
+            logging.info(json.dumps(south_second_round, default=str, indent=2))
 
         midwest_second_round = self.midwest.second_round(midwest_first_round)
         if self.log_results:
             logging.info("Midwest Second Round Results:")
-            logging.info(midwest_second_round)
+            logging.info(json.dumps(midwest_second_round, default=str, indent=2))
 
         return (
             west_second_round,
@@ -184,22 +185,22 @@ class Tournament:
         west_sweet_sixteen = self.west.sweet_sixteen(west_second_round)
         if self.log_results:
             logging.info("West Sweet Sixteen Results:")
-            logging.info(west_sweet_sixteen)
+            logging.info(json.dumps(west_sweet_sixteen, default=str, indent=2))
 
         east_sweet_sixteen = self.east.sweet_sixteen(east_second_round)
         if self.log_results:
             logging.info("East Sweet Sixteen Results:")
-            logging.info(east_sweet_sixteen)
+            logging.info(json.dumps(east_sweet_sixteen, default=str, indent=2))
 
         south_sweet_sixteen = self.south.sweet_sixteen(south_second_round)
         if self.log_results:
             logging.info("South Sweet Sixteen Results:")
-            logging.info(south_sweet_sixteen)
+            logging.info(json.dumps(south_sweet_sixteen, default=str, indent=2))
 
         midwest_sweet_sixteen = self.midwest.sweet_sixteen(midwest_second_round)
         if self.log_results:
             logging.info("Midwest Sweet Sixteen Results:")
-            logging.info(midwest_sweet_sixteen)
+            logging.info(json.dumps(midwest_sweet_sixteen, default=str, indent=2))
 
         return (
             west_sweet_sixteen,
@@ -255,6 +256,7 @@ class Group:
         self.play_in = ranking_dict["play_in"]
         self.predict = prediction_method
         self.play_in_rank = play_in_rank
+        self.play_in.tournament_rank = self.play_in_rank
         self.first_four_results = None
         self.first_round_results = None
         self.second_round_results = None

@@ -20,28 +20,35 @@ def generate_full_region_dict(all_schools_df, region):
     region_df = filter_none_values(region_df, "Tournament Ranking")
     region_teams = [Team(record) for record in region_df.to_dict(orient="records")]
     data = dict()
-    for team in region_teams:
-        data[team.tournament_rank] = team
+    for t in region_teams:
+        data[t.tournament_rank] = t
     return data
+
+
+all_teams = set()
+for region in west, east, south, midwest:
+    for k, team in region.items():
+        if k != "play_in_rank":
+            all_teams.add(team)
+
+if len(all_teams) != 68:
+    print(len(all_teams))
+    raise ValueError("Duplicate team found in source dict")
 
 
 df = pd.read_pickle("saved_static_data/school_data_dataframe.pkl")
 
 west_play_in_rank = west.pop("play_in_rank")
 west_teams = generate_full_region_dict(df, west)
-print(west_teams)
 
 east_play_in_rank = east.pop("play_in_rank")
 east_teams = generate_full_region_dict(df, east)
-print(east_teams)
 
 south_play_in_rank = south.pop("play_in_rank")
 south_teams = generate_full_region_dict(df, south)
-print(south_teams)
 
 midwest_play_in_rank = midwest.pop("play_in_rank")
 midwest_teams = generate_full_region_dict(df, midwest)
-print(midwest_teams)
 
 tournament_2022 = Tournament(
     west_teams,
@@ -55,3 +62,5 @@ tournament_2022 = Tournament(
     prediction_method=weighted_random_selection,
     log_results=True,
 )
+
+tournament_2022.run()
