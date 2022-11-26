@@ -20,9 +20,9 @@ def lptr(team1, team2):
     tuple
         Team 1 probability, Team 2 probability
     """
-    diff = abs(team1.rank - team2.rank)
+    diff = abs(team1.tournament_rank - team2.tournament_rank)
     y = (0.5 / 15) * diff + 0.5
-    if team1.rank < team2.rank:
+    if team1.tournament_rank < team2.tournament_rank:
         return y, 1 - y
     else:
         return 1 - y, y
