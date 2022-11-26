@@ -2,6 +2,7 @@
 
 from data.colors import get_all_school_colors
 from data.location import create_location_status_tuple
+from data.rivals import RIVALRIES
 from data.school_names import update_school_name
 from data.soup_helpers import get_table
 from bs4 import BeautifulSoup
@@ -71,6 +72,10 @@ def add_location_and_is_private_to_dataframe(df):
         if best_ratio > 95:
             df.at[i, "location"] = data[best_index][1]
             df.at[i, "is_private"] = data[best_index][2]
+
+
+def add_rivals_to_dataframe(df):
+    df["Rivals"] = df["School"].map(RIVALRIES)
 
 
 def school_index_in_tuple(df_school, data):

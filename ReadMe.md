@@ -30,5 +30,4 @@ Data is still being collected and predictions are currently a work in progress.
 ## Backlog
 
 * Backfill missing data
-* Finish Rivals table
 * Work on prediction methods

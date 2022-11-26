@@ -13,6 +13,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Binghamton University",
@@ -28,6 +29,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Bryant University",
@@ -43,6 +45,7 @@
         "secondary_color": "gold",
         "location": "Smithfield, RI",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of Maine",
@@ -58,6 +61,7 @@
         "secondary_color": "sky blue",
         "location": "Orono, ME",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Maryland, Baltimore County",
@@ -73,6 +77,7 @@
         "secondary_color": null,
         "location": "Catonsville, MD",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Massachusetts Lowell",
@@ -88,6 +93,7 @@
         "secondary_color": null,
         "location": "Lowell, MA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of New Hampshire",
@@ -103,6 +109,7 @@
         "secondary_color": "white",
         "location": "Durham, NH",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "New Jersey Institute of Technology",
@@ -118,6 +125,7 @@
         "secondary_color": "white",
         "location": "Newark, NJ",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Vermont",
@@ -133,6 +141,7 @@
         "secondary_color": "gold",
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "University of Central Florida",
@@ -148,6 +157,7 @@
         "secondary_color": "gold",
         "location": "Orlando, FL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Cincinnati",
@@ -163,6 +173,7 @@
         "secondary_color": "black",
         "location": "Cincinnati, OH",
         "is_private": false,
+        "Rivals": ["Xavier University"],
     },
     {
         "School": "East Carolina University",
@@ -178,6 +189,7 @@
         "secondary_color": "gold",
         "location": "Greenville, NC",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Houston",
@@ -193,6 +205,7 @@
         "secondary_color": "white",
         "location": "Houston, TX",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Memphis",
@@ -208,6 +221,7 @@
         "secondary_color": "gray",
         "location": "Memphis, TN",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of South Florida",
@@ -223,6 +237,7 @@
         "secondary_color": "gold",
         "location": "Tampa, FL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Southern Methodist University",
@@ -238,6 +253,7 @@
         "secondary_color": "Yale blue",
         "location": "University Park, TX",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Temple University",
@@ -253,6 +269,7 @@
         "secondary_color": "white",
         "location": "Philadelphia, PA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Tulane University",
@@ -268,6 +285,7 @@
         "secondary_color": "blue",
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "University of Tulsa",
@@ -283,6 +301,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Wichita State University",
@@ -298,6 +317,7 @@
         "secondary_color": "gold",
         "location": "Wichita, KS",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Boston College",
@@ -313,6 +333,7 @@
         "secondary_color": "gold",
         "location": "Chestnut Hill, MA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Clemson University",
@@ -328,6 +349,7 @@
         "secondary_color": "purple",
         "location": "Clemson, SC",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Duke University",
@@ -343,6 +365,10 @@
         "secondary_color": "navy",
         "location": "Durham, NC",
         "is_private": true,
+        "Rivals": [
+            "University of Maryland, College Park",
+            "University of North Carolina",
+        ],
     },
     {
         "School": "Florida State University",
@@ -358,6 +384,7 @@
         "secondary_color": "gold",
         "location": "Tallahassee, FL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Georgia Institute of Technology",
@@ -373,6 +400,7 @@
         "secondary_color": null,
         "location": "Atlanta, GA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Louisville",
@@ -388,6 +416,7 @@
         "secondary_color": "black",
         "location": "Louisville, KY",
         "is_private": false,
+        "Rivals": ["University of Kentucky"],
     },
     {
         "School": "University of Miami",
@@ -403,6 +432,7 @@
         "secondary_color": "green",
         "location": "Coral Gables, FL",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of North Carolina at Chapel Hill",
@@ -418,6 +448,7 @@
         "secondary_color": null,
         "location": "Chapel Hill, NC",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "North Carolina State University",
@@ -433,6 +464,7 @@
         "secondary_color": "white",
         "location": "Raleigh, NC",
         "is_private": false,
+        "Rivals": ["University of North Carolina"],
     },
     {
         "School": "University of Notre Dame",
@@ -448,6 +480,7 @@
         "secondary_color": "navy blue",
         "location": null,
         "is_private": null,
+        "Rivals": ["Marquette University"],
     },
     {
         "School": "University of Pittsburgh",
@@ -463,6 +496,7 @@
         "secondary_color": "blue",
         "location": "Pittsburgh, PA",
         "is_private": false,
+        "Rivals": ["Syracuse University"],
     },
     {
         "School": "Syracuse University",
@@ -478,6 +512,11 @@
         "secondary_color": "navy blue",
         "location": "Syracuse, NY",
         "is_private": true,
+        "Rivals": [
+            "Georgetown University",
+            "University of Pittsburgh",
+            "University of Connecticut",
+        ],
     },
     {
         "School": "University of Virginia",
@@ -493,6 +532,7 @@
         "secondary_color": "navy blue",
         "location": "Charlottesville, VA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Virginia Polytechnic Institute and State University",
@@ -508,6 +548,7 @@
         "secondary_color": null,
         "location": "Blacksburg, VA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Wake Forest University",
@@ -523,6 +564,7 @@
         "secondary_color": "gold",
         "location": "Winston-Salem, NC",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Austin Peay State University",
@@ -538,6 +580,7 @@
         "secondary_color": null,
         "location": "Clarksville, TN",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Bellarmine University",
@@ -553,6 +596,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "University of Central Arkansas",
@@ -568,6 +612,7 @@
         "secondary_color": "white",
         "location": "Conway, AR",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Eastern Kentucky University",
@@ -583,6 +628,7 @@
         "secondary_color": null,
         "location": "Richmond, KY",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Florida Gulf Coast University",
@@ -598,6 +644,7 @@
         "secondary_color": null,
         "location": "Fort Myers, FL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Jacksonville University",
@@ -613,6 +660,7 @@
         "secondary_color": null,
         "location": "Jacksonville, FL",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Jacksonville State University",
@@ -628,6 +676,7 @@
         "secondary_color": null,
         "location": "Jacksonville, AL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Kennesaw State University",
@@ -643,6 +692,7 @@
         "secondary_color": "gold",
         "location": "Kennesaw, GA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Liberty University",
@@ -658,6 +708,7 @@
         "secondary_color": "red",
         "location": "Lynchburg, VA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Lipscomb University",
@@ -673,6 +724,7 @@
         "secondary_color": null,
         "location": "Nashville, TN",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of North Alabama",
@@ -688,6 +740,7 @@
         "secondary_color": null,
         "location": "Florence, AL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of North Florida",
@@ -703,6 +756,7 @@
         "secondary_color": "gray",
         "location": "Jacksonville, FL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Queens University of Charlotte",
@@ -718,6 +772,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Stetson University",
@@ -733,6 +788,7 @@
         "secondary_color": null,
         "location": "DeLand, FL",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Davidson College",
@@ -748,6 +804,7 @@
         "secondary_color": "black",
         "location": "Davidson, NC",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of Dayton",
@@ -763,6 +820,7 @@
         "secondary_color": "columbia blue",
         "location": "Dayton, OH",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Duquesne University",
@@ -778,6 +836,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Fordham University",
@@ -793,6 +852,7 @@
         "secondary_color": "gold",
         "location": "New York, NY",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "George Mason University",
@@ -808,6 +868,7 @@
         "secondary_color": "gold",
         "location": "Fairfax, VA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "George Washington University",
@@ -823,6 +884,7 @@
         "secondary_color": "blue",
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "La Salle University",
@@ -838,6 +900,7 @@
         "secondary_color": null,
         "location": "Philadelphia, PA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Loyola University Chicago",
@@ -853,6 +916,7 @@
         "secondary_color": "gold",
         "location": "Chicago, IL",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of Massachusetts Amherst",
@@ -868,6 +932,7 @@
         "secondary_color": null,
         "location": "Amherst, MA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Rhode Island",
@@ -883,6 +948,7 @@
         "secondary_color": null,
         "location": "Kingston, RI",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Richmond",
@@ -898,6 +964,7 @@
         "secondary_color": "blue",
         "location": "Richmond, VA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "St. Bonaventure University",
@@ -913,6 +980,7 @@
         "secondary_color": "white",
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Saint Joseph's University",
@@ -928,6 +996,7 @@
         "secondary_color": null,
         "location": "Philadelphia, PA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Saint Louis University",
@@ -943,6 +1012,7 @@
         "secondary_color": null,
         "location": "Saint Louis, MO",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Virginia Commonwealth University",
@@ -958,6 +1028,7 @@
         "secondary_color": null,
         "location": "Richmond, VA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Butler University",
@@ -973,6 +1044,7 @@
         "secondary_color": "white",
         "location": "Indianapolis, IN",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Creighton University",
@@ -988,6 +1060,7 @@
         "secondary_color": "white",
         "location": "Omaha, NE",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "DePaul University",
@@ -1003,6 +1076,7 @@
         "secondary_color": null,
         "location": "Chicago, IL",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Georgetown University",
@@ -1018,6 +1092,7 @@
         "secondary_color": "gray",
         "location": "Washington, DC",
         "is_private": true,
+        "Rivals": ["Villanova University", "Syracuse University"],
     },
     {
         "School": "Marquette University",
@@ -1033,6 +1108,7 @@
         "secondary_color": "gold",
         "location": "Milwaukee, WI",
         "is_private": true,
+        "Rivals": ["University of Notre Dame", "University of Wisconsin\u2013Madison"],
     },
     {
         "School": "Providence College",
@@ -1048,6 +1124,7 @@
         "secondary_color": "white",
         "location": "Providence, RI",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "St. John's University",
@@ -1063,6 +1140,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Seton Hall University",
@@ -1078,6 +1156,7 @@
         "secondary_color": "blue",
         "location": "South Orange, NJ",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of Connecticut",
@@ -1093,6 +1172,7 @@
         "secondary_color": "white",
         "location": "Storrs, CT",
         "is_private": false,
+        "Rivals": ["Syracuse University"],
     },
     {
         "School": "Villanova University",
@@ -1108,6 +1188,7 @@
         "secondary_color": null,
         "location": "Radnor, PA",
         "is_private": true,
+        "Rivals": ["Georgetown University"],
     },
     {
         "School": "Xavier University",
@@ -1123,6 +1204,7 @@
         "secondary_color": null,
         "location": "Cincinnati, OH",
         "is_private": true,
+        "Rivals": ["University of Cincinnati"],
     },
     {
         "School": "Eastern Washington University",
@@ -1138,6 +1220,7 @@
         "secondary_color": "red",
         "location": "Cheney, WA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Idaho",
@@ -1153,6 +1236,7 @@
         "secondary_color": "gold",
         "location": "Moscow, ID",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Idaho State University",
@@ -1168,6 +1252,7 @@
         "secondary_color": "orange",
         "location": "Pocatello, ID",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Montana",
@@ -1183,6 +1268,7 @@
         "secondary_color": "silver",
         "location": "Missoula, MT",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Montana State University",
@@ -1198,6 +1284,7 @@
         "secondary_color": "gold",
         "location": "Bozeman, MT",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Northern Arizona University",
@@ -1213,6 +1300,7 @@
         "secondary_color": "gold",
         "location": "Flagstaff, AZ",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Northern Colorado",
@@ -1228,6 +1316,7 @@
         "secondary_color": "gold",
         "location": "Greeley, CO",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Portland State University",
@@ -1243,6 +1332,7 @@
         "secondary_color": "green",
         "location": "Portland, OR",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "California State University, Sacramento",
@@ -1258,6 +1348,7 @@
         "secondary_color": null,
         "location": "Sacramento, CA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Weber State University",
@@ -1273,6 +1364,7 @@
         "secondary_color": null,
         "location": "Ogden, UT",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Campbell University",
@@ -1288,6 +1380,7 @@
         "secondary_color": "black",
         "location": "Buies Creek, NC",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Charleston Southern University",
@@ -1303,6 +1396,7 @@
         "secondary_color": null,
         "location": "North Charleston, SC",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Gardner\u2013Webb University",
@@ -1318,6 +1412,7 @@
         "secondary_color": null,
         "location": "Boiling Springs, NC",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "High Point University",
@@ -1333,6 +1428,7 @@
         "secondary_color": null,
         "location": "High Point, NC",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Longwood University",
@@ -1348,6 +1444,7 @@
         "secondary_color": "white",
         "location": "Farmville, VA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Presbyterian College",
@@ -1363,6 +1460,7 @@
         "secondary_color": null,
         "location": "Clinton, SC",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Radford University",
@@ -1378,6 +1476,7 @@
         "secondary_color": "black",
         "location": "Radford, VA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of North Carolina at Asheville",
@@ -1393,6 +1492,7 @@
         "secondary_color": null,
         "location": "Asheville, NC",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of South Carolina Upstate",
@@ -1408,6 +1508,7 @@
         "secondary_color": null,
         "location": "Spartanburg, SC",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Winthrop University",
@@ -1423,6 +1524,7 @@
         "secondary_color": null,
         "location": "Rock Hill, SC",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Illinois Urbana\u2013Champaign",
@@ -1438,6 +1540,7 @@
         "secondary_color": null,
         "location": "Urbana, IL",
         "is_private": false,
+        "Rivals": ["University of Missouri"],
     },
     {
         "School": "Indiana University Bloomington",
@@ -1453,6 +1556,7 @@
         "secondary_color": null,
         "location": "Bloomington, IN",
         "is_private": false,
+        "Rivals": ["Purdue University", "University of Kentucky"],
     },
     {
         "School": "University of Iowa",
@@ -1468,6 +1572,7 @@
         "secondary_color": "gold",
         "location": null,
         "is_private": null,
+        "Rivals": ["Iowa State University"],
     },
     {
         "School": "University of Maryland, College Park",
@@ -1483,6 +1588,7 @@
         "secondary_color": null,
         "location": "College Park, MD",
         "is_private": false,
+        "Rivals": ["Duke University"],
     },
     {
         "School": "University of Michigan",
@@ -1498,6 +1604,7 @@
         "secondary_color": "maize",
         "location": "Ann Arbor, MI",
         "is_private": false,
+        "Rivals": ["Ohio State University"],
     },
     {
         "School": "Michigan State University",
@@ -1513,6 +1620,7 @@
         "secondary_color": "white",
         "location": "East Lansing, MI",
         "is_private": false,
+        "Rivals": ["University of Michigan"],
     },
     {
         "School": "University of Minnesota",
@@ -1528,6 +1636,7 @@
         "secondary_color": "gold",
         "location": "Minneapolis, MN",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Nebraska\u2013Lincoln",
@@ -1543,6 +1652,7 @@
         "secondary_color": null,
         "location": "Lincoln, NE",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Northwestern University",
@@ -1558,6 +1668,7 @@
         "secondary_color": "white",
         "location": "Evanston, IL",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Ohio State University",
@@ -1573,6 +1684,7 @@
         "secondary_color": "grey",
         "location": null,
         "is_private": null,
+        "Rivals": ["University of Michigan"],
     },
     {
         "School": "Pennsylvania State University",
@@ -1588,6 +1700,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Purdue University",
@@ -1603,6 +1716,7 @@
         "secondary_color": "black",
         "location": "West Lafayette, IN",
         "is_private": false,
+        "Rivals": ["Indiana University Bloomington"],
     },
     {
         "School": "Rutgers University\u2013New Brunswick",
@@ -1618,6 +1732,7 @@
         "secondary_color": null,
         "location": "New Brunswick, NJ",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Wisconsin\u2013Madison",
@@ -1633,6 +1748,7 @@
         "secondary_color": null,
         "location": "Madison, WI",
         "is_private": false,
+        "Rivals": ["Marquette University"],
     },
     {
         "School": "Baylor University",
@@ -1648,6 +1764,7 @@
         "secondary_color": "gold",
         "location": "Waco, TX",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Iowa State University",
@@ -1663,6 +1780,7 @@
         "secondary_color": "gold",
         "location": null,
         "is_private": null,
+        "Rivals": ["University of Iowa"],
     },
     {
         "School": "University of Kansas",
@@ -1678,6 +1796,7 @@
         "secondary_color": "crimson",
         "location": "Lawrence, KS",
         "is_private": false,
+        "Rivals": ["Kansas State University"],
     },
     {
         "School": "Kansas State University",
@@ -1693,6 +1812,7 @@
         "secondary_color": "white accent",
         "location": null,
         "is_private": null,
+        "Rivals": ["University of Kansas"],
     },
     {
         "School": "University of Oklahoma",
@@ -1708,6 +1828,7 @@
         "secondary_color": "cream",
         "location": "Norman, OK",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Oklahoma State University\u2013Stillwater",
@@ -1723,6 +1844,7 @@
         "secondary_color": null,
         "location": "Stillwater, OK",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Texas at Austin",
@@ -1738,6 +1860,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Texas Christian University",
@@ -1753,6 +1876,7 @@
         "secondary_color": null,
         "location": "Fort Worth, TX",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Texas Tech University",
@@ -1768,6 +1892,7 @@
         "secondary_color": "black",
         "location": "Lubbock, TX",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "West Virginia University",
@@ -1783,6 +1908,7 @@
         "secondary_color": "blue",
         "location": "Morgantown, WV",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "California Polytechnic State University",
@@ -1798,6 +1924,7 @@
         "secondary_color": null,
         "location": "San Luis Obispo, CA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "California State University, Bakersfield",
@@ -1813,6 +1940,7 @@
         "secondary_color": null,
         "location": "Bakersfield, CA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "California State University, Fullerton",
@@ -1828,6 +1956,7 @@
         "secondary_color": null,
         "location": "Fullerton, CA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "California State University, Northridge",
@@ -1843,6 +1972,7 @@
         "secondary_color": null,
         "location": "Northridge, CA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Hawai\u02bbi at M\u0101noa",
@@ -1858,6 +1988,7 @@
         "secondary_color": null,
         "location": "Honolulu, HI",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "California State University, Long Beach",
@@ -1873,6 +2004,7 @@
         "secondary_color": "gold",
         "location": "Long Beach, CA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of California, Davis",
@@ -1888,6 +2020,7 @@
         "secondary_color": null,
         "location": "Davis, CA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of California, Irvine",
@@ -1903,6 +2036,7 @@
         "secondary_color": null,
         "location": "Irvine, CA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of California, Riverside",
@@ -1918,6 +2052,7 @@
         "secondary_color": null,
         "location": "Riverside, CA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of California, San Diego",
@@ -1933,6 +2068,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "University of California, Santa Barbara",
@@ -1948,6 +2084,7 @@
         "secondary_color": null,
         "location": "Santa Barbara, CA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "College of Charleston",
@@ -1963,6 +2100,7 @@
         "secondary_color": "white",
         "location": "Charleston, SC",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Delaware",
@@ -1978,6 +2116,7 @@
         "secondary_color": "yellow",
         "location": "Newark, DE",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Drexel University",
@@ -1993,6 +2132,7 @@
         "secondary_color": null,
         "location": "Philadelphia, PA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Elon University",
@@ -2008,6 +2148,7 @@
         "secondary_color": "gold",
         "location": "Elon, NC",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Hampton University",
@@ -2023,6 +2164,7 @@
         "secondary_color": null,
         "location": "Hampton, VA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Hofstra University",
@@ -2038,6 +2180,7 @@
         "secondary_color": null,
         "location": "Hempstead, NY",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Monmouth University",
@@ -2053,6 +2196,7 @@
         "secondary_color": "blue",
         "location": "West Long Branch, NJ",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "North Carolina Agricultural and Technical State University",
@@ -2068,6 +2212,7 @@
         "secondary_color": null,
         "location": "Greensboro, NC",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Northeastern University",
@@ -2083,6 +2228,7 @@
         "secondary_color": null,
         "location": "Boston, MA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Stony Brook University",
@@ -2098,6 +2244,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Towson University",
@@ -2113,6 +2260,7 @@
         "secondary_color": null,
         "location": "Towson, MD",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of North Carolina at Wilmington",
@@ -2128,6 +2276,7 @@
         "secondary_color": null,
         "location": "Wilmington, NC",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "College of William & Mary",
@@ -2143,6 +2292,7 @@
         "secondary_color": "gold",
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "University of North Carolina at Charlotte",
@@ -2158,6 +2308,7 @@
         "secondary_color": null,
         "location": "Charlotte, NC",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Florida Atlantic University",
@@ -2173,6 +2324,7 @@
         "secondary_color": "red",
         "location": "Boca Raton, FL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Florida International University",
@@ -2188,6 +2340,7 @@
         "secondary_color": "gold",
         "location": "Miami, FL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Louisiana Tech University",
@@ -2203,6 +2356,7 @@
         "secondary_color": "red",
         "location": "Ruston, LA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Middle Tennessee State University",
@@ -2218,6 +2372,7 @@
         "secondary_color": "white",
         "location": "Murfreesboro, TN",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of North Texas",
@@ -2233,6 +2388,7 @@
         "secondary_color": "black",
         "location": "Denton, TX",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Rice University",
@@ -2248,6 +2404,7 @@
         "secondary_color": "grey",
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "University of Alabama at Birmingham",
@@ -2263,6 +2420,7 @@
         "secondary_color": "gold",
         "location": "Birmingham, AL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Texas at El Paso",
@@ -2278,6 +2436,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "University of Texas at San Antonio",
@@ -2293,6 +2452,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Western Kentucky University",
@@ -2308,6 +2468,7 @@
         "secondary_color": "white",
         "location": "Bowling Green, KY",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Cleveland State University",
@@ -2323,6 +2484,7 @@
         "secondary_color": null,
         "location": "Cleveland, OH",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Detroit Mercy",
@@ -2338,6 +2500,7 @@
         "secondary_color": null,
         "location": "Detroit, MI",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Indiana University \u2013 Purdue University Indianapolis",
@@ -2353,6 +2516,7 @@
         "secondary_color": null,
         "location": "Indianapolis, IN",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Wisconsin-Milwaukee",
@@ -2368,6 +2532,7 @@
         "secondary_color": "black",
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Northern Kentucky University",
@@ -2383,6 +2548,7 @@
         "secondary_color": null,
         "location": "Highland Heights, KY",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Oakland University",
@@ -2398,6 +2564,7 @@
         "secondary_color": null,
         "location": "Rochester, MI",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Purdue University Fort Wayne",
@@ -2413,6 +2580,7 @@
         "secondary_color": null,
         "location": "Fort Wayne, IN",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Robert Morris University",
@@ -2428,6 +2596,7 @@
         "secondary_color": "white",
         "location": "Moon, PA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of Wisconsin\u2013Green Bay",
@@ -2443,6 +2612,7 @@
         "secondary_color": null,
         "location": "Green Bay, WI",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Wright State University",
@@ -2458,6 +2628,7 @@
         "secondary_color": "gold",
         "location": "Dayton, OH",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Youngstown State University",
@@ -2473,6 +2644,7 @@
         "secondary_color": null,
         "location": "Youngstown, OH",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Chicago State University",
@@ -2488,6 +2660,7 @@
         "secondary_color": null,
         "location": "Chicago, IL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Hartford",
@@ -2503,6 +2676,7 @@
         "secondary_color": "white",
         "location": "Hartford, CT",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Brown University",
@@ -2518,6 +2692,7 @@
         "secondary_color": "cardinal",
         "location": "Providence, RI",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Columbia University",
@@ -2533,6 +2708,7 @@
         "secondary_color": "white",
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Cornell University",
@@ -2548,6 +2724,7 @@
         "secondary_color": "white",
         "location": "Ithaca, NY",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Dartmouth College",
@@ -2563,6 +2740,7 @@
         "secondary_color": "white",
         "location": "Hanover, NH",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Harvard University",
@@ -2578,6 +2756,7 @@
         "secondary_color": "black",
         "location": "Cambridge, MA",
         "is_private": true,
+        "Rivals": ["Yale University"],
     },
     {
         "School": "University of Pennsylvania",
@@ -2593,6 +2772,7 @@
         "secondary_color": "red",
         "location": "Philadelphia, PA",
         "is_private": true,
+        "Rivals": ["Princeton University"],
     },
     {
         "School": "Princeton University",
@@ -2608,6 +2788,7 @@
         "secondary_color": "black",
         "location": "Princeton, NJ",
         "is_private": true,
+        "Rivals": ["University of Pennsylvania"],
     },
     {
         "School": "Yale University",
@@ -2623,6 +2804,7 @@
         "secondary_color": "white",
         "location": "New Haven, CT",
         "is_private": true,
+        "Rivals": ["Harvard University"],
     },
     {
         "School": "Canisius College",
@@ -2638,6 +2820,7 @@
         "secondary_color": null,
         "location": "Buffalo, NY",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Fairfield University",
@@ -2653,6 +2836,7 @@
         "secondary_color": null,
         "location": "Fairfield, CT",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Iona College",
@@ -2668,6 +2852,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Manhattan College",
@@ -2683,6 +2868,7 @@
         "secondary_color": null,
         "location": "New York, NY",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Marist College",
@@ -2698,6 +2884,7 @@
         "secondary_color": null,
         "location": "Poughkeepsie, NY",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Mount St. Mary's University",
@@ -2713,6 +2900,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Niagara University",
@@ -2728,6 +2916,7 @@
         "secondary_color": "white",
         "location": "Lewiston, NY",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Quinnipiac University",
@@ -2743,6 +2932,7 @@
         "secondary_color": null,
         "location": "Hamden, CT",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Rider University",
@@ -2758,6 +2948,7 @@
         "secondary_color": "white",
         "location": "Lawrenceville, NJ",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Saint Peter's University",
@@ -2773,6 +2964,7 @@
         "secondary_color": null,
         "location": "Jersey City, NJ",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Siena College",
@@ -2788,6 +2980,7 @@
         "secondary_color": "gold",
         "location": "Loudonville, NY",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of Akron",
@@ -2803,6 +2996,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Ball State University",
@@ -2818,6 +3012,7 @@
         "secondary_color": "white",
         "location": "Muncie, IN",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Bowling Green State University",
@@ -2833,6 +3028,7 @@
         "secondary_color": "brown",
         "location": "Bowling Green, OH",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University at Buffalo",
@@ -2848,6 +3044,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Central Michigan University",
@@ -2863,6 +3060,7 @@
         "secondary_color": "gold",
         "location": "Mount Pleasant, MI",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Eastern Michigan University",
@@ -2878,6 +3076,7 @@
         "secondary_color": "white",
         "location": "Ypsilanti, MI",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Kent State University",
@@ -2893,6 +3092,7 @@
         "secondary_color": null,
         "location": "Kent, OH",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Miami University",
@@ -2908,6 +3108,7 @@
         "secondary_color": null,
         "location": "Oxford, OH",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Northern Illinois University",
@@ -2923,6 +3124,7 @@
         "secondary_color": "black",
         "location": "DeKalb, IL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Ohio University",
@@ -2938,6 +3140,7 @@
         "secondary_color": "white",
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "University of Toledo",
@@ -2953,6 +3156,7 @@
         "secondary_color": "gold",
         "location": "Toledo, OH",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Western Michigan University",
@@ -2968,6 +3172,7 @@
         "secondary_color": "gold",
         "location": "Kalamazoo, MI",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Coppin State University",
@@ -2983,6 +3188,7 @@
         "secondary_color": null,
         "location": "Baltimore, MD",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Delaware State University",
@@ -2998,6 +3204,7 @@
         "secondary_color": "cherry red",
         "location": "Dover, DE",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Howard University",
@@ -3013,6 +3220,7 @@
         "secondary_color": "red",
         "location": "Washington, DC",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of Maryland Eastern Shore",
@@ -3028,6 +3236,7 @@
         "secondary_color": null,
         "location": "Princess Anne, MD",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Morgan State University",
@@ -3043,6 +3252,7 @@
         "secondary_color": "orange",
         "location": "Baltimore, MD",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Norfolk State University",
@@ -3058,6 +3268,7 @@
         "secondary_color": "gold",
         "location": "Norfolk, VA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "North Carolina Central University",
@@ -3073,6 +3284,7 @@
         "secondary_color": "white",
         "location": "Durham, NC",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "South Carolina State University",
@@ -3088,6 +3300,7 @@
         "secondary_color": "blue",
         "location": "Orangeburg, SC",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Belmont University",
@@ -3103,6 +3316,7 @@
         "secondary_color": null,
         "location": "Nashville, TN",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Bradley University",
@@ -3118,6 +3332,7 @@
         "secondary_color": null,
         "location": "Peoria, IL",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Drake University",
@@ -3133,6 +3348,7 @@
         "secondary_color": "white",
         "location": "Des Moines, IA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of Evansville",
@@ -3148,6 +3364,7 @@
         "secondary_color": "white",
         "location": "Evansville, IN",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Illinois State University",
@@ -3163,6 +3380,7 @@
         "secondary_color": "white",
         "location": "Normal, IL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Indiana State University",
@@ -3178,6 +3396,7 @@
         "secondary_color": "white",
         "location": "Terre Haute, IN",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Missouri State University",
@@ -3193,6 +3412,7 @@
         "secondary_color": null,
         "location": "Springfield, MO",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Murray State University",
@@ -3208,6 +3428,7 @@
         "secondary_color": null,
         "location": "Murray, KY",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Northern Iowa",
@@ -3223,6 +3444,7 @@
         "secondary_color": "gold",
         "location": "Cedar Falls, IA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Southern Illinois University Carbondale",
@@ -3238,6 +3460,7 @@
         "secondary_color": null,
         "location": "Carbondale, IL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Illinois Chicago",
@@ -3253,6 +3476,7 @@
         "secondary_color": null,
         "location": "Chicago, IL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Valparaiso University",
@@ -3268,6 +3492,7 @@
         "secondary_color": "gold",
         "location": "Valparaiso, IN",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "United States Air Force Academy",
@@ -3283,6 +3508,7 @@
         "secondary_color": null,
         "location": "Colorado Springs, CO",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Boise State University",
@@ -3298,6 +3524,7 @@
         "secondary_color": "orange",
         "location": "Boise, ID",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Colorado State University",
@@ -3313,6 +3540,7 @@
         "secondary_color": null,
         "location": "Fort Collins, CO",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "California State University, Fresno",
@@ -3328,6 +3556,7 @@
         "secondary_color": null,
         "location": "Fresno, CA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Nevada, Reno",
@@ -3343,6 +3572,7 @@
         "secondary_color": null,
         "location": "Reno, NV",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of New Mexico",
@@ -3358,6 +3588,7 @@
         "secondary_color": "silver",
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "San Diego State University",
@@ -3373,6 +3604,7 @@
         "secondary_color": "black",
         "location": "San Diego, CA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "San Jose State University",
@@ -3388,6 +3620,7 @@
         "secondary_color": "gold",
         "location": "San Jose, CA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Nevada, Las Vegas",
@@ -3403,6 +3636,7 @@
         "secondary_color": null,
         "location": "Paradise, NV",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Utah State University",
@@ -3418,6 +3652,7 @@
         "secondary_color": "white",
         "location": "Logan, UT",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Wyoming",
@@ -3433,6 +3668,7 @@
         "secondary_color": "Wyoming prairie gold",
         "location": "Laramie, WY",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Central Connecticut State University",
@@ -3448,6 +3684,7 @@
         "secondary_color": null,
         "location": "New Britain, CT",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Fairleigh Dickinson University",
@@ -3463,6 +3700,7 @@
         "secondary_color": null,
         "location": "Hackensack, NJ",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Long Island University",
@@ -3478,6 +3716,7 @@
         "secondary_color": null,
         "location": "Brooklyn, NY",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Merrimack College",
@@ -3493,6 +3732,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Sacred Heart University",
@@ -3508,6 +3748,7 @@
         "secondary_color": null,
         "location": "Fairfield, CT",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "St. Francis College",
@@ -3523,6 +3764,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Saint Francis University",
@@ -3538,6 +3780,7 @@
         "secondary_color": null,
         "location": "Loretto, PA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Stonehill College",
@@ -3553,6 +3796,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Wagner College",
@@ -3568,6 +3812,7 @@
         "secondary_color": null,
         "location": "New York, NY",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Eastern Illinois University",
@@ -3583,6 +3828,7 @@
         "secondary_color": "blue",
         "location": "Charleston, IL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Lindenwood University",
@@ -3598,6 +3844,7 @@
         "secondary_color": "gold",
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "University of Arkansas at Little Rock",
@@ -3613,6 +3860,7 @@
         "secondary_color": null,
         "location": "Little Rock, AR",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Morehead State University",
@@ -3628,6 +3876,7 @@
         "secondary_color": null,
         "location": "Morehead, KY",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Southeast Missouri State University",
@@ -3643,6 +3892,7 @@
         "secondary_color": null,
         "location": "Cape Girardeau, MO",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Southern Illinois University Edwardsville",
@@ -3658,6 +3908,7 @@
         "secondary_color": null,
         "location": "Edwardsville, IL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Southern Indiana",
@@ -3673,6 +3924,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "University of Tennessee at Martin",
@@ -3688,6 +3940,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Tennessee State University",
@@ -3703,6 +3956,7 @@
         "secondary_color": "white",
         "location": "Nashville, TN",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Tennessee Technological University",
@@ -3718,6 +3972,7 @@
         "secondary_color": null,
         "location": "Cookeville, TN",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Arizona",
@@ -3733,6 +3988,7 @@
         "secondary_color": "navy blue",
         "location": "Tucson, AZ",
         "is_private": false,
+        "Rivals": ["University of California, Los Angeles"],
     },
     {
         "School": "Arizona State University",
@@ -3748,6 +4004,7 @@
         "secondary_color": "gold",
         "location": "Tempe, AZ",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of California, Berkeley",
@@ -3763,6 +4020,7 @@
         "secondary_color": null,
         "location": "Berkeley, CA",
         "is_private": false,
+        "Rivals": ["Stanford University"],
     },
     {
         "School": "University of Colorado Boulder",
@@ -3778,6 +4036,7 @@
         "secondary_color": null,
         "location": "Boulder, CO",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Oregon",
@@ -3793,6 +4052,7 @@
         "secondary_color": "yellow",
         "location": "Eugene, OR",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Oregon State University",
@@ -3808,6 +4068,7 @@
         "secondary_color": "black",
         "location": "Corvallis, OR",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Stanford University",
@@ -3823,6 +4084,7 @@
         "secondary_color": "white",
         "location": null,
         "is_private": null,
+        "Rivals": ["University of California, Berkeley"],
     },
     {
         "School": "University of California, Los Angeles",
@@ -3838,6 +4100,7 @@
         "secondary_color": null,
         "location": "Los Angeles, CA",
         "is_private": false,
+        "Rivals": ["University of Arizona"],
     },
     {
         "School": "University of Southern California",
@@ -3853,6 +4116,7 @@
         "secondary_color": "gold",
         "location": "Los Angeles, CA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of Utah",
@@ -3868,6 +4132,7 @@
         "secondary_color": "white",
         "location": "Salt Lake City, UT",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Washington",
@@ -3883,6 +4148,7 @@
         "secondary_color": "gold",
         "location": "Seattle, WA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Washington State University",
@@ -3898,6 +4164,7 @@
         "secondary_color": "gray",
         "location": "Pullman, WA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "American University",
@@ -3913,6 +4180,7 @@
         "secondary_color": "blue",
         "location": "Washington, DC",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "United States Military Academy",
@@ -3928,6 +4196,7 @@
         "secondary_color": null,
         "location": "West Point, NY",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Boston University",
@@ -3943,6 +4212,7 @@
         "secondary_color": "white",
         "location": "Boston, MA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Bucknell University",
@@ -3958,6 +4228,7 @@
         "secondary_color": "blue",
         "location": "Lewisburg, PA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Colgate University",
@@ -3973,6 +4244,7 @@
         "secondary_color": null,
         "location": "Hamilton, NY",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "College of the Holy Cross",
@@ -3988,6 +4260,7 @@
         "secondary_color": "white",
         "location": "Worcester, MA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Lafayette College",
@@ -4003,6 +4276,7 @@
         "secondary_color": null,
         "location": "Easton, PA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Lehigh University",
@@ -4018,6 +4292,7 @@
         "secondary_color": "brown",
         "location": "Bethlehem, PA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Loyola University Maryland",
@@ -4033,6 +4308,7 @@
         "secondary_color": null,
         "location": "Baltimore, MD",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "United States Naval Academy",
@@ -4048,6 +4324,7 @@
         "secondary_color": null,
         "location": "Annapolis, MD",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Alabama",
@@ -4063,6 +4340,7 @@
         "secondary_color": "white",
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "University of Arkansas",
@@ -4078,6 +4356,7 @@
         "secondary_color": "white",
         "location": "Fayetteville, AR",
         "is_private": false,
+        "Rivals": ["University of Missouri"],
     },
     {
         "School": "Auburn University",
@@ -4093,6 +4372,7 @@
         "secondary_color": "blue",
         "location": "Auburn, AL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Florida",
@@ -4108,6 +4388,7 @@
         "secondary_color": "blue",
         "location": "Gainesville, FL",
         "is_private": false,
+        "Rivals": ["University of Kentucky"],
     },
     {
         "School": "University of Georgia",
@@ -4123,6 +4404,7 @@
         "secondary_color": "black",
         "location": "Athens, GA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Kentucky",
@@ -4138,6 +4420,11 @@
         "secondary_color": "white",
         "location": "Lexington, KY",
         "is_private": false,
+        "Rivals": [
+            "University of Florida",
+            "University of Louisville",
+            "Indiana University Bloomington",
+        ],
     },
     {
         "School": "Louisiana State University",
@@ -4153,6 +4440,7 @@
         "secondary_color": "gold",
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "University of Mississippi",
@@ -4168,6 +4456,7 @@
         "secondary_color": "cardinal red",
         "location": "Oxford, MS",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Mississippi State University",
@@ -4183,6 +4472,7 @@
         "secondary_color": "white",
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "University of Missouri",
@@ -4198,6 +4488,10 @@
         "secondary_color": "gold",
         "location": null,
         "is_private": null,
+        "Rivals": [
+            "University of Arkansas",
+            "University of Illinois Urbana\u2013Champaign",
+        ],
     },
     {
         "School": "University of South Carolina",
@@ -4213,6 +4507,7 @@
         "secondary_color": "black",
         "location": "Columbia, SC",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Tennessee",
@@ -4228,6 +4523,7 @@
         "secondary_color": "white",
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Texas A&M University",
@@ -4243,6 +4539,7 @@
         "secondary_color": "white",
         "location": "College Station, TX",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Vanderbilt University",
@@ -4258,6 +4555,7 @@
         "secondary_color": "black",
         "location": "Nashville, TN",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of Tennessee at Chattanooga",
@@ -4273,6 +4571,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "The Citadel",
@@ -4288,6 +4587,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "East Tennessee State University",
@@ -4303,6 +4603,7 @@
         "secondary_color": null,
         "location": "Johnson City, TN",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Furman University",
@@ -4318,6 +4619,7 @@
         "secondary_color": "white",
         "location": "Greenville, SC",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Mercer University",
@@ -4333,6 +4635,7 @@
         "secondary_color": null,
         "location": "Macon, GA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Samford University",
@@ -4348,6 +4651,7 @@
         "secondary_color": "blue",
         "location": "Homewood, AL",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of North Carolina at Greensboro",
@@ -4363,6 +4667,7 @@
         "secondary_color": null,
         "location": "Greensboro, NC",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Virginia Military Institute",
@@ -4378,6 +4683,7 @@
         "secondary_color": null,
         "location": "Lexington, VA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Western Carolina University",
@@ -4393,6 +4699,7 @@
         "secondary_color": "gold",
         "location": "Cullowhee, NC",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Wofford College",
@@ -4408,6 +4715,7 @@
         "secondary_color": "black",
         "location": "Spartanburg, SC",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Houston Christian University",
@@ -4423,6 +4731,7 @@
         "secondary_color": null,
         "location": "Houston, TX",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of the Incarnate Word",
@@ -4438,6 +4747,7 @@
         "secondary_color": "black",
         "location": "San Antonio, TX",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Lamar University",
@@ -4453,6 +4763,7 @@
         "secondary_color": null,
         "location": "Beaumont, TX",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "McNeese State University",
@@ -4468,6 +4779,7 @@
         "secondary_color": null,
         "location": "Lake Charles, LA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of New Orleans",
@@ -4483,6 +4795,7 @@
         "secondary_color": "silver",
         "location": "New Orleans, LA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Nicholls State University",
@@ -4498,6 +4811,7 @@
         "secondary_color": null,
         "location": "Thibodaux, LA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Northwestern State University",
@@ -4513,6 +4827,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Southeastern Louisiana University",
@@ -4528,6 +4843,7 @@
         "secondary_color": "gold",
         "location": "Hammond, LA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Texas A&M University-Corpus Christi",
@@ -4543,6 +4859,7 @@
         "secondary_color": null,
         "location": "Corpus Christi, TX",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Texas A&M University\u2013Commerce",
@@ -4558,6 +4875,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Alabama Agricultural and Mechanical University",
@@ -4573,6 +4891,7 @@
         "secondary_color": null,
         "location": "Normal, AL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Alabama State University",
@@ -4588,6 +4907,7 @@
         "secondary_color": "gold",
         "location": "Montgomery, AL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Alcorn State University",
@@ -4603,6 +4923,7 @@
         "secondary_color": null,
         "location": "Lorman, MS",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Arkansas at Pine Bluff",
@@ -4618,6 +4939,7 @@
         "secondary_color": "gold",
         "location": "Pine Bluff, AR",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Bethune\u2013Cookman University",
@@ -4633,6 +4955,7 @@
         "secondary_color": null,
         "location": "Daytona Beach, FL",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Florida Agricultural and Mechanical University",
@@ -4648,6 +4971,7 @@
         "secondary_color": null,
         "location": "Tallahassee, FL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Grambling State University",
@@ -4663,6 +4987,7 @@
         "secondary_color": "gold",
         "location": "Grambling, LA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Jackson State University",
@@ -4678,6 +5003,7 @@
         "secondary_color": null,
         "location": "Jackson, MS",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Mississippi Valley State University",
@@ -4693,6 +5019,7 @@
         "secondary_color": null,
         "location": "Itta Bena, MS",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Prairie View A&M University",
@@ -4708,6 +5035,7 @@
         "secondary_color": null,
         "location": "Prairie View, TX",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Southern University",
@@ -4723,6 +5051,7 @@
         "secondary_color": "gold",
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Texas Southern University",
@@ -4738,6 +5067,7 @@
         "secondary_color": null,
         "location": "Houston, TX",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Denver",
@@ -4753,6 +5083,7 @@
         "secondary_color": null,
         "location": "Denver, CO",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of Missouri\u2013Kansas City",
@@ -4768,6 +5099,7 @@
         "secondary_color": null,
         "location": "Kansas City, MO",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of North Dakota",
@@ -4783,6 +5115,7 @@
         "secondary_color": "white\n\nTeam",
         "location": "Grand Forks, ND",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "North Dakota State University",
@@ -4798,6 +5131,7 @@
         "secondary_color": "yellow",
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "University of Nebraska Omaha",
@@ -4813,6 +5147,7 @@
         "secondary_color": null,
         "location": "Omaha, NE",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Oral Roberts University",
@@ -4828,6 +5163,7 @@
         "secondary_color": "navy blue",
         "location": "Tulsa, OK",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of St. Thomas",
@@ -4843,6 +5179,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "University of South Dakota",
@@ -4858,6 +5195,7 @@
         "secondary_color": "white",
         "location": "Vermillion, SD",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "South Dakota State University",
@@ -4873,6 +5211,7 @@
         "secondary_color": null,
         "location": "Brookings, SD",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Western Illinois University",
@@ -4888,6 +5227,7 @@
         "secondary_color": "gold",
         "location": "Macomb, IL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Appalachian State University",
@@ -4903,6 +5243,7 @@
         "secondary_color": "gold",
         "location": "Boone, NC",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Arkansas State University",
@@ -4918,6 +5259,7 @@
         "secondary_color": "black",
         "location": "Jonesboro, AR",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Coastal Carolina University",
@@ -4933,6 +5275,7 @@
         "secondary_color": "bronze",
         "location": "Conway, SC",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Georgia Southern University",
@@ -4948,6 +5291,7 @@
         "secondary_color": "white with gold trim",
         "location": "Statesboro, GA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Georgia State University",
@@ -4963,6 +5307,7 @@
         "secondary_color": "white",
         "location": "Atlanta, GA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "James Madison University",
@@ -4978,6 +5323,7 @@
         "secondary_color": "gold",
         "location": "Harrisonburg, VA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Louisiana at Lafayette",
@@ -4993,6 +5339,7 @@
         "secondary_color": "white",
         "location": "Lafayette, LA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Louisiana at Monroe",
@@ -5008,6 +5355,7 @@
         "secondary_color": "gold",
         "location": "Monroe, LA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Marshall University",
@@ -5023,6 +5371,7 @@
         "secondary_color": "white.",
         "location": "Huntington, WV",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Old Dominion University",
@@ -5038,6 +5387,7 @@
         "secondary_color": "silver",
         "location": "Norfolk, VA",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of South Alabama",
@@ -5053,6 +5403,7 @@
         "secondary_color": "white",
         "location": "Mobile, AL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Southern Mississippi",
@@ -5068,6 +5419,7 @@
         "secondary_color": null,
         "location": "Hattiesburg, MS",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Texas State University",
@@ -5083,6 +5435,7 @@
         "secondary_color": "gold",
         "location": "San Marcos, TX",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Troy University",
@@ -5098,6 +5451,7 @@
         "secondary_color": "black and sliver",
         "location": "Troy, AL",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Brigham Young University",
@@ -5113,6 +5467,7 @@
         "secondary_color": "gold",
         "location": "Provo, UT",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Gonzaga University",
@@ -5128,6 +5483,7 @@
         "secondary_color": null,
         "location": "Spokane, WA",
         "is_private": true,
+        "Rivals": ["Saint Mary's College of California"],
     },
     {
         "School": "Loyola Marymount University",
@@ -5143,6 +5499,7 @@
         "secondary_color": null,
         "location": "Los Angeles, CA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of the Pacific",
@@ -5158,6 +5515,7 @@
         "secondary_color": null,
         "location": "Stockton, CA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Pepperdine University",
@@ -5173,6 +5531,7 @@
         "secondary_color": null,
         "location": "Malibu, CA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of Portland",
@@ -5188,6 +5547,7 @@
         "secondary_color": "white",
         "location": "Portland, OR",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Saint Mary's College of California",
@@ -5203,6 +5563,7 @@
         "secondary_color": null,
         "location": "Moraga, CA",
         "is_private": true,
+        "Rivals": ["Gonzaga University"],
     },
     {
         "School": "University of San Diego",
@@ -5218,6 +5579,7 @@
         "secondary_color": null,
         "location": "San Diego, CA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "University of San Francisco",
@@ -5233,6 +5595,7 @@
         "secondary_color": null,
         "location": "San Francisco, CA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Santa Clara University",
@@ -5248,6 +5611,7 @@
         "secondary_color": "white",
         "location": "Santa Clara, CA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Abilene Christian University",
@@ -5263,6 +5627,7 @@
         "secondary_color": null,
         "location": "Abilene, TX",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "California Baptist University",
@@ -5278,6 +5643,7 @@
         "secondary_color": null,
         "location": "Riverside, CA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Utah Tech University",
@@ -5293,6 +5659,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Grand Canyon University",
@@ -5308,6 +5675,7 @@
         "secondary_color": null,
         "location": "Phoenix, AZ",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "New Mexico State University",
@@ -5323,6 +5691,7 @@
         "secondary_color": "white",
         "location": "Las Cruces, NM",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Sam Houston State University",
@@ -5338,6 +5707,7 @@
         "secondary_color": null,
         "location": "Huntsvile, TX",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Seattle University",
@@ -5353,6 +5723,7 @@
         "secondary_color": null,
         "location": "Seattle, WA",
         "is_private": true,
+        "Rivals": null,
     },
     {
         "School": "Southern Utah University",
@@ -5368,6 +5739,7 @@
         "secondary_color": "white",
         "location": "Cedar City, UT",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Stephen F. Austin State University",
@@ -5383,6 +5755,7 @@
         "secondary_color": null,
         "location": "Nacogdoches, TX",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "Tarleton State University",
@@ -5398,6 +5771,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "Utah Valley University",
@@ -5413,6 +5787,7 @@
         "secondary_color": null,
         "location": "Orem, UT",
         "is_private": false,
+        "Rivals": null,
     },
     {
         "School": "University of Texas at Arlington",
@@ -5428,6 +5803,7 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
     {
         "School": "University of Texas Rio Grande Valley",
@@ -5443,5 +5819,6 @@
         "secondary_color": null,
         "location": null,
         "is_private": null,
+        "Rivals": null,
     },
 ]
