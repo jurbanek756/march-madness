@@ -8,10 +8,13 @@ class Tournament:
     def __init__(
         self,
         west,
-        south,
         east,
+        south,
         midwest,
-        play_in_rank,
+        west_play_in_rank,
+        east_play_in_rank,
+        south_play_in_rank,
+        midwest_play_in_rank,
         prediction_method=weighted_random_selection,
         log_results=True,
     ):
@@ -26,18 +29,26 @@ class Tournament:
                 ],
                 format="%(message)s",
             )
-        self.play_in_rank = play_in_rank
         self.predict = prediction_method
-        self.west = Group(west, self.predict, self.play_in_rank, log_results)
-        self.south = Group(south, self.predict, self.play_in_rank, log_results)
-        self.east = Group(east, self.predict, self.play_in_rank, log_results)
-        self.midwest = Group(midwest, self.predict, self.play_in_rank, log_results)
+        self.west = Group(west, self.predict, west_play_in_rank)
+        self.east = Group(east, self.predict, east_play_in_rank)
+        self.south = Group(south, self.predict, south_play_in_rank)
+        self.midwest = Group(midwest, self.predict, midwest_play_in_rank)
         self.west_winner = None
         self.east_winner = None
         self.south_winner = None
         self.midwest_winner = None
 
     def run(self):
+        if self.log_results:
+            logging.info("West Group Rankings:")
+            logging.info(self.west.ranking_dict)
+            logging.info("East Group Rankings:")
+            logging.info(self.east.ranking_dict)
+            logging.info("South Group Rankings:")
+            logging.info(self.south.ranking_dict)
+            logging.info("Midwest Group Rankings:")
+            logging.info(self.midwest.ranking_dict)
         west_winner, east_winner, south_winner, midwest_winner = self.group_winners()
         tournament_winner = self.tournament_winner(
             west_winner, east_winner, south_winner, midwest_winner
@@ -69,7 +80,7 @@ class Tournament:
             south_sweet_sixteen,
             midwest_sweet_sixteen,
         ) = self.sweet_sixteen(
-            west_first_round, east_first_round, south_first_round, midwest_first_round
+            west_second_round, east_second_round, south_second_round, midwest_second_round
         )
 
         return self.elite_eight(
@@ -224,30 +235,26 @@ class Tournament:
 
 
 class Group:
-    def __init__(self, ranking_dict, prediction_method, play_in_rank, log_results=True):
-        self.one = ranking_dict["one"]
-        self.two = ranking_dict["two"]
-        self.three = ranking_dict["three"]
-        self.four = ranking_dict["four"]
-        self.five = ranking_dict["five"]
-        self.six = ranking_dict["six"]
-        self.seven = ranking_dict["seven"]
-        self.eight = ranking_dict["eight"]
-        self.nine = ranking_dict["nine"]
-        self.ten = ranking_dict["ten"]
-        self.eleven = ranking_dict["eleven"]
-        self.twelve = ranking_dict["twelve"]
-        self.thirteen = ranking_dict["thirteen"]
-        self.fourteen = ranking_dict["fourteen"]
-        self.fifteen = ranking_dict["fifteen"]
-        self.sixteen = ranking_dict["sixteen"]
+    def __init__(self, ranking_dict, prediction_method, play_in_rank):
+        self.one = ranking_dict[1]
+        self.two = ranking_dict[2]
+        self.three = ranking_dict[3]
+        self.four = ranking_dict[4]
+        self.five = ranking_dict[5]
+        self.six = ranking_dict[6]
+        self.seven = ranking_dict[7]
+        self.eight = ranking_dict[8]
+        self.nine = ranking_dict[9]
+        self.ten = ranking_dict[10]
+        self.eleven = ranking_dict[11]
+        self.twelve = ranking_dict[12]
+        self.thirteen = ranking_dict[13]
+        self.fourteen = ranking_dict[14]
+        self.fifteen = ranking_dict[15]
+        self.sixteen = ranking_dict[16]
         self.play_in = ranking_dict["play_in"]
         self.predict = prediction_method
         self.play_in_rank = play_in_rank
-        self.log_results = log_results
-        if self.log_results:
-            logging.info("Group Rankings:")
-            logging.info(self.ranking_dict)
         self.first_four_results = None
         self.first_round_results = None
         self.second_round_results = None

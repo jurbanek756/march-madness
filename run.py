@@ -4,12 +4,12 @@ import pandas as pd
 
 from predict.select_team import weighted_random_selection
 from team.dataframe import (
-    add_tournament_rankings_to_dataframe_from_csv,
     filter_none_values,
     add_data_to_dataframe,
 )
 from team.team import Team
 from test.data.rankings_2022 import west, east, south, midwest
+from tournament.tournament import Tournament
 
 
 def generate_full_region_dict(all_schools_df, region):
@@ -42,3 +42,16 @@ print(south_teams)
 midwest_play_in_rank = midwest.pop("play_in_rank")
 midwest_teams = generate_full_region_dict(df, midwest)
 print(midwest_teams)
+
+tournament_2022 = Tournament(
+    west_teams,
+    east_teams,
+    south_teams,
+    midwest_teams,
+    west_play_in_rank,
+    east_play_in_rank,
+    south_play_in_rank,
+    midwest_play_in_rank,
+    prediction_method=weighted_random_selection,
+    log_results=True,
+)
