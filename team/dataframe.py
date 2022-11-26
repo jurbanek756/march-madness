@@ -131,5 +131,8 @@ def add_data_to_dataframe(df, data_tuple_list, attribute):
             if ratio > best_ratio:
                 best_ratio = ratio
                 best_index = i
-        df.at[best_index, attribute] = int(d[1])
+        try:
+            df.at[best_index, attribute] = int(d[1])
+        except ValueError:
+            df.at[best_index, attribute] = d[1]
     return df

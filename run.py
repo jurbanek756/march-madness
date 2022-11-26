@@ -6,48 +6,39 @@ from predict.select_team import weighted_random_selection
 from team.dataframe import (
     add_tournament_rankings_to_dataframe_from_csv,
     filter_none_values,
+    add_data_to_dataframe,
 )
 from team.team import Team
+from test.data.rankings_2022 import west, east, south, midwest
+
+
+def generate_full_region_dict(all_schools_df, region):
+    tuple_list = list()
+    for k, v in region.items():
+        tuple_list.append((v, k))
+    region_df = add_data_to_dataframe(all_schools_df, tuple_list, "Tournament Ranking")
+    region_df = filter_none_values(region_df, "Tournament Ranking")
+    region_teams = [Team(record) for record in region_df.to_dict(orient="records")]
+    data = dict()
+    for team in region_teams:
+        data[team.tournament_rank] = team
+    return data
+
 
 df = pd.read_pickle("saved_static_data/school_data_dataframe.pkl")
-add_tournament_rankings_to_dataframe_from_csv(df, "test/data/elite8.csv")
-df = filter_none_values(df, "Tournament Ranking")
 
-teams = [Team(record) for record in df.to_dict(orient="records")]
+west_play_in_rank = west.pop("play_in_rank")
+west_teams = generate_full_region_dict(df, west)
+print(west_teams)
 
-# Format is <conference>_<expected seeds in each game>, ex. east_116 will be the first and 16th seed playing in the
-#   east conference, west_81 is the game in the western conference where the 8 and 1 seed are most likely to play
-#   but could actually be the 9 and 1 seed
-north_12 = [[teams[0], teams[1]]]
-south_12 = [[teams[2], teams[3]]]
-east_12 = [[teams[4], teams[5]]]
-west_12 = [[teams[6], teams[7]]]
+east_play_in_rank = east.pop("play_in_rank")
+east_teams = generate_full_region_dict(df, east)
+print(east_teams)
 
+south_play_in_rank = south.pop("play_in_rank")
+south_teams = generate_full_region_dict(df, south)
+print(south_teams)
 
-print(f"{north_12[0][0]} vs {north_12[0][1]} prediction:", end=" ")
-north = weighted_random_selection(north_12[0][0], north_12[0][1])
-print(north)
-
-print(f"{south_12[0][0]} vs {south_12[0][1]} prediction:", end=" ")
-south = weighted_random_selection(south_12[0][0], south_12[0][1])
-print(south)
-
-print(f"{east_12[0][0]} vs {east_12[0][1]} prediction:", end=" ")
-east = weighted_random_selection(east_12[0][0], east_12[0][1])
-print(east)
-
-print(f"{west_12[0][0]} vs {west_12[0][1]} prediction:", end=" ")
-west = weighted_random_selection(west_12[0][0], west_12[0][1])
-print(west)
-
-print(f"{north} vs {south} prediction:", end=" ")
-ns = weighted_random_selection(north, south)
-print(ns)
-
-print(f"{east} vs {west} prediction:", end=" ")
-ew = weighted_random_selection(east, west)
-print(ew)
-
-print(f"Championship Game between {ns} and {ew}")
-champion = weighted_random_selection(ns, ew)
-print(f"Champion: {champion}")
+midwest_play_in_rank = midwest.pop("play_in_rank")
+midwest_teams = generate_full_region_dict(df, midwest)
+print(midwest_teams)
