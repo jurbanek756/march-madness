@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 """
 Seed a true random number to relevant libraries
 """

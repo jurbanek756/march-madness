@@ -1,4 +1,6 @@
-#!/usr/bin/env python3
+"""
+Module for determining weights in probability of team winning
+"""
 
 
 def lptr(rank1, rank2):
@@ -9,6 +11,9 @@ def lptr(rank1, rank2):
     difference in rank between the two teams. Ex.
     1 vs 1 = 0.5, 0.5
     1 vs 16 = 1, 0
+
+    While easy to implement and understand, it does have significant drawbacks in that it weighs all ranking differences
+    the same. For example, a 1 vs. 3 seed will have the same weight as a 14 vs. 16 seed.
 
     Parameters
     ----------

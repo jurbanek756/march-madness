@@ -1,10 +1,12 @@
-#!/usr/bin/env python
+"""
+Module for adding relevant data to a DataFrame
+"""
 
 from data.colors import get_all_school_colors
 from data.location import create_location_status_tuple
 from data.rivals import RIVALRIES
-from data.school_names import update_school_name
-from data.soup_helpers import get_table
+from helpers.school_names import update_school_name
+from helpers.soup_helpers import get_table
 from bs4 import BeautifulSoup
 from fuzzywuzzy import fuzz
 import pandas as pd

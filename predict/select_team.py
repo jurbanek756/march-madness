@@ -1,4 +1,6 @@
-#!/usr/bin/env python3
+"""
+Module for making predictions
+"""
 
 from predict.weight import lptr
 

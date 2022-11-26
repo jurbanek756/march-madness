@@ -1,7 +1,5 @@
-#!/usr/bin/env python
-
 """
-Using dataframes; for reference only
+Team class
 """
 
 
