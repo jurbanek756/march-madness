@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-def lptr(team1, team2):
+def lptr(rank1, rank2):
     """
     Linearly Proportional Tournament Ranking
     ----------------------------------------
@@ -12,17 +12,17 @@ def lptr(team1, team2):
 
     Parameters
     ----------
-    team1: Team
-    team2: Team
+    rank1: int
+    rank2: int
 
     Returns
     -------
     tuple
         Team 1 probability, Team 2 probability
     """
-    diff = abs(team1.tournament_rank - team2.tournament_rank)
+    diff = abs(rank1 - rank2)
     y = (0.5 / 15) * diff + 0.5
-    if team1.tournament_rank < team2.tournament_rank:
+    if rank1 < rank2:
         return y, 1 - y
     else:
         return 1 - y, y
