@@ -31,3 +31,9 @@ class Team:
         self.tournament_rank = record["Tournament Ranking"]
         self.ap_rank = record.get("AP Ranking")
         self.rivalries = record["Rivals"]
+
+    def __str__(self):
+        return self.name
+
+    def __le__(self, other):
+        return self.tournament_rank <= other.tournament_rank

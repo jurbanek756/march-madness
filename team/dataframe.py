@@ -54,7 +54,7 @@ def add_tournament_rankings_to_dataframe_from_csv(df, filename):
     with open(filename, "r") as F:
         for line in F:
             content = line.split(",")
-            tuple_list.append((update_school_name(content[0]), content[1]))
+            tuple_list.append((update_school_name(",".join(content[0:-1])), content[-1]))
     return add_data_to_dataframe(df, tuple_list, "Tournament Ranking")
 
 

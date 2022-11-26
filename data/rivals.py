@@ -8,7 +8,7 @@ Sources:
 RIVALRIES = {
     "Duke University": [
         "University of Maryland, College Park",
-        "University of North Carolina",
+        "University of North Carolina at Chapel Hill",
     ],
     "Georgetown University": ["Villanova University", "Syracuse University"],
     "Gonzaga University": ["Saint Mary's College of California"],
@@ -21,7 +21,7 @@ RIVALRIES = {
         "University of Wisconsin–Madison",
     ],
     "Michigan State University": ["University of Michigan"],
-    "North Carolina State University": ["University of North Carolina"],
+    "North Carolina State University": ["University of North Carolina at Chapel Hill"],
     "Ohio State University": ["University of Michigan"],
     "Princeton University": ["University of Pennsylvania"],
     "Purdue University": ["Indiana University Bloomington"],
@@ -55,7 +55,7 @@ RIVALRIES = {
         "University of Illinois Urbana–Champaign",
     ],
     "University of Notre Dame": ["Marquette University"],
-    "University of North Carolina": [
+    "University of North Carolina at Chapel Hill": [
         "Duke University",
         "North Carolina State University",
     ],
