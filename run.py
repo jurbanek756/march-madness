@@ -39,16 +39,16 @@ if len(all_teams) != 68:
 df = pd.read_pickle("saved_static_data/school_data_dataframe.pkl")
 
 west_play_in_rank = west.pop("play_in_rank")
-west_teams = generate_full_region_dict(df, west)
+west_teams = generate_full_region_dict(df.copy(), west)
 
 east_play_in_rank = east.pop("play_in_rank")
-east_teams = generate_full_region_dict(df, east)
+east_teams = generate_full_region_dict(df.copy(), east)
 
 south_play_in_rank = south.pop("play_in_rank")
-south_teams = generate_full_region_dict(df, south)
+south_teams = generate_full_region_dict(df.copy(), south)
 
 midwest_play_in_rank = midwest.pop("play_in_rank")
-midwest_teams = generate_full_region_dict(df, midwest)
+midwest_teams = generate_full_region_dict(df.copy(), midwest)
 
 tournament_2022 = Tournament(
     west_teams,

@@ -25,7 +25,7 @@ class Tournament:
                 encoding="UTF-8",
                 level="INFO",
                 handlers=[
-                    # logging.FileHandler("NCAA_Tournament_Results.txt"),
+                    logging.FileHandler("NCAA_Tournament_Results.log"),
                     logging.StreamHandler(),
                 ],
                 format="%(message)s",
