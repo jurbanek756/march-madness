@@ -40,10 +40,14 @@ class Group:
         self.play_in = ranking_dict["play_in"]
         self.predict = prediction_method
         self.play_in_rank = play_in_rank
+        self.group_winner = self.run()
 
     def run(self):
         self.first_four()
         first_round_results = self.first_round()
+        second_round_results = self.second_round(first_round_results)
+        sweet_sixteen_results = self.sweet_sixteen(second_round_results)
+        return self.elite_eight(sweet_sixteen_results)
 
     def first_four(self):
         ranking_dict = {
@@ -79,3 +83,20 @@ class Group:
             "7_10": self.predict(self.seven, self.ten),
             "8_9": self.predict(self.eight, self.nine),
         }
+
+    def second_round(self, first_round_results):
+        return {
+            "1_8": self.predict(first_round_results["1_16"], first_round_results["8_9"]),
+            "2_7": self.predict(first_round_results["2_15"], first_round_results["7_10"]),
+            "3_6": self.predict(first_round_results["3_14"], first_round_results["6_11"]),
+            "4_5": self.predict(first_round_results["4_13"], first_round_results["5_12"]),
+        }
+
+    def sweet_sixteen(self, second_round_results):
+        return {
+            "1_4": self.predict(second_round_results["1_8"], second_round_results["4_5"]),
+            "2_3": self.predict(second_round_results["2_7"], second_round_results["3_6"]),
+        }
+
+    def elite_eight(self, sweet_sixteen_results):
+        return self.predict(sweet_sixteen_results["1_4"], sweet_sixteen_results["2_3"])
