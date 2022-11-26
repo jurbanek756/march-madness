@@ -18,6 +18,11 @@ class Tournament:
         self.east = Group(east, self.predict, self.play_in_rank)
         self.midwest = Group(midwest, self.predict, self.play_in_rank)
 
+    def tournament_winner(self):
+        left = self.predict(self.west, self.east)
+        right = self.predict(self.south, self.midwest)
+        return self.predict(left, right)
+
 
 class Group:
     def __init__(self, ranking_dict, prediction_method, play_in_rank):
