@@ -29,5 +29,5 @@ Data is still being collected and predictions are currently a work in progress.
 
 ## Backlog
 
-* Backfill missing data
 * Work on prediction methods
+* Backfill missing data
