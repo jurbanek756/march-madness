@@ -35,7 +35,7 @@ def weighted_random_selection(a, b, weight_function=lptr):
     -------
     Team
     """
-    return random.choices(population=[a, b], k=1, weights=weight_function(a, b))
+    return random.choices(population=[a, b], k=1, weights=weight_function(a.tournament_rank, b.tournament_rank))
 
 
 def ranked_selection(a, b):
