@@ -63,8 +63,8 @@ def add_team_colors_to_dataframe(df):
     for i, row in df.iterrows():
         best_index, best_ratio = school_index_in_tuple(row["School"], data)
         if best_ratio > 95:
-            df.at[i, "primary_color"] = data[best_index][1]
-            df.at[i, "secondary_color"] = data[best_index][2]
+            df.at[i, "Primary Color"] = data[best_index][1]
+            df.at[i, "Secondary Color"] = data[best_index][2]
 
 
 def add_location_and_is_private_to_dataframe(df):
@@ -72,8 +72,8 @@ def add_location_and_is_private_to_dataframe(df):
     for i, row in df.iterrows():
         best_index, best_ratio = school_index_in_tuple(row["School"], data)
         if best_ratio > 95:
-            df.at[i, "location"] = data[best_index][1]
-            df.at[i, "is_private"] = data[best_index][2]
+            df.at[i, "Location"] = data[best_index][1]
+            df.at[i, "Is Private"] = data[best_index][2]
 
 
 def add_rivals_to_dataframe(df):

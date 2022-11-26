@@ -56,9 +56,9 @@ def ranked_selection(a, b):
     -------
     Team
     """
-    if a.rank > b.rank:
+    if a.tournament_rank > b.tournament_rank:
         return b
-    elif b.rank > a.rank:
+    elif b.tournament_rank > a.tournament_rank:
         return a
     else:
         if a.ap_rank > b.ap_rank:
@@ -90,9 +90,9 @@ def ap_selection(a, b):
     elif b.ap_rank > a.ap_rank:
         return b
     else:
-        if a.rank > b.rank:
+        if a.tournament_rank > b.tournament_rank:
             return b
-        elif b.rank > a.rank:
+        elif b.tournament_rank > a.tournament_rank:
             return a
         else:
             return random_selection(a, b)

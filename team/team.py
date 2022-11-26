@@ -7,11 +7,27 @@ class Team:
     __slots__ = (
         "name",
         "nickname",
-        "city",
+        "location",
         "primary_color",
         "secondary_color",
-        "rival",
         "conference",
+        "is_private",
         "tournament_rank",
         "ap_rank",
+        "rivalries",
     )
+
+    def __init__(
+        self,
+        record
+    ):
+        self.name = record["School"]
+        self.nickname = record["Nickname"]
+        self.location = record["Location"]
+        self.primary_color = record["Primary Color"]
+        self.secondary_color = record["Secondary Color"]
+        self.conference = record["Conference"]
+        self.is_private = record["Is Private"]
+        self.tournament_rank = record["Tournament Ranking"]
+        self.ap_rank = record.get("AP Ranking")
+        self.rivalries = record["Rivals"]
