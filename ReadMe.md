@@ -16,7 +16,8 @@ Although all data is scraped from external sources that are currently publically
 
 ### Run Predictions
 
-Data is still being collected and predictions are currently a work in progress.
+A formalized method of running predictions has not been established, but the framework of a successful run is located 
+in `run.py`, which uses the 2022 tournament rankings.
 
 ## Algorithm Ideas
 
@@ -29,5 +30,5 @@ Data is still being collected and predictions are currently a work in progress.
 
 ## Backlog
 
-* Work on prediction methods
+* Expand prediction methods
 * Backfill missing data
