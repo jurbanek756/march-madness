@@ -1,12 +1,17 @@
 #!/usr/bin/env python
 
 import json
+import os
 
 from predict.select_team import weighted_random_selection
 
 from team.team import Team
 from rankings.r2023 import west, east, south, midwest
 from tournament.tournament import Tournament
+from true_random.random_number_seeding import seed_via_random_api
+
+if random_api_key := os.getenv("RANDOM_API_KEY"):
+    seed_via_random_api(0, 10_000, random_api_key)
 
 
 def generate_full_region_dict(db, region):
@@ -60,6 +65,5 @@ tournament = Tournament(
     prediction_method=weighted_random_selection,
     log_results=True,
 )
-
 
 tournament.run()
