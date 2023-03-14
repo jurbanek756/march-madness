@@ -48,17 +48,18 @@ south_teams = generate_full_region_dict(db, south)
 midwest_play_in_rank = midwest.pop("play_in_rank")
 midwest_teams = generate_full_region_dict(db, midwest)
 
-tournament_2022 = Tournament(
-    west_teams,
-    east_teams,
+tournament = Tournament(
     south_teams,
+    east_teams,
     midwest_teams,
-    west_play_in_rank,
-    east_play_in_rank,
+    west_teams,
     south_play_in_rank,
+    east_play_in_rank,
     midwest_play_in_rank,
+    west_play_in_rank,
     prediction_method=weighted_random_selection,
     log_results=True,
 )
 
-tournament_2022.run()
+
+tournament.run()
