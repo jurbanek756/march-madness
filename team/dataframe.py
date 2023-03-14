@@ -2,7 +2,7 @@
 Module for adding relevant data to a DataFrame
 """
 
-from data.colors import get_all_school_colors
+from data.colors import get_all_school_colors, school_colors_dict
 from data.location import create_location_status_tuple
 from data.names import NAMES
 from data.rivals import RIVALRIES
@@ -78,11 +78,16 @@ def add_ap_rankings_to_dataframe(df):
 
 def add_team_colors_to_dataframe(df):
     data = get_all_school_colors()
+    static_color_dict = school_colors_dict()
     for i, row in df.iterrows():
-        best_index, best_ratio = school_index_in_tuple(row["School"], data)
-        if best_ratio > 95:
-            df.at[i, "Primary Color"] = data[best_index][1]
-            df.at[i, "Secondary Color"] = data[best_index][2]
+        if row["Name"] in static_color_dict:
+            df.at[i, "Primary Color"] = static_color_dict[row["Name"]][0]
+            df.at[i, "Secondary Color"] = static_color_dict[row["Name"]][1]
+        else:
+            best_index, best_ratio = school_index_in_tuple(row["School"], data)
+            if best_ratio > 95:
+                df.at[i, "Primary Color"] = data[best_index][1]
+                df.at[i, "Secondary Color"] = data[best_index][2]
 
 
 def add_location_and_is_private_to_dataframe(df):
