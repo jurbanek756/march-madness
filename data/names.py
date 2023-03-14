@@ -56,4 +56,7 @@ NAMES = {
     "University of Alabama at Birmingham": "UAB",
     "University of Tennessee at Chattanooga": "Chattanooga",
     "Loyola University Chicago": "Loyola Chicago",
+    "University of Texas at Arlington": "UT Arlington",
+    "University of Hawaii at Manoa": "Hawaii",
+    "University of Nevada, Las Vegas": "UNLV"
 }

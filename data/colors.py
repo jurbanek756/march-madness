@@ -9,8 +9,6 @@ import webcolors
 from helpers.soup_helpers import get_table
 
 
-
-
 def get_all_school_colors():
     """
     Gets school primary and secondary colors from an external source
@@ -123,3 +121,17 @@ def get_all_school_colors_from_mascot_names():
         if name:
             colors.append((name, get_color_name(color1), get_color_name(color2)))
     return colors
+
+
+def school_colors_dict():
+    return {
+        "Creighton": ("blue", "white"),
+        "TCU": ("purple", "white"),
+        "UCLA": ("blue", "gold"),
+        "Gonzaga": ("white", "navy"),
+        "St. Mary's": ("white", "blue"),
+        "UT Arlington": ("black", "blue"),
+        "Xavier": ("white", "silver"),
+        "Hawaii": ("white", "green"),
+        "UNLV": ("gray", "red")
+    }

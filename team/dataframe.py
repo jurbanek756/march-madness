@@ -19,6 +19,9 @@ D1_BASKETBALL_SCHOOLS = (
 )
 AP_RANKINGS = "https://www.ncaa.com/rankings/basketball-men/d1/associated-press"
 DASH_REGEX = regex.compile(r"\p{Pd}")
+HAWAII_REGEX = regex.compile(r"ʻ")
+MANOA_REGEX = regex.compile(r"ā")
+
 
 def get_all_d1_schools():
     table = get_table(D1_BASKETBALL_SCHOOLS)
@@ -35,6 +38,8 @@ def get_all_d1_schools():
                 content = d.find("a").text
             content = content.strip()
             content = DASH_REGEX.sub("-", content)
+            content = HAWAII_REGEX.sub("", content)
+            content = MANOA_REGEX.sub("a", content)
             school_data.append(content)
         for _ in additional_rows:
             school_data.append(None)
@@ -105,15 +110,15 @@ def school_index_in_tuple(df_school, data):
         split_df_school = df_school.casefold().split(" ")
         generic = "University"
         if (
-            split_ap_name[-1] == generic.casefold()
-            and split_df_school[-1] == generic.casefold()
+                split_ap_name[-1] == generic.casefold()
+                and split_df_school[-1] == generic.casefold()
         ):
             ratio = fuzz.ratio(
                 " ".join(split_df_school[:-1]), " ".join(split_ap_name[:-1])
             )
         elif (
-            split_ap_name[0] == generic.casefold()
-            and split_df_school[0] == generic.casefold()
+                split_ap_name[0] == generic.casefold()
+                and split_df_school[0] == generic.casefold()
         ):
             ratio = fuzz.ratio(
                 " ".join(split_df_school[1:]), " ".join(split_ap_name[1:])
