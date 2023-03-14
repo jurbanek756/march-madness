@@ -39,6 +39,6 @@ def seed_via_random_api(minimum, maximum, api_key, random_url="https://api.rando
     headers = {"content-type": "application/json"}
     response = requests.post(random_url, data=json.dumps(payload), headers=headers)
     data = json.loads(response.text)["result"]["random"]["data"]
-    random.seed(data)
+    random.seed(data[0])
     os.environ["PYTHONHASHSEED"] = str(data)
-    return data
+    return data[0]

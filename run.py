@@ -11,7 +11,8 @@ from tournament.tournament import Tournament
 from true_random.random_number_seeding import seed_via_random_api
 
 if random_api_key := os.getenv("RANDOM_API_KEY"):
-    seed_via_random_api(0, 10_000, random_api_key)
+    seed = seed_via_random_api(0, 10_000, random_api_key)
+    print(f"Seeded with {seed}")
 
 
 def generate_full_region_dict(db, region):
