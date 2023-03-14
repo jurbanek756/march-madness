@@ -4,11 +4,9 @@ Methods for predicting March Madness winners!
 
 Utilizes data scraping methods for obtaining team data, and uses various pieces of that data to make predictions.
 
-Algorithm methods are a work in progress.
-
 ## Usage
 
-### Database
+### Database Generation
 
 Data is scraped from external sources that are currently publicly available, and is stored in `db/school_data.json` as 
 a local database.

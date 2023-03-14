@@ -1,6 +1,9 @@
 #OAuth Token
 OAuth_Token
 
+# DB
+db/
+
 #unit testing outputs
 Test_Artifacts/album_data_test
 Test_Artifacts/artist_data_test
