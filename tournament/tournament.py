@@ -54,9 +54,9 @@ class Tournament:
             logging.info(
                 json.dumps(self.right_bottom.ranking_dict, default=str, indent=2)
             )
-        west_winner, east_winner, south_winner, midwest_winner = self.group_winners()
+        lt_winner, lb_winner, rt_winner, rb_winner = self.group_winners()
         tournament_winner = self.tournament_winner(
-            south_winner, east_winner, midwest_winner, west_winner
+            lt_winner, lb_winner, rt_winner, rb_winner
         )
         if self.log_results:
             logging.info("NCAA Champions: %s", tournament_winner)
@@ -93,140 +93,122 @@ class Tournament:
         return self.predict(left, right)
 
     def first_four(self):
-        west_first_four = self.left_top.first_four()
+        lt = self.left_top.first_four()
         if self.log_results:
-            logging.info("Left Top First Four Winner: %s", west_first_four)
+            logging.info("Left Top First Four Winner: %s", lt)
 
-        east_first_four = self.left_bottom.first_four()
+        lb = self.left_bottom.first_four()
         if self.log_results:
-            logging.info("Left Bottom First Four Winner: %s", east_first_four)
+            logging.info("Left Bottom First Four Winner: %s", lb)
 
-        south_first_four = self.right_top.first_four()
+        rt = self.right_top.first_four()
         if self.log_results:
-            logging.info("Right Top Four Winner: %s", south_first_four)
+            logging.info("Right Top Four Winner: %s", rt)
 
-        midwest_first_four = self.right_bottom.first_four()
+        rb = self.right_bottom.first_four()
         if self.log_results:
-            logging.info("Right Bottom First Four Winner: %s", midwest_first_four)
+            logging.info("Right Bottom First Four Winner: %s", rb)
 
-        return west_first_four, east_first_four, south_first_four, midwest_first_four
+        return lt, lb, rt, rb
 
     def first_round(self):
-        west_first_round = self.left_top.first_round()
+        lt = self.left_top.first_round()
         if self.log_results:
             logging.info("Left Top First Round Results:")
-            logging.info(json.dumps(west_first_round, default=str, indent=2))
+            logging.info(json.dumps(lt, default=str, indent=2))
 
-        east_first_round = self.left_bottom.first_round()
+        lb = self.left_bottom.first_round()
         if self.log_results:
             logging.info("Left Bottom First Round Results:")
-            logging.info(json.dumps(east_first_round, default=str, indent=2))
+            logging.info(json.dumps(lb, default=str, indent=2))
 
-        south_first_round = self.right_top.first_round()
+        rt = self.right_top.first_round()
         if self.log_results:
             logging.info("Right Top First Round Results:")
-            logging.info(json.dumps(south_first_round, default=str, indent=2))
+            logging.info(json.dumps(rt, default=str, indent=2))
 
-        midwest_first_round = self.right_bottom.first_round()
+        rb = self.right_bottom.first_round()
         if self.log_results:
             logging.info("Right Bottom First Round Results:")
-            logging.info(json.dumps(midwest_first_round, default=str, indent=2))
+            logging.info(json.dumps(rb, default=str, indent=2))
 
-        return (
-            west_first_round,
-            east_first_round,
-            south_first_round,
-            midwest_first_round,
-        )
+        return lt, lb, rt, rb
 
-    def second_round(
-        self, west_first_round, east_first_round, south_first_round, midwest_first_round
-    ):
-        west_second_round = self.left_top.second_round(west_first_round)
+    def second_round(self, lt_r1, lb_r1, rt_r1, rb_r1):
+        lt = self.left_top.second_round(lt_r1)
         if self.log_results:
             logging.info("Left Top Second Round Results:")
-            logging.info(json.dumps(west_second_round, default=str, indent=2))
+            logging.info(json.dumps(lt, default=str, indent=2))
 
-        east_second_round = self.left_bottom.second_round(east_first_round)
+        lb = self.left_bottom.second_round(lb_r1)
         if self.log_results:
             logging.info("Left Bottom Second Round Results:")
-            logging.info(json.dumps(east_second_round, default=str, indent=2))
+            logging.info(json.dumps(lb, default=str, indent=2))
 
-        south_second_round = self.right_top.second_round(south_first_round)
+        rt = self.right_top.second_round(rt_r1)
         if self.log_results:
             logging.info("Right Top Second Round Results:")
-            logging.info(json.dumps(south_second_round, default=str, indent=2))
+            logging.info(json.dumps(rt, default=str, indent=2))
 
-        midwest_second_round = self.right_bottom.second_round(midwest_first_round)
+        lb = self.right_bottom.second_round(rb_r1)
         if self.log_results:
             logging.info("Right Bottom Second Round Results:")
-            logging.info(json.dumps(midwest_second_round, default=str, indent=2))
+            logging.info(json.dumps(lb, default=str, indent=2))
 
-        return (
-            west_second_round,
-            east_second_round,
-            south_second_round,
-            midwest_second_round,
-        )
+        return lt, lb, rt, lb
 
     def sweet_sixteen(
         self,
-        west_second_round,
-        east_second_round,
-        south_second_round,
-        midwest_second_round,
+        lt,
+        lb,
+        rt,
+        rb,
     ):
-        west_sweet_sixteen = self.left_top.sweet_sixteen(west_second_round)
+        lt = self.left_top.sweet_sixteen(lt)
         if self.log_results:
             logging.info("Left Top Sweet Sixteen Results:")
-            logging.info(json.dumps(west_sweet_sixteen, default=str, indent=2))
+            logging.info(json.dumps(lt, default=str, indent=2))
 
-        east_sweet_sixteen = self.left_bottom.sweet_sixteen(east_second_round)
+        lb = self.left_bottom.sweet_sixteen(lb)
         if self.log_results:
             logging.info("Left Bottom Sweet Sixteen Results:")
-            logging.info(json.dumps(east_sweet_sixteen, default=str, indent=2))
+            logging.info(json.dumps(lb, default=str, indent=2))
 
-        south_sweet_sixteen = self.right_top.sweet_sixteen(south_second_round)
+        rt = self.right_top.sweet_sixteen(rt)
         if self.log_results:
             logging.info("Right Top Sweet Sixteen Results:")
-            logging.info(json.dumps(south_sweet_sixteen, default=str, indent=2))
+            logging.info(json.dumps(rt, default=str, indent=2))
 
-        midwest_sweet_sixteen = self.right_bottom.sweet_sixteen(midwest_second_round)
+        rb = self.right_bottom.sweet_sixteen(rb)
         if self.log_results:
             logging.info("Right Bottom Sweet Sixteen Results:")
-            logging.info(json.dumps(midwest_sweet_sixteen, default=str, indent=2))
+            logging.info(json.dumps(rb, default=str, indent=2))
 
         return (
-            west_sweet_sixteen,
-            east_sweet_sixteen,
-            south_sweet_sixteen,
-            midwest_sweet_sixteen,
+            lt,
+            lb,
+            rt,
+            rb,
         )
 
-    def elite_eight(
-        self,
-        west_sweet_sixteen,
-        east_sweet_sixteen,
-        south_sweet_sixteen,
-        midwest_sweet_sixteen,
-    ):
-        west_winner = self.left_top.elite_eight(west_sweet_sixteen)
+    def elite_eight(self, lt, lb, rt, rb):
+        lt_winner = self.left_top.elite_eight(lt)
         if self.log_results:
-            logging.info(f"Left Top Group Winner: {west_winner}")
+            logging.info(f"Left Top Group Winner: {lt_winner}")
 
-        east_winner = self.left_bottom.elite_eight(east_sweet_sixteen)
+        lb_winner = self.left_bottom.elite_eight(lb)
         if self.log_results:
-            logging.info(f"Left Bottom Group Winner: {east_winner}")
+            logging.info(f"Left Bottom Group Winner: {lb_winner}")
 
-        south_winner = self.right_top.elite_eight(south_sweet_sixteen)
+        rt_winner = self.right_top.elite_eight(rt)
         if self.log_results:
-            logging.info(f"Right Top Group Winner: {south_winner}")
+            logging.info(f"Right Top Group Winner: {rt_winner}")
 
-        midwest_winner = self.right_bottom.elite_eight(midwest_sweet_sixteen)
+        rb_winner = self.right_bottom.elite_eight(rb)
         if self.log_results:
-            logging.info(f"Right Bottom Group Winner: {midwest_winner}")
+            logging.info(f"Right Bottom Group Winner: {rb_winner}")
 
-        return west_winner, east_winner, south_winner, midwest_winner
+        return lt_winner, lb_winner, rt_winner, rb_winner
 
 
 class Group:
