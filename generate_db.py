@@ -24,4 +24,5 @@ add_team_colors_to_dataframe(df)
 add_location_and_is_private_to_dataframe(df)
 add_rivals_to_dataframe(df)
 
+df.to_pickle("saved_static_data/school_data_dataframe.pkl")
 df.to_json("db/school_data.json", orient="records")
