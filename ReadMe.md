@@ -21,7 +21,9 @@ Predictions can be run for the 2023 March Madness tournament by executing the `r
 `prediction_method` on line 60 can be replaced with any function in `predict.select_team`, with 
 `weighted_random_selection` being used by default.
 
-## Algorithm Ideas
+## Future Work
+
+### Algorithm Ideas
 
 * True random
 * Weights accounting for AP Rank and Tournament Rank, with a certain level of stochasticity
@@ -30,7 +32,7 @@ Predictions can be run for the 2023 March Madness tournament by executing the `r
 * Colors
 * Randomly select one of the selection methods 
 
-## Backlog
+### Backlog
 
 * Expand prediction methods
 * Backfill missing data
