@@ -8,7 +8,7 @@ from team.dataframe import (
     add_data_to_dataframe,
 )
 from team.team import Team
-from rankings.r2022 import west, east, south, midwest
+from rankings.r2023 import west, east, south, midwest
 from tournament.tournament import Tournament
 
 

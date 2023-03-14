@@ -50,7 +50,7 @@ midwest = {
     7: "Texas A&M University",
     8: "University of Iowa",
     9: "Auburn University",
-    10: "Penn State University",
+    10: "Pennsylvania State University",
     11: "Mississippi State University",
     12: "Drake University",
     13: "Kent State University",
