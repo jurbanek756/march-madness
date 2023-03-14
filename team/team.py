@@ -19,16 +19,17 @@ class Team:
 
     def __init__(
         self,
-        record
+        record,
+            tournament_ranking
     ):
-        self.name = record["School"]
+        self.name = record["Name"]
         self.nickname = record["Nickname"]
         self.location = record["Location"]
         self.primary_color = record["Primary Color"]
         self.secondary_color = record["Secondary Color"]
         self.conference = record["Conference"]
         self.is_private = record["Is Private"]
-        self.tournament_rank = record["Tournament Ranking"]
+        self.tournament_rank = tournament_ranking
         self.ap_rank = record.get("AP Ranking")
         self.rivalries = record["Rivals"]
 

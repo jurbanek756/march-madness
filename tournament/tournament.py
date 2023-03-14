@@ -52,7 +52,7 @@ class Tournament:
             logging.info(json.dumps(self.midwest.ranking_dict, default=str, indent=2))
         west_winner, east_winner, south_winner, midwest_winner = self.group_winners()
         tournament_winner = self.tournament_winner(
-            west_winner, east_winner, south_winner, midwest_winner
+            south_winner, east_winner, midwest_winner, west_winner
         )
         if self.log_results:
             logging.info("NCAA Champions: %s", tournament_winner)
@@ -91,9 +91,9 @@ class Tournament:
             midwest_sweet_sixteen,
         )
 
-    def tournament_winner(self, west_winner, east_winner, south_winner, midwest_winner):
-        left = self.predict(west_winner, east_winner)
-        right = self.predict(south_winner, midwest_winner)
+    def tournament_winner(self, south_winner, east_winner, midwest_winner, west_winner):
+        left = self.predict(south_winner, east_winner)
+        right = self.predict(midwest_winner, west_winner)
         if self.log_results:
             logging.info("Championship Game: %s vs. %s", left, right)
         return self.predict(left, right)

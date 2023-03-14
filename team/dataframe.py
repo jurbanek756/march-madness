@@ -11,13 +11,14 @@ from helpers.soup_helpers import get_table
 from bs4 import BeautifulSoup
 from fuzzywuzzy import fuzz
 import pandas as pd
+import regex
 import requests
 
 D1_BASKETBALL_SCHOOLS = (
     "https://en.wikipedia.org/wiki/List_of_NCAA_Division_I_men%27s_basketball_programs"
 )
 AP_RANKINGS = "https://www.ncaa.com/rankings/basketball-men/d1/associated-press"
-
+DASH_REGEX = regex.compile(r"\p{Pd}")
 
 def get_all_d1_schools():
     table = get_table(D1_BASKETBALL_SCHOOLS)
@@ -33,6 +34,7 @@ def get_all_d1_schools():
             if not content:
                 content = d.find("a").text
             content = content.strip()
+            content = DASH_REGEX.sub("-", content)
             school_data.append(content)
         for _ in additional_rows:
             school_data.append(None)

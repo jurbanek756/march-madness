@@ -7,7 +7,6 @@ from team.dataframe import (
     add_ap_rankings_to_dataframe,
     add_location_and_is_private_to_dataframe,
     add_rivals_to_dataframe,
-    add_tournament_rankings_to_dataframe_from_csv,
     add_team_colors_to_dataframe,
 )
 

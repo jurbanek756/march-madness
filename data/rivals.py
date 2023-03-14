@@ -11,7 +11,7 @@ RIVALRIES = {
         "UNC",
     ],
     "Georgetown": ["Villanova", "Syracuse"],
-    "Gonzaga": ["Saint Mary's"],
+    "Gonzaga": ["St. Mary's"],
     "Harvard": ["Yale"],
     "Indiana": ["Purdue", "University of Kentucky"],
     "Iowa State": ["Iowa"],
@@ -25,7 +25,7 @@ RIVALRIES = {
     "Ohio State": ["Michigan"],
     "Princeton": ["Penn"],
     "Purdue": ["Indiana"],
-    "Saint Mary's College of California": ["Gonzaga"],
+    "St. Mary's": ["Gonzaga"],
     "Stanford": ["Cal"],
     "Syracuse": [
         "Georgetown",

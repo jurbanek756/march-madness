@@ -14,7 +14,7 @@ south = {
     13: "Furman",
     14: "UCSB",
     15: "Princeton",
-    16: "Texas A&M-Corpus Christi",
+    16: "AMCC",
     "play_in": "Southeast Missouri State",
     "play_in_rank": 16,
 }
@@ -66,7 +66,7 @@ west = {
     2: "UCLA",
     3: "Gonzaga",
     4: "UConn",
-    5: "Saint Mary's",
+    5: "St. Mary's",
     6: "TCU",
     7: "Northwestern",
     8: "Arkansas",
