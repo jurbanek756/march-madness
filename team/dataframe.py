@@ -4,6 +4,7 @@ Module for adding relevant data to a DataFrame
 
 from data.colors import get_all_school_colors
 from data.location import create_location_status_tuple
+from data.names import NAMES
 from data.rivals import RIVALRIES
 from helpers.school_names import update_school_name
 from helpers.soup_helpers import get_table
@@ -12,9 +13,9 @@ from fuzzywuzzy import fuzz
 import pandas as pd
 import requests
 
-WIKIPEDIA = "https://en.wikipedia.org/wiki"
-D1_BASKETBALL_SCHOOLS = f"{WIKIPEDIA}/List_of_NCAA_Division_I_men%27s_basketball_programs"
-DI_SCHOOLS = f"{WIKIPEDIA}/List_of_NCAA_Division_I_institutions"
+D1_BASKETBALL_SCHOOLS = (
+    "https://en.wikipedia.org/wiki/List_of_NCAA_Division_I_men%27s_basketball_programs"
+)
 AP_RANKINGS = "https://www.ncaa.com/rankings/basketball-men/d1/associated-press"
 
 
@@ -39,6 +40,25 @@ def get_all_d1_schools():
     return pd.DataFrame(all_school_data, columns=columns)
 
 
+def filter_schools_without_tournament_appearance(df):
+    return df[df["Tournament appearances"] != "(0)"]
+
+
+def add_names_to_schools(df):
+    for i, row in df.iterrows():
+        school_name = row["School"]
+        split_school_name = school_name.split(" ")
+        spscnl = len(split_school_name)
+        if school_name in NAMES:
+            df.at[i, "Name"] = NAMES.get(school_name)
+        elif (spscnl == 3 or spscnl == 4) and school_name.startswith("University of"):
+            df.at[i, "Name"] = " ".join(split_school_name[2:])
+        elif school_name.endswith("University") or school_name.endswith("College"):
+            df.at[i, "Name"] = " ".join(school_name.split(" ")[:-1])
+        else:
+            df.at[i, "Name"] = school_name
+
+
 def add_ap_rankings_to_dataframe(df):
     data = requests.get(AP_RANKINGS).content
     ap_ranks = BeautifulSoup(data, "html.parser")
@@ -47,15 +67,6 @@ def add_ap_rankings_to_dataframe(df):
         td = d.find_all("td")
         tuple_list.append((td[1].string, td[0].string))
     return add_data_to_dataframe(df, tuple_list, "AP Ranking")
-
-
-def add_tournament_rankings_to_dataframe_from_csv(df, filename):
-    tuple_list = list()
-    with open(filename, "r") as F:
-        for line in F:
-            content = line.split(",")
-            tuple_list.append((update_school_name(",".join(content[0:-1])), content[-1]))
-    return add_data_to_dataframe(df, tuple_list, "Tournament Ranking")
 
 
 def add_team_colors_to_dataframe(df):
@@ -77,7 +88,7 @@ def add_location_and_is_private_to_dataframe(df):
 
 
 def add_rivals_to_dataframe(df):
-    df["Rivals"] = df["School"].map(RIVALRIES)
+    df["Rivals"] = df["Name"].map(RIVALRIES)
 
 
 def school_index_in_tuple(df_school, data):
@@ -91,10 +102,20 @@ def school_index_in_tuple(df_school, data):
         split_ap_name = ap_name.casefold().split(" ")
         split_df_school = df_school.casefold().split(" ")
         generic = "University"
-        if split_ap_name[-1] == generic.casefold() and split_df_school[-1] == generic.casefold():
-            ratio = fuzz.ratio(" ".join(split_df_school[:-1]), " ".join(split_ap_name[:-1]))
-        elif split_ap_name[0] == generic.casefold() and split_df_school[0] == generic.casefold():
-            ratio = fuzz.ratio(" ".join(split_df_school[1:]), " ".join(split_ap_name[1:]))
+        if (
+            split_ap_name[-1] == generic.casefold()
+            and split_df_school[-1] == generic.casefold()
+        ):
+            ratio = fuzz.ratio(
+                " ".join(split_df_school[:-1]), " ".join(split_ap_name[:-1])
+            )
+        elif (
+            split_ap_name[0] == generic.casefold()
+            and split_df_school[0] == generic.casefold()
+        ):
+            ratio = fuzz.ratio(
+                " ".join(split_df_school[1:]), " ".join(split_ap_name[1:])
+            )
         else:
             ratio = fuzz.ratio(df_school, ap_name)
         if ratio > best_ratio:
@@ -127,7 +148,7 @@ def add_data_to_dataframe(df, data_tuple_list, attribute):
         best_index = -1
         for i, row in df.iterrows():
             ap_name = update_school_name(d[0])
-            ratio = fuzz.ratio(row["School"], ap_name)
+            ratio = fuzz.ratio(row["Name"], ap_name)
             if ratio > best_ratio:
                 best_ratio = ratio
                 best_index = i

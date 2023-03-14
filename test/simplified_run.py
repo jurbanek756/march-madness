@@ -3,14 +3,16 @@
 import pandas as pd
 
 from predict.select_team import weighted_random_selection
-from team.dataframe import (
-    add_tournament_rankings_to_dataframe_from_csv,
-    filter_none_values,
-)
+from team.dataframe import filter_none_values, update_school_name, add_data_to_dataframe
 from team.team import Team
 
 df = pd.read_pickle("saved_static_data/school_data_dataframe.pkl")
-add_tournament_rankings_to_dataframe_from_csv(df, "test/data/elite8.csv")
+tuple_list = list()
+with open("test/data/elite8.csv", "r") as F:
+    for line in F:
+        content = line.split(",")
+        tuple_list.append((update_school_name(",".join(content[0:-1])), content[-1]))
+df = add_data_to_dataframe(df, tuple_list, "Tournament Ranking")
 df = filter_none_values(df, "Tournament Ranking")
 
 teams = [Team(record) for record in df.to_dict(orient="records")]

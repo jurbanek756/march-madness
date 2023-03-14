@@ -6,8 +6,7 @@ from helpers.soup_helpers import get_table
 
 
 
-WIKIPEDIA = "https://en.wikipedia.org/wiki"
-DI_SCHOOLS = f"{WIKIPEDIA}/List_of_NCAA_Division_I_institutions"
+DI_SCHOOLS = "https://en.wikipedia.org/wiki/List_of_NCAA_Division_I_institutions"
 
 
 def create_location_status_tuple():
