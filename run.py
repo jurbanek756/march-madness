@@ -5,7 +5,7 @@ import json
 from predict.select_team import weighted_random_selection
 
 from team.team import Team
-from rankings.r2022 import west, east, south, midwest
+from rankings.r2023 import west, east, south, midwest
 from tournament.tournament import Tournament
 
 
