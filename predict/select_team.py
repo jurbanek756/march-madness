@@ -37,7 +37,11 @@ def weighted_random_selection(a, b, weight_function=lptr):
     -------
     Team
     """
-    return random.choices(population=[a, b], k=1, weights=weight_function(a.tournament_rank, b.tournament_rank))[0]
+    return random.choices(
+        population=[a, b],
+        k=1,
+        weights=weight_function(a.tournament_rank, b.tournament_rank),
+    )[0]
 
 
 def ranked_selection(a, b):
@@ -61,10 +65,11 @@ def ranked_selection(a, b):
     elif b.tournament_rank > a.tournament_rank:
         return a
     else:
-        if a.ap_rank > b.ap_rank:
-            return a
-        elif b.ap_rank > a.ap_rank:
-            return b
+        if a.ap_rank and b.ap_rank:
+            if a.ap_rank > b.ap_rank:
+                return a
+            else:
+                return b
         else:
             return random_selection(a, b)
 
@@ -85,14 +90,13 @@ def ap_selection(a, b):
     -------
     Team
     """
-    if a.ap_rank > b.ap_rank:
-        return a
-    elif b.ap_rank > a.ap_rank:
-        return b
-    else:
-        if a.tournament_rank > b.tournament_rank:
-            return b
-        elif b.tournament_rank > a.tournament_rank:
+    if a.ap_rank and b.ap_rank:
+        if a.ap_rank > b.ap_rank:
             return a
         else:
-            return random_selection(a, b)
+            return b
+    else:
+        if a.tournament_rank > b.tournament_rank:
+            return a
+        else:
+            return b

@@ -8,16 +8,20 @@ Algorithm methods are a work in progress.
 
 ## Usage
 
-### Save Static Data
+### Database
 
-Although all data is scraped from external sources that are currently publically available, it is possible that these sources will change or will be unavailable. Additionally, saving the data locally allows it to be validated before use, and prevents the need for successive external requests.
+Data is scraped from external sources that are currently publicly available, and is stored in `db/school_data.json` as 
+a local database.
 
-`save_static_data.py` collects and parses external data into pickle and json files. The content is the same, but the `json` allows the data to be easily read and validated.
+Run `generate_db.py` to create the `db/school_data.json` file.
+
 
 ### Run Predictions
 
-A formalized method of running predictions has not been established, but the framework of a successful run is located 
-in `run.py`, which uses the 2022 tournament rankings.
+Predictions can be run for the 2023 March Madness tournament by executing the `run.py` script.
+
+`prediction_method` on line 60 can be replaced with any function in `predict.select_team`, with 
+`weighted_random_selection` being used by default.
 
 ## Algorithm Ideas
 
