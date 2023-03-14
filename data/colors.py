@@ -133,5 +133,6 @@ def school_colors_dict():
         "UT Arlington": ("black", "blue"),
         "Xavier": ("white", "silver"),
         "Hawaii": ("white", "green"),
-        "UNLV": ("gray", "red")
+        "UNLV": ("gray", "red"),
+        "Drexel": ("blue", "gold")
     }
