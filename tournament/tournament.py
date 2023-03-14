@@ -135,27 +135,27 @@ class Tournament:
         return lt, lb, rt, rb
 
     def second_round(self, lt_r1, lb_r1, rt_r1, rb_r1):
-        lt = self.left_top.second_round(lt_r1)
+        lt_result = self.left_top.second_round(lt_r1)
         if self.log_results:
             logging.info("Left Top Second Round Results:")
-            logging.info(json.dumps(lt, default=str, indent=2))
+            logging.info(json.dumps(lt_result, default=str, indent=2))
 
-        lb = self.left_bottom.second_round(lb_r1)
+        lb_result = self.left_bottom.second_round(lb_r1)
         if self.log_results:
             logging.info("Left Bottom Second Round Results:")
-            logging.info(json.dumps(lb, default=str, indent=2))
+            logging.info(json.dumps(lb_result, default=str, indent=2))
 
-        rt = self.right_top.second_round(rt_r1)
+        rt_result = self.right_top.second_round(rt_r1)
         if self.log_results:
             logging.info("Right Top Second Round Results:")
-            logging.info(json.dumps(rt, default=str, indent=2))
+            logging.info(json.dumps(rt_result, default=str, indent=2))
 
-        lb = self.right_bottom.second_round(rb_r1)
+        rb_result = self.right_bottom.second_round(rb_r1)
         if self.log_results:
             logging.info("Right Bottom Second Round Results:")
-            logging.info(json.dumps(lb, default=str, indent=2))
+            logging.info(json.dumps(rb_result, default=str, indent=2))
 
-        return lt, lb, rt, lb
+        return lt_result, lb_result, rt_result, rb_result
 
     def sweet_sixteen(
         self,
@@ -164,31 +164,31 @@ class Tournament:
         rt,
         rb,
     ):
-        lt = self.left_top.sweet_sixteen(lt)
+        lt_result = self.left_top.sweet_sixteen(lt)
         if self.log_results:
             logging.info("Left Top Sweet Sixteen Results:")
-            logging.info(json.dumps(lt, default=str, indent=2))
+            logging.info(json.dumps(lt_result, default=str, indent=2))
 
-        lb = self.left_bottom.sweet_sixteen(lb)
+        lb_result = self.left_bottom.sweet_sixteen(lb)
         if self.log_results:
             logging.info("Left Bottom Sweet Sixteen Results:")
-            logging.info(json.dumps(lb, default=str, indent=2))
+            logging.info(json.dumps(lb_result, default=str, indent=2))
 
-        rt = self.right_top.sweet_sixteen(rt)
+        rt_result = self.right_top.sweet_sixteen(rt)
         if self.log_results:
             logging.info("Right Top Sweet Sixteen Results:")
-            logging.info(json.dumps(rt, default=str, indent=2))
+            logging.info(json.dumps(rt_result, default=str, indent=2))
 
-        rb = self.right_bottom.sweet_sixteen(rb)
+        rb_result = self.right_bottom.sweet_sixteen(rb)
         if self.log_results:
             logging.info("Right Bottom Sweet Sixteen Results:")
-            logging.info(json.dumps(rb, default=str, indent=2))
+            logging.info(json.dumps(rb_result, default=str, indent=2))
 
         return (
-            lt,
-            lb,
-            rt,
-            rb,
+            lt_result,
+            lb_result,
+            rt_result,
+            rb_result,
         )
 
     def elite_eight(self, lt, lb, rt, rb):
