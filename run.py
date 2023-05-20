@@ -4,16 +4,16 @@ import json
 import os
 
 from data.games import get_regular_season_games
-from helpers.helpers import generate_full_region_dict
+from tournament.helpers import generate_full_region_dict
 from helpers.random_number_seeding import seed_via_random_api
 from tournament.tournament import Tournament
 
 
 # ----------------Vars to change----------------------------------
-USE_CACHED_GAMES = False
-GAMES_CACHE = "db/2022_2022_games.json"
+USE_CACHED_GAMES = True
+GAMES_CACHE = "db/2022_2023_games.json"
 LOG_RESULTS = True
-from tournament_rankings.r2022 import west, east, south, midwest
+from tournament_rankings.r2023 import west, east, south, midwest
 from predict.select_team import weighted_random_selection as prediction_method
 
 # -----------------------------------------------------------------
@@ -42,8 +42,6 @@ if USE_CACHED_GAMES:
         regular_season_games = json.load(F)
 else:
     regular_season_games = get_regular_season_games()
-    with open("db/2022_2022_games.json", "w"):
-        json.dump(regular_season_games, F)
 
 west_play_in_rank = west.pop("play_in_rank")
 west_teams = generate_full_region_dict(db, regular_season_games, west)
@@ -56,7 +54,7 @@ south_teams = generate_full_region_dict(db, regular_season_games, south)
 
 midwest_play_in_rank = midwest.pop("play_in_rank")
 midwest_teams = generate_full_region_dict(db, regular_season_games, midwest)
-
+breakpoint()
 tournament = Tournament(
     south_teams,
     east_teams,

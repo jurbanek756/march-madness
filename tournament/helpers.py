@@ -13,7 +13,6 @@ def generate_full_region_dict(db, regular_season_games, region):
             games = None
         else:
             games = regular_season_games[name]
-        breakpoint()
         region_teams.append(Team(record, rank, games))
     data = dict()
     for t in region_teams:

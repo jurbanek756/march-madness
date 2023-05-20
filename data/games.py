@@ -26,7 +26,14 @@ def get_regular_season_games():
         for row in rows:
             row = [r for r in row]
             game_date = row[0].text.strip()
-            opponent = row[1].text.replace("vs ", "").strip()
+            opponent = (
+                row[1]
+                .text.lstrip("0123456789")
+                .replace("vs ", "")
+                .replace("*", "")
+                .replace("@", "")
+                .strip()
+            )
             score = row[2].text.strip()
             if score[0] == "W":
                 win = True
@@ -41,17 +48,32 @@ def get_regular_season_games():
             else:
                 raise ValueError("Invalid win-loss character detected")
             team_games.append(
-                Game(game_date=game_date, opponent=opponent, score=score, win=win)
+                Game(game_date=game_date, opponent=opponent, score=score, win=win).to_dict()
             )
-        name = team["shortDisplayName"]
-        if name[-3:] == " St":
-            name = name.replace(" St", "State")
-        elif name in ESPN_NAMES:
-            name = ESPN_NAMES[name]
-        games[name] = team_games
+        games[get_name(team["shortDisplayName"])] = team_games
     return games
 
 
-ESPN_NAMES = {
-    "Saint Mary's": "St. Mary's"
+def get_name(name):
+    if name in ESPN_NAMES:
+        return ESPN_NAMES[name]
+    if name[-3:] == " St":
+        return name.replace(" St", " State")
+    return name
+
+
+ESPN_NAMES = {  # espn name: local name
+    "Saint Mary's": "St. Mary's",
+    "Fullerton": "CSUF",
+    "New Mexico St": "NM State",
+    "North Carolina": "UNC",
+    "Colorado St": "CSU",
+    "San Diego St": "SDSU",
+    "S Dakota St": "South Dakota State",
+    "Jacksonville": "Jacksonville State",
+    "Texas A&M-CC": "AMCC",
+    "Lafayette": "Louisiana-Lafayette",
+    "Fair Dickinson": "Fairleigh Dickinson",
+    "SE Missouri St": "Southeast Missouri State",
+    "N Kentucky": "Northern Kentucky"
 }

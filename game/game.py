@@ -1,13 +1,10 @@
 import dateutil.parser
 from dateutil.relativedelta import relativedelta
 
+
 class Game:
-    __slots__ = (
-        "date",
-        "opponent",
-        "score",
-        "win"
-    )
+    __slots__ = ("date", "opponent", "score", "win")
+
     def __init__(self, game_date, opponent, score, win):
         self.date = dateutil.parser.parse(game_date).date()
         if self.date.month > 4:
@@ -15,3 +12,11 @@ class Game:
         self.opponent = opponent
         self.score = score
         self.win = win
+
+    def to_dict(self):
+        return {
+            "date": self.date.strftime("%b %d"),
+            "opponent": self.opponent,
+            "score": self.score,
+            "win": self.win,
+        }

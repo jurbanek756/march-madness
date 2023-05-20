@@ -26,7 +26,7 @@ def seed_via_random_api(minimum, maximum, api_key, random_url="https://api.rando
     Returns
     -------
     Union[int,list]
-        If 1 random number requested, return an int. If multiple requested, return a list of ints
+        If 1 random number requested, return remaining_espn_translations.txt int. If multiple requested, return a list of ints
     """
     if minimum >= maximum:
         raise ValueError(f"Maximum ({maximum}) must be greater minimum ({minimum})")
