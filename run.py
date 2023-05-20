@@ -11,7 +11,7 @@ from tournament_rankings.r2023 import west, east, south, midwest
 from tournament.tournament import Tournament
 from helpers.random_number_seeding import seed_via_random_api
 
-USE_CACHED_GAMES = False
+USE_CACHED_GAMES = True
 
 if random_api_key := os.getenv("RANDOM_API_KEY"):
     seed = seed_via_random_api(0, 10_000, random_api_key)
