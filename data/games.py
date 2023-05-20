@@ -43,5 +43,15 @@ def get_regular_season_games():
             team_games.append(
                 Game(game_date=game_date, opponent=opponent, score=score, win=win)
             )
-        games[team["shortDisplayName"]] = team_games
+        name = team["shortDisplayName"]
+        if name[-3:] == " St":
+            name = name.replace(" St", "State")
+        elif name in ESPN_NAMES:
+            name = ESPN_NAMES[name]
+        games[name] = team_games
     return games
+
+
+ESPN_NAMES = {
+    "Saint Mary's": "St. Mary's"
+}
