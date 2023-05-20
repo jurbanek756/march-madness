@@ -2,11 +2,10 @@
 Module for adding relevant data to a DataFrame
 """
 
-from data.colors import get_all_school_colors, school_colors_dict
+from data.colors import get_all_school_colors, static_school_colors_dict
 from data.location import create_location_status_tuple
-from data.names import NAMES
 from data.rivals import RIVALRIES
-from helpers.school_names import update_school_name
+from data.names import NAMES, update_school_name
 from helpers.soup_helpers import get_table
 from bs4 import BeautifulSoup
 from fuzzywuzzy import fuzz
@@ -78,16 +77,15 @@ def add_ap_rankings_to_dataframe(df):
 
 def add_team_colors_to_dataframe(df):
     data = get_all_school_colors()
-    static_color_dict = school_colors_dict()
+    static_color_dict = static_school_colors_dict()
     for i, row in df.iterrows():
-        if row["Name"] in static_color_dict:
+        if row["Name"] in data:
+            df.at[i, "Primary Color"] = data[row["Name"]]["primary_color"]
+            df.at[i, "Secondary Color"] = data[row["Name"]]["secondary_color"]
+        elif row["Name"] in static_color_dict:
             df.at[i, "Primary Color"] = static_color_dict[row["Name"]][0]
             df.at[i, "Secondary Color"] = static_color_dict[row["Name"]][1]
-        else:
-            best_index, best_ratio = school_index_in_tuple(row["School"], data)
-            if best_ratio > 95:
-                df.at[i, "Primary Color"] = data[best_index][1]
-                df.at[i, "Secondary Color"] = data[best_index][2]
+
 
 
 def add_location_and_is_private_to_dataframe(df):

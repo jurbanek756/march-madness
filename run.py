@@ -6,9 +6,9 @@ import os
 from predict.select_team import weighted_random_selection
 
 from team.team import Team
-from rankings.r2023 import west, east, south, midwest
+from tournament_rankings.r2023 import west, east, south, midwest
 from tournament.tournament import Tournament
-from true_random.random_number_seeding import seed_via_random_api
+from helpers.random_number_seeding import seed_via_random_api
 
 if random_api_key := os.getenv("RANDOM_API_KEY"):
     seed = seed_via_random_api(0, 10_000, random_api_key)
