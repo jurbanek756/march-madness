@@ -23,6 +23,10 @@ def random_selection(a, b):
     return random.choice([a, b])
 
 
+def consider_recent_games(a, b, games_dict):
+    pass
+
+
 def weighted_random_selection(a, b, weight_function=lptr):
     """
 

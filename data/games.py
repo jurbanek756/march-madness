@@ -1,11 +1,12 @@
 from bs4 import BeautifulSoup
 from requests_ratelimiter import LimiterSession
 from data.espn import get_teams_from_api
+from game.game import Game
 
 session = LimiterSession(per_second=3)
 
 
-def get_recent_performance(game_limit=None):
+def get_regular_season_games():
     teams = get_teams_from_api()
     games = dict()
     for team in teams:
@@ -22,8 +23,6 @@ def get_recent_performance(game_limit=None):
             idx for idx, s in enumerate(rows) if s.text == "Regular Season"
         ][0]
         rows = rows[regular_season_index + 2 :]
-        if game_limit:
-            rows = rows[-game_limit:]
         for row in rows:
             row = [r for r in row]
             game_date = row[0].text.strip()
@@ -40,15 +39,9 @@ def get_recent_performance(game_limit=None):
             elif score == "Postponed":
                 win = None
             else:
-                breakpoint()
                 raise ValueError("Invalid win-loss character detected")
             team_games.append(
-                {
-                    "date": game_date,
-                    "opponent": opponent,
-                    "score": score[1:],
-                    "win": win,
-                }
+                Game(game_date=game_date, opponent=opponent, score=score, win=win)
             )
         games[team["shortDisplayName"]] = team_games
     return games

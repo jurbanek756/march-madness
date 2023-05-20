@@ -15,13 +15,10 @@ class Team:
         "tournament_rank",
         "ap_rank",
         "rivalries",
+        "games"
     )
 
-    def __init__(
-        self,
-        record,
-            tournament_ranking
-    ):
+    def __init__(self, record, tournament_ranking, games):
         self.name = record["Name"]
         self.nickname = record["Nickname"]
         self.location = record["Location"]
@@ -32,6 +29,7 @@ class Team:
         self.tournament_rank = tournament_ranking
         self.ap_rank = record.get("AP Ranking")
         self.rivalries = record["Rivals"]
+        self.games = games
 
     def __str__(self):
         return self.name
