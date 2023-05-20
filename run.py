@@ -5,10 +5,13 @@ import os
 
 from predict.select_team import weighted_random_selection
 
+from data.recent_schedule import get_recent_performance
 from team.team import Team
 from tournament_rankings.r2023 import west, east, south, midwest
 from tournament.tournament import Tournament
 from helpers.random_number_seeding import seed_via_random_api
+
+USE_CACHED_GAMES = False
 
 if random_api_key := os.getenv("RANDOM_API_KEY"):
     seed = seed_via_random_api(0, 10_000, random_api_key)
@@ -41,6 +44,12 @@ if len(all_teams) != 68:
 
 with open("db/school_data.json") as F:
     db = json.load(F)
+
+if USE_CACHED_GAMES:
+    with open("db/2022_2023_games.json") as F:
+        recent_games = json.load(F)
+else:
+    recent_games = get_recent_performance()
 
 west_play_in_rank = west.pop("play_in_rank")
 west_teams = generate_full_region_dict(db, west)
