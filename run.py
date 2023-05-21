@@ -1,17 +1,28 @@
 #!/usr/bin/env python
 
-import json
+import logging
+import pickle
 import os
 
-from data.games import get_regular_season_games
 from tournament.helpers import generate_full_region_dict
 from helpers.random_number_seeding import seed_via_random_api
-from tournament.tournament import Tournament
+from models.tournament import Tournament
+
+
+logging.basicConfig(
+    encoding="UTF-8",
+    level="INFO",
+    handlers=[
+        logging.FileHandler("NCAA_Tournament_Results.log"),
+        logging.StreamHandler(),
+    ],
+    format="%(message)s",
+)
 
 
 # ----------------Vars to change----------------------------------
 USE_CACHED_GAMES = True
-GAMES_CACHE = "db/2022_2023_games.json"
+GAMES_CACHE = "2022_2023_games.pkl"
 LOG_RESULTS = True
 from tournament_rankings.r2023 import west, east, south, midwest
 from predict.select_team import weighted_random_selection as prediction_method
@@ -34,14 +45,11 @@ if len(all_teams) != 68:
     print(len(all_teams))
     raise ValueError("Duplicate team found in source dict")
 
-with open("db/school_data.json") as F:
-    db = json.load(F)
+with open(f"db/{GAMES_CACHE}", "rb") as F:
+    regular_season_games = pickle.load(F)
 
-if USE_CACHED_GAMES:
-    with open(GAMES_CACHE) as F:
-        regular_season_games = json.load(F)
-else:
-    regular_season_games = get_regular_season_games()
+with open("db/school_data.pkl", "rb") as F:
+    db = pickle.load(F).to_dict(orient="records")
 
 west_play_in_rank = west.pop("play_in_rank")
 west_teams = generate_full_region_dict(db, regular_season_games, west)
@@ -54,7 +62,7 @@ south_teams = generate_full_region_dict(db, regular_season_games, south)
 
 midwest_play_in_rank = midwest.pop("play_in_rank")
 midwest_teams = generate_full_region_dict(db, regular_season_games, midwest)
-breakpoint()
+
 tournament = Tournament(
     south_teams,
     east_teams,

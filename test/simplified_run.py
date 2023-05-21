@@ -3,8 +3,8 @@
 import pandas as pd
 
 from predict.select_team import weighted_random_selection
-from team.dataframe import filter_none_values, update_school_name, add_data_to_dataframe
-from team.team import Team
+from data.schools import filter_none_values, update_school_name, add_data_to_dataframe
+from models.team import Team
 
 df = pd.read_pickle("saved_static_data/school_data_dataframe.pkl")
 tuple_list = list()

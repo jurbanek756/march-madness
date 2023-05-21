@@ -5,15 +5,6 @@ Module for parsing school names
 from us import states
 
 
-
-SPECIAL_CASES = {
-    "UConn": "University of Connecticut",
-    "Illinois": "University of Illinois Urbana-Champaign",
-    "Texas": "University of Texas at Austin",
-}
-STATES = [str(s) for s in states.STATES]
-
-
 def update_school_name(school_name):
     """
     Updates a school name from its common abbreviation to its more formalized version. Also prunes parentheses.
@@ -97,5 +88,11 @@ NAMES = {
     "Loyola University Chicago": "Loyola Chicago",
     "University of Texas at Arlington": "UT Arlington",
     "University of Hawaii at Manoa": "Hawaii",
-    "University of Nevada, Las Vegas": "UNLV"
+    "University of Nevada, Las Vegas": "UNLV",
 }
+SPECIAL_CASES = {
+    "UConn": "University of Connecticut",
+    "Illinois": "University of Illinois Urbana-Champaign",
+    "Texas": "University of Texas at Austin",
+}
+STATES = [str(s) for s in states.STATES]

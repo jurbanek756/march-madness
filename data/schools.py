@@ -3,7 +3,6 @@ Module for adding relevant data to a DataFrame
 """
 
 from data.colors import get_all_school_colors, static_school_colors_dict
-from data.location import create_location_status_tuple
 from data.rivals import RIVALRIES
 from data.names import NAMES, update_school_name
 from helpers.soup_helpers import get_table
@@ -13,6 +12,7 @@ import pandas as pd
 import regex
 import requests
 
+DI_SCHOOLS = "https://en.wikipedia.org/wiki/List_of_NCAA_Division_I_institutions"
 D1_BASKETBALL_SCHOOLS = (
     "https://en.wikipedia.org/wiki/List_of_NCAA_Division_I_men%27s_basketball_programs"
 )
@@ -89,12 +89,19 @@ def add_team_colors_to_dataframe(df):
 
 
 def add_location_and_is_private_to_dataframe(df):
-    data = create_location_status_tuple()
+    schools_table = get_table(DI_SCHOOLS, 1)
+    school_data = list()
+    for row in schools_table.find_all("tr")[2:]:
+        data = row.find_all("td")
+        school = data[0].find("a").text
+        location = f"{data[3].find('a').text}, {data[4].find('a').text}"
+        is_private = data[5].find("a").text.casefold() == "private".casefold()
+        school_data.append((school, location, is_private))
     for i, row in df.iterrows():
-        best_index, best_ratio = school_index_in_tuple(row["School"], data)
+        best_index, best_ratio = school_index_in_tuple(row["School"], school_data)
         if best_ratio > 95:
-            df.at[i, "Location"] = data[best_index][1]
-            df.at[i, "Is Private"] = data[best_index][2]
+            df.at[i, "Location"] = school_data[best_index][1]
+            df.at[i, "Is Private"] = school_data[best_index][2]
 
 
 def add_rivals_to_dataframe(df):

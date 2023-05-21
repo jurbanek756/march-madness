@@ -1,15 +1,21 @@
+import logging
+
 from bs4 import BeautifulSoup
 from requests_ratelimiter import LimiterSession
+from tqdm import tqdm
+
 from data.espn import get_teams_from_api
-from game.game import Game
+from models.game import Game
 
 session = LimiterSession(per_second=3)
-
+logger = logging.getLogger(__name__)
 
 def get_regular_season_games():
     teams = get_teams_from_api()
     games = dict()
-    for team in teams:
+    for team in tqdm(teams):
+        team_name = get_name(team["shortDisplayName"])
+        logger.info("Parsing games data for %s", team_name)
         team_games = list()
         schedule_link = next(filter(lambda x: x["text"] == "Schedule", team["links"]))[
             "href"
@@ -46,11 +52,11 @@ def get_regular_season_games():
             elif score == "Postponed":
                 win = None
             else:
-                raise ValueError("Invalid win-loss character detected")
+                raise ValueError("Invalid win-loss character detected: %s", score[0])
             team_games.append(
-                Game(game_date=game_date, opponent=opponent, score=score, win=win).to_dict()
+                Game(game_date=game_date, opponent=get_name(opponent), score=score, win=win).to_dict()
             )
-        games[get_name(team["shortDisplayName"])] = team_games
+        games[team_name] = team_games
     return games
 
 
@@ -58,7 +64,19 @@ def get_name(name):
     if name in ESPN_NAMES:
         return ESPN_NAMES[name]
     if name[-3:] == " St":
-        return name.replace(" St", " State")
+        name = f"{name[:-3]} State"
+    if name[0:2] == "N ":
+        name = f"North {name[2:]}"
+    if name[0:2] == "S ":
+        name = f"South {name[2:]}"
+    if name[0:2] == "E ":
+        name = f"East {name[2:]}"
+    if name[0:2] == "W ":
+        name = f"West {name[2:]}"
+    if name[0:2] == "C ":
+        name = f"Central {name[2:]}"
+    if name[-5:] == " Univ":
+        name = f"{name[:-5]} University"
     return name
 
 

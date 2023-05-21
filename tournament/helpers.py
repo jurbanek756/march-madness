@@ -1,4 +1,4 @@
-from team.team import Team
+from models.team import Team
 
 
 def generate_full_region_dict(db, regular_season_games, region):
