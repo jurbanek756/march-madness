@@ -8,31 +8,20 @@ Utilizes data scraping methods for obtaining team data, and uses various pieces 
 
 ### Database Generation
 
-Data is scraped from external sources that are currently publicly available, and is stored in `db/school_data.json` as 
-a local database.
+Data is scraped from external sources that are currently publicly available and are stored in:
 
-Run `generate_db.py` to create the `db/school_data.json` file.
+* db/2022_2023_games.pkl - Games from the 2022-2023 season
+* db/school_data.pkl - Static data on schools in the tournament
 
+Run `generate_db_data.py` to create these files.
 
 ### Run Predictions
 
 Predictions can be run for the 2023 March Madness tournament by executing the `run.py` script.
 
 `prediction_method` on line 60 can be replaced with any function in `predict.select_team`, with 
-`weighted_random_selection` being used by default.
+`weighted_random_selection` being used by default in the `run.py` script.
 
 ## Future Work
 
-### Algorithm Ideas
-
-* True random
-* Weights accounting for AP Rank and Tournament Rank, with a certain level of stochasticity
-* Positive sentiment from mascot 
-* Superstition, ex. 12 over 5
-* Colors
-* Randomly select one of the selection methods 
-
-### Backlog
-
-* Expand prediction methods
-* Backfill missing data
+This project is being actively worked and improved. See the GitHub [Projects](https://github.com/AGnias47/march-madness/projects?query=is%3Aopen) tab for details.
