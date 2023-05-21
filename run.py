@@ -4,7 +4,7 @@ import logging
 import pickle
 import os
 
-from tournament.helpers import generate_full_region_dict
+from helpers.group_dict import generate_full_region_dict
 from helpers.random_number_seeding import seed_via_random_api
 from models.tournament import Tournament
 

@@ -6,7 +6,7 @@ help:	  ## Show this help message
 	@sed -ne '/@sed/!s/## //p' $(MAKEFILE_LIST)
 
 clean:	  ## Clean the directory
-	git clean -dxf -e venv/ -e mlruns/ -e .idea/
+	git clean -dxf -e venv/ -e mlruns/ -e .idea/ -e db
 
 tar:	  ## Tar the current project
 	tar --exclude="./.git" --exclude="./__pycache" -czvf project.tar .
