@@ -3,8 +3,102 @@ Module for making predictions
 """
 
 from predict.weight import lptr
-
+from itertools import zip_longest
 import random
+import sys
+
+def user_evaluation(a, b):
+    """
+
+    Parameters
+    ----------
+    a
+    b
+
+    References
+    ----------
+    https://stackoverflow.com/a/53401505/8728749
+
+    Returns
+    -------
+
+    """
+    print(f"1. {a.tournament_repr}")
+    print(f"2. {b.tournament_repr}")
+    rivalry = a.name in b.rivalries or b.name in a.rivalries
+    rivalry_string = "yes" if rivalry else "no"
+    print(f"Rivalry? {rivalry_string}\n")
+
+    choice = input("Select 1, 2, s, or r (see more info, random): ")
+    try:
+        remain_in_first_loop = True
+        while remain_in_first_loop:
+            if choice == "1":
+                return a
+            elif choice == "2":
+                return b
+            elif choice == "r":
+                return random_selection(a, b)
+            elif choice == "s":
+                size=45
+                for a_game, b_game in zip_longest(a.game_results, b.game_results):
+                    print(a_game[:size].ljust(size) + "    " + b_game[:size])
+                remain_in_first_loop = False
+            elif choice == "q":
+                confirm_quit = input("About to quit; are you sure? ")
+                if "y" in confirm_quit:
+                    sys.exit()
+                else:
+                    print("Invalid choice selected; try again or select 'q' to exit")
+            else:
+                print("Invalid choice selected; try again or select 'q' to exit")
+    except KeyboardInterrupt:
+        sys.exit()
+    choice = input("Select 1, 2, s, or r (see even more info, random): ")
+    try:
+        remain_in_second_loop = True
+        while remain_in_second_loop:
+            if choice == "1":
+                return a
+            elif choice == "2":
+                return b
+            elif choice == "r":
+                return random_selection(a, b)
+            elif choice == "s":
+                size = 45
+                for a_other_info, b_other_info in zip_longest(a.other_info, b.other_info):
+                    print(a_other_info[:size].ljust(size) + "    " + b_other_info[:size])
+                remain_in_second_loop = False
+            elif choice == "q":
+                confirm_quit = input("About to quit; are you sure? ")
+                if "y" in confirm_quit:
+                    sys.exit()
+                else:
+                    print("Invalid choice selected; try again or select 'q' to exit")
+            else:
+                print("Invalid choice selected; try again or select 'q' to exit")
+    except KeyboardInterrupt:
+        sys.exit()
+    choice = input("All info displayed. Select 1, 2, or r (random): ")
+    try:
+        remain_in_final_loop = True
+        while remain_in_final_loop:
+            if choice == "1":
+                return a
+            elif choice == "2":
+                return b
+            elif choice == "r":
+                return random_selection(a, b)
+            elif choice == "q":
+                confirm_quit = input("About to quit; are you sure? ")
+                if "y" in confirm_quit:
+                    sys.exit()
+                else:
+                    print("Invalid choice selected; try again or select 'q' to exit")
+            else:
+                print("Invalid choice selected; try again or select 'q' to exit")
+    except KeyboardInterrupt:
+        sys.exit()
 
 
 def random_selection(a, b):
