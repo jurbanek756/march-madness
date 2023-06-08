@@ -1,8 +1,8 @@
 # March Madness
 
-Methods for predicting March Madness winners!
+Methods for selecting March Madness winners.
 
-Utilizes data scraping methods for obtaining team data, and uses various pieces of that data to make predictions.
+Utilizes data scraping methods for obtaining team data, and uses various pieces of that data to either make predictions or aid in evaluating each matchup.
 
 ## Usage
 
@@ -15,12 +15,13 @@ Data is scraped from external sources that are currently publicly available and 
 
 Run `generate_db_data.py` to create these files.
 
-### Run Predictions
+### Run Predictions / Evaluations
 
-Predictions can be run for the 2023 March Madness tournament by executing the `run.py` script.
+A prediction method is defined as any automated method for generating a March Madness bracket. An evaluation method is a manual process, where the method simply aids the user in manually generating a March Madness bracket.
 
-`prediction_method` on line 60 can be replaced with any function in `predict.select_team`, with 
-`weighted_random_selection` being used by default in the `run.py` script.
+Predictions or evaluations can be run for the 2023 March Madness tournament by executing the `run.py` script.
+
+The desired prediction or evaluation method should be selected from the available functions in either  `predict.select_team` or `evaluate.select_team`. By default, the `user_evaluation` function in `evaulate.select_team` is used, which aids a user in selecting matchup winners by providing relevant information via a terminal.
 
 ## Future Work
 
