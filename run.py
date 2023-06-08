@@ -24,8 +24,8 @@ logging.basicConfig(
 USE_CACHED_GAMES = True
 GAMES_CACHE = "2022_2023_games.pkl"
 LOG_RESULTS = True
-from tournament_rankings.r2023 import west, east, south, midwest
-from predict.select_team import user_evaluation as prediction_method
+from tournament_rankings.r2023 import west, east, south, midwest  # noqa
+from evaluate.select_team import user_evaluation as prediction_method  # noqa
 
 # -----------------------------------------------------------------
 

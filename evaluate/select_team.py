@@ -1,0 +1,76 @@
+import sys
+
+from helpers.print_helpers import print_in_two_columns
+from predict.select_team import random_selection
+
+
+def user_evaluation(a, b):
+    print_in_two_columns(a.tournament_repr, b.tournament_repr, "Team 1", "Team 2")
+    rivalry = False
+    if a.rivalries:
+        rivalry = b.name in a.rivalries
+    if b.rivalries and not rivalry:
+        rivalry = a.name in b.rivalries
+    if rivalry:
+        print("RIVALRY GAME")
+    games_printed = False
+    other_info_printed = False
+    try:
+        prompt = "Select 1, 2, m, or r (more info, random): "
+        while True:
+            choice = input(prompt)
+            if choice == "1":
+                return a
+            elif choice == "2":
+                return b
+            elif choice == "r":
+                return random_selection(a, b)
+            elif choice == "m":
+                if not games_printed:
+                    print_in_two_columns(
+                        a.game_results,
+                        b.game_results,
+                        f"{a.name} Games",
+                        f"{b.name} Games",
+                    )
+                    games_printed = True
+                elif not other_info_printed:
+                    print_in_two_columns(
+                        a.other_info,
+                        b.other_info,
+                        f"Additional {a.name} Info",
+                        f"Additional {b.name} Info",
+                    )
+                    other_info_printed = True
+                else:
+                    print_in_two_columns(
+                        a.tournament_repr, b.tournament_repr, "Team 1", "Team 2"
+                    )
+                    if rivalry:
+                        print("RIVALRY GAME")
+                    print_in_two_columns(
+                        a.game_results,
+                        b.game_results,
+                        f"{a.name} Games",
+                        f"{b.name} Games",
+                    )
+                    print_in_two_columns(
+                        a.other_info,
+                        b.other_info,
+                        f"Additional {a.name} Info",
+                        f"Additional {b.name} Info",
+                    )
+            elif choice == "q":
+                confirm_quit = input("About to quit; are you sure? ")
+                if "y" in confirm_quit or "q" in confirm_quit:
+                    sys.exit()
+                else:
+                    print("Invalid choice selected; try again or select 'q' to exit")
+            else:
+                print("Invalid choice selected; try again or select 'q' to exit")
+            if not other_info_printed:
+                prompt = "Select 1, 2, m, or r (see even more info, random): "
+            else:
+                prompt = "All info displayed. Select 1, 2, or r (random): "
+    except KeyboardInterrupt:
+        sys.exit()
