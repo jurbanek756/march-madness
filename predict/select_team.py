@@ -10,13 +10,18 @@ from predict.weight import lptr
 
 
 def user_evaluation(a, b):
-    print_in_two_columns(f"1. {a.tournament_repr}", f"2. {b.tournament_repr}")
-    rivalry = a.name in b.rivalries or b.name in a.rivalries
-    rivalry_string = "yes" if rivalry else "no"
-    print(f"Rivalry? {rivalry_string}\n")
+    print_in_two_columns(a.tournament_repr, b.tournament_repr, "Team 1", "Team 2")
+    rivalry = False
+    if a.rivalries:
+        rivalry = b.name in a.rivalries
+    if b.rivalries and not rivalry:
+        rivalry = a.name in b.rivalries
+    if rivalry:
+        print("RIVALRY GAME")
+    games_printed = False
+    other_info_printed = False
     try:
-        prompt = "Select 1, 2, s, or r (see more info, random): "
-        loop_count = 1
+        prompt = "Select 1, 2, m, or r (more info, random): "
         while True:
             choice = input(prompt)
             if choice == "1":
@@ -25,30 +30,51 @@ def user_evaluation(a, b):
                 return b
             elif choice == "r":
                 return random_selection(a, b)
-            elif choice == "s":
-                if loop_count == 1:
-                    print_in_two_columns(a.game_results, b.game_results)
-                elif loop_count == 2:
-                    print_in_two_columns(a.other_info, b.other_info)
+            elif choice == "m":
+                if not games_printed:
+                    print_in_two_columns(
+                        a.game_results,
+                        b.game_results,
+                        f"{a.name} Games",
+                        f"{b.name} Games",
+                    )
+                    games_printed = True
+                elif not other_info_printed:
+                    print_in_two_columns(
+                        a.other_info,
+                        b.other_info,
+                        f"Additional {a.name} Info",
+                        f"Additional {b.name} Info",
+                    )
+                    other_info_printed = True
                 else:
                     print_in_two_columns(
-                        f"1. {a.tournament_repr}", f"2. {b.tournament_repr}"
+                        a.tournament_repr, b.tournament_repr, "Team 1", "Team 2"
                     )
-                    rivalry = a.name in b.rivalries or b.name in a.rivalries
-                    rivalry_string = "yes" if rivalry else "no"
-                    print(f"Rivalry? {rivalry_string}\n")
-                    print_in_two_columns(a.game_results, b.game_results)
-                    print_in_two_columns(a.other_info, b.other_info)
+                    if rivalry:
+                        print("RIVALRY GAME")
+                    print_in_two_columns(
+                        a.game_results,
+                        b.game_results,
+                        f"{a.name} Games",
+                        f"{b.name} Games",
+                    )
+                    print_in_two_columns(
+                        a.other_info,
+                        b.other_info,
+                        f"Additional {a.name} Info",
+                        f"Additional {b.name} Info",
+                    )
             elif choice == "q":
                 confirm_quit = input("About to quit; are you sure? ")
-                if "y" in confirm_quit:
+                if "y" in confirm_quit or "q" in confirm_quit:
                     sys.exit()
                 else:
                     print("Invalid choice selected; try again or select 'q' to exit")
             else:
                 print("Invalid choice selected; try again or select 'q' to exit")
-            if loop_count == 1:
-                prompt = "Select 1, 2, s, or r (see even more info, random): "
+            if not other_info_printed:
+                prompt = "Select 1, 2, m, or r (see even more info, random): "
             else:
                 prompt = "All info displayed. Select 1, 2, or r (random): "
     except KeyboardInterrupt:

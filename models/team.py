@@ -28,7 +28,7 @@ class Team:
         self.is_private = record["Is Private"]
         self.tournament_rank = tournament_ranking
         self.ap_rank = record.get("AP Ranking")
-        self.rivalries = record["Rivals"]
+        self.rivalries = record["Rivals"] if isinstance(record["Rivals"], list) else []
         self.games = games
 
     @property
@@ -46,12 +46,12 @@ class Team:
 
     @property
     def tournament_repr(self):
-        r = f"{self.name}\n"
-        r += f"Tournament Rank: {self.tournament_rank}\n"
-        r += f"AP Rank: {self.ap_rank}\n"
-        r += f"Conference: {self.conference}"
-        r += f"Record: {self.record}\n"
-        r += f"Recent Record: {self.recent_record(10)}"
+        r = list()
+        r.append(f"{self.tournament_rank}. {self.name}")
+        if self.ap_rank:
+            r.append(f"AP Rank: {self.ap_rank}")
+        r.append(f"Conference: {self.conference}")
+        r.append(f"Record: {self.record}  ({self.recent_record(10)} in last 10 games)")
         return r
 
     @property
@@ -62,12 +62,14 @@ class Team:
             results.append(f"{result} {game['score']} vs. {game['opponent']}")
         return results
 
+    @property
     def other_info(self):
-        r = f"Nickname: {self.nickname}\n"
-        r += f"Location: {self.location}\n"
-        r += f"Colors: {self.primary_color}, {self.secondary_color}\n"
-        is_private_str = "yes" if self.is_private else "no / status unknown"
-        r += f"Private: {is_private_str}\n"
+        r = list()
+        r.append(f"Nickname: {self.nickname}")
+        r.append(f"Location: {self.location}")
+        r.append(f"Colors: {self.primary_color}, {self.secondary_color}")
+        is_private_str = "yes" if self.is_private else "no"
+        r.append(f"Private: {is_private_str}")
         return r
 
     def __str__(self):
