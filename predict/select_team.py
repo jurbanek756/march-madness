@@ -6,7 +6,7 @@ import random
 from predict.weight import lptr
 
 
-def random_selection(a, b):
+def random_selection(a, b, **kwargs):
     """
     Randomly selects a team
 
@@ -14,6 +14,8 @@ def random_selection(a, b):
     ----------
     a: Team
     b: Team
+    kwargs: dict
+        Unused
 
     Returns
     -------
@@ -22,11 +24,7 @@ def random_selection(a, b):
     return random.choice([a, b])
 
 
-def consider_recent_games(a, b, games_dict):
-    pass
-
-
-def weighted_random_selection(a, b, weight_function=lptr):
+def weighted_random_selection(a, b, weight_function=lptr, **kwargs):
     """
 
     Parameters
@@ -35,6 +33,8 @@ def weighted_random_selection(a, b, weight_function=lptr):
     b: Team
     weight_function: function
         Function used to weight teams
+    kwargs: dict
+        Unused
 
     Returns
     -------
@@ -47,7 +47,7 @@ def weighted_random_selection(a, b, weight_function=lptr):
     )[0]
 
 
-def ranked_selection(a, b):
+def ranked_selection(a, b, **kwargs):
     """
     Selects the team with the highest rank in the tournament. If ranks are the same,
     use AP Ranking. If both teams are unranked by the AP, select randomly.
@@ -58,6 +58,8 @@ def ranked_selection(a, b):
     ----------
     a: Team
     b: Team
+    kwargs: dict
+        Unused
 
     Returns
     -------
@@ -77,7 +79,7 @@ def ranked_selection(a, b):
             return random_selection(a, b)
 
 
-def ap_selection(a, b):
+def ap_selection(a, b, **kwargs):
     """
     Selects the team with the highest AP rank in the tournament. If both teams are
     unranked by the AP, use the tournament ranking. If tournament ranks are the same,
@@ -89,6 +91,8 @@ def ap_selection(a, b):
     ----------
     a: Team
     b: Team
+    kwargs: dict
+        Unused
 
     Returns
     -------

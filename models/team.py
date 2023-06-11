@@ -75,5 +75,5 @@ class Team:
     def __str__(self):
         return self.name
 
-    def __le__(self, other):
-        return self.tournament_rank <= other.tournament_rank
+    def __repr__(self):
+        return self.name
