@@ -79,21 +79,21 @@ class Group:
             "1_16": self.predict(
                 self.one, self.sixteen, self.group_name, "First Round"
             ),
-            "2_15": self.predict(
-                self.two, self.fifteen, self.group_name, "First Round"
-            ),
-            "3_14": self.predict(
-                self.three, self.fourteen, self.group_name, "First Round"
+            "8_9": self.predict(self.eight, self.nine, self.group_name, "First Round"),
+            "5_12": self.predict(
+                self.five, self.twelve, self.group_name, "First Round"
             ),
             "4_13": self.predict(
                 self.four, self.thirteen, self.group_name, "First Round"
             ),
-            "5_12": self.predict(
-                self.five, self.twelve, self.group_name, "First Round"
-            ),
             "6_11": self.predict(self.six, self.eleven, self.group_name, "First Round"),
+            "3_14": self.predict(
+                self.three, self.fourteen, self.group_name, "First Round"
+            ),
             "7_10": self.predict(self.seven, self.ten, self.group_name, "First Round"),
-            "8_9": self.predict(self.eight, self.nine, self.group_name, "First Round"),
+            "2_15": self.predict(
+                self.two, self.fifteen, self.group_name, "First Round"
+            ),
         }
 
     def second_round(self, first_round_results):
@@ -104,9 +104,9 @@ class Group:
                 self.group_name,
                 "Second Round",
             ),
-            "2_7": self.predict(
-                first_round_results["2_15"],
-                first_round_results["7_10"],
+            "4_5": self.predict(
+                first_round_results["4_13"],
+                first_round_results["5_12"],
                 self.group_name,
                 "Second Round",
             ),
@@ -116,9 +116,9 @@ class Group:
                 self.group_name,
                 "Second Round",
             ),
-            "4_5": self.predict(
-                first_round_results["4_13"],
-                first_round_results["5_12"],
+            "2_7": self.predict(
+                first_round_results["2_15"],
+                first_round_results["7_10"],
                 self.group_name,
                 "Second Round",
             ),
