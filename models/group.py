@@ -1,3 +1,6 @@
+from collections import OrderedDict
+
+
 class Group:
     def __init__(self, ranking_dict, prediction_method, play_in_rank, group_name=None):
         self.one = ranking_dict[1]
@@ -53,8 +56,8 @@ class Group:
         first_four_winner = self.predict(
             self.play_in,
             self.ranking_dict[self.play_in_rank],
-            self.group_name,
-            "First Four",
+            group_name=self.group_name,
+            round_name="First Four",
         )
         if self.play_in_rank == 16:
             self.sixteen = first_four_winner
@@ -75,75 +78,111 @@ class Group:
         return self.ranking_dict[self.play_in_rank]
 
     def first_round(self):
-        return {
-            "1_16": self.predict(
-                self.one, self.sixteen, self.group_name, "First Round"
-            ),
-            "8_9": self.predict(self.eight, self.nine, self.group_name, "First Round"),
-            "5_12": self.predict(
-                self.five, self.twelve, self.group_name, "First Round"
-            ),
-            "4_13": self.predict(
-                self.four, self.thirteen, self.group_name, "First Round"
-            ),
-            "6_11": self.predict(self.six, self.eleven, self.group_name, "First Round"),
-            "3_14": self.predict(
-                self.three, self.fourteen, self.group_name, "First Round"
-            ),
-            "7_10": self.predict(self.seven, self.ten, self.group_name, "First Round"),
-            "2_15": self.predict(
-                self.two, self.fifteen, self.group_name, "First Round"
-            ),
-        }
+        return OrderedDict(
+            {
+                "1_16": self.predict(
+                    self.one,
+                    self.sixteen,
+                    group_name=self.group_name,
+                    round_name="First Round",
+                ),
+                "8_9": self.predict(
+                    self.eight,
+                    self.nine,
+                    group_name=self.group_name,
+                    round_name="First Round",
+                ),
+                "5_12": self.predict(
+                    self.five,
+                    self.twelve,
+                    group_name=self.group_name,
+                    round_name="First Round",
+                ),
+                "4_13": self.predict(
+                    self.four,
+                    self.thirteen,
+                    group_name=self.group_name,
+                    round_name="First Round",
+                ),
+                "6_11": self.predict(
+                    self.six,
+                    self.eleven,
+                    group_name=self.group_name,
+                    round_name="First Round",
+                ),
+                "3_14": self.predict(
+                    self.three,
+                    self.fourteen,
+                    group_name=self.group_name,
+                    round_name="First Round",
+                ),
+                "7_10": self.predict(
+                    self.seven,
+                    self.ten,
+                    group_name=self.group_name,
+                    round_name="First Round",
+                ),
+                "2_15": self.predict(
+                    self.two,
+                    self.fifteen,
+                    group_name=self.group_name,
+                    round_name="First Round",
+                ),
+            }
+        )
 
     def second_round(self, first_round_results):
-        return {
-            "1_8": self.predict(
-                first_round_results["1_16"],
-                first_round_results["8_9"],
-                self.group_name,
-                "Second Round",
-            ),
-            "4_5": self.predict(
-                first_round_results["4_13"],
-                first_round_results["5_12"],
-                self.group_name,
-                "Second Round",
-            ),
-            "3_6": self.predict(
-                first_round_results["3_14"],
-                first_round_results["6_11"],
-                self.group_name,
-                "Second Round",
-            ),
-            "2_7": self.predict(
-                first_round_results["2_15"],
-                first_round_results["7_10"],
-                self.group_name,
-                "Second Round",
-            ),
-        }
+        return OrderedDict(
+            {
+                "1_8": self.predict(
+                    first_round_results["1_16"],
+                    first_round_results["8_9"],
+                    group_name=self.group_name,
+                    round_name="Second Round",
+                ),
+                "4_5": self.predict(
+                    first_round_results["4_13"],
+                    first_round_results["5_12"],
+                    group_name=self.group_name,
+                    round_name="Second Round",
+                ),
+                "3_6": self.predict(
+                    first_round_results["3_14"],
+                    first_round_results["6_11"],
+                    group_name=self.group_name,
+                    round_name="Second Round",
+                ),
+                "2_7": self.predict(
+                    first_round_results["2_15"],
+                    first_round_results["7_10"],
+                    group_name=self.group_name,
+                    round_name="Second Round",
+                ),
+            }
+        )
 
     def sweet_sixteen(self, second_round_results):
-        return {
-            "1_4": self.predict(
-                second_round_results["1_8"],
-                second_round_results["4_5"],
-                self.group_name,
-                "Sweet Sixteen",
-            ),
-            "2_3": self.predict(
-                second_round_results["2_7"],
-                second_round_results["3_6"],
-                self.group_name,
-                "Sweet Sixteen",
-            ),
-        }
+        return OrderedDict(
+            {
+                "1_4": self.predict(
+                    second_round_results["1_8"],
+                    second_round_results["4_5"],
+                    group_name=self.group_name,
+                    round_name="Sweet Sixteen",
+                ),
+                "2_3": self.predict(
+                    second_round_results["2_7"],
+                    second_round_results["3_6"],
+                    group_name=self.group_name,
+                    round_name="Sweet Sixteen",
+                ),
+            }
+        )
 
     def elite_eight(self, sweet_sixteen_results):
         return self.predict(
             sweet_sixteen_results["1_4"],
             sweet_sixteen_results["2_3"],
-            self.group_name,
-            "Elite Eight",
+            group_name=self.group_name,
+            round_name="Elite Eight",
         )

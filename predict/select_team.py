@@ -25,21 +25,6 @@ def random_selection(a, b, **kwargs):
 
 
 def weighted_random_selection(a, b, weight_function=lptr, **kwargs):
-    """
-
-    Parameters
-    ----------
-    a: Team
-    b: Team
-    weight_function: function
-        Function used to weight teams
-    kwargs: dict
-        Unused
-
-    Returns
-    -------
-    Team
-    """
     return random.choices(
         population=[a, b],
         k=1,

@@ -101,14 +101,14 @@ class Tournament:
         left = self.predict(
             left_top,
             left_bottom,
-            f"{self.left_top_name}  vs. {self.left_bottom_name}",
-            "Final Four Game",
+            group_name=f"{self.left_top_name}  vs. {self.left_bottom_name}",
+            round_name="Final Four Game",
         )
         right = self.predict(
             right_top,
             right_bottom,
-            f"{self.right_top_name} vs. {self.right_bottom_name}",
-            "Final Four Game",
+            group_name=f"{self.right_top_name} vs. {self.right_bottom_name}",
+            round_name="Final Four Game",
         )
         if self.log_results:
             logger.info("Championship Game: %s vs. %s", left, right)
