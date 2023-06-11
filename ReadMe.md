@@ -1,8 +1,19 @@
 # March Madness
 
-Methods for selecting March Madness winners.
+Terminal-based scripts for selecting March Madness Winners!
 
-Utilizes data scraping methods for obtaining team data, and uses various pieces of that data to either make predictions or aid in evaluating each matchup.
+The script can serve two purposes:
+
+* Guide users through selecting a March Madness bracket, providing relevant information throughout the process
+* Automatically select a March Madness bracket through various prediction methods.
+
+By default, the repo is set to guide the user through manually picking teams. This is done by running the following commands:
+
+```shell
+./generate_db_data.py
+./run.py
+open NCAA_Tournament_Results.log
+```
 
 ## Usage
 
@@ -17,11 +28,13 @@ Run `generate_db_data.py` to create these files.
 
 ### Run Predictions / Evaluations
 
-A prediction method is defined as any automated method for generating a March Madness bracket. An evaluation method is a manual process, where the method simply aids the user in manually generating a March Madness bracket.
-
-Predictions or evaluations can be run for the 2023 March Madness tournament by executing the `run.py` script.
+User-guided methods are defined as evaluation methods, and automated methods are defined as prediction method. Predictions or evaluations can be run for the 2023 March Madness tournament by executing the `run.py` script.
 
 The desired prediction or evaluation method should be selected from the available functions in either  `predict.select_team` or `evaluate.select_team`. By default, the `user_evaluation` function in `evaulate.select_team` is used, which aids a user in selecting matchup winners by providing relevant information via a terminal.
+
+### Results
+
+Results are stored in `NCAA_Tournament_Results.log`. The file is always appended to, so should be removed between subsequent runs. As of June 2023, there is no automated way to create a bracket on a site such as espn.com with these results, so they must be entered manually.
 
 ## Future Work
 
