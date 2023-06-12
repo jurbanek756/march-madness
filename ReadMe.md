@@ -2,18 +2,20 @@
 
 Terminal-based scripts for selecting March Madness Winners!
 
-The script can serve two purposes:
+The project offers an Evaluation and a Prediction Mode for creating a bracket.
 
-* Guide users through selecting a March Madness bracket, providing relevant information throughout the process
-* Automatically select a March Madness bracket through various prediction methods.
+* Evaluation Mode guides users through selecting a March Madness bracket, providing relevant information throughout the process
+* Prediction Mode automatically selects a March Madness bracket through various prediction methods.
 
 By default, the repo is set to guide the user through manually picking teams. This is done by running the following commands:
 
 ```shell
-./generate_db_data.py
-./run.py
-open NCAA_Tournament_Results.log
+./generate_db_data.py  # Get auxiliary data
+./run.py  # Go through selections
+open NCAA_Tournament_Results.log  # Display selection results
 ```
+
+More detailed usage information is provided below.
 
 ## Usage
 
@@ -30,7 +32,9 @@ Run `generate_db_data.py` to create these files.
 
 User-guided methods are defined as evaluation methods, and automated methods are defined as prediction method. Predictions or evaluations can be run for the 2023 March Madness tournament by executing the `run.py` script.
 
-The desired prediction or evaluation method should be selected from the available functions in either  `predict.select_team` or `evaluate.select_team`. By default, the `user_evaluation` function in `evaulate.select_team` is used, which aids a user in selecting matchup winners by providing relevant information via a terminal.
+The desired prediction or evaluation method should be selected from the available functions in either  `predict.select_team` or `evaluate.select_team`, and imported as `prediction_method` in the `run.py` script.
+
+By default, the `user_evaluation` function in `evaulate.select_team` is used, which aids a user in selecting matchup winners by providing relevant information via a terminal.
 
 ### Results
 

@@ -19,16 +19,13 @@ logging.basicConfig(
     format="%(message)s",
 )
 
-
 # ----------------Vars to change----------------------------------
-USE_CACHED_GAMES = True
 GAMES_CACHE = "2022_2023_games.pkl"
-LOG_RESULTS = True
 from tournament_rankings.r2023 import west, east, south, midwest  # noqa
+from evaluate.select_team import user_evaluation as prediction_method  # noqa
 
-# from evaluate.select_team import user_evaluation as prediction_method  # noqa
-from predict.select_team import weighted_random_selection as prediction_method  # noqa
-
+# Disable line above and enable line below to use Prediction Mode
+# from predict.select_team import weighted_random_selection as prediction_method  # noqa
 # -----------------------------------------------------------------
 
 
@@ -79,7 +76,7 @@ tournament = Tournament(
     midwest_play_in_rank,
     west_play_in_rank,
     prediction_method=prediction_method,
-    log_results=LOG_RESULTS,
+    log_results=True,
 )
 
 tournament.run()
