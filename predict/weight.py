@@ -2,18 +2,23 @@
 Module for determining weights in probability of team winning
 """
 
+import math
+import matplotlib.pyplot as plt
+
 
 def lptr(rank1, rank2):
     """
     Linearly Proportional Tournament Ranking
     ----------------------------------------
-    Generates probability of each team winning as a ratio of 1. Uses a linear proportional function based on the
-    difference in rank between the two teams. Ex.
+
+    Generates probability of each team winning as a ratio of 1. Uses a linear
+    proportional function based on the difference in rank between the two teams. Ex.
     1 vs 1 = 0.5, 0.5
     1 vs 16 = 1, 0
 
-    While easy to implement and understand, it does have significant drawbacks in that it weighs all ranking differences
-    the same. For example, a 1 vs. 3 seed will have the same weight as a 14 vs. 16 seed.
+    While easy to implement and understand, it does have significant drawbacks in that
+    it weighs all ranking differences the same. For example, a 1 vs. 3 seed will have
+    the same weight as a 14 vs. 16 seed.
 
     Parameters
     ----------
@@ -31,3 +36,149 @@ def lptr(rank1, rank2):
         return y, 1 - y
     else:
         return 1 - y, y
+
+
+def sigmodal(rank1, rank2):
+    """
+    Sigmodal Ranking Probabilities
+    ------------------------------
+
+    Generates the probability of each team winning as a ratio of 1. Uses a sigmodal
+    function based on the difference in rank between the two teams. Ex.
+    1 vs 1 = 0.5, 0.5
+    1 vs 16 = 0.9375, 0.0625
+
+
+    The probabilities gradually transition from low to high values as the ranking
+    difference increases, favoring highly ranked teams more than lptr.
+
+    The sigmoidal curve exhibits a rounded shape, resulting in a more gradual change in
+    probabilities for smaller ranking differences and a steeper change for larger
+    differences. In this way, it favors highly ranked teams more than lptr. The curve
+    ensures that the probabilities are bounded between 0 and 1.
+
+    Notes
+    -----
+    For 8 v. 9 matchups, the probability of each team winning is 0.5. Because this is
+    used for an entropic prediction, this is acceptable, and in some ways preferred, but
+    can be avoided by using the sigmoid_k function with the default value of k, which
+    essentially acts as an improved version of this function.
+
+    Resources:
+    ----------
+    * https://chat.openai.com/share/875338f1-ca29-4637-a9a6-4722d29dfd75
+
+    Parameters
+    ----------
+    rank1: int
+    rank2: int
+
+    Returns
+    -------
+    tuple
+        Team 1 probability, Team 2 probability
+    """
+    diff = abs(rank1 - rank2)
+    if diff == 15:
+        if rank1 < rank2:
+            return 1, 0
+        else:
+            return 0, 1
+    elif diff == 0:
+        return 0.5, 0.5
+    y = abs(diff) / (1 + abs(diff))
+    if rank1 < rank2:
+        return y, 1 - y
+    else:
+        return 1 - y, y
+
+
+def sigmodal_k(rank1, rank2, k=0.33):
+    """
+    Sigmoidal Ranking Probabilities (Adjusted)
+    ------------------------------------------
+
+    Generates the probability of each team winning as a ratio of 1. Uses a modified
+    sigmodal function that accepts a scaling factork k while ensuring that the team with
+    the higher ranking always has a higher probability of winning.
+
+    As k increases, the curve becomes steeper, resulting in a more rapid change in
+    probabilities for smaller ranking, essentially becoming a step function. As k
+    decreases, the curve becomes more rounded, resulting in a more gradual probability
+    change for smaller ranking differences. A value of k~=0.17 functions nearly
+    identically to lptr.
+
+    By default, k=0.33 is used, which closely emulates the behavior of the original
+    sigmodal function, but with the ability to give the 8 seed in an 8-9 matchup a
+    higher probability as opposed to 0.5.
+
+    Parameters:
+    -----------
+    rank1 : int
+        The ranking of the first team.
+    rank2 : int
+        The ranking of the second team.
+    k : float, optional
+        The scaling factor controlling the steepness of the sigmoidal curve.
+        Default is 1.
+
+    Resources:
+    ----------
+    * https://chat.openai.com/share/875338f1-ca29-4637-a9a6-4722d29dfd75
+
+    Returns:
+    --------
+    tuple
+    """
+    diff = abs(rank1 - rank2)
+    if diff == 15:
+        if rank1 < rank2:
+            return 1, 0
+        else:
+            return 0, 1
+    elif diff == 0:
+        return 0.5, 0.5
+    y = 1 / (1 + math.exp(-k * diff))
+    if rank1 < rank2:
+        return y, 1 - y
+    else:
+        return 1 - y, y
+
+
+def visualize_weight_functions():
+    """
+    Allows for visual comparison of how weight functions operate on rankings.
+
+    Resources:
+    ----------
+    * https://chat.openai.com/share/875338f1-ca29-4637-a9a6-4722d29dfd75
+
+    Returns
+    -------
+    None
+    """
+    rankings = list(range(1, 17))
+    # Calculate probabilities using the two algorithms
+    lptr_probs = [lptr(rank1, 17 - rank1)[0] for rank1 in rankings]
+    sigmodal_probs = [sigmodal(rank1, 17 - rank1)[0] for rank1 in rankings]
+    sigmodal_k_probs_default = [sigmodal_k(rank1, 17 - rank1)[0] for rank1 in rankings]
+    sigmodal_k_probs_mod = [sigmodal_k(rank1, 17 - rank1, k=1)[0] for rank1 in rankings]
+
+    print(f"lptr: {lptr_probs}")
+    print(f"sigmodal: {sigmodal_probs}")
+    print(f"sigmodal_k: {sigmodal_k_probs_default}")
+    print(f"sigmodal_k_mod: {sigmodal_k_probs_mod}")
+    # Plotting the probabilities
+    plt.plot(rankings, sigmodal_probs, label="sigmodal")
+    plt.plot(rankings, lptr_probs, label="lptr")
+    plt.plot(rankings, sigmodal_k_probs_default, label="sigmodal_k (default)")
+    plt.plot(rankings, sigmodal_k_probs_mod, label="sigmodal_k (k=1)")
+    plt.xlabel("Ranking")
+    plt.ylabel("Probability")
+    plt.title("Probabilities of Winning by Ranking")
+    plt.legend()
+    plt.show()
+
+
+if __name__ == "__main__":
+    visualize_weight_functions()
