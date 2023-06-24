@@ -3,7 +3,9 @@ Module for making predictions
 """
 
 import random
-from predict.weight import lptr
+from weight.lptr import lptr as weight_function
+
+# from weight.sigmodal import sigmodal as weight_function
 
 
 def random_selection(a, b, **kwargs):
@@ -24,11 +26,11 @@ def random_selection(a, b, **kwargs):
     return random.choice([a, b])
 
 
-def weighted_random_selection(a, b, weight_function=lptr, **kwargs):
+def weighted_random_selection(a, b, weight_function=weight_function, **kwargs):
     return random.choices(
         population=[a, b],
         k=1,
-        weights=weight_function(a.tournament_rank, b.tournament_rank),
+        weights=weight_function(a, b),
     )[0]
 
 
