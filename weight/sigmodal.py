@@ -28,6 +28,10 @@ identically to lptr.
 By default, k=0.33 is used, which closely emulates the behavior of the original
 sigmodal function, but with the ability to give the 8 seed in an 8-9 matchup a
 higher probability as opposed to 0.5.
+
+Resources
+---------
+* https://chat.openai.com/c/d00ba596-f435-46fe-8e96-721df48078fa
 """
 
 import math

@@ -13,6 +13,10 @@ the same weight as a 14 vs. 16 seed.
 
 If AP rankings are considered, Tournament rankings are weighted at .75, AP rankings
 are weighted at .25.
+
+Resources
+---------
+* https://chat.openai.com/c/d00ba596-f435-46fe-8e96-721df48078fa
 """
 
 from models.team import Team
