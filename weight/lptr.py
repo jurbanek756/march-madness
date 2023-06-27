@@ -73,6 +73,11 @@ def lptr_with_ap(tourn_rank_1, tourn_rank_2, ap_rank_1, ap_rank_2, tourn_weight=
     """
     LPTR that considers both tournament and AP rankings.
 
+    Notes
+    -----
+    - If a team is unranked by the AP, it is given a rank of 26.
+    - If neither team is ranked by the AP, lptr_tournament_only is used
+
     Parameters
     ----------
     tourn_rank_1: int
@@ -87,6 +92,8 @@ def lptr_with_ap(tourn_rank_1, tourn_rank_2, ap_rank_1, ap_rank_2, tourn_weight=
     tuple
         Team 1 probability, Team 2 probability
     """
+    if not ap_rank_1 and not ap_rank_2:
+        return lptr_tournament_only(tourn_rank_1, tourn_rank_2)
     if tourn_rank_1 > 16 or tourn_rank_2 > 16:
         raise ValueError("Invalid tournament ranking provided")
     if not ap_rank_1:

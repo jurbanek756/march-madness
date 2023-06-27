@@ -123,6 +123,8 @@ def sigmodal_tournament_only(rank1, rank2):
 def sigmodal_with_ap(
     tourn_rank_1, tourn_rank_2, ap_rank_1, ap_rank_2, tourn_weight=0.75
 ):
+    if not ap_rank_1 and not ap_rank_2:
+        return sigmodal_tournament_only(tourn_rank_1, tourn_rank_2)
     if tourn_rank_1 > 16 or tourn_rank_2 > 16:
         raise ValueError("Invalid tournament ranking provided")
     if not ap_rank_1:
@@ -196,6 +198,8 @@ def sigmodal_k_tournament_only(rank1, rank2, k=0.33):
 def sigmodal_k_with_ap(
     tourn_rank_1, tourn_rank_2, ap_rank_1, ap_rank_2, k=0.33, tourn_weight=0.75
 ):
+    if not ap_rank_1 and not ap_rank_2:
+        return sigmodal_k_tournament_only(tourn_rank_1, tourn_rank_2, k=k)
     if tourn_rank_1 > 16 or tourn_rank_2 > 16:
         raise ValueError("Invalid tournament ranking provided")
     if not ap_rank_1:
