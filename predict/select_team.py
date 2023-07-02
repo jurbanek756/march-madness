@@ -3,8 +3,11 @@ Module for making predictions
 """
 
 import random
-from predict.weight import lptr
 from transformers import pipeline
+
+from weight.lptr import lptr as weight_function
+
+# from weight.sigmodal import sigmodal as weight_function
 
 SENTIMENT_CLASSIFIER = pipeline("sentiment-analysis")
 
@@ -27,11 +30,13 @@ def random_selection(team_a, team_b, **kwargs):
     return random.choice([team_a, team_b])
 
 
-def weighted_random_selection(team_a, team_b, weight_function=lptr, **kwargs):
+def weighted_random_selection(
+    team_a, team_b, weight_function=weight_function, **kwargs
+):
     return random.choices(
         population=[team_a, team_b],
         k=1,
-        weights=weight_function(team_a.tournament_rank, team_b.tournament_rank),
+        weights=weight_function(team_a, team_b),
     )[0]
 
 
