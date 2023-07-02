@@ -100,7 +100,7 @@ def ap_selection(team_a, team_b, **kwargs):
             return random_selection(team_a, team_b)
 
 
-def nickname_sentiment(team_a, team_b):
+def nickname_sentiment(team_a, team_b, **kwargs):
     """
     Uses the huggingface library to compare the sentiment of each team's nickname.
     Returns the team with the higher positive sentiment for its nickname.
