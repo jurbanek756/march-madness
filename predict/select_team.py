@@ -4,16 +4,19 @@ Module for making predictions
 
 import random
 from predict.weight import lptr
+from transformers import pipeline
+
+SENTIMENT_CLASSIFIER = pipeline("sentiment-analysis")
 
 
-def random_selection(a, b, **kwargs):
+def random_selection(team_a, team_b, **kwargs):
     """
     Randomly selects a team
 
     Parameters
     ----------
-    a: Team
-    b: Team
+    team_a: Team
+    team_b: Team
     kwargs: dict
         Unused
 
@@ -21,18 +24,18 @@ def random_selection(a, b, **kwargs):
     -------
     Team
     """
-    return random.choice([a, b])
+    return random.choice([team_a, team_b])
 
 
-def weighted_random_selection(a, b, weight_function=lptr, **kwargs):
+def weighted_random_selection(team_a, team_b, weight_function=lptr, **kwargs):
     return random.choices(
-        population=[a, b],
+        population=[team_a, team_b],
         k=1,
-        weights=weight_function(a.tournament_rank, b.tournament_rank),
+        weights=weight_function(team_a.tournament_rank, team_b.tournament_rank),
     )[0]
 
 
-def ranked_selection(a, b, **kwargs):
+def ranked_selection(team_a, team_b, **kwargs):
     """
     Selects the team with the highest rank in the tournament. If ranks are the same,
     use AP Ranking. If both teams are unranked by the AP, select randomly.
@@ -41,30 +44,30 @@ def ranked_selection(a, b, **kwargs):
 
     Parameters
     ----------
-    a: Team
-    b: Team
+    team_a: Team
+    team_b: Team
     kwargs: dict
         Unused
 
     Returns
     -------
-    Team
+    Teamm_
     """
-    if a.tournament_rank > b.tournament_rank:
-        return b
-    elif b.tournament_rank > a.tournament_rank:
-        return a
+    if team_a.tournament_rank < team_b.tournament_rank:
+        return team_a
+    elif team_b.tournament_rank < team_a.tournament_rank:
+        return team_b
     else:
-        if a.ap_rank and b.ap_rank:
-            if a.ap_rank > b.ap_rank:
-                return a
+        if team_a.ap_rank and team_b.ap_rank:
+            if team_a.ap_rank < team_b.ap_rank:
+                return team_a
             else:
-                return b
+                return team_b
         else:
-            return random_selection(a, b)
+            return random_selection(team_a, team_b)
 
 
-def ap_selection(a, b, **kwargs):
+def ap_selection(team_a, team_b, **kwargs):
     """
     Selects the team with the highest AP rank in the tournament. If both teams are
     unranked by the AP, use the tournament ranking. If tournament ranks are the same,
@@ -74,8 +77,8 @@ def ap_selection(a, b, **kwargs):
 
     Parameters
     ----------
-    a: Team
-    b: Team
+    team_a: Team
+    team_b: Team
     kwargs: dict
         Unused
 
@@ -83,13 +86,39 @@ def ap_selection(a, b, **kwargs):
     -------
     Team
     """
-    if a.ap_rank and b.ap_rank:
-        if a.ap_rank > b.ap_rank:
-            return a
+    if team_a.ap_rank and team_b.ap_rank:
+        if team_a.ap_rank < team_b.ap_rank:
+            return team_a
         else:
-            return b
+            return team_b
     else:
-        if a.tournament_rank > b.tournament_rank:
-            return a
+        if team_a.tournament_rank < team_b.tournament_rank:
+            return team_a
+        elif team_b.tournament_rank < team_a.tournament_rank:
+            return team_b
         else:
-            return b
+            return random_selection(team_a, team_b)
+
+
+def nickname_sentiment(team_a, team_b):
+    """
+    Uses the huggingface library to compare the sentiment of each team's nickname.
+    Returns the team with the higher positive sentiment for its nickname.
+
+    Parameters
+    ----------
+    team_a: Team
+    team_b: Team
+
+    Returns
+    -------
+    Team
+    """
+    a_sentiment = SENTIMENT_CLASSIFIER(team_a.nickname)[0]
+    b_sentiment = SENTIMENT_CLASSIFIER(team_b.nickname)[0]
+    a_score = a_sentiment["score"] * (1 if a_sentiment["label"] == "POSITIVE" else -1)
+    b_score = b_sentiment["score"] * (1 if b_sentiment["label"] == "POSITIVE" else -1)
+    if a_score > b_score:
+        return team_a
+    else:
+        return team_b

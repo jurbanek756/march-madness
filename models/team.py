@@ -1,5 +1,20 @@
 """
-Team class
+Team class. Contains the following attributes:
+    name: School shortname, ex. Kansas, UCLA
+    nickname: School nickname, ex. Jayhawks, Bruins
+    location: School location, ex. Lawrence, Los Angeles
+    primary_color: School primary color, ex. blue
+    secondary_color: School secondary color, ex. red
+    conference: School conference, ex. Big 12, Pac-12
+    is_private: Whether or not the school is private
+    tournament_rank: The school's seed in the tournament
+    ap_rank: The school's AP ranking, None if not ranked
+    rivalries: List of school's rivalries
+    games: List of school's games
+    record: The school's regular season record
+    recent_record: The school's record over the last n games
+    game_results: The school's game results
+    other_info: other school info
 """
 
 
