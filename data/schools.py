@@ -4,7 +4,7 @@ Module for adding relevant data to a DataFrame
 
 from data.colors import get_all_school_colors
 from data.rivals import RIVALRIES
-from data.names import NAMES, update_school_name
+from data.names import FORMAL_TO_ABBREV, update_school_name
 from helpers.soup_helpers import get_table
 from bs4 import BeautifulSoup
 from fuzzywuzzy import fuzz
@@ -51,8 +51,8 @@ def add_names_to_schools(df):
         school_name = row["School"]
         split_school_name = school_name.split(" ")
         spscnl = len(split_school_name)
-        if school_name in NAMES:
-            df.at[i, "Name"] = NAMES.get(school_name)
+        if school_name in FORMAL_TO_ABBREV:
+            df.at[i, "Name"] = FORMAL_TO_ABBREV.get(school_name)
         elif (spscnl == 3 or spscnl == 4) and school_name.startswith("University of"):
             df.at[i, "Name"] = " ".join(split_school_name[2:])
         elif school_name.endswith("University") or school_name.endswith("College"):

@@ -7,7 +7,8 @@ from us import states
 
 def update_school_name(school_name):
     """
-    Updates a school name from its common abbreviation to its more formalized version. Also prunes parentheses.
+    Updates a school name from its common abbreviation to its more formalized version.
+    Also prunes parentheses.
 
     Parameters
     ----------
@@ -28,7 +29,7 @@ def update_school_name(school_name):
     return school_name
 
 
-NAMES = {
+FORMAL_TO_ABBREV = {
     "University at Albany, SUNY": "Albany",
     "University of Maryland, Baltimore County": "UMBC",
     "University of Central Florida": "UCF",

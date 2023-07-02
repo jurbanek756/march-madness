@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
+import argparse
 from datetime import datetime
 import logging
 from pathlib import Path
 import pickle
 
 from data.games import get_regular_season_games
-
 from data.schools import (
     get_all_d1_schools,
     add_names_to_schools,
@@ -25,12 +25,31 @@ logging.basicConfig(
     format="%(message)s",
 )
 
+
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "-g",
+    "--generate-games-db",
+    action="store_true",
+    default=False,
+    help="Generates DB of games for the current season",
+)
+parser.add_argument(
+    "-s",
+    "--generate-schools-db",
+    action="store_true",
+    default=False,
+    help="Generates DB of static data related to schools",
+)
+args = parser.parse_args()
+
+if not args.generate_games_db and not args.generate_schools_db:
+    logging.info("No db generation requested; run with --help to see options")
+    exit(0)
+
 Path("db").mkdir(exist_ok=True)
 
-GENERATE_GAMES_DB = False
-GENERATE_SCHOOLS_DB = True
-
-if GENERATE_GAMES_DB:
+if args.generate_games_db:
     logging.info("Getting games data")
     current_year = datetime.now().year
     games = get_regular_season_games()
@@ -38,10 +57,9 @@ if GENERATE_GAMES_DB:
     with open(f"db/{current_year-1}_{current_year}_games.pkl", "wb") as F:
         pickle.dump(games, F)
 
-if GENERATE_SCHOOLS_DB:
+if args.generate_schools_db:
     logging.info("Getting school data")
     df = get_all_d1_schools()
-    logging.info("Filtering schools without a tournament appearance")
     logging.info("Adding short names to schools")
     add_names_to_schools(df)
     logging.info("Adding AP rankings")

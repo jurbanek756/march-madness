@@ -25,7 +25,7 @@ Data is scraped from external sources that are currently publicly available and 
 * db/2022_2023_games.pkl - Games from the 2022-2023 season
 * db/school_data.pkl - Static data on schools in the tournament
 
-These files are generated via the `generate_db_data.py` script. This can be rerun at any  time to regenerate data. Note that games data will only be available for the current calendar year. As such, legacy games data cannot be regenerated, and no games data before 2022-2023 will be available.
+These files are generated via the `generate_db_data.py` script. Use the `-g` option to generate the games database for the current season, and the `-s` option to generate the database for static data related to schools. Both options can be used at the same time. This script can be rerun at any time to regenerate data. Note that games data will only be available for the current calendar year. As such, legacy games data cannot be regenerated, and no games data before 2022-2023 will be available.
 
 ### Run Evaluations
 

@@ -2,7 +2,7 @@
 Module for gathering and parsing data on school colors
 """
 
-from data.espn import get_teams_from_api
+from data.espn import get_teams_from_api, get_name
 import webcolors
 
 
@@ -10,7 +10,8 @@ def get_all_school_colors():
     teams = get_teams_from_api()
     colors_dict = dict()
     for team in teams:
-        colors_dict[team["shortDisplayName"]] = {
+        team_name = get_name(team["shortDisplayName"])
+        colors_dict[team_name] = {
             "primary_color": get_color_name(team["color"]),
             "secondary_color": get_color_name(team.get("alternateColor")),
         }
