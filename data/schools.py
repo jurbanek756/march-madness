@@ -67,7 +67,12 @@ def add_ap_rankings_to_dataframe(df):
     tuple_list = list()
     for d in ap_ranks.find("table").find_all("tr")[1:]:
         td = d.find_all("td")
-        tuple_list.append((td[1].string, td[0].string))
+        name = td[1].string.split("(")[0].strip()
+        ap_replacement_dict = {"San Diego State": "SDSU"}
+        if name in ap_replacement_dict:
+            name = ap_replacement_dict[name]
+        ranking = int(td[0].string)
+        tuple_list.append((name, ranking))
     return add_data_to_dataframe(df, tuple_list, "AP Ranking")
 
 
@@ -103,29 +108,29 @@ def school_index_in_tuple(df_school, data):
     best_ratio = 0
     best_index = -1
     for j, (school, _, _) in enumerate(data):
-        ap_name = update_school_name(school)
+        formal_name = update_school_name(school)
         for q, r in [("St.", "Saint"), ("The ", "")]:
-            ap_name.replace(q, r)
+            formal_name.replace(q, r)
             df_school.replace(q, r)
-        split_ap_name = ap_name.casefold().split(" ")
+        split_formal_name = formal_name.casefold().split(" ")
         split_df_school = df_school.casefold().split(" ")
         generic = "University"
         if (
-            split_ap_name[-1] == generic.casefold()
+            split_formal_name[-1] == generic.casefold()
             and split_df_school[-1] == generic.casefold()
         ):
             ratio = fuzz.ratio(
-                " ".join(split_df_school[:-1]), " ".join(split_ap_name[:-1])
+                " ".join(split_df_school[:-1]), " ".join(split_formal_name[:-1])
             )
         elif (
-            split_ap_name[0] == generic.casefold()
+            split_formal_name[0] == generic.casefold()
             and split_df_school[0] == generic.casefold()
         ):
             ratio = fuzz.ratio(
-                " ".join(split_df_school[1:]), " ".join(split_ap_name[1:])
+                " ".join(split_df_school[1:]), " ".join(split_formal_name[1:])
             )
         else:
-            ratio = fuzz.ratio(df_school, ap_name)
+            ratio = fuzz.ratio(df_school, formal_name)
         if ratio > best_ratio:
             best_ratio = ratio
             best_index = j
@@ -151,17 +156,15 @@ def add_data_to_dataframe(df, data_tuple_list, attribute):
     -------
     DataFrame
     """
-    for d in data_tuple_list:
+    for data in data_tuple_list:
         best_ratio = 0
-        best_index = -1
         for i, row in df.iterrows():
-            ap_name = update_school_name(d[0])
-            ratio = fuzz.ratio(row["Name"], ap_name)
+            ratio = fuzz.ratio(row["Name"], data[0])
             if ratio > best_ratio:
                 best_ratio = ratio
                 best_index = i
         try:
-            df.at[best_index, attribute] = int(d[1])
+            df.at[best_index, attribute] = int(data[1])
         except ValueError:
-            df.at[best_index, attribute] = d[1]
+            df.at[best_index, attribute] = data[1]
     return df

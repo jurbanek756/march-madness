@@ -145,7 +145,6 @@ south_teams = generate_full_region_dict(db, regular_season_games, south)
 
 midwest_play_in_rank = midwest.pop("play_in_rank")
 midwest_teams = generate_full_region_dict(db, regular_season_games, midwest)
-
 tournament = Tournament(
     south_teams,
     east_teams,

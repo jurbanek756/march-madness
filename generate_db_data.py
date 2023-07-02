@@ -27,7 +27,7 @@ logging.basicConfig(
 
 Path("db").mkdir(exist_ok=True)
 
-GENERATE_GAMES_DB = True
+GENERATE_GAMES_DB = False
 GENERATE_SCHOOLS_DB = True
 
 if GENERATE_GAMES_DB:
