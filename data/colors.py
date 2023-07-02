@@ -12,10 +12,16 @@ def get_all_school_colors():
     colors_dict = dict()
     for team in teams:
         team_name = get_name(team["shortDisplayName"])
-        colors_dict[team_name] = {
-            "primary_color": get_color_name(team["color"]),
-            "secondary_color": get_color_name(team.get("alternateColor")),
-        }
+        if team_name in SCHOOL_COLOR_DICT:
+            colors_dict[team_name] = {
+                "primary_color": SCHOOL_COLOR_DICT[team_name]["primary_color"],
+                "secondary_color": SCHOOL_COLOR_DICT[team_name]["secondary_color"],
+            }
+        else:
+            colors_dict[team_name] = {
+                "primary_color": get_color_name(team["color"]),
+                "secondary_color": get_color_name(team.get("alternateColor")),
+            }
     return colors_dict
 
 
@@ -70,6 +76,88 @@ def get_color_name(hex_color):
     except KeyError:
         raise ValueError(f"Color {color} not found in COLOR_DICT")
 
+
+SCHOOL_COLOR_DICT = {
+    "Alabama": {"primary_color": Colors.RED, "secondary_color": Colors.WHITE},
+    "Arizona": {"primary_color": Colors.RED, "secondary_color": Colors.BLUE},
+    "Arizona State": {"primary_color": Colors.RED, "secondary_color": Colors.GOLD},
+    "Arkansas": {"primary_color": Colors.RED, "secondary_color": Colors.WHITE},
+    "Auburn": {"primary_color": Colors.NAVY, "secondary_color": Colors.ORANGE},
+    "Baylor": {"primary_color": Colors.GREEN, "secondary_color": Colors.GOLD},
+    "Boise State": {"primary_color": Colors.BLUE, "secondary_color": Colors.ORANGE},
+    "UCLA": {"primary_color": Colors.BLUE, "secondary_color": Colors.GOLD},
+    "California": {"primary_color": Colors.BLUE, "secondary_color": Colors.GOLD},
+    "Cincinnati": {"primary_color": Colors.BLACK, "secondary_color": Colors.RED},
+    "Clemson": {"primary_color": Colors.ORANGE, "secondary_color": Colors.WHITE},
+    "Colorado": {"primary_color": Colors.GOLD, "secondary_color": Colors.BLACK},
+    "Duke": {"primary_color": Colors.BLUE, "secondary_color": Colors.WHITE},
+    "Florida": {"primary_color": Colors.BLUE, "secondary_color": Colors.ORANGE},
+    "Florida State": {"primary_color": Colors.RED, "secondary_color": Colors.GOLD},
+    "Georgia": {"primary_color": Colors.RED, "secondary_color": Colors.BLACK},
+    "Georgia Tech": {"primary_color": Colors.GOLD, "secondary_color": Colors.WHITE},
+    "Illinois": {"primary_color": Colors.ORANGE, "secondary_color": Colors.BLUE},
+    "Indiana": {"primary_color": Colors.RED, "secondary_color": Colors.WHITE},
+    "Iowa": {"primary_color": Colors.BLACK, "secondary_color": Colors.GOLD},
+    "Iowa State": {"primary_color": Colors.GOLD, "secondary_color": Colors.RED},
+    "Kansas": {"primary_color": Colors.BLUE, "secondary_color": Colors.RED},
+    "Kansas State": {"primary_color": Colors.PURPLE, "secondary_color": Colors.WHITE},
+    "Kentucky": {"primary_color": Colors.BLUE, "secondary_color": Colors.WHITE},
+    "Louisville": {"primary_color": Colors.RED, "secondary_color": Colors.BLACK},
+    "LSU": {"primary_color": Colors.PURPLE, "secondary_color": Colors.GOLD},
+    "Maryland": {"primary_color": Colors.RED, "secondary_color": Colors.WHITE},
+    "Miami": {"primary_color": Colors.ORANGE, "secondary_color": Colors.GREEN},
+    "Michigan": {"primary_color": Colors.BLUE, "secondary_color": Colors.YELLOW},
+    "Michigan State": {"primary_color": Colors.GREEN, "secondary_color": Colors.WHITE},
+    "Minnesota": {"primary_color": Colors.RED, "secondary_color": Colors.GOLD},
+    "Mississippi State": {"primary_color": Colors.RED, "secondary_color": Colors.WHITE},
+    "Missouri": {"primary_color": Colors.BLACK, "secondary_color": Colors.GOLD},
+    "Nebraska": {"primary_color": Colors.RED, "secondary_color": Colors.WHITE},
+    "UNC": {"primary_color": Colors.LIGHT_BLUE, "secondary_color": Colors.WHITE},
+    "NC State": {"primary_color": Colors.RED, "secondary_color": Colors.WHITE},
+    "Northwestern": {"primary_color": Colors.PURPLE, "secondary_color": Colors.WHITE},
+    "Notre Dame": {"primary_color": Colors.BLUE, "secondary_color": Colors.GOLD},
+    "Ohio State": {"primary_color": Colors.RED, "secondary_color": Colors.GRAY},
+    "Oklahoma": {"primary_color": Colors.RED, "secondary_color": Colors.WHITE},
+    "Oklahoma State": {"primary_color": Colors.ORANGE, "secondary_color": Colors.BLACK},
+    "Oregon": {"primary_color": Colors.GREEN, "secondary_color": Colors.YELLOW},
+    "Oregon State": {"primary_color": Colors.ORANGE, "secondary_color": Colors.BLACK},
+    "Penn State": {"primary_color": Colors.BLUE, "secondary_color": Colors.WHITE},
+    "Pittsburgh": {"primary_color": Colors.BLUE, "secondary_color": Colors.GOLD},
+    "Purdue": {"primary_color": Colors.BLACK, "secondary_color": Colors.GOLD},
+    "Rutgers": {"primary_color": Colors.RED, "secondary_color": Colors.WHITE},
+    "South Carolina": {"primary_color": Colors.BLACK, "secondary_color": Colors.RED},
+    "Stanford": {"primary_color": Colors.RED, "secondary_color": Colors.WHITE},
+    "Syracuse": {"primary_color": Colors.ORANGE, "secondary_color": Colors.BLUE},
+    "TCU": {"primary_color": Colors.PURPLE, "secondary_color": Colors.WHITE},
+    "Tennessee": {"primary_color": Colors.ORANGE, "secondary_color": Colors.WHITE},
+    "Texas": {"primary_color": Colors.ORANGE, "secondary_color": Colors.WHITE},
+    "Texas A&M": {"primary_color": Colors.RED, "secondary_color": Colors.WHITE},
+    "Texas Tech": {"primary_color": Colors.RED, "secondary_color": Colors.BLACK},
+    "Utah": {"primary_color": Colors.RED, "secondary_color": Colors.WHITE},
+    "Vanderbilt": {"primary_color": Colors.BLACK, "secondary_color": Colors.GOLD},
+    "Virginia": {"primary_color": Colors.ORANGE, "secondary_color": Colors.BLUE},
+    "Virginia Tech": {"primary_color": Colors.ORANGE, "secondary_color": Colors.RED},
+    "Wake Forest": {"primary_color": Colors.BLACK, "secondary_color": Colors.GOLD},
+    "Washington": {"primary_color": Colors.PURPLE, "secondary_color": Colors.GOLD},
+    "Washington State": {"primary_color": Colors.RED, "secondary_color": Colors.GRAY},
+    "West Virginia": {"primary_color": Colors.GOLD, "secondary_color": Colors.BLUE},
+    "Wisconsin": {"primary_color": Colors.RED, "secondary_color": Colors.WHITE},
+    "Wyoming": {"primary_color": Colors.GOLD, "secondary_color": Colors.BROWN},
+    "Air Force": {"primary_color": Colors.BLUE, "secondary_color": Colors.WHITE},
+    "Akron": {"primary_color": Colors.BLUE, "secondary_color": Colors.GOLD},
+    "Alabama-Birmingham": {
+        "primary_color": Colors.GREEN,
+        "secondary_color": Colors.GOLD,
+    },
+    "Appalachian State": {
+        "primary_color": Colors.BLACK,
+        "secondary_color": Colors.GOLD,
+    },
+    "Arkansas State": {"primary_color": Colors.RED, "secondary_color": Colors.BLACK},
+    "Army": {"primary_color": Colors.BLACK, "secondary_color": Colors.GOLD},
+    "Ball State": {"primary_color": Colors.RED, "secondary_color": Colors.WHITE},
+    "AMCC": {"primary_color": Colors.BLUE, "secondary_color": Colors.GOLD},
+}
 
 COLOR_DICT = {
     "midnightblue": Colors.NAVY,
