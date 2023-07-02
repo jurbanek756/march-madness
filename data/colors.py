@@ -17,13 +17,6 @@ def get_all_school_colors():
     return colors_dict
 
 
-def static_school_colors_dict():
-    return {
-        "St. Mary's": ("white", "blue"),
-        "Hawaii": ("white", "green"),
-    }
-
-
 def closest_colour(requested_hex):
     """
     Converts a hex color to a readable name

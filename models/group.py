@@ -2,7 +2,14 @@ from collections import OrderedDict
 
 
 class Group:
-    def __init__(self, ranking_dict, prediction_method, play_in_rank, group_name=None):
+    def __init__(
+        self,
+        ranking_dict,
+        prediction_method,
+        prediction_method_kwargs,
+        play_in_rank,
+        group_name=None,
+    ):
         self.one = ranking_dict[1]
         self.two = ranking_dict[2]
         self.three = ranking_dict[3]
@@ -21,6 +28,7 @@ class Group:
         self.sixteen = ranking_dict[16]
         self.play_in = ranking_dict["play_in"]
         self.predict = prediction_method
+        self.prediction_method_kwargs = prediction_method_kwargs
         self.play_in_rank = play_in_rank
         self.group_name = group_name
         self.play_in.tournament_rank = self.play_in_rank
@@ -58,6 +66,7 @@ class Group:
             self.ranking_dict[self.play_in_rank],
             group_name=self.group_name,
             round_name="First Four",
+            **self.prediction_method_kwargs,
         )
         if self.play_in_rank == 16:
             self.sixteen = first_four_winner
@@ -85,48 +94,56 @@ class Group:
                     self.sixteen,
                     group_name=self.group_name,
                     round_name="First Round",
+                    **self.prediction_method_kwargs,
                 ),
                 "8_9": self.predict(
                     self.eight,
                     self.nine,
                     group_name=self.group_name,
                     round_name="First Round",
+                    **self.prediction_method_kwargs,
                 ),
                 "5_12": self.predict(
                     self.five,
                     self.twelve,
                     group_name=self.group_name,
                     round_name="First Round",
+                    **self.prediction_method_kwargs,
                 ),
                 "4_13": self.predict(
                     self.four,
                     self.thirteen,
                     group_name=self.group_name,
                     round_name="First Round",
+                    **self.prediction_method_kwargs,
                 ),
                 "6_11": self.predict(
                     self.six,
                     self.eleven,
                     group_name=self.group_name,
                     round_name="First Round",
+                    **self.prediction_method_kwargs,
                 ),
                 "3_14": self.predict(
                     self.three,
                     self.fourteen,
                     group_name=self.group_name,
                     round_name="First Round",
+                    **self.prediction_method_kwargs,
                 ),
                 "7_10": self.predict(
                     self.seven,
                     self.ten,
                     group_name=self.group_name,
                     round_name="First Round",
+                    **self.prediction_method_kwargs,
                 ),
                 "2_15": self.predict(
                     self.two,
                     self.fifteen,
                     group_name=self.group_name,
                     round_name="First Round",
+                    **self.prediction_method_kwargs,
                 ),
             }
         )
@@ -139,24 +156,28 @@ class Group:
                     first_round_results["8_9"],
                     group_name=self.group_name,
                     round_name="Second Round",
+                    **self.prediction_method_kwargs,
                 ),
                 "4_5": self.predict(
                     first_round_results["4_13"],
                     first_round_results["5_12"],
                     group_name=self.group_name,
                     round_name="Second Round",
+                    **self.prediction_method_kwargs,
                 ),
                 "3_6": self.predict(
                     first_round_results["3_14"],
                     first_round_results["6_11"],
                     group_name=self.group_name,
                     round_name="Second Round",
+                    **self.prediction_method_kwargs,
                 ),
                 "2_7": self.predict(
                     first_round_results["2_15"],
                     first_round_results["7_10"],
                     group_name=self.group_name,
                     round_name="Second Round",
+                    **self.prediction_method_kwargs,
                 ),
             }
         )
@@ -169,12 +190,14 @@ class Group:
                     second_round_results["4_5"],
                     group_name=self.group_name,
                     round_name="Sweet Sixteen",
+                    **self.prediction_method_kwargs,
                 ),
                 "2_3": self.predict(
                     second_round_results["2_7"],
                     second_round_results["3_6"],
                     group_name=self.group_name,
                     round_name="Sweet Sixteen",
+                    **self.prediction_method_kwargs,
                 ),
             }
         )
@@ -185,4 +208,5 @@ class Group:
             sweet_sixteen_results["2_3"],
             group_name=self.group_name,
             round_name="Elite Eight",
+            **self.prediction_method_kwargs,
         )

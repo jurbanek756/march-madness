@@ -3,13 +3,9 @@ Module for making predictions
 """
 
 import random
-from transformers import pipeline
 
-from weight.lptr import lptr as weight_function
-
-# from weight.sigmodal import sigmodal as weight_function
-
-SENTIMENT_CLASSIFIER = pipeline("sentiment-analysis")
+from weight.lptr import lptr
+from weight.sigmodal import sigmodal
 
 
 def random_selection(team_a, team_b, **kwargs):
@@ -30,13 +26,24 @@ def random_selection(team_a, team_b, **kwargs):
     return random.choice([team_a, team_b])
 
 
-def weighted_random_selection(
-    team_a, team_b, weight_function=weight_function, **kwargs
-):
+def weighted_random_selection_lptr(team_a, team_b, **kwargs):
     return random.choices(
         population=[team_a, team_b],
         k=1,
-        weights=weight_function(team_a, team_b),
+        weights=lptr(team_a, team_b, ap_rank_weight=kwargs.get("ap_rank_weight", 0.75)),
+    )[0]
+
+
+def weighted_random_selection_sigmodal(team_a, team_b, **kwargs):
+    return random.choices(
+        population=[team_a, team_b],
+        k=1,
+        weights=sigmodal(
+            team_a,
+            team_b,
+            ap_rank_weight=kwargs.get("ap_rank_weight", 0.75),
+            k=kwargs.get("k", 0.33),
+        ),
     )[0]
 
 
@@ -87,6 +94,7 @@ def ap_selection(team_a, team_b, **kwargs):
     kwargs: dict
         Unused
 
+
     Returns
     -------
     Team
@@ -103,27 +111,3 @@ def ap_selection(team_a, team_b, **kwargs):
             return team_b
         else:
             return random_selection(team_a, team_b)
-
-
-def nickname_sentiment(team_a, team_b, **kwargs):
-    """
-    Uses the huggingface library to compare the sentiment of each team's nickname.
-    Returns the team with the higher positive sentiment for its nickname.
-
-    Parameters
-    ----------
-    team_a: Team
-    team_b: Team
-
-    Returns
-    -------
-    Team
-    """
-    a_sentiment = SENTIMENT_CLASSIFIER(team_a.nickname)[0]
-    b_sentiment = SENTIMENT_CLASSIFIER(team_b.nickname)[0]
-    a_score = a_sentiment["score"] * (1 if a_sentiment["label"] == "POSITIVE" else -1)
-    b_score = b_sentiment["score"] * (1 if b_sentiment["label"] == "POSITIVE" else -1)
-    if a_score > b_score:
-        return team_a
-    else:
-        return team_b

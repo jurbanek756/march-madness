@@ -22,7 +22,7 @@ Resources
 from models.team import Team
 
 
-def lptr(team1: Team, team2: Team, use_ap_ranks: bool = True):
+def lptr(team1: Team, team2: Team, ap_rank_weight=0.75):
     """
     Main function for linearly proportional tournament ranking.
 
@@ -30,19 +30,23 @@ def lptr(team1: Team, team2: Team, use_ap_ranks: bool = True):
     ----------
     team1: Team
     team2: Team
-    use_ap_ranks: bool
+    ap_rank_weight: bool
 
     Returns
     -------
     tuple
         Team 1 probability, Team 2 probability
     """
-    if use_ap_ranks:
-        return lptr_with_ap(
-            team1.tournament_rank, team2.tournament_rank, team1.ap_rank, team2.ap_rank
-        )
-    else:
+    if ap_rank_weight == 0:
         return lptr_tournament_only(team1.tournament_rank, team2.tournament_rank)
+    else:
+        return lptr_with_ap(
+            team1.tournament_rank,
+            team2.tournament_rank,
+            team1.ap_rank,
+            team2.ap_rank,
+            ap_rank_weight,
+        )
 
 
 def lptr_tournament_only(rank1: int, rank2: int):
@@ -69,7 +73,7 @@ def lptr_tournament_only(rank1: int, rank2: int):
         return 1 - y, y
 
 
-def lptr_with_ap(tourn_rank_1, tourn_rank_2, ap_rank_1, ap_rank_2, tourn_weight=0.75):
+def lptr_with_ap(tourn_rank_1, tourn_rank_2, ap_rank_1, ap_rank_2, ap_weight=0.75):
     """
     LPTR that considers both tournament and AP rankings.
 
@@ -84,7 +88,7 @@ def lptr_with_ap(tourn_rank_1, tourn_rank_2, ap_rank_1, ap_rank_2, tourn_weight=
     tourn_rank_2: int
     ap_rank_1: int
     ap_rank_2: int
-    tourn_weight: float
+    ap_weight: float
         Between 0 and 1 inclusive; AP Ranking defined as 1 - tourn_weight
 
     Returns
@@ -102,9 +106,9 @@ def lptr_with_ap(tourn_rank_1, tourn_rank_2, ap_rank_1, ap_rank_2, tourn_weight=
         ap_rank_2 = 26
     if ap_rank_1 > 26 or ap_rank_2 > 26:
         raise ValueError("Invalid AP ranking provided")
-    if tourn_weight > 1 or tourn_weight < 0:
-        raise ValueError("Invalid tournament weight provided")
-    ap_weight = 1 - tourn_weight
+    if ap_weight > 1 or ap_weight < 0:
+        raise ValueError("Invalid AP weight provided")
+    tourn_weight = 1 - ap_weight
     tourn_diff = abs(tourn_rank_1 - tourn_rank_2)
     y_tourn = (0.5 / 15) * tourn_diff + 0.5
     ap_diff = abs(ap_rank_1 - ap_rank_2)

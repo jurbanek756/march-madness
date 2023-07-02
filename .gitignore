@@ -1,8 +1,8 @@
 #OAuth Token
 OAuth_Token
 
-# DB
-db/
+# DB Dev data
+db/dev/
 
 #unit testing outputs
 Test_Artifacts/album_data_test

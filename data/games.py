@@ -10,6 +10,7 @@ from models.game import Game
 session = LimiterSession(per_second=3)
 logger = logging.getLogger(__name__)
 
+
 def get_regular_season_games():
     teams = get_teams_from_api()
     games = dict()
@@ -54,7 +55,12 @@ def get_regular_season_games():
             else:
                 raise ValueError("Invalid win-loss character detected: %s", score[0])
             team_games.append(
-                Game(game_date=game_date, opponent=get_name(opponent), score=score, win=win).to_dict()
+                Game(
+                    game_date=game_date,
+                    opponent=get_name(opponent),
+                    score=score,
+                    win=win,
+                ).to_dict()
             )
         games[team_name] = team_games
     return games
@@ -93,5 +99,5 @@ ESPN_NAMES = {  # espn name: local name
     "Lafayette": "Louisiana-Lafayette",
     "Fair Dickinson": "Fairleigh Dickinson",
     "SE Missouri St": "Southeast Missouri State",
-    "N Kentucky": "Northern Kentucky"
+    "N Kentucky": "Northern Kentucky",
 }

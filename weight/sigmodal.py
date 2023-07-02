@@ -37,7 +37,7 @@ Resources
 import math
 
 
-def sigmodal(team1, team2, use_ap_ranks=True, k=None):
+def sigmodal(team1, team2, ap_rank_weight=0.75, k=None):
     """
     Main function for sigmodal ranking probabilities.
 
@@ -45,7 +45,7 @@ def sigmodal(team1, team2, use_ap_ranks=True, k=None):
     ----------
     team1: Team
     team2: Team
-    use_ap_ranks: bool
+    ap_rank_weight: float
     k: float
 
     Returns
@@ -53,23 +53,7 @@ def sigmodal(team1, team2, use_ap_ranks=True, k=None):
     tuple
         Team 1 probability, Team 2 probability
     """
-    if use_ap_ranks:
-        if k:
-            return sigmodal_k_with_ap(
-                team1.tournament_rank,
-                team2.tournament_rank,
-                team1.ap_rank,
-                team2.ap_rank,
-                k=k,
-            )
-        else:
-            return sigmodal_with_ap(
-                team1.tournament_rank,
-                team2.tournament_rank,
-                team1.ap_rank,
-                team2.ap_rank,
-            )
-    else:
+    if ap_rank_weight == 0:
         if k:
             return sigmodal_k_tournament_only(
                 team1.tournament_rank, team2.tournament_rank, k=k
@@ -77,6 +61,24 @@ def sigmodal(team1, team2, use_ap_ranks=True, k=None):
         else:
             return sigmodal_tournament_only(
                 team1.tournament_rank, team2.tournament_rank
+            )
+    else:
+        if k:
+            return sigmodal_k_with_ap(
+                team1.tournament_rank,
+                team2.tournament_rank,
+                team1.ap_rank,
+                team2.ap_rank,
+                k=k,
+                ap_weight=ap_rank_weight,
+            )
+        else:
+            return sigmodal_with_ap(
+                team1.tournament_rank,
+                team2.tournament_rank,
+                team1.ap_rank,
+                team2.ap_rank,
+                ap_weight=ap_rank_weight,
             )
 
 
@@ -120,9 +122,7 @@ def sigmodal_tournament_only(rank1, rank2):
         return 1 - y, y
 
 
-def sigmodal_with_ap(
-    tourn_rank_1, tourn_rank_2, ap_rank_1, ap_rank_2, tourn_weight=0.75
-):
+def sigmodal_with_ap(tourn_rank_1, tourn_rank_2, ap_rank_1, ap_rank_2, ap_weight=0.75):
     if not ap_rank_1 and not ap_rank_2:
         return sigmodal_tournament_only(tourn_rank_1, tourn_rank_2)
     if tourn_rank_1 > 16 or tourn_rank_2 > 16:
@@ -133,9 +133,9 @@ def sigmodal_with_ap(
         ap_rank_2 = 26
     if ap_rank_1 > 26 or ap_rank_2 > 26:
         raise ValueError("Invalid AP ranking provided")
-    if tourn_weight > 1 or tourn_weight < 0:
-        raise ValueError("Invalid tournament weight provided")
-    ap_weight = 1 - tourn_weight
+    if ap_weight > 1 or ap_weight < 0:
+        raise ValueError("Invalid AP weight provided")
+    tourn_weight = 1 - ap_weight
     tourn_diff = abs(tourn_rank_1 - tourn_rank_2)
     if tourn_diff == 15:
         if tourn_rank_1 < tourn_rank_2:
@@ -196,7 +196,7 @@ def sigmodal_k_tournament_only(rank1, rank2, k=0.33):
 
 
 def sigmodal_k_with_ap(
-    tourn_rank_1, tourn_rank_2, ap_rank_1, ap_rank_2, k=0.33, tourn_weight=0.75
+    tourn_rank_1, tourn_rank_2, ap_rank_1, ap_rank_2, k=0.33, ap_weight=0.75
 ):
     if not ap_rank_1 and not ap_rank_2:
         return sigmodal_k_tournament_only(tourn_rank_1, tourn_rank_2, k=k)
@@ -208,9 +208,9 @@ def sigmodal_k_with_ap(
         ap_rank_2 = 26
     if ap_rank_1 > 26 or ap_rank_2 > 26:
         raise ValueError("Invalid AP ranking provided")
-    if tourn_weight > 1 or tourn_weight < 0:
-        raise ValueError("Invalid tournament weight provided")
-    ap_weight = 1 - tourn_weight
+    if ap_weight > 1 or ap_weight < 0:
+        raise ValueError("Invalid AP weight provided")
+    tourn_weight = 1 - ap_weight
     tourn_diff = abs(tourn_rank_1 - tourn_rank_2)
     if tourn_diff == 15:
         if tourn_rank_1 < tourn_rank_2:

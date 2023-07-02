@@ -9,7 +9,6 @@ from data.games import get_regular_season_games
 
 from data.schools import (
     get_all_d1_schools,
-    filter_schools_without_tournament_appearance,
     add_names_to_schools,
     add_ap_rankings_to_dataframe,
     add_location_and_is_private_to_dataframe,
@@ -43,7 +42,6 @@ if GENERATE_SCHOOLS_DB:
     logging.info("Getting school data")
     df = get_all_d1_schools()
     logging.info("Filtering schools without a tournament appearance")
-    df = filter_schools_without_tournament_appearance(df)
     logging.info("Adding short names to schools")
     add_names_to_schools(df)
     logging.info("Adding AP rankings")

@@ -24,26 +24,41 @@ class Tournament:
         right_top_play_in_rank,
         right_bottom_play_in_rank,
         prediction_method,
+        prediction_method_kwargs=None,
         log_results=True,
     ):
         self.log_results = log_results
         self.predict = prediction_method
+        self.prediction_method_kwargs = prediction_method_kwargs
         self.left_top_name = left_top_name
         self.left_bottom_name = left_bottom_name
         self.right_top_name = right_top_name
         self.right_bottom_name = right_bottom_name
         self.left_top = Group(
-            left_top, self.predict, left_top_play_in_rank, self.left_top_name
+            left_top,
+            self.predict,
+            self.prediction_method_kwargs,
+            left_top_play_in_rank,
+            self.left_top_name,
         )
         self.left_bottom = Group(
-            left_bottom, self.predict, left_bottom_play_in_rank, self.left_bottom_name
+            left_bottom,
+            self.predict,
+            self.prediction_method_kwargs,
+            left_bottom_play_in_rank,
+            self.left_bottom_name,
         )
         self.right_top = Group(
-            right_top, self.predict, right_top_play_in_rank, self.right_top_name
+            right_top,
+            self.predict,
+            self.prediction_method_kwargs,
+            right_top_play_in_rank,
+            self.right_top_name,
         )
         self.right_bottom = Group(
             right_bottom,
             self.predict,
+            self.prediction_method_kwargs,
             right_bottom_play_in_rank,
             self.right_bottom_name,
         )
@@ -103,16 +118,18 @@ class Tournament:
             left_bottom,
             group_name=f"{self.left_top_name}  vs. {self.left_bottom_name}",
             round_name="Final Four Game",
+            **self.prediction_method_kwargs,
         )
         right = self.predict(
             right_top,
             right_bottom,
             group_name=f"{self.right_top_name} vs. {self.right_bottom_name}",
             round_name="Final Four Game",
+            **self.prediction_method_kwargs,
         )
         if self.log_results:
             logger.info("Championship Game: %s vs. %s", left, right)
-        return self.predict(left, right)
+        return self.predict(left, right, **self.prediction_method_kwargs)
 
     def first_four(self):
         lt = self.left_top.first_four()

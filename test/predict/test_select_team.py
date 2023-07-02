@@ -4,8 +4,8 @@ from predict.select_team import (
     ranked_selection,
     ap_selection,
     random_selection,
-    weighted_random_selection,
-    nickname_sentiment,
+    weighted_random_selection_lptr,
+    weighted_random_selection_sigmodal,
 )
 
 
@@ -93,9 +93,14 @@ def test_random_selection(duke, unc):
     assert random_selection(duke, unc) in [duke, unc]
 
 
-def test_weighted_random_selection(duke, wake_forest):
+def test_weighted_random_selection_lptr(duke, wake_forest):
     # Duke is ranked 1, Wake Forest is ranked 16, so Duke will always be selected
-    assert weighted_random_selection(duke, wake_forest) == duke
+    assert weighted_random_selection_lptr(duke, wake_forest) == duke
+
+
+def test_weighted_random_selection_sigmodal(duke, wake_forest):
+    # Duke is ranked 1, Wake Forest is ranked 16, so Duke will always be selected
+    assert weighted_random_selection_sigmodal(duke, wake_forest) == duke
 
 
 def test_ranked_selection(duke, unc, nc_state, wake_forest, virginia):
@@ -125,22 +130,3 @@ def test_ap_selection(duke, unc, nc_state, wake_forest, virginia):
     assert ap_selection(virginia, nc_state) == virginia
     assert ap_selection(virginia, wake_forest) == virginia
     assert ap_selection(nc_state, wake_forest) == nc_state
-
-
-def test_nickname_sentiment(duke, unc, nc_state, wake_forest, virginia):
-    # Scores:
-    #   Duke: 0.80
-    #   UNC:  0.81
-    #   NC State: 0.91
-    #   Wake Forest: -0.65
-    #   Virginia: 0.76
-    assert nickname_sentiment(duke, unc) == unc
-    assert nickname_sentiment(duke, nc_state) == nc_state
-    assert nickname_sentiment(duke, wake_forest) == duke
-    assert nickname_sentiment(duke, virginia) == duke
-    assert nickname_sentiment(unc, nc_state) == nc_state
-    assert nickname_sentiment(unc, wake_forest) == unc
-    assert nickname_sentiment(unc, virginia) == unc
-    assert nickname_sentiment(nc_state, wake_forest) == nc_state
-    assert nickname_sentiment(nc_state, virginia) == nc_state
-    assert nickname_sentiment(wake_forest, virginia) == virginia

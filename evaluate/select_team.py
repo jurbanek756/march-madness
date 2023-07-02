@@ -4,7 +4,7 @@ from helpers.print_helpers import print_in_two_columns
 from predict.select_team import random_selection
 
 
-def user_evaluation(a, b, group_name=None, round_name=None):
+def user_evaluation(a, b, group_name=None, round_name=None, **kwargs):
     if group_name and round_name:
         print(f"{group_name} {round_name}")
     elif group_name:

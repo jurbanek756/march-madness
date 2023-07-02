@@ -2,7 +2,7 @@
 Module for adding relevant data to a DataFrame
 """
 
-from data.colors import get_all_school_colors, static_school_colors_dict
+from data.colors import get_all_school_colors
 from data.rivals import RIVALRIES
 from data.names import NAMES, update_school_name
 from helpers.soup_helpers import get_table
@@ -46,10 +46,6 @@ def get_all_d1_schools():
     return pd.DataFrame(all_school_data, columns=columns)
 
 
-def filter_schools_without_tournament_appearance(df):
-    return df[df["Tournament appearances"] != "(0)"]
-
-
 def add_names_to_schools(df):
     for i, row in df.iterrows():
         school_name = row["School"]
@@ -77,15 +73,10 @@ def add_ap_rankings_to_dataframe(df):
 
 def add_team_colors_to_dataframe(df):
     data = get_all_school_colors()
-    static_color_dict = static_school_colors_dict()
     for i, row in df.iterrows():
         if row["Name"] in data:
             df.at[i, "Primary Color"] = data[row["Name"]]["primary_color"]
             df.at[i, "Secondary Color"] = data[row["Name"]]["secondary_color"]
-        elif row["Name"] in static_color_dict:
-            df.at[i, "Primary Color"] = static_color_dict[row["Name"]][0]
-            df.at[i, "Secondary Color"] = static_color_dict[row["Name"]][1]
-
 
 
 def add_location_and_is_private_to_dataframe(df):
@@ -120,15 +111,15 @@ def school_index_in_tuple(df_school, data):
         split_df_school = df_school.casefold().split(" ")
         generic = "University"
         if (
-                split_ap_name[-1] == generic.casefold()
-                and split_df_school[-1] == generic.casefold()
+            split_ap_name[-1] == generic.casefold()
+            and split_df_school[-1] == generic.casefold()
         ):
             ratio = fuzz.ratio(
                 " ".join(split_df_school[:-1]), " ".join(split_ap_name[:-1])
             )
         elif (
-                split_ap_name[0] == generic.casefold()
-                and split_df_school[0] == generic.casefold()
+            split_ap_name[0] == generic.casefold()
+            and split_df_school[0] == generic.casefold()
         ):
             ratio = fuzz.ratio(
                 " ".join(split_df_school[1:]), " ".join(split_ap_name[1:])
