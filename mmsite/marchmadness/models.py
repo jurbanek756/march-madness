@@ -15,6 +15,9 @@ class School(models.Model):
     location = models.CharField(max_length=50)
     is_private = models.BooleanField()
 
+    def __str__(self):
+        return self.name
+
 
 class Game(models.Model):
     game_id = models.IntegerField(primary_key=True)
@@ -25,8 +28,28 @@ class Game(models.Model):
     home_score = models.IntegerField()
     away_score = models.IntegerField()
 
+    def __str__(self):
+        return (
+            f"{self.home_team} vs. {self.away_team} "
+            f"({self.date}): {self.home_score}-{self.away_score}"
+        )
+
+    def winner(self):
+        if self.home_score > self.away_score:
+            return self.home_team
+        elif self.away_score > self.home_score:
+            return self.away_team
+        else:
+            return None
+
+    def point_differential(self):
+        return abs(int(self.home_score) - int(self.away_score))
+
 
 class Rivalry(models.Model):
     rivalry_id = models.IntegerField(primary_key=True)
     team1 = models.CharField(max_length=MAX_SCHOOL_LEN)
     team2 = models.CharField(max_length=MAX_SCHOOL_LEN)
+
+    def __str__(self):
+        return f"{self.team1} vs. {self.team2}"
