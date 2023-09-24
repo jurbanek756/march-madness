@@ -49,8 +49,7 @@ class Rivalry(models.Model):
 
 
 class APRanking(models.Model):
-    ranking_id = models.IntegerField(primary_key=True)
-    team = models.CharField(max_length=MAX_SCHOOL_LEN)
+    school_name = models.CharField(max_length=MAX_SCHOOL_LEN)
     ranking = models.IntegerField()
     year = models.IntegerField()
 
@@ -59,10 +58,10 @@ class APRanking(models.Model):
 
 
 class TournamentRanking(models.Model):
-    ranking_id = models.IntegerField(primary_key=True)
-    team = models.CharField(max_length=MAX_SCHOOL_LEN)
+    school_name = models.CharField(max_length=MAX_SCHOOL_LEN)
     ranking = models.IntegerField()
     conference = models.CharField(max_length=30)
+    play_in = models.BooleanField(default=False)
     year = models.IntegerField()
 
     def __str__(self):

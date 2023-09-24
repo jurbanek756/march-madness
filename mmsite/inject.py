@@ -1,22 +1,24 @@
-import pickle
+"""
+Hacky script used to populate databases from previously captured static data
+"""
+
+from math import isnan
 import os
+import pickle
+
 import dateutil.parser
 from dateutil.relativedelta import relativedelta
+
+import sys
+
+sys.path.append("../")
+from tournament_rankings import r2022, r2023
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mmsite.settings")
 import django
 
 django.setup()
-from marchmadness.models import School, Game
-
-from math import isnan
-import sys
-
-sys.path.append("../")
-
-"""
-Hacky script used to populate databases from prevously captured static data
-"""
+from marchmadness.models import School, Game, APRanking, TournamentRanking
 
 
 def get_parens_num(prov_str):
@@ -86,10 +88,56 @@ def add_games():
                 opponent=game["opponent"],
                 school_score=home_score,
                 opponent_score=away_score,
-                win=game["win"]
+                win=game["win"],
             )
             games_to_insert.append(game_model)
     Game.objects.bulk_create(games_to_insert)
+
+
+def add_ap_ranking():
+    with open("../db/school_data.pkl", "rb") as F:
+        df = pickle.load(F)
+
+    df = df[~df["Name"].duplicated(keep=False)]
+
+    schools_to_insert = []
+    for i, row in df.iterrows():
+        if ap_ranking := row["AP Ranking"]:
+            school = APRanking(school_name=row["Name"], ranking=ap_ranking, year=2023)
+            schools_to_insert.append(school)
+    APRanking.objects.bulk_create(schools_to_insert)
+
+
+def add_tournament_rankings_helper(data, conference_name, year):
+    schools = []
+    play_in_rank = data.pop("play_in_rank")
+    for rank, school_name in r2022.west.items():
+        play_in = False
+        if rank == play_in_rank or rank == "play_in":
+            play_in = True
+            rank = play_in_rank
+        school = TournamentRanking(
+            school_name=school_name,
+            ranking=rank,
+            conference=conference_name,
+            play_in=play_in,
+            year=year,
+        )
+        schools.append(school)
+    return schools
+
+
+def add_past_tournament_rankings():
+    schools = []
+    schools.extend(add_tournament_rankings_helper(r2022.west, "West", 2022))
+    schools.extend(add_tournament_rankings_helper(r2022.east, "East", 2022))
+    schools.extend(add_tournament_rankings_helper(r2022.south, "South", 2022))
+    schools.extend(add_tournament_rankings_helper(r2022.midwest, "Midwest", 2022))
+    schools.extend(add_tournament_rankings_helper(r2023.west, "West", 2023))
+    schools.extend(add_tournament_rankings_helper(r2023.east, "East", 2023))
+    schools.extend(add_tournament_rankings_helper(r2023.south, "South", 2023))
+    schools.extend(add_tournament_rankings_helper(r2023.midwest, "Midwest", 2023))
+    TournamentRanking.objects.bulk_create(schools)
 
 
 if __name__ == "__main__":
