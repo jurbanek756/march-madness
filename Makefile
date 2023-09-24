@@ -22,7 +22,7 @@ db-down:    ## Stop the database
 	docker-compose down
 
 db-login:   ## Login to the database
-	docker exec -it march-madness_db_1 psql -U postgres
+	docker exec -it march-madness-db psql -U postgres
 
 dbl2:       ## Login to the database from psql
 	psql -h localhost -p 5432 -U postgres
