@@ -7,15 +7,15 @@ class School(models.Model):
     name = models.CharField(max_length=MAX_SCHOOL_LEN, primary_key=True)
     formal_name = models.CharField(max_length=int(MAX_SCHOOL_LEN * 1.2))
     nickname = models.CharField(max_length=30)
-    home_arena = models.CharField(max_length=60)
+    home_arena = models.CharField(max_length=60, null=True)
     conference = models.CharField(max_length=30)
     tournament_appearances = models.IntegerField(default=0)
     final_four_appearances = models.IntegerField(default=0)
     championship_wins = models.IntegerField(default=0)
-    primary_color = models.CharField(max_length=20)
-    secondary_color = models.CharField(max_length=20)
-    location = models.CharField(max_length=50)
-    is_private = models.BooleanField()
+    primary_color = models.CharField(max_length=20, null=True)
+    secondary_color = models.CharField(max_length=20, null=True)
+    location = models.CharField(max_length=50, null=True)
+    is_private = models.BooleanField(null=False, default=False)
 
     def __str__(self):
         return self.name
