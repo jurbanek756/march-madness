@@ -23,25 +23,32 @@ def insert_bool(val):
     return val
 
 
-with open("../db/school_data.pkl", "rb") as F:
-    df = pickle.load(F)
+def add_schools():
+    with open("../db/school_data.pkl", "rb") as F:
+        df = pickle.load(F)
 
-schools_to_insert = []
-for i, row in df.iterrows():
-    school = School(
-        name=row["Name"],
-        formal_name=row["School"],
-        nickname=row["Nickname"],
-        home_arena=row["Home arena"],
-        conference=row["Conference"],
-        tournament_appearances=get_parens_num(row["Tournament appearances"]),
-        final_four_appearances=get_parens_num(row["Final Four appearances"]),
-        championship_wins=get_parens_num(row["Championship wins"]),
-        primary_color=row["Primary Color"],
-        secondary_color=row["Secondary Color"],
-        location=row["Location"],
-        is_private=insert_bool(row["Is Private"]),
-    )
-    schools_to_insert.append(school)
+    df = df[~df["Name"].duplicated(keep=False)]
 
-School.objects.bulk_create(schools_to_insert)
+    schools_to_insert = []
+    for i, row in df.iterrows():
+        school = School(
+            name=row["Name"],
+            formal_name=row["School"],
+            nickname=row["Nickname"],
+            home_arena=row["Home arena"],
+            conference=row["Conference"],
+            tournament_appearances=get_parens_num(row["Tournament appearances"]),
+            final_four_appearances=get_parens_num(row["Final Four appearances"]),
+            championship_wins=get_parens_num(row["Championship wins"]),
+            primary_color=row["Primary Color"],
+            secondary_color=row["Secondary Color"],
+            location=row["Location"],
+            is_private=insert_bool(row["Is Private"]),
+        )
+        schools_to_insert.append(school)
+
+    School.objects.bulk_create(schools_to_insert)
+
+
+if __name__ == "__main__":
+    add_schools()

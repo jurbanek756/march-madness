@@ -61,6 +61,7 @@ class APRanking(models.Model):
     ranking_id = models.IntegerField(primary_key=True)
     team = models.CharField(max_length=MAX_SCHOOL_LEN)
     ranking = models.IntegerField()
+    year = models.IntegerField()
 
     def __str__(self):
         return f"{self.team}: {self.ranking}"
@@ -71,6 +72,7 @@ class TournamentRanking(models.Model):
     team = models.CharField(max_length=MAX_SCHOOL_LEN)
     ranking = models.IntegerField()
     conference = models.CharField(max_length=30)
+    year = models.IntegerField()
 
     def __str__(self):
         return f"{self.team}: {self.ranking} ({self.conference})"
