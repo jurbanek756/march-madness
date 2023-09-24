@@ -1,4 +1,4 @@
-.PHONY: help clean tar static sonarqube db db-down db-login dbl2
+.PHONY: help clean tar static sonarqube dbstart dbstop dblogin createdb
 
 help:	    ## Show this help message
 	@sed -ne '/@sed/!s/## //p' $(MAKEFILE_LIST)
@@ -15,14 +15,14 @@ static:     ## Lint
 sonarqube:  ## Run sonarqube analysis (local instance)
 	sonar-scanner -Dsonar.projectKey=march-madness -Dsonar.sources=. -Dsonar.host.url=http://localhost:9000 -Dsonar.token=sqp_03f9f4ad6fdd9892f8331f9a52ea28457edbe85f
 
-db:         ## Run the database
+dbstart:        ## Run the database
 	docker-compose up -d
 
-db-down:    ## Stop the database
-	docker-compose down
+dbstop:    ## Stop the database
+	docker-compose stop
 
-db-login:   ## Login to the database
+dblogin:   ## Login to the database
 	docker exec -it march-madness-db psql -U postgres
 
-create-db:  ## Create the database
+createdb:  ## Create the database
 	psql -h localhost -p 5432 -U postgres -c "CREATE DATABASE march_madness;"
