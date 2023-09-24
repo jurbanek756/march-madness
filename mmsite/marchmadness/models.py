@@ -22,34 +22,25 @@ class School(models.Model):
 
 
 class Game(models.Model):
-    game_id = models.IntegerField(primary_key=True)
     date = models.DateField()
     season = models.CharField(max_length=9)
-    home_team = models.CharField(max_length=MAX_SCHOOL_LEN)
-    away_team = models.CharField(max_length=MAX_SCHOOL_LEN)
-    home_score = models.IntegerField()
-    away_score = models.IntegerField()
+    school_name = models.CharField(max_length=MAX_SCHOOL_LEN)
+    opponent = models.CharField(max_length=MAX_SCHOOL_LEN)
+    school_score = models.IntegerField()
+    opponent_score = models.IntegerField()
+    win = models.BooleanField(default=False)
 
     def __str__(self):
         return (
-            f"{self.home_team} vs. {self.away_team} "
-            f"({self.date}): {self.home_score}-{self.away_score}"
+            f"{self.school_name} vs. {self.opponent} "
+            f"({self.date}): {self.school_score}-{self.opponent_score}"
         )
 
-    def winner(self):
-        if self.home_score > self.away_score:
-            return self.home_team
-        elif self.away_score > self.home_score:
-            return self.away_team
-        else:
-            return None
-
     def point_differential(self):
-        return abs(int(self.home_score) - int(self.away_score))
+        return abs(int(self.school_score) - int(self.opponent_score))
 
 
 class Rivalry(models.Model):
-    rivalry_id = models.IntegerField(primary_key=True)
     team1 = models.CharField(max_length=MAX_SCHOOL_LEN)
     team2 = models.CharField(max_length=MAX_SCHOOL_LEN)
 

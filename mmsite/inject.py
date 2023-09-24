@@ -1,16 +1,22 @@
 import pickle
 import os
+import dateutil.parser
+from dateutil.relativedelta import relativedelta
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mmsite.settings")
 import django
 
 django.setup()
-from marchmadness.models import School
+from marchmadness.models import School, Game
 
 from math import isnan
 import sys
 
 sys.path.append("../")
+
+"""
+Hacky script used to populate databases from prevously captured static data
+"""
 
 
 def get_parens_num(prov_str):
@@ -21,6 +27,18 @@ def insert_bool(val):
     if isnan(val):
         return False
     return val
+
+
+def date_from_str(date_str):
+    date = dateutil.parser.parse(date_str).date()
+    if date.month > 4:
+        date -= relativedelta(years=1)
+    return date
+
+
+def parse_score(score):
+    score_split = score.split("-")
+    return int(score_split[0]), int(score_split[1])
 
 
 def add_schools():
@@ -50,5 +68,29 @@ def add_schools():
     School.objects.bulk_create(schools_to_insert)
 
 
+def add_games():
+    with open("../db/2022_2023_games.pkl", "rb") as F:
+        games_dict = pickle.load(F)
+
+    games_to_insert = []
+    for school, games in games_dict.items():
+        for game in games:
+            try:
+                home_score, away_score = parse_score(game["score"])
+            except ValueError:
+                continue
+            game_model = Game(
+                date=date_from_str(game["game_date"]),
+                season="2022-2023",
+                school_name=school,
+                opponent=game["opponent"],
+                school_score=home_score,
+                opponent_score=away_score,
+                win=game["win"]
+            )
+            games_to_insert.append(game_model)
+    Game.objects.bulk_create(games_to_insert)
+
+
 if __name__ == "__main__":
-    add_schools()
+    pass

@@ -7,8 +7,14 @@ from tqdm import tqdm
 from data.espn import get_teams_from_api, get_name
 from models.game import Game
 
-session = LimiterSession(per_second=3)
+headers = dict()
+headers["user-agent"] = (
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
+    + " (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+)
+session = LimiterSession(per_second=3, headers=headers)
 logger = logging.getLogger(__name__)
+season_year = 2023
 
 
 def get_regular_season_games():
@@ -21,8 +27,9 @@ def get_regular_season_games():
         schedule_link = next(filter(lambda x: x["text"] == "Schedule", team["links"]))[
             "href"
         ]
+        link_with_year = f"{schedule_link}/season/{season_year}"
         schedule_soup = BeautifulSoup(
-            session.get(schedule_link).text, features="html.parser"
+            session.get(link_with_year).text, features="html.parser"
         )
         schedule_table = schedule_soup.find("tbody", {"class", "Table__TBODY"})
         rows = [r for r in schedule_table.find_all("tr", {"class": "Table__TR"})]
