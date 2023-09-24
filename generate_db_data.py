@@ -54,7 +54,7 @@ if args.generate_games_db:
     current_year = datetime.now().year
     games = get_regular_season_games()
     logging.info("Saving to db")
-    with open(f"db/{current_year-1}_{current_year}_games.pkl", "wb") as F:
+    with open(f"db/{current_year - 1}_{current_year}_games.pkl", "wb") as F:
         pickle.dump(games, F)
 
 if args.generate_schools_db:

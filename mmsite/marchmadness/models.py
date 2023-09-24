@@ -9,7 +9,9 @@ class School(models.Model):
     nickname = models.CharField(max_length=30)
     home_arena = models.CharField(max_length=60)
     conference = models.CharField(max_length=30)
-    tournament_appearances = models.IntegerField()
+    tournament_appearances = models.IntegerField(default=0)
+    final_four_appearances = models.IntegerField(default=0)
+    championship_wins = models.IntegerField(default=0)
     primary_color = models.CharField(max_length=20)
     secondary_color = models.CharField(max_length=20)
     location = models.CharField(max_length=50)
@@ -53,3 +55,22 @@ class Rivalry(models.Model):
 
     def __str__(self):
         return f"{self.team1} vs. {self.team2}"
+
+
+class APRanking(models.Model):
+    ranking_id = models.IntegerField(primary_key=True)
+    team = models.CharField(max_length=MAX_SCHOOL_LEN)
+    ranking = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.team}: {self.ranking}"
+
+
+class TournamentRanking(models.Model):
+    ranking_id = models.IntegerField(primary_key=True)
+    team = models.CharField(max_length=MAX_SCHOOL_LEN)
+    ranking = models.IntegerField()
+    conference = models.CharField(max_length=30)
+
+    def __str__(self):
+        return f"{self.team}: {self.ranking} ({self.conference})"
