@@ -24,5 +24,5 @@ db-down:    ## Stop the database
 db-login:   ## Login to the database
 	docker exec -it march-madness-db psql -U postgres
 
-dbl2:       ## Login to the database from psql
-	psql -h localhost -p 5432 -U postgres
+create-db:  ## Create the database
+	psql -h localhost -p 5432 -U postgres -c "CREATE DATABASE march_madness;"
