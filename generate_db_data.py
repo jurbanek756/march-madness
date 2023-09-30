@@ -163,15 +163,9 @@ def add_tournament_rankings(year):
         import tournament_rankings.r2023 as ranking_year
     else:
         raise ValueError("Unhandled year provided")
-    schools.extend(
-        add_tournament_rankings_helper(ranking_year.west, "West", year)
-    )
-    schools.extend(
-        add_tournament_rankings_helper(ranking_year.east, "East", year)
-    )
-    schools.extend(
-        add_tournament_rankings_helper(ranking_year.south, "South", year)
-    )
+    schools.extend(add_tournament_rankings_helper(ranking_year.west, "West", year))
+    schools.extend(add_tournament_rankings_helper(ranking_year.east, "East", year))
+    schools.extend(add_tournament_rankings_helper(ranking_year.south, "South", year))
     schools.extend(
         add_tournament_rankings_helper(ranking_year.midwest, "Midwest", year)
     )
@@ -192,7 +186,7 @@ if __name__ == "__main__":
     if args.schools:
         logging.info("Adding schools data")
         add_schools()
-    # add_games(args.year)
+    add_games(args.year)
     if args.year == datetime.datetime.now().year:
         add_ap_ranking()
     else:
