@@ -56,13 +56,6 @@ def insert_bool(val):
     return val
 
 
-def date_from_str(date_str):
-    date = dateutil.parser.parse(date_str).date()
-    if date.month > 4:
-        date -= relativedelta(years=1)
-    return date
-
-
 def parse_score(score):
     score_split = score.split("-")
     return int(score_split[0]), int(score_split[1])
@@ -109,7 +102,7 @@ def add_games(year):
             except ValueError:
                 continue
             game_model = Game(
-                date=date_from_str(game["game_date"]),
+                date=game["game_date"],
                 season=f"{previous_year}-{year}",
                 school_name=school,
                 opponent=game["opponent"],

@@ -10,7 +10,7 @@ class Game:
 
     def to_dict(self):
         return {
-            "game_date": self.date.strftime("%b %d"),
+            "game_date": self.date,
             "opponent": self.opponent,
             "score": self.score,
             "home_game": self.home_game,

@@ -3,6 +3,7 @@ import logging
 from bs4 import BeautifulSoup
 import dateutil.parser
 from dateutil.relativedelta import relativedelta
+from requests.adapters import HTTPAdapter, Retry
 from requests_ratelimiter import LimiterSession
 from tqdm import tqdm
 
@@ -10,6 +11,8 @@ from data.espn import get_teams_from_api, get_name
 from models.game import Game
 
 session = LimiterSession(per_second=1)
+retry = Retry(total=3, backoff_factor=1, status_forcelist=[500, 502, 503, 504])
+session.mount("http://", HTTPAdapter(max_retries=retry))
 session.headers.update(
     {
         "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) "
