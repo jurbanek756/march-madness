@@ -33,13 +33,13 @@ parser.add_argument(
     "--evaluate",
     action="store_true",
     default=False,
-    help="Run evaulation mode where user manually selects teams to win",
+    help="Run evaluation mode where user manually selects teams to win",
 )
 parser.add_argument(
     "-p",
     "--predict",
     help="Runs prediction mode where teams are automatically selected using a "
-    "predciction method. One of: ["
+    "prediction method. One of: ["
     "'random', "
     "'lptr', "
     "'sigmodal', "
