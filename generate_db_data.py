@@ -10,8 +10,6 @@ from math import isnan
 import os
 
 from bs4 import BeautifulSoup
-import dateutil.parser
-from dateutil.relativedelta import relativedelta
 import requests
 
 from data.games import get_regular_season_games
