@@ -6,11 +6,9 @@ from data.colors import get_all_school_colors
 from data.rivals import RIVALRIES
 from data.names import FORMAL_TO_ABBREV, update_school_name
 from helpers.soup_helpers import get_table
-from bs4 import BeautifulSoup
 from fuzzywuzzy import fuzz
 import pandas as pd
 import regex
-import requests
 
 DI_SCHOOLS = "https://en.wikipedia.org/wiki/List_of_NCAA_Division_I_institutions"
 D1_BASKETBALL_SCHOOLS = (
@@ -58,7 +56,6 @@ def add_names_to_schools(df):
             df.at[i, "Name"] = " ".join(school_name.split(" ")[:-1])
         else:
             df.at[i, "Name"] = school_name
-
 
 
 def add_team_colors_to_dataframe(df):

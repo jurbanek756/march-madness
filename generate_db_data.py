@@ -21,8 +21,6 @@ from data.schools import (
     add_location_and_is_private_to_dataframe,
     add_team_colors_to_dataframe,
 )
-from tournament_rankings import r2022, r2023
-
 
 # Django setup to use models
 import sys
@@ -141,7 +139,7 @@ def add_ap_ranking():
 def add_tournament_rankings_helper(data, conference_name, year):
     schools = []
     play_in_rank = data.pop("play_in_rank")
-    for rank, school_name in r2022.west.items():
+    for rank, school_name in data.items():
         play_in = False
         if rank == play_in_rank or rank == "play_in":
             play_in = True
@@ -160,22 +158,22 @@ def add_tournament_rankings_helper(data, conference_name, year):
 def add_tournament_rankings(year):
     schools = []
     if year == 2022:
-        import r2022 as ranking_year
+        import tournament_rankings.r2022 as ranking_year
     elif year == 2023:
-        import r2023 as ranking_year
+        import tournament_rankings.r2023 as ranking_year
     else:
         raise ValueError("Unhandled year provided")
     schools.extend(
-        add_tournament_rankings_helper(ranking_year.west, "West", ranking_year)
+        add_tournament_rankings_helper(ranking_year.west, "West", year)
     )
     schools.extend(
-        add_tournament_rankings_helper(ranking_year.east, "East", ranking_year)
+        add_tournament_rankings_helper(ranking_year.east, "East", year)
     )
     schools.extend(
-        add_tournament_rankings_helper(ranking_year.south, "South", ranking_year)
+        add_tournament_rankings_helper(ranking_year.south, "South", year)
     )
     schools.extend(
-        add_tournament_rankings_helper(ranking_year.midwest, "Midwest", ranking_year)
+        add_tournament_rankings_helper(ranking_year.midwest, "Midwest", year)
     )
     TournamentRanking.objects.bulk_create(schools)
 
@@ -194,7 +192,7 @@ if __name__ == "__main__":
     if args.schools:
         logging.info("Adding schools data")
         add_schools()
-    add_games(args.year)
+    # add_games(args.year)
     if args.year == datetime.datetime.now().year:
         add_ap_ranking()
     else:
