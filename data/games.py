@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 season_year = 2023
 
 
-def get_regular_season_games():
+def get_regular_season_games(year):
     teams = get_teams_from_api()
     games = dict()
     for team in tqdm(teams):
