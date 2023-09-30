@@ -99,6 +99,7 @@ def add_schools():
 
 
 def add_games(year):
+    previous_year = year - 1
     games_dict = get_regular_season_games(year)
     games_to_insert = []
     for school, games in games_dict.items():
@@ -109,7 +110,7 @@ def add_games(year):
                 continue
             game_model = Game(
                 date=date_from_str(game["game_date"]),
-                season="2022-2023",
+                season=f"{previous_year}-{year}",
                 school_name=school,
                 opponent=game["opponent"],
                 school_score=home_score,

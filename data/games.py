@@ -1,6 +1,8 @@
 import logging
 
 from bs4 import BeautifulSoup
+import dateutil.parser
+from dateutil.relativedelta import relativedelta
 from requests_ratelimiter import LimiterSession
 from tqdm import tqdm
 
@@ -33,14 +35,21 @@ def get_regular_season_games(season_year=2023):
             session.get(link_with_year).text, features="html.parser"
         )
         schedule_table = schedule_soup.find("tbody", {"class", "Table__TBODY"})
-        rows = [r for r in schedule_table.find_all("tr", {"class": "Table__TR"})]
+        try:
+            rows = [r for r in schedule_table.find_all("tr", {"class": "Table__TR"})]
+        except AttributeError:
+            logger.warning("No games found for %s", team_name)
+            continue
         regular_season_index = [
             idx for idx, s in enumerate(rows) if s.text == "Regular Season"
         ][0]
         rows = rows[regular_season_index + 2 :]
         for row in rows:
             row = [r for r in row]
-            game_date = row[0].text.strip()
+            day_and_month = row[0].text.strip()
+            game_date = dateutil.parser.parse(f"{day_and_month}, {season_year}").date()
+            if game_date.month > 4:
+                game_date -= relativedelta(years=1)
             opponent = (
                 row[1]
                 .text.lstrip("0123456789")
