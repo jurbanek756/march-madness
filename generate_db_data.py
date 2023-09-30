@@ -140,7 +140,7 @@ def add_tournament_rankings_helper(data, conference_name, year):
         school = TournamentRanking(
             school_name=school_name,
             ranking=rank,
-            conference=conference_name,
+            region=conference_name,
             play_in=play_in,
             year=year,
         )

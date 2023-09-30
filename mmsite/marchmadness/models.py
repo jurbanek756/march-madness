@@ -4,7 +4,7 @@ MAX_SCHOOL_LEN = len("North Carolina Agricultural and Technical State University
 
 
 class School(models.Model):
-    name = models.CharField(max_length=MAX_SCHOOL_LEN, primary_key=True)
+    name = models.CharField(max_length=MAX_SCHOOL_LEN, primary_key=True, unique=True)
     formal_name = models.CharField(max_length=int(MAX_SCHOOL_LEN * 1.2))
     nickname = models.CharField(max_length=30)
     home_arena = models.CharField(max_length=60, null=True)
@@ -31,6 +31,18 @@ class Game(models.Model):
     home_game = models.BooleanField(default=True)
     win = models.BooleanField(default=False)
 
+    class Meta:
+        # See /team/schedule/_/id/140/season/2021 for instance of two teams playing
+        #   each other on the same day. Theoretically, there could be an instance where
+        #   this unique_together constraint is violated, but it is very unlikely.
+        unique_together = (
+            "date",
+            "school_name",
+            "opponent",
+            "school_score",
+            "opponent_score",
+        )
+
     def __str__(self):
         return (
             f"{self.school_name} vs. {self.opponent} "
@@ -45,6 +57,9 @@ class Rivalry(models.Model):
     team1 = models.CharField(max_length=MAX_SCHOOL_LEN)
     team2 = models.CharField(max_length=MAX_SCHOOL_LEN)
 
+    class Meta:
+        unique_together = ("team1", "team2")
+
     def __str__(self):
         return f"{self.team1} vs. {self.team2}"
 
@@ -54,16 +69,30 @@ class APRanking(models.Model):
     ranking = models.IntegerField()
     year = models.IntegerField()
 
+    class Meta:
+        unique_together = (("school_name", "year"), ("ranking", "year"))
+
     def __str__(self):
-        return f"{self.team}: {self.ranking}"
+        return f"{self.school_name}: {self.ranking}"
 
 
 class TournamentRanking(models.Model):
     school_name = models.CharField(max_length=MAX_SCHOOL_LEN)
     ranking = models.IntegerField()
-    conference = models.CharField(max_length=30)
+    region = models.CharField(max_length=30)
     play_in = models.BooleanField(default=False)
     year = models.IntegerField()
 
+    class Meta:
+        unique_together = ("school_name", "year")
+
     def __str__(self):
-        return f"{self.team}: {self.ranking} ({self.conference})"
+        return f"{self.school_name}: {self.ranking} ({self.region})"
+
+
+class Tournament(models.Model):
+    year = models.IntegerField(primary_key=True, unique=True)
+    left_top_region = models.CharField(max_length=30)
+    left_bottom_region = models.CharField(max_length=30)
+    right_top_region = models.CharField(max_length=30)
+    right_bottom_region = models.CharField(max_length=30)
