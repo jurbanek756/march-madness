@@ -29,11 +29,14 @@ import django
 
 django.setup()
 
-from marchmadness.models import School, Game, APRanking, TournamentRanking
+from marchmadness.models import School, Game, APRanking, TournamentRanking, Tournament
 
 # Constants
 AP_RANKINGS = "https://www.ncaa.com/rankings/basketball-men/d1/associated-press"
-
+WEST = "West"
+EAST = "East"
+SOUTH = "South"
+MIDWEST = "Midwest"
 logging.basicConfig(
     encoding="UTF-8",
     level="INFO",
@@ -157,13 +160,24 @@ def add_tournament_rankings(year):
     else:
         logging.error("Unhandled year provided")
         return
-    schools.extend(add_tournament_rankings_helper(ranking_year.west, "West", year))
-    schools.extend(add_tournament_rankings_helper(ranking_year.east, "East", year))
-    schools.extend(add_tournament_rankings_helper(ranking_year.south, "South", year))
-    schools.extend(
-        add_tournament_rankings_helper(ranking_year.midwest, "Midwest", year)
-    )
+    schools.extend(add_tournament_rankings_helper(ranking_year.west, WEST, year))
+    schools.extend(add_tournament_rankings_helper(ranking_year.east, EAST, year))
+    schools.extend(add_tournament_rankings_helper(ranking_year.south, MIDWEST, year))
+    schools.extend(add_tournament_rankings_helper(ranking_year.midwest, SOUTH, year))
     TournamentRanking.objects.bulk_create(schools)
+
+
+def add_tournament_info():
+    tournaments = [
+        Tournament(2023, SOUTH, EAST, MIDWEST, WEST),
+        Tournament(2022, WEST, EAST, SOUTH, MIDWEST),
+        Tournament(2021, WEST, EAST, SOUTH, MIDWEST),
+        Tournament(2019, EAST, WEST, SOUTH, MIDWEST),
+        Tournament(2018, SOUTH, WEST, EAST, MIDWEST),
+        Tournament(2017, EAST, WEST, MIDWEST, SOUTH),
+        Tournament(2016, SOUTH, WEST, EAST, MIDWEST),
+    ]
+    Tournament.objects.bulk_create(tournaments)
 
 
 if __name__ == "__main__":
@@ -175,14 +189,45 @@ if __name__ == "__main__":
         default=False,
         help="If set, will add schools data to database",
     )
+    parser.add_argument(
+        "-g",
+        "--games",
+        action="store_true",
+        default=False,
+        help="Add games data for the provided year",
+    )
+    parser.add_argument(
+        "-a",
+        "--ap-rankings",
+        action="store_true",
+        default=False,
+        help="Add AP rankings; can only be done for the current year",
+    )
+    parser.add_argument(
+        "-t",
+        "--tournament-rankings",
+        action="store_true",
+        help="Add tournament rankings",
+    )
+    parser.add_argument(
+        "-i",
+        "--tournament-info",
+        action="store_true",
+        help="Add tournament info",
+    )
     parser.add_argument("-y", "--year", type=int, required=True)
     args = parser.parse_args()
     if args.schools:
         logging.info("Adding schools data")
         add_schools()
-    add_games(args.year)
-    if args.year == datetime.datetime.now().year:
-        add_ap_ranking()
-    else:
-        logging.warning("Unable to add AP rankings for previous years")
-    add_tournament_rankings(args.year)
+    if args.games:
+        add_games(args.year)
+    if args.ap_rankings:
+        if args.year == datetime.datetime.now().year:
+            add_ap_ranking()
+        else:
+            logging.warning("Unable to add AP rankings for previous years")
+    if args.tournament_rankings:
+        add_tournament_rankings(args.year)
+    if args.tournament_info:
+        add_tournament_info()

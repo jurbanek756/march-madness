@@ -2,24 +2,11 @@
 
 import argparse
 import logging
-import pickle
 import os
 
-from helpers.group_dict import generate_full_region_dict
 from helpers.random_number_seeding import seed_via_random_api
-from models.tournament import Tournament
+from models.tournament import MarchMadnessTournament
 
-# Django setup to use models
-import sys
-import os
-
-sys.path.append("mmsite/")
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mmsite.settings")
-import django
-
-django.setup()
-
-from marchmadness.models import School, Game, APRanking, TournamentRanking
 
 logging.basicConfig(
     encoding="UTF-8",
@@ -109,7 +96,7 @@ if random_api_key := os.getenv("RANDOM_API_KEY"):
     print(f"Seeded with {seed}")
 
 
-tournament = Tournament(
+tournament = MarchMadnessTournament(
     year=args.year,
     prediction_method=prediction_method,
     prediction_method_kwargs={
