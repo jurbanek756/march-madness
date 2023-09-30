@@ -7,18 +7,19 @@ from tqdm import tqdm
 from data.espn import get_teams_from_api, get_name
 from models.game import Game
 
-headers = dict()
-headers["user-agent"] = (
-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
-    + " (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36"
+session = LimiterSession(per_second=1)
+session.headers.update(
+    {
+        "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) "
+        "Gecko/20100101 Firefox/115.0"
+    }
 )
-session = LimiterSession(per_second=3, headers=headers)
+
 logger = logging.getLogger(__name__)
-season_year = 2023
 
 
-def get_regular_season_games(year):
-    teams = get_teams_from_api()
+def get_regular_season_games(season_year=2023):
+    teams = get_teams_from_api(session)
     games = dict()
     for team in tqdm(teams):
         team_name = get_name(team["shortDisplayName"])
@@ -58,6 +59,8 @@ def get_regular_season_games(year):
             elif score == "Canceled":
                 win = None
             elif score == "Postponed":
+                win = None
+            elif "T" in score:
                 win = None
             else:
                 raise ValueError("Invalid win-loss character detected: %s", score[0])

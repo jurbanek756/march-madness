@@ -162,7 +162,8 @@ def add_tournament_rankings(year):
     elif year == 2023:
         import tournament_rankings.r2023 as ranking_year
     else:
-        raise ValueError("Unhandled year provided")
+        logging.error("Unhandled year provided")
+        return
     schools.extend(add_tournament_rankings_helper(ranking_year.west, "West", year))
     schools.extend(add_tournament_rankings_helper(ranking_year.east, "East", year))
     schools.extend(add_tournament_rankings_helper(ranking_year.south, "South", year))
