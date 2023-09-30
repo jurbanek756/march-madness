@@ -69,6 +69,7 @@ def get_regular_season_games(season_year=2023):
                     game_date=game_date,
                     opponent=get_name(opponent),
                     score=score,
+                    home_game="vs" in row[1].text,
                     win=win,
                 ).to_dict()
             )

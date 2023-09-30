@@ -114,6 +114,7 @@ def add_games(year):
                 opponent=game["opponent"],
                 school_score=home_score,
                 opponent_score=away_score,
+                home_game=game["home_game"],
                 win=game["win"],
             )
             games_to_insert.append(game_model)

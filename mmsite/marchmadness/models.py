@@ -28,6 +28,7 @@ class Game(models.Model):
     opponent = models.CharField(max_length=MAX_SCHOOL_LEN)
     school_score = models.IntegerField()
     opponent_score = models.IntegerField()
+    home_game = models.BooleanField(default=True)
     win = models.BooleanField(default=False)
 
     def __str__(self):
