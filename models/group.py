@@ -65,7 +65,7 @@ class Group:
             16: self.sixteen,
         }
         play_in_teams = self.teams.filter(play_in=True)
-        play_in_rank = play_in_teams.first().rank
+        play_in_rank = play_in_teams.first().ranking
         rankings[play_in_rank] = play_in_teams[0], play_in_teams[1]
         return rankings
 
