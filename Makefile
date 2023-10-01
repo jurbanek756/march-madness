@@ -29,3 +29,9 @@ createdb:   ## Create the database
 
 exportdb:   ## Export the database
 	pg_dump -h localhost -p 5432 -U postgres -d march_madness -f db/march_madness.sql
+
+importdb:   ## Import the database
+	psql -h localhost -p 5432 -U postgres -d march_madness -a -f db/march_madness.sql
+
+
+
