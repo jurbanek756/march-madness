@@ -20,6 +20,16 @@ class School(models.Model):
     def __str__(self):
         return self.name
 
+    @property
+    def list_repr(self):
+        r = list()
+        r.append(f"Nickname: {self.nickname}")
+        r.append(f"Location: {self.location}")
+        r.append(f"Colors: {self.primary_color}, {self.secondary_color}")
+        is_private_str = "yes" if self.is_private else "no"
+        r.append(f"Private: {is_private_str}")
+        return r
+
 
 class Game(models.Model):
     date = models.DateField()
@@ -88,6 +98,60 @@ class TournamentRanking(models.Model):
 
     def __str__(self):
         return f"{self.school_name}: {self.ranking} ({self.region})"
+
+    @property
+    def games(self):
+        return Game.objects.filter(school_name=self.school_name)
+
+    @property
+    def school(self):
+        return School.objects.filter(name=self.school_name).first()
+
+    @property
+    def school_info(self):
+        return self.school.list_repr
+
+    @property
+    def nickname(self):
+        return self.school.nickname
+
+    @property
+    def record(self):
+        total_games = self.games.count()
+        wins = self.games.filter(win=True).count()
+        losses = total_games - wins
+        return f"{wins}-{losses}"
+
+    @property
+    def ap_rank(self):
+        try:
+            return APRanking.objects.get(school_name=self.school_name).ranking
+        except APRanking.DoesNotExist:
+            return None
+
+    def recent_record(self, n):
+        games = self.games[-n:]
+        wins = games.filter(win=True).count()
+        losses = n - wins
+        return f"{wins}-{losses}"
+
+    @property
+    def tournament_repr(self):
+        r = list()
+        r.append(f"{self.ranking}. {self.school_name}")
+        if self.ap_rank:
+            r.append(f"AP Rank: {self.ap_rank}")
+        r.append(f"Conference: {self.school.conference}")
+        r.append(f"Record: {self.record}  ({self.recent_record(10)} in last 10 games)")
+        return r
+
+    @property
+    def game_results(self):
+        results = []
+        for game in self.games:
+            result = "Win" if game["win"] else "Loss"
+            results.append(f"{result} {game['score']} vs. {game['opponent']}")
+        return results
 
 
 class Tournament(models.Model):

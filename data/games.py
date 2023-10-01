@@ -8,7 +8,6 @@ from requests_ratelimiter import LimiterSession
 from tqdm import tqdm
 
 from data.espn import get_teams_from_api, get_name
-from models.game import Game
 
 session = LimiterSession(per_second=1)
 retry = Retry(total=3, backoff_factor=1, status_forcelist=[500, 502, 503, 504])
@@ -77,13 +76,13 @@ def get_regular_season_games(season_year=2023):
             else:
                 raise ValueError("Invalid win-loss character detected: %s", score[0])
             team_games.append(
-                Game(
-                    game_date=game_date,
-                    opponent=get_name(opponent),
-                    score=score,
-                    home_game="vs" in row[1].text,
-                    win=win,
-                ).to_dict()
+                {
+                    "game_date": game_date,
+                    "opponent": get_name(opponent),
+                    "score": score,
+                    "home_game": "vs" in row[1].text,
+                    "win": win,
+                }
             )
         games[team_name] = team_games
     return games

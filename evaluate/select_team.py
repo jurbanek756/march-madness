@@ -20,7 +20,7 @@ def user_evaluation(a, b, group_name=None, round_name=None, **kwargs):
     if rivalry:
         print("RIVALRY GAME")
     games_printed = False
-    other_info_printed = False
+    school_info_printed = False
     try:
         prompt = "Select 1, 2, m, or r (more info, random): "
         while True:
@@ -43,14 +43,14 @@ def user_evaluation(a, b, group_name=None, round_name=None, **kwargs):
                         f"{b.name} Games",
                     )
                     games_printed = True
-                elif not other_info_printed:
+                elif not school_info_printed:
                     print_in_two_columns(
-                        a.other_info,
-                        b.other_info,
+                        a.school_info,
+                        b.school_info,
                         f"Additional {a.name} Info",
                         f"Additional {b.name} Info",
                     )
-                    other_info_printed = True
+                    school_info_printed = True
                 else:
                     print_in_two_columns(
                         a.tournament_repr, b.tournament_repr, "Team 1", "Team 2"
@@ -64,8 +64,8 @@ def user_evaluation(a, b, group_name=None, round_name=None, **kwargs):
                         f"{b.name} Games",
                     )
                     print_in_two_columns(
-                        a.other_info,
-                        b.other_info,
+                        a.school_info,
+                        b.school_info,
                         f"Additional {a.name} Info",
                         f"Additional {b.name} Info",
                     )
@@ -79,7 +79,7 @@ def user_evaluation(a, b, group_name=None, round_name=None, **kwargs):
             else:
                 print()
                 print("Invalid choice selected; try again or select 'q' to exit")
-            if not other_info_printed:
+            if not school_info_printed:
                 prompt = "Select 1, 2, m, or r (see even more info, random): "
             else:
                 prompt = "All info displayed. Select 1, 2, or r (random): "
