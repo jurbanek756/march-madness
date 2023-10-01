@@ -36,17 +36,6 @@ Resources
 
 import math
 
-import os
-import sys
-
-sys.path.append("mmsite/")
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mmsite.settings")
-import django  # noqa: E402
-
-django.setup()
-
-from marchmadness.models import APRanking  # noqa: E402
-
 
 def sigmodal(team1, team2, ap_rank_weight=0.75, k=None):
     """
@@ -70,18 +59,12 @@ def sigmodal(team1, team2, ap_rank_weight=0.75, k=None):
         else:
             return sigmodal_tournament_only(team1.ranking, team2.ranking)
     else:
-        ap_rank_1 = APRanking.objects.filter(school_name=team1.school_name)
-        if ap_rank_1:
-            ap_rank_1 = ap_rank_1.first().ranking
-        ap_rank_2 = APRanking.objects.filter(school_name=team1.school_name)
-        if ap_rank_2:
-            ap_rank_2 = ap_rank_2.first().ranking
         if k:
             return sigmodal_k_with_ap(
                 team1.ranking,
                 team2.ranking,
-                ap_rank_1,
-                ap_rank_2,
+                team1.ap_ranking,
+                team2.ap_ranking,
                 k=k,
                 ap_weight=ap_rank_weight,
             )
@@ -89,8 +72,8 @@ def sigmodal(team1, team2, ap_rank_weight=0.75, k=None):
             return sigmodal_with_ap(
                 team1.ranking,
                 team2.ranking,
-                ap_rank_1,
-                ap_rank_2,
+                team1.ap_ranking,
+                team2.ap_ranking,
                 ap_weight=ap_rank_weight,
             )
 

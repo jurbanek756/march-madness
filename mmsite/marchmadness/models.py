@@ -126,7 +126,7 @@ class TournamentRanking(models.Model):
         return f"{wins}-{losses}"
 
     @property
-    def ap_rank(self):
+    def ap_ranking(self):
         try:
             return APRanking.objects.get(
                 school_name=self.school_name, year=self.year

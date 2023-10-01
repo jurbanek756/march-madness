@@ -19,21 +19,16 @@ Resources
 * https://chat.openai.com/c/d00ba596-f435-46fe-8e96-721df48078fa
 """
 
-import os
-import sys
-
-sys.path.append("mmsite/")
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mmsite.settings")
-import django
-
-django.setup()
-
-from marchmadness.models import APRanking
-
 
 def lptr(team1, team2, ap_rank_weight=0.75):
     """
     Main function for linearly proportional tournament ranking.
+
+    Parameters
+    ----------
+    team1: Team
+    team2: Team
+    ap_rank_weight: float
 
     Returns
     -------
@@ -43,14 +38,12 @@ def lptr(team1, team2, ap_rank_weight=0.75):
     if ap_rank_weight == 0:
         return lptr_tournament_only(team1.ranking, team2.ranking)
     else:
-        ap_rank_1 = APRanking.objects.filter(school_name=team1.school_name)
-        if ap_rank_1:
-            ap_rank_1 = ap_rank_1.first().ranking
-        ap_rank_2 = APRanking.objects.filter(school_name=team1.school_name)
-        if ap_rank_2:
-            ap_rank_2 = ap_rank_2.first().ranking
         return lptr_with_ap(
-            team1.ranking, team2.ranking, ap_rank_1, ap_rank_2, ap_rank_weight
+            team1.ranking,
+            team2.ranking,
+            team1.ap_ranking,
+            team2.ap_ranking,
+            ap_rank_weight,
         )
 
 
@@ -78,7 +71,13 @@ def lptr_tournament_only(rank1: int, rank2: int):
         return 1 - y, y
 
 
-def lptr_with_ap(tourn_rank_1, tourn_rank_2, ap_rank_1, ap_rank_2, ap_weight=0.75):
+def lptr_with_ap(
+    tourn_rank_1: int,
+    tourn_rank_2: int,
+    ap_rank_1: int,
+    ap_rank_2: int,
+    ap_weight: float = 0.75,
+):
     """
     LPTR that considers both tournament and AP rankings.
 
