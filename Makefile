@@ -1,4 +1,4 @@
-.PHONY: help clean tar static sonarqube dbstart dbstop dblogin createdb exportdb
+.PHONY: help clean tar static sonarqube dbstart dbstop dblogin createdb exportdb importdb
 
 help:	    ## Show this help message
 	@sed -ne '/@sed/!s/## //p' $(MAKEFILE_LIST)
