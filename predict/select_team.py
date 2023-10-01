@@ -7,6 +7,17 @@ import random
 from weight.lptr import lptr
 from weight.sigmodal import sigmodal
 
+import os
+import sys
+
+sys.path.append("mmsite/")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mmsite.settings")
+import django  # noqa: E402
+
+django.setup()
+
+from marchmadness.models import APRanking  # noqa: E402
+
 
 def random_selection(team_a, team_b, **kwargs):
     """
@@ -65,13 +76,19 @@ def ranked_selection(team_a, team_b, **kwargs):
     -------
     Teamm_
     """
-    if team_a.tournament_rank < team_b.tournament_rank:
+    if team_a.ranking < team_b.ranking:
         return team_a
-    elif team_b.tournament_rank < team_a.tournament_rank:
+    elif team_b.ranking < team_a.ranking:
         return team_b
     else:
-        if team_a.ap_rank and team_b.ap_rank:
-            if team_a.ap_rank < team_b.ap_rank:
+        ap_rank_a = APRanking.objects.filter(school_name=team_a.school_name)
+        if ap_rank_a:
+            ap_rank_a = ap_rank_a.first().ranking
+        ap_rank_b = APRanking.objects.filter(school_name=team_b.school_name)
+        if ap_rank_b:
+            ap_rank_b = ap_rank_b.first().ranking
+        if ap_rank_a and ap_rank_b:
+            if ap_rank_a < ap_rank_b:
                 return team_a
             else:
                 return team_b
@@ -99,15 +116,21 @@ def ap_selection(team_a, team_b, **kwargs):
     -------
     Team
     """
-    if team_a.ap_rank and team_b.ap_rank:
-        if team_a.ap_rank < team_b.ap_rank:
+    ap_rank_a = APRanking.objects.filter(school_name=team_a.school_name)
+    if ap_rank_a:
+        ap_rank_a = ap_rank_a.first().ranking
+    ap_rank_b = APRanking.objects.filter(school_name=team_b.school_name)
+    if ap_rank_b:
+        ap_rank_b = ap_rank_b.first().ranking
+    if ap_rank_a and ap_rank_b:
+        if ap_rank_a < ap_rank_b:
             return team_a
         else:
             return team_b
     else:
-        if team_a.tournament_rank < team_b.tournament_rank:
+        if team_a.ranking < team_b.ranking:
             return team_a
-        elif team_b.tournament_rank < team_a.tournament_rank:
+        elif team_b.ranking < team_a.ranking:
             return team_b
         else:
             return random_selection(team_a, team_b)
