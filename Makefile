@@ -22,7 +22,7 @@ dbstop:     ## Stop the database
 	docker-compose stop
 
 dblogin:    ## Login to the database
-	docker exec -it march-madness-db psql -U postgres
+	docker exec -it march-madness-db psql -U postgres || psql -h localhost -p 5432 -U postgres
 
 createdb:   ## Create the database
 	psql -h localhost -p 5432 -U postgres -c "CREATE DATABASE march_madness;"
