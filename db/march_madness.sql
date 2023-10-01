@@ -402,13 +402,28 @@ CREATE TABLE public.marchmadness_school (
 ALTER TABLE public.marchmadness_school OWNER TO postgres;
 
 --
+-- Name: marchmadness_tournament; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.marchmadness_tournament (
+    year integer NOT NULL,
+    left_top_region character varying(30) NOT NULL,
+    left_bottom_region character varying(30) NOT NULL,
+    right_top_region character varying(30) NOT NULL,
+    right_bottom_region character varying(30) NOT NULL
+);
+
+
+ALTER TABLE public.marchmadness_tournament OWNER TO postgres;
+
+--
 -- Name: marchmadness_tournamentranking; Type: TABLE; Schema: public; Owner: postgres
 --
 
 CREATE TABLE public.marchmadness_tournamentranking (
     school_name character varying(58) NOT NULL,
     ranking integer NOT NULL,
-    conference character varying(30) NOT NULL,
+    region character varying(30) NOT NULL,
     year integer NOT NULL,
     id bigint NOT NULL,
     play_in boolean NOT NULL
@@ -496,6 +511,10 @@ COPY public.auth_permission (id, name, content_type_id, codename) FROM stdin;
 42	Can change tournament ranking	11	change_tournamentranking
 43	Can delete tournament ranking	11	delete_tournamentranking
 44	Can view tournament ranking	11	view_tournamentranking
+45	Can add tournament	12	add_tournament
+46	Can change tournament	12	change_tournament
+47	Can delete tournament	12	delete_tournament
+48	Can view tournament	12	view_tournament
 \.
 
 
@@ -548,6 +567,7 @@ COPY public.django_content_type (id, app_label, model) FROM stdin;
 9	marchmadness	school
 10	marchmadness	apranking
 11	marchmadness	tournamentranking
+12	marchmadness	tournament
 \.
 
 
@@ -586,6 +606,9 @@ COPY public.django_migrations (id, app, name, applied) FROM stdin;
 28	marchmadness	0010_rename_team_apranking_school_name_and_more	2023-09-24 22:14:48.015153+00
 29	marchmadness	0011_tournamentranking_play_in	2023-09-24 22:22:02.974407+00
 30	marchmadness	0012_game_home_game	2023-09-30 02:15:28.309711+00
+31	marchmadness	0013_rename_conference_tournamentranking_region	2023-09-30 12:26:39.960034+00
+32	marchmadness	0014_tournament	2023-09-30 12:43:05.015156+00
+33	marchmadness	0015_remove_tournament_id_alter_school_name_and_more	2023-09-30 12:57:26.795009+00
 \.
 
 
@@ -603,130 +626,31 @@ jy8izuewgx4axmx88myxfmwxns86h6nv	.eJxVjMsOwiAURP-FtSHQSyu4dO83kPugUjWQlHZl_HfbpA
 --
 
 COPY public.marchmadness_apranking (school_name, ranking, year, id) FROM stdin;
-Duke	21	2023	1
-Virginia	13	2023	2
-Creighton	24	2023	3
-Marquette	6	2023	4
-UConn	11	2023	5
-Xavier	15	2023	6
-Indiana	19	2023	7
-Purdue	5	2023	8
-Baylor	10	2023	9
-Houston	1	2023	10
-Kansas	3	2023	11
-Kansas State	12	2023	12
-Texas	7	2023	13
-TCU	22	2023	14
-SDSU	20	2023	15
-Arizona	8	2023	16
-UCLA	2	2023	17
-Alabama	4	2023	18
-Kentucky	23	2023	19
-Missouri	25	2023	20
-Tennessee	17	2023	21
-Texas A&M	18	2023	22
-Gonzaga	9	2023	23
-St. Mary's	16	2023	24
-Alabama	1	2023	25
-Houston	2	2023	26
-Purdue	3	2023	27
-Kansas	4	2023	28
-Texas	5	2023	29
-Marquette	6	2023	30
-UCLA	7	2023	31
-Arizona	8	2023	32
-Gonzaga	9	2023	33
-Connecticut	10	2023	34
-Baylor	11	2023	35
-Duke	12	2023	36
-Xavier	13	2023	37
-Virginia	14	2023	38
-Kansas State	15	2023	39
-Miami	16	2023	40
-Texas A&M	17	2023	41
-SDSU	18	2023	42
-Saint Mary's	19	2023	43
-Tennessee	20	2023	44
-Indiana	21	2023	45
-TCU	22	2023	46
-Missouri	23	2023	47
-Memphis	24	2023	48
-Florida Atlantic	25	2023	49
-Alabama	1	2023	50
-Houston	2	2023	51
-Purdue	3	2023	52
-Kansas	4	2023	53
-Texas	5	2023	54
-Marquette	6	2023	55
-UCLA	7	2023	56
-Arizona	8	2023	57
-Gonzaga	9	2023	58
-Connecticut	10	2023	59
-Baylor	11	2023	60
-Duke	12	2023	61
-Xavier	13	2023	62
-Virginia	14	2023	63
-Kansas State	15	2023	64
-Miami	16	2023	65
-Texas A&M	17	2023	66
-SDSU	18	2023	67
-Saint Mary's	19	2023	68
-Tennessee	20	2023	69
-Indiana	21	2023	70
-TCU	22	2023	71
-Missouri	23	2023	72
-Memphis	24	2023	73
-Florida Atlantic	25	2023	74
-Alabama	1	2023	75
-Houston	2	2023	76
-Purdue	3	2023	77
-Kansas	4	2023	78
-Texas	5	2023	79
-Marquette	6	2023	80
-UCLA	7	2023	81
-Arizona	8	2023	82
-Gonzaga	9	2023	83
-Connecticut	10	2023	84
-Baylor	11	2023	85
-Duke	12	2023	86
-Xavier	13	2023	87
-Virginia	14	2023	88
-Kansas State	15	2023	89
-Miami	16	2023	90
-Texas A&M	17	2023	91
-SDSU	18	2023	92
-Saint Mary's	19	2023	93
-Tennessee	20	2023	94
-Indiana	21	2023	95
-TCU	22	2023	96
-Missouri	23	2023	97
-Memphis	24	2023	98
-Florida Atlantic	25	2023	99
-Alabama	1	2023	100
-Houston	2	2023	101
-Purdue	3	2023	102
-Kansas	4	2023	103
-Texas	5	2023	104
-Marquette	6	2023	105
-UCLA	7	2023	106
-Arizona	8	2023	107
-Gonzaga	9	2023	108
-Connecticut	10	2023	109
-Baylor	11	2023	110
-Duke	12	2023	111
-Xavier	13	2023	112
-Virginia	14	2023	113
-Kansas State	15	2023	114
-Miami	16	2023	115
-Texas A&M	17	2023	116
-SDSU	18	2023	117
-Saint Mary's	19	2023	118
-Tennessee	20	2023	119
-Indiana	21	2023	120
-TCU	22	2023	121
-Missouri	23	2023	122
-Memphis	24	2023	123
-Florida Atlantic	25	2023	124
+Alabama	1	2023	125
+Houston	2	2023	126
+Purdue	3	2023	127
+Kansas	4	2023	128
+Texas	5	2023	129
+Marquette	6	2023	130
+UCLA	7	2023	131
+Arizona	8	2023	132
+Gonzaga	9	2023	133
+Connecticut	10	2023	134
+Baylor	11	2023	135
+Duke	12	2023	136
+Xavier	13	2023	137
+Virginia	14	2023	138
+Kansas State	15	2023	139
+Miami	16	2023	140
+Texas A&M	17	2023	141
+SDSU	18	2023	142
+Saint Mary's	19	2023	143
+Tennessee	20	2023	144
+Indiana	21	2023	145
+TCU	22	2023	146
+Missouri	23	2023	147
+Memphis	24	2023	148
+Florida Atlantic	25	2023	149
 \.
 
 
@@ -40478,554 +40402,161 @@ University of Texas Rio Grande Valley	University of Texas Rio Grande Valley	Vaqu
 
 
 --
+-- Data for Name: marchmadness_tournament; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.marchmadness_tournament (year, left_top_region, left_bottom_region, right_top_region, right_bottom_region) FROM stdin;
+2023	South	East	Midwest	West
+2022	West	East	South	Midwest
+2021	West	East	South	Midwest
+2019	East	West	South	Midwest
+2018	South	West	East	Midwest
+2017	East	West	Midwest	South
+2016	South	West	East	Midwest
+\.
+
+
+--
 -- Data for Name: marchmadness_tournamentranking; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.marchmadness_tournamentranking (school_name, ranking, conference, year, id, play_in) FROM stdin;
-Kansas	1	West	2023	205	f
-UCLA	2	West	2023	206	f
-Gonzaga	3	West	2023	207	f
-UConn	4	West	2023	208	f
-St. Mary's	5	West	2023	209	f
-TCU	6	West	2023	210	f
-Northwestern	7	West	2023	211	f
-Arkansas	8	West	2023	212	f
-Illinois	9	West	2023	213	f
-Boise State	10	West	2023	214	f
-Arizona State	11	West	2023	215	t
-VCU	12	West	2023	216	f
-Iona	13	West	2023	217	f
-Grand Canyon	14	West	2023	218	f
-UNC Asheville	15	West	2023	219	f
-Howard	16	West	2023	220	f
-Nevada	11	West	2023	221	t
-Purdue	1	East	2023	222	f
-Marquette	2	East	2023	223	f
-Kansas State	3	East	2023	224	f
-Tennessee	4	East	2023	225	f
-Duke	5	East	2023	226	f
-Kentucky	6	East	2023	227	f
-Michigan State	7	East	2023	228	f
-Memphis	8	East	2023	229	f
-FAU	9	East	2023	230	f
-USC	10	East	2023	231	f
-Providence	11	East	2023	232	f
-Oral Roberts	12	East	2023	233	f
-Louisiana-Lafayette	13	East	2023	234	f
-Montana State	14	East	2023	235	f
-Vermont	15	East	2023	236	f
-Texas Southern	16	East	2023	237	t
-Fairleigh Dickinson	16	East	2023	238	t
-Alabama	1	South	2023	239	f
-Arizona	2	South	2023	240	f
-Baylor	3	South	2023	241	f
-Virginia	4	South	2023	242	f
-SDSU	5	South	2023	243	f
-Creighton	6	South	2023	244	f
-Missouri	7	South	2023	245	f
-Maryland	8	South	2023	246	f
-West Virginia	9	South	2023	247	f
-Utah State	10	South	2023	248	f
-NC State	11	South	2023	249	f
-Charleston	12	South	2023	250	f
-Furman	13	South	2023	251	f
-UCSB	14	South	2023	252	f
-Princeton	15	South	2023	253	f
-AMCC	16	South	2023	254	t
-Southeast Missouri State	16	South	2023	255	t
-Houston	1	Midwest	2023	256	f
-Texas	2	Midwest	2023	257	f
-Xavier	3	Midwest	2023	258	f
-Indiana	4	Midwest	2023	259	f
-Miami	5	Midwest	2023	260	f
-Iowa State	6	Midwest	2023	261	f
-Texas A&M	7	Midwest	2023	262	f
-Iowa	8	Midwest	2023	263	f
-Auburn	9	Midwest	2023	264	f
-Penn State	10	Midwest	2023	265	f
-Mississippi State	11	Midwest	2023	266	t
-Drake	12	Midwest	2023	267	f
-Kent State	13	Midwest	2023	268	f
-Kennesaw State	14	Midwest	2023	269	f
-Colgate	15	Midwest	2023	270	f
-Northern Kentucky	16	Midwest	2023	271	f
-Pitt	11	Midwest	2023	272	t
-NC State	11	South	2023	317	f
-Charleston	12	South	2023	318	f
-Furman	13	South	2023	319	f
-UCSB	14	South	2023	320	f
-Princeton	15	South	2023	321	f
-AMCC	16	South	2023	322	t
-Southeast Missouri State	16	South	2023	323	t
-Houston	1	Midwest	2023	324	f
-Texas	2	Midwest	2023	325	f
-Xavier	3	Midwest	2023	326	f
-Indiana	4	Midwest	2023	327	f
-Miami	5	Midwest	2023	328	f
-Iowa State	6	Midwest	2023	329	f
-Texas A&M	7	Midwest	2023	330	f
-Iowa	8	Midwest	2023	331	f
-Auburn	9	Midwest	2023	332	f
-Penn State	10	Midwest	2023	333	f
-Mississippi State	11	Midwest	2023	334	t
-Drake	12	Midwest	2023	335	f
-Kent State	13	Midwest	2023	336	f
-Kennesaw State	14	Midwest	2023	337	f
-Colgate	15	Midwest	2023	338	f
-Northern Kentucky	16	Midwest	2023	339	f
-Pitt	11	Midwest	2023	340	t
-Gonzaga	1	West	2022	341	f
-Duke	2	West	2022	342	f
-Texas Tech	3	West	2022	343	f
-Arkansas	4	West	2022	344	f
-UConn	5	West	2022	345	f
-Alabama	6	West	2022	346	f
-Michigan State	7	West	2022	347	f
-Boise State	8	West	2022	348	f
-Memphis	9	West	2022	349	f
-Davidson	10	West	2022	350	f
-Notre Dame	11	West	2022	351	t
-NM State	12	West	2022	352	f
-Vermont	13	West	2022	353	f
-Montana State	14	West	2022	354	f
-CSUF	15	West	2022	355	f
-Georgia State	16	West	2022	356	f
-Rutgers	11	West	2022	357	t
-Baylor	1	East	2022	358	f
-Kentucky	2	East	2022	359	f
-Purdue	3	East	2022	360	f
-Kansas	1	West	2023	273	f
-UCLA	2	West	2023	274	f
-Gonzaga	3	West	2023	275	f
-UConn	4	West	2023	276	f
-St. Mary's	5	West	2023	277	f
-TCU	6	West	2023	278	f
-Northwestern	7	West	2023	279	f
-Arkansas	8	West	2023	280	f
-Illinois	9	West	2023	281	f
-Boise State	10	West	2023	282	f
-Arizona State	11	West	2023	283	t
-VCU	12	West	2023	284	f
-Iona	13	West	2023	285	f
-Grand Canyon	14	West	2023	286	f
-UNC Asheville	15	West	2023	287	f
-Howard	16	West	2023	288	f
-Nevada	11	West	2023	289	t
-Purdue	1	East	2023	290	f
-Marquette	2	East	2023	291	f
-Kansas State	3	East	2023	292	f
-Tennessee	4	East	2023	293	f
-Duke	5	East	2023	294	f
-Kentucky	6	East	2023	295	f
-Kansas	1	West	2023	137	f
-UCLA	2	West	2023	138	f
-Gonzaga	3	West	2023	139	f
-UConn	4	West	2023	140	f
-St. Mary's	5	West	2023	141	f
-TCU	6	West	2023	142	f
-Northwestern	7	West	2023	143	f
-Arkansas	8	West	2023	144	f
-Illinois	9	West	2023	145	f
-Boise State	10	West	2023	146	f
-Arizona State	11	West	2023	147	t
-VCU	12	West	2023	148	f
-Iona	13	West	2023	149	f
-Grand Canyon	14	West	2023	150	f
-UNC Asheville	15	West	2023	151	f
-Howard	16	West	2023	152	f
-Nevada	11	West	2023	153	t
-Purdue	1	East	2023	154	f
-Marquette	2	East	2023	155	f
-Kansas State	3	East	2023	156	f
-Tennessee	4	East	2023	157	f
-Duke	5	East	2023	158	f
-Kentucky	6	East	2023	159	f
-Michigan State	7	East	2023	160	f
-Memphis	8	East	2023	161	f
-FAU	9	East	2023	162	f
-USC	10	East	2023	163	f
-Providence	11	East	2023	164	f
-Oral Roberts	12	East	2023	165	f
-Louisiana-Lafayette	13	East	2023	166	f
-Montana State	14	East	2023	167	f
-Vermont	15	East	2023	168	f
-Texas Southern	16	East	2023	169	t
-Fairleigh Dickinson	16	East	2023	170	t
-Alabama	1	South	2023	171	f
-Arizona	2	South	2023	172	f
-Baylor	3	South	2023	173	f
-Virginia	4	South	2023	174	f
-SDSU	5	South	2023	175	f
-Creighton	6	South	2023	176	f
-Missouri	7	South	2023	177	f
-Maryland	8	South	2023	178	f
-West Virginia	9	South	2023	179	f
-Utah State	10	South	2023	180	f
-NC State	11	South	2023	181	f
-Charleston	12	South	2023	182	f
-Furman	13	South	2023	183	f
-UCSB	14	South	2023	184	f
-Princeton	15	South	2023	185	f
-AMCC	16	South	2023	186	t
-Southeast Missouri State	16	South	2023	187	t
-Houston	1	Midwest	2023	188	f
-Texas	2	Midwest	2023	189	f
-Xavier	3	Midwest	2023	190	f
-Indiana	4	Midwest	2023	191	f
-Miami	5	Midwest	2023	192	f
-Iowa State	6	Midwest	2023	193	f
-Texas A&M	7	Midwest	2023	194	f
-Iowa	8	Midwest	2023	195	f
-Auburn	9	Midwest	2023	196	f
-Penn State	10	Midwest	2023	197	f
-Mississippi State	11	Midwest	2023	198	t
-Drake	12	Midwest	2023	199	f
-Kent State	13	Midwest	2023	200	f
-Kennesaw State	14	Midwest	2023	201	f
-Colgate	15	Midwest	2023	202	f
-Northern Kentucky	16	Midwest	2023	203	f
-Pitt	11	Midwest	2023	204	t
-Michigan State	7	East	2023	296	f
-Memphis	8	East	2023	297	f
-FAU	9	East	2023	298	f
-USC	10	East	2023	299	f
-Providence	11	East	2023	300	f
-Oral Roberts	12	East	2023	301	f
-Louisiana-Lafayette	13	East	2023	302	f
-Montana State	14	East	2023	303	f
-Vermont	15	East	2023	304	f
-Texas Southern	16	East	2023	305	t
-Fairleigh Dickinson	16	East	2023	306	t
-Alabama	1	South	2023	307	f
-Arizona	2	South	2023	308	f
-Baylor	3	South	2023	309	f
-Virginia	4	South	2023	310	f
-SDSU	5	South	2023	311	f
-Creighton	6	South	2023	312	f
-Missouri	7	South	2023	313	f
-Maryland	8	South	2023	314	f
-West Virginia	9	South	2023	315	f
-Utah State	10	South	2023	316	f
-UCLA	4	East	2022	361	f
-St. Mary's	5	East	2022	362	f
-Texas	6	East	2022	363	f
-Murray State	7	East	2022	364	f
-UNC	8	East	2022	365	f
-Marquette	9	East	2022	366	f
-San Francisco	10	East	2022	367	f
-Virginia Tech	11	East	2022	368	f
-Indiana	12	East	2022	369	t
-Akron	13	East	2022	370	f
-Yale	14	East	2022	371	f
-Saint Peter's	15	East	2022	372	f
-Norfolk State	16	East	2022	373	f
-Wyoming	12	East	2022	374	t
-Arizona	1	South	2022	375	f
-Villanova	2	South	2022	376	f
-Tennessee	3	South	2022	377	f
-Illinois	4	South	2022	378	f
-Houston	5	South	2022	379	f
-CSU	6	South	2022	380	f
-Ohio State	7	South	2022	381	f
-Seton Hall	8	South	2022	382	f
-TCU	9	South	2022	383	f
-Loyola Chicago	10	South	2022	384	f
-Michigan	11	South	2022	385	f
-UAB	12	South	2022	386	f
-Chattanooga	13	South	2022	387	f
-Longwood	14	South	2022	388	f
-Delaware	15	South	2022	389	f
-Wright State	16	South	2022	390	t
-Bryant	16	South	2022	391	t
-Kansas	1	Midwest	2022	392	f
-Auburn	2	Midwest	2022	393	f
-Wisconsin	3	Midwest	2022	394	f
-Providence	4	Midwest	2022	395	f
-Iowa	5	Midwest	2022	396	f
-LSU	6	Midwest	2022	397	f
-USC	7	Midwest	2022	398	f
-SDSU	8	Midwest	2022	399	f
-Creighton	9	Midwest	2022	400	f
-Miami	10	Midwest	2022	401	f
-Iowa State	11	Midwest	2022	402	f
-Richmond	12	Midwest	2022	403	f
-South Dakota State	13	Midwest	2022	404	f
-Colgate	14	Midwest	2022	405	f
-Jacksonville State	15	Midwest	2022	406	f
-Texas Southern	16	Midwest	2022	407	t
-AMCC	16	Midwest	2022	408	t
-Kansas	1	West	2023	409	f
-UCLA	2	West	2023	410	f
-Gonzaga	3	West	2023	411	f
-UConn	4	West	2023	412	f
-St. Mary's	5	West	2023	413	f
-TCU	6	West	2023	414	f
-Northwestern	7	West	2023	415	f
-Arkansas	8	West	2023	416	f
-Illinois	9	West	2023	417	f
-Boise State	10	West	2023	418	f
-Arizona State	11	West	2023	419	t
-VCU	12	West	2023	420	f
-Iona	13	West	2023	421	f
-Grand Canyon	14	West	2023	422	f
-UNC Asheville	15	West	2023	423	f
-Howard	16	West	2023	424	f
-Nevada	11	West	2023	425	t
-Purdue	1	East	2023	426	f
-Marquette	2	East	2023	427	f
-Kansas State	3	East	2023	428	f
-Tennessee	4	East	2023	429	f
-Duke	5	East	2023	430	f
-Kentucky	6	East	2023	431	f
-Michigan State	7	East	2023	432	f
-Memphis	8	East	2023	433	f
-FAU	9	East	2023	434	f
-USC	10	East	2023	435	f
-Providence	11	East	2023	436	f
-Oral Roberts	12	East	2023	437	f
-Louisiana-Lafayette	13	East	2023	438	f
-Montana State	14	East	2023	439	f
-Vermont	15	East	2023	440	f
-Texas Southern	16	East	2023	441	t
-Fairleigh Dickinson	16	East	2023	442	t
-Alabama	1	South	2023	443	f
-Arizona	2	South	2023	444	f
-Baylor	3	South	2023	445	f
-Virginia	4	South	2023	446	f
-SDSU	5	South	2023	447	f
-Creighton	6	South	2023	448	f
-Missouri	7	South	2023	449	f
-Maryland	8	South	2023	450	f
-West Virginia	9	South	2023	451	f
-Utah State	10	South	2023	452	f
-NC State	11	South	2023	453	f
-Charleston	12	South	2023	454	f
-Furman	13	South	2023	455	f
-UCSB	14	South	2023	456	f
-Princeton	15	South	2023	457	f
-AMCC	16	South	2023	458	t
-Southeast Missouri State	16	South	2023	459	t
-Houston	1	Midwest	2023	460	f
-Texas	2	Midwest	2023	461	f
-Xavier	3	Midwest	2023	462	f
-Indiana	4	Midwest	2023	463	f
-Miami	5	Midwest	2023	464	f
-Iowa State	6	Midwest	2023	465	f
-Texas A&M	7	Midwest	2023	466	f
-Iowa	8	Midwest	2023	467	f
-Auburn	9	Midwest	2023	468	f
-Penn State	10	Midwest	2023	469	f
-Mississippi State	11	Midwest	2023	470	t
-Drake	12	Midwest	2023	471	f
-Kent State	13	Midwest	2023	472	f
-Kennesaw State	14	Midwest	2023	473	f
-Colgate	15	Midwest	2023	474	f
-Northern Kentucky	16	Midwest	2023	475	f
-Pitt	11	Midwest	2023	476	t
-Gonzaga	1	West	2022	477	f
-Duke	2	West	2022	478	f
-Texas Tech	3	West	2022	479	f
-Arkansas	4	West	2022	480	f
-UConn	5	West	2022	481	f
-Alabama	6	West	2022	482	f
-Michigan State	7	West	2022	483	f
-Boise State	8	West	2022	484	f
-Memphis	9	West	2022	485	f
-Davidson	10	West	2022	486	f
-Notre Dame	11	West	2022	487	t
-NM State	12	West	2022	488	f
-Vermont	13	West	2022	489	f
-Montana State	14	West	2022	490	f
-CSUF	15	West	2022	491	f
-Georgia State	16	West	2022	492	f
-Rutgers	11	West	2022	493	t
-Baylor	1	East	2022	494	f
-Kentucky	2	East	2022	495	f
-Purdue	3	East	2022	496	f
-UCLA	4	East	2022	497	f
-St. Mary's	5	East	2022	498	f
-Texas	6	East	2022	499	f
-Murray State	7	East	2022	500	f
-UNC	8	East	2022	501	f
-Marquette	9	East	2022	502	f
-San Francisco	10	East	2022	503	f
-Virginia Tech	11	East	2022	504	f
-Indiana	12	East	2022	505	t
-Akron	13	East	2022	506	f
-Yale	14	East	2022	507	f
-Saint Peter's	15	East	2022	508	f
-Norfolk State	16	East	2022	509	f
-Wyoming	12	East	2022	510	t
-Arizona	1	South	2022	511	f
-Villanova	2	South	2022	512	f
-Tennessee	3	South	2022	513	f
-Illinois	4	South	2022	514	f
-Houston	5	South	2022	515	f
-CSU	6	South	2022	516	f
-Ohio State	7	South	2022	517	f
-Seton Hall	8	South	2022	518	f
-TCU	9	South	2022	519	f
-Loyola Chicago	10	South	2022	520	f
-Michigan	11	South	2022	521	f
-UAB	12	South	2022	522	f
-Chattanooga	13	South	2022	523	f
-Longwood	14	South	2022	524	f
-Delaware	15	South	2022	525	f
-Wright State	16	South	2022	526	t
-Bryant	16	South	2022	527	t
-Kansas	1	Midwest	2022	528	f
-Auburn	2	Midwest	2022	529	f
-Wisconsin	3	Midwest	2022	530	f
-Providence	4	Midwest	2022	531	f
-Iowa	5	Midwest	2022	532	f
-LSU	6	Midwest	2022	533	f
-USC	7	Midwest	2022	534	f
-SDSU	8	Midwest	2022	535	f
-Creighton	9	Midwest	2022	536	f
-Miami	10	Midwest	2022	537	f
-Iowa State	11	Midwest	2022	538	f
-Richmond	12	Midwest	2022	539	f
-South Dakota State	13	Midwest	2022	540	f
-Colgate	14	Midwest	2022	541	f
-Jacksonville State	15	Midwest	2022	542	f
-Texas Southern	16	Midwest	2022	543	t
-AMCC	16	Midwest	2022	544	t
-Kansas	1	West	2023	545	f
-UCLA	2	West	2023	546	f
-Gonzaga	3	West	2023	547	f
-UConn	4	West	2023	548	f
-St. Mary's	5	West	2023	549	f
-TCU	6	West	2023	550	f
-Northwestern	7	West	2023	551	f
-Arkansas	8	West	2023	552	f
-Illinois	9	West	2023	553	f
-Boise State	10	West	2023	554	f
-Arizona State	11	West	2023	555	t
-VCU	12	West	2023	556	f
-Iona	13	West	2023	557	f
-Grand Canyon	14	West	2023	558	f
-UNC Asheville	15	West	2023	559	f
-Howard	16	West	2023	560	f
-Nevada	11	West	2023	561	t
-Purdue	1	East	2023	562	f
-Marquette	2	East	2023	563	f
-Kansas State	3	East	2023	564	f
-Tennessee	4	East	2023	565	f
-Duke	5	East	2023	566	f
-Kentucky	6	East	2023	567	f
-Michigan State	7	East	2023	568	f
-Memphis	8	East	2023	569	f
-FAU	9	East	2023	570	f
-USC	10	East	2023	571	f
-Providence	11	East	2023	572	f
-Oral Roberts	12	East	2023	573	f
-Louisiana-Lafayette	13	East	2023	574	f
-Montana State	14	East	2023	575	f
-Vermont	15	East	2023	576	f
-Texas Southern	16	East	2023	577	t
-Fairleigh Dickinson	16	East	2023	578	t
-Alabama	1	South	2023	579	f
-Arizona	2	South	2023	580	f
-Baylor	3	South	2023	581	f
-Virginia	4	South	2023	582	f
-SDSU	5	South	2023	583	f
-Creighton	6	South	2023	584	f
-Missouri	7	South	2023	585	f
-Maryland	8	South	2023	586	f
-West Virginia	9	South	2023	587	f
-Utah State	10	South	2023	588	f
-NC State	11	South	2023	589	f
-Charleston	12	South	2023	590	f
-Furman	13	South	2023	591	f
-UCSB	14	South	2023	592	f
-Princeton	15	South	2023	593	f
-AMCC	16	South	2023	594	t
-Southeast Missouri State	16	South	2023	595	t
-Houston	1	Midwest	2023	596	f
-Texas	2	Midwest	2023	597	f
-Xavier	3	Midwest	2023	598	f
-Indiana	4	Midwest	2023	599	f
-Miami	5	Midwest	2023	600	f
-Iowa State	6	Midwest	2023	601	f
-Texas A&M	7	Midwest	2023	602	f
-Iowa	8	Midwest	2023	603	f
-Auburn	9	Midwest	2023	604	f
-Penn State	10	Midwest	2023	605	f
-Mississippi State	11	Midwest	2023	606	t
-Drake	12	Midwest	2023	607	f
-Kent State	13	Midwest	2023	608	f
-Kennesaw State	14	Midwest	2023	609	f
-Colgate	15	Midwest	2023	610	f
-Northern Kentucky	16	Midwest	2023	611	f
-Pitt	11	Midwest	2023	612	t
-Gonzaga	1	West	2022	613	f
-Duke	2	West	2022	614	f
-Texas Tech	3	West	2022	615	f
-Arkansas	4	West	2022	616	f
-UConn	5	West	2022	617	f
-Alabama	6	West	2022	618	f
-Michigan State	7	West	2022	619	f
-Boise State	8	West	2022	620	f
-Memphis	9	West	2022	621	f
-Davidson	10	West	2022	622	f
-Notre Dame	11	West	2022	623	t
-NM State	12	West	2022	624	f
-Vermont	13	West	2022	625	f
-Montana State	14	West	2022	626	f
-CSUF	15	West	2022	627	f
-Georgia State	16	West	2022	628	f
-Rutgers	11	West	2022	629	t
-Baylor	1	East	2022	630	f
-Kentucky	2	East	2022	631	f
-Purdue	3	East	2022	632	f
-UCLA	4	East	2022	633	f
-St. Mary's	5	East	2022	634	f
-Texas	6	East	2022	635	f
-Murray State	7	East	2022	636	f
-UNC	8	East	2022	637	f
-Marquette	9	East	2022	638	f
-San Francisco	10	East	2022	639	f
-Virginia Tech	11	East	2022	640	f
-Indiana	12	East	2022	641	t
-Akron	13	East	2022	642	f
-Yale	14	East	2022	643	f
-Saint Peter's	15	East	2022	644	f
-Norfolk State	16	East	2022	645	f
-Wyoming	12	East	2022	646	t
-Arizona	1	South	2022	647	f
-Villanova	2	South	2022	648	f
-Tennessee	3	South	2022	649	f
-Illinois	4	South	2022	650	f
-Houston	5	South	2022	651	f
-CSU	6	South	2022	652	f
-Ohio State	7	South	2022	653	f
-Seton Hall	8	South	2022	654	f
-TCU	9	South	2022	655	f
-Loyola Chicago	10	South	2022	656	f
-Michigan	11	South	2022	657	f
-UAB	12	South	2022	658	f
-Chattanooga	13	South	2022	659	f
-Longwood	14	South	2022	660	f
-Delaware	15	South	2022	661	f
-Wright State	16	South	2022	662	t
-Bryant	16	South	2022	663	t
-Kansas	1	Midwest	2022	664	f
-Auburn	2	Midwest	2022	665	f
-Wisconsin	3	Midwest	2022	666	f
-Providence	4	Midwest	2022	667	f
-Iowa	5	Midwest	2022	668	f
-LSU	6	Midwest	2022	669	f
-USC	7	Midwest	2022	670	f
-SDSU	8	Midwest	2022	671	f
-Creighton	9	Midwest	2022	672	f
-Miami	10	Midwest	2022	673	f
-Iowa State	11	Midwest	2022	674	f
-Richmond	12	Midwest	2022	675	f
-South Dakota State	13	Midwest	2022	676	f
-Colgate	14	Midwest	2022	677	f
-Jacksonville State	15	Midwest	2022	678	f
-Texas Southern	16	Midwest	2022	679	t
-AMCC	16	Midwest	2022	680	t
+COPY public.marchmadness_tournamentranking (school_name, ranking, region, year, id, play_in) FROM stdin;
+Kansas	1	West	2023	681	f
+UCLA	2	West	2023	682	f
+Gonzaga	3	West	2023	683	f
+UConn	4	West	2023	684	f
+St. Mary's	5	West	2023	685	f
+TCU	6	West	2023	686	f
+Northwestern	7	West	2023	687	f
+Arkansas	8	West	2023	688	f
+Illinois	9	West	2023	689	f
+Boise State	10	West	2023	690	f
+Arizona State	11	West	2023	691	t
+VCU	12	West	2023	692	f
+Iona	13	West	2023	693	f
+Grand Canyon	14	West	2023	694	f
+UNC Asheville	15	West	2023	695	f
+Howard	16	West	2023	696	f
+Nevada	11	West	2023	697	t
+Purdue	1	East	2023	698	f
+Marquette	2	East	2023	699	f
+Kansas State	3	East	2023	700	f
+Tennessee	4	East	2023	701	f
+Duke	5	East	2023	702	f
+Kentucky	6	East	2023	703	f
+Michigan State	7	East	2023	704	f
+Memphis	8	East	2023	705	f
+FAU	9	East	2023	706	f
+USC	10	East	2023	707	f
+Providence	11	East	2023	708	f
+Oral Roberts	12	East	2023	709	f
+Louisiana-Lafayette	13	East	2023	710	f
+Montana State	14	East	2023	711	f
+Vermont	15	East	2023	712	f
+Texas Southern	16	East	2023	713	t
+Fairleigh Dickinson	16	East	2023	714	t
+Alabama	1	South	2023	715	f
+Arizona	2	South	2023	716	f
+Baylor	3	South	2023	717	f
+Virginia	4	South	2023	718	f
+SDSU	5	South	2023	719	f
+Creighton	6	South	2023	720	f
+Missouri	7	South	2023	721	f
+Maryland	8	South	2023	722	f
+West Virginia	9	South	2023	723	f
+Utah State	10	South	2023	724	f
+NC State	11	South	2023	725	f
+Charleston	12	South	2023	726	f
+Furman	13	South	2023	727	f
+UCSB	14	South	2023	728	f
+Princeton	15	South	2023	729	f
+AMCC	16	South	2023	730	t
+Southeast Missouri State	16	South	2023	731	t
+Houston	1	Midwest	2023	732	f
+Texas	2	Midwest	2023	733	f
+Xavier	3	Midwest	2023	734	f
+Indiana	4	Midwest	2023	735	f
+Miami	5	Midwest	2023	736	f
+Iowa State	6	Midwest	2023	737	f
+Texas A&M	7	Midwest	2023	738	f
+Iowa	8	Midwest	2023	739	f
+Auburn	9	Midwest	2023	740	f
+Penn State	10	Midwest	2023	741	f
+Mississippi State	11	Midwest	2023	742	t
+Drake	12	Midwest	2023	743	f
+Kent State	13	Midwest	2023	744	f
+Kennesaw State	14	Midwest	2023	745	f
+Colgate	15	Midwest	2023	746	f
+Northern Kentucky	16	Midwest	2023	747	f
+Pitt	11	Midwest	2023	748	t
+Gonzaga	1	West	2022	749	f
+Duke	2	West	2022	750	f
+Texas Tech	3	West	2022	751	f
+Arkansas	4	West	2022	752	f
+UConn	5	West	2022	753	f
+Alabama	6	West	2022	754	f
+Michigan State	7	West	2022	755	f
+Boise State	8	West	2022	756	f
+Memphis	9	West	2022	757	f
+Davidson	10	West	2022	758	f
+Notre Dame	11	West	2022	759	t
+NM State	12	West	2022	760	f
+Vermont	13	West	2022	761	f
+Montana State	14	West	2022	762	f
+CSUF	15	West	2022	763	f
+Georgia State	16	West	2022	764	f
+Rutgers	11	West	2022	765	t
+Baylor	1	East	2022	766	f
+Kentucky	2	East	2022	767	f
+Purdue	3	East	2022	768	f
+UCLA	4	East	2022	769	f
+St. Mary's	5	East	2022	770	f
+Texas	6	East	2022	771	f
+Murray State	7	East	2022	772	f
+UNC	8	East	2022	773	f
+Marquette	9	East	2022	774	f
+San Francisco	10	East	2022	775	f
+Virginia Tech	11	East	2022	776	f
+Indiana	12	East	2022	777	t
+Akron	13	East	2022	778	f
+Yale	14	East	2022	779	f
+Saint Peter's	15	East	2022	780	f
+Norfolk State	16	East	2022	781	f
+Wyoming	12	East	2022	782	t
+Arizona	1	South	2022	783	f
+Villanova	2	South	2022	784	f
+Tennessee	3	South	2022	785	f
+Illinois	4	South	2022	786	f
+Houston	5	South	2022	787	f
+CSU	6	South	2022	788	f
+Ohio State	7	South	2022	789	f
+Seton Hall	8	South	2022	790	f
+TCU	9	South	2022	791	f
+Loyola Chicago	10	South	2022	792	f
+Michigan	11	South	2022	793	f
+UAB	12	South	2022	794	f
+Chattanooga	13	South	2022	795	f
+Longwood	14	South	2022	796	f
+Delaware	15	South	2022	797	f
+Wright State	16	South	2022	798	t
+Bryant	16	South	2022	799	t
+Kansas	1	Midwest	2022	800	f
+Auburn	2	Midwest	2022	801	f
+Wisconsin	3	Midwest	2022	802	f
+Providence	4	Midwest	2022	803	f
+Iowa	5	Midwest	2022	804	f
+LSU	6	Midwest	2022	805	f
+USC	7	Midwest	2022	806	f
+SDSU	8	Midwest	2022	807	f
+Creighton	9	Midwest	2022	808	f
+Miami	10	Midwest	2022	809	f
+Iowa State	11	Midwest	2022	810	f
+Richmond	12	Midwest	2022	811	f
+South Dakota State	13	Midwest	2022	812	f
+Colgate	14	Midwest	2022	813	f
+Jacksonville State	15	Midwest	2022	814	f
+Texas Southern	16	Midwest	2022	815	t
+AMCC	16	Midwest	2022	816	t
 \.
 
 
@@ -41047,7 +40578,7 @@ SELECT pg_catalog.setval('public.auth_group_permissions_id_seq', 1, false);
 -- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.auth_permission_id_seq', 44, true);
+SELECT pg_catalog.setval('public.auth_permission_id_seq', 48, true);
 
 
 --
@@ -41082,21 +40613,21 @@ SELECT pg_catalog.setval('public.django_admin_log_id_seq', 1, false);
 -- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.django_content_type_id_seq', 11, true);
+SELECT pg_catalog.setval('public.django_content_type_id_seq', 12, true);
 
 
 --
 -- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.django_migrations_id_seq', 30, true);
+SELECT pg_catalog.setval('public.django_migrations_id_seq', 33, true);
 
 
 --
 -- Name: marchmadness_apranking_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.marchmadness_apranking_id_seq', 124, true);
+SELECT pg_catalog.setval('public.marchmadness_apranking_id_seq', 150, true);
 
 
 --
@@ -41117,7 +40648,7 @@ SELECT pg_catalog.setval('public.marchmadness_rivalry_id_seq', 1, false);
 -- Name: marchmadness_tournamentranking_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.marchmadness_tournamentranking_id_seq', 680, true);
+SELECT pg_catalog.setval('public.marchmadness_tournamentranking_id_seq', 816, true);
 
 
 --
@@ -41265,6 +40796,30 @@ ALTER TABLE ONLY public.marchmadness_apranking
 
 
 --
+-- Name: marchmadness_apranking marchmadness_apranking_ranking_year_57220514_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.marchmadness_apranking
+    ADD CONSTRAINT marchmadness_apranking_ranking_year_57220514_uniq UNIQUE (ranking, year);
+
+
+--
+-- Name: marchmadness_apranking marchmadness_apranking_school_name_year_0a41c6f1_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.marchmadness_apranking
+    ADD CONSTRAINT marchmadness_apranking_school_name_year_0a41c6f1_uniq UNIQUE (school_name, year);
+
+
+--
+-- Name: marchmadness_game marchmadness_game_date_school_name_opponen_0c093bd7_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.marchmadness_game
+    ADD CONSTRAINT marchmadness_game_date_school_name_opponen_0c093bd7_uniq UNIQUE (date, school_name, opponent, school_score, opponent_score);
+
+
+--
 -- Name: marchmadness_game marchmadness_game_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -41281,6 +40836,14 @@ ALTER TABLE ONLY public.marchmadness_rivalry
 
 
 --
+-- Name: marchmadness_rivalry marchmadness_rivalry_team1_team2_832d6260_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.marchmadness_rivalry
+    ADD CONSTRAINT marchmadness_rivalry_team1_team2_832d6260_uniq UNIQUE (team1, team2);
+
+
+--
 -- Name: marchmadness_school marchmadness_school_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -41289,11 +40852,27 @@ ALTER TABLE ONLY public.marchmadness_school
 
 
 --
+-- Name: marchmadness_tournament marchmadness_tournament_year_9660e839_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.marchmadness_tournament
+    ADD CONSTRAINT marchmadness_tournament_year_9660e839_pk PRIMARY KEY (year);
+
+
+--
 -- Name: marchmadness_tournamentranking marchmadness_tournamentranking_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.marchmadness_tournamentranking
     ADD CONSTRAINT marchmadness_tournamentranking_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: marchmadness_tournamentranking marchmadness_tournamentranking_school_name_year_f84ea920_uniq; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.marchmadness_tournamentranking
+    ADD CONSTRAINT marchmadness_tournamentranking_school_name_year_f84ea920_uniq UNIQUE (school_name, year);
 
 
 --
