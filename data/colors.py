@@ -2,9 +2,32 @@
 Module for gathering and parsing data on school colors
 """
 
+from enum import Enum
 from data.espn import get_teams_from_api, get_name
-from models.colors import Colors
 import webcolors
+
+
+class Colors(Enum):
+    WHITE = 1
+    BLACK = 2
+    RED = 3
+    BLUE = 4
+    GREEN = 5
+    YELLOW = 6
+    ORANGE = 7
+    PURPLE = 8
+    BROWN = 9
+    GRAY = 10
+    NAVY = 11
+    TEAL = 12
+    LIGHT_BLUE = 13
+    GOLD = 14
+
+    def __repr__(self):
+        return self.name.lower()
+
+    def __str__(self):
+        return self.name.lower()
 
 
 def get_all_school_colors():

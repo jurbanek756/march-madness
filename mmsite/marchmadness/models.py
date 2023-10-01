@@ -101,7 +101,10 @@ class TournamentRanking(models.Model):
 
     @property
     def games(self):
-        return Game.objects.filter(school_name=self.school_name)
+        season = f"{self.year - 1}-{self.year}"
+        return Game.objects.filter(
+            school_name=self.school_name, season=season
+        ).order_by("-date")
 
     @property
     def school(self):
@@ -125,13 +128,17 @@ class TournamentRanking(models.Model):
     @property
     def ap_rank(self):
         try:
-            return APRanking.objects.get(school_name=self.school_name).ranking
+            return APRanking.objects.get(
+                school_name=self.school_name, year=self.year
+            ).ranking
         except APRanking.DoesNotExist:
             return None
 
     def recent_record(self, n):
-        games = self.games[-n:]
-        wins = games.filter(win=True).count()
+        wins = 0
+        for game in self.games[:10]:
+            if game.win:
+                wins += 1
         losses = n - wins
         return f"{wins}-{losses}"
 
@@ -149,8 +156,12 @@ class TournamentRanking(models.Model):
     def game_results(self):
         results = []
         for game in self.games:
-            result = "Win" if game["win"] else "Loss"
-            results.append(f"{result} {game['score']} vs. {game['opponent']}")
+            result = "Win" if game.win else "Loss"
+            home_or_away = "vs." if game.home_game else "@"
+            results.append(
+                f"{result} {game.school_score}-{game.opponent_score} "
+                f"{home_or_away} {game.opponent}"
+            )
         return results
 
 

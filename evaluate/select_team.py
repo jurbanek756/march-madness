@@ -12,13 +12,13 @@ def user_evaluation(a, b, group_name=None, round_name=None, **kwargs):
     elif round_name:
         print(round_name)
     print_in_two_columns(a.tournament_repr, b.tournament_repr, "Team 1", "Team 2")
-    rivalry = False
-    if a.rivalries:
-        rivalry = b.name in a.rivalries
-    if b.rivalries and not rivalry:
-        rivalry = a.name in b.rivalries
-    if rivalry:
-        print("RIVALRY GAME")
+    # rivalry = False
+    # if a.rivalries:
+    #    rivalry = b.name in a.rivalries
+    # if b.rivalries and not rivalry:
+    #    rivalry = a.name in b.rivalries
+    # if rivalry:
+    #    print("RIVALRY GAME")
     games_printed = False
     school_info_printed = False
     try:
@@ -39,24 +39,24 @@ def user_evaluation(a, b, group_name=None, round_name=None, **kwargs):
                     print_in_two_columns(
                         a.game_results,
                         b.game_results,
-                        f"{a.name} Games",
-                        f"{b.name} Games",
+                        f"{a.school_name} Games",
+                        f"{b.school_name} Games",
                     )
                     games_printed = True
                 elif not school_info_printed:
                     print_in_two_columns(
                         a.school_info,
                         b.school_info,
-                        f"Additional {a.name} Info",
-                        f"Additional {b.name} Info",
+                        f"Additional {a.school_name} Info",
+                        f"Additional {b.school_name} Info",
                     )
                     school_info_printed = True
                 else:
                     print_in_two_columns(
                         a.tournament_repr, b.tournament_repr, "Team 1", "Team 2"
                     )
-                    if rivalry:
-                        print("RIVALRY GAME")
+                    # if rivalry:
+                    #    print("RIVALRY GAME")
                     print_in_two_columns(
                         a.game_results,
                         b.game_results,
