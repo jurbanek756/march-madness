@@ -40398,6 +40398,7 @@ Tarleton State	Tarleton State University	Texans	Wisdom Gymnasium	WAC	0	nan	nan	n
 Utah Valley	Utah Valley University	Wolverines	UCCU Center	WAC	0	green	gold	Orem, UT	f	0	0
 UT Arlington	University of Texas at Arlington	Mavericks	College Park Center	WAC	1	teal	orange	nan	f	0	0
 University of Texas Rio Grande Valley	University of Texas Rio Grande Valley	Vaqueros	UTRGV Fieldhouse	WAC	0	nan	nan	nan	f	0	0
+Miami	University of Miami	Hurricanes	Watsco Center	ACC	43	green	orange	Coral Gables, FL	t	0	1
 \.
 
 
