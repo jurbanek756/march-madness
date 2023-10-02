@@ -10,7 +10,6 @@ from math import isnan
 import os
 
 from bs4 import BeautifulSoup
-import requests
 
 from data.games import get_regular_season_games
 from data.schools import (
@@ -19,17 +18,24 @@ from data.schools import (
     add_location_and_is_private_to_dataframe,
     add_team_colors_to_dataframe,
 )
+from helpers.sessions import limiting_retrying_session
 
 # Django setup to use models
 import sys
 
 sys.path.append("mmsite/")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mmsite.settings")
-import django
+import django  # noqa: E402
 
 django.setup()
 
-from marchmadness.models import School, Game, APRanking, TournamentRanking, Tournament
+from marchmadness.models import (  # noqa: E402
+    School,
+    Game,
+    APRanking,
+    TournamentRanking,
+    Tournament,
+)
 
 # Constants
 AP_RANKINGS = "https://www.ncaa.com/rankings/basketball-men/d1/associated-press"
@@ -45,6 +51,7 @@ logging.basicConfig(
     ],
     format="%(message)s",
 )
+SESSION = limiting_retrying_session()
 
 
 def get_parens_num(prov_str):
@@ -68,7 +75,7 @@ def add_schools():
     logging.info("Adding short names to schools")
     add_names_to_schools(df)
     logging.info("Adding team colors")
-    add_team_colors_to_dataframe(df)
+    add_team_colors_to_dataframe(SESSION, df)
     logging.info("Adding location and is_private info")
     add_location_and_is_private_to_dataframe(df)
     df = df[~df["Name"].duplicated(keep=False)]
@@ -94,7 +101,7 @@ def add_schools():
 
 def add_games(year):
     previous_year = year - 1
-    games_dict = get_regular_season_games(year)
+    games_dict = get_regular_season_games(SESSION, year)
     games_to_insert = []
     for school, games in games_dict.items():
         for game in games:
@@ -117,7 +124,7 @@ def add_games(year):
 
 
 def add_ap_ranking():
-    data = requests.get(AP_RANKINGS).content
+    data = SESSION.get(AP_RANKINGS).content
     ap_ranks = BeautifulSoup(data, "html.parser")
     schools_to_insert = list()
     for d in ap_ranks.find("table").find_all("tr")[1:]:

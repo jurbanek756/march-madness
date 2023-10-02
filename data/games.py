@@ -3,26 +3,15 @@ import logging
 from bs4 import BeautifulSoup
 import dateutil.parser
 from dateutil.relativedelta import relativedelta
-from requests.adapters import HTTPAdapter, Retry
-from requests_ratelimiter import LimiterSession
 from tqdm import tqdm
 
 from data.espn import get_teams_from_api, get_name
 
-session = LimiterSession(per_second=1)
-retry = Retry(total=3, backoff_factor=1, status_forcelist=[500, 502, 503, 504])
-session.mount("http://", HTTPAdapter(max_retries=retry))
-session.headers.update(
-    {
-        "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) "
-        "Gecko/20100101 Firefox/115.0"
-    }
-)
 
 logger = logging.getLogger(__name__)
 
 
-def get_regular_season_games(season_year=2023):
+def get_regular_season_games(session, season_year=2023):
     teams = get_teams_from_api(session)
     games = dict()
     for team in tqdm(teams):

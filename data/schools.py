@@ -58,8 +58,8 @@ def add_names_to_schools(df):
             df.at[i, "Name"] = school_name
 
 
-def add_team_colors_to_dataframe(df):
-    data = get_all_school_colors()
+def add_team_colors_to_dataframe(session, df):
+    data = get_all_school_colors(session)
     for i, row in df.iterrows():
         if row["Name"] in data:
             df.at[i, "Primary Color"] = data[row["Name"]]["primary_color"]

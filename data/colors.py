@@ -30,8 +30,8 @@ class Colors(Enum):
         return self.name.lower()
 
 
-def get_all_school_colors():
-    teams = get_teams_from_api()
+def get_all_school_colors(session):
+    teams = get_teams_from_api(session)
     colors_dict = dict()
     for team in teams:
         team_name = get_name(team["shortDisplayName"])
