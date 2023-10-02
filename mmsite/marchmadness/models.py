@@ -146,8 +146,8 @@ class TournamentRanking(models.Model):
     def tournament_repr(self):
         r = list()
         r.append(f"{self.ranking}. {self.school_name}")
-        if self.ap_rank:
-            r.append(f"AP Rank: {self.ap_rank}")
+        if self.ap_ranking:
+            r.append(f"AP Rank: {self.ap_ranking}")
         r.append(f"Conference: {self.school.conference}")
         r.append(f"Record: {self.record}  ({self.recent_record(10)} in last 10 games)")
         return r
