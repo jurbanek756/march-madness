@@ -6,17 +6,14 @@ from data.colors import get_all_school_colors
 from data.rivals import RIVALRIES
 from data.names import FORMAL_TO_ABBREV, update_school_name
 from helpers.soup_helpers import get_table
-from bs4 import BeautifulSoup
 from fuzzywuzzy import fuzz
 import pandas as pd
 import regex
-import requests
 
 DI_SCHOOLS = "https://en.wikipedia.org/wiki/List_of_NCAA_Division_I_institutions"
 D1_BASKETBALL_SCHOOLS = (
     "https://en.wikipedia.org/wiki/List_of_NCAA_Division_I_men%27s_basketball_programs"
 )
-AP_RANKINGS = "https://www.ncaa.com/rankings/basketball-men/d1/associated-press"
 DASH_REGEX = regex.compile(r"\p{Pd}")
 HAWAII_REGEX = regex.compile(r"ʻ")
 MANOA_REGEX = regex.compile(r"ā")
@@ -61,23 +58,8 @@ def add_names_to_schools(df):
             df.at[i, "Name"] = school_name
 
 
-def add_ap_rankings_to_dataframe(df):
-    data = requests.get(AP_RANKINGS).content
-    ap_ranks = BeautifulSoup(data, "html.parser")
-    tuple_list = list()
-    for d in ap_ranks.find("table").find_all("tr")[1:]:
-        td = d.find_all("td")
-        name = td[1].string.split("(")[0].strip()
-        ap_replacement_dict = {"San Diego State": "SDSU"}
-        if name in ap_replacement_dict:
-            name = ap_replacement_dict[name]
-        ranking = int(td[0].string)
-        tuple_list.append((name, ranking))
-    return add_data_to_dataframe(df, tuple_list, "AP Ranking")
-
-
-def add_team_colors_to_dataframe(df):
-    data = get_all_school_colors()
+def add_team_colors_to_dataframe(session, df):
+    data = get_all_school_colors(session)
     for i, row in df.iterrows():
         if row["Name"] in data:
             df.at[i, "Primary Color"] = data[row["Name"]]["primary_color"]

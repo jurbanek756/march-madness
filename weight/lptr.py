@@ -19,10 +19,8 @@ Resources
 * https://chat.openai.com/c/d00ba596-f435-46fe-8e96-721df48078fa
 """
 
-from models.team import Team
 
-
-def lptr(team1: Team, team2: Team, ap_rank_weight=0.75):
+def lptr(team1, team2, ap_rank_weight=0.75):
     """
     Main function for linearly proportional tournament ranking.
 
@@ -30,7 +28,7 @@ def lptr(team1: Team, team2: Team, ap_rank_weight=0.75):
     ----------
     team1: Team
     team2: Team
-    ap_rank_weight: bool
+    ap_rank_weight: float
 
     Returns
     -------
@@ -38,13 +36,13 @@ def lptr(team1: Team, team2: Team, ap_rank_weight=0.75):
         Team 1 probability, Team 2 probability
     """
     if ap_rank_weight == 0:
-        return lptr_tournament_only(team1.tournament_rank, team2.tournament_rank)
+        return lptr_tournament_only(team1.ranking, team2.ranking)
     else:
         return lptr_with_ap(
-            team1.tournament_rank,
-            team2.tournament_rank,
-            team1.ap_rank,
-            team2.ap_rank,
+            team1.ranking,
+            team2.ranking,
+            team1.ap_ranking,
+            team2.ap_ranking,
             ap_rank_weight,
         )
 
@@ -73,7 +71,13 @@ def lptr_tournament_only(rank1: int, rank2: int):
         return 1 - y, y
 
 
-def lptr_with_ap(tourn_rank_1, tourn_rank_2, ap_rank_1, ap_rank_2, ap_weight=0.75):
+def lptr_with_ap(
+    tourn_rank_1: int,
+    tourn_rank_2: int,
+    ap_rank_1: int,
+    ap_rank_2: int,
+    ap_weight: float = 0.75,
+):
     """
     LPTR that considers both tournament and AP rankings.
 
@@ -81,15 +85,6 @@ def lptr_with_ap(tourn_rank_1, tourn_rank_2, ap_rank_1, ap_rank_2, ap_weight=0.7
     -----
     - If a team is unranked by the AP, it is given a rank of 26.
     - If neither team is ranked by the AP, lptr_tournament_only is used
-
-    Parameters
-    ----------
-    tourn_rank_1: int
-    tourn_rank_2: int
-    ap_rank_1: int
-    ap_rank_2: int
-    ap_weight: float
-        Between 0 and 1 inclusive; AP Ranking defined as 1 - tourn_weight
 
     Returns
     -------

@@ -1,18 +1,18 @@
 import logging
 
 from bs4 import BeautifulSoup
-from requests_ratelimiter import LimiterSession
+import dateutil.parser
+from dateutil.relativedelta import relativedelta
 from tqdm import tqdm
 
 from data.espn import get_teams_from_api, get_name
-from models.game import Game
 
-session = LimiterSession(per_second=3)
+
 logger = logging.getLogger(__name__)
 
 
-def get_regular_season_games():
-    teams = get_teams_from_api()
+def get_regular_season_games(session, season_year=2023):
+    teams = get_teams_from_api(session)
     games = dict()
     for team in tqdm(teams):
         team_name = get_name(team["shortDisplayName"])
@@ -21,18 +21,26 @@ def get_regular_season_games():
         schedule_link = next(filter(lambda x: x["text"] == "Schedule", team["links"]))[
             "href"
         ]
+        link_with_year = f"{schedule_link}/season/{season_year}"
         schedule_soup = BeautifulSoup(
-            session.get(schedule_link).text, features="html.parser"
+            session.get(link_with_year).text, features="html.parser"
         )
         schedule_table = schedule_soup.find("tbody", {"class", "Table__TBODY"})
-        rows = [r for r in schedule_table.find_all("tr", {"class": "Table__TR"})]
+        try:
+            rows = [r for r in schedule_table.find_all("tr", {"class": "Table__TR"})]
+        except AttributeError:
+            logger.warning("No games found for %s", team_name)
+            continue
         regular_season_index = [
             idx for idx, s in enumerate(rows) if s.text == "Regular Season"
         ][0]
         rows = rows[regular_season_index + 2 :]
         for row in rows:
             row = [r for r in row]
-            game_date = row[0].text.strip()
+            day_and_month = row[0].text.strip()
+            game_date = dateutil.parser.parse(f"{day_and_month}, {season_year}").date()
+            if game_date.month > 4:
+                game_date -= relativedelta(years=1)
             opponent = (
                 row[1]
                 .text.lstrip("0123456789")
@@ -52,15 +60,18 @@ def get_regular_season_games():
                 win = None
             elif score == "Postponed":
                 win = None
+            elif "T" in score:
+                win = None
             else:
                 raise ValueError("Invalid win-loss character detected: %s", score[0])
             team_games.append(
-                Game(
-                    game_date=game_date,
-                    opponent=get_name(opponent),
-                    score=score,
-                    win=win,
-                ).to_dict()
+                {
+                    "game_date": game_date,
+                    "opponent": get_name(opponent),
+                    "score": score,
+                    "home_game": "vs" in row[1].text,
+                    "win": win,
+                }
             )
         games[team_name] = team_games
     return games

@@ -55,29 +55,25 @@ def sigmodal(team1, team2, ap_rank_weight=0.75, k=None):
     """
     if ap_rank_weight == 0:
         if k:
-            return sigmodal_k_tournament_only(
-                team1.tournament_rank, team2.tournament_rank, k=k
-            )
+            return sigmodal_k_tournament_only(team1.ranking, team2.ranking, k=k)
         else:
-            return sigmodal_tournament_only(
-                team1.tournament_rank, team2.tournament_rank
-            )
+            return sigmodal_tournament_only(team1.ranking, team2.ranking)
     else:
         if k:
             return sigmodal_k_with_ap(
-                team1.tournament_rank,
-                team2.tournament_rank,
-                team1.ap_rank,
-                team2.ap_rank,
+                team1.ranking,
+                team2.ranking,
+                team1.ap_ranking,
+                team2.ap_ranking,
                 k=k,
                 ap_weight=ap_rank_weight,
             )
         else:
             return sigmodal_with_ap(
-                team1.tournament_rank,
-                team2.tournament_rank,
-                team1.ap_rank,
-                team2.ap_rank,
+                team1.ranking,
+                team2.ranking,
+                team1.ap_ranking,
+                team2.ap_ranking,
                 ap_weight=ap_rank_weight,
             )
 
