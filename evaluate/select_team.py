@@ -60,14 +60,14 @@ def user_evaluation(a, b, group_name=None, round_name=None, **kwargs):
                     print_in_two_columns(
                         a.game_results,
                         b.game_results,
-                        f"{a.name} Games",
-                        f"{b.name} Games",
+                        f"{a.school_name} Games",
+                        f"{b.school_name} Games",
                     )
                     print_in_two_columns(
                         a.school_info,
                         b.school_info,
-                        f"Additional {a.name} Info",
-                        f"Additional {b.name} Info",
+                        f"Additional {a.school_name} Info",
+                        f"Additional {b.school_name} Info",
                     )
                 print()
             elif choice == "q":
