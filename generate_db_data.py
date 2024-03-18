@@ -123,7 +123,7 @@ def add_games(year):
     Game.objects.bulk_create(games_to_insert)
 
 
-def add_ap_ranking():
+def add_ap_ranking(year):
     data = SESSION.get(AP_RANKINGS).content
     ap_ranks = BeautifulSoup(data, "html.parser")
     schools_to_insert = list()
@@ -134,7 +134,7 @@ def add_ap_ranking():
         if name in ap_replacement_dict:
             name = ap_replacement_dict[name]
         ranking = int(td[0].string)
-        school = APRanking(school_name=name, ranking=ranking, year=2023)
+        school = APRanking(school_name=name, ranking=ranking, year=year)
         schools_to_insert.append(school)
     APRanking.objects.bulk_create(schools_to_insert)
 
@@ -174,15 +174,9 @@ def add_tournament_rankings(year):
     TournamentRanking.objects.bulk_create(schools)
 
 
-def add_tournament_info():
+def add_tournament_info(year):
     tournaments = [
-        Tournament(2023, SOUTH, EAST, MIDWEST, WEST),
-        Tournament(2022, WEST, EAST, SOUTH, MIDWEST),
-        Tournament(2021, WEST, EAST, SOUTH, MIDWEST),
-        Tournament(2019, EAST, WEST, SOUTH, MIDWEST),
-        Tournament(2018, SOUTH, WEST, EAST, MIDWEST),
-        Tournament(2017, EAST, WEST, MIDWEST, SOUTH),
-        Tournament(2016, SOUTH, WEST, EAST, MIDWEST),
+        Tournament(year, SOUTH, EAST, MIDWEST, WEST),
     ]
     Tournament.objects.bulk_create(tournaments)
 
@@ -231,10 +225,10 @@ if __name__ == "__main__":
         add_games(args.year)
     if args.ap_rankings:
         if args.year == datetime.datetime.now().year:
-            add_ap_ranking()
+            add_ap_ranking(args.year)
         else:
             logging.warning("Unable to add AP rankings for previous years")
     if args.tournament_rankings:
         add_tournament_rankings(args.year)
     if args.tournament_info:
-        add_tournament_info()
+        add_tournament_info(args.year)

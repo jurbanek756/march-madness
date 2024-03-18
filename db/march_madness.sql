@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 16.0
--- Dumped by pg_dump version 16.0 (Ubuntu 16.0-1.pgdg22.04+1)
+-- Dumped from database version 15.6 (Homebrew)
+-- Dumped by pg_dump version 15.6 (Homebrew)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -523,7 +523,7 @@ COPY public.auth_permission (id, name, content_type_id, codename) FROM stdin;
 --
 
 COPY public.auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) FROM stdin;
-1	pbkdf2_sha256$600000$SXD05qYQgd2yK8WJGlZN5w$+TffJZ3LrDGM/OW7Hcs3jjEEr/HmdbEv3+1cgH6trRY=	2023-09-30 00:47:30.313266+00	t	admin				t	t	2023-09-30 00:47:10.457168+00
+1	pbkdf2_sha256$600000$SXD05qYQgd2yK8WJGlZN5w$+TffJZ3LrDGM/OW7Hcs3jjEEr/HmdbEv3+1cgH6trRY=	2023-09-29 20:47:30.313266-04	t	admin				t	t	2023-09-29 20:47:10.457168-04
 \.
 
 
@@ -576,39 +576,39 @@ COPY public.django_content_type (id, app_label, model) FROM stdin;
 --
 
 COPY public.django_migrations (id, app, name, applied) FROM stdin;
-1	contenttypes	0001_initial	2023-09-24 17:21:35.060505+00
-2	auth	0001_initial	2023-09-24 17:21:35.296128+00
-3	admin	0001_initial	2023-09-24 17:21:35.367024+00
-4	admin	0002_logentry_remove_auto_add	2023-09-24 17:21:35.390918+00
-5	admin	0003_logentry_add_action_flag_choices	2023-09-24 17:21:35.412586+00
-6	contenttypes	0002_remove_content_type_name	2023-09-24 17:21:35.434661+00
-7	auth	0002_alter_permission_name_max_length	2023-09-24 17:21:35.441469+00
-8	auth	0003_alter_user_email_max_length	2023-09-24 17:21:35.447965+00
-9	auth	0004_alter_user_username_opts	2023-09-24 17:21:35.454629+00
-10	auth	0005_alter_user_last_login_null	2023-09-24 17:21:35.46091+00
-11	auth	0006_require_contenttypes_0002	2023-09-24 17:21:35.464378+00
-12	auth	0007_alter_validators_add_error_messages	2023-09-24 17:21:35.470207+00
-13	auth	0008_alter_user_username_max_length	2023-09-24 17:21:35.48557+00
-14	auth	0009_alter_user_last_name_max_length	2023-09-24 17:21:35.492627+00
-15	auth	0010_alter_group_name_max_length	2023-09-24 17:21:35.500817+00
-16	auth	0011_update_proxy_permissions	2023-09-24 17:21:35.507405+00
-17	auth	0012_alter_user_first_name_max_length	2023-09-24 17:21:35.515082+00
-18	sessions	0001_initial	2023-09-24 17:21:35.552108+00
-19	marchmadness	0001_initial	2023-09-24 18:01:16.713372+00
-20	marchmadness	0002_apranking_tournamentranking_school_championship_wins_and_more	2023-09-24 18:31:44.895413+00
-21	marchmadness	0003_alter_school_is_private	2023-09-24 18:51:11.516732+00
-22	marchmadness	0004_alter_school_home_arena_alter_school_location_and_more	2023-09-24 18:54:28.075818+00
-23	marchmadness	0005_apranking_year_tournamentranking_year	2023-09-24 19:06:48.032592+00
-24	marchmadness	0006_remove_game_game_id_remove_rivalry_rivalry_id_and_more	2023-09-24 19:13:08.968579+00
-25	marchmadness	0007_game_distinct_home_away	2023-09-24 19:27:11.087663+00
-26	marchmadness	0008_rename_away_team_game_opponent_and_more	2023-09-24 19:47:39.699051+00
-27	marchmadness	0009_remove_apranking_ranking_id_and_more	2023-09-24 22:14:47.994865+00
-28	marchmadness	0010_rename_team_apranking_school_name_and_more	2023-09-24 22:14:48.015153+00
-29	marchmadness	0011_tournamentranking_play_in	2023-09-24 22:22:02.974407+00
-30	marchmadness	0012_game_home_game	2023-09-30 02:15:28.309711+00
-31	marchmadness	0013_rename_conference_tournamentranking_region	2023-09-30 12:26:39.960034+00
-32	marchmadness	0014_tournament	2023-09-30 12:43:05.015156+00
-33	marchmadness	0015_remove_tournament_id_alter_school_name_and_more	2023-09-30 12:57:26.795009+00
+1	contenttypes	0001_initial	2023-09-24 13:21:35.060505-04
+2	auth	0001_initial	2023-09-24 13:21:35.296128-04
+3	admin	0001_initial	2023-09-24 13:21:35.367024-04
+4	admin	0002_logentry_remove_auto_add	2023-09-24 13:21:35.390918-04
+5	admin	0003_logentry_add_action_flag_choices	2023-09-24 13:21:35.412586-04
+6	contenttypes	0002_remove_content_type_name	2023-09-24 13:21:35.434661-04
+7	auth	0002_alter_permission_name_max_length	2023-09-24 13:21:35.441469-04
+8	auth	0003_alter_user_email_max_length	2023-09-24 13:21:35.447965-04
+9	auth	0004_alter_user_username_opts	2023-09-24 13:21:35.454629-04
+10	auth	0005_alter_user_last_login_null	2023-09-24 13:21:35.46091-04
+11	auth	0006_require_contenttypes_0002	2023-09-24 13:21:35.464378-04
+12	auth	0007_alter_validators_add_error_messages	2023-09-24 13:21:35.470207-04
+13	auth	0008_alter_user_username_max_length	2023-09-24 13:21:35.48557-04
+14	auth	0009_alter_user_last_name_max_length	2023-09-24 13:21:35.492627-04
+15	auth	0010_alter_group_name_max_length	2023-09-24 13:21:35.500817-04
+16	auth	0011_update_proxy_permissions	2023-09-24 13:21:35.507405-04
+17	auth	0012_alter_user_first_name_max_length	2023-09-24 13:21:35.515082-04
+18	sessions	0001_initial	2023-09-24 13:21:35.552108-04
+19	marchmadness	0001_initial	2023-09-24 14:01:16.713372-04
+20	marchmadness	0002_apranking_tournamentranking_school_championship_wins_and_more	2023-09-24 14:31:44.895413-04
+21	marchmadness	0003_alter_school_is_private	2023-09-24 14:51:11.516732-04
+22	marchmadness	0004_alter_school_home_arena_alter_school_location_and_more	2023-09-24 14:54:28.075818-04
+23	marchmadness	0005_apranking_year_tournamentranking_year	2023-09-24 15:06:48.032592-04
+24	marchmadness	0006_remove_game_game_id_remove_rivalry_rivalry_id_and_more	2023-09-24 15:13:08.968579-04
+25	marchmadness	0007_game_distinct_home_away	2023-09-24 15:27:11.087663-04
+26	marchmadness	0008_rename_away_team_game_opponent_and_more	2023-09-24 15:47:39.699051-04
+27	marchmadness	0009_remove_apranking_ranking_id_and_more	2023-09-24 18:14:47.994865-04
+28	marchmadness	0010_rename_team_apranking_school_name_and_more	2023-09-24 18:14:48.015153-04
+29	marchmadness	0011_tournamentranking_play_in	2023-09-24 18:22:02.974407-04
+30	marchmadness	0012_game_home_game	2023-09-29 22:15:28.309711-04
+31	marchmadness	0013_rename_conference_tournamentranking_region	2023-09-30 08:26:39.960034-04
+32	marchmadness	0014_tournament	2023-09-30 08:43:05.015156-04
+33	marchmadness	0015_remove_tournament_id_alter_school_name_and_more	2023-09-30 08:57:26.795009-04
 \.
 
 
@@ -617,7 +617,7 @@ COPY public.django_migrations (id, app, name, applied) FROM stdin;
 --
 
 COPY public.django_session (session_key, session_data, expire_date) FROM stdin;
-jy8izuewgx4axmx88myxfmwxns86h6nv	.eJxVjMsOwiAURP-FtSHQSyu4dO83kPugUjWQlHZl_HfbpAvdzGLOmXmriOuS49rSHCdRF2XV6bcj5GcqO5AHlnvVXMsyT6R3RR-06VuV9Loe7t9Bxpa3tZfBcTcIsTHAYBGDhSCpQwuuY-rJkpzBsvE4sOvRjxiC8-MWTADq8wXnLDfw:1qmO8o:eUBO4Ptfr6_og6gJTCEQV4A0j0-C6t5ApEUST5LyEGk	2023-10-14 00:47:30.316606+00
+jy8izuewgx4axmx88myxfmwxns86h6nv	.eJxVjMsOwiAURP-FtSHQSyu4dO83kPugUjWQlHZl_HfbpAvdzGLOmXmriOuS49rSHCdRF2XV6bcj5GcqO5AHlnvVXMsyT6R3RR-06VuV9Loe7t9Bxpa3tZfBcTcIsTHAYBGDhSCpQwuuY-rJkpzBsvE4sOvRjxiC8-MWTADq8wXnLDfw:1qmO8o:eUBO4Ptfr6_og6gJTCEQV4A0j0-C6t5ApEUST5LyEGk	2023-10-13 20:47:30.316606-04
 \.
 
 
@@ -651,6 +651,31 @@ TCU	22	2023	146
 Missouri	23	2023	147
 Memphis	24	2023	148
 Florida Atlantic	25	2023	149
+Houston	1	2024	152
+UConn	2	2024	153
+Purdue	3	2024	154
+North Carolina	4	2024	155
+Tennessee	5	2024	156
+Arizona	6	2024	157
+Iowa State	7	2024	158
+Creighton	8	2024	159
+Kentucky	9	2024	160
+Marquette	10	2024	161
+Duke	11	2024	162
+Auburn	12	2024	163
+Illinois	13	2024	164
+Baylor	14	2024	165
+South Carolina	15	2024	166
+Kansas	16	2024	167
+Gonzaga	17	2024	168
+Utah State	18	2024	169
+Alabama	19	2024	170
+BYU	20	2024	171
+Saint Mary's	21	2024	172
+Washington State	22	2024	173
+Nevada	23	2024	174
+Dayton	24	2024	175
+Texas Tech	25	2024	176
 \.
 
 
@@ -17397,6 +17422,7 @@ COPY public.marchmadness_game (date, season, school_name, opponent, school_score
 2022-02-26	2021-2022	North Dakota State	North Dakota	79	53	107341	t	f
 2022-03-05	2021-2022	North Dakota State	Denver	82	62	107342	t	t
 2022-03-07	2021-2022	North Dakota State	Oral Roberts	92	72	107343	t	t
+2022-02-24	2021-2022	Northeastern	William & Mary	62	28	107430	t	t
 2022-03-08	2021-2022	North Dakota State	South Dakota State	75	69	107344	f	t
 2021-11-09	2021-2022	North Florida	Texas Tech	89	74	107345	f	f
 2021-11-10	2021-2022	North Florida	Texas A&M	64	46	107346	f	f
@@ -17483,7 +17509,6 @@ COPY public.marchmadness_game (date, season, school_name, opponent, school_score
 2022-02-12	2021-2022	Northeastern	Drexel	67	51	107427	f	f
 2022-02-19	2021-2022	Northeastern	Hofstra	76	73	107428	f	f
 2022-02-22	2021-2022	Northeastern	Charleston	83	72	107429	f	t
-2022-02-24	2021-2022	Northeastern	William & Mary	62	28	107430	t	t
 2022-02-26	2021-2022	Northeastern	Elon	67	54	107431	f	t
 2022-03-06	2021-2022	Northeastern	Towson	68	61	107432	f	t
 2021-11-09	2021-2022	North Arizona	Arizona	81	52	107433	f	f
@@ -40022,6 +40047,10937 @@ COPY public.marchmadness_game (date, season, school_name, opponent, school_score
 2020-02-29	2019-2020	Youngstown State	Milwaukee	73	69	129966	t	f
 2020-03-03	2019-2020	Youngstown State	Milwaukee	63	57	129967	t	t
 2020-03-05	2019-2020	Youngstown State	UIC	67	61	129968	f	f
+2023-11-06	2023-2024	Abilene Chrstn	Oklahoma State	64	59	129969	t	f
+2023-11-10	2023-2024	Abilene Chrstn	NC State	84	64	129970	f	f
+2023-11-14	2023-2024	Abilene Chrstn	Prairie View A&M	79	74	129971	f	t
+2023-11-17	2023-2024	Abilene Chrstn	San José State	77	71	129972	t	t
+2023-11-19	2023-2024	Abilene Chrstn	Fordham	59	45	129973	t	t
+2023-11-20	2023-2024	Abilene Chrstn	Missouri State	87	69	129974	f	t
+2023-11-29	2023-2024	Abilene Chrstn	UT Arlington	86	71	129975	f	f
+2023-12-06	2023-2024	Abilene Chrstn	Northern Arizona	78	76	129976	f	t
+2023-12-10	2023-2024	Abilene Chrstn	vsHoward Payne	120	69	129977	t	t
+2023-12-17	2023-2024	Abilene Chrstn	UTEP	88	82	129978	t	t
+2023-12-21	2023-2024	Abilene Chrstn	Arkansas	83	73	129979	f	f
+2023-12-30	2023-2024	Abilene Chrstn	Western Kentucky	86	84	129980	f	f
+2024-01-11	2023-2024	Abilene Chrstn	Grand Canyon	74	64	129981	f	f
+2024-01-13	2023-2024	Abilene Chrstn	California Baptist	68	53	129982	f	f
+2024-01-18	2023-2024	Abilene Chrstn	Tarleton State	79	71	129983	f	f
+2024-01-20	2023-2024	Abilene Chrstn	UT Arlington	78	67	129984	t	t
+2024-01-25	2023-2024	Abilene Chrstn	Utah Tech	82	60	129985	t	t
+2024-01-27	2023-2024	Abilene Chrstn	Southern Utah	82	67	129986	f	t
+2024-02-08	2023-2024	Abilene Chrstn	Seattle U	75	52	129987	f	f
+2024-02-10	2023-2024	Abilene Chrstn	Utah Valley	74	45	129988	f	f
+2024-02-15	2023-2024	Abilene Chrstn	UT Rio Grande Valley	87	79	129989	t	f
+2024-02-17	2023-2024	Abilene Chrstn	Stephen F. Austin	63	62	129990	t	f
+2024-02-22	2023-2024	Abilene Chrstn	California Baptist	71	65	129991	t	t
+2024-02-24	2023-2024	Abilene Chrstn	Grand Canyon	79	73	129992	t	t
+2024-02-29	2023-2024	Abilene Chrstn	Southern Utah	77	68	129993	t	f
+2024-03-02	2023-2024	Abilene Chrstn	Utah Tech	86	79	129994	t	f
+2024-03-07	2023-2024	Abilene Chrstn	Seattle U	64	59	129995	t	t
+2024-03-09	2023-2024	Abilene Chrstn	Utah Valley	74	67	129996	f	t
+2024-03-13	2023-2024	Abilene Chrstn	Stephen F. Austin	60	57	129997	f	t
+2023-11-06	2023-2024	Air Force	Portland State	62	55	129998	f	t
+2023-11-10	2023-2024	Air Force	Long Island University	82	67	129999	t	f
+2023-11-12	2023-2024	Air Force	Delaware	65	57	130000	f	f
+2023-11-16	2023-2024	Air Force	Lindenwood	76	58	130001	t	t
+2023-11-19	2023-2024	Air Force	Omaha	58	56	130002	t	t
+2023-11-22	2023-2024	Air Force	VMI	64	54	130003	t	t
+2023-11-26	2023-2024	Air Force	South Dakota	58	57	130004	t	f
+2023-12-03	2023-2024	Air Force	Portland	80	58	130005	t	f
+2023-12-09	2023-2024	Air Force	Eastern Washington	73	68	130006	f	t
+2023-12-16	2023-2024	Air Force	UT Arlington	76	73	130007	f	t
+2023-12-21	2023-2024	Air Force	Northern Colorado	83	79	130008	f	t
+2024-01-02	2023-2024	Air Force	Utah State	88	60	130009	f	t
+2024-01-09	2023-2024	Air Force	Nevada	67	54	130010	f	f
+2024-01-13	2023-2024	Air Force	San José State	70	67	130011	f	t
+2024-01-20	2023-2024	Air Force	New Mexico	85	66	130012	f	t
+2024-01-23	2023-2024	Air Force	UNLV	90	58	130013	t	f
+2024-01-27	2023-2024	Air Force	Fresno State	84	70	130014	f	f
+2024-01-30	2023-2024	Air Force	Wyoming	83	72	130015	f	t
+2024-02-03	2023-2024	Air Force	Boise State	94	56	130016	f	f
+2024-02-06	2023-2024	Air Force	24 San Diego State	77	64	130017	f	t
+2024-02-10	2023-2024	Air Force	Fresno State	68	66	130018	f	t
+2024-02-13	2023-2024	Air Force	San José State	73	66	130019	f	f
+2024-02-21	2023-2024	Air Force	UNLV	72	43	130020	f	t
+2024-02-24	2023-2024	Air Force	New Mexico	78	77	130021	t	f
+2024-02-27	2023-2024	Air Force	Boise State	79	48	130022	f	t
+2024-03-01	2023-2024	Air Force	22 Utah State	72	60	130023	f	f
+2024-03-05	2023-2024	Air Force	Wyoming	74	63	130024	f	f
+2024-03-09	2023-2024	Air Force	Colorado State	82	73	130025	f	t
+2024-03-13	2023-2024	Air Force	New Mexico	82	56	130026	f	t
+2023-11-06	2023-2024	Akron	South Dakota State	81	75	130027	t	f
+2023-11-10	2023-2024	Akron	Southern Miss	72	54	130028	t	t
+2023-11-14	2023-2024	Akron	vsHeidelberg	114	56	130029	t	t
+2023-11-19	2023-2024	Akron	Florida International	77	71	130030	t	t
+2023-11-20	2023-2024	Akron	Utah State	65	62	130031	f	t
+2023-11-21	2023-2024	Akron	Drake	79	59	130032	f	t
+2023-11-28	2023-2024	Akron	UNLV	72	70	130033	f	f
+2023-12-05	2023-2024	Akron	Bradley	67	52	130034	t	t
+2023-12-09	2023-2024	Akron	Northern Kentucky	77	76	130035	t	f
+2023-12-17	2023-2024	Akron	vsMiami (OH)-Hamilton	88	45	130036	t	t
+2023-12-30	2023-2024	Akron	St. Bonaventure	62	61	130037	f	t
+2024-01-02	2023-2024	Akron	Northern Illinois	73	51	130038	t	f
+2024-01-05	2023-2024	Akron	Bowling Green	83	67	130039	t	t
+2024-01-09	2023-2024	Akron	Ball State	80	76	130040	t	f
+2024-01-12	2023-2024	Akron	Buffalo	76	59	130041	t	t
+2024-01-16	2023-2024	Akron	Western Michigan	77	66	130042	t	t
+2024-01-19	2023-2024	Akron	Kent State	77	71	130043	t	f
+2024-01-23	2023-2024	Akron	Ohio	67	58	130044	t	t
+2024-01-27	2023-2024	Akron	Miami (OH)	70	68	130045	f	f
+2024-01-30	2023-2024	Akron	Eastern Michigan	77	46	130046	t	f
+2024-02-02	2023-2024	Akron	Toledo	77	70	130047	t	t
+2024-02-06	2023-2024	Akron	Central Michigan	68	47	130048	t	t
+2024-02-10	2023-2024	Akron	James Madison	73	59	130049	f	f
+2024-02-17	2023-2024	Akron	Buffalo	73	62	130050	t	f
+2024-02-20	2023-2024	Akron	Toledo	72	64	130051	f	f
+2024-02-23	2023-2024	Akron	Kent State	83	70	130052	t	t
+2024-02-27	2023-2024	Akron	Ohio	74	67	130053	f	f
+2024-03-02	2023-2024	Akron	Northern Illinois	80	73	130054	t	t
+2024-03-05	2023-2024	Akron	Eastern Michigan	61	60	130055	f	t
+2024-03-08	2023-2024	Akron	Western Michigan	90	84	130056	f	f
+2024-03-14	2023-2024	Akron	Miami (OH)	75	63	130057	t	t
+2024-03-15	2023-2024	Akron	Ohio	65	62	130058	t	t
+2024-03-16	2023-2024	Akron	Kent State	62	61	130059	t	t
+2023-11-09	2023-2024	Alabama A&M	North Alabama	83	67	130060	f	f
+2023-11-18	2023-2024	Alabama A&M	Lipscomb	106	81	130061	f	f
+2023-11-21	2023-2024	Alabama A&M	Auburn	84	54	130062	f	f
+2023-11-24	2023-2024	Alabama A&M	East Tennessee State	82	71	130063	f	t
+2023-11-25	2023-2024	Alabama A&M	Cleveland State	86	59	130064	f	f
+2023-12-02	2023-2024	Alabama A&M	Vanderbilt	78	59	130065	f	f
+2023-12-09	2023-2024	Alabama A&M	Georgia Tech	70	49	130066	f	f
+2023-12-11	2023-2024	Alabama A&M	Samford	118	91	130067	f	f
+2023-12-13	2023-2024	Alabama A&M	UAB	93	82	130068	f	t
+2023-12-16	2023-2024	Alabama A&M	Chattanooga	88	72	130069	f	t
+2023-12-21	2023-2024	Alabama A&M	South Alabama	83	67	130070	f	f
+2023-12-30	2023-2024	Alabama A&M	Georgia	93	73	130071	f	f
+2024-01-06	2023-2024	Alabama A&M	Arkansas-Pine Bluff	63	62	130072	t	f
+2024-01-08	2023-2024	Alabama A&M	Mississippi Valley State	78	70	130073	t	f
+2024-01-11	2023-2024	Alabama A&M	Alcorn State	74	71	130074	f	t
+2024-01-13	2023-2024	Alabama A&M	Jackson State	75	67	130075	f	t
+2024-01-15	2023-2024	Alabama A&M	Alabama State	72	55	130076	f	t
+2024-01-27	2023-2024	Alabama A&M	Texas Southern	85	69	130077	f	f
+2024-01-29	2023-2024	Alabama A&M	Prairie View A&M	87	76	130078	f	f
+2024-02-03	2023-2024	Alabama A&M	Florida A&M	73	61	130079	t	t
+2024-02-05	2023-2024	Alabama A&M	Bethune-Cookman	72	68	130080	t	t
+2024-02-10	2023-2024	Alabama A&M	Southern	69	62	130081	f	f
+2024-02-12	2023-2024	Alabama A&M	Grambling	60	50	130082	t	f
+2024-02-17	2023-2024	Alabama A&M	Mississippi Valley State	80	57	130083	t	t
+2024-02-19	2023-2024	Alabama A&M	Arkansas-Pine Bluff	75	67	130084	t	t
+2024-02-24	2023-2024	Alabama A&M	Bethune-Cookman	63	61	130085	f	f
+2024-02-26	2023-2024	Alabama A&M	Florida A&M	76	58	130086	f	f
+2024-03-02	2023-2024	Alabama A&M	Alabama State	58	53	130087	t	t
+2024-03-07	2023-2024	Alabama A&M	Grambling	74	73	130088	f	t
+2024-03-09	2023-2024	Alabama A&M	Southern	66	56	130089	t	t
+2024-03-13	2023-2024	Alabama A&M	Alcorn State	75	63	130090	t	t
+2024-03-15	2023-2024	Alabama A&M	Texas Southern	72	65	130091	f	t
+2023-11-06	2023-2024	Alabama	Morehead State	105	73	130092	t	t
+2023-11-10	2023-2024	Alabama	Indiana State	102	80	130093	t	t
+2023-11-14	2023-2024	Alabama	South Alabama	102	46	130094	t	t
+2023-11-17	2023-2024	Alabama	Mercer	98	67	130095	t	t
+2023-11-24	2023-2024	Alabama	Ohio State	92	81	130096	f	t
+2023-11-25	2023-2024	Alabama	Oregon	99	91	130097	t	t
+2023-11-28	2023-2024	Alabama	Clemson	85	77	130098	f	t
+2023-12-04	2023-2024	Alabama	Arkansas State	89	65	130099	t	t
+2023-12-09	2023-2024	Alabama	4 Purdue	92	86	130100	f	t
+2023-12-16	2023-2024	Alabama	8 Creighton	85	82	130101	f	f
+2023-12-20	2023-2024	Alabama	4 Arizona	87	74	130102	f	t
+2023-12-23	2023-2024	Alabama	Eastern Kentucky	111	67	130103	t	t
+2023-12-30	2023-2024	Alabama	Liberty	101	56	130104	t	t
+2024-01-06	2023-2024	Alabama	Vanderbilt	78	75	130105	t	f
+2024-01-09	2023-2024	Alabama	South Carolina	74	47	130106	t	t
+2024-01-13	2023-2024	Alabama	Mississippi State	82	74	130107	t	f
+2024-01-16	2023-2024	Alabama	Missouri	93	75	130108	t	t
+2024-01-20	2023-2024	Alabama	6 Tennessee	91	71	130109	f	f
+2024-01-24	2023-2024	Alabama	8 Auburn	79	75	130110	t	t
+2024-01-27	2023-2024	Alabama	LSU	109	88	130111	t	t
+2024-01-31	2023-2024	Alabama	Georgia	85	76	130112	t	f
+2024-02-03	2023-2024	Alabama	Mississippi State	99	67	130113	t	t
+2024-02-07	2023-2024	Alabama	12 Auburn	99	81	130114	f	f
+2024-02-10	2023-2024	Alabama	LSU	109	92	130115	t	f
+2024-02-17	2023-2024	Alabama	Texas A&M	100	75	130116	t	t
+2024-02-24	2023-2024	Alabama	17 Kentucky	117	95	130117	f	f
+2024-02-28	2023-2024	Alabama	Ole Miss	103	88	130118	t	f
+2024-03-02	2023-2024	Alabama	4 Tennessee	81	74	130119	f	t
+2024-03-05	2023-2024	Alabama	Florida	105	87	130120	f	f
+2024-03-15	2023-2024	Alabama	Florida	102	88	130121	f	t
+2023-11-06	2023-2024	Alabama State	Ole Miss	69	59	130122	f	f
+2023-11-10	2023-2024	Alabama State	Iowa	98	67	130123	f	f
+2023-11-14	2023-2024	Alabama State	vsOglethorpe	115	51	130124	t	t
+2023-11-17	2023-2024	Alabama State	Memphis	92	75	130125	f	f
+2023-11-22	2023-2024	Alabama State	Samford	99	67	130126	f	f
+2023-11-24	2023-2024	Alabama State	North Carolina A&T	88	73	130127	t	t
+2023-12-03	2023-2024	Alabama State	vsMississippi University For Women	80	60	130128	t	t
+2023-12-13	2023-2024	Alabama State	LSU	74	56	130129	f	f
+2023-12-19	2023-2024	Alabama State	USC	79	59	130130	f	t
+2023-12-22	2023-2024	Alabama State	Auburn	82	62	130131	f	f
+2023-12-29	2023-2024	Alabama State	South Florida	73	70	130132	f	f
+2024-01-02	2023-2024	Alabama State	vsJohnson University Florida	84	53	130133	t	t
+2024-01-06	2023-2024	Alabama State	Mississippi Valley State	54	51	130134	t	f
+2024-01-08	2023-2024	Alabama State	Arkansas-Pine Bluff	83	72	130135	t	f
+2024-01-11	2023-2024	Alabama State	Jackson State	73	63	130136	f	t
+2024-01-13	2023-2024	Alabama State	Alcorn State	55	53	130137	t	t
+2024-01-15	2023-2024	Alabama State	Alabama A&M	72	55	130138	t	t
+2024-01-27	2023-2024	Alabama State	Prairie View A&M	74	67	130139	t	f
+2024-01-29	2023-2024	Alabama State	Texas Southern	56	55	130140	f	f
+2024-02-03	2023-2024	Alabama State	Bethune-Cookman	79	68	130141	f	t
+2024-02-05	2023-2024	Alabama State	Florida A&M	62	53	130142	t	t
+2024-02-10	2023-2024	Alabama State	Grambling	74	68	130143	f	f
+2024-02-12	2023-2024	Alabama State	Southern	73	62	130144	f	f
+2024-02-17	2023-2024	Alabama State	Arkansas-Pine Bluff	80	74	130145	f	t
+2024-02-19	2023-2024	Alabama State	Mississippi Valley State	61	46	130146	t	t
+2024-02-24	2023-2024	Alabama State	Florida A&M	73	65	130147	f	f
+2024-03-02	2023-2024	Alabama State	Alabama A&M	58	53	130148	f	f
+2024-03-07	2023-2024	Alabama State	Southern	65	57	130149	f	t
+2024-03-13	2023-2024	Alabama State	Grambling	56	50	130150	f	t
+2023-11-06	2023-2024	Alcorn State	14 Arkansas	93	59	130151	f	f
+2023-11-08	2023-2024	Alcorn State	vsXavier (LA)	70	62	130152	t	t
+2023-11-14	2023-2024	Alcorn State	Arkansas State	100	86	130153	f	f
+2023-11-16	2023-2024	Alcorn State	UAB	80	77	130154	f	f
+2023-11-19	2023-2024	Alcorn State	18 Michigan State	81	49	130155	f	f
+2023-11-21	2023-2024	Alcorn State	TCU	93	74	130156	f	f
+2023-11-22	2023-2024	Alcorn State	UT Arlington	82	69	130157	f	f
+2023-11-24	2023-2024	Alcorn State	Clemson	90	69	130158	f	f
+2023-12-10	2023-2024	Alcorn State	VCU	86	58	130159	f	f
+2023-12-12	2023-2024	Alcorn State	Maryland	105	65	130160	f	f
+2023-12-17	2023-2024	Alcorn State	Northern Iowa	100	82	130161	f	f
+2023-12-19	2023-2024	Alcorn State	Drake	92	55	130162	f	f
+2023-12-21	2023-2024	Alcorn State	George Washington	79	75	130163	f	f
+2024-01-06	2023-2024	Alcorn State	Jackson State	88	80	130164	f	f
+2024-01-11	2023-2024	Alcorn State	Alabama A&M	74	71	130165	t	f
+2024-01-13	2023-2024	Alcorn State	Alabama State	55	53	130166	f	f
+2024-01-20	2023-2024	Alcorn State	Texas Southern	72	61	130167	f	t
+2024-01-22	2023-2024	Alcorn State	Prairie View A&M	90	78	130168	t	t
+2024-01-27	2023-2024	Alcorn State	Florida A&M	76	67	130169	t	f
+2024-01-29	2023-2024	Alcorn State	Bethune-Cookman	70	67	130170	t	f
+2024-02-03	2023-2024	Alcorn State	Southern	71	70	130171	f	t
+2024-02-05	2023-2024	Alcorn State	Grambling	78	67	130172	f	t
+2024-02-10	2023-2024	Alcorn State	Arkansas-Pine Bluff	68	56	130173	t	f
+2024-02-12	2023-2024	Alcorn State	Mississippi Valley State	72	55	130174	t	f
+2024-02-17	2023-2024	Alcorn State	Bethune-Cookman	69	54	130175	t	t
+2024-02-19	2023-2024	Alcorn State	Florida A&M	79	68	130176	t	t
+2024-03-02	2023-2024	Alcorn State	Prairie View A&M	73	65	130177	t	f
+2024-03-04	2023-2024	Alcorn State	Texas Southern	82	79	130178	t	f
+2024-03-07	2023-2024	Alcorn State	Mississippi Valley State	74	67	130179	t	t
+2024-03-09	2023-2024	Alcorn State	Arkansas-Pine Bluff	104	95	130180	t	t
+2024-03-13	2023-2024	Alcorn State	Alabama A&M	75	63	130181	f	t
+2023-11-06	2023-2024	American	22 Villanova	90	63	130182	f	f
+2023-11-09	2023-2024	American	William & Mary	75	56	130183	f	f
+2023-11-13	2023-2024	American	Siena	78	58	130184	t	t
+2023-11-16	2023-2024	American	NJIT	87	73	130185	t	t
+2023-11-22	2023-2024	American	Mount St. Mary's	68	65	130186	t	t
+2023-11-26	2023-2024	American	vsHood College	103	74	130187	t	t
+2023-11-29	2023-2024	American	Harvard	80	75	130188	f	f
+2023-12-02	2023-2024	American	St. Francis (PA)	75	73	130189	f	t
+2023-12-06	2023-2024	American	Saint Joseph's	69	53	130190	f	f
+2023-12-09	2023-2024	American	VMI	77	69	130191	t	f
+2023-12-21	2023-2024	American	Virginia Tech	77	55	130192	f	f
+2023-12-29	2023-2024	American	UMBC	87	85	130193	t	f
+2024-01-03	2023-2024	American	Lehigh	75	66	130194	t	t
+2024-01-06	2023-2024	American	Bucknell	71	63	130195	t	f
+2024-01-10	2023-2024	American	Boston University	72	68	130196	f	f
+2024-01-13	2023-2024	American	Army	79	60	130197	t	t
+2024-01-15	2023-2024	American	Loyola Maryland	66	52	130198	t	f
+2024-01-20	2023-2024	American	Lehigh	70	68	130199	f	f
+2024-01-24	2023-2024	American	Holy Cross	84	65	130200	t	t
+2024-01-27	2023-2024	American	Colgate	73	54	130201	f	t
+2024-01-31	2023-2024	American	Louisiana-Lafayette	69	66	130202	t	f
+2024-02-07	2023-2024	American	Loyola Maryland	44	43	130203	f	t
+2024-02-10	2023-2024	American	Holy Cross	58	56	130204	f	f
+2024-02-14	2023-2024	American	Navy	59	42	130205	t	f
+2024-02-17	2023-2024	American	Louisiana-Lafayette	68	62	130206	f	t
+2024-02-21	2023-2024	American	Boston University	67	52	130207	f	t
+2024-02-25	2023-2024	American	Colgate	66	64	130208	t	f
+2024-02-28	2023-2024	American	Army	73	51	130209	t	f
+2024-03-02	2023-2024	American	Navy	71	65	130210	f	t
+2024-03-07	2023-2024	American	Bucknell	80	57	130211	f	t
+2023-11-07	2023-2024	Appalachian State	vsOakland City	87	49	130212	t	t
+2023-11-11	2023-2024	Appalachian State	Northern Illinois	91	78	130213	f	f
+2023-11-21	2023-2024	Appalachian State	UNC Wilmington	86	56	130214	t	t
+2023-11-22	2023-2024	Appalachian State	Murray State	67	57	130215	t	t
+2023-11-26	2023-2024	Appalachian State	Austin Peay	78	58	130216	t	t
+2023-11-29	2023-2024	Appalachian State	East Tennessee State	72	61	130217	t	t
+2023-12-03	2023-2024	Appalachian State	Auburn	69	64	130218	t	t
+2023-12-05	2023-2024	Appalachian State	vsCentral Penn	111	35	130219	t	t
+2023-12-13	2023-2024	Appalachian State	Queens University	93	81	130220	t	f
+2023-12-16	2023-2024	Appalachian State	Gardner-Webb	80	59	130221	t	t
+2023-12-21	2023-2024	Appalachian State	UNC Asheville	76	63	130222	f	t
+2023-12-30	2023-2024	Appalachian State	UL Monroe	67	55	130223	t	t
+2024-01-06	2023-2024	Appalachian State	Troy	66	62	130224	f	f
+2024-01-11	2023-2024	Appalachian State	Coastal Carolina	70	45	130225	t	f
+2024-01-13	2023-2024	Appalachian State	James Madison	59	55	130226	t	f
+2024-01-17	2023-2024	Appalachian State	Georgia State	76	68	130227	t	t
+2024-01-20	2023-2024	Appalachian State	Coastal Carolina	88	59	130228	t	t
+2024-01-25	2023-2024	Appalachian State	Georgia Southern	84	74	130229	t	t
+2024-01-27	2023-2024	Appalachian State	James Madison	82	76	130230	t	t
+2024-02-01	2023-2024	Appalachian State	Georgia State	81	71	130231	t	f
+2024-02-07	2023-2024	Appalachian State	Texas State	63	56	130232	f	f
+2024-02-15	2023-2024	Appalachian State	Marshall	73	58	130233	t	t
+2024-02-17	2023-2024	Appalachian State	Louisiana	85	73	130234	t	t
+2024-02-22	2023-2024	Appalachian State	Old Dominion	82	67	130235	t	f
+2024-02-24	2023-2024	Appalachian State	Marshall	65	58	130236	t	f
+2024-02-28	2023-2024	Appalachian State	Old Dominion	89	64	130237	t	t
+2024-03-01	2023-2024	Appalachian State	Arkansas State	80	57	130238	t	t
+2024-03-10	2023-2024	Appalachian State	Arkansas State	67	65	130239	f	t
+2023-11-08	2023-2024	Arizona State	Mississippi State	71	56	130240	f	t
+2023-11-11	2023-2024	Arizona State	Texas Southern	63	52	130241	t	t
+2023-11-16	2023-2024	Arizona State	UMass Lowell	71	69	130242	t	t
+2023-11-23	2023-2024	Arizona State	BYU	77	49	130243	f	t
+2023-11-24	2023-2024	Arizona State	Vanderbilt	82	67	130244	t	t
+2023-11-29	2023-2024	Arizona State	Sam Houston	78	61	130245	t	t
+2023-12-03	2023-2024	Arizona State	San Francisco	72	61	130246	t	t
+2023-12-06	2023-2024	Arizona State	SMU	76	74	130247	t	t
+2023-12-09	2023-2024	Arizona State	San Diego	89	84	130248	f	f
+2023-12-16	2023-2024	Arizona State	TCU	79	59	130249	f	t
+2023-12-20	2023-2024	Arizona State	Northwestern	65	46	130250	f	t
+2023-12-29	2023-2024	Arizona State	Stanford	76	73	130251	t	f
+2023-12-31	2023-2024	Arizona State	California	71	69	130252	t	f
+2024-01-04	2023-2024	Arizona State	Utah	82	70	130253	t	t
+2024-01-06	2023-2024	Arizona State	Colorado	76	73	130254	t	t
+2024-01-11	2023-2024	Arizona State	Washington	82	67	130255	f	f
+2024-01-17	2023-2024	Arizona State	UCLA	68	66	130256	f	t
+2024-01-20	2023-2024	Arizona State	USC	82	67	130257	t	t
+2024-01-25	2023-2024	Arizona State	Oregon	80	61	130258	f	f
+2024-01-27	2023-2024	Arizona State	Oregon State	84	71	130259	f	f
+2024-02-01	2023-2024	Arizona State	Stanford	71	62	130260	f	t
+2024-02-03	2023-2024	Arizona State	California	81	66	130261	f	t
+2024-02-08	2023-2024	Arizona State	Colorado	82	70	130262	f	f
+2024-02-10	2023-2024	Arizona State	Utah	85	77	130263	t	f
+2024-02-14	2023-2024	Arizona State	Oregon State	79	61	130264	t	t
+2024-02-17	2023-2024	Arizona State	5 Arizona	105	60	130265	f	f
+2024-02-24	2023-2024	Arizona State	21 Washington State	73	61	130266	t	t
+2024-02-28	2023-2024	Arizona State	6 Arizona	85	67	130267	f	t
+2024-03-07	2023-2024	Arizona State	USC	81	73	130268	f	f
+2024-03-09	2023-2024	Arizona State	UCLA	59	47	130269	f	f
+2024-03-13	2023-2024	Arizona State	Utah	90	57	130270	f	t
+2023-11-06	2023-2024	Arizona	Morgan State	122	59	130271	t	t
+2023-11-10	2023-2024	Arizona	2 Duke	78	73	130272	t	f
+2023-11-13	2023-2024	Arizona	Southern	97	59	130273	t	t
+2023-11-17	2023-2024	Arizona	Belmont	100	68	130274	t	t
+2023-11-19	2023-2024	Arizona	UT Arlington	101	56	130275	t	t
+2023-11-23	2023-2024	Arizona	21 Michigan State	74	68	130276	t	t
+2023-12-02	2023-2024	Arizona	Colgate	82	55	130277	t	t
+2023-12-09	2023-2024	Arizona	23 Wisconsin	98	73	130278	t	t
+2023-12-16	2023-2024	Arizona	3 Purdue	92	84	130279	f	t
+2023-12-20	2023-2024	Arizona	Alabama	87	74	130280	t	t
+2023-12-29	2023-2024	Arizona	California	100	81	130281	t	f
+2023-12-31	2023-2024	Arizona	Stanford	100	82	130282	f	f
+2024-01-04	2023-2024	Arizona	Colorado	97	50	130283	t	t
+2024-01-06	2023-2024	Arizona	Utah	92	73	130284	t	t
+2024-01-13	2023-2024	Arizona	Washington State	73	70	130285	f	f
+2024-01-17	2023-2024	Arizona	USC	82	67	130286	t	t
+2024-01-20	2023-2024	Arizona	UCLA	77	71	130287	t	t
+2024-01-25	2023-2024	Arizona	Oregon State	83	80	130288	f	f
+2024-01-27	2023-2024	Arizona	Oregon	87	78	130289	t	f
+2024-02-01	2023-2024	Arizona	California	91	65	130290	t	t
+2024-02-04	2023-2024	Arizona	Stanford	82	71	130291	t	t
+2024-02-10	2023-2024	Arizona	Colorado	99	79	130292	t	f
+2024-02-17	2023-2024	Arizona	Arizona State	105	60	130293	t	t
+2024-02-22	2023-2024	Arizona	21 Washington State	77	74	130294	f	t
+2024-02-24	2023-2024	Arizona	Washington	91	75	130295	t	t
+2024-02-28	2023-2024	Arizona	Arizona State	85	67	130296	t	f
+2024-03-02	2023-2024	Arizona	Oregon	103	83	130297	t	t
+2024-03-07	2023-2024	Arizona	UCLA	88	65	130298	t	f
+2024-03-09	2023-2024	Arizona	USC	78	65	130299	f	f
+2024-03-14	2023-2024	Arizona	USC	70	49	130300	t	t
+2024-03-15	2023-2024	Arizona	Oregon	67	59	130301	f	t
+2023-11-06	2023-2024	Arkansas	Alcorn State	93	59	130302	t	t
+2023-11-10	2023-2024	Arkansas	Gardner-Webb	86	68	130303	t	t
+2023-11-13	2023-2024	Arkansas	Old Dominion	86	77	130304	t	t
+2023-11-17	2023-2024	Arkansas	UNC Greensboro	78	72	130305	f	t
+2023-11-23	2023-2024	Arkansas	Memphis	84	79	130306	f	t
+2023-11-24	2023-2024	Arkansas	14 North Carolina	87	72	130307	f	t
+2023-11-29	2023-2024	Arkansas	7 Duke	80	75	130308	t	t
+2023-12-04	2023-2024	Arkansas	Furman	97	83	130309	t	t
+2023-12-09	2023-2024	Arkansas	19 Oklahoma	79	70	130310	f	t
+2023-12-16	2023-2024	Arkansas	Lipscomb	69	66	130311	t	t
+2023-12-21	2023-2024	Arkansas	Abilene Christian	83	73	130312	t	t
+2023-12-30	2023-2024	Arkansas	UNC Wilmington	106	90	130313	t	t
+2024-01-06	2023-2024	Arkansas	25 Auburn	83	51	130314	f	t
+2024-01-10	2023-2024	Arkansas	Georgia	76	66	130315	f	f
+2024-01-13	2023-2024	Arkansas	Florida	90	68	130316	f	f
+2024-01-16	2023-2024	Arkansas	Texas A&M	78	77	130317	t	t
+2024-01-20	2023-2024	Arkansas	South Carolina	77	64	130318	f	t
+2024-01-24	2023-2024	Arkansas	Ole Miss	77	51	130319	f	f
+2024-01-27	2023-2024	Arkansas	6 Kentucky	63	57	130320	f	t
+2024-01-31	2023-2024	Arkansas	Missouri	91	84	130321	t	f
+2024-02-03	2023-2024	Arkansas	LSU	95	74	130322	f	f
+2024-02-10	2023-2024	Arkansas	Georgia	78	75	130323	t	t
+2024-02-14	2023-2024	Arkansas	8 Tennessee	92	63	130324	f	t
+2024-02-17	2023-2024	Arkansas	Mississippi State	71	67	130325	f	f
+2024-02-20	2023-2024	Arkansas	Texas A&M	78	71	130326	t	f
+2024-02-24	2023-2024	Arkansas	Missouri	88	73	130327	t	t
+2024-02-27	2023-2024	Arkansas	Vanderbilt	85	82	130328	f	t
+2024-03-02	2023-2024	Arkansas	16 Kentucky	111	102	130329	f	f
+2024-03-06	2023-2024	Arkansas	LSU	94	83	130330	t	t
+2024-03-14	2023-2024	Arkansas	15 South Carolina	80	66	130331	f	t
+2023-11-06	2023-2024	Arkansas State	Wisconsin	105	76	130332	f	f
+2023-11-11	2023-2024	Arkansas State	Bowling Green	81	75	130333	f	f
+2023-11-14	2023-2024	Arkansas State	Alcorn State	100	86	130334	t	t
+2023-11-17	2023-2024	Arkansas State	Iowa	88	74	130335	f	f
+2023-11-24	2023-2024	Arkansas State	San Diego	71	57	130336	f	t
+2023-11-25	2023-2024	Arkansas State	UT Rio Grande Valley	75	58	130337	t	t
+2023-11-28	2023-2024	Arkansas State	Jackson State	75	71	130338	f	t
+2023-12-01	2023-2024	Arkansas State	Little Rock	77	66	130339	f	f
+2023-12-04	2023-2024	Arkansas State	Alabama	89	65	130340	f	f
+2023-12-09	2023-2024	Arkansas State	UAB	87	68	130341	t	t
+2023-12-13	2023-2024	Arkansas State	Louisville	75	63	130342	t	f
+2023-12-20	2023-2024	Arkansas State	Belmont	74	70	130343	f	f
+2023-12-30	2023-2024	Arkansas State	Georgia State	91	90	130344	f	f
+2024-01-04	2023-2024	Arkansas State	Georgia Southern	109	83	130345	t	t
+2024-01-06	2023-2024	Arkansas State	Old Dominion	90	75	130346	t	t
+2024-01-11	2023-2024	Arkansas State	Texas State	85	82	130347	t	t
+2024-01-13	2023-2024	Arkansas State	Louisiana	84	77	130348	f	t
+2024-01-17	2023-2024	Arkansas State	Southern Miss	69	66	130349	f	f
+2024-01-20	2023-2024	Arkansas State	Texas State	79	72	130350	t	f
+2024-01-26	2023-2024	Arkansas State	Louisiana	81	75	130351	f	f
+2024-01-31	2023-2024	Arkansas State	Southern Miss	78	71	130352	t	t
+2024-02-03	2023-2024	Arkansas State	UL Monroe	95	80	130353	t	t
+2024-02-07	2023-2024	Arkansas State	James Madison	77	73	130354	f	t
+2024-02-10	2023-2024	Arkansas State	Ohio	100	87	130355	t	t
+2024-02-15	2023-2024	Arkansas State	Troy	82	71	130356	t	f
+2024-02-17	2023-2024	Arkansas State	South Alabama	76	73	130357	t	f
+2024-02-22	2023-2024	Arkansas State	Troy	79	71	130358	t	t
+2024-02-24	2023-2024	Arkansas State	South Alabama	95	78	130359	t	t
+2024-02-28	2023-2024	Arkansas State	Coastal Carolina	71	60	130360	t	f
+2024-03-01	2023-2024	Arkansas State	Appalachian State	80	57	130361	f	f
+2024-03-09	2023-2024	Arkansas State	Louisiana	89	62	130362	t	t
+2024-03-10	2023-2024	Arkansas State	Appalachian State	67	65	130363	t	t
+2024-03-11	2023-2024	Arkansas State	James Madison	91	71	130364	f	t
+2023-11-06	2023-2024	AR-Pine Bluff	Missouri	101	79	130365	f	f
+2023-11-09	2023-2024	AR-Pine Bluff	vsChampion Christian	116	73	130366	t	t
+2023-11-11	2023-2024	AR-Pine Bluff	vsSouthwestern Christian	112	68	130367	t	t
+2023-11-13	2023-2024	AR-Pine Bluff	Central Arkansas	85	83	130368	t	f
+2023-11-18	2023-2024	AR-Pine Bluff	Incarnate Word	100	81	130369	f	t
+2023-11-21	2023-2024	AR-Pine Bluff	Minnesota	86	67	130370	f	f
+2023-11-24	2023-2024	AR-Pine Bluff	Ball State	92	74	130371	f	f
+2023-11-27	2023-2024	AR-Pine Bluff	vsArkansas Baptist	85	60	130372	t	t
+2023-11-30	2023-2024	AR-Pine Bluff	25 Oklahoma	107	86	130373	f	f
+2023-12-05	2023-2024	AR-Pine Bluff	7 Gonzaga	111	71	130374	f	f
+2023-12-09	2023-2024	AR-Pine Bluff	5 UConn	101	63	130375	f	f
+2023-12-12	2023-2024	AR-Pine Bluff	South Florida	104	86	130376	f	f
+2023-12-18	2023-2024	AR-Pine Bluff	vsEcclesia	125	75	130377	t	t
+2024-01-06	2023-2024	AR-Pine Bluff	Alabama A&M	63	62	130378	f	t
+2024-01-08	2023-2024	AR-Pine Bluff	Alabama State	83	72	130379	f	t
+2024-01-13	2023-2024	AR-Pine Bluff	Texas Southern	70	67	130380	t	f
+2024-01-20	2023-2024	AR-Pine Bluff	Florida A&M	99	97	130381	t	t
+2024-01-22	2023-2024	AR-Pine Bluff	Bethune-Cookman	76	72	130382	t	t
+2024-01-27	2023-2024	AR-Pine Bluff	Southern	80	66	130383	f	f
+2024-01-29	2023-2024	AR-Pine Bluff	Grambling	86	70	130384	t	f
+2024-02-03	2023-2024	AR-Pine Bluff	Mississippi Valley State	83	77	130385	t	f
+2024-02-05	2023-2024	AR-Pine Bluff	Prairie View A&M	75	74	130386	f	f
+2024-02-10	2023-2024	AR-Pine Bluff	Alcorn State	68	56	130387	f	t
+2024-02-12	2023-2024	AR-Pine Bluff	Jackson State	76	63	130388	f	t
+2024-02-17	2023-2024	AR-Pine Bluff	Alabama State	80	74	130389	t	f
+2024-02-19	2023-2024	AR-Pine Bluff	Alabama A&M	75	67	130390	f	f
+2024-02-24	2023-2024	AR-Pine Bluff	Prairie View A&M	72	59	130391	t	t
+2024-02-26	2023-2024	AR-Pine Bluff	Texas Southern	77	70	130392	f	t
+2024-03-02	2023-2024	AR-Pine Bluff	Mississippi Valley State	78	69	130393	t	t
+2024-03-07	2023-2024	AR-Pine Bluff	Jackson State	89	84	130394	f	f
+2024-03-09	2023-2024	AR-Pine Bluff	Alcorn State	104	95	130395	f	f
+2023-11-06	2023-2024	Army	Marist	71	55	130396	f	t
+2023-11-09	2023-2024	Army	Stonehill	57	44	130397	f	f
+2023-11-12	2023-2024	Army	Indiana	72	64	130398	f	f
+2023-11-17	2023-2024	Army	Quinnipiac	67	58	130399	f	t
+2023-11-21	2023-2024	Army	UAlbany	62	59	130400	f	t
+2023-11-25	2023-2024	Army	Binghamton	75	68	130401	f	f
+2023-11-29	2023-2024	Army	Central Connecticut	79	51	130402	f	t
+2023-12-01	2023-2024	Army	vsSUNY-Maritime	74	39	130403	t	t
+2023-12-05	2023-2024	Army	Le Moyne	68	51	130404	t	t
+2023-12-08	2023-2024	Army	Harvard	70	64	130405	f	f
+2023-12-21	2023-2024	Army	UTSA	63	53	130406	t	f
+2023-12-30	2023-2024	Army	vsMerchant Marine Academy	58	50	130407	t	t
+2024-01-03	2023-2024	Army	Louisiana-Lafayette	52	47	130408	f	f
+2024-01-06	2023-2024	Army	Holy Cross	70	57	130409	t	t
+2024-01-10	2023-2024	Army	Loyola Maryland	71	65	130410	f	t
+2024-01-13	2023-2024	Army	American University	79	60	130411	f	f
+2024-01-17	2023-2024	Army	Colgate	64	56	130412	f	t
+2024-01-20	2023-2024	Army	Navy	57	53	130413	f	f
+2024-01-24	2023-2024	Army	Boston University	69	59	130414	t	f
+2024-01-27	2023-2024	Army	Bucknell	66	56	130415	f	t
+2024-01-31	2023-2024	Army	Colgate	74	55	130416	f	f
+2024-02-07	2023-2024	Army	Lehigh	68	57	130417	t	f
+2024-02-14	2023-2024	Army	Boston University	65	50	130418	t	t
+2024-02-17	2023-2024	Army	Holy Cross	59	53	130419	t	f
+2024-02-21	2023-2024	Army	Lehigh	85	54	130420	f	t
+2024-02-25	2023-2024	Army	Bucknell	54	41	130421	f	f
+2024-02-28	2023-2024	Army	American University	73	51	130422	f	t
+2024-03-02	2023-2024	Army	Loyola Maryland	69	68	130423	f	f
+2024-03-05	2023-2024	Army	Holy Cross	84	68	130424	f	t
+2023-11-07	2023-2024	Auburn	20 Baylor	88	82	130425	f	t
+2023-11-10	2023-2024	Auburn	SE Louisiana	86	71	130426	t	t
+2023-11-16	2023-2024	Auburn	Notre Dame	83	59	130427	t	t
+2023-11-17	2023-2024	Auburn	St. Bonaventure	77	60	130428	t	t
+2023-11-21	2023-2024	Auburn	Alabama A&M	84	54	130429	t	t
+2023-11-29	2023-2024	Auburn	Virginia Tech	74	57	130430	t	t
+2023-12-03	2023-2024	Auburn	Appalachian State	69	64	130431	f	f
+2023-12-09	2023-2024	Auburn	Indiana	104	76	130432	t	t
+2023-12-13	2023-2024	Auburn	UNC Asheville	87	62	130433	t	t
+2023-12-17	2023-2024	Auburn	USC	91	75	130434	t	t
+2023-12-22	2023-2024	Auburn	Alabama State	82	62	130435	t	t
+2023-12-30	2023-2024	Auburn	Chattanooga	101	66	130436	t	t
+2024-01-02	2023-2024	Auburn	Pennsylvania	88	68	130437	t	t
+2024-01-06	2023-2024	Auburn	Arkansas	83	51	130438	t	f
+2024-01-09	2023-2024	Auburn	Texas A&M	66	55	130439	t	t
+2024-01-13	2023-2024	Auburn	LSU	93	78	130440	t	t
+2024-01-17	2023-2024	Auburn	Vanderbilt	80	65	130441	t	f
+2024-01-20	2023-2024	Auburn	22 Ole Miss	82	59	130442	t	t
+2024-01-24	2023-2024	Auburn	Alabama	79	75	130443	f	f
+2024-01-27	2023-2024	Auburn	Mississippi State	64	58	130444	f	f
+2024-01-31	2023-2024	Auburn	Vanderbilt	81	54	130445	t	t
+2024-02-03	2023-2024	Auburn	Ole Miss	91	77	130446	t	f
+2024-02-07	2023-2024	Auburn	16 Alabama	99	81	130447	t	t
+2024-02-10	2023-2024	Auburn	Florida	81	65	130448	f	f
+2024-02-14	2023-2024	Auburn	11 South Carolina	101	61	130449	t	t
+2024-02-17	2023-2024	Auburn	22 Kentucky	70	59	130450	f	t
+2024-02-24	2023-2024	Auburn	Georgia	97	76	130451	t	f
+2024-02-28	2023-2024	Auburn	4 Tennessee	92	84	130452	f	f
+2024-03-02	2023-2024	Auburn	Mississippi State	78	63	130453	t	t
+2024-03-05	2023-2024	Auburn	Missouri	101	74	130454	t	f
+2024-03-09	2023-2024	Auburn	Georgia	92	78	130455	t	t
+2024-03-15	2023-2024	Auburn	15 South Carolina	86	55	130456	t	t
+2024-03-16	2023-2024	Auburn	Mississippi State	73	66	130457	t	t
+2024-03-17	2023-2024	Auburn	Florida	86	67	130458	t	t
+2023-11-06	2023-2024	Austin Peay	vsLife University	90	72	130459	t	t
+2023-11-10	2023-2024	Austin Peay	George Mason	67	45	130460	f	f
+2023-11-14	2023-2024	Austin Peay	vsFisk	79	52	130461	t	t
+2023-11-17	2023-2024	Austin Peay	UTEP	71	63	130462	f	f
+2023-11-20	2023-2024	Austin Peay	Tarleton State	66	59	130463	f	t
+2023-11-22	2023-2024	Austin Peay	Sacramento State	74	71	130464	t	t
+2023-11-26	2023-2024	Austin Peay	Appalachian State	78	58	130465	f	f
+2023-11-29	2023-2024	Austin Peay	Morehead State	61	50	130466	f	t
+2023-12-02	2023-2024	Austin Peay	Tennessee State	69	65	130467	f	f
+2023-12-05	2023-2024	Austin Peay	vsMidway University	98	44	130468	t	t
+2023-12-09	2023-2024	Austin Peay	Murray State	53	49	130469	t	t
+2023-12-12	2023-2024	Austin Peay	Southern Illinois	70	68	130470	t	f
+2023-12-16	2023-2024	Austin Peay	Western Kentucky	65	64	130471	f	f
+2023-12-22	2023-2024	Austin Peay	Ohio	71	67	130472	t	t
+2023-12-30	2023-2024	Austin Peay	19 Memphis	81	70	130473	f	f
+2024-01-04	2023-2024	Austin Peay	Bellarmine	84	68	130474	t	f
+2024-01-06	2023-2024	Austin Peay	Eastern Kentucky	69	59	130475	f	f
+2024-01-13	2023-2024	Austin Peay	Lipscomb	91	77	130476	f	f
+2024-01-20	2023-2024	Austin Peay	Central Arkansas	94	71	130477	t	t
+2024-01-25	2023-2024	Austin Peay	Stetson	83	82	130478	f	f
+2024-01-27	2023-2024	Austin Peay	Florida Gulf Coast	73	67	130479	f	f
+2024-01-31	2023-2024	Austin Peay	Jacksonville State	63	43	130480	f	f
+2024-02-08	2023-2024	Austin Peay	Kennesaw State	85	69	130481	t	t
+2024-02-10	2023-2024	Austin Peay	Queens University	79	76	130482	t	t
+2024-02-15	2023-2024	Austin Peay	Central Arkansas	77	67	130483	t	f
+2024-02-17	2023-2024	Austin Peay	North Alabama	87	79	130484	t	f
+2024-02-24	2023-2024	Austin Peay	Lipscomb	90	85	130485	f	t
+2024-02-28	2023-2024	Austin Peay	Eastern Kentucky	83	79	130486	t	t
+2024-03-07	2023-2024	Austin Peay	North Alabama	77	71	130487	t	t
+2024-03-10	2023-2024	Austin Peay	Stetson	94	91	130488	f	f
+2023-11-06	2023-2024	BYU	Houston Christian	110	63	130489	t	t
+2023-11-10	2023-2024	BYU	17 San Diego State	74	65	130490	t	t
+2023-11-15	2023-2024	BYU	SE Louisiana	105	48	130491	t	t
+2023-11-18	2023-2024	BYU	Morgan State	93	50	130492	t	t
+2023-11-23	2023-2024	BYU	Arizona State	77	49	130493	t	t
+2023-11-24	2023-2024	BYU	NC State	95	86	130494	t	t
+2023-12-01	2023-2024	BYU	Fresno State	85	56	130495	t	t
+2023-12-05	2023-2024	BYU	Evansville	96	55	130496	t	t
+2023-12-09	2023-2024	BYU	Utah	73	69	130497	f	f
+2023-12-13	2023-2024	BYU	Denver	90	74	130498	t	t
+2023-12-16	2023-2024	BYU	Georgia State	86	54	130499	t	t
+2023-12-22	2023-2024	BYU	Bellarmine	101	59	130500	t	t
+2023-12-30	2023-2024	BYU	Wyoming	94	68	130501	t	t
+2024-01-06	2023-2024	BYU	Cincinnati	71	60	130502	f	t
+2024-01-09	2023-2024	BYU	14 Baylor	81	72	130503	f	f
+2024-01-13	2023-2024	BYU	UCF	63	58	130504	t	f
+2024-01-16	2023-2024	BYU	24 Iowa State	87	72	130505	t	t
+2024-01-20	2023-2024	BYU	25 Texas Tech	85	78	130506	f	f
+2024-01-23	2023-2024	BYU	4 Houston	75	68	130507	f	t
+2024-01-27	2023-2024	BYU	Texas	84	72	130508	t	t
+2024-02-03	2023-2024	BYU	West Virginia	86	73	130509	t	f
+2024-02-06	2023-2024	BYU	Oklahoma	82	66	130510	f	f
+2024-02-10	2023-2024	BYU	Kansas State	72	66	130511	t	t
+2024-02-13	2023-2024	BYU	UCF	90	88	130512	t	t
+2024-02-17	2023-2024	BYU	Oklahoma State	93	83	130513	f	f
+2024-02-20	2023-2024	BYU	11 Baylor	78	71	130514	t	t
+2024-02-24	2023-2024	BYU	Kansas State	84	74	130515	f	f
+2024-02-27	2023-2024	BYU	7 Kansas	76	68	130516	t	f
+2024-03-02	2023-2024	BYU	TCU	87	75	130517	t	t
+2024-03-06	2023-2024	BYU	6 Iowa State	68	63	130518	f	f
+2024-03-09	2023-2024	BYU	Oklahoma State	85	71	130519	t	t
+2024-03-13	2023-2024	BYU	UCF	87	73	130520	t	t
+2024-03-14	2023-2024	BYU	25 Texas Tech	81	67	130521	f	t
+2023-11-07	2023-2024	Ball State	vsGoshen	101	40	130522	t	t
+2023-11-11	2023-2024	Ball State	Old Dominion	73	68	130523	t	t
+2023-11-14	2023-2024	Ball State	vsOakland City	92	51	130524	t	t
+2023-11-18	2023-2024	Ball State	Evansville	74	50	130525	f	f
+2023-11-21	2023-2024	Ball State	South Carolina Upstate	75	58	130526	t	t
+2023-11-24	2023-2024	Ball State	Arkansas-Pine Bluff	92	74	130527	t	t
+2023-11-28	2023-2024	Ball State	Little Rock	90	64	130528	f	f
+2023-12-02	2023-2024	Ball State	Bellarmine	67	58	130529	t	t
+2023-12-06	2023-2024	Ball State	Detroit Mercy	68	65	130530	t	f
+2023-12-10	2023-2024	Ball State	SIU Edwardsville	83	71	130531	t	t
+2023-12-16	2023-2024	Ball State	Indiana State	83	72	130532	f	t
+2023-12-21	2023-2024	Ball State	Minnesota	80	63	130533	f	f
+2024-01-02	2023-2024	Ball State	Kent State	82	69	130534	f	f
+2024-01-06	2023-2024	Ball State	Central Michigan	71	65	130535	f	t
+2024-01-09	2023-2024	Ball State	Akron	80	76	130536	f	t
+2024-01-13	2023-2024	Ball State	Toledo	77	72	130537	f	f
+2024-01-16	2023-2024	Ball State	Eastern Michigan	76	62	130538	t	f
+2024-01-23	2023-2024	Ball State	Buffalo	87	59	130539	t	f
+2024-01-27	2023-2024	Ball State	Northern Illinois	81	71	130540	t	t
+2024-01-30	2023-2024	Ball State	Bowling Green	81	72	130541	f	t
+2024-02-03	2023-2024	Ball State	Western Michigan	77	67	130542	t	f
+2024-02-10	2023-2024	Ball State	Texas State	68	60	130543	f	f
+2024-02-17	2023-2024	Ball State	Miami (OH)	80	59	130544	f	f
+2024-02-20	2023-2024	Ball State	Northern Illinois	70	63	130545	t	f
+2024-02-24	2023-2024	Ball State	Eastern Michigan	58	56	130546	f	t
+2024-02-27	2023-2024	Ball State	Central Michigan	79	71	130547	t	f
+2024-03-05	2023-2024	Ball State	Kent State	76	69	130548	t	t
+2024-03-08	2023-2024	Ball State	Bowling Green	80	70	130549	f	f
+2023-11-07	2023-2024	Baylor	Auburn	88	82	130550	t	t
+2023-11-09	2023-2024	Baylor	vsJohn Brown	96	70	130551	t	t
+2023-11-12	2023-2024	Baylor	Gardner-Webb	77	62	130552	t	t
+2023-11-14	2023-2024	Baylor	Kansas City	99	61	130553	t	t
+2023-11-22	2023-2024	Baylor	Oregon State	88	72	130554	t	t
+2023-11-24	2023-2024	Baylor	Florida	95	91	130555	t	t
+2023-11-28	2023-2024	Baylor	Nicholls	108	70	130556	t	t
+2023-12-02	2023-2024	Baylor	Northwestern State	91	40	130557	t	t
+2023-12-05	2023-2024	Baylor	Seton Hall	78	60	130558	t	t
+2023-12-16	2023-2024	Baylor	Michigan State	88	64	130559	f	t
+2023-12-20	2023-2024	Baylor	21 Duke	78	70	130560	f	t
+2023-12-22	2023-2024	Baylor	Mississippi Valley State	107	48	130561	t	t
+2024-01-02	2023-2024	Baylor	Cornell	98	79	130562	t	t
+2024-01-09	2023-2024	Baylor	18 BYU	81	72	130563	t	t
+2024-01-13	2023-2024	Baylor	Cincinnati	62	59	130564	t	t
+2024-01-20	2023-2024	Baylor	Texas	75	73	130565	f	f
+2024-01-31	2023-2024	Baylor	UCF	77	69	130566	t	f
+2024-02-03	2023-2024	Baylor	12 Iowa State	70	68	130567	t	t
+2024-02-06	2023-2024	Baylor	23 Texas Tech	79	73	130568	t	t
+2024-02-10	2023-2024	Baylor	4 Kansas	64	61	130569	f	f
+2024-02-13	2023-2024	Baylor	25 Oklahoma	79	62	130570	t	t
+2024-02-17	2023-2024	Baylor	West Virginia	94	81	130571	t	f
+2024-02-20	2023-2024	Baylor	25 BYU	78	71	130572	f	f
+2024-02-26	2023-2024	Baylor	TCU	62	54	130573	t	f
+2024-03-02	2023-2024	Baylor	7 Kansas	82	74	130574	t	t
+2024-03-04	2023-2024	Baylor	Texas	93	85	130575	t	t
+2024-03-09	2023-2024	Baylor	Texas Tech	78	68	130576	f	f
+2024-03-14	2023-2024	Baylor	Cincinnati	68	56	130577	t	t
+2024-03-15	2023-2024	Baylor	7 Iowa State	76	62	130578	f	t
+2023-11-06	2023-2024	Bellarmine	Washington	91	57	130579	f	f
+2023-11-10	2023-2024	Bellarmine	Kansas State	83	75	130580	f	f
+2023-11-14	2023-2024	Bellarmine	Chattanooga	72	64	130581	f	f
+2023-11-17	2023-2024	Bellarmine	Bowling Green	85	67	130582	t	f
+2023-11-20	2023-2024	Bellarmine	Morehead State	64	51	130583	f	t
+2023-11-21	2023-2024	Bellarmine	vsMidway University	77	56	130584	t	t
+2023-11-26	2023-2024	Bellarmine	West Virginia	62	58	130585	f	f
+2023-11-29	2023-2024	Bellarmine	Louisville	73	68	130586	f	f
+2023-12-02	2023-2024	Bellarmine	Ball State	67	58	130587	f	f
+2023-12-04	2023-2024	Bellarmine	vsBoyce	88	54	130588	t	t
+2023-12-07	2023-2024	Bellarmine	vsBerea	98	59	130589	t	t
+2023-12-16	2023-2024	Bellarmine	Evansville	70	61	130590	f	t
+2023-12-20	2023-2024	Bellarmine	Utah	85	43	130591	f	f
+2023-12-22	2023-2024	Bellarmine	17 BYU	101	59	130592	f	f
+2023-12-30	2023-2024	Bellarmine	High Point	90	85	130593	f	f
+2024-01-04	2023-2024	Bellarmine	Austin Peay	84	68	130594	f	t
+2024-01-06	2023-2024	Bellarmine	Lipscomb	81	70	130595	f	t
+2024-01-11	2023-2024	Bellarmine	North Alabama	69	53	130596	f	f
+2024-01-13	2023-2024	Bellarmine	Central Arkansas	59	57	130597	f	f
+2024-01-20	2023-2024	Bellarmine	Eastern Kentucky	82	70	130598	f	f
+2024-01-25	2023-2024	Bellarmine	North Florida	71	63	130599	f	t
+2024-01-27	2023-2024	Bellarmine	Jacksonville State	69	63	130600	t	t
+2024-02-03	2023-2024	Bellarmine	Queens University	85	75	130601	f	f
+2024-02-07	2023-2024	Bellarmine	Stetson	84	77	130602	f	t
+2024-02-10	2023-2024	Bellarmine	Florida Gulf Coast	63	52	130603	f	f
+2024-02-17	2023-2024	Bellarmine	Eastern Kentucky	75	65	130604	f	t
+2024-02-22	2023-2024	Bellarmine	Central Arkansas	68	65	130605	t	t
+2024-02-24	2023-2024	Bellarmine	North Alabama	82	70	130606	t	t
+2024-02-28	2023-2024	Bellarmine	Lipscomb	90	74	130607	f	f
+2023-11-06	2023-2024	Belmont	Georgia State	89	87	130608	t	t
+2023-11-10	2023-2024	Belmont	Furman	99	76	130609	f	f
+2023-11-14	2023-2024	Belmont	vsBerry	93	59	130610	t	t
+2023-11-17	2023-2024	Belmont	3 Arizona	100	68	130611	f	f
+2023-11-24	2023-2024	Belmont	Monmouth	93	84	130612	f	t
+2023-11-26	2023-2024	Belmont	Louisiana-Lafayette	79	69	130613	t	t
+2023-11-29	2023-2024	Belmont	Northern Iowa	90	70	130614	t	f
+2023-12-02	2023-2024	Belmont	Valparaiso	77	68	130615	t	t
+2023-12-06	2023-2024	Belmont	Lipscomb	72	71	130616	t	t
+2023-12-09	2023-2024	Belmont	Middle Tennessee	75	65	130617	t	f
+2023-12-16	2023-2024	Belmont	Samford	99	93	130618	f	f
+2023-12-20	2023-2024	Belmont	Arkansas State	74	70	130619	t	t
+2024-01-02	2023-2024	Belmont	Southern Illinois	73	63	130620	f	f
+2024-01-07	2023-2024	Belmont	Drake	87	65	130621	t	t
+2024-01-10	2023-2024	Belmont	Illinois State	67	60	130622	t	t
+2024-01-13	2023-2024	Belmont	Indiana State	94	64	130623	f	f
+2024-01-17	2023-2024	Belmont	Northern Iowa	83	72	130624	f	t
+2024-01-20	2023-2024	Belmont	Bradley	95	72	130625	f	f
+2024-01-23	2023-2024	Belmont	Illinois State	77	67	130626	f	f
+2024-01-27	2023-2024	Belmont	UIC	74	65	130627	t	t
+2024-01-31	2023-2024	Belmont	Indiana State	78	72	130628	f	t
+2024-02-03	2023-2024	Belmont	Missouri State	87	80	130629	f	f
+2024-02-07	2023-2024	Belmont	Murray State	69	64	130630	t	t
+2024-02-10	2023-2024	Belmont	Valparaiso	96	78	130631	t	f
+2024-02-14	2023-2024	Belmont	Southern Illinois	82	68	130632	t	t
+2024-02-18	2023-2024	Belmont	UIC	75	60	130633	t	f
+2024-02-21	2023-2024	Belmont	Drake	84	69	130634	f	f
+2024-02-24	2023-2024	Belmont	Missouri State	93	78	130635	t	t
+2024-02-28	2023-2024	Belmont	Murray State	83	61	130636	t	f
+2024-03-03	2023-2024	Belmont	Evansville	83	66	130637	t	t
+2024-03-07	2023-2024	Belmont	Valparaiso	86	61	130638	t	t
+2024-03-08	2023-2024	Belmont	Northern Iowa	67	62	130639	f	t
+2023-11-06	2023-2024	Bethune	Minnesota	80	60	130640	f	f
+2023-11-10	2023-2024	Bethune	vsTrinity (FL)	113	46	130641	t	t
+2023-11-15	2023-2024	Bethune	vsTrinity Baptist	104	63	130642	t	t
+2023-11-20	2023-2024	Bethune	Charleston Southern	79	73	130643	t	t
+2023-11-24	2023-2024	Bethune	Lamar	83	65	130644	f	t
+2023-11-25	2023-2024	Bethune	Delaware State	72	64	130645	f	t
+2023-11-26	2023-2024	Bethune	Longwood	69	48	130646	f	f
+2023-12-01	2023-2024	Bethune	Incarnate Word	96	82	130647	t	t
+2023-12-09	2023-2024	Bethune	South Carolina State	80	71	130648	t	f
+2023-12-16	2023-2024	Bethune	Purdue Fort Wayne	86	63	130649	f	f
+2023-12-20	2023-2024	Bethune	Chicago State	55	54	130650	f	f
+2023-12-29	2023-2024	Bethune	UCF	98	54	130651	f	f
+2023-12-31	2023-2024	Bethune	Mississippi State	85	62	130652	f	f
+2024-01-06	2023-2024	Bethune	Florida A&M	98	86	130653	t	t
+2024-01-13	2023-2024	Bethune	Grambling	79	69	130654	f	t
+2024-01-20	2023-2024	Bethune	Mississippi Valley State	80	64	130655	t	f
+2024-01-22	2023-2024	Bethune	Arkansas-Pine Bluff	76	72	130656	f	f
+2024-01-27	2023-2024	Bethune	Jackson State	82	71	130657	t	t
+2024-01-29	2023-2024	Bethune	Alcorn State	70	67	130658	f	t
+2024-02-03	2023-2024	Bethune	Alabama State	79	68	130659	t	f
+2024-02-05	2023-2024	Bethune	Alabama A&M	72	68	130660	f	f
+2024-02-10	2023-2024	Bethune	Prairie View A&M	84	78	130661	t	t
+2024-02-12	2023-2024	Bethune	Texas Southern	83	79	130662	t	t
+2024-02-17	2023-2024	Bethune	Alcorn State	69	54	130663	f	f
+2024-02-19	2023-2024	Bethune	Jackson State	61	60	130664	f	f
+2024-02-24	2023-2024	Bethune	Alabama A&M	63	61	130665	t	t
+2024-03-02	2023-2024	Bethune	Southern	67	61	130666	t	f
+2024-03-04	2023-2024	Bethune	Grambling	69	60	130667	f	f
+2024-03-14	2023-2024	Bethune	Southern	73	58	130668	t	t
+2024-03-15	2023-2024	Bethune	Grambling	65	53	130669	f	t
+2023-11-06	2023-2024	Binghamton	Northwestern	72	61	130670	f	f
+2023-11-10	2023-2024	Binghamton	Pittsburgh	89	60	130671	f	f
+2023-11-12	2023-2024	Binghamton	vsKeystone	104	50	130672	t	t
+2023-11-15	2023-2024	Binghamton	Loyola Maryland	63	57	130673	t	f
+2023-11-18	2023-2024	Binghamton	Marist	82	59	130674	t	t
+2023-11-21	2023-2024	Binghamton	Sacred Heart	89	75	130675	f	f
+2023-11-25	2023-2024	Binghamton	Army	75	68	130676	t	t
+2023-11-29	2023-2024	Binghamton	Colgate	84	49	130677	f	f
+2023-12-02	2023-2024	Binghamton	Stonehill	79	64	130678	t	f
+2023-12-09	2023-2024	Binghamton	Le Moyne	91	79	130679	t	t
+2023-12-19	2023-2024	Binghamton	Niagara	74	69	130680	t	t
+2023-12-22	2023-2024	Binghamton	St. Bonaventure	90	64	130681	f	f
+2023-12-30	2023-2024	Binghamton	vsMarywood	108	52	130682	t	t
+2024-01-11	2023-2024	Binghamton	Bryant	77	69	130683	f	f
+2024-01-13	2023-2024	Binghamton	UAlbany	95	75	130684	f	f
+2024-01-18	2023-2024	Binghamton	Vermont	82	62	130685	f	t
+2024-01-20	2023-2024	Binghamton	UMass Lowell	80	60	130686	f	t
+2024-01-27	2023-2024	Binghamton	Maine	51	50	130687	t	f
+2024-02-01	2023-2024	Binghamton	NJIT	75	66	130688	t	t
+2024-02-03	2023-2024	Binghamton	Vermont	62	49	130689	f	f
+2024-02-08	2023-2024	Binghamton	UAlbany	69	57	130690	t	t
+2024-02-10	2023-2024	Binghamton	Bryant	70	69	130691	f	t
+2024-02-15	2023-2024	Binghamton	UMBC	89	78	130692	f	t
+2024-02-17	2023-2024	Binghamton	NJIT	69	55	130693	t	f
+2024-02-22	2023-2024	Binghamton	UMass Lowell	87	80	130694	f	f
+2024-03-02	2023-2024	Binghamton	New Hampshire	87	74	130695	t	t
+2024-03-05	2023-2024	Binghamton	UMBC	72	71	130696	t	f
+2024-03-09	2023-2024	Binghamton	New Hampshire	77	64	130697	f	f
+2023-11-07	2023-2024	Boise State	vsVanguard	89	55	130698	t	t
+2023-11-12	2023-2024	Boise State	San Francisco	63	58	130699	t	t
+2023-11-19	2023-2024	Boise State	Clemson	85	68	130700	f	f
+2023-11-23	2023-2024	Boise State	Virginia Tech	82	75	130701	f	t
+2023-11-24	2023-2024	Boise State	VCU	65	61	130702	t	t
+2023-11-26	2023-2024	Boise State	Butler	70	56	130703	f	t
+2023-12-01	2023-2024	Boise State	St. Mary's	63	60	130704	t	t
+2023-12-05	2023-2024	Boise State	North Texas	69	64	130705	t	t
+2023-12-09	2023-2024	Boise State	vsWestern Oregon	109	70	130706	t	t
+2023-12-12	2023-2024	Boise State	Northwestern State	95	54	130707	t	t
+2023-12-17	2023-2024	Boise State	Cal State Fullerton	88	65	130708	t	t
+2023-12-21	2023-2024	Boise State	Washington State	66	61	130709	f	t
+2023-12-29	2023-2024	Boise State	Utah Valley	85	63	130710	t	t
+2024-01-05	2023-2024	Boise State	San José State	78	69	130711	t	f
+2024-01-09	2023-2024	Boise State	17 Colorado State	65	58	130712	t	t
+2024-01-12	2023-2024	Boise State	Nevada	64	56	130713	t	f
+2024-01-16	2023-2024	Boise State	UNLV	68	64	130714	f	t
+2024-01-20	2023-2024	Boise State	San Diego State	67	66	130715	t	t
+2024-01-23	2023-2024	Boise State	Fresno State	72	68	130716	t	f
+2024-01-31	2023-2024	Boise State	19 New Mexico	86	78	130717	t	f
+2024-02-03	2023-2024	Boise State	Air Force	94	56	130718	t	t
+2024-02-06	2023-2024	Boise State	Colorado State	75	62	130719	f	f
+2024-02-10	2023-2024	Boise State	22 Utah State	80	61	130720	f	f
+2024-02-17	2023-2024	Boise State	Fresno State	90	66	130721	t	t
+2024-02-20	2023-2024	Boise State	San José State	82	50	130722	t	t
+2024-02-24	2023-2024	Boise State	Wyoming	92	72	130723	t	f
+2024-02-27	2023-2024	Boise State	Air Force	79	48	130724	t	f
+2024-03-02	2023-2024	Boise State	New Mexico	89	79	130725	t	t
+2024-03-05	2023-2024	Boise State	Nevada	76	66	130726	f	t
+2024-03-14	2023-2024	Boise State	New Mexico	76	66	130727	f	t
+2023-11-06	2023-2024	Boston College	Fairfield	89	70	130728	t	t
+2023-11-10	2023-2024	Boston College	The Citadel	75	71	130729	t	f
+2023-11-15	2023-2024	Boston College	Richmond	68	61	130730	t	t
+2023-11-18	2023-2024	Boston College	Harvard	73	64	130731	t	t
+2023-11-22	2023-2024	Boston College	Colorado State	86	74	130732	f	t
+2023-11-23	2023-2024	Boston College	Loyola Chicago	71	68	130733	f	t
+2023-11-29	2023-2024	Boston College	Vanderbilt	80	62	130734	t	f
+2023-12-05	2023-2024	Boston College	Central Connecticut	82	68	130735	t	t
+2023-12-08	2023-2024	Boston College	Holy Cross	95	64	130736	t	t
+2023-12-10	2023-2024	Boston College	St. John's	86	80	130737	t	t
+2023-12-21	2023-2024	Boston College	Lehigh	85	69	130738	t	t
+2024-01-02	2023-2024	Boston College	Wake Forest	84	78	130739	f	t
+2024-01-06	2023-2024	Boston College	Georgia Tech	95	87	130740	t	f
+2024-01-10	2023-2024	Boston College	Syracuse	69	59	130741	f	f
+2024-01-13	2023-2024	Boston College	21 Clemson	89	78	130742	f	f
+2024-01-15	2023-2024	Boston College	Notre Dame	63	59	130743	t	t
+2024-01-20	2023-2024	Boston College	4 North Carolina	76	66	130744	f	t
+2024-01-23	2023-2024	Boston College	Virginia Tech	76	71	130745	f	f
+2024-01-27	2023-2024	Boston College	Notre Dame	61	58	130746	t	f
+2024-01-30	2023-2024	Boston College	Syracuse	80	75	130747	t	t
+2024-02-06	2023-2024	Boston College	Florida State	63	62	130748	f	t
+2024-02-10	2023-2024	Boston College	9 Duke	80	65	130749	f	f
+2024-02-13	2023-2024	Boston College	Louisville	89	77	130750	t	t
+2024-02-17	2023-2024	Boston College	Miami	85	77	130751	t	t
+2024-02-20	2023-2024	Boston College	Florida State	84	76	130752	f	f
+2024-02-24	2023-2024	Boston College	NC State	81	70	130753	f	f
+2024-02-28	2023-2024	Boston College	Virginia	72	68	130754	f	t
+2024-03-02	2023-2024	Boston College	Pittsburgh	90	65	130755	f	t
+2024-03-06	2023-2024	Boston College	Miami	67	57	130756	t	f
+2024-03-09	2023-2024	Boston College	Louisville	67	61	130757	t	f
+2024-03-12	2023-2024	Boston College	Miami	81	65	130758	t	t
+2024-03-13	2023-2024	Boston College	Clemson	76	55	130759	t	t
+2023-11-06	2023-2024	Boston U	Northeastern	67	58	130760	f	f
+2023-11-10	2023-2024	Boston U	Rutgers	69	45	130761	f	f
+2023-11-14	2023-2024	Boston U	Howard	64	53	130762	f	f
+2023-11-16	2023-2024	Boston U	Bryant	95	79	130763	t	t
+2023-11-21	2023-2024	Boston U	Davidson	69	45	130764	f	f
+2023-11-26	2023-2024	Boston U	vsNorthern Vermont - Johnson	90	49	130765	t	t
+2023-11-29	2023-2024	Boston U	UAlbany	86	72	130766	f	f
+2023-12-02	2023-2024	Boston U	Sacred Heart	70	49	130767	t	f
+2023-12-06	2023-2024	Boston U	Maine	74	65	130768	f	t
+2023-12-10	2023-2024	Boston U	Wagner	73	59	130769	t	f
+2023-12-13	2023-2024	Boston U	Dartmouth	63	54	130770	f	f
+2023-12-22	2023-2024	Boston U	UMass Lowell	71	63	130771	f	t
+2023-12-30	2023-2024	Boston U	Merrimack	74	63	130772	t	t
+2024-01-03	2023-2024	Boston U	Navy	62	60	130773	f	f
+2024-01-06	2023-2024	Boston U	Louisiana-Lafayette	59	51	130774	f	t
+2024-01-10	2023-2024	Boston U	American University	72	68	130775	t	t
+2024-01-13	2023-2024	Boston U	Loyola Maryland	60	58	130776	t	f
+2024-01-17	2023-2024	Boston U	Bucknell	73	57	130777	f	t
+2024-01-20	2023-2024	Boston U	Colgate	75	59	130778	f	f
+2024-01-24	2023-2024	Boston U	Army	69	59	130779	f	t
+2024-01-27	2023-2024	Boston U	Louisiana-Lafayette	62	48	130780	t	f
+2024-01-29	2023-2024	Boston U	Holy Cross	65	63	130781	f	f
+2024-02-03	2023-2024	Boston U	Lehigh	72	71	130782	t	t
+2024-02-07	2023-2024	Boston U	Colgate	74	64	130783	f	t
+2024-02-10	2023-2024	Boston U	Bucknell	77	62	130784	t	f
+2024-02-14	2023-2024	Boston U	Army	65	50	130785	f	f
+2024-02-17	2023-2024	Boston U	Navy	74	65	130786	t	t
+2024-02-21	2023-2024	Boston U	American University	67	52	130787	t	f
+2024-03-02	2023-2024	Boston U	Holy Cross	94	84	130788	t	t
+2024-03-07	2023-2024	Boston U	Navy	70	61	130789	t	t
+2023-11-06	2023-2024	Bowling Green	Chicago State	70	41	130790	t	t
+2023-11-11	2023-2024	Bowling Green	Arkansas State	81	75	130791	t	t
+2023-11-14	2023-2024	Bowling Green	Oakland	81	62	130792	f	f
+2023-11-17	2023-2024	Bowling Green	Bellarmine	85	67	130793	f	t
+2023-11-24	2023-2024	Bowling Green	Western Kentucky	72	65	130794	f	t
+2023-11-25	2023-2024	Bowling Green	Lipscomb	82	61	130795	t	t
+2023-11-26	2023-2024	Bowling Green	Canisius	77	73	130796	t	t
+2023-12-02	2023-2024	Bowling Green	Southern Indiana	54	52	130797	t	f
+2023-12-10	2023-2024	Bowling Green	vsOhio Dominican	97	49	130798	t	t
+2023-12-16	2023-2024	Bowling Green	Kansas City	79	69	130799	t	t
+2023-12-19	2023-2024	Bowling Green	Hampton	75	65	130800	t	t
+2023-12-22	2023-2024	Bowling Green	vsSiena Heights	79	58	130801	t	t
+2024-01-05	2023-2024	Bowling Green	Akron	83	67	130802	f	f
+2024-01-09	2023-2024	Bowling Green	Ohio	83	78	130803	t	t
+2024-01-13	2023-2024	Bowling Green	Northern Illinois	83	72	130804	t	f
+2024-01-16	2023-2024	Bowling Green	Miami (OH)	78	73	130805	t	f
+2024-01-20	2023-2024	Bowling Green	Western Michigan	84	79	130806	t	t
+2024-01-27	2023-2024	Bowling Green	Toledo	88	72	130807	f	f
+2024-01-30	2023-2024	Bowling Green	Ball State	81	72	130808	t	f
+2024-02-06	2023-2024	Bowling Green	Buffalo	87	73	130809	t	t
+2024-02-11	2023-2024	Bowling Green	Louisiana	86	60	130810	f	f
+2024-02-17	2023-2024	Bowling Green	Eastern Michigan	69	60	130811	f	f
+2024-02-23	2023-2024	Bowling Green	Toledo	76	68	130812	t	t
+2024-02-27	2023-2024	Bowling Green	Miami (OH)	66	58	130813	f	t
+2024-03-01	2023-2024	Bowling Green	Ohio	66	59	130814	f	f
+2024-03-05	2023-2024	Bowling Green	Western Michigan	73	65	130815	t	f
+2024-03-08	2023-2024	Bowling Green	Ball State	80	70	130816	t	t
+2024-03-14	2023-2024	Bowling Green	Central Michigan	66	56	130817	t	t
+2024-03-15	2023-2024	Bowling Green	Kent State	73	60	130818	f	t
+2023-11-14	2023-2024	Bradley	Tarleton State	86	63	130819	t	t
+2023-11-20	2023-2024	Bradley	Tulane	80	77	130820	t	t
+2023-11-22	2023-2024	Bradley	UTEP	63	59	130821	t	t
+2023-11-25	2023-2024	Bradley	Vermont	79	70	130822	t	t
+2023-11-29	2023-2024	Bradley	Murray State	79	72	130823	f	f
+2023-12-02	2023-2024	Bradley	Indiana State	85	77	130824	f	t
+2023-12-05	2023-2024	Bradley	Akron	67	52	130825	f	f
+2023-12-15	2023-2024	Bradley	Cleveland State	76	69	130826	f	t
+2023-12-18	2023-2024	Bradley	Duquesne	69	67	130827	f	t
+2023-12-21	2023-2024	Bradley	SIU Edwardsville	75	64	130828	t	t
+2023-12-28	2023-2024	Bradley	vsTruman State	69	47	130829	t	t
+2024-01-03	2023-2024	Bradley	Valparaiso	86	61	130830	t	f
+2024-01-06	2023-2024	Bradley	Missouri State	86	60	130831	t	t
+2024-01-10	2023-2024	Bradley	Evansville	86	50	130832	t	t
+2024-01-13	2023-2024	Bradley	UIC	77	59	130833	t	f
+2024-01-17	2023-2024	Bradley	Southern Illinois	70	69	130834	t	f
+2024-01-20	2023-2024	Bradley	Belmont	95	72	130835	t	t
+2024-01-24	2023-2024	Bradley	Murray State	71	63	130836	t	t
+2024-01-31	2023-2024	Bradley	Northern Iowa	85	69	130837	t	t
+2024-02-03	2023-2024	Bradley	Illinois State	73	60	130838	t	f
+2024-02-07	2023-2024	Bradley	Evansville	73	70	130839	f	f
+2024-02-10	2023-2024	Bradley	Drake	74	67	130840	f	t
+2024-02-14	2023-2024	Bradley	UIC	85	73	130841	t	t
+2024-02-18	2023-2024	Bradley	Northern Iowa	74	63	130842	f	f
+2024-02-21	2023-2024	Bradley	Missouri State	86	62	130843	t	f
+2024-02-24	2023-2024	Bradley	Illinois State	48	45	130844	t	t
+2024-02-28	2023-2024	Bradley	Southern Illinois	86	67	130845	t	t
+2024-03-03	2023-2024	Bradley	Drake	74	66	130846	f	f
+2024-03-08	2023-2024	Bradley	UIC	74	47	130847	t	t
+2024-03-09	2023-2024	Bradley	Drake	72	67	130848	f	t
+2023-11-06	2023-2024	Brown	Colgate	72	70	130849	f	f
+2023-11-14	2023-2024	Brown	New Hampshire	82	64	130850	f	f
+2023-11-16	2023-2024	Brown	vsRhode Island College	92	51	130851	t	t
+2023-11-19	2023-2024	Brown	16 USC	81	70	130852	f	f
+2023-11-24	2023-2024	Brown	Delaware	67	59	130853	f	t
+2023-11-26	2023-2024	Brown	Ohio	82	77	130854	f	t
+2023-12-01	2023-2024	Brown	Bryant	69	66	130855	f	t
+2023-12-03	2023-2024	Brown	Maine	60	49	130856	f	f
+2023-12-06	2023-2024	Brown	Rhode Island	67	64	130857	t	f
+2023-12-10	2023-2024	Brown	Providence	74	54	130858	f	f
+2023-12-22	2023-2024	Brown	Siena	71	67	130859	t	t
+2023-12-29	2023-2024	Brown	Stony Brook	69	65	130860	f	f
+2024-01-02	2023-2024	Brown	Vermont	71	70	130861	f	t
+2024-01-09	2023-2024	Brown	Yale	80	70	130862	f	t
+2024-01-15	2023-2024	Brown	Harvard	74	72	130863	t	f
+2024-01-20	2023-2024	Brown	Cornell	84	83	130864	f	t
+2024-01-27	2023-2024	Brown	Dartmouth	75	71	130865	f	f
+2024-02-02	2023-2024	Brown	Pennsylvania	70	61	130866	t	t
+2024-02-03	2023-2024	Brown	Princeton	70	60	130867	f	t
+2024-02-10	2023-2024	Brown	Columbia	83	69	130868	f	t
+2024-02-16	2023-2024	Brown	Princeton	72	63	130869	f	f
+2024-02-17	2023-2024	Brown	Pennsylvania	71	64	130870	t	f
+2024-02-23	2023-2024	Brown	Columbia	66	64	130871	t	f
+2024-02-24	2023-2024	Brown	Cornell	78	74	130872	t	f
+2024-03-02	2023-2024	Brown	Dartmouth	89	67	130873	t	t
+2024-03-16	2023-2024	Brown	Princeton	90	81	130874	t	t
+2024-03-17	2023-2024	Brown	Yale	62	61	130875	f	t
+2023-11-06	2023-2024	Bryant	Manhattan	61	59	130876	f	t
+2023-11-08	2023-2024	Bryant	vsFisher College	140	79	130877	t	t
+2023-11-12	2023-2024	Bryant	Rutgers	66	57	130878	f	f
+2023-11-16	2023-2024	Bryant	Boston University	95	79	130879	f	f
+2023-11-18	2023-2024	Bryant	10 Florida Atlantic	61	52	130880	t	f
+2023-11-20	2023-2024	Bryant	Howard	67	61	130881	t	t
+2023-11-24	2023-2024	Bryant	Xavier	100	75	130882	f	f
+2023-11-27	2023-2024	Bryant	vsSpringfield	108	74	130883	t	t
+2023-12-01	2023-2024	Bryant	Brown	69	66	130884	t	f
+2023-12-06	2023-2024	Bryant	Siena	67	51	130885	t	f
+2023-12-09	2023-2024	Bryant	Stony Brook	86	75	130886	f	f
+2023-12-12	2023-2024	Bryant	Cincinnati	85	53	130887	f	f
+2023-12-22	2023-2024	Bryant	Drexel	104	86	130888	t	t
+2023-12-31	2023-2024	Bryant	24 Ole Miss	95	78	130889	f	f
+2024-01-06	2023-2024	Bryant	UMBC	81	67	130890	t	f
+2024-01-11	2023-2024	Bryant	Binghamton	77	69	130891	t	t
+2024-01-13	2023-2024	Bryant	New Hampshire	89	74	130892	t	f
+2024-01-20	2023-2024	Bryant	UAlbany	98	89	130893	t	f
+2024-01-25	2023-2024	Bryant	NJIT	70	55	130894	t	f
+2024-01-27	2023-2024	Bryant	Vermont	67	57	130895	f	t
+2024-02-01	2023-2024	Bryant	UMBC	99	95	130896	t	t
+2024-02-03	2023-2024	Bryant	Maine	79	72	130897	f	f
+2024-02-08	2023-2024	Bryant	New Hampshire	85	66	130898	t	t
+2024-02-10	2023-2024	Bryant	Binghamton	70	69	130899	t	f
+2024-02-15	2023-2024	Bryant	Maine	77	72	130900	t	t
+2024-02-17	2023-2024	Bryant	UMass Lowell	86	77	130901	f	t
+2024-02-24	2023-2024	Bryant	Vermont	65	48	130902	f	f
+2024-02-29	2023-2024	Bryant	UMass Lowell	89	67	130903	f	f
+2024-03-02	2023-2024	Bryant	NJIT	101	82	130904	t	t
+2024-03-05	2023-2024	Bryant	UAlbany	83	79	130905	t	t
+2024-03-09	2023-2024	Bryant	Maine	84	58	130906	t	t
+2024-03-12	2023-2024	Bryant	UMass Lowell	77	70	130907	f	f
+2023-11-06	2023-2024	Bucknell	Delaware	78	57	130908	f	t
+2023-11-08	2023-2024	Bucknell	Pennsylvania	80	61	130909	f	f
+2023-11-11	2023-2024	Bucknell	Niagara	73	64	130910	t	f
+2023-11-14	2023-2024	Bucknell	La Salle	69	57	130911	f	f
+2023-11-17	2023-2024	Bucknell	9 Duke	90	60	130912	f	f
+2023-11-20	2023-2024	Bucknell	Southern Indiana	67	56	130913	t	t
+2023-11-22	2023-2024	Bucknell	St. Bonaventure	67	61	130914	f	f
+2023-11-25	2023-2024	Bucknell	Marist	73	49	130915	f	f
+2023-11-29	2023-2024	Bucknell	Princeton	85	71	130916	f	t
+2023-12-02	2023-2024	Bucknell	Penn State	76	67	130917	t	f
+2023-12-16	2023-2024	Bucknell	Radford	70	63	130918	f	t
+2023-12-22	2023-2024	Bucknell	Merrimack	68	52	130919	f	f
+2023-12-30	2023-2024	Bucknell	Saint Peter's	67	58	130920	f	t
+2024-01-03	2023-2024	Bucknell	Holy Cross	70	58	130921	t	t
+2024-01-06	2023-2024	Bucknell	American University	71	63	130922	f	t
+2024-01-10	2023-2024	Bucknell	Lehigh	86	80	130923	t	f
+2024-01-13	2023-2024	Bucknell	Colgate	84	73	130924	f	t
+2024-01-17	2023-2024	Bucknell	Boston University	73	57	130925	t	f
+2024-01-24	2023-2024	Bucknell	Navy	71	63	130926	t	t
+2024-01-27	2023-2024	Bucknell	Army	66	56	130927	t	f
+2024-01-31	2023-2024	Bucknell	Loyola Maryland	67	52	130928	t	t
+2024-02-07	2023-2024	Bucknell	Navy	80	67	130929	t	f
+2024-02-10	2023-2024	Bucknell	Boston University	77	62	130930	f	t
+2024-02-17	2023-2024	Bucknell	Colgate	62	50	130931	f	f
+2024-02-21	2023-2024	Bucknell	Holy Cross	73	59	130932	f	f
+2024-02-25	2023-2024	Bucknell	Army	54	41	130933	t	t
+2024-02-28	2023-2024	Bucknell	Loyola Maryland	68	46	130934	t	f
+2024-03-02	2023-2024	Bucknell	Louisiana-Lafayette	60	50	130935	t	t
+2024-03-07	2023-2024	Bucknell	American University	80	57	130936	t	f
+2024-03-10	2023-2024	Bucknell	Colgate	68	65	130937	f	f
+2023-11-06	2023-2024	Buffalo	Fairleigh Dickinson	92	86	130938	f	t
+2023-11-11	2023-2024	Buffalo	South Alabama	70	56	130939	f	t
+2023-11-15	2023-2024	Buffalo	vsRoberts Wesleyan	89	83	130940	t	t
+2023-11-20	2023-2024	Buffalo	Hofstra	102	68	130941	f	t
+2023-11-21	2023-2024	Buffalo	Louisiana	68	60	130942	f	t
+2023-11-22	2023-2024	Buffalo	Iona	89	64	130943	f	t
+2023-11-29	2023-2024	Buffalo	22 James Madison	81	66	130944	f	f
+2023-12-02	2023-2024	Buffalo	St. Bonaventure	80	65	130945	f	t
+2023-12-05	2023-2024	Buffalo	Butler	72	59	130946	f	f
+2023-12-09	2023-2024	Buffalo	Western Kentucky	82	65	130947	f	t
+2023-12-21	2023-2024	Buffalo	Richmond	72	66	130948	f	f
+2023-12-29	2023-2024	Buffalo	Niagara	69	63	130949	f	t
+2024-01-02	2023-2024	Buffalo	Central Michigan	76	64	130950	t	f
+2024-01-06	2023-2024	Buffalo	Western Michigan	82	77	130951	f	t
+2024-01-09	2023-2024	Buffalo	Miami (OH)	86	65	130952	f	t
+2024-01-12	2023-2024	Buffalo	Akron	76	59	130953	f	f
+2024-01-16	2023-2024	Buffalo	Toledo	77	66	130954	f	f
+2024-01-23	2023-2024	Buffalo	Ball State	87	59	130955	f	t
+2024-01-27	2023-2024	Buffalo	Eastern Michigan	75	65	130956	f	f
+2024-01-30	2023-2024	Buffalo	Ohio	91	70	130957	f	f
+2024-02-02	2023-2024	Buffalo	Kent State	83	52	130958	f	t
+2024-02-06	2023-2024	Buffalo	Bowling Green	87	73	130959	f	f
+2024-02-13	2023-2024	Buffalo	Northern Illinois	72	68	130960	f	f
+2024-02-17	2023-2024	Buffalo	Akron	73	62	130961	f	t
+2024-02-20	2023-2024	Buffalo	Eastern Michigan	78	69	130962	t	t
+2024-02-24	2023-2024	Buffalo	Western Michigan	91	72	130963	f	f
+2024-02-27	2023-2024	Buffalo	Kent State	76	64	130964	f	f
+2024-03-02	2023-2024	Buffalo	Toledo	85	79	130965	f	t
+2024-03-05	2023-2024	Buffalo	Ohio	78	66	130966	f	t
+2024-03-08	2023-2024	Buffalo	Northern Illinois	78	68	130967	f	t
+2023-11-06	2023-2024	Butler	Eastern Michigan	94	55	130968	t	t
+2023-11-10	2023-2024	Butler	Southeast Missouri State	91	56	130969	t	t
+2023-11-13	2023-2024	Butler	East Tennessee State	81	47	130970	t	t
+2023-11-17	2023-2024	Butler	18 Michigan State	74	54	130971	f	f
+2023-11-23	2023-2024	Butler	19 Florida Atlantic	91	86	130972	f	t
+2023-11-24	2023-2024	Butler	Penn State	88	78	130973	t	t
+2023-11-26	2023-2024	Butler	Boise State	70	56	130974	t	t
+2023-12-05	2023-2024	Butler	Buffalo	72	59	130975	t	t
+2023-12-15	2023-2024	Butler	vsSaginaw Valley State	96	70	130976	t	t
+2023-12-19	2023-2024	Butler	Georgetown	74	64	130977	t	t
+2024-01-02	2023-2024	Butler	St. John's	86	70	130978	f	f
+2024-01-05	2023-2024	Butler	4 UConn	88	81	130979	f	t
+2024-01-10	2023-2024	Butler	11 Marquette	69	62	130980	t	f
+2024-01-13	2023-2024	Butler	Seton Hall	78	72	130981	f	t
+2024-01-16	2023-2024	Butler	Xavier	85	71	130982	f	f
+2024-01-20	2023-2024	Butler	DePaul	74	60	130983	t	t
+2024-01-23	2023-2024	Butler	Georgetown	90	66	130984	t	f
+2024-02-02	2023-2024	Butler	13 Creighton	99	98	130985	t	f
+2024-02-06	2023-2024	Butler	1 UConn	71	62	130986	f	f
+2024-02-10	2023-2024	Butler	Providence	75	72	130987	t	t
+2024-02-13	2023-2024	Butler	4 Marquette	78	72	130988	f	t
+2024-02-17	2023-2024	Butler	17 Creighton	79	57	130989	f	t
+2024-02-20	2023-2024	Butler	Villanova	72	62	130990	f	f
+2024-02-24	2023-2024	Butler	Seton Hall	76	64	130991	f	f
+2024-02-28	2023-2024	Butler	St. John's	82	59	130992	f	t
+2024-03-02	2023-2024	Butler	DePaul	82	63	130993	t	f
+2024-03-06	2023-2024	Butler	Xavier	72	66	130994	t	t
+2024-03-13	2023-2024	Butler	Xavier	76	72	130995	f	t
+2023-11-06	2023-2024	Cal Poly	vsLa Verne	80	62	130996	t	t
+2023-11-09	2023-2024	Cal Poly	Denver	97	76	130997	f	f
+2023-11-11	2023-2024	Cal Poly	Wyoming	80	66	130998	f	f
+2023-11-17	2023-2024	Cal Poly	St. Thomas-Minnesota	61	60	130999	t	t
+2023-11-18	2023-2024	Cal Poly	Portland State	73	57	131000	f	t
+2023-11-19	2023-2024	Cal Poly	California Baptist	67	58	131001	f	f
+2023-12-02	2023-2024	Cal Poly	Idaho	85	70	131002	f	f
+2023-12-09	2023-2024	Cal Poly	Weber State	78	50	131003	f	f
+2023-12-18	2023-2024	Cal Poly	Eastern Washington	62	53	131004	f	t
+2023-12-21	2023-2024	Cal Poly	Omaha	66	53	131005	t	t
+2023-12-28	2023-2024	Cal Poly	Cal State Northridge	83	73	131006	f	t
+2023-12-30	2023-2024	Cal Poly	UC Davis	71	46	131007	f	f
+2024-01-04	2023-2024	Cal Poly	Long Beach State	89	82	131008	f	t
+2024-01-06	2023-2024	Cal Poly	UC Santa Barbara	61	52	131009	f	t
+2024-01-11	2023-2024	Cal Poly	UC Riverside	71	56	131010	f	f
+2024-01-13	2023-2024	Cal Poly	UC San Diego	86	61	131011	f	t
+2024-01-20	2023-2024	Cal Poly	Cal State Bakersfield	65	53	131012	f	f
+2024-01-25	2023-2024	Cal Poly	Cal State Fullerton	54	51	131013	f	t
+2024-01-27	2023-2024	Cal Poly	Hawai'i	83	73	131014	f	f
+2024-02-01	2023-2024	Cal Poly	UC Irvine	73	59	131015	f	t
+2024-02-03	2023-2024	Cal Poly	UC Davis	59	52	131016	f	t
+2024-02-08	2023-2024	Cal Poly	Cal State Northridge	78	65	131017	f	f
+2024-02-10	2023-2024	Cal Poly	Long Beach State	77	68	131018	f	f
+2024-02-15	2023-2024	Cal Poly	Hawai'i	80	51	131019	f	t
+2024-02-22	2023-2024	Cal Poly	Cal State Fullerton	68	50	131020	f	f
+2024-02-24	2023-2024	Cal Poly	UC Riverside	84	78	131021	f	t
+2024-02-29	2023-2024	Cal Poly	UC Santa Barbara	83	75	131022	f	f
+2024-03-02	2023-2024	Cal Poly	Cal State Bakersfield	68	56	131023	f	t
+2024-03-07	2023-2024	Cal Poly	UC Irvine	82	68	131024	f	f
+2024-03-09	2023-2024	Cal Poly	UC San Diego	92	87	131025	f	f
+2023-11-06	2023-2024	Bakersfield	Southern Utah	73	72	131026	t	t
+2023-11-09	2023-2024	Bakersfield	21 USC	85	59	131027	f	f
+2023-11-13	2023-2024	Bakersfield	California	83	63	131028	f	f
+2023-11-16	2023-2024	Bakersfield	vsUniversity of Saint Katherine	77	44	131029	t	t
+2023-11-20	2023-2024	Bakersfield	Sacramento State	75	71	131030	t	t
+2023-11-22	2023-2024	Bakersfield	Tarleton State	59	40	131031	f	t
+2023-11-28	2023-2024	Bakersfield	11 Gonzaga	81	65	131032	f	f
+2023-12-05	2023-2024	Bakersfield	vsWhittier	106	58	131033	t	t
+2023-12-09	2023-2024	Bakersfield	South Dakota	78	73	131034	f	f
+2023-12-15	2023-2024	Bakersfield	Fresno State	61	58	131035	f	f
+2023-12-19	2023-2024	Bakersfield	South Dakota	96	76	131036	t	t
+2023-12-28	2023-2024	Bakersfield	UC San Diego	76	64	131037	f	f
+2023-12-30	2023-2024	Bakersfield	UC Irvine	75	56	131038	f	t
+2024-01-04	2023-2024	Bakersfield	Hawai'i	78	67	131039	f	t
+2024-01-18	2023-2024	Bakersfield	UC Riverside	80	56	131040	t	t
+2024-01-20	2023-2024	Bakersfield	Cal Poly	65	53	131041	t	t
+2024-01-25	2023-2024	Bakersfield	Cal State Northridge	64	56	131042	t	f
+2024-01-27	2023-2024	Bakersfield	Cal State Fullerton	68	50	131043	f	f
+2024-02-03	2023-2024	Bakersfield	UC Santa Barbara	70	59	131044	f	t
+2024-02-08	2023-2024	Bakersfield	UC Riverside	65	63	131045	f	f
+2024-02-10	2023-2024	Bakersfield	Cal State Fullerton	73	71	131046	t	t
+2024-02-15	2023-2024	Bakersfield	Cal State Northridge	76	71	131047	f	t
+2024-02-17	2023-2024	Bakersfield	UC Irvine	77	71	131048	f	f
+2024-02-22	2023-2024	Bakersfield	Long Beach State	79	66	131049	f	f
+2024-02-24	2023-2024	Bakersfield	UC Davis	75	56	131050	t	t
+2024-02-29	2023-2024	Bakersfield	UC San Diego	70	57	131051	t	t
+2024-03-02	2023-2024	Bakersfield	Cal Poly	68	56	131052	t	f
+2024-03-09	2023-2024	Bakersfield	Hawai'i	74	57	131053	f	f
+2024-03-13	2023-2024	Bakersfield	UC Riverside	83	78	131054	f	t
+2023-11-06	2023-2024	CSUF	17 San Diego State	83	57	131055	f	f
+2023-11-11	2023-2024	CSUF	vsLa Sierra	78	48	131056	t	t
+2023-11-16	2023-2024	CSUF	UCF	72	44	131057	f	f
+2023-11-19	2023-2024	CSUF	Cornell	88	70	131058	f	t
+2023-11-20	2023-2024	CSUF	Southern Miss	74	67	131059	t	t
+2023-11-26	2023-2024	CSUF	Nebraska	85	72	131060	f	f
+2023-12-01	2023-2024	CSUF	North Dakota	64	54	131061	t	t
+2023-12-03	2023-2024	CSUF	vsStanton	102	52	131062	t	t
+2023-12-06	2023-2024	CSUF	Pepperdine	60	55	131063	t	f
+2023-12-09	2023-2024	CSUF	Sacramento State	62	60	131064	t	f
+2023-12-17	2023-2024	CSUF	Boise State	88	65	131065	f	f
+2023-12-20	2023-2024	CSUF	Pacific	67	56	131066	t	t
+2023-12-28	2023-2024	CSUF	Long Beach State	81	71	131067	f	t
+2024-01-04	2023-2024	CSUF	UC Irvine	75	67	131068	f	f
+2024-01-06	2023-2024	CSUF	UC San Diego	76	58	131069	f	t
+2024-01-13	2023-2024	CSUF	Cal State Northridge	76	71	131070	f	f
+2024-01-18	2023-2024	CSUF	UC Davis	67	65	131071	f	t
+2024-01-20	2023-2024	CSUF	UC Santa Barbara	73	69	131072	t	f
+2024-01-25	2023-2024	CSUF	Cal Poly	54	51	131073	t	f
+2024-01-27	2023-2024	CSUF	Cal State Bakersfield	68	50	131074	t	t
+2024-02-01	2023-2024	CSUF	Hawai'i	76	68	131075	f	t
+2024-02-08	2023-2024	CSUF	UC Davis	71	58	131076	f	f
+2024-02-10	2023-2024	CSUF	Cal State Bakersfield	73	71	131077	f	f
+2024-02-15	2023-2024	CSUF	UC Riverside	81	73	131078	f	t
+2024-02-17	2023-2024	CSUF	UC San Diego	76	69	131079	f	f
+2024-02-22	2023-2024	CSUF	Cal Poly	68	50	131080	t	t
+2024-02-24	2023-2024	CSUF	Cal State Northridge	65	60	131081	f	t
+2024-02-29	2023-2024	CSUF	Long Beach State	76	71	131082	t	f
+2024-03-02	2023-2024	CSUF	UC Santa Barbara	79	70	131083	t	t
+2024-03-07	2023-2024	CSUF	UC Riverside	84	74	131084	f	f
+2024-03-09	2023-2024	CSUF	UC Irvine	81	71	131085	f	t
+2023-11-06	2023-2024	CSU Northridge	Stanford	88	79	131086	f	f
+2023-11-09	2023-2024	CSU Northridge	Idaho	76	73	131087	t	f
+2023-11-14	2023-2024	CSU Northridge	Chicago State	74	64	131088	t	f
+2023-11-17	2023-2024	CSU Northridge	vsLife Pacific	98	67	131089	t	t
+2023-11-21	2023-2024	CSU Northridge	Le Moyne	80	70	131090	f	t
+2023-11-24	2023-2024	CSU Northridge	Mississippi Valley State	84	48	131091	t	t
+2023-11-29	2023-2024	CSU Northridge	Pacific	80	69	131092	t	f
+2023-12-02	2023-2024	CSU Northridge	Northern Colorado	75	71	131093	f	f
+2023-12-07	2023-2024	CSU Northridge	vsBethesda University	92	54	131094	t	t
+2023-12-11	2023-2024	CSU Northridge	Utah Tech	80	75	131095	t	t
+2023-12-19	2023-2024	CSU Northridge	UCLA	76	72	131096	t	f
+2023-12-22	2023-2024	CSU Northridge	Montana State	82	70	131097	t	t
+2023-12-28	2023-2024	CSU Northridge	Cal Poly	83	73	131098	t	f
+2023-12-30	2023-2024	CSU Northridge	Long Beach State	84	68	131099	t	f
+2024-01-06	2023-2024	CSU Northridge	Hawai'i	76	66	131100	t	t
+2024-01-11	2023-2024	CSU Northridge	UC Davis	95	75	131101	f	f
+2024-01-13	2023-2024	CSU Northridge	Cal State Fullerton	76	71	131102	t	t
+2024-01-18	2023-2024	CSU Northridge	UC Santa Barbara	97	69	131103	f	t
+2024-01-20	2023-2024	CSU Northridge	UC Riverside	82	63	131104	f	f
+2024-01-25	2023-2024	CSU Northridge	Cal State Bakersfield	64	56	131105	f	t
+2024-01-27	2023-2024	CSU Northridge	UC Irvine	77	72	131106	f	f
+2024-02-01	2023-2024	CSU Northridge	UC San Diego	83	62	131107	f	f
+2024-02-03	2023-2024	CSU Northridge	UC Riverside	76	70	131108	t	t
+2024-02-08	2023-2024	CSU Northridge	Cal Poly	78	65	131109	t	t
+2024-02-10	2023-2024	CSU Northridge	UC Santa Barbara	82	74	131110	t	f
+2024-02-15	2023-2024	CSU Northridge	Cal State Bakersfield	76	71	131111	t	f
+2024-02-17	2023-2024	CSU Northridge	Long Beach State	87	73	131112	f	t
+2024-02-22	2023-2024	CSU Northridge	UC Davis	66	65	131113	f	t
+2024-02-24	2023-2024	CSU Northridge	Cal State Fullerton	65	60	131114	t	f
+2024-02-29	2023-2024	CSU Northridge	UC Irvine	89	64	131115	f	t
+2024-03-02	2023-2024	CSU Northridge	UC San Diego	79	69	131116	f	t
+2024-03-06	2023-2024	CSU Northridge	Hawai'i	72	70	131117	f	f
+2024-03-14	2023-2024	CSU Northridge	Hawai'i	75	68	131118	f	t
+2023-11-06	2023-2024	CA Baptist	vsSan Francisco State	74	57	131119	t	t
+2023-11-10	2023-2024	CA Baptist	Jackson State	80	66	131120	t	t
+2023-11-17	2023-2024	CA Baptist	Portland State	66	63	131121	f	t
+2023-11-18	2023-2024	CA Baptist	St. Thomas-Minnesota	66	62	131122	t	t
+2023-11-19	2023-2024	CA Baptist	Cal Poly	67	58	131123	t	t
+2023-11-25	2023-2024	CA Baptist	vsVanguard	69	59	131124	t	t
+2023-11-29	2023-2024	CA Baptist	Southern Utah	91	66	131125	t	f
+2023-12-06	2023-2024	CA Baptist	Utah Tech	72	69	131126	f	t
+2023-12-12	2023-2024	CA Baptist	Oregon	76	55	131127	f	f
+2023-12-16	2023-2024	CA Baptist	UC Riverside	70	69	131128	t	f
+2023-12-19	2023-2024	CA Baptist	Western Kentucky	73	70	131129	f	t
+2023-12-27	2023-2024	CA Baptist	Chicago State	74	62	131130	t	t
+2023-12-30	2023-2024	CA Baptist	New Mexico State	66	61	131131	f	f
+2024-01-04	2023-2024	CA Baptist	Utah Valley	65	58	131132	f	f
+2024-01-06	2023-2024	CA Baptist	Seattle U	48	46	131133	f	f
+2024-01-11	2023-2024	CA Baptist	Tarleton State	77	63	131134	t	t
+2024-01-13	2023-2024	CA Baptist	Abilene Christian	68	53	131135	t	t
+2024-01-20	2023-2024	CA Baptist	Southern Utah	83	76	131136	t	t
+2024-01-25	2023-2024	CA Baptist	UT Rio Grande Valley	63	54	131137	t	f
+2024-01-27	2023-2024	CA Baptist	Stephen F. Austin	81	79	131138	t	f
+2024-02-03	2023-2024	CA Baptist	Seattle U	61	60	131139	f	t
+2024-02-08	2023-2024	CA Baptist	UT Arlington	64	63	131140	t	t
+2024-02-10	2023-2024	CA Baptist	Utah Tech	85	78	131141	f	f
+2024-02-15	2023-2024	CA Baptist	Utah Valley	69	46	131142	f	t
+2024-02-17	2023-2024	CA Baptist	Grand Canyon	79	76	131143	f	f
+2024-02-22	2023-2024	CA Baptist	Abilene Christian	71	65	131144	f	f
+2024-02-24	2023-2024	CA Baptist	Tarleton State	82	65	131145	f	f
+2024-03-02	2023-2024	CA Baptist	UT Rio Grande Valley	88	52	131146	t	t
+2024-03-07	2023-2024	CA Baptist	UT Arlington	71	57	131147	f	f
+2024-03-09	2023-2024	CA Baptist	Grand Canyon	68	47	131148	f	t
+2024-03-14	2023-2024	CA Baptist	Seattle U	81	57	131149	f	t
+2023-11-06	2023-2024	California	St. Thomas-Minnesota	71	66	131150	t	t
+2023-11-10	2023-2024	California	Pacific	87	79	131151	f	t
+2023-11-13	2023-2024	California	Cal State Bakersfield	83	63	131152	t	t
+2023-11-16	2023-2024	California	Montana State	63	60	131153	f	t
+2023-11-21	2023-2024	California	UTEP	75	72	131154	f	t
+2023-11-23	2023-2024	California	Tulane	84	81	131155	f	t
+2023-12-02	2023-2024	California	Santa Clara	84	69	131156	t	t
+2023-12-16	2023-2024	California	Ole Miss	88	78	131157	f	t
+2023-12-20	2023-2024	California	UC San Diego	71	67	131158	t	t
+2023-12-29	2023-2024	California	4 Arizona	100	81	131159	f	t
+2023-12-31	2023-2024	California	Arizona State	71	69	131160	f	t
+2024-01-03	2023-2024	California	USC	82	74	131161	f	f
+2024-01-06	2023-2024	California	UCLA	66	57	131162	t	f
+2024-01-10	2023-2024	California	Colorado	82	78	131163	t	t
+2024-01-13	2023-2024	California	Oregon	80	73	131164	f	f
+2024-01-18	2023-2024	California	Washington	77	75	131165	f	t
+2024-01-26	2023-2024	California	Stanford	73	71	131166	t	t
+2024-02-01	2023-2024	California	11 Arizona	91	65	131167	f	f
+2024-02-03	2023-2024	California	Arizona State	81	66	131168	t	f
+2024-02-10	2023-2024	California	UCLA	61	60	131169	f	t
+2024-02-15	2023-2024	California	Washington State	84	65	131170	f	f
+2024-02-17	2023-2024	California	Washington	82	80	131171	t	f
+2024-02-22	2023-2024	California	Oregon State	81	73	131172	t	t
+2024-02-24	2023-2024	California	Oregon	69	64	131173	t	t
+2024-02-28	2023-2024	California	Colorado	88	78	131174	f	f
+2024-03-02	2023-2024	California	Utah	88	59	131175	f	f
+2024-03-07	2023-2024	California	Stanford	80	58	131176	f	f
+2023-11-06	2023-2024	Campbell	Navy	59	48	131177	t	t
+2023-11-11	2023-2024	Campbell	East Carolina	77	63	131178	f	f
+2023-11-15	2023-2024	Campbell	Virginia Tech	60	44	131179	f	f
+2023-11-21	2023-2024	Campbell	Idaho State	69	55	131180	f	t
+2023-11-22	2023-2024	Campbell	The Citadel	65	58	131181	t	t
+2023-11-29	2023-2024	Campbell	Jacksonville State	62	48	131182	f	f
+2023-12-02	2023-2024	Campbell	vsSouthern Virginia	87	56	131183	t	t
+2023-12-06	2023-2024	Campbell	Davidson	62	50	131184	f	f
+2023-12-12	2023-2024	Campbell	vsPfeiffer	88	59	131185	t	t
+2023-12-14	2023-2024	Campbell	vsSaint Augustine's	97	48	131186	t	t
+2023-12-18	2023-2024	Campbell	Morgan State	83	76	131187	t	t
+2023-12-30	2023-2024	Campbell	St. Francis (PA)	78	76	131188	f	f
+2024-01-04	2023-2024	Campbell	North Carolina A&T	76	62	131189	f	f
+2024-01-06	2023-2024	Campbell	Hampton	80	69	131190	t	f
+2024-01-11	2023-2024	Campbell	Delaware	68	62	131191	f	t
+2024-01-13	2023-2024	Campbell	Hofstra	69	68	131192	t	t
+2024-01-18	2023-2024	Campbell	William & Mary	77	64	131193	t	f
+2024-01-20	2023-2024	Campbell	Towson	77	43	131194	f	f
+2024-01-25	2023-2024	Campbell	Elon	78	68	131195	t	t
+2024-01-27	2023-2024	Campbell	Charleston	90	67	131196	f	t
+2024-02-01	2023-2024	Campbell	Elon	69	67	131197	t	f
+2024-02-03	2023-2024	Campbell	UNC Wilmington	77	74	131198	f	f
+2024-02-08	2023-2024	Campbell	Northeastern	86	76	131199	f	t
+2024-02-10	2023-2024	Campbell	Stony Brook	95	77	131200	t	t
+2024-02-15	2023-2024	Campbell	Monmouth	88	87	131201	f	f
+2024-02-17	2023-2024	Campbell	Drexel	81	66	131202	f	f
+2024-02-22	2023-2024	Campbell	Hampton	72	68	131203	f	t
+2024-02-29	2023-2024	Campbell	Charleston	96	73	131204	f	f
+2024-03-02	2023-2024	Campbell	North Carolina A&T	64	62	131205	t	t
+2024-03-09	2023-2024	Campbell	Monmouth	90	67	131206	f	t
+2023-11-08	2023-2024	Canisius	Syracuse	89	77	131207	f	f
+2023-11-11	2023-2024	Canisius	St. Bonaventure	70	67	131208	t	f
+2023-11-15	2023-2024	Canisius	Cleveland State	71	61	131209	f	f
+2023-11-20	2023-2024	Canisius	vsD'Youville	109	69	131210	t	t
+2023-11-24	2023-2024	Canisius	Wofford	76	67	131211	t	t
+2023-11-25	2023-2024	Canisius	Western Kentucky	85	77	131212	t	t
+2023-11-26	2023-2024	Canisius	Bowling Green	77	73	131213	f	t
+2023-12-01	2023-2024	Canisius	Quinnipiac	93	73	131214	t	t
+2023-12-03	2023-2024	Canisius	Saint Peter's	54	52	131215	f	t
+2023-12-06	2023-2024	Canisius	Robert Morris	87	80	131216	t	t
+2023-12-09	2023-2024	Canisius	Pittsburgh	82	71	131217	f	f
+2023-12-22	2023-2024	Canisius	High Point	78	70	131218	f	f
+2024-01-05	2023-2024	Canisius	Mount St. Mary's	74	69	131219	f	f
+2024-01-12	2023-2024	Canisius	Siena	67	63	131220	t	t
+2024-01-15	2023-2024	Canisius	Fairfield	88	63	131221	f	t
+2024-01-19	2023-2024	Canisius	Iona	70	58	131222	f	f
+2024-01-21	2023-2024	Canisius	Saint Peter's	70	59	131223	f	f
+2024-01-26	2023-2024	Canisius	Manhattan	82	70	131224	t	t
+2024-01-28	2023-2024	Canisius	Marist	80	71	131225	f	t
+2024-02-04	2023-2024	Canisius	Quinnipiac	88	63	131226	f	f
+2024-02-06	2023-2024	Canisius	Niagara	69	64	131227	f	f
+2024-02-10	2023-2024	Canisius	Iona	73	69	131228	t	t
+2024-02-16	2023-2024	Canisius	Marist	78	55	131229	f	f
+2024-02-18	2023-2024	Canisius	Siena	73	64	131230	t	f
+2024-02-23	2023-2024	Canisius	Niagara	69	59	131231	t	t
+2024-03-01	2023-2024	Canisius	Mount St. Mary's	61	56	131232	t	t
+2024-03-03	2023-2024	Canisius	Rider	65	61	131233	f	t
+2024-03-07	2023-2024	Canisius	Fairfield	74	62	131234	f	f
+2024-03-12	2023-2024	Canisius	Mount St. Mary's	77	61	131235	t	t
+2024-03-13	2023-2024	Canisius	Quinnipiac	76	52	131236	f	t
+2023-11-06	2023-2024	Central Arkansas	Tulsa	70	53	131237	f	f
+2023-11-10	2023-2024	Central Arkansas	vsHendrix College	82	39	131238	t	t
+2023-11-13	2023-2024	Central Arkansas	Arkansas-Pine Bluff	85	83	131239	f	t
+2023-11-17	2023-2024	Central Arkansas	Vanderbilt	75	71	131240	f	f
+2023-11-20	2023-2024	Central Arkansas	Southeast Missouri State	70	68	131241	f	f
+2023-11-22	2023-2024	Central Arkansas	Kansas State	100	56	131242	f	f
+2023-11-25	2023-2024	Central Arkansas	Eastern Michigan	74	71	131243	f	t
+2023-11-26	2023-2024	Central Arkansas	New Orleans	79	74	131244	f	t
+2023-11-29	2023-2024	Central Arkansas	Loyola Marymount	90	63	131245	f	f
+2023-12-03	2023-2024	Central Arkansas	Hawai'i	95	76	131246	f	f
+2023-12-07	2023-2024	Central Arkansas	Little Rock	75	71	131247	t	t
+2023-12-10	2023-2024	Central Arkansas	Eastern Illinois	73	70	131248	t	f
+2023-12-20	2023-2024	Central Arkansas	Western Illinois	65	54	131249	f	t
+2023-12-28	2023-2024	Central Arkansas	12 Oklahoma	88	72	131250	f	f
+2023-12-30	2023-2024	Central Arkansas	Missouri	92	59	131251	f	f
+2024-01-03	2023-2024	Central Arkansas	vsChampion Christian	120	54	131252	t	t
+2024-01-06	2023-2024	Central Arkansas	North Alabama	84	81	131253	t	f
+2024-01-11	2023-2024	Central Arkansas	Eastern Kentucky	86	63	131254	f	t
+2024-01-13	2023-2024	Central Arkansas	Bellarmine	59	57	131255	t	t
+2024-01-18	2023-2024	Central Arkansas	Lipscomb	96	86	131256	t	f
+2024-01-20	2023-2024	Central Arkansas	Austin Peay	94	71	131257	f	f
+2024-01-24	2023-2024	Central Arkansas	Queens University	96	79	131258	f	f
+2024-01-27	2023-2024	Central Arkansas	Kennesaw State	92	87	131259	t	t
+2024-02-01	2023-2024	Central Arkansas	Florida Gulf Coast	82	59	131260	f	t
+2024-02-08	2023-2024	Central Arkansas	Jacksonville State	59	55	131261	f	f
+2024-02-10	2023-2024	Central Arkansas	North Florida	79	77	131262	t	f
+2024-02-15	2023-2024	Central Arkansas	Austin Peay	77	67	131263	f	t
+2024-02-17	2023-2024	Central Arkansas	Lipscomb	85	68	131264	f	t
+2024-02-22	2023-2024	Central Arkansas	Bellarmine	68	65	131265	f	f
+2024-02-24	2023-2024	Central Arkansas	Eastern Kentucky	95	82	131266	f	f
+2024-03-01	2023-2024	Central Arkansas	North Alabama	82	78	131267	f	t
+2023-11-06	2023-2024	Central Connecticut	Rhode Island	81	70	131268	f	f
+2023-11-10	2023-2024	Central Connecticut	Quinnipiac	74	70	131269	f	f
+2023-11-13	2023-2024	Central Connecticut	vsFramingham State	99	42	131270	t	t
+2023-11-19	2023-2024	Central Connecticut	Manhattan	67	63	131271	f	t
+2023-11-22	2023-2024	Central Connecticut	Massachusetts	89	60	131272	f	f
+2023-11-29	2023-2024	Central Connecticut	Army	79	51	131273	t	f
+2023-12-02	2023-2024	Central Connecticut	Holy Cross	78	67	131274	t	t
+2023-12-05	2023-2024	Central Connecticut	Boston College	82	68	131275	f	f
+2023-12-09	2023-2024	Central Connecticut	Maine	69	56	131276	f	f
+2023-12-16	2023-2024	Central Connecticut	UMass Lowell	57	54	131277	t	f
+2023-12-19	2023-2024	Central Connecticut	Northeastern	79	74	131278	f	t
+2023-12-21	2023-2024	Central Connecticut	Fordham	82	80	131279	t	f
+2023-12-30	2023-2024	Central Connecticut	vsSt. Elizabeth	99	38	131280	t	t
+2024-01-04	2023-2024	Central Connecticut	Stonehill	74	59	131281	t	f
+2024-01-13	2023-2024	Central Connecticut	St. Francis (PA)	75	61	131282	t	f
+2024-01-15	2023-2024	Central Connecticut	Merrimack	75	70	131283	t	t
+2024-01-19	2023-2024	Central Connecticut	Le Moyne	75	73	131284	f	t
+2024-01-21	2023-2024	Central Connecticut	Long Island University	72	63	131285	t	f
+2024-01-25	2023-2024	Central Connecticut	Fairleigh Dickinson	76	60	131286	t	f
+2024-02-01	2023-2024	Central Connecticut	St. Francis (PA)	63	62	131287	t	t
+2024-02-03	2023-2024	Central Connecticut	Merrimack	71	68	131288	f	f
+2024-02-08	2023-2024	Central Connecticut	Sacred Heart	77	70	131289	t	t
+2024-02-10	2023-2024	Central Connecticut	Fairleigh Dickinson	71	62	131290	t	t
+2024-02-22	2023-2024	Central Connecticut	Wagner	73	72	131291	t	f
+2024-02-24	2023-2024	Central Connecticut	Sacred Heart	68	67	131292	t	f
+2024-02-29	2023-2024	Central Connecticut	Long Island University	78	64	131293	t	t
+2024-03-02	2023-2024	Central Connecticut	Stonehill	79	67	131294	t	t
+2024-03-06	2023-2024	Central Connecticut	St. Francis (PA)	71	62	131295	t	t
+2024-03-09	2023-2024	Central Connecticut	Wagner	66	56	131296	f	t
+2023-11-06	2023-2024	Central Michigan	Oklahoma	89	59	131297	f	f
+2023-11-11	2023-2024	Central Michigan	UL Monroe	74	64	131298	f	t
+2023-11-13	2023-2024	Central Michigan	Florida State	94	67	131299	f	f
+2023-11-15	2023-2024	Central Michigan	South Florida	68	63	131300	t	f
+2023-11-20	2023-2024	Central Michigan	Siena	70	56	131301	t	t
+2023-11-21	2023-2024	Central Michigan	Stetson	71	61	131302	f	t
+2023-11-29	2023-2024	Central Michigan	Ohio State	88	61	131303	f	f
+2023-12-06	2023-2024	Central Michigan	Valparaiso	71	67	131304	t	t
+2023-12-09	2023-2024	Central Michigan	10 Creighton	109	64	131305	f	f
+2023-12-19	2023-2024	Central Michigan	vsDavenport	90	66	131306	t	t
+2023-12-21	2023-2024	Central Michigan	Detroit Mercy	75	63	131307	t	t
+2023-12-30	2023-2024	Central Michigan	Loyola Chicago	73	35	131308	f	f
+2024-01-02	2023-2024	Central Michigan	Buffalo	76	64	131309	f	t
+2024-01-06	2023-2024	Central Michigan	Ball State	71	65	131310	t	f
+2024-01-09	2023-2024	Central Michigan	Eastern Michigan	80	64	131311	t	f
+2024-01-13	2023-2024	Central Michigan	Kent State	77	62	131312	t	t
+2024-01-16	2023-2024	Central Michigan	Ohio	73	61	131313	f	f
+2024-01-19	2023-2024	Central Michigan	Toledo	65	62	131314	t	t
+2024-01-23	2023-2024	Central Michigan	Miami (OH)	71	55	131315	t	t
+2024-01-27	2023-2024	Central Michigan	Western Michigan	62	55	131316	t	f
+2024-02-06	2023-2024	Central Michigan	Akron	68	47	131317	f	f
+2024-02-10	2023-2024	Central Michigan	Old Dominion	58	57	131318	t	f
+2024-02-17	2023-2024	Central Michigan	Western Michigan	69	42	131319	t	t
+2024-02-24	2023-2024	Central Michigan	Miami (OH)	88	60	131320	f	f
+2024-02-27	2023-2024	Central Michigan	Ball State	79	71	131321	f	t
+2024-03-05	2023-2024	Central Michigan	Northern Illinois	69	63	131322	t	f
+2024-03-14	2023-2024	Central Michigan	Bowling Green	66	56	131323	f	t
+2023-11-06	2023-2024	Charleston	Iona	71	69	131324	t	t
+2023-11-10	2023-2024	Charleston	Duquesne	90	72	131325	f	t
+2023-11-16	2023-2024	Charleston	Vermont	73	64	131326	f	t
+2023-11-17	2023-2024	Charleston	Wyoming	67	60	131327	f	t
+2023-11-19	2023-2024	Charleston	Coastal Carolina	80	72	131328	t	f
+2023-11-26	2023-2024	Charleston	Kent State	84	78	131329	t	f
+2023-12-01	2023-2024	Charleston	Liberty	76	67	131330	t	t
+2023-12-02	2023-2024	Charleston	13 Florida Atlantic	90	74	131331	f	f
+2023-12-10	2023-2024	Charleston	Rhode Island	85	70	131332	t	t
+2023-12-14	2023-2024	Charleston	The Citadel	86	71	131333	t	t
+2023-12-18	2023-2024	Charleston	Coastal Carolina	84	81	131334	t	t
+2023-12-21	2023-2024	Charleston	Saint Joseph's	89	82	131335	t	t
+2023-12-29	2023-2024	Charleston	vsMontreat	96	59	131336	t	t
+2024-01-04	2023-2024	Charleston	Hofstra	73	61	131337	t	f
+2024-01-06	2023-2024	Charleston	Stony Brook	93	87	131338	t	f
+2024-01-11	2023-2024	Charleston	Elon	80	62	131339	t	t
+2024-01-13	2023-2024	Charleston	Monmouth	94	83	131340	t	t
+2024-01-18	2023-2024	Charleston	Towson	82	78	131341	f	t
+2024-01-20	2023-2024	Charleston	UNC Wilmington	78	69	131342	f	f
+2024-01-25	2023-2024	Charleston	Hampton	107	86	131343	t	f
+2024-01-27	2023-2024	Charleston	Campbell	90	67	131344	t	f
+2024-02-01	2023-2024	Charleston	UNC Wilmington	80	74	131345	f	t
+2024-02-03	2023-2024	Charleston	William & Mary	84	83	131346	t	f
+2024-02-08	2023-2024	Charleston	North Carolina A&T	80	58	131347	t	t
+2024-02-10	2023-2024	Charleston	Drexel	80	70	131348	t	t
+2024-02-15	2023-2024	Charleston	Northeastern	77	73	131349	t	f
+2024-02-19	2023-2024	Charleston	William & Mary	65	57	131350	t	t
+2024-02-22	2023-2024	Charleston	Delaware	90	71	131351	t	f
+2024-02-24	2023-2024	Charleston	Towson	72	56	131352	t	f
+2024-02-29	2023-2024	Charleston	Campbell	96	73	131353	t	t
+2024-03-02	2023-2024	Charleston	Hofstra	87	76	131354	t	t
+2024-03-10	2023-2024	Charleston	Monmouth	83	59	131355	t	t
+2024-03-11	2023-2024	Charleston	Towson	61	56	131356	t	t
+2023-11-06	2023-2024	Charleston So	vsToccoa Falls	94	59	131357	t	t
+2023-11-09	2023-2024	Charleston So	North Florida	81	70	131358	f	t
+2023-11-13	2023-2024	Charleston So	vsJohnson & Wales (NC)	102	61	131359	t	t
+2023-11-17	2023-2024	Charleston So	NC State	87	53	131360	f	f
+2023-11-20	2023-2024	Charleston So	Bethune-Cookman	79	73	131361	f	f
+2023-11-24	2023-2024	Charleston So	Wake Forest	71	56	131362	f	f
+2023-11-28	2023-2024	Charleston So	The Citadel	81	52	131363	f	f
+2023-12-02	2023-2024	Charleston So	South Carolina State	66	64	131364	t	t
+2023-12-13	2023-2024	Charleston So	North Alabama	76	64	131365	f	t
+2023-12-16	2023-2024	Charleston So	South Carolina	73	69	131366	f	f
+2023-12-19	2023-2024	Charleston So	Loyola Chicago	72	59	131367	f	f
+2023-12-21	2023-2024	Charleston So	vsKentucky Christian	103	79	131368	t	t
+2023-12-29	2023-2024	Charleston So	9 North Carolina	105	60	131369	f	f
+2024-01-03	2023-2024	Charleston So	Presbyterian	68	61	131370	f	t
+2024-01-06	2023-2024	Charleston So	Longwood	77	56	131371	f	f
+2024-01-10	2023-2024	Charleston So	Gardner-Webb	86	74	131372	t	f
+2024-01-13	2023-2024	Charleston So	South Carolina Upstate	77	70	131373	t	t
+2024-01-20	2023-2024	Charleston So	High Point	86	79	131374	f	f
+2024-01-24	2023-2024	Charleston So	Winthrop	78	59	131375	f	t
+2024-01-27	2023-2024	Charleston So	UNC Asheville	71	65	131376	f	t
+2024-01-31	2023-2024	Charleston So	Radford	63	60	131377	t	f
+2024-02-03	2023-2024	Charleston So	Longwood	83	77	131378	t	t
+2024-02-07	2023-2024	Charleston So	Winthrop	67	46	131379	f	f
+2024-02-14	2023-2024	Charleston So	Gardner-Webb	85	77	131380	f	t
+2024-02-17	2023-2024	Charleston So	UNC Asheville	86	55	131381	f	f
+2024-02-21	2023-2024	Charleston So	South Carolina Upstate	63	60	131382	t	f
+2024-02-24	2023-2024	Charleston So	High Point	74	59	131383	f	t
+2024-02-28	2023-2024	Charleston So	Radford	58	57	131384	t	t
+2024-03-02	2023-2024	Charleston So	Presbyterian	72	65	131385	f	f
+2024-03-08	2023-2024	Charleston So	UNC Asheville	60	55	131386	f	t
+2023-11-06	2023-2024	Charlotte	Maine	69	52	131387	t	t
+2023-11-10	2023-2024	Charlotte	Liberty	71	59	131388	f	t
+2023-11-15	2023-2024	Charlotte	Utah Valley	62	45	131389	t	t
+2023-11-19	2023-2024	Charlotte	George Mason	54	49	131390	t	t
+2023-11-25	2023-2024	Charlotte	Georgia State	65	57	131391	t	t
+2023-11-29	2023-2024	Charlotte	Davidson	85	81	131392	f	t
+2023-12-05	2023-2024	Charlotte	Stetson	85	62	131393	t	t
+2023-12-09	2023-2024	Charlotte	22 Duke	80	56	131394	f	f
+2023-12-16	2023-2024	Charlotte	Richmond	64	56	131395	f	f
+2023-12-22	2023-2024	Charlotte	vsGreensboro College	91	44	131396	t	t
+2023-12-29	2023-2024	Charlotte	Stetson	79	75	131397	f	f
+2024-01-02	2023-2024	Charlotte	SMU	66	54	131398	f	f
+2024-01-06	2023-2024	Charlotte	17 Florida Atlantic	70	68	131399	t	t
+2024-01-10	2023-2024	Charlotte	Tulsa	84	76	131400	t	t
+2024-01-13	2023-2024	Charlotte	UTSA	66	58	131401	t	f
+2024-01-20	2023-2024	Charlotte	North Texas	56	44	131402	t	t
+2024-01-23	2023-2024	Charlotte	UAB	76	70	131403	t	t
+2024-01-27	2023-2024	Charlotte	Tulane	75	71	131404	t	f
+2024-02-03	2023-2024	Charlotte	East Carolina	67	52	131405	t	t
+2024-02-06	2023-2024	Charlotte	South Florida	72	69	131406	f	f
+2024-02-11	2023-2024	Charlotte	Temple	73	70	131407	t	f
+2024-02-15	2023-2024	Charlotte	UTSA	79	70	131408	t	t
+2024-02-18	2023-2024	Charlotte	Wichita State	72	61	131409	t	t
+2024-02-21	2023-2024	Charlotte	Memphis	76	52	131410	f	f
+2024-02-24	2023-2024	Charlotte	Tulsa	69	67	131411	f	f
+2024-03-02	2023-2024	Charlotte	25 South Florida	76	61	131412	f	t
+2024-03-06	2023-2024	Charlotte	Rice	69	64	131413	t	t
+2024-03-09	2023-2024	Charlotte	East Carolina	82	72	131414	t	f
+2024-03-15	2023-2024	Charlotte	Temple	58	54	131415	f	t
+2023-11-06	2023-2024	Chattanooga	vsCovenant	89	44	131416	t	t
+2023-11-10	2023-2024	Chattanooga	Louisville	81	71	131417	t	f
+2023-11-14	2023-2024	Chattanooga	Bellarmine	72	64	131418	t	t
+2023-11-19	2023-2024	Chattanooga	Tennessee Tech	68	63	131419	t	t
+2023-11-26	2023-2024	Chattanooga	Southeast Missouri State	72	56	131420	t	t
+2023-11-29	2023-2024	Chattanooga	Lipscomb	82	68	131421	f	f
+2023-12-03	2023-2024	Chattanooga	Morehead State	87	80	131422	f	f
+2023-12-10	2023-2024	Chattanooga	vsTennessee Wesleyan	112	51	131423	t	t
+2023-12-16	2023-2024	Chattanooga	Alabama A&M	88	72	131424	t	f
+2023-12-19	2023-2024	Chattanooga	Gardner-Webb	69	66	131425	t	t
+2023-12-30	2023-2024	Chattanooga	Auburn	101	66	131426	f	f
+2024-01-03	2023-2024	Chattanooga	Samford	89	74	131427	f	f
+2024-01-06	2023-2024	Chattanooga	Furman	73	58	131428	t	t
+2024-01-11	2023-2024	Chattanooga	VMI	109	61	131429	t	t
+2024-01-13	2023-2024	Chattanooga	UNC Greensboro	70	54	131430	f	t
+2024-01-17	2023-2024	Chattanooga	Mercer	74	60	131431	t	f
+2024-01-21	2023-2024	Chattanooga	East Tennessee State	81	74	131432	t	f
+2024-01-24	2023-2024	Chattanooga	Wofford	79	65	131433	t	f
+2024-01-27	2023-2024	Chattanooga	The Citadel	90	62	131434	t	t
+2024-01-31	2023-2024	Chattanooga	Western Carolina	91	85	131435	t	f
+2024-02-03	2023-2024	Chattanooga	Samford	78	56	131436	f	t
+2024-02-08	2023-2024	Chattanooga	VMI	88	84	131437	t	f
+2024-02-10	2023-2024	Chattanooga	UNC Greensboro	89	61	131438	t	f
+2024-02-14	2023-2024	Chattanooga	East Tennessee State	84	71	131439	t	t
+2024-02-18	2023-2024	Chattanooga	Furman	82	65	131440	f	f
+2024-02-21	2023-2024	Chattanooga	Wofford	81	65	131441	t	t
+2024-02-24	2023-2024	Chattanooga	The Citadel	71	62	131442	f	f
+2024-02-28	2023-2024	Chattanooga	Mercer	84	75	131443	t	t
+2024-03-02	2023-2024	Chattanooga	Western Carolina	82	63	131444	f	t
+2024-03-09	2023-2024	Chattanooga	Wofford	75	57	131445	t	t
+2023-11-06	2023-2024	Chicago State	Bowling Green	70	41	131446	f	f
+2023-11-09	2023-2024	Chicago State	Mercer	66	61	131447	f	t
+2023-11-12	2023-2024	Chicago State	Southern Indiana	78	67	131448	t	f
+2023-11-14	2023-2024	Chicago State	Cal State Northridge	74	64	131449	f	t
+2023-11-16	2023-2024	Chicago State	Southern Illinois	71	55	131450	f	f
+2023-11-22	2023-2024	Chicago State	Morgan State	84	83	131451	t	t
+2023-11-25	2023-2024	Chicago State	UT Martin	94	71	131452	f	t
+2023-11-28	2023-2024	Chicago State	Loyola Chicago	62	53	131453	f	f
+2023-11-30	2023-2024	Chicago State	Delaware State	76	69	131454	f	t
+2023-12-03	2023-2024	Chicago State	Stetson	77	54	131455	t	t
+2023-12-10	2023-2024	Chicago State	St. Thomas-Minnesota	66	50	131456	f	t
+2023-12-13	2023-2024	Chicago State	25 Northwestern	75	73	131457	t	f
+2023-12-16	2023-2024	Chicago State	Valparaiso	63	62	131458	t	f
+2023-12-18	2023-2024	Chicago State	UT Rio Grande Valley	78	68	131459	t	t
+2023-12-20	2023-2024	Chicago State	Bethune-Cookman	55	54	131460	t	t
+2023-12-22	2023-2024	Chicago State	24 Wisconsin	80	53	131461	f	f
+2023-12-27	2023-2024	Chicago State	California Baptist	74	62	131462	f	f
+2023-12-30	2023-2024	Chicago State	DePaul	70	58	131463	f	f
+2024-01-02	2023-2024	Chicago State	Kansas State	62	55	131464	f	f
+2024-01-03	2023-2024	Chicago State	Oklahoma State	72	53	131465	f	f
+2024-01-07	2023-2024	Chicago State	UTEP	74	69	131466	f	f
+2024-01-10	2023-2024	Chicago State	Fairleigh Dickinson	75	74	131467	t	f
+2024-01-15	2023-2024	Chicago State	Stetson	77	70	131468	t	f
+2024-01-19	2023-2024	Chicago State	vsEast-West University	131	55	131469	t	t
+2024-01-21	2023-2024	Chicago State	vsSt. Xavier  (IL)	108	58	131470	t	t
+2024-01-31	2023-2024	Chicago State	Duquesne	65	60	131471	f	f
+2024-02-10	2023-2024	Chicago State	South Carolina State	78	55	131472	f	f
+2024-02-14	2023-2024	Chicago State	Eastern Kentucky	86	73	131473	f	f
+2024-02-19	2023-2024	Chicago State	vsIndiana University Northwest	93	70	131474	t	t
+2023-11-06	2023-2024	Cincinnati	UIC	69	58	131475	t	t
+2023-11-10	2023-2024	Cincinnati	Detroit Mercy	93	61	131476	t	t
+2023-11-12	2023-2024	Cincinnati	Eastern Washington	85	73	131477	t	t
+2023-11-19	2023-2024	Cincinnati	Northern Kentucky	90	66	131478	t	t
+2023-11-22	2023-2024	Cincinnati	Georgia Tech	89	54	131479	t	t
+2023-12-03	2023-2024	Cincinnati	Florida Gulf Coast	99	62	131480	t	t
+2023-12-09	2023-2024	Cincinnati	Xavier	84	79	131481	f	f
+2023-12-12	2023-2024	Cincinnati	Bryant	85	53	131482	t	t
+2023-12-16	2023-2024	Cincinnati	Dayton	82	68	131483	f	t
+2023-12-19	2023-2024	Cincinnati	Merrimack	65	49	131484	t	t
+2023-12-22	2023-2024	Cincinnati	Stetson	83	75	131485	t	t
+2023-12-29	2023-2024	Cincinnati	Evansville	76	58	131486	t	t
+2024-01-06	2023-2024	Cincinnati	12 BYU	71	60	131487	t	f
+2024-01-09	2023-2024	Cincinnati	25 Texas	74	73	131488	f	t
+2024-01-13	2023-2024	Cincinnati	14 Baylor	62	59	131489	f	f
+2024-01-20	2023-2024	Cincinnati	15 Oklahoma	69	65	131490	f	t
+2024-01-22	2023-2024	Cincinnati	7 Kansas	74	69	131491	f	f
+2024-01-27	2023-2024	Cincinnati	UCF	68	57	131492	t	t
+2024-01-31	2023-2024	Cincinnati	West Virginia	69	65	131493	f	f
+2024-02-03	2023-2024	Cincinnati	15 Texas Tech	75	72	131494	t	f
+2024-02-10	2023-2024	Cincinnati	5 Houston	67	62	131495	f	t
+2024-02-13	2023-2024	Cincinnati	10 Iowa State	68	59	131496	f	t
+2024-02-17	2023-2024	Cincinnati	UCF	76	74	131497	t	f
+2024-02-21	2023-2024	Cincinnati	Oklahoma State	80	76	131498	f	t
+2024-02-24	2023-2024	Cincinnati	TCU	75	57	131499	f	f
+2024-02-27	2023-2024	Cincinnati	1 Houston	67	59	131500	f	f
+2024-03-02	2023-2024	Cincinnati	Kansas State	74	72	131501	t	t
+2024-03-09	2023-2024	Cincinnati	West Virginia	92	56	131502	t	t
+2024-03-12	2023-2024	Cincinnati	West Virginia	90	85	131503	t	t
+2024-03-13	2023-2024	Cincinnati	16 Kansas	72	52	131504	t	t
+2024-03-14	2023-2024	Cincinnati	14 Baylor	68	56	131505	f	t
+2023-11-06	2023-2024	Clemson	Winthrop	78	56	131506	t	t
+2023-11-10	2023-2024	Clemson	UAB	77	76	131507	t	t
+2023-11-12	2023-2024	Clemson	Davidson	68	65	131508	t	t
+2023-11-19	2023-2024	Clemson	Boise State	85	68	131509	t	t
+2023-11-24	2023-2024	Clemson	Alcorn State	90	69	131510	t	t
+2023-11-28	2023-2024	Clemson	23 Alabama	85	77	131511	t	f
+2023-12-03	2023-2024	Clemson	Pittsburgh	79	70	131512	t	f
+2023-12-06	2023-2024	Clemson	South Carolina	72	67	131513	t	t
+2023-12-09	2023-2024	Clemson	TCU	74	66	131514	t	t
+2023-12-16	2023-2024	Clemson	Memphis	79	77	131515	f	f
+2023-12-22	2023-2024	Clemson	Queens University	109	79	131516	t	t
+2023-12-29	2023-2024	Clemson	Radford	93	58	131517	t	t
+2024-01-03	2023-2024	Clemson	Miami	95	82	131518	f	f
+2024-01-06	2023-2024	Clemson	8 North Carolina	65	55	131519	f	t
+2024-01-10	2023-2024	Clemson	Virginia Tech	87	72	131520	f	f
+2024-01-13	2023-2024	Clemson	Boston College	89	78	131521	t	t
+2024-01-20	2023-2024	Clemson	Florida State	78	67	131522	t	f
+2024-01-27	2023-2024	Clemson	12 Duke	72	71	131523	f	f
+2024-01-30	2023-2024	Clemson	Louisville	70	64	131524	t	t
+2024-02-03	2023-2024	Clemson	Virginia	66	65	131525	f	t
+2024-02-06	2023-2024	Clemson	3 North Carolina	80	76	131526	t	f
+2024-02-10	2023-2024	Clemson	Syracuse	77	68	131527	t	f
+2024-02-14	2023-2024	Clemson	Miami	77	60	131528	t	t
+2024-02-17	2023-2024	Clemson	NC State	78	77	131529	f	t
+2024-02-21	2023-2024	Clemson	Georgia Tech	81	57	131530	t	f
+2024-02-24	2023-2024	Clemson	Florida State	74	63	131531	t	t
+2024-02-27	2023-2024	Clemson	Pittsburgh	69	62	131532	t	t
+2024-03-02	2023-2024	Clemson	Notre Dame	69	62	131533	f	f
+2024-03-05	2023-2024	Clemson	Syracuse	90	75	131534	t	t
+2024-03-09	2023-2024	Clemson	Wake Forest	81	76	131535	f	f
+2024-03-13	2023-2024	Clemson	Boston College	76	55	131536	f	t
+2023-11-06	2023-2024	Cleveland State	Duquesne	79	77	131537	f	f
+2023-11-08	2023-2024	Cleveland State	vsDefiance	102	41	131538	t	t
+2023-11-11	2023-2024	Cleveland State	Ohio	82	78	131539	t	t
+2023-11-15	2023-2024	Cleveland State	Canisius	71	61	131540	t	t
+2023-11-18	2023-2024	Cleveland State	Eastern Michigan	69	62	131541	f	f
+2023-11-22	2023-2024	Cleveland State	East Tennessee State	72	70	131542	t	t
+2023-11-25	2023-2024	Cleveland State	Alabama A&M	86	59	131543	t	t
+2023-11-29	2023-2024	Cleveland State	Youngstown State	94	69	131544	f	f
+2023-12-02	2023-2024	Cleveland State	Detroit Mercy	69	58	131545	t	t
+2023-12-05	2023-2024	Cleveland State	St. Mary's	70	57	131546	f	f
+2023-12-09	2023-2024	Cleveland State	Kent State	83	77	131547	f	f
+2023-12-15	2023-2024	Cleveland State	Bradley	76	69	131548	t	f
+2023-12-21	2023-2024	Cleveland State	Western Michigan	90	77	131549	t	t
+2023-12-28	2023-2024	Cleveland State	Oakland	75	67	131550	t	t
+2023-12-31	2023-2024	Cleveland State	IUPUI	86	77	131551	t	f
+2024-01-04	2023-2024	Cleveland State	Wright State	82	70	131552	f	f
+2024-01-12	2023-2024	Cleveland State	Milwaukee	88	80	131553	f	f
+2024-01-14	2023-2024	Cleveland State	Green Bay	79	71	131554	f	f
+2024-01-20	2023-2024	Cleveland State	Purdue Fort Wayne	75	68	131555	t	t
+2024-01-28	2023-2024	Cleveland State	Robert Morris	66	64	131556	t	t
+2024-02-01	2023-2024	Cleveland State	Detroit Mercy	77	65	131557	t	f
+2024-02-03	2023-2024	Cleveland State	Oakland	83	71	131558	f	f
+2024-02-07	2023-2024	Cleveland State	Purdue Fort Wayne	75	72	131559	t	f
+2024-02-14	2023-2024	Cleveland State	Milwaukee	71	68	131560	f	t
+2024-02-17	2023-2024	Cleveland State	Youngstown State	81	73	131561	t	t
+2024-02-22	2023-2024	Cleveland State	Northern Kentucky	75	73	131562	f	f
+2024-02-25	2023-2024	Cleveland State	Robert Morris	73	71	131563	t	f
+2024-02-28	2023-2024	Cleveland State	Green Bay	69	61	131564	f	t
+2024-03-02	2023-2024	Cleveland State	IUPUI	75	66	131565	t	t
+2024-03-05	2023-2024	Cleveland State	IUPUI	85	66	131566	t	t
+2024-03-07	2023-2024	Cleveland State	Youngstown State	82	70	131567	t	f
+2024-03-11	2023-2024	Cleveland State	Oakland	74	71	131568	f	t
+2023-11-06	2023-2024	Coastal Car	vsPiedmont	88	86	131569	t	t
+2023-11-16	2023-2024	Coastal Car	Wichita State	86	77	131570	f	t
+2023-11-17	2023-2024	Coastal Car	Furman	89	80	131571	f	t
+2023-11-19	2023-2024	Coastal Car	Charleston	80	72	131572	f	t
+2023-11-26	2023-2024	Coastal Car	North Carolina Central	70	58	131573	f	t
+2023-12-02	2023-2024	Coastal Car	Winthrop	90	87	131574	f	t
+2023-12-04	2023-2024	Coastal Car	vsSt. Andrews	110	46	131575	t	t
+2023-12-09	2023-2024	Coastal Car	Wofford	88	80	131576	f	t
+2023-12-18	2023-2024	Coastal Car	Charleston	84	81	131577	f	f
+2023-12-21	2023-2024	Coastal Car	North Carolina A&T	85	82	131578	f	t
+2023-12-30	2023-2024	Coastal Car	Troy	72	65	131579	f	t
+2024-01-04	2023-2024	Coastal Car	Texas State	71	63	131580	t	f
+2024-01-06	2023-2024	Coastal Car	Louisiana	85	77	131581	f	f
+2024-01-11	2023-2024	Coastal Car	Appalachian State	70	45	131582	f	t
+2024-01-13	2023-2024	Coastal Car	Old Dominion	79	75	131583	t	t
+2024-01-18	2023-2024	Coastal Car	Georgia Southern	73	70	131584	f	f
+2024-01-20	2023-2024	Coastal Car	Appalachian State	88	59	131585	f	f
+2024-01-24	2023-2024	Coastal Car	Southern Miss	79	63	131586	f	t
+2024-02-01	2023-2024	Coastal Car	James Madison	105	67	131587	f	f
+2024-02-03	2023-2024	Coastal Car	Marshall	91	74	131588	f	f
+2024-02-07	2023-2024	Coastal Car	UL Monroe	79	75	131589	f	f
+2024-02-15	2023-2024	Coastal Car	Georgia Southern	82	75	131590	t	t
+2024-02-17	2023-2024	Coastal Car	Marshall	74	67	131591	t	t
+2024-02-21	2023-2024	Coastal Car	Georgia State	72	71	131592	f	f
+2024-02-24	2023-2024	Coastal Car	Old Dominion	75	59	131593	f	f
+2024-02-28	2023-2024	Coastal Car	Arkansas State	71	60	131594	f	t
+2024-03-01	2023-2024	Coastal Car	James Madison	86	76	131595	f	t
+2024-03-05	2023-2024	Coastal Car	UL Monroe	75	71	131596	t	t
+2024-03-07	2023-2024	Coastal Car	Louisiana	80	66	131597	f	t
+2023-11-06	2023-2024	Colgate	Brown	72	70	131598	t	t
+2023-11-14	2023-2024	Colgate	Syracuse	79	75	131599	f	f
+2023-11-17	2023-2024	Colgate	Yale	68	50	131600	f	t
+2023-11-18	2023-2024	Colgate	Gardner-Webb	59	52	131601	t	t
+2023-11-19	2023-2024	Colgate	Weber State	57	55	131602	t	t
+2023-11-22	2023-2024	Colgate	Harvard	76	70	131603	f	t
+2023-11-29	2023-2024	Colgate	Binghamton	84	49	131604	t	t
+2023-12-02	2023-2024	Colgate	2 Arizona	82	55	131605	f	f
+2023-12-06	2023-2024	Colgate	vsVermont State - Lyndon	115	37	131606	t	t
+2023-12-09	2023-2024	Colgate	Vermont	77	71	131607	t	f
+2023-12-17	2023-2024	Colgate	16 Illinois	74	57	131608	f	f
+2023-12-21	2023-2024	Colgate	Iona	85	65	131609	f	f
+2023-12-30	2023-2024	Colgate	Cornell	77	64	131610	f	f
+2024-01-03	2023-2024	Colgate	Loyola Maryland	78	55	131611	t	t
+2024-01-06	2023-2024	Colgate	Navy	80	72	131612	t	f
+2024-01-10	2023-2024	Colgate	Louisiana-Lafayette	69	64	131613	f	t
+2024-01-13	2023-2024	Colgate	Bucknell	84	73	131614	t	f
+2024-01-17	2023-2024	Colgate	Army	64	56	131615	t	f
+2024-01-20	2023-2024	Colgate	Boston University	75	59	131616	t	t
+2024-01-22	2023-2024	Colgate	Lehigh	60	57	131617	t	t
+2024-01-27	2023-2024	Colgate	American University	73	54	131618	t	f
+2024-01-31	2023-2024	Colgate	Army	74	55	131619	t	t
+2024-02-03	2023-2024	Colgate	Navy	88	64	131620	t	t
+2024-02-07	2023-2024	Colgate	Boston University	74	64	131621	t	f
+2024-02-10	2023-2024	Colgate	Loyola Maryland	76	62	131622	t	f
+2024-02-14	2023-2024	Colgate	Holy Cross	85	55	131623	t	t
+2024-02-17	2023-2024	Colgate	Bucknell	62	50	131624	t	t
+2024-02-19	2023-2024	Colgate	Louisiana-Lafayette	67	62	131625	t	f
+2024-02-25	2023-2024	Colgate	American University	66	64	131626	f	t
+2024-02-28	2023-2024	Colgate	Holy Cross	77	58	131627	t	f
+2024-03-02	2023-2024	Colgate	Lehigh	63	60	131628	t	f
+2024-03-07	2023-2024	Colgate	Holy Cross	81	64	131629	t	t
+2024-03-10	2023-2024	Colgate	Bucknell	68	65	131630	t	t
+2024-03-13	2023-2024	Colgate	Lehigh	74	55	131631	t	t
+2023-11-06	2023-2024	Colorado	Towson	75	57	131632	t	t
+2023-11-10	2023-2024	Colorado	Grambling	95	63	131633	t	t
+2023-11-14	2023-2024	Colorado	Milwaukee	106	79	131634	t	t
+2023-11-20	2023-2024	Colorado	Richmond	64	59	131635	t	t
+2023-11-26	2023-2024	Colorado	Iona	85	68	131636	t	t
+2023-11-29	2023-2024	Colorado	20 Colorado State	88	83	131637	f	f
+2023-12-03	2023-2024	Colorado	Pepperdine	91	66	131638	t	t
+2023-12-10	2023-2024	Colorado	15 Miami	90	63	131639	t	t
+2023-12-15	2023-2024	Colorado	Northern Colorado	90	68	131640	t	t
+2023-12-21	2023-2024	Colorado	Utah Tech	98	71	131641	t	t
+2023-12-29	2023-2024	Colorado	Washington	73	69	131642	t	t
+2023-12-31	2023-2024	Colorado	Washington State	74	67	131643	t	t
+2024-01-04	2023-2024	Colorado	10 Arizona	97	50	131644	f	f
+2024-01-06	2023-2024	Colorado	Arizona State	76	73	131645	f	f
+2024-01-10	2023-2024	Colorado	California	82	78	131646	f	f
+2024-01-13	2023-2024	Colorado	USC	68	58	131647	t	t
+2024-01-18	2023-2024	Colorado	Oregon	86	70	131648	t	t
+2024-01-20	2023-2024	Colorado	Oregon State	90	57	131649	t	t
+2024-01-24	2023-2024	Colorado	Washington	98	81	131650	t	f
+2024-01-27	2023-2024	Colorado	Washington State	78	69	131651	f	f
+2024-02-03	2023-2024	Colorado	Utah	73	68	131652	f	f
+2024-02-08	2023-2024	Colorado	Arizona State	82	70	131653	t	t
+2024-02-10	2023-2024	Colorado	8 Arizona	99	79	131654	f	t
+2024-02-15	2023-2024	Colorado	UCLA	64	60	131655	f	f
+2024-02-24	2023-2024	Colorado	Utah	89	65	131656	t	t
+2024-02-28	2023-2024	Colorado	California	88	78	131657	t	t
+2024-03-03	2023-2024	Colorado	Stanford	81	71	131658	t	t
+2024-03-07	2023-2024	Colorado	Oregon	79	75	131659	t	f
+2024-03-09	2023-2024	Colorado	Oregon State	73	57	131660	t	f
+2024-03-14	2023-2024	Colorado	Utah	72	58	131661	t	t
+2024-03-15	2023-2024	Colorado	22 Washington State	58	52	131662	t	t
+2024-03-16	2023-2024	Colorado	Oregon	75	68	131663	f	t
+2023-11-06	2023-2024	CSU	Louisiana Tech	81	73	131664	t	t
+2023-11-10	2023-2024	CSU	Wright State	105	77	131665	t	t
+2023-11-14	2023-2024	CSU	Northern Colorado	83	64	131666	t	f
+2023-11-17	2023-2024	CSU	Kansas City	84	61	131667	t	t
+2023-11-22	2023-2024	CSU	Boston College	86	74	131668	t	t
+2023-11-23	2023-2024	CSU	8 Creighton	69	48	131669	t	t
+2023-11-29	2023-2024	CSU	Colorado	88	83	131670	t	t
+2023-12-02	2023-2024	CSU	Washington	86	81	131671	t	t
+2023-12-06	2023-2024	CSU	Denver	90	80	131672	t	t
+2023-12-09	2023-2024	CSU	St. Mary's	64	61	131673	f	t
+2023-12-17	2023-2024	CSU	vsCSU Pueblo	86	54	131674	t	t
+2023-12-22	2023-2024	CSU	Loyola Marymount	76	67	131675	t	f
+2023-12-29	2023-2024	CSU	vsAdams State	106	61	131676	t	t
+2024-01-02	2023-2024	CSU	New Mexico	76	68	131677	t	t
+2024-01-06	2023-2024	CSU	Utah State	77	72	131678	f	f
+2024-01-09	2023-2024	CSU	Boise State	65	58	131679	f	f
+2024-01-19	2023-2024	CSU	UNLV	78	75	131680	t	t
+2024-01-24	2023-2024	CSU	Nevada	77	64	131681	f	f
+2024-01-30	2023-2024	CSU	San Diego State	79	71	131682	t	t
+2024-02-03	2023-2024	CSU	Fresno State	73	61	131683	t	f
+2024-02-06	2023-2024	CSU	Boise State	75	62	131684	t	t
+2024-02-09	2023-2024	CSU	San José State	66	47	131685	t	t
+2024-02-13	2023-2024	CSU	San Diego State	71	55	131686	f	f
+2024-02-17	2023-2024	CSU	Utah State	75	55	131687	t	t
+2024-02-21	2023-2024	CSU	New Mexico	68	66	131688	f	f
+2024-02-24	2023-2024	CSU	UNLV	66	60	131689	f	f
+2024-02-27	2023-2024	CSU	Nevada	77	74	131690	f	t
+2024-03-02	2023-2024	CSU	Wyoming	70	62	131691	t	t
+2024-03-09	2023-2024	CSU	Air Force	82	73	131692	t	f
+2024-03-13	2023-2024	CSU	San José State	72	62	131693	t	t
+2024-03-14	2023-2024	CSU	23 Nevada	85	78	131694	t	t
+2024-03-15	2023-2024	CSU	New Mexico	74	61	131695	f	t
+2023-11-06	2023-2024	Columbia	Providence	78	59	131696	f	f
+2023-11-11	2023-2024	Columbia	UAlbany	78	75	131697	f	t
+2023-11-12	2023-2024	Columbia	vsBard College	86	36	131698	t	t
+2023-11-15	2023-2024	Columbia	vsSUNY Delhi	105	60	131699	t	t
+2023-11-18	2023-2024	Columbia	Temple	78	73	131700	t	f
+2023-11-21	2023-2024	Columbia	Long Island University	77	67	131701	t	t
+2023-11-25	2023-2024	Columbia	Maine	75	56	131702	t	t
+2023-11-29	2023-2024	Columbia	Loyola Maryland	69	57	131703	t	t
+2023-12-03	2023-2024	Columbia	New Hampshire	80	71	131704	f	f
+2023-12-05	2023-2024	Columbia	Louisiana-Lafayette	83	72	131705	t	t
+2023-12-11	2023-2024	Columbia	Fairleigh Dickinson	87	83	131706	t	f
+2023-12-30	2023-2024	Columbia	Fordham	87	78	131707	f	f
+2024-01-04	2023-2024	Columbia	vsMount Saint Vincent	120	52	131708	t	t
+2024-01-09	2023-2024	Columbia	Cornell	91	79	131709	f	f
+2024-01-15	2023-2024	Columbia	Yale	89	70	131710	f	f
+2024-01-20	2023-2024	Columbia	Princeton	70	62	131711	f	t
+2024-01-27	2023-2024	Columbia	Pennsylvania	84	81	131712	t	t
+2024-02-02	2023-2024	Columbia	Harvard	62	59	131713	f	f
+2024-02-03	2023-2024	Columbia	Dartmouth	72	56	131714	t	f
+2024-02-10	2023-2024	Columbia	Brown	83	69	131715	t	f
+2024-02-16	2023-2024	Columbia	Dartmouth	73	63	131716	t	t
+2024-02-17	2023-2024	Columbia	Harvard	80	75	131717	f	t
+2024-02-23	2023-2024	Columbia	Brown	66	64	131718	f	t
+2024-02-24	2023-2024	Columbia	Yale	84	76	131719	f	t
+2024-03-01	2023-2024	Columbia	Princeton	84	70	131720	f	f
+2024-03-02	2023-2024	Columbia	Pennsylvania	84	72	131721	f	f
+2024-03-09	2023-2024	Columbia	Cornell	98	76	131722	f	t
+2023-11-06	2023-2024	Coppin State	Virginia Tech	100	55	131723	f	f
+2023-11-09	2023-2024	Coppin State	Towson	70	49	131724	f	t
+2023-11-11	2023-2024	Coppin State	Mount St. Mary's	74	60	131725	f	f
+2023-11-15	2023-2024	Coppin State	Louisville	61	41	131726	f	f
+2023-11-17	2023-2024	Coppin State	Miami (OH)	76	48	131727	f	f
+2023-11-18	2023-2024	Coppin State	Eastern Illinois	48	46	131728	f	t
+2023-11-26	2023-2024	Coppin State	La Salle	81	62	131729	f	f
+2023-11-30	2023-2024	Coppin State	UMBC	89	70	131730	t	t
+2023-12-03	2023-2024	Coppin State	Navy	75	52	131731	f	f
+2023-12-06	2023-2024	Coppin State	Wagner	62	59	131732	f	t
+2023-12-09	2023-2024	Coppin State	George Washington	76	45	131733	f	f
+2023-12-12	2023-2024	Coppin State	Georgetown	71	54	131734	f	f
+2023-12-19	2023-2024	Coppin State	20 James Madison	87	48	131735	f	f
+2023-12-28	2023-2024	Coppin State	Maryland	75	53	131736	f	f
+2024-01-06	2023-2024	Coppin State	Delaware State	55	53	131737	f	f
+2024-01-27	2023-2024	Coppin State	Norfolk State	68	58	131738	f	f
+2024-01-29	2023-2024	Coppin State	Howard	81	66	131739	f	t
+2024-02-03	2023-2024	Coppin State	North Carolina Central	77	46	131740	f	f
+2024-02-05	2023-2024	Coppin State	South Carolina State	77	65	131741	f	f
+2024-02-17	2023-2024	Coppin State	Delaware State	66	56	131742	f	t
+2024-02-19	2023-2024	Coppin State	Maryland-Eastern Shore	75	67	131743	f	f
+2024-02-24	2023-2024	Coppin State	Norfolk State	68	66	131744	f	t
+2024-02-26	2023-2024	Coppin State	Howard	78	69	131745	f	f
+2024-03-02	2023-2024	Coppin State	North Carolina Central	83	58	131746	f	t
+2024-03-04	2023-2024	Coppin State	South Carolina State	61	58	131747	f	t
+2024-03-07	2023-2024	Coppin State	Morgan State	78	60	131748	f	f
+2024-03-13	2023-2024	Coppin State	Norfolk State	75	51	131749	f	t
+2023-11-06	2023-2024	Cornell	Lehigh	84	78	131750	t	f
+2023-11-08	2023-2024	Cornell	vsMorrisville	107	86	131751	t	t
+2023-11-11	2023-2024	Cornell	Fordham	78	73	131752	t	f
+2023-11-15	2023-2024	Cornell	George Mason	90	83	131753	f	f
+2023-11-19	2023-2024	Cornell	Cal State Fullerton	88	70	131754	t	t
+2023-11-20	2023-2024	Cornell	Utah Valley	74	61	131755	t	t
+2023-11-29	2023-2024	Cornell	Monmouth	91	87	131756	t	t
+2023-12-02	2023-2024	Cornell	Louisiana-Lafayette	79	71	131757	t	f
+2023-12-05	2023-2024	Cornell	Syracuse	81	70	131758	f	f
+2023-12-19	2023-2024	Cornell	Siena	95	74	131759	t	f
+2023-12-22	2023-2024	Cornell	Robert Morris	90	85	131760	t	f
+2023-12-30	2023-2024	Cornell	Colgate	77	64	131761	t	t
+2024-01-02	2023-2024	Cornell	18 Baylor	98	79	131762	f	f
+2024-01-09	2023-2024	Cornell	Columbia	91	79	131763	t	t
+2024-01-15	2023-2024	Cornell	Pennsylvania	77	60	131764	t	t
+2024-01-20	2023-2024	Cornell	Brown	84	83	131765	t	f
+2024-01-23	2023-2024	Cornell	vsWells College	105	49	131766	t	t
+2024-01-27	2023-2024	Cornell	Princeton	83	68	131767	t	t
+2024-02-02	2023-2024	Cornell	Dartmouth	56	53	131768	t	f
+2024-02-03	2023-2024	Cornell	Harvard	89	76	131769	t	f
+2024-02-10	2023-2024	Cornell	Yale	80	78	131770	f	f
+2024-02-16	2023-2024	Cornell	Harvard	75	62	131771	t	t
+2024-02-17	2023-2024	Cornell	Dartmouth	89	80	131772	t	t
+2024-02-23	2023-2024	Cornell	Yale	65	62	131773	t	t
+2024-02-24	2023-2024	Cornell	Brown	78	74	131774	f	t
+2024-03-01	2023-2024	Cornell	Pennsylvania	87	81	131775	t	f
+2024-03-02	2023-2024	Cornell	Princeton	79	77	131776	f	f
+2024-03-09	2023-2024	Cornell	Columbia	98	76	131777	t	f
+2024-03-16	2023-2024	Cornell	Yale	69	57	131778	f	t
+2023-11-07	2023-2024	Creighton	Florida A&M	105	54	131779	t	t
+2023-11-11	2023-2024	Creighton	North Dakota State	89	60	131780	t	t
+2023-11-14	2023-2024	Creighton	Iowa	92	84	131781	t	t
+2023-11-18	2023-2024	Creighton	Texas Southern	82	50	131782	t	t
+2023-11-22	2023-2024	Creighton	Loyola Chicago	88	65	131783	t	t
+2023-11-23	2023-2024	Creighton	Colorado State	69	48	131784	f	t
+2023-11-30	2023-2024	Creighton	Oklahoma State	79	65	131785	t	f
+2023-12-03	2023-2024	Creighton	Nebraska	89	60	131786	t	f
+2023-12-09	2023-2024	Creighton	Central Michigan	109	64	131787	t	t
+2023-12-13	2023-2024	Creighton	UNLV	79	64	131788	f	t
+2023-12-16	2023-2024	Creighton	Alabama	85	82	131789	t	t
+2023-12-30	2023-2024	Creighton	10 Marquette	72	67	131790	f	f
+2024-01-02	2023-2024	Creighton	Georgetown	77	60	131791	t	f
+2024-01-06	2023-2024	Creighton	23 Providence	69	60	131792	t	t
+2024-01-09	2023-2024	Creighton	DePaul	84	58	131793	t	f
+2024-01-13	2023-2024	Creighton	St. John's	66	65	131794	t	t
+2024-01-17	2023-2024	Creighton	1 UConn	62	48	131795	f	f
+2024-01-23	2023-2024	Creighton	Xavier	85	78	131796	t	t
+2024-01-27	2023-2024	Creighton	DePaul	85	62	131797	t	t
+2024-02-02	2023-2024	Creighton	Butler	99	98	131798	f	t
+2024-02-10	2023-2024	Creighton	Xavier	78	71	131799	t	f
+2024-02-13	2023-2024	Creighton	Georgetown	94	72	131800	t	t
+2024-02-17	2023-2024	Creighton	Butler	79	57	131801	t	f
+2024-02-20	2023-2024	Creighton	1 UConn	85	66	131802	t	t
+2024-02-25	2023-2024	Creighton	St. John's	80	66	131803	f	f
+2024-02-28	2023-2024	Creighton	Seton Hall	85	64	131804	t	t
+2024-03-02	2023-2024	Creighton	5 Marquette	89	75	131805	t	t
+2024-03-09	2023-2024	Creighton	Villanova	69	67	131806	t	f
+2024-03-14	2023-2024	Creighton	Providence	78	73	131807	f	t
+2023-11-06	2023-2024	Dartmouth	2 Duke	92	54	131808	f	f
+2023-11-10	2023-2024	Dartmouth	UMass Lowell	81	48	131809	f	t
+2023-11-15	2023-2024	Dartmouth	vsWestfield State	79	61	131810	t	t
+2023-11-25	2023-2024	Dartmouth	Saint Louis	66	65	131811	f	f
+2023-11-29	2023-2024	Dartmouth	Vermont	64	53	131812	f	f
+2023-12-02	2023-2024	Dartmouth	UAlbany	73	68	131813	f	f
+2023-12-06	2023-2024	Dartmouth	New Hampshire	76	64	131814	t	t
+2023-12-09	2023-2024	Dartmouth	Marist	63	53	131815	f	t
+2023-12-13	2023-2024	Dartmouth	Boston University	63	54	131816	t	t
+2023-12-16	2023-2024	Dartmouth	Le Moyne	80	54	131817	f	f
+2023-12-18	2023-2024	Dartmouth	vsThomas (ME)	77	48	131818	t	t
+2023-12-21	2023-2024	Dartmouth	Sacred Heart	67	57	131819	f	f
+2023-12-30	2023-2024	Dartmouth	Vanderbilt	69	53	131820	f	f
+2024-01-06	2023-2024	Dartmouth	Pennsylvania	80	51	131821	f	f
+2024-01-15	2023-2024	Dartmouth	Princeton	76	58	131822	f	f
+2024-01-20	2023-2024	Dartmouth	Yale	76	51	131823	f	t
+2024-01-27	2023-2024	Dartmouth	Brown	75	71	131824	t	t
+2024-02-02	2023-2024	Dartmouth	Cornell	56	53	131825	f	t
+2024-02-03	2023-2024	Dartmouth	Columbia	72	56	131826	f	t
+2024-02-10	2023-2024	Dartmouth	Harvard	77	59	131827	f	f
+2024-02-16	2023-2024	Dartmouth	Columbia	73	63	131828	f	f
+2024-02-17	2023-2024	Dartmouth	Cornell	89	80	131829	f	f
+2024-02-23	2023-2024	Dartmouth	Pennsylvania	82	69	131830	f	t
+2024-02-24	2023-2024	Dartmouth	Princeton	68	56	131831	f	t
+2024-03-01	2023-2024	Dartmouth	Yale	80	56	131832	f	f
+2024-03-02	2023-2024	Dartmouth	Brown	89	67	131833	f	f
+2024-03-05	2023-2024	Dartmouth	Harvard	76	69	131834	t	t
+2023-11-06	2023-2024	Davidson	vsWashington and Lee	86	63	131835	t	t
+2023-11-10	2023-2024	Davidson	Maryland	64	61	131836	t	t
+2023-11-12	2023-2024	Davidson	Clemson	68	65	131837	f	t
+2023-11-17	2023-2024	Davidson	East Tennessee State	70	68	131838	f	f
+2023-11-21	2023-2024	Davidson	Boston University	69	45	131839	t	t
+2023-11-24	2023-2024	Davidson	St. Mary's	89	55	131840	f	f
+2023-11-29	2023-2024	Davidson	Charlotte	85	81	131841	t	f
+2023-12-02	2023-2024	Davidson	Wright State	82	73	131842	t	t
+2023-12-06	2023-2024	Davidson	Campbell	62	50	131843	t	t
+2023-12-09	2023-2024	Davidson	Miami (OH)	79	61	131844	t	t
+2023-12-16	2023-2024	Davidson	vsLynchburg	98	63	131845	t	t
+2023-12-21	2023-2024	Davidson	South Carolina Upstate	62	59	131846	t	t
+2023-12-30	2023-2024	Davidson	Ohio	72	69	131847	t	t
+2024-01-03	2023-2024	Davidson	Dayton	72	59	131848	f	t
+2024-01-09	2023-2024	Davidson	Rhode Island	79	74	131849	f	t
+2024-01-17	2023-2024	Davidson	Fordham	79	69	131850	t	f
+2024-01-24	2023-2024	Davidson	Saint Louis	84	61	131851	t	f
+2024-01-27	2023-2024	Davidson	VCU	63	58	131852	f	t
+2024-02-04	2023-2024	Davidson	Loyola Chicago	76	63	131853	f	f
+2024-02-07	2023-2024	Davidson	Duquesne	72	59	131854	t	f
+2024-02-10	2023-2024	Davidson	George Mason	57	55	131855	f	t
+2024-02-13	2023-2024	Davidson	La Salle	71	56	131856	t	t
+2024-02-20	2023-2024	Davidson	Fordham	68	53	131857	t	t
+2024-02-24	2023-2024	Davidson	Richmond	66	63	131858	f	f
+2024-02-27	2023-2024	Davidson	21 Dayton	80	66	131859	f	f
+2024-03-02	2023-2024	Davidson	Massachusetts	69	67	131860	f	t
+2024-03-06	2023-2024	Davidson	Loyola Chicago	69	59	131861	f	t
+2024-03-09	2023-2024	Davidson	Saint Joseph's	89	71	131862	f	f
+2023-11-06	2023-2024	Dayton	SIU Edwardsville	63	47	131863	t	t
+2023-11-10	2023-2024	Dayton	Northwestern	71	66	131864	f	f
+2023-11-16	2023-2024	Dayton	LSU	70	67	131865	t	t
+2023-11-17	2023-2024	Dayton	St. John's	88	81	131866	t	t
+2023-11-19	2023-2024	Dayton	6 Houston	69	55	131867	f	t
+2023-11-24	2023-2024	Dayton	Youngstown State	77	69	131868	t	t
+2023-11-29	2023-2024	Dayton	SMU	65	63	131869	t	f
+2023-12-02	2023-2024	Dayton	Grambling	76	46	131870	t	t
+2023-12-09	2023-2024	Dayton	Troy	82	70	131871	t	t
+2023-12-16	2023-2024	Dayton	Cincinnati	82	68	131872	t	t
+2023-12-20	2023-2024	Dayton	Oakland	91	67	131873	t	t
+2023-12-30	2023-2024	Dayton	Longwood	78	69	131874	t	t
+2024-01-03	2023-2024	Dayton	Davidson	72	59	131875	t	f
+2024-01-07	2023-2024	Dayton	Massachusetts	64	60	131876	t	t
+2024-01-12	2023-2024	Dayton	Duquesne	72	62	131877	t	f
+2024-01-16	2023-2024	Dayton	Saint Louis	70	65	131878	t	t
+2024-01-20	2023-2024	Dayton	Rhode Island	96	62	131879	t	t
+2024-01-23	2023-2024	Dayton	La Salle	66	54	131880	t	f
+2024-01-27	2023-2024	Dayton	Richmond	69	64	131881	f	f
+2024-01-30	2023-2024	Dayton	George Washington	83	61	131882	t	t
+2024-02-02	2023-2024	Dayton	St. Bonaventure	76	71	131883	t	t
+2024-02-06	2023-2024	Dayton	Saint Joseph's	94	79	131884	t	f
+2024-02-09	2023-2024	Dayton	VCU	49	47	131885	f	f
+2024-02-13	2023-2024	Dayton	Duquesne	75	59	131886	t	t
+2024-02-17	2023-2024	Dayton	Fordham	78	70	131887	t	t
+2024-02-21	2023-2024	Dayton	George Mason	71	67	131888	f	f
+2024-02-27	2023-2024	Dayton	Davidson	80	66	131889	t	t
+2024-03-01	2023-2024	Dayton	Loyola Chicago	77	72	131890	f	f
+2024-03-05	2023-2024	Dayton	Saint Louis	100	83	131891	t	f
+2024-03-14	2023-2024	Dayton	Duquesne	65	57	131892	f	t
+2023-11-07	2023-2024	DePaul	Purdue Fort Wayne	82	74	131893	f	t
+2023-11-11	2023-2024	DePaul	Long Beach State	77	73	131894	f	t
+2023-11-14	2023-2024	DePaul	South Dakota	72	60	131895	t	t
+2023-11-17	2023-2024	DePaul	South Carolina	73	68	131896	f	t
+2023-11-19	2023-2024	DePaul	San Francisco	70	54	131897	f	t
+2023-11-25	2023-2024	DePaul	Northern Illinois	89	79	131898	f	t
+2023-12-01	2023-2024	DePaul	Iowa State	99	80	131899	f	t
+2023-12-06	2023-2024	DePaul	21 Texas A&M	89	64	131900	f	f
+2023-12-09	2023-2024	DePaul	Louisville	75	68	131901	t	t
+2023-12-16	2023-2024	DePaul	25 Northwestern	56	46	131902	f	t
+2023-12-23	2023-2024	DePaul	Villanova	84	48	131903	f	t
+2023-12-30	2023-2024	DePaul	Chicago State	70	58	131904	t	t
+2024-01-02	2023-2024	DePaul	4 UConn	85	56	131905	f	f
+2024-01-06	2023-2024	DePaul	Georgetown	68	65	131906	f	f
+2024-01-09	2023-2024	DePaul	22 Creighton	84	58	131907	f	t
+2024-01-12	2023-2024	DePaul	Villanova	94	69	131908	f	f
+2024-01-17	2023-2024	DePaul	Providence	100	62	131909	f	t
+2024-01-20	2023-2024	DePaul	Butler	74	60	131910	f	f
+2024-01-24	2023-2024	DePaul	14 Marquette	86	73	131911	f	t
+2024-01-27	2023-2024	DePaul	17 Creighton	85	62	131912	f	f
+2024-01-30	2023-2024	DePaul	Seton Hall	72	39	131913	f	t
+2024-02-03	2023-2024	DePaul	Xavier	93	68	131914	f	t
+2024-02-06	2023-2024	DePaul	St. John's	85	57	131915	f	f
+2024-02-14	2023-2024	DePaul	1 UConn	101	65	131916	f	t
+2024-02-17	2023-2024	DePaul	Providence	81	70	131917	f	f
+2024-02-21	2023-2024	DePaul	7 Marquette	105	71	131918	f	f
+2024-02-24	2023-2024	DePaul	Georgetown	77	76	131919	f	t
+2024-02-28	2023-2024	DePaul	Xavier	91	58	131920	f	f
+2024-03-02	2023-2024	DePaul	Butler	82	63	131921	f	t
+2024-03-05	2023-2024	DePaul	St. John's	104	77	131922	f	t
+2024-03-09	2023-2024	DePaul	Seton Hall	86	62	131923	f	f
+2024-03-13	2023-2024	DePaul	Villanova	58	57	131924	f	t
+2023-11-06	2023-2024	Delaware	Bucknell	78	57	131925	t	f
+2023-11-08	2023-2024	Delaware	vsGoldey-Beacom	101	68	131926	t	t
+2023-11-12	2023-2024	Delaware	Air Force	65	57	131927	t	t
+2023-11-15	2023-2024	Delaware	Delaware State	78	67	131928	t	f
+2023-11-24	2023-2024	Delaware	Brown	67	59	131929	t	t
+2023-11-25	2023-2024	Delaware	UNC Greensboro	88	77	131930	f	t
+2023-11-26	2023-2024	Delaware	George Washington	81	71	131931	f	t
+2023-12-02	2023-2024	Delaware	Ohio	74	73	131932	f	f
+2023-12-05	2023-2024	Delaware	Xavier	87	80	131933	t	f
+2023-12-11	2023-2024	Delaware	Robert Morris	73	69	131934	t	f
+2023-12-16	2023-2024	Delaware	Rhode Island	67	56	131935	t	t
+2023-12-30	2023-2024	Delaware	Princeton	84	82	131936	f	t
+2024-01-04	2023-2024	Delaware	Hampton	80	53	131937	t	t
+2024-01-06	2023-2024	Delaware	Hofstra	76	71	131938	f	f
+2024-01-11	2023-2024	Delaware	Campbell	68	62	131939	t	f
+2024-01-14	2023-2024	Delaware	UNC Wilmington	79	74	131940	f	f
+2024-01-18	2023-2024	Delaware	Stony Brook	71	68	131941	t	t
+2024-01-20	2023-2024	Delaware	Drexel	86	67	131942	f	f
+2024-01-25	2023-2024	Delaware	North Carolina A&T	90	71	131943	t	t
+2024-01-27	2023-2024	Delaware	Towson	67	56	131944	f	t
+2024-02-01	2023-2024	Delaware	William & Mary	81	53	131945	t	f
+2024-02-03	2023-2024	Delaware	Monmouth	84	80	131946	t	t
+2024-02-08	2023-2024	Delaware	Towson	74	62	131947	t	f
+2024-02-10	2023-2024	Delaware	William & Mary	69	58	131948	t	t
+2024-02-15	2023-2024	Delaware	Elon	73	67	131949	f	f
+2024-02-17	2023-2024	Delaware	North Carolina A&T	62	54	131950	t	f
+2024-02-22	2023-2024	Delaware	Charleston	90	71	131951	f	t
+2024-02-26	2023-2024	Delaware	Drexel	70	60	131952	f	t
+2024-02-29	2023-2024	Delaware	Northeastern	73	67	131953	t	t
+2024-03-02	2023-2024	Delaware	Stony Brook	79	56	131954	f	f
+2024-03-09	2023-2024	Delaware	Hampton	80	50	131955	t	t
+2024-03-10	2023-2024	Delaware	Hofstra	73	58	131956	f	t
+2023-11-06	2023-2024	Delaware State	Penn State	79	45	131957	f	f
+2023-11-10	2023-2024	Delaware State	18 Texas	86	59	131958	f	f
+2023-11-15	2023-2024	Delaware State	Delaware	78	67	131959	f	t
+2023-11-17	2023-2024	Delaware State	Grambling	71	63	131960	t	t
+2023-11-20	2023-2024	Delaware State	NJIT	81	72	131961	f	f
+2023-11-25	2023-2024	Delaware State	Bethune-Cookman	72	64	131962	t	t
+2023-11-30	2023-2024	Delaware State	Chicago State	76	69	131963	t	f
+2023-12-05	2023-2024	Delaware State	vsGwynedd-Mercy	105	58	131964	t	t
+2023-12-07	2023-2024	Delaware State	vsVirginia-Lynchburg	106	73	131965	t	t
+2023-12-09	2023-2024	Delaware State	Longwood	62	61	131966	f	t
+2023-12-18	2023-2024	Delaware State	Wake Forest	88	59	131967	f	f
+2023-12-20	2023-2024	Delaware State	East Carolina	79	50	131968	f	f
+2023-12-30	2023-2024	Delaware State	Mount St. Mary's	77	73	131969	t	t
+2024-01-06	2023-2024	Delaware State	Coppin State	55	53	131970	t	t
+2024-01-08	2023-2024	Delaware State	Morgan State	78	66	131971	t	f
+2024-01-27	2023-2024	Delaware State	South Carolina State	66	64	131972	f	t
+2024-01-29	2023-2024	Delaware State	North Carolina Central	69	66	131973	f	t
+2024-02-03	2023-2024	Delaware State	Norfolk State	65	64	131974	f	f
+2024-02-05	2023-2024	Delaware State	Howard	75	71	131975	f	t
+2024-02-17	2023-2024	Delaware State	Coppin State	66	56	131976	t	f
+2024-02-19	2023-2024	Delaware State	Morgan State	80	58	131977	t	t
+2024-02-24	2023-2024	Delaware State	South Carolina State	69	62	131978	f	f
+2024-02-26	2023-2024	Delaware State	North Carolina Central	93	81	131979	f	f
+2024-03-02	2023-2024	Delaware State	Norfolk State	85	71	131980	t	t
+2024-03-04	2023-2024	Delaware State	Howard	85	66	131981	f	f
+2024-03-07	2023-2024	Delaware State	Maryland-Eastern Shore	67	59	131982	f	f
+2024-03-14	2023-2024	Delaware State	South Carolina State	71	58	131983	t	t
+2024-03-15	2023-2024	Delaware State	North Carolina Central	71	58	131984	t	t
+2024-03-16	2023-2024	Delaware State	Howard	70	67	131985	f	t
+2023-11-06	2023-2024	Denver	UC San Diego	95	87	131986	f	f
+2023-11-09	2023-2024	Denver	Cal Poly	97	76	131987	t	t
+2023-11-15	2023-2024	Denver	Nicholls	91	85	131988	t	t
+2023-11-16	2023-2024	Denver	SIU Edwardsville	77	74	131989	f	t
+2023-11-17	2023-2024	Denver	South Alabama	82	75	131990	f	f
+2023-11-22	2023-2024	Denver	vsColorado Christian	100	68	131991	t	t
+2023-11-26	2023-2024	Denver	Texas A&M-Commerce	71	61	131992	t	f
+2023-11-29	2023-2024	Denver	Idaho	67	65	131993	t	f
+2023-12-02	2023-2024	Denver	vsColorado College	90	66	131994	t	t
+2023-12-06	2023-2024	Denver	13 Colorado State	90	80	131995	f	f
+2023-12-13	2023-2024	Denver	18 BYU	90	74	131996	f	f
+2023-12-18	2023-2024	Denver	vsAdams State	89	83	131997	t	t
+2023-12-20	2023-2024	Denver	vsNorthern New Mexico	90	57	131998	t	t
+2023-12-29	2023-2024	Denver	Omaha	95	80	131999	t	f
+2024-01-06	2023-2024	Denver	Northern Colorado	86	82	132000	f	f
+2024-01-13	2023-2024	Denver	South Dakota State	99	80	132001	t	t
+2024-01-18	2023-2024	Denver	North Dakota State	78	70	132002	t	f
+2024-01-20	2023-2024	Denver	North Dakota	92	78	132003	f	f
+2024-01-27	2023-2024	Denver	Omaha	91	72	132004	f	t
+2024-02-01	2023-2024	Denver	Kansas City	85	71	132005	f	f
+2024-02-03	2023-2024	Denver	Oral Roberts	82	76	132006	f	f
+2024-02-10	2023-2024	Denver	St. Thomas-Minnesota	94	77	132007	t	t
+2024-02-15	2023-2024	Denver	North Dakota	92	78	132008	f	t
+2024-02-17	2023-2024	Denver	North Dakota State	77	71	132009	t	t
+2024-02-22	2023-2024	Denver	South Dakota State	97	70	132010	f	f
+2024-02-29	2023-2024	Denver	Kansas City	84	69	132011	f	t
+2024-03-02	2023-2024	Denver	St. Thomas-Minnesota	83	58	132012	f	f
+2024-03-09	2023-2024	Denver	Kansas City	61	60	132013	t	t
+2024-03-11	2023-2024	Denver	Omaha	66	63	132014	t	t
+2024-03-12	2023-2024	Denver	South Dakota State	76	68	132015	f	t
+2023-11-06	2023-2024	Detroit Mercy	Toledo	94	60	132016	f	f
+2023-11-10	2023-2024	Detroit Mercy	Cincinnati	93	61	132017	f	f
+2023-11-14	2023-2024	Detroit Mercy	Ole Miss	70	69	132018	f	f
+2023-11-18	2023-2024	Detroit Mercy	Ohio	71	52	132019	f	f
+2023-11-21	2023-2024	Detroit Mercy	Eastern Michigan	76	72	132020	f	t
+2023-11-25	2023-2024	Detroit Mercy	SIU Edwardsville	81	67	132021	f	f
+2023-11-29	2023-2024	Detroit Mercy	Oakland	65	50	132022	f	t
+2023-12-02	2023-2024	Detroit Mercy	Cleveland State	69	58	132023	f	f
+2023-12-06	2023-2024	Detroit Mercy	Ball State	68	65	132024	f	t
+2023-12-10	2023-2024	Detroit Mercy	Northwestern	91	59	132025	f	f
+2023-12-18	2023-2024	Detroit Mercy	Loyola Marymount	76	56	132026	f	f
+2023-12-21	2023-2024	Detroit Mercy	Central Michigan	75	63	132027	f	f
+2023-12-23	2023-2024	Detroit Mercy	NC State	83	66	132028	f	f
+2023-12-29	2023-2024	Detroit Mercy	IUPUI	67	55	132029	f	f
+2023-12-31	2023-2024	Detroit Mercy	Purdue Fort Wayne	91	56	132030	f	f
+2024-01-04	2023-2024	Detroit Mercy	Green Bay	69	51	132031	f	t
+2024-01-06	2023-2024	Detroit Mercy	Milwaukee	84	61	132032	f	t
+2024-01-13	2023-2024	Detroit Mercy	Northern Kentucky	81	76	132033	f	t
+2024-01-20	2023-2024	Detroit Mercy	Youngstown State	105	64	132034	f	t
+2024-01-25	2023-2024	Detroit Mercy	Milwaukee	87	71	132035	f	f
+2024-01-27	2023-2024	Detroit Mercy	Green Bay	78	64	132036	f	f
+2024-02-01	2023-2024	Detroit Mercy	Cleveland State	77	65	132037	f	t
+2024-02-03	2023-2024	Detroit Mercy	Robert Morris	75	67	132038	f	t
+2024-02-08	2023-2024	Detroit Mercy	Wright State	92	85	132039	f	f
+2024-02-10	2023-2024	Detroit Mercy	Northern Kentucky	79	67	132040	f	f
+2024-02-14	2023-2024	Detroit Mercy	IUPUI	81	66	132041	t	t
+2024-02-17	2023-2024	Detroit Mercy	Purdue Fort Wayne	83	69	132042	f	t
+2024-02-22	2023-2024	Detroit Mercy	Wright State	93	78	132043	f	t
+2024-02-28	2023-2024	Detroit Mercy	Youngstown State	69	55	132044	f	f
+2024-03-02	2023-2024	Detroit Mercy	Oakland	75	70	132045	f	f
+2024-03-05	2023-2024	Detroit Mercy	Milwaukee	83	79	132046	f	f
+2023-11-08	2023-2024	Drake	Lipscomb	85	70	132047	t	t
+2023-11-14	2023-2024	Drake	vsSouthwest Minnesota State	87	67	132048	t	t
+2023-11-19	2023-2024	Drake	Oakland	85	77	132049	t	t
+2023-11-20	2023-2024	Drake	Stephen F. Austin	92	68	132050	f	t
+2023-11-21	2023-2024	Drake	Akron	79	59	132051	t	t
+2023-11-25	2023-2024	Drake	Texas Southern	77	71	132052	t	t
+2023-11-29	2023-2024	Drake	Valparaiso	83	65	132053	t	f
+2023-12-02	2023-2024	Drake	Missouri State	74	57	132054	t	t
+2023-12-06	2023-2024	Drake	Saint Louis	75	69	132055	t	t
+2023-12-09	2023-2024	Drake	Nevada	72	53	132056	t	t
+2023-12-14	2023-2024	Drake	Grambling	68	56	132057	t	t
+2023-12-19	2023-2024	Drake	Alcorn State	92	55	132058	t	t
+2024-01-02	2023-2024	Drake	Illinois State	88	71	132059	t	t
+2024-01-07	2023-2024	Drake	Belmont	87	65	132060	f	f
+2024-01-10	2023-2024	Drake	Indiana State	89	78	132061	t	t
+2024-01-13	2023-2024	Drake	Southern Illinois	76	58	132062	t	f
+2024-01-17	2023-2024	Drake	Illinois State	77	56	132063	t	f
+2024-01-20	2023-2024	Drake	Evansville	97	48	132064	t	t
+2024-01-27	2023-2024	Drake	Northern Iowa	77	63	132065	t	t
+2024-01-31	2023-2024	Drake	Valparaiso	81	70	132066	t	t
+2024-02-03	2023-2024	Drake	Indiana State	75	67	132067	f	f
+2024-02-10	2023-2024	Drake	Bradley	74	67	132068	t	f
+2024-02-13	2023-2024	Drake	Evansville	78	75	132069	t	f
+2024-02-18	2023-2024	Drake	Murray State	95	72	132070	t	t
+2024-02-21	2023-2024	Drake	Belmont	84	69	132071	t	t
+2024-02-24	2023-2024	Drake	Northern Iowa	91	77	132072	f	f
+2024-03-03	2023-2024	Drake	Bradley	74	66	132073	t	t
+2024-03-08	2023-2024	Drake	Evansville	79	58	132074	t	t
+2024-03-09	2023-2024	Drake	Bradley	72	67	132075	t	t
+2024-03-10	2023-2024	Drake	Indiana State	84	80	132076	t	t
+2023-11-07	2023-2024	Drexel	La Salle	67	61	132077	f	f
+2023-11-11	2023-2024	Drexel	Winthrop	74	72	132078	t	f
+2023-11-14	2023-2024	Drexel	Temple	66	64	132079	f	t
+2023-11-17	2023-2024	Drexel	Fairfield	65	47	132080	t	t
+2023-11-19	2023-2024	Drexel	Queens University	62	52	132081	t	t
+2023-11-29	2023-2024	Drexel	Louisiana-Lafayette	69	48	132082	t	f
+2023-12-02	2023-2024	Drexel	18 Villanova	57	55	132083	t	t
+2023-12-05	2023-2024	Drexel	Princeton	81	70	132084	f	f
+2023-12-09	2023-2024	Drexel	West Virginia	66	60	132085	f	f
+2023-12-16	2023-2024	Drexel	UAlbany	71	52	132086	t	t
+2023-12-18	2023-2024	Drexel	vsPenn State-Allegheny	117	49	132087	t	t
+2023-12-22	2023-2024	Drexel	Bryant	104	86	132088	f	f
+2024-01-01	2023-2024	Drexel	Hampton	99	65	132089	t	t
+2024-01-04	2023-2024	Drexel	UNC Wilmington	78	63	132090	t	t
+2024-01-06	2023-2024	Drexel	William & Mary	77	55	132091	t	f
+2024-01-11	2023-2024	Drexel	North Carolina A&T	67	63	132092	t	f
+2024-01-13	2023-2024	Drexel	Elon	89	69	132093	t	f
+2024-01-18	2023-2024	Drexel	Monmouth	78	74	132094	t	t
+2024-01-20	2023-2024	Drexel	Delaware	86	67	132095	t	t
+2024-01-25	2023-2024	Drexel	Towson	70	67	132096	f	f
+2024-01-27	2023-2024	Drexel	North Carolina A&T	62	47	132097	t	t
+2024-02-01	2023-2024	Drexel	Monmouth	67	62	132098	f	f
+2024-02-08	2023-2024	Drexel	UNC Wilmington	75	56	132099	f	f
+2024-02-10	2023-2024	Drexel	Charleston	80	70	132100	f	f
+2024-02-15	2023-2024	Drexel	Hofstra	79	77	132101	t	t
+2024-02-17	2023-2024	Drexel	Campbell	81	66	132102	t	t
+2024-02-22	2023-2024	Drexel	Hofstra	69	57	132103	f	f
+2024-02-26	2023-2024	Drexel	Delaware	70	60	132104	t	f
+2024-02-29	2023-2024	Drexel	Stony Brook	90	86	132105	t	t
+2024-03-02	2023-2024	Drexel	Northeastern	73	59	132106	t	t
+2023-11-06	2023-2024	Duke	Dartmouth	92	54	132107	t	t
+2023-11-10	2023-2024	Duke	12 Arizona	78	73	132108	f	t
+2023-11-14	2023-2024	Duke	18 Michigan State	74	65	132109	t	t
+2023-11-17	2023-2024	Duke	Bucknell	90	60	132110	t	t
+2023-11-21	2023-2024	Duke	La Salle	95	66	132111	t	t
+2023-11-24	2023-2024	Duke	Southern Indiana	80	62	132112	t	t
+2023-11-29	2023-2024	Duke	Arkansas	80	75	132113	f	f
+2023-12-02	2023-2024	Duke	Georgia Tech	72	68	132114	f	f
+2023-12-09	2023-2024	Duke	Charlotte	80	56	132115	t	t
+2023-12-12	2023-2024	Duke	Hofstra	89	68	132116	t	t
+2023-12-20	2023-2024	Duke	10 Baylor	78	70	132117	t	t
+2023-12-30	2023-2024	Duke	Queens University	106	69	132118	t	t
+2024-01-02	2023-2024	Duke	Syracuse	86	66	132119	t	t
+2024-01-06	2023-2024	Duke	Notre Dame	67	59	132120	t	f
+2024-01-09	2023-2024	Duke	Pittsburgh	75	53	132121	t	f
+2024-01-13	2023-2024	Duke	Georgia Tech	84	79	132122	t	t
+2024-01-20	2023-2024	Duke	Pittsburgh	80	76	132123	f	t
+2024-01-23	2023-2024	Duke	Louisville	83	69	132124	t	f
+2024-01-27	2023-2024	Duke	Clemson	72	71	132125	t	t
+2024-01-29	2023-2024	Duke	Virginia Tech	77	67	132126	t	f
+2024-02-03	2023-2024	Duke	3 North Carolina	93	84	132127	f	f
+2024-02-07	2023-2024	Duke	Notre Dame	71	53	132128	t	t
+2024-02-10	2023-2024	Duke	Boston College	80	65	132129	t	t
+2024-02-12	2023-2024	Duke	Wake Forest	77	69	132130	t	t
+2024-02-17	2023-2024	Duke	Florida State	76	67	132131	t	f
+2024-02-21	2023-2024	Duke	Miami	84	55	132132	t	f
+2024-02-24	2023-2024	Duke	Wake Forest	83	79	132133	f	f
+2024-02-28	2023-2024	Duke	Louisville	84	59	132134	t	t
+2024-03-02	2023-2024	Duke	Virginia	73	48	132135	t	t
+2024-03-04	2023-2024	Duke	NC State	79	64	132136	t	f
+2024-03-09	2023-2024	Duke	7 North Carolina	84	79	132137	f	t
+2024-03-14	2023-2024	Duke	NC State	74	69	132138	f	t
+2023-11-06	2023-2024	Duquesne	Cleveland State	79	77	132139	t	t
+2023-11-10	2023-2024	Duquesne	Charleston	90	72	132140	t	t
+2023-11-13	2023-2024	Duquesne	Stony Brook	85	63	132141	t	t
+2023-11-15	2023-2024	Duquesne	Princeton	70	67	132142	f	t
+2023-11-17	2023-2024	Duquesne	Rider	77	58	132143	t	t
+2023-11-22	2023-2024	Duquesne	Nebraska	89	79	132144	f	f
+2023-11-29	2023-2024	Duquesne	UC Irvine	66	62	132145	t	t
+2023-12-06	2023-2024	Duquesne	Marshall	85	72	132146	t	f
+2023-12-08	2023-2024	Duquesne	Saint Peter's	68	59	132147	t	t
+2023-12-18	2023-2024	Duquesne	Bradley	69	67	132148	t	t
+2023-12-23	2023-2024	Duquesne	Santa Clara	81	73	132149	f	t
+2023-12-30	2023-2024	Duquesne	vsCleary University	95	47	132150	t	t
+2024-01-03	2023-2024	Duquesne	Massachusetts	80	61	132151	f	f
+2024-01-06	2023-2024	Duquesne	Loyola Chicago	72	67	132152	f	f
+2024-01-12	2023-2024	Duquesne	Dayton	72	62	132153	f	t
+2024-01-16	2023-2024	Duquesne	Richmond	63	61	132154	f	t
+2024-01-20	2023-2024	Duquesne	Saint Joseph's	71	69	132155	f	f
+2024-01-23	2023-2024	Duquesne	St. Bonaventure	54	50	132156	t	t
+2024-01-27	2023-2024	Duquesne	Fordham	68	59	132157	t	t
+2024-01-31	2023-2024	Duquesne	Chicago State	65	60	132158	t	t
+2024-02-03	2023-2024	Duquesne	Rhode Island	85	71	132159	t	f
+2024-02-07	2023-2024	Duquesne	Davidson	72	59	132160	f	t
+2024-02-10	2023-2024	Duquesne	St. Bonaventure	75	69	132161	t	f
+2024-02-13	2023-2024	Duquesne	16 Dayton	75	59	132162	f	f
+2024-02-17	2023-2024	Duquesne	Saint Joseph's	66	56	132163	t	t
+2024-02-20	2023-2024	Duquesne	Saint Louis	81	66	132164	t	t
+2024-02-23	2023-2024	Duquesne	Fordham	79	67	132165	f	f
+2024-02-28	2023-2024	Duquesne	La Salle	75	63	132166	t	t
+2024-03-02	2023-2024	Duquesne	George Mason	59	51	132167	t	f
+2024-03-05	2023-2024	Duquesne	VCU	69	59	132168	t	f
+2024-03-09	2023-2024	Duquesne	George Washington	67	65	132169	t	t
+2024-03-13	2023-2024	Duquesne	Saint Louis	83	73	132170	t	t
+2024-03-14	2023-2024	Duquesne	24 Dayton	65	57	132171	t	t
+2024-03-16	2023-2024	Duquesne	St. Bonaventure	70	60	132172	t	t
+2024-03-17	2023-2024	Duquesne	VCU	57	51	132173	t	t
+2023-11-06	2023-2024	East Carolina	vsFerrum	91	61	132174	t	t
+2023-11-11	2023-2024	East Carolina	Campbell	77	63	132175	t	t
+2023-11-15	2023-2024	East Carolina	South Carolina Upstate	83	81	132176	f	t
+2023-11-19	2023-2024	East Carolina	Northeastern	82	76	132177	f	t
+2023-11-20	2023-2024	East Carolina	Georgia Southern	82	64	132178	t	t
+2023-11-21	2023-2024	East Carolina	Kennesaw State	85	84	132179	t	t
+2023-11-25	2023-2024	East Carolina	George Mason	81	59	132180	f	f
+2023-11-30	2023-2024	East Carolina	UNC Wilmington	74	66	132181	t	t
+2023-12-04	2023-2024	East Carolina	Maryland-Eastern Shore	63	52	132182	t	t
+2023-12-09	2023-2024	East Carolina	South Carolina	68	62	132183	f	t
+2023-12-14	2023-2024	East Carolina	Florida	70	65	132184	f	t
+2023-12-20	2023-2024	East Carolina	Delaware State	79	50	132185	t	t
+2023-12-29	2023-2024	East Carolina	East Tennessee State	86	70	132186	f	t
+2024-01-02	2023-2024	East Carolina	17 Florida Atlantic	79	64	132187	f	f
+2024-01-07	2023-2024	East Carolina	Tulsa	62	57	132188	t	t
+2024-01-10	2023-2024	East Carolina	Temple	73	62	132189	t	f
+2024-01-13	2023-2024	East Carolina	SMU	75	64	132190	f	t
+2024-01-17	2023-2024	East Carolina	North Texas	60	59	132191	f	t
+2024-01-20	2023-2024	East Carolina	UAB	69	61	132192	f	f
+2024-01-24	2023-2024	East Carolina	Wichita State	54	52	132193	t	f
+2024-01-31	2023-2024	East Carolina	South Florida	71	60	132194	f	t
+2024-02-03	2023-2024	East Carolina	Charlotte	67	52	132195	f	f
+2024-02-10	2023-2024	East Carolina	UTSA	84	73	132196	t	f
+2024-02-15	2023-2024	East Carolina	Wichita State	68	55	132197	t	t
+2024-02-18	2023-2024	East Carolina	Tulane	81	67	132198	t	t
+2024-02-24	2023-2024	East Carolina	Rice	70	52	132199	f	f
+2024-02-29	2023-2024	East Carolina	Memphis	82	58	132200	f	t
+2024-03-03	2023-2024	East Carolina	North Texas	84	69	132201	f	f
+2024-03-09	2023-2024	East Carolina	Charlotte	82	72	132202	f	t
+2024-03-14	2023-2024	East Carolina	Tulsa	84	79	132203	t	t
+2024-03-15	2023-2024	East Carolina	South Florida	81	59	132204	f	t
+2023-11-06	2023-2024	ETSU	vsKing (TN)	73	56	132205	t	t
+2023-11-09	2023-2024	ETSU	Elon	79	76	132206	f	f
+2023-11-13	2023-2024	ETSU	Butler	81	47	132207	f	f
+2023-11-17	2023-2024	ETSU	Davidson	70	68	132208	t	t
+2023-11-22	2023-2024	ETSU	Cleveland State	72	70	132209	f	f
+2023-11-24	2023-2024	ETSU	Alabama A&M	82	71	132210	t	t
+2023-11-29	2023-2024	ETSU	Appalachian State	72	61	132211	f	f
+2023-12-03	2023-2024	ETSU	Jacksonville State	61	59	132212	t	f
+2023-12-10	2023-2024	ETSU	Tennessee Tech	73	72	132213	t	t
+2023-12-15	2023-2024	ETSU	vsTusculum	105	43	132214	t	t
+2023-12-20	2023-2024	ETSU	Kansas City	70	57	132215	t	t
+2023-12-22	2023-2024	ETSU	Utah State	80	65	132216	f	f
+2023-12-29	2023-2024	ETSU	East Carolina	86	70	132217	t	f
+2024-01-03	2023-2024	ETSU	Mercer	80	69	132218	t	t
+2024-01-06	2023-2024	ETSU	UNC Greensboro	70	54	132219	f	f
+2024-01-10	2023-2024	ETSU	Western Carolina	80	66	132220	f	t
+2024-01-13	2023-2024	ETSU	Furman	82	73	132221	f	f
+2024-01-17	2023-2024	ETSU	Wofford	75	73	132222	f	f
+2024-01-21	2023-2024	ETSU	Chattanooga	81	74	132223	f	t
+2024-01-24	2023-2024	ETSU	VMI	74	73	132224	t	f
+2024-01-27	2023-2024	ETSU	Samford	75	72	132225	f	t
+2024-01-31	2023-2024	ETSU	Mercer	54	49	132226	t	f
+2024-02-03	2023-2024	ETSU	The Citadel	62	60	132227	t	t
+2024-02-07	2023-2024	ETSU	Wofford	57	50	132228	t	t
+2024-02-10	2023-2024	ETSU	Furman	65	63	132229	f	t
+2024-02-14	2023-2024	ETSU	Chattanooga	84	71	132230	f	f
+2024-02-17	2023-2024	ETSU	Western Carolina	70	65	132231	f	f
+2024-02-21	2023-2024	ETSU	VMI	82	69	132232	t	t
+2024-02-24	2023-2024	ETSU	Samford	87	71	132233	f	f
+2024-02-28	2023-2024	ETSU	The Citadel	81	63	132234	t	f
+2024-03-02	2023-2024	ETSU	UNC Greensboro	66	65	132235	t	t
+2024-03-08	2023-2024	ETSU	VMI	98	66	132236	t	t
+2024-03-09	2023-2024	ETSU	UNC Greensboro	73	62	132237	t	t
+2024-03-11	2023-2024	ETSU	Samford	76	69	132238	f	t
+2023-11-06	2023-2024	East Illinois	25 Illinois	80	52	132239	f	f
+2023-11-08	2023-2024	East Illinois	vsMonmouth (IL)	91	45	132240	t	t
+2023-11-11	2023-2024	East Illinois	Loyola Chicago	89	65	132241	f	f
+2023-11-15	2023-2024	East Illinois	Illinois State	69	61	132242	f	f
+2023-11-18	2023-2024	East Illinois	Coppin State	48	46	132243	t	t
+2023-11-19	2023-2024	East Illinois	Miami (OH)	76	64	132244	f	f
+2023-11-25	2023-2024	East Illinois	vsEureka	85	39	132245	t	t
+2023-11-28	2023-2024	East Illinois	5 Kansas	71	63	132246	f	f
+2023-12-02	2023-2024	East Illinois	vsUniversity of Health Sciences & Pharmacy	112	50	132247	t	t
+2023-12-07	2023-2024	East Illinois	IUPUI	75	58	132248	t	t
+2023-12-10	2023-2024	East Illinois	Central Arkansas	73	70	132249	f	t
+2023-12-17	2023-2024	East Illinois	vsBlackburn	87	66	132250	t	t
+2023-12-21	2023-2024	East Illinois	Iowa State	80	48	132251	f	f
+2023-12-29	2023-2024	East Illinois	SIU Edwardsville	67	58	132252	f	f
+2024-01-04	2023-2024	East Illinois	UT Martin	79	72	132253	t	f
+2024-01-06	2023-2024	East Illinois	Little Rock	90	88	132254	t	f
+2024-01-11	2023-2024	East Illinois	Morehead State	78	52	132255	f	t
+2024-01-13	2023-2024	East Illinois	Western Illinois	63	60	132256	f	t
+2024-01-20	2023-2024	East Illinois	Lindenwood	78	68	132257	t	f
+2024-01-25	2023-2024	East Illinois	Tennessee Tech	68	59	132258	t	t
+2024-01-27	2023-2024	East Illinois	Tennessee State	64	60	132259	f	t
+2024-02-01	2023-2024	East Illinois	UT Martin	76	59	132260	f	t
+2024-02-03	2023-2024	East Illinois	Little Rock	71	47	132261	f	t
+2024-02-08	2023-2024	East Illinois	Southern Indiana	81	71	132262	t	f
+2024-02-10	2023-2024	East Illinois	Morehead State	69	57	132263	f	f
+2024-02-15	2023-2024	East Illinois	Southeast Missouri State	75	57	132264	t	t
+2024-02-17	2023-2024	East Illinois	Lindenwood	72	57	132265	t	t
+2024-02-22	2023-2024	East Illinois	Tennessee State	78	73	132266	f	f
+2024-02-24	2023-2024	East Illinois	Tennessee Tech	75	67	132267	f	f
+2024-02-27	2023-2024	East Illinois	SIU Edwardsville	84	79	132268	t	t
+2024-02-29	2023-2024	East Illinois	Western Illinois	70	66	132269	f	f
+2024-03-06	2023-2024	East Illinois	SIU Edwardsville	68	57	132270	f	t
+2023-11-07	2023-2024	East Kentucky	vsWVU Tech	108	72	132271	t	t
+2023-11-10	2023-2024	East Kentucky	vsWilberforce	133	75	132272	t	t
+2023-11-17	2023-2024	East Kentucky	UT Martin	80	74	132273	f	t
+2023-11-21	2023-2024	East Kentucky	Prairie View A&M	76	64	132274	f	t
+2023-11-27	2023-2024	East Kentucky	Troy	77	76	132275	t	t
+2023-12-03	2023-2024	East Kentucky	Western Kentucky	79	69	132276	f	f
+2023-12-10	2023-2024	East Kentucky	vsBethany (WV)	121	56	132277	t	t
+2023-12-13	2023-2024	East Kentucky	Louisiana	73	62	132278	f	f
+2023-12-17	2023-2024	East Kentucky	Northern Kentucky	85	75	132279	f	t
+2023-12-21	2023-2024	East Kentucky	Troy	88	81	132280	f	f
+2023-12-23	2023-2024	East Kentucky	Alabama	111	67	132281	f	f
+2023-12-29	2023-2024	East Kentucky	1 Purdue	80	53	132282	f	f
+2024-01-04	2023-2024	East Kentucky	Lipscomb	80	72	132283	t	t
+2024-01-06	2023-2024	East Kentucky	Austin Peay	69	59	132284	t	t
+2024-01-11	2023-2024	East Kentucky	Central Arkansas	86	63	132285	t	f
+2024-01-13	2023-2024	East Kentucky	North Alabama	81	72	132286	t	f
+2024-01-20	2023-2024	East Kentucky	Bellarmine	82	70	132287	t	t
+2024-01-25	2023-2024	East Kentucky	Jacksonville State	75	59	132288	t	t
+2024-01-27	2023-2024	East Kentucky	North Florida	89	76	132289	t	t
+2024-02-01	2023-2024	East Kentucky	Queens University	94	76	132290	f	f
+2024-02-03	2023-2024	East Kentucky	Kennesaw State	86	76	132291	t	f
+2024-02-07	2023-2024	East Kentucky	Florida Gulf Coast	90	82	132292	t	t
+2024-02-10	2023-2024	East Kentucky	Stetson	87	79	132293	f	f
+2024-02-14	2023-2024	East Kentucky	Chicago State	86	73	132294	t	t
+2024-02-17	2023-2024	East Kentucky	Bellarmine	75	65	132295	t	f
+2024-02-22	2023-2024	East Kentucky	North Alabama	75	72	132296	t	t
+2024-02-24	2023-2024	East Kentucky	Central Arkansas	95	82	132297	t	t
+2024-02-28	2023-2024	East Kentucky	Austin Peay	83	79	132298	f	f
+2024-03-01	2023-2024	East Kentucky	Lipscomb	81	67	132299	f	f
+2024-03-05	2023-2024	East Kentucky	Jacksonville State	67	65	132300	f	t
+2023-11-06	2023-2024	East Michigan	Butler	94	55	132301	f	f
+2023-11-11	2023-2024	East Michigan	Georgia Southern	70	60	132302	t	t
+2023-11-14	2023-2024	East Michigan	10 Florida Atlantic	100	57	132303	f	f
+2023-11-18	2023-2024	East Michigan	Cleveland State	69	62	132304	t	t
+2023-11-21	2023-2024	East Michigan	Detroit Mercy	76	72	132305	t	f
+2023-11-25	2023-2024	East Michigan	Central Arkansas	74	71	132306	t	f
+2023-11-26	2023-2024	East Michigan	North Dakota	72	70	132307	f	t
+2023-12-01	2023-2024	East Michigan	vsLake Superior State	68	53	132308	t	t
+2023-12-08	2023-2024	East Michigan	Oakland	77	63	132309	f	t
+2023-12-16	2023-2024	East Michigan	Michigan	83	66	132310	f	f
+2023-12-21	2023-2024	East Michigan	Hampton	72	69	132311	t	t
+2023-12-30	2023-2024	East Michigan	vsNorthwood (MI)	67	64	132312	t	t
+2024-01-09	2023-2024	East Michigan	Central Michigan	80	64	132313	f	t
+2024-01-13	2023-2024	East Michigan	Miami (OH)	71	54	132314	f	f
+2024-01-16	2023-2024	East Michigan	Ball State	76	62	132315	f	t
+2024-01-20	2023-2024	East Michigan	Ohio	85	67	132316	f	f
+2024-01-23	2023-2024	East Michigan	Western Michigan	73	56	132317	f	f
+2024-01-27	2023-2024	East Michigan	Buffalo	75	65	132318	t	t
+2024-01-30	2023-2024	East Michigan	Akron	77	46	132319	f	t
+2024-02-03	2023-2024	East Michigan	Northern Illinois	76	66	132320	f	f
+2024-02-06	2023-2024	East Michigan	Toledo	91	87	132321	f	t
+2024-02-10	2023-2024	East Michigan	UL Monroe	82	76	132322	f	f
+2024-02-17	2023-2024	East Michigan	Bowling Green	69	60	132323	t	t
+2024-02-20	2023-2024	East Michigan	Buffalo	78	69	132324	f	f
+2024-02-24	2023-2024	East Michigan	Ball State	58	56	132325	t	f
+2024-02-27	2023-2024	East Michigan	Western Michigan	70	67	132326	t	t
+2024-03-02	2023-2024	East Michigan	Miami (OH)	52	37	132327	f	t
+2024-03-05	2023-2024	East Michigan	Akron	61	60	132328	t	f
+2023-11-06	2023-2024	East Washington	Utah	101	66	132329	f	f
+2023-11-10	2023-2024	East Washington	Ole Miss	75	64	132330	f	f
+2023-11-12	2023-2024	East Washington	Cincinnati	85	73	132331	f	f
+2023-11-17	2023-2024	East Washington	Stanford	95	70	132332	f	f
+2023-11-22	2023-2024	East Washington	vsWalla Walla	97	46	132333	t	t
+2023-11-27	2023-2024	East Washington	Washington State	82	72	132334	f	f
+2023-11-29	2023-2024	East Washington	USC	106	78	132335	f	f
+2023-12-09	2023-2024	East Washington	Air Force	73	68	132336	t	f
+2023-12-13	2023-2024	East Washington	vsPortland Bible	103	34	132337	t	t
+2023-12-18	2023-2024	East Washington	Cal Poly	62	53	132338	t	f
+2023-12-21	2023-2024	East Washington	Washington	73	66	132339	f	f
+2023-12-28	2023-2024	East Washington	Portland State	91	57	132340	t	t
+2023-12-30	2023-2024	East Washington	Sacramento State	87	61	132341	t	t
+2024-01-03	2023-2024	East Washington	South Dakota	93	79	132342	t	f
+2024-01-06	2023-2024	East Washington	North Dakota State	91	83	132343	t	t
+2024-01-13	2023-2024	East Washington	Idaho	79	58	132344	t	f
+2024-01-18	2023-2024	East Washington	Weber State	80	78	132345	t	f
+2024-01-20	2023-2024	East Washington	Idaho State	79	67	132346	t	f
+2024-01-25	2023-2024	East Washington	Northern Colorado	77	74	132347	t	t
+2024-01-27	2023-2024	East Washington	Northern Arizona	85	70	132348	t	t
+2024-02-01	2023-2024	East Washington	Montana State	70	60	132349	f	f
+2024-02-03	2023-2024	East Washington	Montana	78	65	132350	t	f
+2024-02-05	2023-2024	East Washington	Portland State	90	77	132351	t	f
+2024-02-10	2023-2024	East Washington	Idaho	87	79	132352	t	t
+2024-02-15	2023-2024	East Washington	Idaho State	88	82	132353	t	t
+2024-02-17	2023-2024	East Washington	Weber State	90	84	132354	f	t
+2024-02-22	2023-2024	East Washington	Northern Arizona	78	71	132355	f	f
+2024-02-24	2023-2024	East Washington	Northern Colorado	85	76	132356	t	f
+2024-02-29	2023-2024	East Washington	Montana	89	79	132357	t	t
+2024-03-04	2023-2024	East Washington	Sacramento State	91	88	132358	t	f
+2024-03-10	2023-2024	East Washington	Sacramento State	74	69	132359	f	t
+2023-11-06	2023-2024	Elon	Wake Forest	101	78	132360	f	f
+2023-11-09	2023-2024	Elon	East Tennessee State	79	76	132361	t	t
+2023-11-12	2023-2024	Elon	North Dakota	85	68	132362	f	f
+2023-11-17	2023-2024	Elon	IUPUI	86	72	132363	t	t
+2023-11-18	2023-2024	Elon	Holy Cross	83	69	132364	t	t
+2023-11-19	2023-2024	Elon	Winthrop	78	70	132365	f	t
+2023-11-27	2023-2024	Elon	Presbyterian	82	79	132366	t	t
+2023-11-30	2023-2024	Elon	vsWarren Wilson	127	56	132367	t	t
+2023-12-03	2023-2024	Elon	Radford	82	72	132368	f	f
+2023-12-10	2023-2024	Elon	UNC Greensboro	82	73	132369	f	f
+2023-12-15	2023-2024	Elon	vsBridgewater College (VA)	104	70	132370	t	t
+2023-12-22	2023-2024	Elon	South Carolina	70	43	132371	f	f
+2023-12-29	2023-2024	Elon	Valparaiso	82	78	132372	t	t
+2024-01-04	2023-2024	Elon	William & Mary	77	70	132373	f	f
+2024-01-06	2023-2024	Elon	North Carolina A&T	77	59	132374	t	t
+2024-01-11	2023-2024	Elon	Charleston	80	62	132375	f	f
+2024-01-13	2023-2024	Elon	Drexel	89	69	132376	f	t
+2024-01-18	2023-2024	Elon	UNC Wilmington	82	70	132377	f	t
+2024-01-20	2023-2024	Elon	Northeastern	84	72	132378	f	t
+2024-01-25	2023-2024	Elon	Campbell	78	68	132379	f	f
+2024-01-27	2023-2024	Elon	Hampton	80	74	132380	t	f
+2024-02-01	2023-2024	Elon	Campbell	69	67	132381	f	t
+2024-02-03	2023-2024	Elon	North Carolina A&T	69	65	132382	t	f
+2024-02-08	2023-2024	Elon	Stony Brook	79	64	132383	f	t
+2024-02-12	2023-2024	Elon	Towson	80	55	132384	f	f
+2024-02-15	2023-2024	Elon	Delaware	73	67	132385	t	t
+2024-02-17	2023-2024	Elon	UNC Wilmington	73	72	132386	t	f
+2024-02-22	2023-2024	Elon	Northeastern	61	58	132387	f	f
+2024-02-24	2023-2024	Elon	Hofstra	87	64	132388	f	f
+2024-02-29	2023-2024	Elon	William & Mary	76	71	132389	t	t
+2024-03-02	2023-2024	Elon	Monmouth	85	70	132390	f	t
+2024-03-08	2023-2024	Elon	Hampton	56	55	132391	f	t
+2023-11-06	2023-2024	Evansville	Miami (OH)	72	64	132392	t	t
+2023-11-09	2023-2024	Evansville	vsUniversity of Health Sciences & Pharmacy	116	46	132393	t	t
+2023-11-15	2023-2024	Evansville	Southeast Missouri State	76	57	132394	t	f
+2023-11-18	2023-2024	Evansville	Ball State	74	50	132395	t	t
+2023-11-25	2023-2024	Evansville	Southeast Missouri State	93	74	132396	t	t
+2023-11-29	2023-2024	Evansville	Missouri State	90	78	132397	f	f
+2023-12-05	2023-2024	Evansville	14 BYU	96	55	132398	f	f
+2023-12-16	2023-2024	Evansville	Bellarmine	70	61	132399	t	f
+2023-12-18	2023-2024	Evansville	UT Martin	98	91	132400	t	t
+2023-12-20	2023-2024	Evansville	Tennessee Tech	82	51	132401	t	t
+2023-12-29	2023-2024	Evansville	Cincinnati	76	58	132402	f	f
+2024-01-03	2023-2024	Evansville	Indiana State	87	73	132403	f	f
+2024-01-06	2023-2024	Evansville	Murray State	81	59	132404	f	t
+2024-01-10	2023-2024	Evansville	Bradley	86	50	132405	f	f
+2024-01-13	2023-2024	Evansville	Missouri State	74	64	132406	f	t
+2024-01-17	2023-2024	Evansville	Valparaiso	78	75	132407	t	t
+2024-01-20	2023-2024	Evansville	Drake	97	48	132408	f	f
+2024-01-23	2023-2024	Evansville	Northern Iowa	70	63	132409	f	f
+2024-01-27	2023-2024	Evansville	Illinois State	58	54	132410	t	t
+2024-01-31	2023-2024	Evansville	UIC	77	60	132411	t	t
+2024-02-03	2023-2024	Evansville	Valparaiso	63	62	132412	t	f
+2024-02-07	2023-2024	Evansville	Bradley	73	70	132413	t	t
+2024-02-10	2023-2024	Evansville	Murray State	73	70	132414	f	f
+2024-02-13	2023-2024	Evansville	Drake	78	75	132415	f	t
+2024-02-18	2023-2024	Evansville	Illinois State	86	79	132416	f	f
+2024-02-21	2023-2024	Evansville	UIC	88	79	132417	f	f
+2024-02-25	2023-2024	Evansville	Southern Illinois	65	53	132418	f	t
+2024-02-28	2023-2024	Evansville	Indiana State	85	67	132419	f	t
+2024-03-03	2023-2024	Evansville	Belmont	83	66	132420	f	f
+2024-03-07	2023-2024	Evansville	Illinois State	59	53	132421	t	t
+2024-03-08	2023-2024	Evansville	Drake	79	58	132422	f	t
+2023-11-06	2023-2024	Fairfield	Boston College	89	70	132423	f	f
+2023-11-09	2023-2024	Fairfield	Rhode Island	93	80	132424	f	f
+2023-11-13	2023-2024	Fairfield	vsMount Saint Mary (NY)	92	45	132425	t	t
+2023-11-17	2023-2024	Fairfield	Drexel	65	47	132426	f	f
+2023-11-18	2023-2024	Fairfield	Queens University	69	63	132427	f	t
+2023-11-24	2023-2024	Fairfield	New Hampshire	83	80	132428	f	t
+2023-12-01	2023-2024	Fairfield	Iona	78	67	132429	f	t
+2023-12-03	2023-2024	Fairfield	Rider	88	81	132430	t	f
+2023-12-06	2023-2024	Fairfield	Yale	75	71	132431	t	f
+2023-12-09	2023-2024	Fairfield	Sacred Heart	67	57	132432	t	f
+2023-12-17	2023-2024	Fairfield	Wagner	63	51	132433	t	t
+2023-12-21	2023-2024	Fairfield	Fairleigh Dickinson	92	69	132434	t	f
+2023-12-30	2023-2024	Fairfield	Le Moyne	78	72	132435	t	t
+2024-01-05	2023-2024	Fairfield	Siena	93	69	132436	t	f
+2024-01-07	2023-2024	Fairfield	Marist	82	61	132437	t	t
+2024-01-12	2023-2024	Fairfield	Niagara	96	72	132438	f	f
+2024-01-15	2023-2024	Fairfield	Canisius	88	63	132439	t	f
+2024-01-19	2023-2024	Fairfield	Saint Peter's	76	67	132440	t	t
+2024-01-21	2023-2024	Fairfield	Manhattan	82	75	132441	t	f
+2024-01-28	2023-2024	Fairfield	Quinnipiac	66	64	132442	f	t
+2024-02-02	2023-2024	Fairfield	Iona	91	82	132443	f	f
+2024-02-04	2023-2024	Fairfield	Manhattan	77	68	132444	t	t
+2024-02-08	2023-2024	Fairfield	Rider	84	67	132445	t	t
+2024-02-10	2023-2024	Fairfield	Saint Peter's	64	62	132446	t	f
+2024-02-16	2023-2024	Fairfield	Niagara	65	63	132447	f	t
+2024-02-18	2023-2024	Fairfield	Mount St. Mary's	94	80	132448	t	t
+2024-02-23	2023-2024	Fairfield	Quinnipiac	85	81	132449	t	f
+2024-02-25	2023-2024	Fairfield	Siena	88	64	132450	t	t
+2024-03-01	2023-2024	Fairfield	Marist	58	55	132451	f	f
+2024-03-07	2023-2024	Fairfield	Canisius	74	62	132452	t	t
+2024-03-09	2023-2024	Fairfield	Mount St. Mary's	96	92	132453	t	f
+2024-03-13	2023-2024	Fairfield	Iona	68	63	132454	t	t
+2024-03-15	2023-2024	Fairfield	Marist	65	61	132455	t	t
+2024-03-16	2023-2024	Fairfield	Saint Peter's	68	63	132456	f	t
+2023-11-06	2023-2024	Fairleigh Dickinson	Buffalo	92	86	132457	t	f
+2023-11-08	2023-2024	Fairleigh Dickinson	vsPenn State (Brandywine)	107	63	132458	t	t
+2023-11-11	2023-2024	Fairleigh Dickinson	Seton Hall	85	55	132459	f	f
+2023-11-15	2023-2024	Fairleigh Dickinson	Saint Peter's	71	70	132460	t	t
+2023-11-18	2023-2024	Fairleigh Dickinson	vsPenn State-Schuylkill	124	66	132461	t	t
+2023-11-22	2023-2024	Fairleigh Dickinson	Queens University	97	84	132462	f	f
+2023-11-25	2023-2024	Fairleigh Dickinson	Jacksonville State	91	90	132463	f	t
+2023-11-26	2023-2024	Fairleigh Dickinson	Robert Morris	97	86	132464	f	f
+2023-11-30	2023-2024	Fairleigh Dickinson	Fordham	80	52	132465	f	f
+2023-12-02	2023-2024	Fairleigh Dickinson	NJIT	71	68	132466	t	f
+2023-12-08	2023-2024	Fairleigh Dickinson	Manhattan	76	71	132467	t	f
+2023-12-11	2023-2024	Fairleigh Dickinson	Columbia	87	83	132468	f	t
+2023-12-21	2023-2024	Fairleigh Dickinson	Fairfield	92	69	132469	f	t
+2023-12-29	2023-2024	Fairleigh Dickinson	11 Illinois	104	71	132470	f	f
+2024-01-04	2023-2024	Fairleigh Dickinson	Merrimack	60	56	132471	f	f
+2024-01-06	2023-2024	Fairleigh Dickinson	Le Moyne	74	63	132472	f	t
+2024-01-10	2023-2024	Fairleigh Dickinson	Chicago State	75	74	132473	f	t
+2024-01-15	2023-2024	Fairleigh Dickinson	St. Francis (PA)	81	71	132474	t	f
+2024-01-19	2023-2024	Fairleigh Dickinson	Stonehill	76	69	132475	t	f
+2024-01-25	2023-2024	Fairleigh Dickinson	Central Connecticut	76	60	132476	f	t
+2024-01-27	2023-2024	Fairleigh Dickinson	Sacred Heart	93	91	132477	t	t
+2024-02-01	2023-2024	Fairleigh Dickinson	Long Island University	82	75	132478	t	t
+2024-02-08	2023-2024	Fairleigh Dickinson	Wagner	66	62	132479	f	t
+2024-02-10	2023-2024	Fairleigh Dickinson	Central Connecticut	71	62	132480	f	f
+2024-02-17	2023-2024	Fairleigh Dickinson	St. Francis (PA)	93	74	132481	t	t
+2024-02-22	2023-2024	Fairleigh Dickinson	Sacred Heart	99	91	132482	f	f
+2024-02-24	2023-2024	Fairleigh Dickinson	Le Moyne	68	58	132483	t	f
+2024-02-29	2023-2024	Fairleigh Dickinson	Merrimack	74	55	132484	f	t
+2024-03-02	2023-2024	Fairleigh Dickinson	Wagner	57	54	132485	t	f
+2024-03-06	2023-2024	Fairleigh Dickinson	Le Moyne	82	61	132486	f	f
+2023-11-07	2023-2024	Florida A&M	8 Creighton	105	54	132487	f	f
+2023-11-09	2023-2024	Florida A&M	Nebraska	81	54	132488	f	f
+2023-11-14	2023-2024	Florida A&M	Florida	89	68	132489	f	f
+2023-11-20	2023-2024	Florida A&M	Oregon	67	54	132490	f	t
+2023-12-06	2023-2024	Florida A&M	Presbyterian	65	60	132491	t	f
+2023-12-09	2023-2024	Florida A&M	vsLeMoyne-Owen	108	78	132492	t	t
+2023-12-16	2023-2024	Florida A&M	Iowa	88	52	132493	f	f
+2023-12-17	2023-2024	Florida A&M	Iowa State	96	58	132494	f	f
+2023-12-21	2023-2024	Florida A&M	UCF	69	56	132495	f	f
+2023-12-30	2023-2024	Florida A&M	South Carolina	94	62	132496	f	f
+2024-01-06	2023-2024	Florida A&M	Bethune-Cookman	98	86	132497	f	f
+2024-01-13	2023-2024	Florida A&M	Southern	74	65	132498	f	t
+2024-01-15	2023-2024	Florida A&M	Grambling	65	52	132499	f	t
+2024-01-20	2023-2024	Florida A&M	Arkansas-Pine Bluff	99	97	132500	f	f
+2024-01-22	2023-2024	Florida A&M	Mississippi Valley State	81	70	132501	t	f
+2024-01-27	2023-2024	Florida A&M	Alcorn State	76	67	132502	f	t
+2024-01-29	2023-2024	Florida A&M	Jackson State	88	86	132503	t	t
+2024-02-03	2023-2024	Florida A&M	Alabama A&M	73	61	132504	f	f
+2024-02-05	2023-2024	Florida A&M	Alabama State	62	53	132505	f	f
+2024-02-12	2023-2024	Florida A&M	Prairie View A&M	61	58	132506	f	t
+2024-02-17	2023-2024	Florida A&M	Jackson State	77	55	132507	f	f
+2024-02-19	2023-2024	Florida A&M	Alcorn State	79	68	132508	f	f
+2024-02-24	2023-2024	Florida A&M	Alabama State	73	65	132509	t	t
+2024-02-26	2023-2024	Florida A&M	Alabama A&M	76	58	132510	t	t
+2024-03-02	2023-2024	Florida A&M	Grambling	75	68	132511	f	f
+2024-03-04	2023-2024	Florida A&M	Southern	58	44	132512	f	f
+2023-11-08	2023-2024	FAU	Loyola Chicago	75	62	132513	t	t
+2023-11-14	2023-2024	FAU	Eastern Michigan	100	57	132514	t	t
+2023-11-18	2023-2024	FAU	Bryant	61	52	132515	f	t
+2023-11-23	2023-2024	FAU	Butler	91	86	132516	t	t
+2023-11-24	2023-2024	FAU	12 Texas A&M	96	89	132517	t	t
+2023-11-26	2023-2024	FAU	Virginia Tech	84	50	132518	t	t
+2023-11-30	2023-2024	FAU	Liberty	83	58	132519	t	t
+2023-12-02	2023-2024	FAU	Charleston	90	74	132520	t	t
+2023-12-05	2023-2024	FAU	20 Illinois	98	89	132521	f	t
+2023-12-13	2023-2024	FAU	Florida International	94	60	132522	t	t
+2023-12-16	2023-2024	FAU	St. Bonaventure	64	54	132523	t	t
+2023-12-30	2023-2024	FAU	Florida Gulf Coast	72	68	132524	f	f
+2024-01-02	2023-2024	FAU	East Carolina	79	64	132525	t	t
+2024-01-06	2023-2024	FAU	Charlotte	70	68	132526	f	f
+2024-01-11	2023-2024	FAU	Tulane	85	84	132527	t	f
+2024-01-14	2023-2024	FAU	UAB	86	73	132528	t	t
+2024-01-18	2023-2024	FAU	Wichita State	86	77	132529	t	t
+2024-01-24	2023-2024	FAU	Rice	69	56	132530	t	f
+2024-01-28	2023-2024	FAU	North Texas	66	63	132531	t	t
+2024-02-03	2023-2024	FAU	Tulsa	102	70	132532	t	t
+2024-02-15	2023-2024	FAU	Temple	80	68	132533	t	t
+2024-02-18	2023-2024	FAU	South Florida	90	86	132534	f	f
+2024-02-22	2023-2024	FAU	SMU	80	70	132535	t	t
+2024-02-25	2023-2024	FAU	Memphis	78	74	132536	f	f
+2024-03-02	2023-2024	FAU	Tulane	79	73	132537	t	t
+2024-03-06	2023-2024	FAU	North Texas	80	76	132538	t	f
+2024-03-09	2023-2024	FAU	Memphis	92	84	132539	t	t
+2024-03-15	2023-2024	FAU	North Texas	77	71	132540	t	t
+2024-03-16	2023-2024	FAU	Temple	74	73	132541	f	t
+2023-11-06	2023-2024	Florida	Loyola Maryland	93	73	132542	t	t
+2023-11-10	2023-2024	Florida	Virginia	73	70	132543	f	t
+2023-11-14	2023-2024	Florida	Florida A&M	89	68	132544	t	t
+2023-11-17	2023-2024	Florida	Florida State	89	68	132545	t	t
+2023-11-22	2023-2024	Florida	Pittsburgh	86	71	132546	t	t
+2023-11-24	2023-2024	Florida	13 Baylor	95	91	132547	f	t
+2023-11-29	2023-2024	Florida	Wake Forest	82	71	132548	f	f
+2023-12-05	2023-2024	Florida	Merrimack	77	57	132549	t	t
+2023-12-09	2023-2024	Florida	Richmond	87	76	132550	t	t
+2023-12-14	2023-2024	Florida	East Carolina	70	65	132551	t	t
+2023-12-22	2023-2024	Florida	Grambling	96	57	132552	t	t
+2023-12-30	2023-2024	Florida	Quinnipiac	97	72	132553	t	t
+2024-01-06	2023-2024	Florida	6 Kentucky	87	85	132554	f	t
+2024-01-10	2023-2024	Florida	Ole Miss	103	85	132555	f	f
+2024-01-13	2023-2024	Florida	Arkansas	90	68	132556	t	t
+2024-01-16	2023-2024	Florida	6 Tennessee	85	66	132557	f	f
+2024-01-20	2023-2024	Florida	Missouri	79	67	132558	t	f
+2024-01-24	2023-2024	Florida	Mississippi State	79	70	132559	t	t
+2024-02-03	2023-2024	Florida	Texas A&M	67	66	132560	f	f
+2024-02-10	2023-2024	Florida	12 Auburn	81	65	132561	t	t
+2024-02-13	2023-2024	Florida	LSU	82	80	132562	t	t
+2024-02-17	2023-2024	Florida	Georgia	88	82	132563	t	f
+2024-02-24	2023-2024	Florida	Vanderbilt	77	64	132564	t	t
+2024-02-28	2023-2024	Florida	Missouri	83	74	132565	t	t
+2024-03-02	2023-2024	Florida	18 South Carolina	82	76	132566	f	f
+2024-03-05	2023-2024	Florida	16 Alabama	105	87	132567	t	t
+2024-03-09	2023-2024	Florida	Vanderbilt	79	78	132568	f	f
+2024-03-14	2023-2024	Florida	Georgia	85	80	132569	t	t
+2024-03-15	2023-2024	Florida	19 Alabama	102	88	132570	t	t
+2024-03-16	2023-2024	Florida	Texas A&M	95	90	132571	t	t
+2024-03-17	2023-2024	Florida	12 Auburn	86	67	132572	f	t
+2023-11-07	2023-2024	FGCU	Indiana	69	63	132573	f	f
+2023-11-10	2023-2024	FGCU	vsAve Maria	80	71	132574	t	t
+2023-11-13	2023-2024	FGCU	Pittsburgh	86	74	132575	f	f
+2023-11-17	2023-2024	FGCU	Missouri State	70	61	132576	f	t
+2023-11-18	2023-2024	FGCU	Hampton	92	85	132577	f	t
+2023-11-20	2023-2024	FGCU	Norfolk State	69	66	132578	f	t
+2023-11-25	2023-2024	FGCU	UNC Wilmington	71	55	132579	f	t
+2023-11-29	2023-2024	FGCU	Florida International	68	65	132580	t	f
+2023-12-03	2023-2024	FGCU	Cincinnati	99	62	132581	f	f
+2023-12-05	2023-2024	FGCU	vsNew College (FL)	87	54	132582	t	t
+2023-12-09	2023-2024	FGCU	Minnesota	77	57	132583	f	f
+2023-12-16	2023-2024	FGCU	Mercer	70	65	132584	f	f
+2023-12-19	2023-2024	FGCU	Georgia Southern	53	42	132585	t	f
+2023-12-30	2023-2024	FGCU	7 Florida Atlantic	72	68	132586	t	t
+2024-01-04	2023-2024	FGCU	Jacksonville State	80	70	132587	t	t
+2024-01-06	2023-2024	FGCU	North Florida	78	58	132588	f	t
+2024-01-10	2023-2024	FGCU	Queens University	78	75	132589	f	f
+2024-01-12	2023-2024	FGCU	Kennesaw State	78	75	132590	f	f
+2024-01-20	2023-2024	FGCU	Stetson	80	56	132591	t	t
+2024-01-25	2023-2024	FGCU	Lipscomb	98	72	132592	f	t
+2024-01-27	2023-2024	FGCU	Austin Peay	73	67	132593	t	t
+2024-02-01	2023-2024	FGCU	Central Arkansas	82	59	132594	t	f
+2024-02-03	2023-2024	FGCU	North Alabama	70	69	132595	f	f
+2024-02-07	2023-2024	FGCU	Eastern Kentucky	90	82	132596	f	f
+2024-02-10	2023-2024	FGCU	Bellarmine	63	52	132597	t	t
+2024-02-17	2023-2024	FGCU	Stetson	61	60	132598	f	f
+2024-02-22	2023-2024	FGCU	Kennesaw State	74	67	132599	f	t
+2024-02-24	2023-2024	FGCU	Queens University	90	81	132600	t	t
+2024-02-28	2023-2024	FGCU	North Florida	79	60	132601	t	f
+2024-03-01	2023-2024	FGCU	Jacksonville State	59	57	132602	t	f
+2024-03-04	2023-2024	FGCU	Queens University	69	63	132603	f	t
+2023-11-06	2023-2024	FIU	UCF	85	62	132604	f	f
+2023-11-09	2023-2024	FIU	Tarleton State	82	65	132605	f	t
+2023-11-13	2023-2024	FIU	12 Miami	86	80	132606	f	f
+2023-11-15	2023-2024	FIU	Houston Christian	83	74	132607	t	f
+2023-11-19	2023-2024	FIU	Akron	77	71	132608	f	t
+2023-11-20	2023-2024	FIU	Marshall	80	69	132609	f	t
+2023-11-21	2023-2024	FIU	Loyola Marymount	61	60	132610	f	t
+2023-11-26	2023-2024	FIU	Kennesaw State	91	84	132611	t	t
+2023-11-29	2023-2024	FIU	Florida Gulf Coast	68	65	132612	f	t
+2023-12-02	2023-2024	FIU	Long Island University	74	59	132613	t	t
+2023-12-13	2023-2024	FIU	15 Florida Atlantic	94	60	132614	f	f
+2023-12-16	2023-2024	FIU	vsTrinity (FL)	146	55	132615	t	t
+2023-12-19	2023-2024	FIU	Stetson	80	68	132616	f	t
+2023-12-21	2023-2024	FIU	Maine	82	74	132617	t	t
+2024-01-06	2023-2024	FIU	Jacksonville State	70	63	132618	f	f
+2024-01-11	2023-2024	FIU	New Mexico State	77	67	132619	t	t
+2024-01-13	2023-2024	FIU	UTEP	72	68	132620	t	t
+2024-01-18	2023-2024	FIU	Liberty	78	69	132621	f	f
+2024-01-25	2023-2024	FIU	Western Kentucky	105	91	132622	f	f
+2024-01-27	2023-2024	FIU	Middle Tennessee	79	61	132623	f	f
+2024-02-01	2023-2024	FIU	Louisiana Tech	93	53	132624	f	t
+2024-02-03	2023-2024	FIU	Sam Houston	68	61	132625	t	t
+2024-02-10	2023-2024	FIU	Middle Tennessee	68	66	132626	f	t
+2024-02-15	2023-2024	FIU	Sam Houston	70	56	132627	f	f
+2024-02-17	2023-2024	FIU	Louisiana Tech	75	68	132628	f	f
+2024-02-22	2023-2024	FIU	Liberty	76	71	132629	t	t
+2024-02-24	2023-2024	FIU	Jacksonville State	77	75	132630	f	t
+2024-03-02	2023-2024	FIU	Western Kentucky	85	83	132631	t	t
+2024-03-07	2023-2024	FIU	UTEP	83	76	132632	f	f
+2024-03-09	2023-2024	FIU	New Mexico State	77	70	132633	f	f
+2024-03-12	2023-2024	FIU	Jacksonville State	76	67	132634	t	t
+2024-03-13	2023-2024	FIU	Sam Houston	78	59	132635	f	t
+2023-11-10	2023-2024	Florida State	Kennesaw State	94	67	132636	t	t
+2023-11-13	2023-2024	Florida State	Central Michigan	94	67	132637	t	t
+2023-11-17	2023-2024	Florida State	Florida	89	68	132638	f	f
+2023-11-20	2023-2024	Florida State	UNLV	83	75	132639	t	t
+2023-11-29	2023-2024	Florida State	Georgia	68	66	132640	f	t
+2023-12-02	2023-2024	Florida State	17 North Carolina	78	70	132641	f	f
+2023-12-09	2023-2024	Florida State	South Florida	88	72	132642	f	t
+2023-12-16	2023-2024	Florida State	SMU	68	57	132643	f	t
+2023-12-19	2023-2024	Florida State	North Florida	91	75	132644	t	t
+2023-12-22	2023-2024	Florida State	Winthrop	67	61	132645	t	t
+2023-12-30	2023-2024	Florida State	Lipscomb	78	75	132646	f	t
+2024-01-03	2023-2024	Florida State	Georgia Tech	82	71	132647	t	t
+2024-01-06	2023-2024	Florida State	Virginia Tech	77	74	132648	t	t
+2024-01-09	2023-2024	Florida State	Wake Forest	87	82	132649	t	t
+2024-01-13	2023-2024	Florida State	Notre Dame	67	58	132650	t	f
+2024-01-17	2023-2024	Florida State	Miami	84	75	132651	t	f
+2024-01-20	2023-2024	Florida State	Clemson	78	67	132652	f	t
+2024-01-23	2023-2024	Florida State	Syracuse	85	69	132653	t	f
+2024-01-27	2023-2024	Florida State	3 North Carolina	75	68	132654	f	t
+2024-02-03	2023-2024	Florida State	Louisville	101	92	132655	f	f
+2024-02-06	2023-2024	Florida State	Boston College	63	62	132656	t	f
+2024-02-10	2023-2024	Florida State	Virginia	80	76	132657	f	t
+2024-02-13	2023-2024	Florida State	Virginia Tech	83	75	132658	f	f
+2024-02-17	2023-2024	Florida State	9 Duke	76	67	132659	f	t
+2024-02-20	2023-2024	Florida State	Boston College	84	76	132660	t	t
+2024-02-24	2023-2024	Florida State	Clemson	74	63	132661	f	f
+2024-02-27	2023-2024	Florida State	NC State	90	83	132662	t	t
+2024-03-02	2023-2024	Florida State	Georgia Tech	85	76	132663	f	f
+2024-03-05	2023-2024	Florida State	Pittsburgh	88	73	132664	f	f
+2024-03-09	2023-2024	Florida State	Miami	83	75	132665	t	t
+2024-03-13	2023-2024	Florida State	Virginia Tech	86	76	132666	t	t
+2024-03-14	2023-2024	Florida State	4 North Carolina	92	67	132667	f	t
+2023-11-11	2023-2024	Fordham	Cornell	78	73	132668	f	t
+2023-11-17	2023-2024	Fordham	Norfolk State	77	64	132669	t	t
+2023-11-19	2023-2024	Fordham	Abilene Christian	59	45	132670	f	t
+2023-11-20	2023-2024	Fordham	Kent State	79	72	132671	f	t
+2023-11-27	2023-2024	Fordham	Manhattan	93	61	132672	t	t
+2023-11-30	2023-2024	Fordham	Fairleigh Dickinson	80	52	132673	t	t
+2023-12-03	2023-2024	Fordham	Tulane	89	81	132674	f	t
+2023-12-06	2023-2024	Fordham	NJIT	80	77	132675	f	t
+2023-12-10	2023-2024	Fordham	North Texas	60	59	132676	t	t
+2023-12-16	2023-2024	Fordham	St. John's	77	55	132677	f	f
+2023-12-21	2023-2024	Fordham	Central Connecticut	82	80	132678	f	t
+2023-12-30	2023-2024	Fordham	Columbia	87	78	132679	t	t
+2024-01-06	2023-2024	Fordham	La Salle	81	76	132680	f	t
+2024-01-13	2023-2024	Fordham	St. Bonaventure	80	74	132681	t	f
+2024-01-17	2023-2024	Fordham	Davidson	79	69	132682	f	t
+2024-01-20	2023-2024	Fordham	Loyola Chicago	65	61	132683	f	t
+2024-01-24	2023-2024	Fordham	Rhode Island	71	68	132684	t	f
+2024-01-27	2023-2024	Fordham	Duquesne	68	59	132685	f	f
+2024-01-31	2023-2024	Fordham	Richmond	83	69	132686	f	t
+2024-02-03	2023-2024	Fordham	Saint Louis	67	65	132687	t	f
+2024-02-06	2023-2024	Fordham	VCU	75	60	132688	f	t
+2024-02-14	2023-2024	Fordham	St. Bonaventure	85	67	132689	f	t
+2024-02-17	2023-2024	Fordham	16 Dayton	78	70	132690	f	f
+2024-02-20	2023-2024	Fordham	Davidson	68	53	132691	f	f
+2024-02-23	2023-2024	Fordham	Duquesne	79	67	132692	t	t
+2024-02-27	2023-2024	Fordham	George Mason	61	60	132693	t	t
+2024-03-02	2023-2024	Fordham	Saint Joseph's	82	69	132694	f	f
+2024-03-06	2023-2024	Fordham	Massachusetts	66	64	132695	f	f
+2024-03-09	2023-2024	Fordham	Rhode Island	58	50	132696	f	t
+2024-03-13	2023-2024	Fordham	VCU	69	62	132697	f	t
+2023-11-06	2023-2024	Fresno State	vsFresno Pacific	77	66	132698	t	t
+2023-11-11	2023-2024	Fresno State	Kent State	79	69	132699	f	f
+2023-11-15	2023-2024	Fresno State	Morgan State	87	68	132700	t	t
+2023-11-22	2023-2024	Fresno State	22 James Madison	95	64	132701	f	t
+2023-11-27	2023-2024	Fresno State	UC Santa Barbara	69	65	132702	f	t
+2023-12-01	2023-2024	Fresno State	19 BYU	85	56	132703	f	t
+2023-12-05	2023-2024	Fresno State	Idaho State	79	67	132704	t	t
+2023-12-09	2023-2024	Fresno State	Pacific	89	56	132705	t	t
+2023-12-15	2023-2024	Fresno State	Cal State Bakersfield	61	58	132706	t	t
+2023-12-22	2023-2024	Fresno State	San Francisco	77	57	132707	f	f
+2023-12-29	2023-2024	Fresno State	San Diego	71	67	132708	t	f
+2024-01-03	2023-2024	Fresno State	San Diego State	74	47	132709	f	f
+2024-01-06	2023-2024	Fresno State	Nevada	72	57	132710	f	t
+2024-01-13	2023-2024	Fresno State	Wyoming	68	67	132711	f	f
+2024-01-16	2023-2024	Fresno State	San José State	85	82	132712	t	t
+2024-01-20	2023-2024	Fresno State	16 Utah State	83	62	132713	f	f
+2024-01-23	2023-2024	Fresno State	Boise State	72	68	132714	f	t
+2024-01-27	2023-2024	Fresno State	Air Force	84	70	132715	t	t
+2024-01-30	2023-2024	Fresno State	UNLV	78	69	132716	f	f
+2024-02-03	2023-2024	Fresno State	Colorado State	73	61	132717	f	t
+2024-02-06	2023-2024	Fresno State	San José State	69	57	132718	t	f
+2024-02-10	2023-2024	Fresno State	Air Force	68	66	132719	t	f
+2024-02-14	2023-2024	Fresno State	UNLV	67	65	132720	f	t
+2024-02-17	2023-2024	Fresno State	Boise State	90	66	132721	f	f
+2024-02-24	2023-2024	Fresno State	19 San Diego State	73	41	132722	f	t
+2024-03-01	2023-2024	Fresno State	Nevada	74	66	132723	f	f
+2024-03-06	2023-2024	Fresno State	New Mexico	79	58	132724	f	f
+2024-03-09	2023-2024	Fresno State	Wyoming	86	47	132725	f	t
+2024-03-13	2023-2024	Fresno State	Wyoming	77	73	132726	t	t
+2023-11-06	2023-2024	Furman	vsNorth Greenville	84	68	132727	t	t
+2023-11-10	2023-2024	Furman	Belmont	99	76	132728	t	t
+2023-11-16	2023-2024	Furman	Liberty	88	74	132729	f	t
+2023-11-17	2023-2024	Furman	Coastal Carolina	89	80	132730	t	t
+2023-11-19	2023-2024	Furman	Wyoming	78	71	132731	f	t
+2023-11-25	2023-2024	Furman	UAB	92	86	132732	f	f
+2023-11-28	2023-2024	Furman	South Carolina State	86	78	132733	t	t
+2023-12-02	2023-2024	Furman	Princeton	70	69	132734	f	f
+2023-12-04	2023-2024	Furman	Arkansas	97	83	132735	f	f
+2023-12-09	2023-2024	Furman	vsBob Jones	100	58	132736	t	t
+2023-12-19	2023-2024	Furman	Presbyterian	76	61	132737	t	t
+2023-12-30	2023-2024	Furman	vsAnderson (SC)	79	74	132738	f	t
+2024-01-03	2023-2024	Furman	UNC Greensboro	79	68	132739	f	f
+2024-01-06	2023-2024	Furman	Chattanooga	73	58	132740	f	f
+2024-01-10	2023-2024	Furman	The Citadel	82	68	132741	t	t
+2024-01-13	2023-2024	Furman	East Tennessee State	82	73	132742	t	t
+2024-01-17	2023-2024	Furman	VMI	100	60	132743	t	f
+2024-01-20	2023-2024	Furman	Western Carolina	65	62	132744	t	t
+2024-01-24	2023-2024	Furman	Samford	78	68	132745	t	t
+2024-01-27	2023-2024	Furman	Wofford	77	67	132746	f	f
+2024-02-04	2023-2024	Furman	UNC Greensboro	89	87	132747	f	t
+2024-02-07	2023-2024	Furman	Mercer	78	69	132748	f	f
+2024-02-10	2023-2024	Furman	East Tennessee State	65	63	132749	t	f
+2024-02-14	2023-2024	Furman	VMI	75	62	132750	t	t
+2024-02-18	2023-2024	Furman	Chattanooga	82	65	132751	t	t
+2024-02-21	2023-2024	Furman	Samford	74	72	132752	f	f
+2024-02-24	2023-2024	Furman	Wofford	82	67	132753	t	t
+2024-02-28	2023-2024	Furman	Western Carolina	85	77	132754	f	f
+2024-03-02	2023-2024	Furman	Mercer	82	75	132755	f	t
+2024-03-10	2023-2024	Furman	Samford	84	77	132756	f	t
+2023-11-06	2023-2024	Gardner-Webb	vsErskine	98	58	132757	t	t
+2023-11-10	2023-2024	Gardner-Webb	14 Arkansas	86	68	132758	f	f
+2023-11-12	2023-2024	Gardner-Webb	20 Baylor	77	62	132759	f	f
+2023-11-17	2023-2024	Gardner-Webb	Weber State	62	61	132760	t	t
+2023-11-18	2023-2024	Gardner-Webb	Colgate	59	52	132761	f	t
+2023-11-25	2023-2024	Gardner-Webb	vsLimestone	92	51	132762	t	t
+2023-11-29	2023-2024	Gardner-Webb	Queens University	83	80	132763	f	f
+2023-12-02	2023-2024	Gardner-Webb	Western Carolina	82	77	132764	t	t
+2023-12-06	2023-2024	Gardner-Webb	Wofford	81	66	132765	f	t
+2023-12-11	2023-2024	Gardner-Webb	vsNorth Greenville	79	60	132766	t	t
+2023-12-16	2023-2024	Gardner-Webb	Appalachian State	80	59	132767	f	t
+2023-12-19	2023-2024	Gardner-Webb	Chattanooga	69	66	132768	f	f
+2023-12-30	2023-2024	Gardner-Webb	VCU	87	73	132769	f	f
+2024-01-06	2023-2024	Gardner-Webb	High Point	85	76	132770	f	f
+2024-01-10	2023-2024	Gardner-Webb	Charleston Southern	86	74	132771	f	t
+2024-01-13	2023-2024	Gardner-Webb	Presbyterian	76	60	132772	t	t
+2024-01-17	2023-2024	Gardner-Webb	Radford	74	68	132773	t	f
+2024-01-20	2023-2024	Gardner-Webb	Winthrop	79	74	132774	t	t
+2024-01-24	2023-2024	Gardner-Webb	Longwood	76	64	132775	t	f
+2024-01-27	2023-2024	Gardner-Webb	South Carolina Upstate	75	70	132776	t	t
+2024-01-31	2023-2024	Gardner-Webb	UNC Asheville	80	73	132777	t	t
+2024-02-07	2023-2024	Gardner-Webb	Presbyterian	77	75	132778	f	f
+2024-02-10	2023-2024	Gardner-Webb	High Point	78	62	132779	f	t
+2024-02-14	2023-2024	Gardner-Webb	Charleston Southern	85	77	132780	t	f
+2024-02-17	2023-2024	Gardner-Webb	South Carolina Upstate	73	65	132781	t	f
+2024-02-22	2023-2024	Gardner-Webb	Radford	90	74	132782	f	t
+2024-02-24	2023-2024	Gardner-Webb	UNC Asheville	78	77	132783	t	f
+2024-02-29	2023-2024	Gardner-Webb	Longwood	72	69	132784	t	t
+2024-03-02	2023-2024	Gardner-Webb	Winthrop	65	64	132785	t	f
+2024-03-08	2023-2024	Gardner-Webb	Presbyterian	61	60	132786	t	t
+2023-11-06	2023-2024	George Mason	Monmouth	72	61	132787	t	t
+2023-11-10	2023-2024	George Mason	Austin Peay	67	45	132788	t	t
+2023-11-15	2023-2024	George Mason	Cornell	90	83	132789	t	t
+2023-11-19	2023-2024	George Mason	Charlotte	54	49	132790	f	t
+2023-11-20	2023-2024	George Mason	South Dakota State	73	71	132791	t	t
+2023-11-25	2023-2024	George Mason	East Carolina	81	59	132792	t	t
+2023-11-29	2023-2024	George Mason	NJIT	86	68	132793	t	t
+2023-12-02	2023-2024	George Mason	Toledo	86	77	132794	t	f
+2023-12-05	2023-2024	George Mason	17 Tennessee	87	66	132795	f	f
+2023-12-16	2023-2024	George Mason	Loyola Maryland	62	54	132796	t	t
+2023-12-19	2023-2024	George Mason	vsBridgewater College (VA)	84	60	132797	t	t
+2023-12-22	2023-2024	George Mason	Tulane	69	66	132798	t	f
+2023-12-30	2023-2024	George Mason	North Carolina A&T	94	69	132799	t	t
+2024-01-03	2023-2024	George Mason	La Salle	77	62	132800	t	f
+2024-01-06	2023-2024	George Mason	Saint Louis	79	67	132801	t	t
+2024-01-09	2023-2024	George Mason	VCU	54	50	132802	f	t
+2024-01-13	2023-2024	George Mason	Richmond	77	70	132803	f	f
+2024-01-15	2023-2024	George Mason	George Washington	75	62	132804	f	f
+2024-01-20	2023-2024	George Mason	St. Bonaventure	69	60	132805	t	t
+2024-01-27	2023-2024	George Mason	Rhode Island	92	84	132806	t	t
+2024-01-31	2023-2024	George Mason	Saint Joseph's	75	73	132807	f	f
+2024-02-03	2023-2024	George Mason	Massachusetts	66	65	132808	f	f
+2024-02-07	2023-2024	George Mason	Loyola Chicago	85	79	132809	f	t
+2024-02-10	2023-2024	George Mason	Davidson	57	55	132810	t	f
+2024-02-13	2023-2024	George Mason	George Washington	90	67	132811	t	t
+2024-02-21	2023-2024	George Mason	16 Dayton	71	67	132812	t	t
+2024-02-24	2023-2024	George Mason	Loyola Chicago	80	59	132813	f	f
+2024-02-27	2023-2024	George Mason	Fordham	61	60	132814	f	f
+2024-03-02	2023-2024	George Mason	Duquesne	59	51	132815	f	t
+2024-03-06	2023-2024	George Mason	Rhode Island	69	51	132816	t	f
+2024-03-09	2023-2024	George Mason	Richmond	64	46	132817	t	t
+2024-03-13	2023-2024	George Mason	Saint Joseph's	64	57	132818	f	t
+2023-11-06	2023-2024	G Washington	Stonehill	89	44	132819	t	t
+2023-11-11	2023-2024	G Washington	William & Mary	95	89	132820	t	t
+2023-11-14	2023-2024	G Washington	Hofstra	71	60	132821	t	t
+2023-11-18	2023-2024	G Washington	New Hampshire	79	67	132822	t	t
+2023-11-25	2023-2024	G Washington	UIC	89	79	132823	f	t
+2023-11-26	2023-2024	G Washington	Delaware	81	71	132824	t	t
+2023-12-01	2023-2024	G Washington	South Carolina	89	67	132825	f	f
+2023-12-09	2023-2024	G Washington	Coppin State	76	45	132826	t	t
+2023-12-12	2023-2024	G Washington	vsBowie State	88	73	132827	t	t
+2023-12-21	2023-2024	G Washington	Alcorn State	79	75	132828	t	t
+2023-12-30	2023-2024	G Washington	Maryland-Eastern Shore	69	63	132829	t	t
+2024-01-06	2023-2024	G Washington	VCU	84	82	132830	t	f
+2024-01-15	2023-2024	G Washington	George Mason	75	62	132831	t	t
+2024-01-20	2023-2024	G Washington	Massachusetts	81	67	132832	f	f
+2024-01-24	2023-2024	G Washington	Richmond	82	74	132833	f	f
+2024-01-27	2023-2024	G Washington	La Salle	80	70	132834	f	t
+2024-01-30	2023-2024	G Washington	21 Dayton	83	61	132835	f	f
+2024-02-06	2023-2024	G Washington	Rhode Island	88	65	132836	f	t
+2024-02-10	2023-2024	G Washington	Loyola Chicago	81	73	132837	f	t
+2024-02-13	2023-2024	G Washington	George Mason	90	67	132838	f	f
+2024-02-17	2023-2024	G Washington	Richmond	90	74	132839	f	t
+2024-02-21	2023-2024	G Washington	Saint Joseph's	79	75	132840	f	f
+2024-02-24	2023-2024	G Washington	Saint Louis	96	91	132841	f	f
+2024-02-27	2023-2024	G Washington	Massachusetts	69	57	132842	f	t
+2024-03-02	2023-2024	G Washington	La Salle	72	66	132843	f	f
+2024-03-06	2023-2024	G Washington	St. Bonaventure	86	75	132844	t	t
+2024-03-09	2023-2024	G Washington	Duquesne	67	65	132845	f	f
+2024-03-12	2023-2024	G Washington	La Salle	61	60	132846	f	t
+2023-11-07	2023-2024	Georgetown	Le Moyne	94	57	132847	t	t
+2023-11-11	2023-2024	Georgetown	Holy Cross	68	67	132848	f	t
+2023-11-15	2023-2024	Georgetown	Rutgers	71	60	132849	f	f
+2023-11-18	2023-2024	Georgetown	Mount St. Mary's	83	72	132850	t	t
+2023-11-25	2023-2024	Georgetown	Jackson State	88	81	132851	t	t
+2023-11-29	2023-2024	Georgetown	Merrimack	69	67	132852	t	t
+2023-12-02	2023-2024	Georgetown	TCU	84	83	132853	f	t
+2023-12-09	2023-2024	Georgetown	Syracuse	80	68	132854	f	t
+2023-12-12	2023-2024	Georgetown	Coppin State	71	54	132855	t	t
+2023-12-19	2023-2024	Georgetown	Butler	74	64	132856	f	f
+2023-12-22	2023-2024	Georgetown	6 Marquette	81	51	132857	f	f
+2024-01-02	2023-2024	Georgetown	Creighton	77	60	132858	f	t
+2024-01-06	2023-2024	Georgetown	DePaul	68	65	132859	t	t
+2024-01-09	2023-2024	Georgetown	Seton Hall	74	70	132860	f	t
+2024-01-14	2023-2024	Georgetown	4 UConn	80	67	132861	f	f
+2024-01-19	2023-2024	Georgetown	Xavier	92	91	132862	f	f
+2024-01-23	2023-2024	Georgetown	Butler	90	66	132863	f	t
+2024-01-27	2023-2024	Georgetown	Providence	84	76	132864	f	f
+2024-02-03	2023-2024	Georgetown	9 Marquette	91	57	132865	f	t
+2024-02-07	2023-2024	Georgetown	Seton Hall	76	70	132866	f	f
+2024-02-10	2023-2024	Georgetown	1 UConn	89	64	132867	f	t
+2024-02-13	2023-2024	Georgetown	17 Creighton	94	72	132868	f	f
+2024-02-16	2023-2024	Georgetown	Villanova	70	54	132869	f	t
+2024-02-21	2023-2024	Georgetown	St. John's	90	85	132870	f	t
+2024-02-24	2023-2024	Georgetown	DePaul	77	76	132871	t	f
+2024-02-27	2023-2024	Georgetown	Villanova	75	47	132872	f	f
+2024-03-02	2023-2024	Georgetown	Xavier	98	93	132873	f	t
+2024-03-05	2023-2024	Georgetown	Providence	71	58	132874	f	t
+2024-03-09	2023-2024	Georgetown	St. John's	86	78	132875	f	f
+2024-03-13	2023-2024	Georgetown	Providence	74	56	132876	f	t
+2023-11-06	2023-2024	Georgia	Oregon	82	71	132877	f	t
+2023-11-10	2023-2024	Georgia	Wake Forest	80	77	132878	t	t
+2023-11-12	2023-2024	Georgia	North Carolina Central	64	54	132879	t	t
+2023-11-17	2023-2024	Georgia	12 Miami	79	68	132880	f	t
+2023-11-19	2023-2024	Georgia	Providence	71	64	132881	f	t
+2023-11-24	2023-2024	Georgia	Winthrop	78	69	132882	t	t
+2023-11-29	2023-2024	Georgia	Florida State	68	66	132883	t	f
+2023-12-01	2023-2024	Georgia	Mercer	80	69	132884	t	t
+2023-12-05	2023-2024	Georgia	Georgia Tech	76	62	132885	t	t
+2023-12-16	2023-2024	Georgia	High Point	66	58	132886	t	t
+2023-12-20	2023-2024	Georgia	Mount St. Mary's	94	82	132887	t	t
+2023-12-22	2023-2024	Georgia	North Florida	78	60	132888	t	t
+2023-12-30	2023-2024	Georgia	Alabama A&M	93	73	132889	t	t
+2024-01-06	2023-2024	Georgia	Missouri	75	68	132890	t	f
+2024-01-10	2023-2024	Georgia	Arkansas	76	66	132891	t	t
+2024-01-13	2023-2024	Georgia	5 Tennessee	85	79	132892	f	t
+2024-01-16	2023-2024	Georgia	South Carolina	74	69	132893	t	f
+2024-01-20	2023-2024	Georgia	8 Kentucky	105	96	132894	f	f
+2024-01-24	2023-2024	Georgia	LSU	68	66	132895	t	t
+2024-01-31	2023-2024	Georgia	24 Alabama	85	76	132896	f	t
+2024-02-03	2023-2024	Georgia	South Carolina	72	62	132897	f	t
+2024-02-07	2023-2024	Georgia	Mississippi State	75	62	132898	f	f
+2024-02-10	2023-2024	Georgia	Arkansas	78	75	132899	f	f
+2024-02-17	2023-2024	Georgia	Florida	88	82	132900	f	t
+2024-02-21	2023-2024	Georgia	Vanderbilt	76	64	132901	t	f
+2024-02-24	2023-2024	Georgia	14 Auburn	97	76	132902	f	t
+2024-02-27	2023-2024	Georgia	LSU	67	66	132903	f	f
+2024-03-02	2023-2024	Georgia	Texas A&M	70	56	132904	f	t
+2024-03-05	2023-2024	Georgia	Ole Miss	69	66	132905	t	t
+2024-03-09	2023-2024	Georgia	13 Auburn	92	78	132906	f	f
+2024-03-13	2023-2024	Georgia	Missouri	64	59	132907	t	t
+2024-03-14	2023-2024	Georgia	Florida	85	80	132908	f	t
+2023-11-06	2023-2024	GA Southern	Georgia Tech	84	62	132909	f	f
+2023-11-11	2023-2024	GA Southern	Eastern Michigan	70	60	132910	f	f
+2023-11-14	2023-2024	GA Southern	Jacksonville State	85	68	132911	f	f
+2023-11-19	2023-2024	GA Southern	Kennesaw State	96	92	132912	f	t
+2023-11-20	2023-2024	GA Southern	East Carolina	82	64	132913	f	f
+2023-11-21	2023-2024	GA Southern	Northeastern	93	76	132914	f	t
+2023-11-28	2023-2024	GA Southern	Michigan State	86	55	132915	f	f
+2023-12-02	2023-2024	GA Southern	Jacksonville State	81	79	132916	f	t
+2023-12-09	2023-2024	GA Southern	North Florida	64	56	132917	f	f
+2023-12-12	2023-2024	GA Southern	12 Tennessee	74	56	132918	f	f
+2023-12-16	2023-2024	GA Southern	UNC Wilmington	82	77	132919	f	t
+2023-12-19	2023-2024	GA Southern	Florida Gulf Coast	53	42	132920	f	t
+2023-12-30	2023-2024	GA Southern	Southern Miss	88	67	132921	t	t
+2024-01-04	2023-2024	GA Southern	Arkansas State	109	83	132922	f	f
+2024-01-06	2023-2024	GA Southern	UL Monroe	76	68	132923	t	f
+2024-01-10	2023-2024	GA Southern	Marshall	79	74	132924	f	f
+2024-01-13	2023-2024	GA Southern	Georgia State	90	62	132925	f	f
+2024-01-18	2023-2024	GA Southern	Coastal Carolina	73	70	132926	t	t
+2024-01-20	2023-2024	GA Southern	Georgia State	86	70	132927	t	t
+2024-01-25	2023-2024	GA Southern	Appalachian State	84	74	132928	f	f
+2024-01-27	2023-2024	GA Southern	Old Dominion	76	70	132929	t	f
+2024-02-01	2023-2024	GA Southern	Troy	84	63	132930	f	t
+2024-02-07	2023-2024	GA Southern	South Alabama	78	65	132931	f	f
+2024-02-15	2023-2024	GA Southern	Coastal Carolina	82	75	132932	f	f
+2024-02-17	2023-2024	GA Southern	James Madison	87	80	132933	f	f
+2024-02-22	2023-2024	GA Southern	Texas State	84	76	132934	t	t
+2024-02-24	2023-2024	GA Southern	James Madison	80	74	132935	f	t
+2024-02-28	2023-2024	GA Southern	Marshall	87	73	132936	t	t
+2024-03-01	2023-2024	GA Southern	Old Dominion	92	75	132937	t	t
+2024-03-07	2023-2024	GA Southern	South Alabama	76	71	132938	t	t
+2023-11-06	2023-2024	Georgia State	Belmont	89	87	132939	f	f
+2023-11-11	2023-2024	Georgia State	Western Michigan	77	70	132940	t	f
+2023-11-17	2023-2024	Georgia State	Northern Illinois	70	64	132941	f	t
+2023-11-19	2023-2024	Georgia State	Little Rock	88	77	132942	t	t
+2023-11-25	2023-2024	Georgia State	Charlotte	65	57	132943	f	f
+2023-12-02	2023-2024	Georgia State	Kennesaw State	88	77	132944	f	f
+2023-12-04	2023-2024	Georgia State	vsMiddle Georgia State	89	57	132945	t	t
+2023-12-09	2023-2024	Georgia State	Mercer	64	60	132946	f	f
+2023-12-16	2023-2024	Georgia State	18 BYU	86	54	132947	f	f
+2023-12-19	2023-2024	Georgia State	vsToccoa Falls	122	45	132948	t	t
+2023-12-30	2023-2024	Georgia State	Arkansas State	91	90	132949	t	t
+2024-01-04	2023-2024	Georgia State	Southern Miss	79	73	132950	f	f
+2024-01-06	2023-2024	Georgia State	South Alabama	90	76	132951	t	f
+2024-01-11	2023-2024	Georgia State	Old Dominion	77	70	132952	t	t
+2024-01-13	2023-2024	Georgia State	Georgia Southern	90	62	132953	t	t
+2024-01-17	2023-2024	Georgia State	Appalachian State	76	68	132954	f	f
+2024-01-20	2023-2024	Georgia State	Georgia Southern	86	70	132955	f	f
+2024-01-24	2023-2024	Georgia State	Marshall	77	68	132956	f	f
+2024-02-01	2023-2024	Georgia State	Appalachian State	81	71	132957	f	t
+2024-02-03	2023-2024	Georgia State	Troy	78	74	132958	f	t
+2024-02-07	2023-2024	Georgia State	Louisiana	78	69	132959	t	f
+2024-02-10	2023-2024	Georgia State	Miami (OH)	73	53	132960	t	t
+2024-02-15	2023-2024	Georgia State	James Madison	83	63	132961	f	f
+2024-02-17	2023-2024	Georgia State	Old Dominion	68	65	132962	t	f
+2024-02-21	2023-2024	Georgia State	Coastal Carolina	72	71	132963	t	t
+2024-02-24	2023-2024	Georgia State	Texas State	68	59	132964	f	t
+2024-02-28	2023-2024	Georgia State	James Madison	84	78	132965	f	t
+2024-03-01	2023-2024	Georgia State	Marshall	82	79	132966	t	t
+2024-03-07	2023-2024	Georgia State	Marshall	86	74	132967	f	t
+2023-11-06	2023-2024	Georgia Tech	Georgia Southern	84	62	132968	t	t
+2023-11-09	2023-2024	Georgia Tech	Howard	88	85	132969	t	t
+2023-11-14	2023-2024	Georgia Tech	UMass Lowell	74	71	132970	f	t
+2023-11-22	2023-2024	Georgia Tech	Cincinnati	89	54	132971	f	f
+2023-11-28	2023-2024	Georgia Tech	21 Mississippi State	67	59	132972	t	t
+2023-12-02	2023-2024	Georgia Tech	7 Duke	72	68	132973	t	t
+2023-12-05	2023-2024	Georgia Tech	Georgia	76	62	132974	f	f
+2023-12-09	2023-2024	Georgia Tech	Alabama A&M	70	49	132975	t	t
+2023-12-21	2023-2024	Georgia Tech	Massachusetts	73	70	132976	t	t
+2023-12-22	2023-2024	Georgia Tech	Hawai'i	73	68	132977	t	f
+2023-12-24	2023-2024	Georgia Tech	Nevada	72	64	132978	f	t
+2024-01-03	2023-2024	Georgia Tech	Florida State	82	71	132979	f	f
+2024-01-06	2023-2024	Georgia Tech	Boston College	95	87	132980	f	t
+2024-01-13	2023-2024	Georgia Tech	11 Duke	84	79	132981	f	f
+2024-01-20	2023-2024	Georgia Tech	Virginia	75	66	132982	f	t
+2024-01-23	2023-2024	Georgia Tech	Pittsburgh	72	64	132983	f	t
+2024-01-27	2023-2024	Georgia Tech	Virginia Tech	91	67	132984	f	f
+2024-01-30	2023-2024	Georgia Tech	3 North Carolina	74	73	132985	t	t
+2024-02-03	2023-2024	Georgia Tech	NC State	82	76	132986	f	f
+2024-02-06	2023-2024	Georgia Tech	Wake Forest	80	51	132987	f	t
+2024-02-10	2023-2024	Georgia Tech	Louisville	79	67	132988	f	f
+2024-02-14	2023-2024	Georgia Tech	Notre Dame	58	55	132989	f	f
+2024-02-17	2023-2024	Georgia Tech	Syracuse	65	60	132990	t	t
+2024-02-21	2023-2024	Georgia Tech	Clemson	81	57	132991	f	t
+2024-02-24	2023-2024	Georgia Tech	Miami	80	76	132992	t	f
+2024-03-02	2023-2024	Georgia Tech	Florida State	85	76	132993	t	t
+2024-03-05	2023-2024	Georgia Tech	Wake Forest	70	69	132994	t	f
+2024-03-09	2023-2024	Georgia Tech	Virginia	72	57	132995	f	f
+2024-03-12	2023-2024	Georgia Tech	Notre Dame	84	80	132996	f	t
+2023-11-10	2023-2024	Gonzaga	Yale	86	71	132997	t	t
+2023-11-14	2023-2024	Gonzaga	vsEastern Oregon	123	57	132998	t	t
+2023-11-20	2023-2024	Gonzaga	2 Purdue	73	63	132999	f	t
+2023-11-21	2023-2024	Gonzaga	Syracuse	76	57	133000	t	t
+2023-11-22	2023-2024	Gonzaga	UCLA	69	65	133001	t	t
+2023-11-28	2023-2024	Gonzaga	Cal State Bakersfield	81	65	133002	t	t
+2023-12-02	2023-2024	Gonzaga	USC	89	76	133003	t	t
+2023-12-05	2023-2024	Gonzaga	Arkansas-Pine Bluff	111	71	133004	t	t
+2023-12-09	2023-2024	Gonzaga	Washington	78	73	133005	f	f
+2023-12-11	2023-2024	Gonzaga	Mississippi Valley State	78	40	133006	t	t
+2023-12-15	2023-2024	Gonzaga	5 UConn	76	63	133007	f	t
+2023-12-20	2023-2024	Gonzaga	Jackson State	100	76	133008	t	t
+2023-12-29	2023-2024	Gonzaga	San Diego State	84	74	133009	f	t
+2024-01-04	2023-2024	Gonzaga	Pepperdine	86	60	133010	t	t
+2024-01-06	2023-2024	Gonzaga	San Diego	101	74	133011	t	t
+2024-01-11	2023-2024	Gonzaga	Santa Clara	77	76	133012	f	f
+2024-01-18	2023-2024	Gonzaga	Pepperdine	86	61	133013	t	f
+2024-01-20	2023-2024	Gonzaga	San Diego	105	63	133014	t	f
+2024-01-25	2023-2024	Gonzaga	San Francisco	77	72	133015	t	t
+2024-01-27	2023-2024	Gonzaga	Pacific	82	73	133016	t	f
+2024-01-30	2023-2024	Gonzaga	Loyola Marymount	92	58	133017	t	t
+2024-02-03	2023-2024	Gonzaga	St. Mary's	64	62	133018	f	t
+2024-02-07	2023-2024	Gonzaga	Portland	96	64	133019	t	t
+2024-02-10	2023-2024	Gonzaga	17 Kentucky	89	85	133020	t	f
+2024-02-15	2023-2024	Gonzaga	Loyola Marymount	91	74	133021	t	f
+2024-02-17	2023-2024	Gonzaga	Pacific	102	76	133022	t	t
+2024-02-22	2023-2024	Gonzaga	Portland	86	65	133023	t	f
+2024-02-24	2023-2024	Gonzaga	Santa Clara	94	81	133024	t	t
+2024-02-29	2023-2024	Gonzaga	San Francisco	86	68	133025	t	f
+2024-03-02	2023-2024	Gonzaga	17 Saint Mary's	70	57	133026	t	f
+2024-03-11	2023-2024	Gonzaga	San Francisco	89	77	133027	t	t
+2024-03-12	2023-2024	Gonzaga	21 Saint Mary's	69	60	133028	f	t
+2023-11-06	2023-2024	Grambling	vsNorth Texas-Dallas	82	67	133029	t	t
+2023-11-10	2023-2024	Grambling	Colorado	95	63	133030	f	f
+2023-11-14	2023-2024	Grambling	vsChampion Christian	113	73	133031	t	t
+2023-11-17	2023-2024	Grambling	Delaware State	71	63	133032	f	t
+2023-11-19	2023-2024	Grambling	Iowa State	92	37	133033	f	f
+2023-11-22	2023-2024	Grambling	Sam Houston	86	68	133034	f	t
+2023-11-24	2023-2024	Grambling	Troy	80	67	133035	f	f
+2023-12-02	2023-2024	Grambling	Dayton	76	46	133036	f	f
+2023-12-10	2023-2024	Grambling	Washington State	83	65	133037	f	f
+2023-12-14	2023-2024	Grambling	Drake	68	56	133038	f	f
+2023-12-20	2023-2024	Grambling	SE Louisiana	48	47	133039	f	f
+2023-12-22	2023-2024	Grambling	Florida	96	57	133040	f	f
+2024-01-02	2023-2024	Grambling	vsCollege Of Biblical Studies	84	72	133041	t	t
+2024-01-06	2023-2024	Grambling	Prairie View A&M	69	63	133042	t	t
+2024-01-08	2023-2024	Grambling	Texas Southern	54	52	133043	f	t
+2024-01-13	2023-2024	Grambling	Bethune-Cookman	79	69	133044	t	f
+2024-01-15	2023-2024	Grambling	Florida A&M	65	52	133045	t	f
+2024-01-20	2023-2024	Grambling	Southern	79	62	133046	t	t
+2024-01-27	2023-2024	Grambling	Mississippi Valley State	54	46	133047	t	t
+2024-01-29	2023-2024	Grambling	Arkansas-Pine Bluff	86	70	133048	f	t
+2024-02-03	2023-2024	Grambling	Jackson State	70	62	133049	t	t
+2024-02-05	2023-2024	Grambling	Alcorn State	78	67	133050	t	f
+2024-02-10	2023-2024	Grambling	Alabama State	74	68	133051	t	t
+2024-02-12	2023-2024	Grambling	Alabama A&M	60	50	133052	f	t
+2024-02-17	2023-2024	Grambling	Texas Southern	66	63	133053	t	f
+2024-02-19	2023-2024	Grambling	Prairie View A&M	83	74	133054	t	f
+2024-02-24	2023-2024	Grambling	Southern	63	57	133055	t	f
+2024-03-02	2023-2024	Grambling	Florida A&M	75	68	133056	t	t
+2024-03-04	2023-2024	Grambling	Bethune-Cookman	69	60	133057	t	t
+2024-03-07	2023-2024	Grambling	Alabama A&M	74	73	133058	t	f
+2024-03-13	2023-2024	Grambling	Alabama State	56	50	133059	t	t
+2024-03-15	2023-2024	Grambling	Bethune-Cookman	65	53	133060	t	t
+2024-03-16	2023-2024	Grambling	Texas Southern	75	66	133061	t	t
+2023-11-06	2023-2024	Grand Canyon	Southeast Missouri State	88	67	133062	t	t
+2023-11-12	2023-2024	Grand Canyon	Northern Arizona	89	55	133063	t	t
+2023-11-17	2023-2024	Grand Canyon	San Francisco	76	72	133064	t	t
+2023-11-19	2023-2024	Grand Canyon	South Carolina	75	68	133065	f	t
+2023-11-25	2023-2024	Grand Canyon	North Dakota State	86	71	133066	t	t
+2023-11-29	2023-2024	Grand Canyon	UT Rio Grande Valley	79	69	133067	t	f
+2023-12-02	2023-2024	Grand Canyon	UT Arlington	76	69	133068	t	t
+2023-12-05	2023-2024	Grand Canyon	25 San Diego State	79	73	133069	t	t
+2023-12-09	2023-2024	Grand Canyon	Liberty	69	64	133070	t	f
+2023-12-16	2023-2024	Grand Canyon	Portland	91	63	133071	t	t
+2023-12-20	2023-2024	Grand Canyon	Sam Houston	76	64	133072	t	t
+2023-12-27	2023-2024	Grand Canyon	vsBethesda University	124	74	133073	t	t
+2023-12-30	2023-2024	Grand Canyon	Louisiana Tech	73	70	133074	t	t
+2024-01-04	2023-2024	Grand Canyon	Southern Utah	96	75	133075	t	f
+2024-01-06	2023-2024	Grand Canyon	Utah Tech	75	65	133076	t	f
+2024-01-11	2023-2024	Grand Canyon	Abilene Christian	74	64	133077	t	t
+2024-01-13	2023-2024	Grand Canyon	Tarleton State	74	48	133078	t	t
+2024-01-18	2023-2024	Grand Canyon	Utah Valley	78	65	133079	t	t
+2024-01-20	2023-2024	Grand Canyon	Seattle U	86	79	133080	f	f
+2024-01-25	2023-2024	Grand Canyon	Stephen F. Austin	53	51	133081	t	f
+2024-01-27	2023-2024	Grand Canyon	UT Arlington	67	61	133082	t	f
+2024-02-03	2023-2024	Grand Canyon	Utah Valley	86	67	133083	t	f
+2024-02-10	2023-2024	Grand Canyon	Southern Utah	94	65	133084	t	t
+2024-02-15	2023-2024	Grand Canyon	Utah Tech	73	61	133085	t	t
+2024-02-17	2023-2024	Grand Canyon	California Baptist	79	76	133086	t	t
+2024-02-22	2023-2024	Grand Canyon	Tarleton State	77	74	133087	f	f
+2024-02-24	2023-2024	Grand Canyon	Abilene Christian	79	73	133088	f	f
+2024-02-29	2023-2024	Grand Canyon	UT Rio Grande Valley	72	43	133089	t	t
+2024-03-02	2023-2024	Grand Canyon	Stephen F. Austin	80	58	133090	t	t
+2024-03-09	2023-2024	Grand Canyon	California Baptist	68	47	133091	t	f
+2024-03-15	2023-2024	Grand Canyon	Seattle U	80	72	133092	t	t
+2024-03-16	2023-2024	Grand Canyon	UT Arlington	89	74	133093	t	t
+2023-11-06	2023-2024	Green Bay	Iowa State	85	44	133094	f	f
+2023-11-09	2023-2024	Green Bay	vsSt. Francis (IL)	72	56	133095	t	t
+2023-11-14	2023-2024	Green Bay	Valparaiso	64	59	133096	f	f
+2023-11-21	2023-2024	Green Bay	UC Riverside	74	68	133097	f	t
+2023-11-25	2023-2024	Green Bay	St. Thomas-Minnesota	64	51	133098	t	t
+2023-11-29	2023-2024	Green Bay	Purdue Fort Wayne	75	71	133099	f	f
+2023-12-02	2023-2024	Green Bay	Milwaukee	70	58	133100	t	t
+2023-12-06	2023-2024	Green Bay	SIU Edwardsville	78	69	133101	f	f
+2023-12-09	2023-2024	Green Bay	Western Illinois	68	59	133102	f	t
+2023-12-12	2023-2024	Green Bay	UIC	70	68	133103	t	f
+2023-12-16	2023-2024	Green Bay	11 Oklahoma	81	47	133104	f	f
+2023-12-21	2023-2024	Green Bay	vsMilwaukee School Of Engineering	79	46	133105	t	t
+2023-12-29	2023-2024	Green Bay	Wright State	88	77	133106	t	t
+2023-12-31	2023-2024	Green Bay	Robert Morris	78	61	133107	t	t
+2024-01-04	2023-2024	Green Bay	Detroit Mercy	69	51	133108	t	f
+2024-01-06	2023-2024	Green Bay	Oakland	79	73	133109	f	f
+2024-01-10	2023-2024	Green Bay	IUPUI	68	58	133110	t	f
+2024-01-14	2023-2024	Green Bay	Cleveland State	79	71	133111	t	t
+2024-01-18	2023-2024	Green Bay	Wright State	88	81	133112	t	f
+2024-01-20	2023-2024	Green Bay	Northern Kentucky	74	52	133113	f	f
+2024-01-25	2023-2024	Green Bay	Oakland	69	59	133114	t	t
+2024-01-27	2023-2024	Green Bay	Detroit Mercy	78	64	133115	t	t
+2024-02-01	2023-2024	Green Bay	IUPUI	79	56	133116	t	t
+2024-02-10	2023-2024	Green Bay	Youngstown State	84	83	133117	t	f
+2024-02-14	2023-2024	Green Bay	Northern Kentucky	58	57	133118	f	t
+2024-02-23	2023-2024	Green Bay	Purdue Fort Wayne	85	59	133119	f	t
+2024-02-25	2023-2024	Green Bay	Youngstown State	71	59	133120	f	t
+2024-02-28	2023-2024	Green Bay	Cleveland State	69	61	133121	t	f
+2024-03-02	2023-2024	Green Bay	Milwaukee	90	69	133122	f	f
+2024-03-07	2023-2024	Green Bay	Milwaukee	95	84	133123	f	t
+2023-11-06	2023-2024	Hampton	Howard	92	80	133124	f	f
+2023-11-09	2023-2024	Hampton	vsMid-Atlantic Christian	109	46	133125	t	t
+2023-11-13	2023-2024	Hampton	Norfolk State	75	68	133126	f	f
+2023-11-17	2023-2024	Hampton	Kent State	100	62	133127	f	t
+2023-11-18	2023-2024	Hampton	Florida Gulf Coast	92	85	133128	t	t
+2023-11-20	2023-2024	Hampton	San José State	71	52	133129	f	t
+2023-11-27	2023-2024	Hampton	UMBC	80	76	133130	f	t
+2023-12-03	2023-2024	Hampton	vsVirginia-Lynchburg	121	66	133131	t	t
+2023-12-11	2023-2024	Hampton	vsMary Baldwin	100	53	133132	t	t
+2023-12-16	2023-2024	Hampton	20 James Madison	88	71	133133	f	t
+2023-12-19	2023-2024	Hampton	Bowling Green	75	65	133134	f	f
+2023-12-21	2023-2024	Hampton	Eastern Michigan	72	69	133135	f	f
+2024-01-01	2023-2024	Hampton	Drexel	99	65	133136	f	f
+2024-01-04	2023-2024	Hampton	Delaware	80	53	133137	f	f
+2024-01-06	2023-2024	Hampton	Campbell	80	69	133138	f	t
+2024-01-11	2023-2024	Hampton	William & Mary	73	61	133139	f	t
+2024-01-15	2023-2024	Hampton	North Carolina A&T	81	80	133140	f	t
+2024-01-18	2023-2024	Hampton	Hofstra	86	77	133141	f	f
+2024-01-20	2023-2024	Hampton	Monmouth	85	77	133142	f	f
+2024-01-25	2023-2024	Hampton	Charleston	107	86	133143	f	t
+2024-01-27	2023-2024	Hampton	Elon	80	74	133144	f	t
+2024-02-01	2023-2024	Hampton	North Carolina A&T	59	58	133145	f	f
+2024-02-03	2023-2024	Hampton	Howard	63	61	133146	t	t
+2024-02-08	2023-2024	Hampton	Hofstra	63	59	133147	f	t
+2024-02-10	2023-2024	Hampton	UNC Wilmington	95	65	133148	f	t
+2024-02-15	2023-2024	Hampton	Stony Brook	93	73	133149	f	f
+2024-02-17	2023-2024	Hampton	Towson	67	61	133150	t	t
+2024-02-22	2023-2024	Hampton	Campbell	72	68	133151	t	f
+2024-02-24	2023-2024	Hampton	Northeastern	70	62	133152	f	f
+2024-02-29	2023-2024	Hampton	Monmouth	64	56	133153	t	t
+2024-03-02	2023-2024	Hampton	William & Mary	85	73	133154	f	f
+2024-03-08	2023-2024	Hampton	Elon	56	55	133155	t	t
+2024-03-09	2023-2024	Hampton	Delaware	80	50	133156	f	t
+2023-11-06	2023-2024	Harvard	vsMassachusetts-Boston	78	50	133157	t	t
+2023-11-10	2023-2024	Harvard	Rice	89	76	133158	t	f
+2023-11-14	2023-2024	Harvard	Northeastern	80	56	133159	t	t
+2023-11-18	2023-2024	Harvard	Boston College	73	64	133160	f	f
+2023-11-22	2023-2024	Harvard	Colgate	76	70	133161	t	f
+2023-11-26	2023-2024	Harvard	Indiana	89	76	133162	f	t
+2023-11-29	2023-2024	Harvard	American University	80	75	133163	t	t
+2023-12-02	2023-2024	Harvard	Loyola Chicago	75	53	133164	f	f
+2023-12-08	2023-2024	Harvard	Army	70	64	133165	t	t
+2023-12-21	2023-2024	Harvard	Holy Cross	74	72	133166	t	t
+2023-12-30	2023-2024	Harvard	Iona	69	60	133167	f	t
+2024-01-02	2023-2024	Harvard	UAlbany	76	71	133168	t	t
+2024-01-06	2023-2024	Harvard	Princeton	89	58	133169	f	f
+2024-01-15	2023-2024	Harvard	Brown	74	72	133170	f	t
+2024-01-20	2023-2024	Harvard	Pennsylvania	70	61	133171	t	f
+2024-01-27	2023-2024	Harvard	Yale	78	65	133172	f	t
+2024-02-02	2023-2024	Harvard	Columbia	62	59	133173	t	t
+2024-02-03	2023-2024	Harvard	Cornell	89	76	133174	f	t
+2024-02-10	2023-2024	Harvard	Dartmouth	77	59	133175	t	t
+2024-02-16	2023-2024	Harvard	Cornell	75	62	133176	f	f
+2024-02-17	2023-2024	Harvard	Columbia	80	75	133177	t	f
+2024-02-23	2023-2024	Harvard	Princeton	66	53	133178	f	t
+2024-02-24	2023-2024	Harvard	Pennsylvania	74	70	133179	t	t
+2024-03-02	2023-2024	Harvard	Yale	80	60	133180	f	f
+2024-03-05	2023-2024	Harvard	Dartmouth	76	69	133181	f	f
+2023-11-14	2023-2024	Hawai'i	vsHawai'i Hilo	82	66	133182	t	t
+2023-11-16	2023-2024	Hawai'i	Niagara	92	73	133183	t	t
+2023-11-22	2023-2024	Hawai'i	Northern Arizona	70	61	133184	t	t
+2023-11-24	2023-2024	Hawai'i	UT Rio Grande Valley	76	57	133185	t	t
+2023-11-25	2023-2024	Hawai'i	San Diego	77	66	133186	t	t
+2023-11-30	2023-2024	Hawai'i	Utah	79	66	133187	f	t
+2023-12-03	2023-2024	Hawai'i	Central Arkansas	95	76	133188	t	t
+2023-12-10	2023-2024	Hawai'i	vsHawai'i Pacific	78	53	133189	t	t
+2023-12-17	2023-2024	Hawai'i	Nevada	72	66	133190	f	t
+2023-12-21	2023-2024	Hawai'i	Portland	69	56	133191	t	t
+2023-12-22	2023-2024	Hawai'i	Georgia Tech	73	68	133192	f	t
+2023-12-24	2023-2024	Hawai'i	TCU	65	51	133193	f	t
+2024-01-04	2023-2024	Hawai'i	Cal State Bakersfield	78	67	133194	t	f
+2024-01-06	2023-2024	Hawai'i	Cal State Northridge	76	66	133195	f	f
+2024-01-11	2023-2024	Hawai'i	UC Irvine	60	50	133196	f	t
+2024-01-13	2023-2024	Hawai'i	UC Riverside	63	56	133197	t	t
+2024-01-18	2023-2024	Hawai'i	Long Beach State	79	71	133198	f	f
+2024-01-20	2023-2024	Hawai'i	UC San Diego	67	61	133199	f	f
+2024-01-25	2023-2024	Hawai'i	UC Santa Barbara	78	61	133200	f	t
+2024-01-27	2023-2024	Hawai'i	Cal Poly	83	73	133201	t	t
+2024-02-01	2023-2024	Hawai'i	Cal State Fullerton	76	68	133202	t	f
+2024-02-03	2023-2024	Hawai'i	UC Irvine	93	68	133203	f	f
+2024-02-10	2023-2024	Hawai'i	UC Davis	87	70	133204	t	t
+2024-02-15	2023-2024	Hawai'i	Cal Poly	80	51	133205	t	f
+2024-02-17	2023-2024	Hawai'i	UC Santa Barbara	77	71	133206	f	f
+2024-02-24	2023-2024	Hawai'i	Long Beach State	73	65	133207	t	t
+2024-02-29	2023-2024	Hawai'i	UC Davis	75	63	133208	f	f
+2024-03-06	2023-2024	Hawai'i	Cal State Northridge	72	70	133209	t	t
+2024-03-09	2023-2024	Hawai'i	Cal State Bakersfield	74	57	133210	t	t
+2024-03-14	2023-2024	Hawai'i	Cal State Northridge	75	68	133211	t	t
+2024-03-15	2023-2024	Hawai'i	UC Davis	68	65	133212	f	t
+2023-11-06	2023-2024	High Point	vsSt. Andrews	105	51	133213	t	t
+2023-11-11	2023-2024	High Point	Wofford	99	98	133214	f	f
+2023-11-14	2023-2024	High Point	Queens University	74	72	133215	f	f
+2023-11-20	2023-2024	High Point	Iona	82	68	133216	t	t
+2023-11-21	2023-2024	High Point	Illinois State	74	72	133217	t	t
+2023-11-26	2023-2024	High Point	vsMount Olive	122	73	133218	t	t
+2023-11-29	2023-2024	High Point	Morgan State	77	59	133219	t	t
+2023-12-02	2023-2024	High Point	North Florida	86	79	133220	t	f
+2023-12-05	2023-2024	High Point	Western Carolina	97	71	133221	t	t
+2023-12-08	2023-2024	High Point	North Carolina A&T	75	62	133222	t	t
+2023-12-16	2023-2024	High Point	Georgia	66	58	133223	f	f
+2023-12-19	2023-2024	High Point	UNC Greensboro	74	63	133224	t	t
+2023-12-22	2023-2024	High Point	Canisius	78	70	133225	t	t
+2023-12-30	2023-2024	High Point	Bellarmine	90	85	133226	t	t
+2024-01-03	2023-2024	High Point	Radford	85	71	133227	t	f
+2024-01-06	2023-2024	High Point	Gardner-Webb	85	76	133228	t	t
+2024-01-10	2023-2024	High Point	UNC Asheville	84	79	133229	t	t
+2024-01-17	2023-2024	High Point	Presbyterian	86	83	133230	t	f
+2024-01-20	2023-2024	High Point	Charleston Southern	86	79	133231	t	t
+2024-01-24	2023-2024	High Point	South Carolina Upstate	78	67	133232	t	f
+2024-01-27	2023-2024	High Point	Winthrop	83	81	133233	t	f
+2024-02-01	2023-2024	High Point	Longwood	93	76	133234	t	t
+2024-02-03	2023-2024	High Point	Presbyterian	78	68	133235	t	t
+2024-02-07	2023-2024	High Point	UNC Asheville	86	81	133236	f	f
+2024-02-10	2023-2024	High Point	Gardner-Webb	78	62	133237	t	f
+2024-02-17	2023-2024	High Point	Radford	99	74	133238	t	t
+2024-02-24	2023-2024	High Point	Charleston Southern	74	59	133239	t	f
+2024-03-02	2023-2024	High Point	Longwood	74	72	133240	f	f
+2024-03-08	2023-2024	High Point	Radford	77	63	133241	t	t
+2023-11-06	2023-2024	Hofstra	vsSaint Josephs Long Island	101	48	133242	t	t
+2023-11-10	2023-2024	Hofstra	Princeton	74	67	133243	f	t
+2023-11-14	2023-2024	Hofstra	George Washington	71	60	133244	f	f
+2023-11-20	2023-2024	Hofstra	Buffalo	102	68	133245	t	t
+2023-11-21	2023-2024	Hofstra	Wright State	85	76	133246	t	t
+2023-11-30	2023-2024	Hofstra	South Florida	82	63	133247	t	t
+2023-12-06	2023-2024	Hofstra	Iona	62	57	133248	t	f
+2023-12-09	2023-2024	Hofstra	Saint Louis	71	68	133249	f	f
+2023-12-12	2023-2024	Hofstra	21 Duke	89	68	133250	f	f
+2023-12-16	2023-2024	Hofstra	Norfolk State	74	58	133251	t	t
+2023-12-21	2023-2024	Hofstra	UNLV	74	56	133252	f	f
+2023-12-30	2023-2024	Hofstra	St. John's	84	79	133253	f	t
+2024-01-04	2023-2024	Hofstra	Charleston	73	61	133254	f	t
+2024-01-06	2023-2024	Hofstra	Delaware	76	71	133255	t	t
+2024-01-11	2023-2024	Hofstra	Northeastern	71	68	133256	f	f
+2024-01-13	2023-2024	Hofstra	Campbell	69	68	133257	f	f
+2024-01-18	2023-2024	Hofstra	Hampton	86	77	133258	t	t
+2024-01-22	2023-2024	Hofstra	Stony Brook	80	74	133259	t	f
+2024-01-25	2023-2024	Hofstra	William & Mary	64	55	133260	t	t
+2024-01-27	2023-2024	Hofstra	Monmouth	81	78	133261	f	f
+2024-02-01	2023-2024	Hofstra	Stony Brook	72	71	133262	t	t
+2024-02-03	2023-2024	Hofstra	Towson	59	56	133263	t	t
+2024-02-08	2023-2024	Hofstra	Hampton	63	59	133264	t	f
+2024-02-10	2023-2024	Hofstra	North Carolina A&T	81	49	133265	t	f
+2024-02-15	2023-2024	Hofstra	Drexel	79	77	133266	f	f
+2024-02-17	2023-2024	Hofstra	Northeastern	82	62	133267	t	t
+2024-02-22	2023-2024	Hofstra	Drexel	69	57	133268	t	t
+2024-02-24	2023-2024	Hofstra	Elon	87	64	133269	t	t
+2024-02-29	2023-2024	Hofstra	UNC Wilmington	69	58	133270	t	f
+2024-03-02	2023-2024	Hofstra	Charleston	87	76	133271	f	f
+2024-03-10	2023-2024	Hofstra	Delaware	73	58	133272	t	t
+2024-03-11	2023-2024	Hofstra	Stony Brook	63	59	133273	f	t
+2023-11-06	2023-2024	Holy Cross	Siena	73	71	133274	f	f
+2023-11-11	2023-2024	Holy Cross	Georgetown	68	67	133275	t	f
+2023-11-14	2023-2024	Holy Cross	Sacred Heart	84	77	133276	f	t
+2023-11-17	2023-2024	Holy Cross	Winthrop	89	51	133277	f	f
+2023-11-18	2023-2024	Holy Cross	Elon	83	69	133278	f	t
+2023-11-19	2023-2024	Holy Cross	IUPUI	74	61	133279	t	t
+2023-11-25	2023-2024	Holy Cross	St. John's	91	45	133280	f	f
+2023-11-29	2023-2024	Holy Cross	Maine	72	57	133281	f	t
+2023-12-02	2023-2024	Holy Cross	Central Connecticut	78	67	133282	f	f
+2023-12-08	2023-2024	Holy Cross	Boston College	95	64	133283	f	f
+2023-12-18	2023-2024	Holy Cross	Quinnipiac	77	57	133284	f	t
+2023-12-21	2023-2024	Holy Cross	Harvard	74	72	133285	f	f
+2023-12-29	2023-2024	Holy Cross	vsElms College	88	60	133286	t	t
+2024-01-03	2023-2024	Holy Cross	Bucknell	70	58	133287	f	f
+2024-01-06	2023-2024	Holy Cross	Army	70	57	133288	f	f
+2024-01-10	2023-2024	Holy Cross	Navy	80	70	133289	f	t
+2024-01-17	2023-2024	Holy Cross	Louisiana-Lafayette	72	68	133290	f	t
+2024-01-20	2023-2024	Holy Cross	Loyola Maryland	86	78	133291	t	t
+2024-01-24	2023-2024	Holy Cross	American University	84	65	133292	f	f
+2024-01-27	2023-2024	Holy Cross	Lehigh	78	72	133293	f	t
+2024-01-29	2023-2024	Holy Cross	Boston University	65	63	133294	t	t
+2024-02-03	2023-2024	Holy Cross	Loyola Maryland	70	67	133295	t	f
+2024-02-07	2023-2024	Holy Cross	Louisiana-Lafayette	75	59	133296	f	f
+2024-02-10	2023-2024	Holy Cross	American University	58	56	133297	t	t
+2024-02-14	2023-2024	Holy Cross	Colgate	85	55	133298	f	f
+2024-02-17	2023-2024	Holy Cross	Army	59	53	133299	f	t
+2024-02-21	2023-2024	Holy Cross	Bucknell	73	59	133300	t	t
+2024-02-25	2023-2024	Holy Cross	Navy	76	66	133301	f	f
+2024-02-28	2023-2024	Holy Cross	Colgate	77	58	133302	f	t
+2024-03-02	2023-2024	Holy Cross	Boston University	94	84	133303	f	f
+2024-03-05	2023-2024	Holy Cross	Army	84	68	133304	t	f
+2024-03-07	2023-2024	Holy Cross	Colgate	81	64	133305	f	f
+2023-11-06	2023-2024	Hou Christian	BYU	110	63	133306	f	f
+2023-11-15	2023-2024	Hou Christian	Florida International	83	74	133307	f	t
+2023-11-20	2023-2024	Hou Christian	UTSA	89	87	133308	f	t
+2023-11-24	2023-2024	Hou Christian	Oklahoma State	92	65	133309	f	f
+2023-11-27	2023-2024	Hou Christian	TCU	101	64	133310	f	f
+2023-12-02	2023-2024	Hou Christian	Rice	65	56	133311	f	f
+2023-12-06	2023-2024	Hou Christian	vsSouthwestern Adventist	95	58	133312	t	t
+2023-12-09	2023-2024	Hou Christian	12 Texas	77	50	133313	f	f
+2023-12-16	2023-2024	Hou Christian	vsChampion Christian	107	72	133314	t	t
+2023-12-19	2023-2024	Hou Christian	SMU	89	53	133315	f	f
+2023-12-22	2023-2024	Hou Christian	Texas A&M	79	52	133316	f	f
+2024-01-08	2023-2024	Hou Christian	Texas A&M-Corpus Christi	81	59	133317	f	f
+2024-01-13	2023-2024	Hou Christian	Texas A&M-Commerce	69	65	133318	t	f
+2024-01-15	2023-2024	Hou Christian	Northwestern State	69	64	133319	f	f
+2024-01-20	2023-2024	Hou Christian	Lamar	78	77	133320	t	t
+2024-01-22	2023-2024	Hou Christian	New Orleans	88	80	133321	t	t
+2024-01-27	2023-2024	Hou Christian	Incarnate Word	79	75	133322	f	f
+2024-01-29	2023-2024	Hou Christian	SE Louisiana	80	58	133323	f	t
+2024-02-03	2023-2024	Hou Christian	Nicholls	83	73	133324	f	f
+2024-02-05	2023-2024	Hou Christian	New Orleans	84	58	133325	f	f
+2024-02-10	2023-2024	Hou Christian	Incarnate Word	86	83	133326	t	t
+2024-02-12	2023-2024	Hou Christian	McNeese	105	54	133327	f	t
+2024-02-17	2023-2024	Hou Christian	SE Louisiana	81	78	133328	f	f
+2024-02-24	2023-2024	Hou Christian	Northwestern State	86	73	133329	f	t
+2024-02-26	2023-2024	Hou Christian	Texas A&M-Corpus Christi	91	79	133330	f	t
+2024-03-02	2023-2024	Hou Christian	Texas A&M-Commerce	98	85	133331	f	t
+2024-03-04	2023-2024	Hou Christian	McNeese	87	69	133332	f	f
+2024-03-06	2023-2024	Hou Christian	Lamar	78	68	133333	f	f
+2023-11-06	2023-2024	Houston	UL Monroe	84	31	133334	t	t
+2023-11-11	2023-2024	Houston	Texas A&M-Corpus Christi	82	50	133335	t	t
+2023-11-13	2023-2024	Houston	Stetson	79	48	133336	t	t
+2023-11-16	2023-2024	Houston	Towson	65	49	133337	t	t
+2023-11-17	2023-2024	Houston	Utah	76	66	133338	t	t
+2023-11-19	2023-2024	Houston	Dayton	69	55	133339	t	t
+2023-11-24	2023-2024	Houston	Montana	79	44	133340	t	t
+2023-12-01	2023-2024	Houston	Xavier	66	60	133341	t	f
+2023-12-06	2023-2024	Houston	Rice	75	39	133342	t	t
+2023-12-09	2023-2024	Houston	Jackson State	89	55	133343	t	t
+2023-12-16	2023-2024	Houston	Texas A&M	70	66	133344	t	t
+2023-12-21	2023-2024	Houston	Texas State	72	37	133345	t	t
+2023-12-30	2023-2024	Houston	Pennsylvania	81	42	133346	t	t
+2024-01-06	2023-2024	Houston	West Virginia	89	55	133347	t	t
+2024-01-09	2023-2024	Houston	Iowa State	57	53	133348	f	f
+2024-01-13	2023-2024	Houston	TCU	68	67	133349	f	f
+2024-01-17	2023-2024	Houston	25 Texas Tech	77	54	133350	t	t
+2024-01-20	2023-2024	Houston	UCF	57	42	133351	t	t
+2024-01-23	2023-2024	Houston	21 BYU	75	68	133352	t	f
+2024-01-27	2023-2024	Houston	Kansas State	74	52	133353	t	t
+2024-02-03	2023-2024	Houston	8 Kansas	78	65	133354	f	f
+2024-02-06	2023-2024	Houston	Oklahoma State	79	63	133355	t	t
+2024-02-10	2023-2024	Houston	Cincinnati	67	62	133356	t	f
+2024-02-17	2023-2024	Houston	Texas	82	61	133357	t	t
+2024-02-19	2023-2024	Houston	6 Iowa State	73	65	133358	t	t
+2024-02-27	2023-2024	Houston	Cincinnati	67	59	133359	t	t
+2024-03-02	2023-2024	Houston	Oklahoma	87	85	133360	t	f
+2024-03-06	2023-2024	Houston	UCF	67	59	133361	t	f
+2024-03-09	2023-2024	Houston	14 Kansas	76	46	133362	t	t
+2024-03-14	2023-2024	Houston	TCU	60	45	133363	t	t
+2024-03-15	2023-2024	Houston	25 Texas Tech	82	59	133364	t	t
+2024-03-16	2023-2024	Houston	7 Iowa State	69	41	133365	f	t
+2023-11-06	2023-2024	Howard	Hampton	92	80	133366	t	t
+2023-11-09	2023-2024	Howard	Georgia Tech	88	85	133367	f	f
+2023-11-12	2023-2024	Howard	James Madison	107	86	133368	f	f
+2023-11-14	2023-2024	Howard	Boston University	64	53	133369	t	t
+2023-11-18	2023-2024	Howard	Rutgers	85	63	133370	f	f
+2023-11-20	2023-2024	Howard	Bryant	67	61	133371	f	f
+2023-12-11	2023-2024	Howard	Pennsylvania	78	68	133372	f	f
+2023-12-13	2023-2024	Howard	vsRegent	88	49	133373	t	t
+2023-12-16	2023-2024	Howard	Jackson State	81	74	133374	f	t
+2023-12-17	2023-2024	Howard	Texas Southern	79	78	133375	f	t
+2023-12-20	2023-2024	Howard	UC Santa Barbara	94	81	133376	f	f
+2023-12-30	2023-2024	Howard	La Salle	71	66	133377	t	f
+2024-01-06	2023-2024	Howard	North Carolina Central	73	54	133378	f	f
+2024-01-08	2023-2024	Howard	South Carolina State	82	78	133379	t	f
+2024-01-13	2023-2024	Howard	Maryland-Eastern Shore	72	61	133380	t	t
+2024-01-15	2023-2024	Howard	vsMorehouse	78	72	133381	t	t
+2024-01-20	2023-2024	Howard	Norfolk State	65	61	133382	f	t
+2024-01-27	2023-2024	Howard	Morgan State	85	79	133383	f	f
+2024-01-29	2023-2024	Howard	Coppin State	81	66	133384	t	f
+2024-02-03	2023-2024	Howard	Hampton	63	61	133385	f	t
+2024-02-05	2023-2024	Howard	Delaware State	75	71	133386	t	f
+2024-02-17	2023-2024	Howard	North Carolina Central	90	82	133387	t	t
+2024-02-19	2023-2024	Howard	South Carolina State	75	68	133388	f	t
+2024-02-24	2023-2024	Howard	Morgan State	78	72	133389	t	t
+2024-02-26	2023-2024	Howard	Coppin State	78	69	133390	t	t
+2024-03-02	2023-2024	Howard	Maryland-Eastern Shore	70	66	133391	t	f
+2024-03-04	2023-2024	Howard	Delaware State	85	66	133392	t	t
+2024-03-07	2023-2024	Howard	Norfolk State	77	58	133393	f	f
+2024-03-14	2023-2024	Howard	Morgan State	78	65	133394	t	t
+2024-03-15	2023-2024	Howard	Norfolk State	80	74	133395	t	t
+2024-03-16	2023-2024	Howard	Delaware State	70	67	133396	t	t
+2023-11-06	2023-2024	IUPUI	vsSpalding	70	63	133397	t	t
+2023-11-10	2023-2024	IUPUI	Valparaiso	66	56	133398	t	f
+2023-11-14	2023-2024	IUPUI	Indiana State	96	57	133399	f	f
+2023-11-17	2023-2024	IUPUI	Elon	86	72	133400	f	t
+2023-11-18	2023-2024	IUPUI	Winthrop	74	61	133401	f	t
+2023-11-19	2023-2024	IUPUI	Holy Cross	74	61	133402	f	t
+2023-11-29	2023-2024	IUPUI	Wright State	103	74	133403	f	f
+2023-12-02	2023-2024	IUPUI	Northern Kentucky	71	55	133404	f	t
+2023-12-07	2023-2024	IUPUI	Eastern Illinois	75	58	133405	f	f
+2023-12-12	2023-2024	IUPUI	Minnesota	101	65	133406	f	f
+2023-12-16	2023-2024	IUPUI	Lindenwood	73	67	133407	f	t
+2023-12-21	2023-2024	IUPUI	vsDefiance	90	67	133408	t	t
+2023-12-29	2023-2024	IUPUI	Detroit Mercy	67	55	133409	t	t
+2023-12-31	2023-2024	IUPUI	Cleveland State	86	77	133410	f	t
+2024-01-04	2023-2024	IUPUI	Robert Morris	92	48	133411	f	f
+2024-01-07	2023-2024	IUPUI	Youngstown State	75	65	133412	f	f
+2024-01-10	2023-2024	IUPUI	Green Bay	68	58	133413	f	t
+2024-01-13	2023-2024	IUPUI	Oakland	88	66	133414	f	t
+2024-01-17	2023-2024	IUPUI	Purdue Fort Wayne	85	79	133415	t	f
+2024-01-20	2023-2024	IUPUI	Robert Morris	80	63	133416	f	t
+2024-01-25	2023-2024	IUPUI	Youngstown State	78	50	133417	f	t
+2024-01-28	2023-2024	IUPUI	Wright State	83	76	133418	f	t
+2024-02-01	2023-2024	IUPUI	Green Bay	79	56	133419	f	f
+2024-02-04	2023-2024	IUPUI	Milwaukee	87	67	133420	f	f
+2024-02-10	2023-2024	IUPUI	Purdue Fort Wayne	92	65	133421	f	t
+2024-02-14	2023-2024	IUPUI	Detroit Mercy	81	66	133422	f	f
+2024-02-17	2023-2024	IUPUI	Oakland	107	59	133423	f	f
+2024-02-25	2023-2024	IUPUI	Northern Kentucky	80	64	133424	f	f
+2024-02-28	2023-2024	IUPUI	Milwaukee	75	70	133425	f	t
+2024-03-02	2023-2024	IUPUI	Cleveland State	75	66	133426	f	f
+2024-03-05	2023-2024	IUPUI	Cleveland State	85	66	133427	f	f
+2023-11-06	2023-2024	Idaho State	vsWarner Pacific	92	36	133428	t	t
+2023-11-10	2023-2024	Idaho State	St. Thomas-Minnesota	54	53	133429	f	f
+2023-11-12	2023-2024	Idaho State	Iowa State	86	55	133430	f	f
+2023-11-16	2023-2024	Idaho State	vsNorthwest University	85	51	133431	t	t
+2023-11-20	2023-2024	Idaho State	The Citadel	62	61	133432	f	t
+2023-11-21	2023-2024	Idaho State	Campbell	69	55	133433	t	f
+2023-11-28	2023-2024	Idaho State	Pepperdine	77	62	133434	f	f
+2023-12-02	2023-2024	Idaho State	Lindenwood	76	70	133435	t	t
+2023-12-05	2023-2024	Idaho State	Fresno State	79	67	133436	f	f
+2023-12-09	2023-2024	Idaho State	Southern Utah	82	74	133437	f	f
+2023-12-21	2023-2024	Idaho State	Oregon State	76	57	133438	f	f
+2023-12-28	2023-2024	Idaho State	Montana State	74	66	133439	f	t
+2023-12-30	2023-2024	Idaho State	Montana	76	68	133440	f	t
+2024-01-06	2023-2024	Idaho State	Omaha	63	62	133441	t	t
+2024-01-11	2023-2024	Idaho State	Portland State	69	63	133442	t	f
+2024-01-13	2023-2024	Idaho State	Sacramento State	66	64	133443	f	f
+2024-01-18	2023-2024	Idaho State	Idaho	64	59	133444	t	t
+2024-01-20	2023-2024	Idaho State	Eastern Washington	79	67	133445	f	t
+2024-01-22	2023-2024	Idaho State	Montana State	77	70	133446	f	f
+2024-01-27	2023-2024	Idaho State	Weber State	74	64	133447	t	f
+2024-02-03	2023-2024	Idaho State	Northern Arizona	81	79	133448	t	f
+2024-02-08	2023-2024	Idaho State	Sacramento State	68	40	133449	t	t
+2024-02-10	2023-2024	Idaho State	Portland State	68	65	133450	t	t
+2024-02-15	2023-2024	Idaho State	Eastern Washington	88	82	133451	f	f
+2024-02-17	2023-2024	Idaho State	Idaho	55	53	133452	f	f
+2024-02-24	2023-2024	Idaho State	Weber State	80	62	133453	t	t
+2024-03-02	2023-2024	Idaho State	Northern Colorado	81	79	133454	f	t
+2024-03-04	2023-2024	Idaho State	Montana	79	65	133455	f	f
+2024-03-09	2023-2024	Idaho State	Northern Arizona	68	60	133456	t	t
+2024-03-10	2023-2024	Idaho State	Northern Colorado	83	76	133457	t	t
+2024-03-12	2023-2024	Idaho State	Montana	72	58	133458	f	t
+2023-11-06	2023-2024	Idaho	Washington State	84	59	133459	f	f
+2023-11-09	2023-2024	Idaho	Cal State Northridge	76	73	133460	f	t
+2023-11-14	2023-2024	Idaho	vsEvergreen State	88	42	133461	t	t
+2023-11-17	2023-2024	Idaho	vsPacific Lutheran	96	52	133462	t	t
+2023-11-22	2023-2024	Idaho	Seattle U	92	55	133463	f	f
+2023-11-29	2023-2024	Idaho	Denver	67	65	133464	f	t
+2023-12-02	2023-2024	Idaho	Cal Poly	85	70	133465	t	t
+2023-12-05	2023-2024	Idaho	Pacific	83	53	133466	t	t
+2023-12-09	2023-2024	Idaho	Utah Tech	63	62	133467	t	f
+2023-12-17	2023-2024	Idaho	Stanford	82	64	133468	f	f
+2023-12-21	2023-2024	Idaho	UC Riverside	82	67	133469	f	f
+2023-12-28	2023-2024	Idaho	Sacramento State	61	58	133470	t	t
+2023-12-30	2023-2024	Idaho	Portland State	77	72	133471	f	t
+2024-01-03	2023-2024	Idaho	St. Thomas-Minnesota	75	67	133472	f	t
+2024-01-13	2023-2024	Idaho	Eastern Washington	79	58	133473	f	t
+2024-01-18	2023-2024	Idaho	Idaho State	64	59	133474	f	f
+2024-01-20	2023-2024	Idaho	Weber State	88	65	133475	f	f
+2024-01-25	2023-2024	Idaho	Northern Arizona	75	60	133476	f	t
+2024-01-27	2023-2024	Idaho	Northern Colorado	89	68	133477	f	t
+2024-02-01	2023-2024	Idaho	Montana	73	70	133478	f	f
+2024-02-03	2023-2024	Idaho	Montana State	81	75	133479	t	f
+2024-02-05	2023-2024	Idaho	Sacramento State	61	45	133480	t	f
+2024-02-10	2023-2024	Idaho	Eastern Washington	87	79	133481	f	f
+2024-02-15	2023-2024	Idaho	Weber State	70	69	133482	f	t
+2024-02-17	2023-2024	Idaho	Idaho State	55	53	133483	t	t
+2024-02-22	2023-2024	Idaho	Northern Colorado	76	62	133484	f	f
+2024-02-24	2023-2024	Idaho	Northern Arizona	86	76	133485	t	f
+2024-02-29	2023-2024	Idaho	Montana State	62	48	133486	f	t
+2024-03-02	2023-2024	Idaho	Montana	80	57	133487	f	t
+2024-03-04	2023-2024	Idaho	Portland State	72	57	133488	f	f
+2024-03-09	2023-2024	Idaho	Sacramento State	72	64	133489	f	t
+2023-11-06	2023-2024	Illinois	Eastern Illinois	80	52	133490	t	t
+2023-11-10	2023-2024	Illinois	Oakland	64	53	133491	t	t
+2023-11-14	2023-2024	Illinois	4 Marquette	71	64	133492	f	t
+2023-11-17	2023-2024	Illinois	Valparaiso	87	64	133493	t	t
+2023-11-19	2023-2024	Illinois	Southern	88	60	133494	t	t
+2023-11-24	2023-2024	Illinois	Western Illinois	84	52	133495	t	t
+2023-12-02	2023-2024	Illinois	Rutgers	76	58	133496	t	f
+2023-12-05	2023-2024	Illinois	11 Florida Atlantic	98	89	133497	t	t
+2023-12-09	2023-2024	Illinois	17 Tennessee	86	79	133498	f	f
+2023-12-17	2023-2024	Illinois	Colgate	74	57	133499	t	t
+2023-12-22	2023-2024	Illinois	Missouri	97	73	133500	t	t
+2023-12-29	2023-2024	Illinois	Fairleigh Dickinson	104	71	133501	t	t
+2024-01-02	2023-2024	Illinois	Northwestern	96	66	133502	t	t
+2024-01-05	2023-2024	Illinois	1 Purdue	83	78	133503	f	f
+2024-01-11	2023-2024	Illinois	Michigan State	71	68	133504	t	t
+2024-01-14	2023-2024	Illinois	Maryland	76	67	133505	f	t
+2024-01-18	2023-2024	Illinois	Michigan	88	73	133506	t	f
+2024-01-21	2023-2024	Illinois	Rutgers	86	63	133507	t	t
+2024-01-27	2023-2024	Illinois	Indiana	70	62	133508	t	t
+2024-01-30	2023-2024	Illinois	Ohio State	87	75	133509	t	f
+2024-02-10	2023-2024	Illinois	Michigan State	88	80	133510	f	f
+2024-02-13	2023-2024	Illinois	Michigan	97	68	133511	t	t
+2024-02-17	2023-2024	Illinois	Maryland	85	80	133512	t	f
+2024-02-21	2023-2024	Illinois	Penn State	90	89	133513	f	f
+2024-02-24	2023-2024	Illinois	Iowa	95	85	133514	t	t
+2024-02-28	2023-2024	Illinois	Minnesota	105	97	133515	t	t
+2024-03-02	2023-2024	Illinois	Wisconsin	91	83	133516	t	f
+2024-03-05	2023-2024	Illinois	3 Purdue	77	71	133517	f	t
+2024-03-10	2023-2024	Illinois	Iowa	73	61	133518	t	f
+2024-03-15	2023-2024	Illinois	Ohio State	77	74	133519	t	t
+2024-03-16	2023-2024	Illinois	Nebraska	98	87	133520	t	t
+2024-03-17	2023-2024	Illinois	Wisconsin	93	87	133521	t	t
+2023-11-06	2023-2024	Illinois State	vsLourdes University	75	56	133522	t	t
+2023-11-11	2023-2024	Illinois State	Saint Louis	80	71	133523	f	f
+2023-11-15	2023-2024	Illinois State	Eastern Illinois	69	61	133524	t	t
+2023-11-20	2023-2024	Illinois State	Long Beach State	61	52	133525	t	t
+2023-11-21	2023-2024	Illinois State	High Point	74	72	133526	f	t
+2023-11-22	2023-2024	Illinois State	Wright State	74	49	133527	f	t
+2023-11-30	2023-2024	Illinois State	UIC	69	64	133528	t	f
+2023-12-03	2023-2024	Illinois State	Murray State	76	72	133529	t	t
+2023-12-06	2023-2024	Illinois State	Northern Kentucky	62	59	133530	t	t
+2023-12-09	2023-2024	Illinois State	Norfolk State	64	58	133531	f	t
+2023-12-17	2023-2024	Illinois State	North Dakota State	75	65	133532	t	t
+2023-12-21	2023-2024	Illinois State	Southeast Missouri State	85	64	133533	t	t
+2023-12-29	2023-2024	Illinois State	8 Kentucky	96	70	133534	f	f
+2024-01-02	2023-2024	Illinois State	Drake	88	71	133535	f	f
+2024-01-06	2023-2024	Illinois State	Southern Illinois	71	64	133536	f	t
+2024-01-10	2023-2024	Illinois State	Belmont	67	60	133537	f	f
+2024-01-14	2023-2024	Illinois State	Valparaiso	59	50	133538	f	t
+2024-01-17	2023-2024	Illinois State	Drake	77	56	133539	f	t
+2024-01-20	2023-2024	Illinois State	Missouri State	69	60	133540	t	f
+2024-01-23	2023-2024	Illinois State	Belmont	77	67	133541	t	t
+2024-01-27	2023-2024	Illinois State	Evansville	58	54	133542	f	f
+2024-01-30	2023-2024	Illinois State	Murray State	61	59	133543	t	f
+2024-02-03	2023-2024	Illinois State	Bradley	73	60	133544	f	t
+2024-02-07	2023-2024	Illinois State	UIC	61	56	133545	f	t
+2024-02-10	2023-2024	Illinois State	Southern Illinois	69	66	133546	f	f
+2024-02-13	2023-2024	Illinois State	23 Indiana State	80	67	133547	t	f
+2024-02-18	2023-2024	Illinois State	Evansville	86	79	133548	t	t
+2024-02-21	2023-2024	Illinois State	Northern Iowa	81	73	133549	t	t
+2024-02-24	2023-2024	Illinois State	Bradley	48	45	133550	f	f
+2024-02-28	2023-2024	Illinois State	Missouri State	75	74	133551	t	t
+2024-03-03	2023-2024	Illinois State	Valparaiso	75	72	133552	f	f
+2024-03-07	2023-2024	Illinois State	Evansville	59	53	133553	f	t
+2023-11-06	2023-2024	Incarnate Word	18 Texas	88	56	133554	f	f
+2023-11-11	2023-2024	Incarnate Word	Tulsa	85	71	133555	f	f
+2023-11-14	2023-2024	Incarnate Word	vsSchreiner	104	63	133556	t	t
+2023-11-18	2023-2024	Incarnate Word	Arkansas-Pine Bluff	100	81	133557	t	f
+2023-11-22	2023-2024	Incarnate Word	Jacksonville State	67	66	133558	t	t
+2023-11-25	2023-2024	Incarnate Word	UTSA	90	80	133559	f	f
+2023-11-26	2023-2024	Incarnate Word	Jacksonville State	67	65	133560	f	t
+2023-12-01	2023-2024	Incarnate Word	Bethune-Cookman	96	82	133561	f	f
+2023-12-09	2023-2024	Incarnate Word	Northern Arizona	76	75	133562	f	t
+2023-12-13	2023-2024	Incarnate Word	Rice	80	57	133563	f	f
+2023-12-21	2023-2024	Incarnate Word	UIC	67	66	133564	t	f
+2023-12-30	2023-2024	Incarnate Word	UT Rio Grande Valley	77	74	133565	f	f
+2024-01-02	2023-2024	Incarnate Word	vsOur Lady Of The Lake	83	74	133566	t	t
+2024-01-06	2023-2024	Incarnate Word	Texas A&M-Corpus Christi	75	65	133567	f	t
+2024-01-08	2023-2024	Incarnate Word	Lamar	75	59	133568	f	f
+2024-01-13	2023-2024	Incarnate Word	Northwestern State	97	71	133569	f	f
+2024-01-20	2023-2024	Incarnate Word	McNeese	80	66	133570	f	t
+2024-01-27	2023-2024	Incarnate Word	Houston Christian	79	75	133571	t	t
+2024-01-31	2023-2024	Incarnate Word	Texas A&M-Commerce	71	66	133572	f	f
+2024-02-03	2023-2024	Incarnate Word	New Orleans	82	80	133573	t	f
+2024-02-05	2023-2024	Incarnate Word	SE Louisiana	76	64	133574	f	f
+2024-02-10	2023-2024	Incarnate Word	Houston Christian	86	83	133575	f	f
+2024-02-12	2023-2024	Incarnate Word	Lamar	76	67	133576	t	t
+2024-02-17	2023-2024	Incarnate Word	Northwestern State	81	61	133577	f	t
+2024-02-24	2023-2024	Incarnate Word	McNeese	87	71	133578	f	f
+2024-02-26	2023-2024	Incarnate Word	Nicholls	92	82	133579	f	f
+2024-03-02	2023-2024	Incarnate Word	New Orleans	87	80	133580	f	t
+2024-03-04	2023-2024	Incarnate Word	SE Louisiana	73	56	133581	f	t
+2024-03-06	2023-2024	Incarnate Word	Texas A&M-Corpus Christi	71	52	133582	f	f
+2023-11-07	2023-2024	Indiana	Florida Gulf Coast	69	63	133583	t	t
+2023-11-12	2023-2024	Indiana	Army	72	64	133584	t	t
+2023-11-16	2023-2024	Indiana	Wright State	89	80	133585	t	t
+2023-11-19	2023-2024	Indiana	5 UConn	77	57	133586	f	t
+2023-11-20	2023-2024	Indiana	Louisville	74	66	133587	t	t
+2023-11-26	2023-2024	Indiana	Harvard	89	76	133588	t	t
+2023-12-01	2023-2024	Indiana	Maryland	65	53	133589	t	t
+2023-12-05	2023-2024	Indiana	Michigan	78	75	133590	t	f
+2023-12-09	2023-2024	Indiana	Auburn	104	76	133591	f	t
+2023-12-16	2023-2024	Indiana	2 Kansas	75	71	133592	f	t
+2023-12-19	2023-2024	Indiana	Morehead State	69	68	133593	t	t
+2023-12-21	2023-2024	Indiana	North Alabama	83	66	133594	t	t
+2023-12-29	2023-2024	Indiana	Kennesaw State	100	87	133595	t	t
+2024-01-03	2023-2024	Indiana	Nebraska	86	70	133596	f	f
+2024-01-06	2023-2024	Indiana	Ohio State	71	65	133597	t	t
+2024-01-09	2023-2024	Indiana	Rutgers	66	57	133598	f	f
+2024-01-12	2023-2024	Indiana	Minnesota	74	62	133599	t	t
+2024-01-16	2023-2024	Indiana	2 Purdue	87	66	133600	f	t
+2024-01-19	2023-2024	Indiana	11 Wisconsin	91	79	133601	f	f
+2024-01-27	2023-2024	Indiana	10 Illinois	70	62	133602	f	f
+2024-01-30	2023-2024	Indiana	Iowa	74	68	133603	t	t
+2024-02-03	2023-2024	Indiana	Penn State	85	71	133604	f	t
+2024-02-06	2023-2024	Indiana	Ohio State	76	73	133605	t	f
+2024-02-10	2023-2024	Indiana	2 Purdue	79	59	133606	f	f
+2024-02-18	2023-2024	Indiana	Northwestern	76	72	133607	f	t
+2024-02-21	2023-2024	Indiana	Nebraska	85	70	133608	f	t
+2024-02-24	2023-2024	Indiana	Penn State	83	74	133609	f	f
+2024-02-27	2023-2024	Indiana	Wisconsin	74	70	133610	t	t
+2024-03-03	2023-2024	Indiana	Maryland	83	78	133611	t	f
+2024-03-06	2023-2024	Indiana	Minnesota	70	58	133612	t	f
+2024-03-10	2023-2024	Indiana	Michigan State	65	64	133613	t	t
+2024-03-14	2023-2024	Indiana	Penn State	61	59	133614	t	t
+2024-03-15	2023-2024	Indiana	Nebraska	93	66	133615	f	t
+2023-11-06	2023-2024	Indiana State	vsSaint Mary-Of-The-Woods College	90	60	133616	t	t
+2023-11-10	2023-2024	Indiana State	24 Alabama	102	80	133617	f	f
+2023-11-14	2023-2024	Indiana State	IUPUI	96	57	133618	t	t
+2023-11-21	2023-2024	Indiana State	Rice	103	88	133619	t	t
+2023-11-22	2023-2024	Indiana State	Pepperdine	90	82	133620	t	t
+2023-11-24	2023-2024	Indiana State	Toledo	76	74	133621	t	t
+2023-11-28	2023-2024	Indiana State	Southern Illinois	77	48	133622	t	t
+2023-12-02	2023-2024	Indiana State	Bradley	85	77	133623	t	f
+2023-12-05	2023-2024	Indiana State	Northern Illinois	90	67	133624	t	f
+2023-12-09	2023-2024	Indiana State	Southern Indiana	98	54	133625	t	t
+2023-12-16	2023-2024	Indiana State	Ball State	83	72	133626	t	t
+2023-12-19	2023-2024	Indiana State	Tennessee State	90	69	133627	t	t
+2023-12-30	2023-2024	Indiana State	Michigan State	87	75	133628	f	f
+2024-01-03	2023-2024	Indiana State	Evansville	87	73	133629	t	t
+2024-01-07	2023-2024	Indiana State	Northern Iowa	77	66	133630	t	f
+2024-01-10	2023-2024	Indiana State	Drake	89	78	133631	f	f
+2024-01-13	2023-2024	Indiana State	Belmont	94	64	133632	t	t
+2024-01-16	2023-2024	Indiana State	Missouri State	88	66	133633	t	t
+2024-01-21	2023-2024	Indiana State	Murray State	72	63	133634	t	f
+2024-01-24	2023-2024	Indiana State	UIC	89	83	133635	t	f
+2024-01-31	2023-2024	Indiana State	Belmont	78	72	133636	t	f
+2024-02-03	2023-2024	Indiana State	Drake	75	67	133637	t	t
+2024-02-07	2023-2024	Indiana State	Valparaiso	101	61	133638	t	t
+2024-02-10	2023-2024	Indiana State	Missouri State	73	71	133639	t	f
+2024-02-13	2023-2024	Indiana State	Illinois State	80	67	133640	f	t
+2024-02-17	2023-2024	Indiana State	Southern Illinois	74	69	133641	f	f
+2024-02-21	2023-2024	Indiana State	Valparaiso	83	64	133642	t	f
+2024-02-24	2023-2024	Indiana State	UIC	88	73	133643	t	t
+2024-02-28	2023-2024	Indiana State	Evansville	85	67	133644	t	f
+2024-03-03	2023-2024	Indiana State	Murray State	89	77	133645	t	t
+2024-03-08	2023-2024	Indiana State	Missouri State	75	59	133646	t	t
+2024-03-09	2023-2024	Indiana State	Northern Iowa	94	72	133647	t	t
+2024-03-10	2023-2024	Indiana State	Drake	84	80	133648	f	t
+2023-11-06	2023-2024	Iona	Charleston	71	69	133649	f	f
+2023-11-10	2023-2024	Iona	Sacred Heart	88	81	133650	t	t
+2023-11-20	2023-2024	Iona	High Point	82	68	133651	f	t
+2023-11-21	2023-2024	Iona	Long Beach State	80	76	133652	f	t
+2023-11-22	2023-2024	Iona	Buffalo	89	64	133653	t	t
+2023-11-26	2023-2024	Iona	18 Colorado	85	68	133654	f	f
+2023-11-29	2023-2024	Iona	Marist	68	64	133655	f	t
+2023-12-01	2023-2024	Iona	Fairfield	78	67	133656	t	f
+2023-12-06	2023-2024	Iona	Hofstra	62	57	133657	f	t
+2023-12-10	2023-2024	Iona	St. Francis (PA)	61	54	133658	t	t
+2023-12-16	2023-2024	Iona	Saint Joseph's	83	58	133659	f	t
+2023-12-21	2023-2024	Iona	Colgate	85	65	133660	t	t
+2023-12-30	2023-2024	Iona	Harvard	69	60	133661	t	f
+2024-01-05	2023-2024	Iona	Saint Peter's	69	57	133662	f	f
+2024-01-07	2023-2024	Iona	Niagara	75	73	133663	f	t
+2024-01-14	2023-2024	Iona	Mount St. Mary's	87	70	133664	t	t
+2024-01-19	2023-2024	Iona	Canisius	70	58	133665	t	t
+2024-01-21	2023-2024	Iona	Quinnipiac	91	87	133666	f	f
+2024-01-26	2023-2024	Iona	Siena	70	51	133667	t	f
+2024-02-02	2023-2024	Iona	Fairfield	91	82	133668	t	t
+2024-02-04	2023-2024	Iona	Rider	94	93	133669	t	t
+2024-02-08	2023-2024	Iona	Niagara	74	71	133670	t	f
+2024-02-10	2023-2024	Iona	Canisius	73	69	133671	f	f
+2024-02-16	2023-2024	Iona	Manhattan	73	63	133672	t	t
+2024-02-18	2023-2024	Iona	Saint Peter's	59	53	133673	f	t
+2024-02-23	2023-2024	Iona	Rider	78	75	133674	f	f
+2024-02-25	2023-2024	Iona	Mount St. Mary's	72	65	133675	f	f
+2024-03-01	2023-2024	Iona	Quinnipiac	82	64	133676	f	t
+2024-03-03	2023-2024	Iona	Marist	71	64	133677	t	f
+2024-03-07	2023-2024	Iona	Manhattan	77	60	133678	f	f
+2024-03-09	2023-2024	Iona	Siena	68	54	133679	t	t
+2024-03-12	2023-2024	Iona	Manhattan	60	57	133680	t	t
+2024-03-13	2023-2024	Iona	Fairfield	68	63	133681	f	t
+2023-11-07	2023-2024	Iowa	North Dakota	110	68	133682	t	t
+2023-11-10	2023-2024	Iowa	Alabama State	98	67	133683	t	t
+2023-11-14	2023-2024	Iowa	8 Creighton	92	84	133684	f	f
+2023-11-17	2023-2024	Iowa	Arkansas State	88	74	133685	t	t
+2023-11-23	2023-2024	Iowa	Oklahoma	79	67	133686	f	t
+2023-11-24	2023-2024	Iowa	Seton Hall	85	72	133687	t	t
+2023-11-29	2023-2024	Iowa	North Florida	103	78	133688	t	t
+2023-12-04	2023-2024	Iowa	4 Purdue	87	68	133689	f	f
+2023-12-07	2023-2024	Iowa	Iowa State	90	65	133690	f	f
+2023-12-10	2023-2024	Iowa	Michigan	90	80	133691	f	t
+2023-12-16	2023-2024	Iowa	Florida A&M	88	52	133692	t	t
+2023-12-20	2023-2024	Iowa	UMBC	103	81	133693	t	t
+2023-12-29	2023-2024	Iowa	Northern Illinois	103	74	133694	t	t
+2024-01-02	2023-2024	Iowa	21 Wisconsin	83	72	133695	f	f
+2024-01-06	2023-2024	Iowa	Rutgers	86	77	133696	t	t
+2024-01-12	2023-2024	Iowa	Nebraska	94	76	133697	t	t
+2024-01-15	2023-2024	Iowa	Minnesota	86	77	133698	t	f
+2024-01-20	2023-2024	Iowa	2 Purdue	84	70	133699	f	t
+2024-01-24	2023-2024	Iowa	Maryland	69	67	133700	f	t
+2024-01-27	2023-2024	Iowa	Michigan	88	78	133701	t	f
+2024-01-30	2023-2024	Iowa	Indiana	74	68	133702	f	f
+2024-02-02	2023-2024	Iowa	Ohio State	79	77	133703	t	t
+2024-02-08	2023-2024	Iowa	Penn State	89	79	133704	f	f
+2024-02-11	2023-2024	Iowa	Minnesota	90	85	133705	t	t
+2024-02-14	2023-2024	Iowa	Maryland	78	66	133706	f	f
+2024-02-20	2023-2024	Iowa	Michigan State	78	71	133707	t	f
+2024-02-24	2023-2024	Iowa	12 Illinois	95	85	133708	f	f
+2024-02-27	2023-2024	Iowa	Penn State	90	81	133709	t	t
+2024-03-02	2023-2024	Iowa	Northwestern	87	80	133710	t	f
+2024-03-10	2023-2024	Iowa	12 Illinois	73	61	133711	f	t
+2024-03-14	2023-2024	Iowa	Ohio State	90	78	133712	f	t
+2023-11-06	2023-2024	Iowa State	Green Bay	85	44	133713	t	t
+2023-11-09	2023-2024	Iowa State	Lindenwood	102	47	133714	t	t
+2023-11-12	2023-2024	Iowa State	Idaho State	86	55	133715	t	t
+2023-11-19	2023-2024	Iowa State	Grambling	92	37	133716	t	t
+2023-11-23	2023-2024	Iowa State	VCU	68	64	133717	t	t
+2023-11-24	2023-2024	Iowa State	Virginia Tech	71	62	133718	f	t
+2023-11-26	2023-2024	Iowa State	12 Texas A&M	73	69	133719	f	t
+2023-12-01	2023-2024	Iowa State	DePaul	99	80	133720	t	f
+2023-12-07	2023-2024	Iowa State	Iowa	90	65	133721	t	t
+2023-12-10	2023-2024	Iowa State	Prairie View A&M	107	56	133722	t	t
+2023-12-17	2023-2024	Iowa State	Florida A&M	96	58	133723	t	t
+2023-12-21	2023-2024	Iowa State	Eastern Illinois	80	48	133724	t	t
+2023-12-31	2023-2024	Iowa State	New Hampshire	85	70	133725	t	t
+2024-01-06	2023-2024	Iowa State	11 Oklahoma	71	63	133726	f	f
+2024-01-09	2023-2024	Iowa State	2 Houston	57	53	133727	t	t
+2024-01-13	2023-2024	Iowa State	Oklahoma State	66	42	133728	t	t
+2024-01-16	2023-2024	Iowa State	20 BYU	87	72	133729	f	f
+2024-01-20	2023-2024	Iowa State	19 TCU	73	72	133730	t	f
+2024-01-24	2023-2024	Iowa State	Kansas State	78	67	133731	t	t
+2024-01-27	2023-2024	Iowa State	7 Kansas	79	75	133732	t	t
+2024-02-03	2023-2024	Iowa State	18 Baylor	70	68	133733	f	f
+2024-02-06	2023-2024	Iowa State	Texas	70	65	133734	t	f
+2024-02-10	2023-2024	Iowa State	TCU	71	59	133735	t	t
+2024-02-13	2023-2024	Iowa State	Cincinnati	68	59	133736	t	f
+2024-02-17	2023-2024	Iowa State	Texas Tech	82	74	133737	t	t
+2024-02-19	2023-2024	Iowa State	2 Houston	73	65	133738	f	f
+2024-02-24	2023-2024	Iowa State	West Virginia	71	64	133739	t	t
+2024-02-28	2023-2024	Iowa State	Oklahoma	58	45	133740	t	t
+2024-03-02	2023-2024	Iowa State	UCF	60	52	133741	t	f
+2024-03-06	2023-2024	Iowa State	20 BYU	68	63	133742	t	t
+2024-03-09	2023-2024	Iowa State	Kansas State	65	58	133743	f	f
+2024-03-14	2023-2024	Iowa State	Kansas State	76	57	133744	t	t
+2024-03-15	2023-2024	Iowa State	14 Baylor	76	62	133745	t	t
+2024-03-16	2023-2024	Iowa State	1 Houston	69	41	133746	t	t
+2023-11-06	2023-2024	Jackson State	Memphis	94	77	133747	f	f
+2023-11-08	2023-2024	Jackson State	San Diego	87	61	133748	f	f
+2023-11-10	2023-2024	Jackson State	California Baptist	80	66	133749	f	f
+2023-11-14	2023-2024	Jackson State	Loyola Marymount	88	66	133750	f	f
+2023-11-16	2023-2024	Jackson State	Tulsa	72	52	133751	f	f
+2023-11-19	2023-2024	Jackson State	Missouri	73	72	133752	t	f
+2023-11-25	2023-2024	Jackson State	Georgetown	88	81	133753	f	f
+2023-11-28	2023-2024	Jackson State	Arkansas State	75	71	133754	t	f
+2023-12-09	2023-2024	Jackson State	3 Houston	89	55	133755	f	f
+2023-12-16	2023-2024	Jackson State	Howard	81	74	133756	t	t
+2023-12-17	2023-2024	Jackson State	North Carolina A&T	68	60	133757	t	t
+2023-12-20	2023-2024	Jackson State	15 Gonzaga	100	76	133758	f	f
+2023-12-29	2023-2024	Jackson State	Northwestern	74	63	133759	f	f
+2024-01-06	2023-2024	Jackson State	Alcorn State	88	80	133760	t	t
+2024-01-11	2023-2024	Jackson State	Alabama State	73	63	133761	t	f
+2024-01-13	2023-2024	Jackson State	Alabama A&M	75	67	133762	t	f
+2024-01-20	2023-2024	Jackson State	Prairie View A&M	71	62	133763	f	t
+2024-01-22	2023-2024	Jackson State	Texas Southern	73	64	133764	t	t
+2024-01-27	2023-2024	Jackson State	Bethune-Cookman	82	71	133765	f	f
+2024-01-29	2023-2024	Jackson State	Florida A&M	88	86	133766	f	f
+2024-02-03	2023-2024	Jackson State	Grambling	70	62	133767	f	t
+2024-02-05	2023-2024	Jackson State	Southern	72	63	133768	f	t
+2024-02-10	2023-2024	Jackson State	Mississippi Valley State	77	69	133769	t	f
+2024-02-12	2023-2024	Jackson State	Arkansas-Pine Bluff	76	63	133770	t	f
+2024-02-17	2023-2024	Jackson State	Florida A&M	77	55	133771	t	t
+2024-02-19	2023-2024	Jackson State	Bethune-Cookman	61	60	133772	t	t
+2024-03-02	2023-2024	Jackson State	Texas Southern	80	70	133773	f	f
+2024-03-04	2023-2024	Jackson State	Prairie View A&M	79	74	133774	t	f
+2024-03-07	2023-2024	Jackson State	Arkansas-Pine Bluff	89	84	133775	t	t
+2024-03-09	2023-2024	Jackson State	Mississippi Valley State	68	67	133776	t	t
+2024-03-14	2023-2024	Jackson State	Texas Southern	73	62	133777	f	t
+2023-11-06	2023-2024	Jacksonville State	vsJohnson University Florida	113	46	133778	t	t
+2023-11-10	2023-2024	Jacksonville State	Xavier	79	56	133779	f	f
+2023-11-14	2023-2024	Jacksonville State	Georgia Southern	85	68	133780	t	t
+2023-11-17	2023-2024	Jacksonville State	Pittsburgh	107	56	133781	f	f
+2023-11-24	2023-2024	Jacksonville State	Robert Morris	74	65	133782	t	f
+2023-11-25	2023-2024	Jacksonville State	Fairleigh Dickinson	91	90	133783	t	t
+2023-11-29	2023-2024	Jacksonville State	Campbell	62	48	133784	t	t
+2023-12-02	2023-2024	Jacksonville State	Georgia Southern	81	79	133785	t	f
+2023-12-06	2023-2024	Jacksonville State	UCF	94	52	133786	f	f
+2023-12-14	2023-2024	Jacksonville State	vsTrinity Baptist	91	54	133787	t	t
+2023-12-18	2023-2024	Jacksonville State	UL Monroe	75	65	133788	t	t
+2023-12-21	2023-2024	Jacksonville State	1 Purdue	100	57	133789	f	f
+2023-12-30	2023-2024	Jacksonville State	vsErskine	79	52	133790	t	t
+2024-01-04	2023-2024	Jacksonville State	Florida Gulf Coast	80	70	133791	f	f
+2024-01-06	2023-2024	Jacksonville State	Stetson	71	55	133792	f	f
+2024-01-12	2023-2024	Jacksonville State	North Florida	82	74	133793	f	f
+2024-01-18	2023-2024	Jacksonville State	Queens University	79	77	133794	t	t
+2024-01-20	2023-2024	Jacksonville State	Kennesaw State	83	79	133795	f	t
+2024-01-25	2023-2024	Jacksonville State	Eastern Kentucky	75	59	133796	f	f
+2024-01-27	2023-2024	Jacksonville State	Bellarmine	69	63	133797	f	f
+2024-01-31	2023-2024	Jacksonville State	Austin Peay	63	43	133798	t	t
+2024-02-03	2023-2024	Jacksonville State	Lipscomb	84	82	133799	f	f
+2024-02-08	2023-2024	Jacksonville State	Central Arkansas	59	55	133800	t	t
+2024-02-10	2023-2024	Jacksonville State	North Alabama	67	63	133801	t	t
+2024-02-14	2023-2024	Jacksonville State	Kennesaw State	66	61	133802	f	f
+2024-02-16	2023-2024	Jacksonville State	Queens University	74	65	133803	f	f
+2024-02-23	2023-2024	Jacksonville State	North Florida	62	50	133804	t	t
+2024-02-28	2023-2024	Jacksonville State	Stetson	86	73	133805	f	t
+2024-03-01	2023-2024	Jacksonville State	Florida Gulf Coast	59	57	133806	f	t
+2024-03-04	2023-2024	Jacksonville State	Kennesaw State	92	86	133807	t	f
+2024-03-05	2023-2024	Jacksonville State	Eastern Kentucky	67	65	133808	t	f
+2024-03-07	2023-2024	Jacksonville State	Stetson	88	87	133809	f	f
+2023-11-07	2023-2024	J'Ville State	vsBrescia	91	41	133810	t	t
+2023-11-14	2023-2024	J'Ville State	West Virginia	70	57	133811	f	f
+2023-11-18	2023-2024	J'Ville State	North Alabama	61	59	133812	f	f
+2023-11-22	2023-2024	J'Ville State	Incarnate Word	67	66	133813	f	f
+2023-11-24	2023-2024	J'Ville State	UTSA	77	62	133814	t	f
+2023-11-26	2023-2024	J'Ville State	Incarnate Word	67	65	133815	t	t
+2023-11-30	2023-2024	J'Ville State	South Alabama	70	52	133816	t	t
+2023-12-03	2023-2024	J'Ville State	East Tennessee State	61	59	133817	f	t
+2023-12-08	2023-2024	J'Ville State	UIC	55	49	133818	f	t
+2023-12-14	2023-2024	J'Ville State	23 Wisconsin	75	60	133819	f	f
+2023-12-18	2023-2024	J'Ville State	Tarleton State	65	62	133820	t	f
+2023-12-21	2023-2024	J'Ville State	Little Rock	90	60	133821	t	f
+2023-12-28	2023-2024	J'Ville State	vsFort Valley State	93	57	133822	t	t
+2023-12-31	2023-2024	J'Ville State	vsTrevecca Nazarene	107	67	133823	t	t
+2024-01-06	2023-2024	J'Ville State	Florida International	70	63	133824	t	t
+2024-01-10	2023-2024	J'Ville State	Liberty	61	51	133825	t	f
+2024-01-13	2023-2024	J'Ville State	Western Kentucky	80	69	133826	f	f
+2024-01-20	2023-2024	J'Ville State	Louisiana Tech	74	57	133827	f	t
+2024-01-24	2023-2024	J'Ville State	Middle Tennessee	75	67	133828	f	f
+2024-01-27	2023-2024	J'Ville State	Liberty	73	62	133829	t	t
+2024-02-01	2023-2024	J'Ville State	UTEP	79	71	133830	f	f
+2024-02-03	2023-2024	J'Ville State	New Mexico State	67	65	133831	f	f
+2024-02-08	2023-2024	J'Ville State	Sam Houston	79	68	133832	t	t
+2024-02-10	2023-2024	J'Ville State	Western Kentucky	70	59	133833	f	t
+2024-02-15	2023-2024	J'Ville State	Louisiana Tech	63	58	133834	f	f
+2024-02-21	2023-2024	J'Ville State	Middle Tennessee	76	68	133835	t	t
+2024-02-24	2023-2024	J'Ville State	Florida International	77	75	133836	t	f
+2024-02-29	2023-2024	J'Ville State	UTEP	72	65	133837	f	t
+2024-03-02	2023-2024	J'Ville State	New Mexico State	66	64	133838	f	t
+2024-03-09	2023-2024	J'Ville State	Sam Houston	81	73	133839	f	f
+2024-03-12	2023-2024	J'Ville State	Florida International	76	67	133840	f	t
+2023-11-12	2023-2024	James Madison	Howard	107	86	133841	t	t
+2023-11-17	2023-2024	James Madison	Radford	76	73	133842	t	t
+2023-11-21	2023-2024	James Madison	Southern Illinois	82	76	133843	t	t
+2023-11-22	2023-2024	James Madison	Fresno State	95	64	133844	t	t
+2023-11-29	2023-2024	James Madison	Buffalo	81	66	133845	t	t
+2023-12-03	2023-2024	James Madison	vsKeystone	130	59	133846	t	t
+2023-12-09	2023-2024	James Madison	Old Dominion	84	69	133847	t	f
+2023-12-16	2023-2024	James Madison	Hampton	88	71	133848	t	f
+2023-12-19	2023-2024	James Madison	Coppin State	87	48	133849	t	t
+2023-12-22	2023-2024	James Madison	Morgan State	89	75	133850	t	f
+2023-12-30	2023-2024	James Madison	Texas State	82	65	133851	t	t
+2024-01-04	2023-2024	James Madison	Louisiana	68	61	133852	t	f
+2024-01-06	2023-2024	James Madison	Southern Miss	81	71	133853	f	f
+2024-01-11	2023-2024	James Madison	South Alabama	89	55	133854	t	t
+2024-01-13	2023-2024	James Madison	Appalachian State	59	55	133855	f	t
+2024-01-18	2023-2024	James Madison	UL Monroe	89	70	133856	t	t
+2024-01-20	2023-2024	James Madison	Marshall	67	52	133857	t	t
+2024-01-24	2023-2024	James Madison	Old Dominion	78	62	133858	t	f
+2024-01-27	2023-2024	James Madison	Appalachian State	82	76	133859	f	f
+2024-02-01	2023-2024	James Madison	Coastal Carolina	105	67	133860	t	t
+2024-02-03	2023-2024	James Madison	Old Dominion	78	63	133861	t	t
+2024-02-07	2023-2024	James Madison	Arkansas State	77	73	133862	t	f
+2024-02-10	2023-2024	James Madison	Akron	73	59	133863	t	t
+2024-02-15	2023-2024	James Madison	Georgia State	83	63	133864	t	t
+2024-02-17	2023-2024	James Madison	Georgia Southern	87	80	133865	t	t
+2024-02-21	2023-2024	James Madison	Marshall	84	58	133866	t	f
+2024-02-24	2023-2024	James Madison	Georgia Southern	80	74	133867	t	f
+2024-02-28	2023-2024	James Madison	Georgia State	84	78	133868	t	f
+2024-03-01	2023-2024	James Madison	Coastal Carolina	86	76	133869	t	f
+2024-03-09	2023-2024	James Madison	Marshall	81	64	133870	t	t
+2024-03-10	2023-2024	James Madison	Texas State	73	68	133871	t	t
+2024-03-11	2023-2024	James Madison	Arkansas State	91	71	133872	t	t
+2023-11-06	2023-2024	Kansas City	vsAvila	79	48	133873	t	t
+2023-11-11	2023-2024	Kansas City	vsUniversity Of Saint Mary	95	42	133874	t	t
+2023-11-14	2023-2024	Kansas City	15 Baylor	99	61	133875	f	f
+2023-11-17	2023-2024	Kansas City	Colorado State	84	61	133876	f	f
+2023-11-24	2023-2024	Kansas City	UNC Greensboro	76	64	133877	f	t
+2023-11-26	2023-2024	Kansas City	Middle Tennessee	63	59	133878	f	t
+2023-11-30	2023-2024	Kansas City	Southeast Missouri State	74	44	133879	t	t
+2023-12-05	2023-2024	Kansas City	2 Kansas	88	69	133880	f	f
+2023-12-09	2023-2024	Kansas City	Lindenwood	72	67	133881	t	f
+2023-12-12	2023-2024	Kansas City	vsTabor	80	57	133882	t	t
+2023-12-16	2023-2024	Kansas City	Bowling Green	79	69	133883	f	f
+2023-12-20	2023-2024	Kansas City	East Tennessee State	70	57	133884	f	f
+2023-12-29	2023-2024	Kansas City	Oral Roberts	77	60	133885	t	t
+2023-12-31	2023-2024	Kansas City	St. Thomas-Minnesota	77	56	133886	f	f
+2024-01-03	2023-2024	Kansas City	Sacramento State	67	64	133887	f	f
+2024-01-06	2023-2024	Kansas City	Portland State	83	67	133888	t	t
+2024-01-13	2023-2024	Kansas City	North Dakota	82	69	133889	f	t
+2024-01-20	2023-2024	Kansas City	Omaha	74	72	133890	t	f
+2024-01-25	2023-2024	Kansas City	South Dakota State	75	66	133891	f	f
+2024-01-27	2023-2024	Kansas City	South Dakota	81	57	133892	t	t
+2024-02-01	2023-2024	Kansas City	Denver	85	71	133893	t	t
+2024-02-03	2023-2024	Kansas City	St. Thomas-Minnesota	71	56	133894	f	t
+2024-02-10	2023-2024	Kansas City	North Dakota	65	47	133895	t	f
+2024-02-15	2023-2024	Kansas City	South Dakota State	72	67	133896	t	t
+2024-02-22	2023-2024	Kansas City	South Dakota	82	78	133897	t	f
+2024-02-24	2023-2024	Kansas City	Omaha	63	58	133898	t	t
+2024-02-29	2023-2024	Kansas City	Denver	84	69	133899	t	f
+2024-03-03	2023-2024	Kansas City	Oral Roberts	71	54	133900	t	f
+2024-03-09	2023-2024	Kansas City	Denver	61	60	133901	f	t
+2023-11-06	2023-2024	Kansas	North Carolina Central	99	56	133902	t	t
+2023-11-10	2023-2024	Kansas	Manhattan	99	61	133903	t	t
+2023-11-14	2023-2024	Kansas	17 Kentucky	89	84	133904	t	t
+2023-11-20	2023-2024	Kansas	vsChaminade	83	56	133905	t	t
+2023-11-21	2023-2024	Kansas	4 Marquette	73	59	133906	f	t
+2023-11-22	2023-2024	Kansas	7 Tennessee	69	60	133907	t	t
+2023-11-28	2023-2024	Kansas	Eastern Illinois	71	63	133908	t	t
+2023-12-01	2023-2024	Kansas	4 UConn	69	65	133909	t	t
+2023-12-05	2023-2024	Kansas	Kansas City	88	69	133910	t	t
+2023-12-09	2023-2024	Kansas	Missouri	73	64	133911	t	t
+2023-12-16	2023-2024	Kansas	Indiana	75	71	133912	t	f
+2023-12-22	2023-2024	Kansas	Yale	75	60	133913	t	t
+2023-12-30	2023-2024	Kansas	Wichita State	86	67	133914	t	t
+2024-01-06	2023-2024	Kansas	TCU	83	81	133915	t	t
+2024-01-10	2023-2024	Kansas	UCF	65	60	133916	f	f
+2024-01-13	2023-2024	Kansas	9 Oklahoma	78	66	133917	t	t
+2024-01-16	2023-2024	Kansas	Oklahoma State	90	66	133918	t	f
+2024-01-20	2023-2024	Kansas	West Virginia	91	85	133919	f	f
+2024-01-22	2023-2024	Kansas	Cincinnati	74	69	133920	t	t
+2024-01-27	2023-2024	Kansas	23 Iowa State	79	75	133921	f	f
+2024-01-30	2023-2024	Kansas	Oklahoma State	83	54	133922	t	t
+2024-02-03	2023-2024	Kansas	4 Houston	78	65	133923	t	t
+2024-02-10	2023-2024	Kansas	13 Baylor	64	61	133924	t	t
+2024-02-12	2023-2024	Kansas	Texas Tech	79	50	133925	f	f
+2024-02-17	2023-2024	Kansas	25 Oklahoma	67	57	133926	t	f
+2024-02-24	2023-2024	Kansas	Texas	86	67	133927	t	t
+2024-02-27	2023-2024	Kansas	BYU	76	68	133928	f	t
+2024-03-02	2023-2024	Kansas	15 Baylor	82	74	133929	f	f
+2024-03-05	2023-2024	Kansas	Kansas State	90	68	133930	t	t
+2024-03-09	2023-2024	Kansas	1 Houston	76	46	133931	f	f
+2024-03-13	2023-2024	Kansas	Cincinnati	72	52	133932	f	t
+2023-11-06	2023-2024	Kansas State	21 USC	82	69	133933	f	t
+2023-11-10	2023-2024	Kansas State	Bellarmine	83	75	133934	t	t
+2023-11-13	2023-2024	Kansas State	South Dakota State	91	68	133935	t	t
+2023-11-19	2023-2024	Kansas State	12 Miami	91	83	133936	f	t
+2023-11-22	2023-2024	Kansas State	Central Arkansas	100	56	133937	t	t
+2023-12-09	2023-2024	Kansas State	LSU	75	60	133938	t	f
+2023-12-17	2023-2024	Kansas State	Nebraska	62	46	133939	f	t
+2023-12-21	2023-2024	Kansas State	Wichita State	69	60	133940	t	t
+2024-01-02	2023-2024	Kansas State	Chicago State	62	55	133941	t	t
+2024-01-06	2023-2024	Kansas State	UCF	77	52	133942	t	t
+2024-01-09	2023-2024	Kansas State	West Virginia	81	67	133943	t	f
+2024-01-13	2023-2024	Kansas State	Texas Tech	60	59	133944	f	f
+2024-01-20	2023-2024	Kansas State	Oklahoma State	70	66	133945	t	t
+2024-01-24	2023-2024	Kansas State	23 Iowa State	78	67	133946	f	f
+2024-01-27	2023-2024	Kansas State	4 Houston	74	52	133947	f	f
+2024-01-30	2023-2024	Kansas State	23 Oklahoma	73	53	133948	f	t
+2024-02-03	2023-2024	Kansas State	Oklahoma State	75	72	133949	f	f
+2024-02-10	2023-2024	Kansas State	21 BYU	72	66	133950	f	f
+2024-02-17	2023-2024	Kansas State	TCU	75	72	133951	f	t
+2024-02-19	2023-2024	Kansas State	Texas	62	56	133952	f	f
+2024-02-24	2023-2024	Kansas State	25 BYU	84	74	133953	t	t
+2024-03-02	2023-2024	Kansas State	Cincinnati	74	72	133954	f	f
+2024-03-05	2023-2024	Kansas State	14 Kansas	90	68	133955	f	f
+2024-03-09	2023-2024	Kansas State	6 Iowa State	65	58	133956	t	t
+2024-03-13	2023-2024	Kansas State	Texas	78	74	133957	t	t
+2024-03-14	2023-2024	Kansas State	7 Iowa State	76	57	133958	f	t
+2023-11-07	2023-2024	Kennesaw State	vsOakwood	93	46	133959	t	t
+2023-11-10	2023-2024	Kennesaw State	Florida State	94	67	133960	f	f
+2023-11-15	2023-2024	Kennesaw State	vsKeiser	101	55	133961	t	t
+2023-11-19	2023-2024	Kennesaw State	Georgia Southern	96	92	133962	t	t
+2023-11-20	2023-2024	Kennesaw State	Northeastern	79	77	133963	t	t
+2023-11-21	2023-2024	Kennesaw State	East Carolina	85	84	133964	f	f
+2023-11-26	2023-2024	Kennesaw State	Florida International	91	84	133965	f	f
+2023-12-02	2023-2024	Kennesaw State	Georgia State	88	77	133966	t	t
+2023-12-09	2023-2024	Kennesaw State	South Carolina Upstate	84	77	133967	t	f
+2023-12-16	2023-2024	Kennesaw State	Presbyterian	94	84	133968	t	f
+2023-12-19	2023-2024	Kennesaw State	vsBrescia	91	59	133969	t	t
+2023-12-23	2023-2024	Kennesaw State	UNC Asheville	79	70	133970	f	f
+2023-12-29	2023-2024	Kennesaw State	Indiana	100	87	133971	f	f
+2024-01-06	2023-2024	Kennesaw State	Queens University	80	77	133972	t	t
+2024-01-10	2023-2024	Kennesaw State	Stetson	88	70	133973	t	t
+2024-01-12	2023-2024	Kennesaw State	Florida Gulf Coast	78	75	133974	t	t
+2024-01-18	2023-2024	Kennesaw State	North Florida	84	75	133975	f	f
+2024-01-20	2023-2024	Kennesaw State	Jacksonville State	83	79	133976	t	f
+2024-01-24	2023-2024	Kennesaw State	North Alabama	90	84	133977	f	t
+2024-01-27	2023-2024	Kennesaw State	Central Arkansas	92	87	133978	f	f
+2024-02-03	2023-2024	Kennesaw State	Eastern Kentucky	86	76	133979	f	t
+2024-02-08	2023-2024	Kennesaw State	Austin Peay	85	69	133980	f	f
+2024-02-10	2023-2024	Kennesaw State	Lipscomb	101	95	133981	f	f
+2024-02-14	2023-2024	Kennesaw State	Jacksonville State	66	61	133982	t	t
+2024-02-16	2023-2024	Kennesaw State	North Florida	82	81	133983	f	t
+2024-02-22	2023-2024	Kennesaw State	Florida Gulf Coast	74	67	133984	t	f
+2024-02-24	2023-2024	Kennesaw State	Stetson	84	72	133985	f	f
+2024-03-01	2023-2024	Kennesaw State	Queens University	91	82	133986	f	f
+2024-03-04	2023-2024	Kennesaw State	Jacksonville State	92	86	133987	f	t
+2023-11-06	2023-2024	Kent State	vsMalone	79	58	133988	t	t
+2023-11-11	2023-2024	Kent State	Fresno State	79	69	133989	t	t
+2023-11-17	2023-2024	Kent State	Hampton	100	62	133990	t	t
+2023-11-19	2023-2024	Kent State	Missouri State	56	52	133991	f	t
+2023-11-20	2023-2024	Kent State	Fordham	79	72	133992	t	t
+2023-11-26	2023-2024	Kent State	Charleston	84	78	133993	f	t
+2023-11-30	2023-2024	Kent State	vsShawnee State	103	61	133994	t	t
+2023-12-05	2023-2024	Kent State	South Dakota State	82	73	133995	t	f
+2023-12-09	2023-2024	Kent State	Cleveland State	83	77	133996	t	t
+2023-12-21	2023-2024	Kent State	Oregon	84	70	133997	f	f
+2023-12-29	2023-2024	Kent State	St. Mary's	66	46	133998	f	f
+2024-01-02	2023-2024	Kent State	Ball State	82	69	133999	t	t
+2024-01-09	2023-2024	Kent State	Toledo	89	75	134000	f	t
+2024-01-13	2023-2024	Kent State	Central Michigan	77	62	134001	f	f
+2024-01-16	2023-2024	Kent State	Northern Illinois	83	76	134002	t	f
+2024-01-19	2023-2024	Kent State	Akron	77	71	134003	f	t
+2024-01-26	2023-2024	Kent State	Ohio	71	64	134004	f	t
+2024-01-30	2023-2024	Kent State	Miami (OH)	71	67	134005	f	t
+2024-02-02	2023-2024	Kent State	Buffalo	83	52	134006	t	f
+2024-02-06	2023-2024	Kent State	Western Michigan	63	61	134007	t	t
+2024-02-10	2023-2024	Kent State	Troy	78	68	134008	f	f
+2024-02-17	2023-2024	Kent State	Northern Illinois	85	47	134009	t	t
+2024-02-20	2023-2024	Kent State	Ohio	63	57	134010	f	f
+2024-02-23	2023-2024	Kent State	Akron	83	70	134011	f	f
+2024-02-27	2023-2024	Kent State	Buffalo	76	64	134012	t	t
+2024-03-05	2023-2024	Kent State	Ball State	76	69	134013	f	f
+2024-03-08	2023-2024	Kent State	Toledo	86	71	134014	f	f
+2024-03-14	2023-2024	Kent State	Toledo	67	59	134015	t	t
+2024-03-15	2023-2024	Kent State	Bowling Green	73	60	134016	t	t
+2024-03-16	2023-2024	Kent State	Akron	62	61	134017	f	t
+2023-11-06	2023-2024	Kentucky	New Mexico State	86	46	134018	t	t
+2023-11-10	2023-2024	Kentucky	Texas A&M-Commerce	81	61	134019	t	t
+2023-11-14	2023-2024	Kentucky	1 Kansas	89	84	134020	f	t
+2023-11-17	2023-2024	Kentucky	Stonehill	101	67	134021	t	t
+2023-11-24	2023-2024	Kentucky	Marshall	118	82	134022	t	t
+2023-11-28	2023-2024	Kentucky	8 Miami	95	73	134023	t	t
+2023-12-02	2023-2024	Kentucky	UNC Wilmington	80	73	134024	f	t
+2023-12-09	2023-2024	Kentucky	Pennsylvania	81	66	134025	t	t
+2023-12-16	2023-2024	Kentucky	9 North Carolina	87	83	134026	t	t
+2023-12-21	2023-2024	Kentucky	Louisville	95	76	134027	t	f
+2023-12-29	2023-2024	Kentucky	Illinois State	96	70	134028	t	t
+2024-01-06	2023-2024	Kentucky	Florida	87	85	134029	t	f
+2024-01-09	2023-2024	Kentucky	Missouri	90	77	134030	t	t
+2024-01-17	2023-2024	Kentucky	Mississippi State	90	77	134031	t	t
+2024-01-20	2023-2024	Kentucky	Georgia	105	96	134032	t	t
+2024-01-23	2023-2024	Kentucky	South Carolina	79	62	134033	f	f
+2024-01-27	2023-2024	Kentucky	Arkansas	63	57	134034	t	f
+2024-02-03	2023-2024	Kentucky	5 Tennessee	103	92	134035	f	t
+2024-02-06	2023-2024	Kentucky	Vanderbilt	109	77	134036	t	f
+2024-02-10	2023-2024	Kentucky	Gonzaga	89	85	134037	f	t
+2024-02-13	2023-2024	Kentucky	Ole Miss	75	63	134038	t	t
+2024-02-17	2023-2024	Kentucky	13 Auburn	70	59	134039	t	f
+2024-02-21	2023-2024	Kentucky	LSU	75	74	134040	f	f
+2024-02-24	2023-2024	Kentucky	13 Alabama	117	95	134041	t	t
+2024-02-27	2023-2024	Kentucky	Mississippi State	91	89	134042	t	f
+2024-03-02	2023-2024	Kentucky	Arkansas	111	102	134043	t	t
+2024-03-06	2023-2024	Kentucky	Vanderbilt	93	77	134044	t	t
+2024-03-09	2023-2024	Kentucky	4 Tennessee	85	81	134045	t	f
+2024-03-15	2023-2024	Kentucky	Texas A&M	97	87	134046	f	t
+2023-11-06	2023-2024	LSU	Mississippi Valley State	106	60	134047	t	t
+2023-11-10	2023-2024	LSU	Nicholls	68	66	134048	f	t
+2023-11-16	2023-2024	LSU	Dayton	70	67	134049	f	t
+2023-11-17	2023-2024	LSU	North Texas	66	62	134050	t	t
+2023-11-24	2023-2024	LSU	North Florida	75	63	134051	t	t
+2023-11-28	2023-2024	LSU	Syracuse	80	57	134052	f	f
+2023-12-01	2023-2024	LSU	SE Louisiana	73	66	134053	t	t
+2023-12-09	2023-2024	LSU	Kansas State	75	60	134054	f	t
+2023-12-13	2023-2024	LSU	Alabama State	74	56	134055	t	t
+2023-12-16	2023-2024	LSU	19 Texas	96	85	134056	f	t
+2023-12-21	2023-2024	LSU	Lamar	87	66	134057	t	t
+2023-12-29	2023-2024	LSU	Northwestern State	96	55	134058	t	t
+2024-01-06	2023-2024	LSU	Texas A&M	68	53	134059	t	f
+2024-01-09	2023-2024	LSU	Vanderbilt	77	69	134060	t	t
+2024-01-13	2023-2024	LSU	16 Auburn	93	78	134061	f	f
+2024-01-17	2023-2024	LSU	22 Ole Miss	89	80	134062	t	t
+2024-01-20	2023-2024	LSU	Texas A&M	73	69	134063	f	t
+2024-01-24	2023-2024	LSU	Georgia	68	66	134064	f	f
+2024-01-27	2023-2024	LSU	Alabama	109	88	134065	f	f
+2024-02-03	2023-2024	LSU	Arkansas	95	74	134066	t	t
+2024-02-07	2023-2024	LSU	6 Tennessee	88	68	134067	f	f
+2024-02-10	2023-2024	LSU	16 Alabama	109	92	134068	f	t
+2024-02-13	2023-2024	LSU	Florida	82	80	134069	f	f
+2024-02-17	2023-2024	LSU	11 South Carolina	64	63	134070	t	f
+2024-02-21	2023-2024	LSU	17 Kentucky	75	74	134071	t	t
+2024-02-24	2023-2024	LSU	Mississippi State	87	67	134072	f	t
+2024-02-27	2023-2024	LSU	Georgia	67	66	134073	t	t
+2024-03-02	2023-2024	LSU	Vanderbilt	75	61	134074	t	f
+2024-03-06	2023-2024	LSU	Arkansas	94	83	134075	f	f
+2024-03-09	2023-2024	LSU	Missouri	84	80	134076	t	t
+2024-03-14	2023-2024	LSU	Mississippi State	70	60	134077	f	t
+2023-11-07	2023-2024	La Salle	Drexel	67	61	134078	t	t
+2023-11-11	2023-2024	La Salle	Northeastern	79	74	134079	t	t
+2023-11-14	2023-2024	La Salle	Bucknell	69	57	134080	t	t
+2023-11-18	2023-2024	La Salle	Southern Indiana	79	78	134081	t	t
+2023-11-21	2023-2024	La Salle	9 Duke	95	66	134082	f	f
+2023-11-26	2023-2024	La Salle	Coppin State	81	62	134083	t	t
+2023-12-06	2023-2024	La Salle	Loyola Maryland	62	61	134084	t	t
+2023-12-09	2023-2024	La Salle	Louisiana-Lafayette	67	51	134085	t	f
+2023-12-16	2023-2024	La Salle	24 Miami	84	77	134086	f	f
+2023-12-21	2023-2024	La Salle	vsRosemont	107	41	134087	t	t
+2023-12-30	2023-2024	La Salle	Howard	71	66	134088	f	t
+2024-01-03	2023-2024	La Salle	George Mason	77	62	134089	f	t
+2024-01-06	2023-2024	La Salle	Fordham	81	76	134090	t	f
+2024-01-10	2023-2024	La Salle	Massachusetts	81	65	134091	f	f
+2024-01-13	2023-2024	La Salle	VCU	71	65	134092	f	t
+2024-01-15	2023-2024	La Salle	Saint Joseph's	82	62	134093	f	f
+2024-01-23	2023-2024	La Salle	16 Dayton	66	54	134094	f	t
+2024-01-27	2023-2024	La Salle	George Washington	80	70	134095	t	f
+2024-01-31	2023-2024	La Salle	Rhode Island	71	69	134096	f	f
+2024-02-03	2023-2024	La Salle	Saint Joseph's	88	82	134097	f	t
+2024-02-07	2023-2024	La Salle	Saint Louis	102	84	134098	f	t
+2024-02-10	2023-2024	La Salle	Richmond	82	65	134099	f	f
+2024-02-13	2023-2024	La Salle	Davidson	71	56	134100	f	f
+2024-02-17	2023-2024	La Salle	Massachusetts	82	81	134101	t	t
+2024-02-21	2023-2024	La Salle	St. Bonaventure	72	59	134102	t	t
+2024-02-25	2023-2024	La Salle	Rhode Island	84	61	134103	t	t
+2024-02-28	2023-2024	La Salle	Duquesne	75	63	134104	f	f
+2024-03-02	2023-2024	La Salle	George Washington	72	66	134105	t	t
+2024-03-09	2023-2024	La Salle	Loyola Chicago	64	54	134106	f	f
+2024-03-12	2023-2024	La Salle	George Washington	61	60	134107	t	t
+2024-03-13	2023-2024	La Salle	St. Bonaventure	75	73	134108	f	t
+2023-11-06	2023-2024	Louisiana-Lafayette	Saint Joseph's	81	60	134109	f	f
+2023-11-10	2023-2024	Louisiana-Lafayette	UCLA	68	50	134110	f	f
+2023-11-12	2023-2024	Louisiana-Lafayette	Pepperdine	76	53	134111	f	f
+2023-11-19	2023-2024	Louisiana-Lafayette	vsWilkes University	69	53	134112	t	t
+2023-11-24	2023-2024	Louisiana-Lafayette	Pennsylvania	74	72	134113	f	f
+2023-11-25	2023-2024	Louisiana-Lafayette	Monmouth	63	53	134114	f	t
+2023-11-26	2023-2024	Louisiana-Lafayette	Belmont	79	69	134115	f	t
+2023-11-29	2023-2024	Louisiana-Lafayette	Drexel	69	48	134116	f	t
+2023-12-02	2023-2024	Louisiana-Lafayette	Cornell	79	71	134117	f	t
+2023-12-05	2023-2024	Louisiana-Lafayette	Columbia	83	72	134118	f	f
+2023-12-09	2023-2024	Louisiana-Lafayette	La Salle	67	51	134119	f	t
+2023-12-21	2023-2024	Louisiana-Lafayette	Quinnipiac	78	60	134120	f	t
+2023-12-30	2023-2024	Louisiana-Lafayette	Richmond	59	38	134121	f	f
+2024-01-03	2023-2024	Louisiana-Lafayette	Army	52	47	134122	t	t
+2024-01-06	2023-2024	Louisiana-Lafayette	Boston University	59	51	134123	t	f
+2024-01-10	2023-2024	Louisiana-Lafayette	Colgate	69	64	134124	t	f
+2024-01-13	2023-2024	Louisiana-Lafayette	Navy	78	62	134125	t	t
+2024-01-17	2023-2024	Louisiana-Lafayette	Holy Cross	72	68	134126	t	f
+2024-01-24	2023-2024	Louisiana-Lafayette	Loyola Maryland	70	44	134127	t	f
+2024-01-27	2023-2024	Louisiana-Lafayette	Boston University	62	48	134128	f	t
+2024-01-31	2023-2024	Louisiana-Lafayette	American University	69	66	134129	f	t
+2024-02-07	2023-2024	Louisiana-Lafayette	Holy Cross	75	59	134130	t	t
+2024-02-14	2023-2024	Louisiana-Lafayette	Loyola Maryland	79	64	134131	f	t
+2024-02-17	2023-2024	Louisiana-Lafayette	American University	68	62	134132	t	f
+2024-02-19	2023-2024	Louisiana-Lafayette	Colgate	67	62	134133	f	t
+2024-02-24	2023-2024	Louisiana-Lafayette	Lehigh	71	63	134134	f	t
+2024-02-28	2023-2024	Louisiana-Lafayette	Navy	62	58	134135	f	f
+2024-03-02	2023-2024	Louisiana-Lafayette	Bucknell	60	50	134136	f	f
+2024-03-07	2023-2024	Louisiana-Lafayette	Lehigh	76	61	134137	f	t
+2023-11-06	2023-2024	Lamar	vsJarvis Christian	114	66	134138	t	t
+2023-11-09	2023-2024	Lamar	SMU	78	67	134139	f	f
+2023-11-14	2023-2024	Lamar	UTSA	90	82	134140	t	t
+2023-11-18	2023-2024	Lamar	Pacific	77	76	134141	f	f
+2023-11-24	2023-2024	Lamar	Bethune-Cookman	83	65	134142	t	t
+2023-11-25	2023-2024	Lamar	Longwood	83	72	134143	f	f
+2023-11-30	2023-2024	Lamar	UTSA	86	83	134144	f	f
+2023-12-03	2023-2024	Lamar	Sam Houston	90	70	134145	f	f
+2023-12-14	2023-2024	Lamar	UL Monroe	97	73	134146	t	t
+2023-12-18	2023-2024	Lamar	Southern Miss	82	79	134147	f	t
+2023-12-21	2023-2024	Lamar	LSU	87	66	134148	f	f
+2023-12-30	2023-2024	Lamar	vsPaul Quinn	91	64	134149	t	t
+2024-01-06	2023-2024	Lamar	Northwestern State	90	70	134150	t	t
+2024-01-08	2023-2024	Lamar	Incarnate Word	75	59	134151	t	t
+2024-01-15	2023-2024	Lamar	McNeese	88	69	134152	f	f
+2024-01-20	2023-2024	Lamar	Houston Christian	78	77	134153	f	f
+2024-01-22	2023-2024	Lamar	Texas A&M-Commerce	76	65	134154	t	t
+2024-01-27	2023-2024	Lamar	SE Louisiana	74	64	134155	t	t
+2024-01-29	2023-2024	Lamar	New Orleans	98	73	134156	t	t
+2024-02-03	2023-2024	Lamar	Texas A&M-Corpus Christi	79	71	134157	f	f
+2024-02-10	2023-2024	Lamar	Nicholls	75	56	134158	t	t
+2024-02-12	2023-2024	Lamar	Incarnate Word	76	67	134159	f	f
+2024-02-17	2023-2024	Lamar	New Orleans	94	72	134160	t	f
+2024-02-24	2023-2024	Lamar	Texas A&M-Corpus Christi	75	61	134161	f	t
+2024-02-26	2023-2024	Lamar	McNeese	58	56	134162	f	t
+2024-03-04	2023-2024	Lamar	Texas A&M-Commerce	70	53	134163	t	f
+2024-03-06	2023-2024	Lamar	Houston Christian	78	68	134164	t	t
+2024-03-11	2023-2024	Lamar	New Orleans	71	57	134165	t	t
+2024-03-12	2023-2024	Lamar	McNeese	76	57	134166	f	f
+2023-11-06	2023-2024	Lehigh	Cornell	84	78	134167	f	t
+2023-11-10	2023-2024	Lehigh	Penn State	74	65	134168	f	f
+2023-11-12	2023-2024	Lehigh	19 North Carolina	90	68	134169	f	f
+2023-11-16	2023-2024	Lehigh	vsSuny-Oneonta	90	65	134170	t	t
+2023-11-21	2023-2024	Lehigh	Monmouth	88	79	134171	f	f
+2023-11-24	2023-2024	Lehigh	Providence	78	64	134172	f	f
+2023-11-29	2023-2024	Lehigh	St. Francis (PA)	62	61	134173	f	t
+2023-12-02	2023-2024	Lehigh	UMBC	92	87	134174	f	f
+2023-12-09	2023-2024	Lehigh	vsCairn University	88	33	134175	t	t
+2023-12-21	2023-2024	Lehigh	Boston College	85	69	134176	f	f
+2023-12-30	2023-2024	Lehigh	Marist	65	58	134177	t	f
+2024-01-03	2023-2024	Lehigh	American University	75	66	134178	f	f
+2024-01-06	2023-2024	Lehigh	Loyola Maryland	88	76	134179	t	f
+2024-01-10	2023-2024	Lehigh	Bucknell	86	80	134180	f	t
+2024-01-17	2023-2024	Lehigh	Navy	71	69	134181	f	f
+2024-01-20	2023-2024	Lehigh	American University	70	68	134182	t	t
+2024-01-22	2023-2024	Lehigh	Colgate	60	57	134183	f	f
+2024-01-27	2023-2024	Lehigh	Holy Cross	78	72	134184	t	f
+2024-01-31	2023-2024	Lehigh	Navy	77	65	134185	t	t
+2024-02-03	2023-2024	Lehigh	Boston University	72	71	134186	f	f
+2024-02-07	2023-2024	Lehigh	Army	68	57	134187	f	t
+2024-02-17	2023-2024	Lehigh	Loyola Maryland	75	70	134188	t	t
+2024-02-21	2023-2024	Lehigh	Army	85	54	134189	t	f
+2024-02-24	2023-2024	Lehigh	Louisiana-Lafayette	71	63	134190	t	f
+2024-03-02	2023-2024	Lehigh	Colgate	63	60	134191	f	t
+2024-03-07	2023-2024	Lehigh	Louisiana-Lafayette	76	61	134192	t	f
+2024-03-13	2023-2024	Lehigh	Colgate	74	55	134193	f	f
+2023-11-06	2023-2024	Liberty	vsMid-Atlantic Christian	103	43	134194	t	t
+2023-11-10	2023-2024	Liberty	Charlotte	71	59	134195	t	t
+2023-11-16	2023-2024	Liberty	Furman	88	74	134196	t	t
+2023-11-17	2023-2024	Liberty	Wichita State	83	66	134197	t	t
+2023-11-19	2023-2024	Liberty	Vermont	71	61	134198	t	t
+2023-11-25	2023-2024	Liberty	Maryland-Eastern Shore	99	62	134199	t	t
+2023-11-30	2023-2024	Liberty	13 Florida Atlantic	83	58	134200	f	f
+2023-12-01	2023-2024	Liberty	Charleston	76	67	134201	f	t
+2023-12-05	2023-2024	Liberty	Mississippi Valley State	74	39	134202	t	t
+2023-12-09	2023-2024	Liberty	Grand Canyon	69	64	134203	f	t
+2023-12-13	2023-2024	Liberty	Tennessee State	74	52	134204	t	t
+2023-12-16	2023-2024	Liberty	vsSt. Andrews	99	26	134205	t	t
+2023-12-20	2023-2024	Liberty	Utah Valley	79	63	134206	t	f
+2023-12-30	2023-2024	Liberty	Alabama	101	56	134207	f	t
+2024-01-01	2023-2024	Liberty	vsBoyce	88	46	134208	t	t
+2024-01-06	2023-2024	Liberty	Western Kentucky	70	68	134209	f	f
+2024-01-10	2023-2024	Liberty	Jacksonville State	61	51	134210	f	t
+2024-01-18	2023-2024	Liberty	Florida International	78	69	134211	t	t
+2024-01-20	2023-2024	Liberty	Sam Houston	82	66	134212	t	t
+2024-01-27	2023-2024	Liberty	Jacksonville State	73	62	134213	f	f
+2024-02-03	2023-2024	Liberty	UTEP	67	65	134214	t	f
+2024-02-08	2023-2024	Liberty	Middle Tennessee	88	53	134215	t	t
+2024-02-10	2023-2024	Liberty	Louisiana Tech	65	62	134216	t	t
+2024-02-17	2023-2024	Liberty	Sam Houston	83	73	134217	f	f
+2024-02-22	2023-2024	Liberty	Florida International	76	71	134218	f	f
+2024-02-29	2023-2024	Liberty	New Mexico State	83	58	134219	t	t
+2024-03-02	2023-2024	Liberty	UTEP	67	51	134220	f	t
+2024-03-05	2023-2024	Liberty	Middle Tennessee	69	61	134221	f	f
+2024-03-09	2023-2024	Liberty	Western Kentucky	82	79	134222	t	t
+2024-03-14	2023-2024	Liberty	UTEP	66	57	134223	f	t
+2023-11-06	2023-2024	Lipscomb	Wichita State	76	59	134224	f	f
+2023-11-08	2023-2024	Lipscomb	Drake	85	70	134225	f	f
+2023-11-11	2023-2024	Lipscomb	vsAsbury	113	74	134226	t	t
+2023-11-14	2023-2024	Lipscomb	Tennessee Tech	96	65	134227	t	f
+2023-11-18	2023-2024	Lipscomb	Alabama A&M	106	81	134228	t	t
+2023-11-24	2023-2024	Lipscomb	UNC Asheville	86	75	134229	t	t
+2023-11-25	2023-2024	Lipscomb	Bowling Green	82	61	134230	f	t
+2023-11-26	2023-2024	Lipscomb	Wofford	85	78	134231	t	t
+2023-11-29	2023-2024	Lipscomb	Chattanooga	82	68	134232	t	t
+2023-12-02	2023-2024	Lipscomb	UCF	72	57	134233	f	f
+2023-12-06	2023-2024	Lipscomb	Belmont	72	71	134234	f	f
+2023-12-10	2023-2024	Lipscomb	Tennessee State	78	71	134235	t	t
+2023-12-16	2023-2024	Lipscomb	Arkansas	69	66	134236	f	t
+2023-12-20	2023-2024	Lipscomb	vsBryan (TN)	101	55	134237	t	t
+2023-12-30	2023-2024	Lipscomb	Florida State	78	75	134238	t	f
+2024-01-04	2023-2024	Lipscomb	Eastern Kentucky	80	72	134239	f	f
+2024-01-06	2023-2024	Lipscomb	Bellarmine	81	70	134240	t	f
+2024-01-13	2023-2024	Lipscomb	Austin Peay	91	77	134241	t	t
+2024-01-18	2023-2024	Lipscomb	Central Arkansas	96	86	134242	f	t
+2024-01-20	2023-2024	Lipscomb	North Alabama	88	79	134243	t	t
+2024-01-25	2023-2024	Lipscomb	Florida Gulf Coast	98	72	134244	t	f
+2024-01-27	2023-2024	Lipscomb	Stetson	80	59	134245	f	f
+2024-01-31	2023-2024	Lipscomb	North Florida	85	76	134246	f	f
+2024-02-03	2023-2024	Lipscomb	Jacksonville State	84	82	134247	t	t
+2024-02-08	2023-2024	Lipscomb	Queens University	90	88	134248	t	t
+2024-02-10	2023-2024	Lipscomb	Kennesaw State	101	95	134249	t	t
+2024-02-15	2023-2024	Lipscomb	North Alabama	75	70	134250	f	f
+2024-02-17	2023-2024	Lipscomb	Central Arkansas	85	68	134251	t	f
+2024-02-24	2023-2024	Lipscomb	Austin Peay	90	85	134252	t	f
+2024-02-28	2023-2024	Lipscomb	Bellarmine	90	74	134253	t	t
+2024-03-01	2023-2024	Lipscomb	Eastern Kentucky	81	67	134254	t	t
+2024-03-05	2023-2024	Lipscomb	North Alabama	77	75	134255	f	t
+2023-11-06	2023-2024	Little Rock	Texas State	71	66	134256	t	t
+2023-11-10	2023-2024	Little Rock	UIC	86	71	134257	f	f
+2023-11-18	2023-2024	Little Rock	Northern Illinois	98	93	134258	f	t
+2023-11-19	2023-2024	Little Rock	Georgia State	88	77	134259	f	f
+2023-11-28	2023-2024	Little Rock	Ball State	90	64	134260	t	t
+2023-12-01	2023-2024	Little Rock	Arkansas State	77	66	134261	t	t
+2023-12-07	2023-2024	Little Rock	Central Arkansas	75	71	134262	f	f
+2023-12-10	2023-2024	Little Rock	Winthrop	85	68	134263	f	t
+2023-12-13	2023-2024	Little Rock	UTSA	93	84	134264	t	t
+2023-12-18	2023-2024	Little Rock	Murray State	80	66	134265	t	t
+2023-12-21	2023-2024	Little Rock	Jacksonville State	90	60	134266	f	t
+2023-12-28	2023-2024	Little Rock	Tennessee Tech	81	75	134267	t	f
+2023-12-30	2023-2024	Little Rock	Tennessee State	90	82	134268	f	f
+2024-01-04	2023-2024	Little Rock	SIU Edwardsville	88	80	134269	t	t
+2024-01-06	2023-2024	Little Rock	Eastern Illinois	90	88	134270	f	t
+2024-01-13	2023-2024	Little Rock	UT Martin	77	72	134271	f	f
+2024-01-18	2023-2024	Little Rock	Southern Indiana	77	75	134272	t	f
+2024-01-25	2023-2024	Little Rock	Lindenwood	80	66	134273	t	t
+2024-01-27	2023-2024	Little Rock	Southeast Missouri State	66	61	134274	t	t
+2024-02-01	2023-2024	Little Rock	SIU Edwardsville	68	66	134275	f	f
+2024-02-03	2023-2024	Little Rock	Eastern Illinois	71	47	134276	t	f
+2024-02-06	2023-2024	Little Rock	UT Martin	77	57	134277	t	t
+2024-02-08	2023-2024	Little Rock	Western Illinois	63	60	134278	t	f
+2024-02-15	2023-2024	Little Rock	Morehead State	69	68	134279	t	t
+2024-02-17	2023-2024	Little Rock	Southern Indiana	80	62	134280	t	t
+2024-02-22	2023-2024	Little Rock	Southeast Missouri State	83	61	134281	t	f
+2024-02-24	2023-2024	Little Rock	Lindenwood	82	73	134282	t	f
+2024-02-29	2023-2024	Little Rock	Tennessee State	85	60	134283	t	t
+2024-03-02	2023-2024	Little Rock	Tennessee Tech	81	43	134284	t	t
+2024-03-08	2023-2024	Little Rock	Western Illinois	82	57	134285	t	t
+2024-03-09	2023-2024	Little Rock	Morehead State	69	55	134286	f	t
+2023-11-06	2023-2024	Long Beach State	Portland	78	73	134287	f	f
+2023-11-11	2023-2024	Long Beach State	DePaul	77	73	134288	t	f
+2023-11-14	2023-2024	Long Beach State	San Diego State	88	76	134289	f	f
+2023-11-17	2023-2024	Long Beach State	Michigan	94	86	134290	t	f
+2023-11-20	2023-2024	Long Beach State	Illinois State	61	52	134291	f	t
+2023-11-21	2023-2024	Long Beach State	Iona	80	76	134292	t	t
+2023-11-22	2023-2024	Long Beach State	Louisiana	92	82	134293	f	t
+2023-11-26	2023-2024	Long Beach State	Montana State	75	69	134294	t	f
+2023-12-02	2023-2024	Long Beach State	Sacramento State	83	73	134295	t	t
+2023-12-06	2023-2024	Long Beach State	vsLife Pacific	88	66	134296	t	t
+2023-12-19	2023-2024	Long Beach State	vsCS Dominguez Hills	107	78	134297	t	t
+2023-12-28	2023-2024	Long Beach State	Cal State Fullerton	81	71	134298	t	f
+2023-12-30	2023-2024	Long Beach State	Cal State Northridge	84	68	134299	f	t
+2024-01-04	2023-2024	Long Beach State	Cal Poly	89	82	134300	t	f
+2024-01-06	2023-2024	Long Beach State	UC Riverside	83	75	134301	t	t
+2024-01-11	2023-2024	Long Beach State	UC San Diego	88	74	134302	f	f
+2024-01-13	2023-2024	Long Beach State	UC Santa Barbara	85	76	134303	f	f
+2024-01-18	2023-2024	Long Beach State	Hawai'i	79	71	134304	t	t
+2024-01-25	2023-2024	Long Beach State	UC Irvine	72	61	134305	f	t
+2024-01-27	2023-2024	Long Beach State	UC Riverside	65	53	134306	t	f
+2024-02-03	2023-2024	Long Beach State	UC San Diego	85	76	134307	t	t
+2024-02-10	2023-2024	Long Beach State	Cal Poly	77	68	134308	t	t
+2024-02-15	2023-2024	Long Beach State	UC Davis	78	74	134309	t	f
+2024-02-17	2023-2024	Long Beach State	Cal State Northridge	87	73	134310	t	f
+2024-02-22	2023-2024	Long Beach State	Cal State Bakersfield	79	66	134311	t	t
+2024-02-24	2023-2024	Long Beach State	Hawai'i	73	65	134312	f	f
+2024-02-29	2023-2024	Long Beach State	Cal State Fullerton	76	71	134313	f	t
+2024-03-02	2023-2024	Long Beach State	UC Irvine	82	61	134314	f	f
+2024-03-07	2023-2024	Long Beach State	UC Santa Barbara	76	74	134315	f	t
+2024-03-09	2023-2024	Long Beach State	UC Davis	88	78	134316	f	t
+2024-03-14	2023-2024	Long Beach State	UC Riverside	86	67	134317	t	t
+2024-03-15	2023-2024	Long Beach State	UC Irvine	83	79	134318	t	t
+2024-03-16	2023-2024	Long Beach State	UC Davis	74	70	134319	t	t
+2023-11-10	2023-2024	Long Island	Air Force	82	67	134320	f	t
+2023-11-13	2023-2024	Long Island	Pepperdine	88	53	134321	f	f
+2023-11-15	2023-2024	Long Island	UCLA	78	58	134322	f	f
+2023-11-21	2023-2024	Long Island	Columbia	77	67	134323	f	f
+2023-11-24	2023-2024	Long Island	Texas A&M-Corpus Christi	83	68	134324	t	t
+2023-11-25	2023-2024	Long Island	Northern Kentucky	72	64	134325	f	f
+2023-12-02	2023-2024	Long Island	Florida International	74	59	134326	f	f
+2023-12-06	2023-2024	Long Island	15 Miami	97	49	134327	f	f
+2023-12-12	2023-2024	Long Island	UMass Lowell	78	65	134328	f	f
+2023-12-16	2023-2024	Long Island	Rutgers	83	61	134329	f	f
+2023-12-23	2023-2024	Long Island	Mount St. Mary's	87	59	134330	f	f
+2023-12-28	2023-2024	Long Island	UAlbany	86	69	134331	f	t
+2024-01-04	2023-2024	Long Island	Wagner	69	67	134332	t	t
+2024-01-06	2023-2024	Long Island	Stonehill	73	68	134333	t	f
+2024-01-13	2023-2024	Long Island	Sacred Heart	89	55	134334	f	f
+2024-01-19	2023-2024	Long Island	St. Francis (PA)	72	66	134335	f	f
+2024-01-21	2023-2024	Long Island	Central Connecticut	72	63	134336	f	t
+2024-01-25	2023-2024	Long Island	Stonehill	63	60	134337	t	t
+2024-01-27	2023-2024	Long Island	Le Moyne	87	74	134338	f	f
+2024-02-01	2023-2024	Long Island	Fairleigh Dickinson	82	75	134339	f	f
+2024-02-03	2023-2024	Long Island	St. Francis (PA)	70	67	134340	t	t
+2024-02-10	2023-2024	Long Island	Sacred Heart	75	58	134341	t	t
+2024-02-17	2023-2024	Long Island	Merrimack	83	68	134342	f	f
+2024-02-22	2023-2024	Long Island	Le Moyne	76	64	134343	t	t
+2024-02-25	2023-2024	Long Island	Wagner	72	57	134344	f	f
+2024-02-29	2023-2024	Long Island	Central Connecticut	78	64	134345	f	f
+2024-03-06	2023-2024	Long Island	Merrimack	72	66	134346	f	f
+2023-11-06	2023-2024	Longwood	St. Bonaventure	73	69	134347	f	f
+2023-11-11	2023-2024	Longwood	vsSt. Mary's (MD)	95	43	134348	t	t
+2023-11-15	2023-2024	Longwood	Maryland-Eastern Shore	80	61	134349	t	f
+2023-11-18	2023-2024	Longwood	North Carolina Central	73	66	134350	t	t
+2023-11-25	2023-2024	Longwood	Lamar	83	72	134351	t	t
+2023-11-26	2023-2024	Longwood	Bethune-Cookman	69	48	134352	t	t
+2023-11-30	2023-2024	Longwood	vsApprentice School	95	46	134353	t	t
+2023-12-03	2023-2024	Longwood	Morgan State	88	54	134354	t	f
+2023-12-09	2023-2024	Longwood	Delaware State	62	61	134355	t	f
+2023-12-11	2023-2024	Longwood	vsGallaudet	92	61	134356	t	t
+2023-12-13	2023-2024	Longwood	Milwaukee	80	67	134357	t	f
+2023-12-17	2023-2024	Longwood	VMI	68	49	134358	t	t
+2023-12-20	2023-2024	Longwood	North Carolina Central	79	70	134359	f	f
+2023-12-30	2023-2024	Longwood	Dayton	78	69	134360	f	f
+2024-01-06	2023-2024	Longwood	Charleston Southern	77	56	134361	t	t
+2024-01-11	2023-2024	Longwood	Radford	69	58	134362	f	t
+2024-01-13	2023-2024	Longwood	UNC Asheville	65	61	134363	f	f
+2024-01-17	2023-2024	Longwood	South Carolina Upstate	73	71	134364	f	f
+2024-01-20	2023-2024	Longwood	Presbyterian	80	70	134365	t	t
+2024-01-24	2023-2024	Longwood	Gardner-Webb	76	64	134366	f	t
+2024-02-01	2023-2024	Longwood	High Point	93	76	134367	f	f
+2024-02-03	2023-2024	Longwood	Charleston Southern	83	77	134368	f	f
+2024-02-07	2023-2024	Longwood	South Carolina Upstate	69	64	134369	f	t
+2024-02-10	2023-2024	Longwood	Winthrop	84	74	134370	t	t
+2024-02-17	2023-2024	Longwood	Presbyterian	81	73	134371	t	f
+2024-02-21	2023-2024	Longwood	UNC Asheville	80	75	134372	t	t
+2024-02-24	2023-2024	Longwood	Radford	88	82	134373	f	f
+2024-02-29	2023-2024	Longwood	Gardner-Webb	72	69	134374	f	f
+2024-03-02	2023-2024	Longwood	High Point	74	72	134375	t	t
+2024-03-08	2023-2024	Longwood	Winthrop	69	56	134376	t	t
+2024-03-10	2023-2024	Longwood	UNC Asheville	85	59	134377	t	t
+2023-11-06	2023-2024	Louisiana	Youngstown State	72	62	134378	t	t
+2023-11-11	2023-2024	Louisiana	Toledo	87	78	134379	f	f
+2023-11-15	2023-2024	Louisiana	vsLouisiana Christian	107	56	134380	t	t
+2023-11-20	2023-2024	Louisiana	Wright State	91	85	134381	f	t
+2023-11-21	2023-2024	Louisiana	Buffalo	68	60	134382	t	t
+2023-11-22	2023-2024	Louisiana	Long Beach State	92	82	134383	t	t
+2023-11-27	2023-2024	Louisiana	vsLoyola New Orleans	78	54	134384	t	t
+2023-11-30	2023-2024	Louisiana	Samford	88	65	134385	f	f
+2023-12-09	2023-2024	Louisiana	Louisiana Tech	72	67	134386	f	f
+2023-12-13	2023-2024	Louisiana	Eastern Kentucky	73	62	134387	t	t
+2023-12-17	2023-2024	Louisiana	McNeese	74	72	134388	f	f
+2023-12-22	2023-2024	Louisiana	Rice	84	67	134389	t	f
+2023-12-30	2023-2024	Louisiana	Marshall	75	61	134390	f	f
+2024-01-04	2023-2024	Louisiana	19 James Madison	68	61	134391	f	t
+2024-01-06	2023-2024	Louisiana	Coastal Carolina	85	77	134392	t	t
+2024-01-10	2023-2024	Louisiana	Troy	79	73	134393	f	f
+2024-01-13	2023-2024	Louisiana	Arkansas State	84	77	134394	t	f
+2024-01-17	2023-2024	Louisiana	Texas State	86	68	134395	t	f
+2024-01-20	2023-2024	Louisiana	South Alabama	88	79	134396	t	f
+2024-01-26	2023-2024	Louisiana	Arkansas State	81	75	134397	t	t
+2024-01-28	2023-2024	Louisiana	Texas State	66	46	134398	t	t
+2024-01-31	2023-2024	Louisiana	UL Monroe	80	72	134399	t	t
+2024-02-03	2023-2024	Louisiana	South Alabama	80	60	134400	t	t
+2024-02-07	2023-2024	Louisiana	Georgia State	78	69	134401	f	t
+2024-02-11	2023-2024	Louisiana	Bowling Green	86	60	134402	t	t
+2024-02-15	2023-2024	Louisiana	Old Dominion	68	60	134403	t	f
+2024-02-17	2023-2024	Louisiana	Appalachian State	85	73	134404	f	f
+2024-02-22	2023-2024	Louisiana	UL Monroe	66	59	134405	f	f
+2024-02-24	2023-2024	Louisiana	Southern Miss	82	71	134406	f	f
+2024-02-28	2023-2024	Louisiana	Troy	87	73	134407	f	t
+2024-03-01	2023-2024	Louisiana	Southern Miss	77	61	134408	t	t
+2024-03-07	2023-2024	Louisiana	Coastal Carolina	80	66	134409	t	t
+2024-03-09	2023-2024	Louisiana	Arkansas State	89	62	134410	f	t
+2023-11-06	2023-2024	Louisiana Tech	Colorado State	81	73	134411	f	f
+2023-11-13	2023-2024	Louisiana Tech	vsLyon	100	43	134412	t	t
+2023-11-16	2023-2024	Louisiana Tech	UL Monroe	73	63	134413	t	f
+2023-11-21	2023-2024	Louisiana Tech	Southern Utah	67	53	134414	t	t
+2023-11-22	2023-2024	Louisiana Tech	McNeese	71	62	134415	t	t
+2023-11-25	2023-2024	Louisiana Tech	vsDillard	105	65	134416	t	t
+2023-11-29	2023-2024	Louisiana Tech	New Mexico	74	65	134417	f	f
+2023-12-02	2023-2024	Louisiana Tech	Nicholls	68	55	134418	t	t
+2023-12-05	2023-2024	Louisiana Tech	Stephen F. Austin	56	49	134419	t	f
+2023-12-09	2023-2024	Louisiana Tech	Louisiana	72	67	134420	t	t
+2023-12-12	2023-2024	Louisiana Tech	SE Louisiana	89	60	134421	t	t
+2023-12-16	2023-2024	Louisiana Tech	Saint Louis	75	74	134422	f	f
+2023-12-30	2023-2024	Louisiana Tech	Grand Canyon	73	70	134423	f	f
+2024-01-03	2023-2024	Louisiana Tech	vsDallas Christian	96	55	134424	t	t
+2024-01-06	2023-2024	Louisiana Tech	Sam Houston	81	77	134425	f	f
+2024-01-11	2023-2024	Louisiana Tech	Middle Tennessee	60	52	134426	t	f
+2024-01-20	2023-2024	Louisiana Tech	Jacksonville State	74	57	134427	t	f
+2024-01-25	2023-2024	Louisiana Tech	UTEP	68	54	134428	t	t
+2024-01-27	2023-2024	Louisiana Tech	New Mexico State	73	53	134429	t	t
+2024-02-01	2023-2024	Louisiana Tech	Florida International	93	53	134430	t	f
+2024-02-07	2023-2024	Louisiana Tech	Western Kentucky	81	76	134431	f	t
+2024-02-10	2023-2024	Louisiana Tech	Liberty	65	62	134432	f	f
+2024-02-15	2023-2024	Louisiana Tech	Jacksonville State	63	58	134433	t	t
+2024-02-17	2023-2024	Louisiana Tech	Florida International	75	68	134434	t	t
+2024-02-22	2023-2024	Louisiana Tech	UTEP	65	59	134435	t	f
+2024-02-24	2023-2024	Louisiana Tech	New Mexico State	67	58	134436	t	f
+2024-02-28	2023-2024	Louisiana Tech	Western Kentucky	90	84	134437	t	f
+2024-03-07	2023-2024	Louisiana Tech	Sam Houston	72	66	134438	f	t
+2024-03-09	2023-2024	Louisiana Tech	Middle Tennessee	84	70	134439	t	t
+2024-03-13	2023-2024	Louisiana Tech	Middle Tennessee	70	67	134440	f	t
+2023-11-06	2023-2024	Louisville	UMBC	94	93	134441	t	t
+2023-11-10	2023-2024	Louisville	Chattanooga	81	71	134442	f	t
+2023-11-15	2023-2024	Louisville	Coppin State	61	41	134443	t	t
+2023-11-19	2023-2024	Louisville	19 Texas	81	80	134444	f	t
+2023-11-20	2023-2024	Louisville	Indiana	74	66	134445	f	t
+2023-11-29	2023-2024	Louisville	Bellarmine	73	68	134446	t	t
+2023-12-03	2023-2024	Louisville	Virginia Tech	75	68	134447	f	f
+2023-12-09	2023-2024	Louisville	DePaul	75	68	134448	f	f
+2023-12-13	2023-2024	Louisville	Arkansas State	75	63	134449	f	t
+2023-12-17	2023-2024	Louisville	Pepperdine	85	63	134450	t	t
+2023-12-21	2023-2024	Louisville	9 Kentucky	95	76	134451	f	t
+2024-01-03	2023-2024	Louisville	Virginia	77	53	134452	f	f
+2024-01-06	2023-2024	Louisville	Pittsburgh	83	70	134453	f	t
+2024-01-10	2023-2024	Louisville	Miami	80	71	134454	t	f
+2024-01-13	2023-2024	Louisville	NC State	89	83	134455	f	t
+2024-01-17	2023-2024	Louisville	4 North Carolina	86	70	134456	f	f
+2024-01-20	2023-2024	Louisville	Wake Forest	90	65	134457	f	f
+2024-01-23	2023-2024	Louisville	12 Duke	83	69	134458	f	t
+2024-01-27	2023-2024	Louisville	Virginia	69	52	134459	f	t
+2024-01-30	2023-2024	Louisville	Clemson	70	64	134460	f	f
+2024-02-03	2023-2024	Louisville	Florida State	101	92	134461	t	t
+2024-02-07	2023-2024	Louisville	Syracuse	94	92	134462	f	f
+2024-02-10	2023-2024	Louisville	Georgia Tech	79	67	134463	t	t
+2024-02-13	2023-2024	Louisville	Boston College	89	77	134464	f	f
+2024-02-17	2023-2024	Louisville	Pittsburgh	86	59	134465	f	f
+2024-02-21	2023-2024	Louisville	Notre Dame	72	50	134466	f	t
+2024-02-28	2023-2024	Louisville	10 Duke	84	59	134467	f	f
+2024-03-02	2023-2024	Louisville	Syracuse	82	76	134468	f	t
+2024-03-05	2023-2024	Louisville	Virginia Tech	80	64	134469	f	t
+2024-03-09	2023-2024	Louisville	Boston College	67	61	134470	f	t
+2024-03-12	2023-2024	Louisville	NC State	94	85	134471	f	t
+2023-11-08	2023-2024	Loyola Chicago	10 Florida Atlantic	75	62	134472	f	t
+2023-11-11	2023-2024	Loyola Chicago	Eastern Illinois	89	65	134473	t	t
+2023-11-14	2023-2024	Loyola Chicago	UIC	72	67	134474	f	t
+2023-11-18	2023-2024	Loyola Chicago	New Orleans	73	70	134475	t	t
+2023-11-22	2023-2024	Loyola Chicago	8 Creighton	88	65	134476	f	t
+2023-11-23	2023-2024	Loyola Chicago	Boston College	71	68	134477	t	t
+2023-11-28	2023-2024	Loyola Chicago	Chicago State	62	53	134478	t	t
+2023-12-02	2023-2024	Loyola Chicago	Harvard	75	53	134479	t	t
+2023-12-05	2023-2024	Loyola Chicago	Tulsa	88	77	134480	f	f
+2023-12-09	2023-2024	Loyola Chicago	vsGoshen	115	64	134481	t	t
+2023-12-16	2023-2024	Loyola Chicago	South Florida	77	64	134482	f	f
+2023-12-19	2023-2024	Loyola Chicago	Charleston Southern	72	59	134483	t	t
+2023-12-30	2023-2024	Loyola Chicago	Central Michigan	73	35	134484	t	t
+2024-01-03	2023-2024	Loyola Chicago	Saint Louis	80	73	134485	t	f
+2024-01-06	2023-2024	Loyola Chicago	Duquesne	72	67	134486	t	t
+2024-01-09	2023-2024	Loyola Chicago	Richmond	58	56	134487	f	t
+2024-01-13	2023-2024	Loyola Chicago	Saint Joseph's	78	75	134488	t	f
+2024-01-17	2023-2024	Loyola Chicago	Massachusetts	79	78	134489	t	t
+2024-01-20	2023-2024	Loyola Chicago	Fordham	65	61	134490	t	f
+2024-01-23	2023-2024	Loyola Chicago	VCU	74	67	134491	f	f
+2024-01-30	2023-2024	Loyola Chicago	Saint Louis	77	62	134492	t	t
+2024-02-04	2023-2024	Loyola Chicago	Davidson	76	63	134493	t	t
+2024-02-07	2023-2024	Loyola Chicago	George Mason	85	79	134494	t	f
+2024-02-10	2023-2024	Loyola Chicago	George Washington	81	73	134495	t	f
+2024-02-14	2023-2024	Loyola Chicago	Saint Joseph's	64	59	134496	t	t
+2024-02-18	2023-2024	Loyola Chicago	Rhode Island	77	67	134497	t	f
+2024-02-24	2023-2024	Loyola Chicago	George Mason	80	59	134498	t	t
+2024-02-27	2023-2024	Loyola Chicago	St. Bonaventure	79	64	134499	f	f
+2024-03-01	2023-2024	Loyola Chicago	21 Dayton	77	72	134500	t	t
+2024-03-06	2023-2024	Loyola Chicago	Davidson	69	59	134501	t	f
+2024-03-09	2023-2024	Loyola Chicago	La Salle	64	54	134502	t	t
+2023-11-06	2023-2024	Loyola MD	Florida	93	73	134503	f	f
+2023-11-15	2023-2024	Loyola MD	Binghamton	63	57	134504	f	t
+2023-11-18	2023-2024	Loyola MD	Sacred Heart	66	51	134505	f	t
+2023-11-19	2023-2024	Loyola MD	UMBC	94	79	134506	f	f
+2023-11-25	2023-2024	Loyola MD	Missouri	78	70	134507	f	f
+2023-11-29	2023-2024	Loyola MD	Columbia	69	57	134508	f	f
+2023-12-06	2023-2024	Loyola MD	La Salle	62	61	134509	f	f
+2023-12-09	2023-2024	Loyola MD	Mount St. Mary's	77	64	134510	f	t
+2023-12-16	2023-2024	Loyola MD	George Mason	62	54	134511	f	f
+2023-12-22	2023-2024	Loyola MD	vsSt. Mary's (MD)	91	57	134512	t	t
+2023-12-29	2023-2024	Loyola MD	Saint Joseph's	97	56	134513	f	f
+2024-01-03	2023-2024	Loyola MD	Colgate	78	55	134514	f	f
+2024-01-06	2023-2024	Loyola MD	Lehigh	88	76	134515	f	t
+2024-01-10	2023-2024	Loyola MD	Army	71	65	134516	t	f
+2024-01-13	2023-2024	Loyola MD	Boston University	60	58	134517	f	t
+2024-01-15	2023-2024	Loyola MD	American University	66	52	134518	f	t
+2024-01-20	2023-2024	Loyola MD	Holy Cross	86	78	134519	f	f
+2024-01-24	2023-2024	Loyola MD	Louisiana-Lafayette	70	44	134520	f	t
+2024-01-27	2023-2024	Loyola MD	Navy	74	70	134521	t	f
+2024-01-31	2023-2024	Loyola MD	Bucknell	67	52	134522	f	f
+2024-02-03	2023-2024	Loyola MD	Holy Cross	70	67	134523	f	t
+2024-02-07	2023-2024	Loyola MD	American University	44	43	134524	t	f
+2024-02-10	2023-2024	Loyola MD	Colgate	76	62	134525	f	t
+2024-02-14	2023-2024	Loyola MD	Louisiana-Lafayette	79	64	134526	t	f
+2024-02-17	2023-2024	Loyola MD	Lehigh	75	70	134527	f	f
+2024-02-21	2023-2024	Loyola MD	Navy	69	62	134528	f	t
+2024-02-28	2023-2024	Loyola MD	Bucknell	68	46	134529	f	t
+2024-03-02	2023-2024	Loyola MD	Army	69	68	134530	t	t
+2024-03-05	2023-2024	Loyola MD	Navy	64	48	134531	f	f
+2023-11-07	2023-2024	LMU	vsWestcliff	109	68	134532	t	t
+2023-11-12	2023-2024	LMU	Yale	83	80	134533	f	t
+2023-11-14	2023-2024	LMU	Jackson State	88	66	134534	t	t
+2023-11-19	2023-2024	LMU	Stephen F. Austin	86	76	134535	f	t
+2023-11-20	2023-2024	LMU	Oakland	74	69	134536	f	t
+2023-11-21	2023-2024	LMU	Florida International	61	60	134537	t	t
+2023-11-25	2023-2024	LMU	UTEP	67	47	134538	t	t
+2023-11-29	2023-2024	LMU	Central Arkansas	90	63	134539	t	t
+2023-12-02	2023-2024	LMU	Nevada	73	59	134540	f	f
+2023-12-09	2023-2024	LMU	UNLV	78	75	134541	t	t
+2023-12-16	2023-2024	LMU	UC Santa Barbara	68	59	134542	f	t
+2023-12-18	2023-2024	LMU	Detroit Mercy	76	56	134543	t	t
+2023-12-22	2023-2024	LMU	16 Colorado State	76	67	134544	f	t
+2023-12-29	2023-2024	LMU	Tarleton State	79	66	134545	f	t
+2024-01-04	2023-2024	LMU	Santa Clara	68	57	134546	f	t
+2024-01-06	2023-2024	LMU	St. Mary's	68	64	134547	f	t
+2024-01-13	2023-2024	LMU	Pacific	81	64	134548	t	t
+2024-01-18	2023-2024	LMU	San Francisco	90	74	134549	f	f
+2024-01-20	2023-2024	LMU	Pepperdine	68	61	134550	t	f
+2024-01-25	2023-2024	LMU	Portland	92	65	134551	t	t
+2024-01-27	2023-2024	LMU	St. Mary's	70	65	134552	f	f
+2024-01-30	2023-2024	LMU	Gonzaga	92	58	134553	f	f
+2024-02-07	2023-2024	LMU	San Diego	79	77	134554	f	f
+2024-02-10	2023-2024	LMU	Pepperdine	72	63	134555	f	t
+2024-02-15	2023-2024	LMU	Gonzaga	91	74	134556	f	t
+2024-02-17	2023-2024	LMU	San Francisco	82	59	134557	f	t
+2024-02-22	2023-2024	LMU	Santa Clara	65	55	134558	f	f
+2024-02-24	2023-2024	LMU	Pacific	86	63	134559	t	f
+2024-02-29	2023-2024	LMU	San Diego	96	62	134560	t	t
+2024-03-02	2023-2024	LMU	Portland	70	60	134561	f	f
+2024-03-08	2023-2024	LMU	Portland	78	70	134562	f	t
+2023-11-06	2023-2024	Maine	Charlotte	69	52	134563	f	f
+2023-11-08	2023-2024	Maine	vsMaine-Presque Isle	111	59	134564	t	t
+2023-11-12	2023-2024	Maine	Merrimack	71	65	134565	f	t
+2023-11-16	2023-2024	Maine	Northwestern State	78	65	134566	t	t
+2023-11-17	2023-2024	Maine	Presbyterian	80	66	134567	t	t
+2023-11-18	2023-2024	Maine	North Florida	67	58	134568	f	f
+2023-11-22	2023-2024	Maine	South Florida	70	59	134569	t	f
+2023-11-25	2023-2024	Maine	Columbia	75	56	134570	f	f
+2023-11-29	2023-2024	Maine	Holy Cross	72	57	134571	t	f
+2023-12-03	2023-2024	Maine	Brown	60	49	134572	t	t
+2023-12-06	2023-2024	Maine	Boston University	74	65	134573	t	f
+2023-12-09	2023-2024	Maine	Central Connecticut	69	56	134574	t	t
+2023-12-18	2023-2024	Maine	UCF	74	51	134575	f	f
+2023-12-21	2023-2024	Maine	Florida International	82	74	134576	f	f
+2023-12-29	2023-2024	Maine	Minnesota	80	62	134577	f	f
+2024-01-06	2023-2024	Maine	Vermont	65	58	134578	f	f
+2024-01-11	2023-2024	Maine	New Hampshire	79	74	134579	f	t
+2024-01-18	2023-2024	Maine	UMBC	70	65	134580	f	f
+2024-01-20	2023-2024	Maine	NJIT	70	64	134581	t	f
+2024-01-25	2023-2024	Maine	UAlbany	81	73	134582	t	t
+2024-01-27	2023-2024	Maine	Binghamton	51	50	134583	f	t
+2024-02-01	2023-2024	Maine	UMass Lowell	76	62	134584	f	f
+2024-02-03	2023-2024	Maine	Bryant	79	72	134585	t	t
+2024-02-10	2023-2024	Maine	New Hampshire	60	57	134586	f	f
+2024-02-15	2023-2024	Maine	Bryant	77	72	134587	f	f
+2024-02-17	2023-2024	Maine	Vermont	68	57	134588	f	t
+2024-02-22	2023-2024	Maine	UMBC	62	56	134589	t	t
+2024-02-24	2023-2024	Maine	NJIT	68	58	134590	t	t
+2024-03-05	2023-2024	Maine	UMass Lowell	71	65	134591	t	t
+2024-03-09	2023-2024	Maine	Bryant	84	58	134592	f	f
+2023-11-06	2023-2024	Manhattan	Bryant	61	59	134593	t	f
+2023-11-10	2023-2024	Manhattan	1 Kansas	99	61	134594	f	f
+2023-11-16	2023-2024	Manhattan	vsFelician	79	67	134595	t	t
+2023-11-19	2023-2024	Manhattan	Central Connecticut	67	63	134596	t	f
+2023-11-24	2023-2024	Manhattan	5 UConn	90	60	134597	f	f
+2023-11-27	2023-2024	Manhattan	Fordham	93	61	134598	f	f
+2023-12-03	2023-2024	Manhattan	Marist	70	56	134599	f	f
+2023-12-08	2023-2024	Manhattan	Fairleigh Dickinson	76	71	134600	f	t
+2023-12-21	2023-2024	Manhattan	Monmouth	77	71	134601	f	f
+2023-12-30	2023-2024	Manhattan	Wagner	68	56	134602	f	t
+2024-01-05	2023-2024	Manhattan	Niagara	81	67	134603	f	t
+2024-01-07	2023-2024	Manhattan	Quinnipiac	76	59	134604	f	f
+2024-01-12	2023-2024	Manhattan	Rider	71	58	134605	f	f
+2024-01-14	2023-2024	Manhattan	Saint Peter's	81	68	134606	f	t
+2024-01-21	2023-2024	Manhattan	Fairfield	82	75	134607	f	t
+2024-01-26	2023-2024	Manhattan	Canisius	82	70	134608	f	f
+2024-02-02	2023-2024	Manhattan	Quinnipiac	77	71	134609	f	t
+2024-02-04	2023-2024	Manhattan	Fairfield	77	68	134610	f	f
+2024-02-08	2023-2024	Manhattan	Mount St. Mary's	82	78	134611	f	f
+2024-02-10	2023-2024	Manhattan	Siena	68	63	134612	f	t
+2024-02-16	2023-2024	Manhattan	Iona	73	63	134613	f	f
+2024-02-18	2023-2024	Manhattan	Rider	104	62	134614	f	t
+2024-02-23	2023-2024	Manhattan	Marist	57	50	134615	f	t
+2024-03-01	2023-2024	Manhattan	Siena	70	68	134616	t	f
+2024-03-03	2023-2024	Manhattan	Saint Peter's	89	57	134617	f	f
+2024-03-07	2023-2024	Manhattan	Iona	77	60	134618	t	t
+2024-03-12	2023-2024	Manhattan	Iona	60	57	134619	f	t
+2023-11-06	2023-2024	Marist	Army	71	55	134620	t	f
+2023-11-11	2023-2024	Marist	UMBC	65	59	134621	t	f
+2023-11-18	2023-2024	Marist	Binghamton	82	59	134622	f	f
+2023-11-21	2023-2024	Marist	New Hampshire	74	71	134623	f	f
+2023-11-25	2023-2024	Marist	Bucknell	73	49	134624	t	t
+2023-11-29	2023-2024	Marist	Iona	68	64	134625	t	f
+2023-12-03	2023-2024	Marist	Manhattan	70	56	134626	t	t
+2023-12-09	2023-2024	Marist	Dartmouth	63	53	134627	t	f
+2023-12-18	2023-2024	Marist	Maryland-Eastern Shore	76	52	134628	t	t
+2023-12-22	2023-2024	Marist	Notre Dame	60	56	134629	f	f
+2023-12-30	2023-2024	Marist	Lehigh	65	58	134630	f	t
+2024-01-07	2023-2024	Marist	Fairfield	82	61	134631	f	f
+2024-01-12	2023-2024	Marist	Quinnipiac	66	55	134632	f	t
+2024-01-14	2023-2024	Marist	Rider	83	60	134633	t	t
+2024-01-19	2023-2024	Marist	Mount St. Mary's	65	48	134634	f	f
+2024-01-21	2023-2024	Marist	Siena	50	48	134635	t	t
+2024-01-26	2023-2024	Marist	Niagara	67	62	134636	f	f
+2024-01-28	2023-2024	Marist	Canisius	80	71	134637	t	f
+2024-02-02	2023-2024	Marist	Mount St. Mary's	76	58	134638	f	t
+2024-02-04	2023-2024	Marist	Saint Peter's	63	52	134639	t	t
+2024-02-08	2023-2024	Marist	Siena	67	51	134640	t	f
+2024-02-10	2023-2024	Marist	Rider	77	62	134641	t	f
+2024-02-16	2023-2024	Marist	Canisius	78	55	134642	t	t
+2024-02-23	2023-2024	Marist	Manhattan	57	50	134643	t	f
+2024-02-25	2023-2024	Marist	Saint Peter's	69	60	134644	f	f
+2024-03-01	2023-2024	Marist	Fairfield	58	55	134645	t	t
+2024-03-03	2023-2024	Marist	Iona	71	64	134646	f	t
+2024-03-07	2023-2024	Marist	Quinnipiac	73	64	134647	f	f
+2024-03-09	2023-2024	Marist	Niagara	63	62	134648	t	t
+2024-03-14	2023-2024	Marist	Niagara	65	59	134649	t	t
+2024-03-15	2023-2024	Marist	Fairfield	65	61	134650	f	t
+2023-11-06	2023-2024	Marquette	Northern Illinois	92	70	134651	t	t
+2023-11-10	2023-2024	Marquette	Rider	95	65	134652	t	t
+2023-11-14	2023-2024	Marquette	23 Illinois	71	64	134653	t	f
+2023-11-20	2023-2024	Marquette	UCLA	71	69	134654	t	t
+2023-11-21	2023-2024	Marquette	1 Kansas	73	59	134655	t	t
+2023-11-22	2023-2024	Marquette	2 Purdue	78	75	134656	f	t
+2023-11-28	2023-2024	Marquette	Southern	93	56	134657	t	t
+2023-12-02	2023-2024	Marquette	Wisconsin	75	64	134658	f	f
+2023-12-06	2023-2024	Marquette	12 Texas	86	65	134659	t	t
+2023-12-09	2023-2024	Marquette	Notre Dame	78	59	134660	t	t
+2023-12-14	2023-2024	Marquette	St. Thomas-Minnesota	84	79	134661	t	t
+2023-12-19	2023-2024	Marquette	Providence	72	57	134662	f	f
+2023-12-22	2023-2024	Marquette	Georgetown	81	51	134663	t	t
+2023-12-30	2023-2024	Marquette	22 Creighton	72	67	134664	t	t
+2024-01-06	2023-2024	Marquette	Seton Hall	78	75	134665	f	f
+2024-01-10	2023-2024	Marquette	Butler	69	62	134666	f	t
+2024-01-15	2023-2024	Marquette	Villanova	87	74	134667	t	t
+2024-01-20	2023-2024	Marquette	St. John's	73	72	134668	t	f
+2024-01-24	2023-2024	Marquette	DePaul	86	73	134669	t	f
+2024-01-27	2023-2024	Marquette	Seton Hall	75	57	134670	t	t
+2024-01-30	2023-2024	Marquette	Villanova	85	80	134671	t	f
+2024-02-03	2023-2024	Marquette	Georgetown	91	57	134672	t	f
+2024-02-10	2023-2024	Marquette	St. John's	86	75	134673	t	t
+2024-02-13	2023-2024	Marquette	Butler	78	72	134674	t	f
+2024-02-17	2023-2024	Marquette	1 UConn	81	53	134675	f	f
+2024-02-21	2023-2024	Marquette	DePaul	105	71	134676	t	t
+2024-02-25	2023-2024	Marquette	Xavier	88	64	134677	t	t
+2024-02-28	2023-2024	Marquette	Providence	91	69	134678	t	t
+2024-03-02	2023-2024	Marquette	12 Creighton	89	75	134679	f	f
+2024-03-06	2023-2024	Marquette	2 UConn	74	67	134680	f	t
+2024-03-09	2023-2024	Marquette	Xavier	86	80	134681	t	f
+2024-03-15	2023-2024	Marquette	Providence	79	68	134682	t	t
+2024-03-16	2023-2024	Marquette	2 UConn	73	57	134683	f	t
+2023-11-06	2023-2024	Marshall	Queens University	89	73	134684	t	t
+2023-11-10	2023-2024	Marshall	Radford	66	62	134685	f	t
+2023-11-19	2023-2024	Marshall	Utah State	83	60	134686	f	t
+2023-11-20	2023-2024	Marshall	Florida International	80	69	134687	t	t
+2023-11-21	2023-2024	Marshall	Oakland	78	71	134688	f	t
+2023-11-24	2023-2024	Marshall	16 Kentucky	118	82	134689	f	f
+2023-12-02	2023-2024	Marshall	Miami (OH)	79	74	134690	f	t
+2023-12-06	2023-2024	Marshall	Duquesne	85	72	134691	f	t
+2023-12-09	2023-2024	Marshall	Ohio	74	69	134692	t	f
+2023-12-13	2023-2024	Marshall	Toledo	88	87	134693	f	f
+2023-12-16	2023-2024	Marshall	UNC Greensboro	72	65	134694	t	t
+2023-12-18	2023-2024	Marshall	vsBluefield University	103	70	134695	t	t
+2023-12-21	2023-2024	Marshall	UNC Wilmington	78	69	134696	f	t
+2023-12-30	2023-2024	Marshall	Louisiana	75	61	134697	t	t
+2024-01-03	2023-2024	Marshall	UL Monroe	68	57	134698	t	f
+2024-01-06	2023-2024	Marshall	Texas State	79	75	134699	t	f
+2024-01-10	2023-2024	Marshall	Georgia Southern	79	74	134700	t	t
+2024-01-13	2023-2024	Marshall	South Alabama	91	85	134701	f	t
+2024-01-18	2023-2024	Marshall	Old Dominion	91	66	134702	f	f
+2024-01-20	2023-2024	Marshall	James Madison	67	52	134703	f	f
+2024-01-24	2023-2024	Marshall	Georgia State	77	68	134704	t	t
+2024-01-27	2023-2024	Marshall	Southern Miss	83	67	134705	t	t
+2024-02-01	2023-2024	Marshall	Old Dominion	83	76	134706	f	t
+2024-02-03	2023-2024	Marshall	Coastal Carolina	91	74	134707	t	t
+2024-02-07	2023-2024	Marshall	Troy	82	66	134708	f	f
+2024-02-15	2023-2024	Marshall	Appalachian State	73	58	134709	f	f
+2024-02-17	2023-2024	Marshall	Coastal Carolina	74	67	134710	f	f
+2024-02-21	2023-2024	Marshall	James Madison	84	58	134711	f	t
+2024-02-24	2023-2024	Marshall	Appalachian State	65	58	134712	f	t
+2024-02-28	2023-2024	Marshall	Georgia Southern	87	73	134713	f	f
+2024-03-01	2023-2024	Marshall	Georgia State	82	79	134714	f	f
+2024-03-07	2023-2024	Marshall	Georgia State	86	74	134715	t	t
+2024-03-09	2023-2024	Marshall	James Madison	81	64	134716	f	t
+2023-11-07	2023-2024	Maryland	Mount St. Mary's	68	53	134717	t	t
+2023-11-10	2023-2024	Maryland	Davidson	64	61	134718	f	t
+2023-11-12	2023-2024	Maryland	UAB	66	63	134719	f	t
+2023-11-17	2023-2024	Maryland	21 Villanova	57	40	134720	f	f
+2023-11-21	2023-2024	Maryland	UMBC	92	68	134721	t	t
+2023-11-25	2023-2024	Maryland	South Alabama	68	55	134722	t	t
+2023-11-28	2023-2024	Maryland	Rider	103	76	134723	t	t
+2023-12-01	2023-2024	Maryland	Indiana	65	53	134724	f	f
+2023-12-12	2023-2024	Maryland	Alcorn State	105	65	134725	t	t
+2023-12-19	2023-2024	Maryland	Nicholls	73	67	134726	t	t
+2023-12-22	2023-2024	Maryland	UCLA	69	60	134727	t	f
+2023-12-28	2023-2024	Maryland	Coppin State	75	53	134728	t	t
+2024-01-02	2023-2024	Maryland	1 Purdue	67	53	134729	f	t
+2024-01-07	2023-2024	Maryland	Minnesota	65	62	134730	f	f
+2024-01-11	2023-2024	Maryland	Michigan	64	57	134731	t	t
+2024-01-14	2023-2024	Maryland	10 Illinois	76	67	134732	t	f
+2024-01-17	2023-2024	Maryland	Northwestern	72	69	134733	f	f
+2024-01-21	2023-2024	Maryland	Michigan State	61	59	134734	f	t
+2024-01-24	2023-2024	Maryland	Iowa	69	67	134735	t	f
+2024-01-27	2023-2024	Maryland	Nebraska	73	51	134736	t	t
+2024-02-03	2023-2024	Maryland	Michigan State	63	54	134737	f	f
+2024-02-06	2023-2024	Maryland	Rutgers	56	53	134738	f	t
+2024-02-14	2023-2024	Maryland	Iowa	78	66	134739	t	t
+2024-02-17	2023-2024	Maryland	14 Illinois	85	80	134740	f	t
+2024-02-20	2023-2024	Maryland	Wisconsin	74	70	134741	f	f
+2024-02-25	2023-2024	Maryland	Rutgers	63	46	134742	t	f
+2024-02-28	2023-2024	Maryland	Northwestern	68	61	134743	f	t
+2024-03-03	2023-2024	Maryland	Indiana	83	78	134744	f	t
+2024-03-10	2023-2024	Maryland	Penn State	85	69	134745	f	f
+2024-03-13	2023-2024	Maryland	Rutgers	65	51	134746	t	t
+2024-03-14	2023-2024	Maryland	Wisconsin	87	56	134747	f	t
+2023-11-06	2023-2024	MD-Eastern	Temple	85	65	134748	f	f
+2023-11-11	2023-2024	MD-Eastern	vsCairn University	83	65	134749	t	t
+2023-11-15	2023-2024	MD-Eastern	Longwood	80	61	134750	f	t
+2023-11-22	2023-2024	MD-Eastern	Notre Dame	75	55	134751	f	f
+2023-11-25	2023-2024	MD-Eastern	Liberty	99	62	134752	f	f
+2023-12-04	2023-2024	MD-Eastern	East Carolina	63	52	134753	f	f
+2023-12-06	2023-2024	MD-Eastern	NC State	93	61	134754	f	f
+2023-12-18	2023-2024	MD-Eastern	Marist	76	52	134755	f	f
+2023-12-22	2023-2024	MD-Eastern	VCU	75	51	134756	f	f
+2023-12-30	2023-2024	MD-Eastern	George Washington	69	63	134757	f	f
+2024-01-02	2023-2024	MD-Eastern	vsClarks Summit	95	37	134758	t	t
+2024-01-06	2023-2024	MD-Eastern	Morgan State	75	74	134759	t	t
+2024-01-13	2023-2024	MD-Eastern	Howard	72	61	134760	f	f
+2024-01-22	2023-2024	MD-Eastern	vsQueens College NY	71	61	134761	t	t
+2024-01-27	2023-2024	MD-Eastern	North Carolina Central	65	57	134762	f	t
+2024-01-29	2023-2024	MD-Eastern	South Carolina State	63	53	134763	f	t
+2024-02-05	2023-2024	MD-Eastern	Norfolk State	69	60	134764	t	t
+2024-02-10	2023-2024	MD-Eastern	vsBryn Athyn	88	55	134765	t	t
+2024-02-17	2023-2024	MD-Eastern	Morgan State	70	65	134766	f	f
+2024-02-19	2023-2024	MD-Eastern	Coppin State	75	67	134767	t	t
+2024-02-24	2023-2024	MD-Eastern	North Carolina Central	88	55	134768	f	f
+2024-02-26	2023-2024	MD-Eastern	South Carolina State	64	56	134769	f	f
+2024-03-02	2023-2024	MD-Eastern	Howard	70	66	134770	f	t
+2024-03-04	2023-2024	MD-Eastern	Norfolk State	69	50	134771	f	f
+2024-03-07	2023-2024	MD-Eastern	Delaware State	67	59	134772	t	t
+2024-03-13	2023-2024	MD-Eastern	North Carolina Central	87	81	134773	f	t
+2023-11-07	2023-2024	UMass	UAlbany	92	71	134774	t	t
+2023-11-13	2023-2024	UMass	Quinnipiac	102	81	134775	t	t
+2023-11-22	2023-2024	UMass	Central Connecticut	89	60	134776	t	t
+2023-12-02	2023-2024	UMass	South Florida	66	56	134777	t	t
+2023-12-06	2023-2024	UMass	Towson	81	71	134778	f	f
+2023-12-09	2023-2024	UMass	UMass Lowell	91	77	134779	t	t
+2023-12-16	2023-2024	UMass	West Virginia	87	79	134780	t	t
+2023-12-21	2023-2024	UMass	Georgia Tech	73	70	134781	f	t
+2023-12-23	2023-2024	UMass	Portland	100	78	134782	t	t
+2023-12-24	2023-2024	UMass	Old Dominion	87	65	134783	t	t
+2023-12-30	2023-2024	UMass	Siena	79	66	134784	t	t
+2024-01-03	2023-2024	UMass	Duquesne	80	61	134785	t	t
+2024-01-07	2023-2024	UMass	Dayton	64	60	134786	f	f
+2024-01-10	2023-2024	UMass	La Salle	81	65	134787	t	t
+2024-01-13	2023-2024	UMass	Rhode Island	89	77	134788	f	f
+2024-01-17	2023-2024	UMass	Loyola Chicago	79	78	134789	f	f
+2024-01-20	2023-2024	UMass	George Washington	81	67	134790	t	t
+2024-01-23	2023-2024	UMass	Saint Joseph's	78	77	134791	f	t
+2024-01-27	2023-2024	UMass	Saint Louis	84	73	134792	t	f
+2024-02-03	2023-2024	UMass	George Mason	66	65	134793	t	t
+2024-02-07	2023-2024	UMass	St. Bonaventure	79	73	134794	f	f
+2024-02-11	2023-2024	UMass	Rhode Island	81	79	134795	t	t
+2024-02-14	2023-2024	UMass	Richmond	69	59	134796	t	f
+2024-02-17	2023-2024	UMass	La Salle	82	81	134797	f	f
+2024-02-20	2023-2024	UMass	VCU	74	52	134798	t	t
+2024-02-24	2023-2024	UMass	St. Bonaventure	75	67	134799	f	t
+2024-02-27	2023-2024	UMass	George Washington	69	57	134800	t	f
+2024-03-02	2023-2024	UMass	Davidson	69	67	134801	t	f
+2024-03-06	2023-2024	UMass	Fordham	66	64	134802	t	t
+2024-03-14	2023-2024	UMass	VCU	73	59	134803	f	t
+2023-11-06	2023-2024	McNeese	VCU	76	65	134804	t	f
+2023-11-10	2023-2024	McNeese	vsCollege Of Biblical Studies	96	55	134805	t	t
+2023-11-13	2023-2024	McNeese	vsChampion Christian	110	46	134806	t	t
+2023-11-14	2023-2024	McNeese	vsLeTourneau	81	49	134807	t	t
+2023-11-18	2023-2024	McNeese	Western Carolina	76	74	134808	f	f
+2023-11-21	2023-2024	McNeese	Texas State	59	48	134809	t	t
+2023-11-22	2023-2024	McNeese	Louisiana Tech	71	62	134810	f	f
+2023-11-28	2023-2024	McNeese	UAB	81	60	134811	t	f
+2023-12-02	2023-2024	McNeese	UT Martin	91	80	134812	t	t
+2023-12-05	2023-2024	McNeese	vsMississippi University For Women	92	23	134813	t	t
+2023-12-13	2023-2024	McNeese	Southern Miss	67	48	134814	t	t
+2023-12-17	2023-2024	McNeese	Louisiana	74	72	134815	t	t
+2023-12-29	2023-2024	McNeese	Michigan	87	76	134816	t	f
+2024-01-06	2023-2024	McNeese	Texas A&M-Commerce	73	67	134817	t	f
+2024-01-08	2023-2024	McNeese	Northwestern State	68	59	134818	t	f
+2024-01-13	2023-2024	McNeese	SE Louisiana	74	65	134819	t	t
+2024-01-15	2023-2024	McNeese	Lamar	88	69	134820	t	t
+2024-01-20	2023-2024	McNeese	Incarnate Word	80	66	134821	t	f
+2024-01-22	2023-2024	McNeese	Texas A&M-Corpus Christi	62	61	134822	t	f
+2024-01-27	2023-2024	McNeese	New Orleans	102	65	134823	t	t
+2024-01-29	2023-2024	McNeese	Northwestern State	89	65	134824	t	t
+2024-02-03	2023-2024	McNeese	SE Louisiana	77	74	134825	f	f
+2024-02-05	2023-2024	McNeese	Texas A&M-Commerce	77	51	134826	t	t
+2024-02-10	2023-2024	McNeese	Texas A&M-Corpus Christi	74	67	134827	t	t
+2024-02-12	2023-2024	McNeese	Houston Christian	105	54	134828	t	f
+2024-02-17	2023-2024	McNeese	Nicholls	74	47	134829	t	f
+2024-02-24	2023-2024	McNeese	Incarnate Word	87	71	134830	t	t
+2024-02-26	2023-2024	McNeese	Lamar	58	56	134831	t	f
+2024-03-02	2023-2024	McNeese	Nicholls	83	62	134832	t	t
+2024-03-04	2023-2024	McNeese	Houston Christian	87	69	134833	t	t
+2024-03-06	2023-2024	McNeese	New Orleans	81	57	134834	t	f
+2024-03-12	2023-2024	McNeese	Lamar	76	57	134835	t	t
+2024-03-13	2023-2024	McNeese	Nicholls	92	76	134836	t	t
+2023-11-06	2023-2024	Memphis	Jackson State	94	77	134837	t	t
+2023-11-10	2023-2024	Memphis	Missouri	70	55	134838	t	f
+2023-11-17	2023-2024	Memphis	Alabama State	92	75	134839	t	t
+2023-11-22	2023-2024	Memphis	Michigan	71	67	134840	t	t
+2023-11-23	2023-2024	Memphis	20 Arkansas	84	79	134841	t	t
+2023-11-24	2023-2024	Memphis	Villanova	79	63	134842	f	t
+2023-12-02	2023-2024	Memphis	Ole Miss	80	77	134843	f	f
+2023-12-10	2023-2024	Memphis	21 Texas A&M	81	75	134844	t	f
+2023-12-16	2023-2024	Memphis	13 Clemson	79	77	134845	t	t
+2023-12-19	2023-2024	Memphis	22 Virginia	77	54	134846	t	t
+2023-12-23	2023-2024	Memphis	Vanderbilt	77	75	134847	t	t
+2023-12-30	2023-2024	Memphis	Austin Peay	81	70	134848	t	t
+2024-01-04	2023-2024	Memphis	Tulsa	78	75	134849	t	f
+2024-01-07	2023-2024	Memphis	SMU	62	59	134850	t	t
+2024-01-14	2023-2024	Memphis	Wichita State	112	86	134851	t	f
+2024-01-18	2023-2024	Memphis	South Florida	74	73	134852	f	t
+2024-01-21	2023-2024	Memphis	Tulane	81	79	134853	f	f
+2024-01-28	2023-2024	Memphis	UAB	97	88	134854	f	f
+2024-01-31	2023-2024	Memphis	Rice	74	71	134855	f	t
+2024-02-03	2023-2024	Memphis	Wichita State	65	63	134856	t	t
+2024-02-08	2023-2024	Memphis	Temple	84	77	134857	t	f
+2024-02-11	2023-2024	Memphis	Tulane	90	78	134858	t	t
+2024-02-15	2023-2024	Memphis	North Texas	76	66	134859	f	f
+2024-02-18	2023-2024	Memphis	SMU	106	79	134860	f	f
+2024-02-21	2023-2024	Memphis	Charlotte	76	52	134861	t	t
+2024-02-25	2023-2024	Memphis	Florida Atlantic	78	74	134862	t	t
+2024-02-29	2023-2024	Memphis	East Carolina	82	58	134863	t	f
+2024-03-03	2023-2024	Memphis	UAB	106	87	134864	t	t
+2024-03-09	2023-2024	Memphis	Florida Atlantic	92	84	134865	f	f
+2024-03-14	2023-2024	Memphis	Wichita State	71	65	134866	f	t
+2023-11-06	2023-2024	Mercer	vsClark Atlanta	71	64	134867	f	t
+2023-11-09	2023-2024	Mercer	Chicago State	66	61	134868	t	f
+2023-11-14	2023-2024	Mercer	Morehead State	74	66	134869	f	f
+2023-11-17	2023-2024	Mercer	22 Alabama	98	67	134870	f	f
+2023-11-24	2023-2024	Mercer	Tennessee State	60	59	134871	t	t
+2023-11-25	2023-2024	Mercer	Western Michigan	72	66	134872	f	t
+2023-12-01	2023-2024	Mercer	Georgia	80	69	134873	f	f
+2023-12-06	2023-2024	Mercer	South Alabama	83	62	134874	f	t
+2023-12-09	2023-2024	Mercer	Georgia State	64	60	134875	t	t
+2023-12-16	2023-2024	Mercer	Florida Gulf Coast	70	65	134876	t	t
+2023-12-19	2023-2024	Mercer	Queens University	84	65	134877	t	t
+2023-12-21	2023-2024	Mercer	vsThomas (ME)	98	75	134878	t	t
+2023-12-29	2023-2024	Mercer	vsTalladega	74	50	134879	t	t
+2024-01-03	2023-2024	Mercer	East Tennessee State	80	69	134880	f	f
+2024-01-06	2023-2024	Mercer	VMI	86	64	134881	t	f
+2024-01-10	2023-2024	Mercer	Wofford	74	73	134882	f	f
+2024-01-13	2023-2024	Mercer	Western Carolina	64	52	134883	f	t
+2024-01-17	2023-2024	Mercer	Chattanooga	74	60	134884	f	t
+2024-01-20	2023-2024	Mercer	Samford	87	80	134885	f	f
+2024-01-24	2023-2024	Mercer	The Citadel	68	66	134886	f	f
+2024-01-27	2023-2024	Mercer	UNC Greensboro	70	64	134887	t	f
+2024-01-31	2023-2024	Mercer	East Tennessee State	54	49	134888	f	t
+2024-02-03	2023-2024	Mercer	VMI	90	69	134889	t	t
+2024-02-07	2023-2024	Mercer	Furman	78	69	134890	t	t
+2024-02-10	2023-2024	Mercer	Western Carolina	79	46	134891	f	f
+2024-02-14	2023-2024	Mercer	Wofford	73	60	134892	f	t
+2024-02-17	2023-2024	Mercer	Samford	88	84	134893	t	t
+2024-02-21	2023-2024	Mercer	The Citadel	87	78	134894	t	t
+2024-02-24	2023-2024	Mercer	UNC Greensboro	86	72	134895	t	t
+2024-02-28	2023-2024	Mercer	Chattanooga	84	75	134896	f	f
+2024-03-02	2023-2024	Mercer	Furman	82	75	134897	t	f
+2024-03-08	2023-2024	Mercer	The Citadel	84	76	134898	t	t
+2024-03-09	2023-2024	Mercer	Samford	70	57	134899	f	t
+2023-11-06	2023-2024	Merrimack	Vermont	67	55	134900	f	f
+2023-11-09	2023-2024	Merrimack	vsWorcester State	93	72	134901	t	t
+2023-11-12	2023-2024	Merrimack	Maine	71	65	134902	t	f
+2023-11-15	2023-2024	Merrimack	Ohio State	76	52	134903	f	f
+2023-11-22	2023-2024	Merrimack	North Carolina A&T	96	73	134904	t	t
+2023-11-24	2023-2024	Merrimack	Samford	79	71	134905	f	f
+2023-11-29	2023-2024	Merrimack	Georgetown	69	67	134906	f	f
+2023-12-02	2023-2024	Merrimack	UMass Lowell	74	68	134907	t	t
+2023-12-05	2023-2024	Merrimack	Florida	77	57	134908	f	f
+2023-12-09	2023-2024	Merrimack	vsFelician	89	85	134909	t	t
+2023-12-19	2023-2024	Merrimack	Cincinnati	65	49	134910	f	f
+2023-12-22	2023-2024	Merrimack	Bucknell	68	52	134911	t	t
+2023-12-30	2023-2024	Merrimack	Boston University	74	63	134912	f	f
+2024-01-04	2023-2024	Merrimack	Fairleigh Dickinson	60	56	134913	t	t
+2024-01-06	2023-2024	Merrimack	Sacred Heart	82	58	134914	t	t
+2024-01-13	2023-2024	Merrimack	Le Moyne	66	62	134915	t	f
+2024-01-15	2023-2024	Merrimack	Central Connecticut	75	70	134916	f	f
+2024-01-19	2023-2024	Merrimack	Wagner	71	65	134917	f	t
+2024-01-21	2023-2024	Merrimack	Stonehill	63	47	134918	t	t
+2024-01-25	2023-2024	Merrimack	Wagner	60	44	134919	t	f
+2024-01-27	2023-2024	Merrimack	St. Francis (PA)	74	55	134920	t	f
+2024-02-03	2023-2024	Merrimack	Central Connecticut	71	68	134921	t	t
+2024-02-10	2023-2024	Merrimack	Le Moyne	66	50	134922	t	t
+2024-02-15	2023-2024	Merrimack	Stonehill	66	63	134923	t	f
+2024-02-17	2023-2024	Merrimack	Long Island University	83	68	134924	t	t
+2024-02-22	2023-2024	Merrimack	St. Francis (PA)	71	60	134925	t	t
+2024-02-29	2023-2024	Merrimack	Fairleigh Dickinson	74	55	134926	t	f
+2024-03-02	2023-2024	Merrimack	Sacred Heart	89	85	134927	f	f
+2024-03-06	2023-2024	Merrimack	Long Island University	72	66	134928	t	t
+2024-03-09	2023-2024	Merrimack	Le Moyne	61	51	134929	t	t
+2024-03-12	2023-2024	Merrimack	Wagner	54	47	134930	f	t
+2023-11-06	2023-2024	Miami OH	Evansville	72	64	134931	f	f
+2023-11-11	2023-2024	Miami OH	Texas State	75	65	134932	f	t
+2023-11-17	2023-2024	Miami OH	Coppin State	76	48	134933	t	t
+2023-11-19	2023-2024	Miami OH	Eastern Illinois	76	64	134934	t	t
+2023-11-25	2023-2024	Miami OH	St. Bonaventure	90	60	134935	f	f
+2023-11-28	2023-2024	Miami OH	vsSpalding	82	43	134936	t	t
+2023-12-02	2023-2024	Miami OH	Marshall	79	74	134937	t	f
+2023-12-06	2023-2024	Miami OH	Ohio State	84	64	134938	f	f
+2023-12-09	2023-2024	Miami OH	Davidson	79	61	134939	f	f
+2023-12-19	2023-2024	Miami OH	Wright State	92	82	134940	f	f
+2023-12-22	2023-2024	Miami OH	Vermont	70	69	134941	t	t
+2023-12-29	2023-2024	Miami OH	vsWilberforce	119	69	134942	t	t
+2024-01-02	2023-2024	Miami OH	Western Michigan	83	74	134943	f	t
+2024-01-05	2023-2024	Miami OH	Toledo	68	64	134944	f	f
+2024-01-09	2023-2024	Miami OH	Buffalo	86	65	134945	t	f
+2024-01-13	2023-2024	Miami OH	Eastern Michigan	71	54	134946	t	t
+2024-01-16	2023-2024	Miami OH	Bowling Green	78	73	134947	f	t
+2024-01-23	2023-2024	Miami OH	Central Michigan	71	55	134948	f	f
+2024-01-27	2023-2024	Miami OH	Akron	70	68	134949	t	t
+2024-01-30	2023-2024	Miami OH	Kent State	71	67	134950	t	f
+2024-02-03	2023-2024	Miami OH	Ohio	78	69	134951	f	f
+2024-02-06	2023-2024	Miami OH	Northern Illinois	62	59	134952	f	t
+2024-02-10	2023-2024	Miami OH	Georgia State	73	53	134953	f	f
+2024-02-17	2023-2024	Miami OH	Ball State	80	59	134954	t	t
+2024-02-20	2023-2024	Miami OH	Western Michigan	77	58	134955	f	f
+2024-02-24	2023-2024	Miami OH	Central Michigan	88	60	134956	t	t
+2024-02-27	2023-2024	Miami OH	Bowling Green	66	58	134957	t	f
+2024-03-02	2023-2024	Miami OH	Eastern Michigan	52	37	134958	t	f
+2024-03-05	2023-2024	Miami OH	Toledo	97	63	134959	f	t
+2024-03-08	2023-2024	Miami OH	Ohio	72	59	134960	f	t
+2024-03-14	2023-2024	Miami OH	Akron	75	63	134961	f	t
+2023-11-06	2023-2024	Miami	NJIT	101	60	134962	t	t
+2023-11-10	2023-2024	Miami	UCF	88	72	134963	t	t
+2023-11-13	2023-2024	Miami	Florida International	86	80	134964	t	t
+2023-11-17	2023-2024	Miami	Georgia	79	68	134965	t	t
+2023-11-19	2023-2024	Miami	Kansas State	91	83	134966	t	t
+2023-11-28	2023-2024	Miami	12 Kentucky	95	73	134967	f	f
+2023-12-02	2023-2024	Miami	Notre Dame	62	49	134968	t	t
+2023-12-06	2023-2024	Miami	Long Island University	97	49	134969	t	t
+2023-12-10	2023-2024	Miami	Colorado	90	63	134970	f	t
+2023-12-16	2023-2024	Miami	La Salle	84	77	134971	t	t
+2023-12-21	2023-2024	Miami	Stonehill	97	59	134972	t	t
+2023-12-29	2023-2024	Miami	North Florida	95	55	134973	t	t
+2024-01-03	2023-2024	Miami	16 Clemson	95	82	134974	t	t
+2024-01-10	2023-2024	Miami	Louisville	80	71	134975	f	t
+2024-01-13	2023-2024	Miami	Virginia Tech	75	71	134976	t	f
+2024-01-17	2023-2024	Miami	Florida State	84	75	134977	f	t
+2024-01-20	2023-2024	Miami	Syracuse	72	69	134978	f	f
+2024-01-24	2023-2024	Miami	Notre Dame	73	61	134979	t	f
+2024-01-27	2023-2024	Miami	Pittsburgh	72	68	134980	t	t
+2024-01-30	2023-2024	Miami	NC State	74	68	134981	f	f
+2024-02-03	2023-2024	Miami	Virginia Tech	82	74	134982	t	t
+2024-02-05	2023-2024	Miami	Virginia	60	38	134983	f	f
+2024-02-10	2023-2024	Miami	3 North Carolina	75	72	134984	f	t
+2024-02-14	2023-2024	Miami	Clemson	77	60	134985	f	f
+2024-02-17	2023-2024	Miami	Boston College	85	77	134986	f	f
+2024-02-21	2023-2024	Miami	8 Duke	84	55	134987	f	t
+2024-02-24	2023-2024	Miami	Georgia Tech	80	76	134988	f	t
+2024-02-26	2023-2024	Miami	9 North Carolina	75	71	134989	f	f
+2024-03-06	2023-2024	Miami	Boston College	67	57	134990	f	t
+2024-03-09	2023-2024	Miami	Florida State	83	75	134991	f	f
+2024-03-12	2023-2024	Miami	Boston College	81	65	134992	f	t
+2023-11-09	2023-2024	Michigan State	Southern Indiana	74	51	134993	t	t
+2023-11-14	2023-2024	Michigan State	9 Duke	74	65	134994	f	t
+2023-11-17	2023-2024	Michigan State	Butler	74	54	134995	t	t
+2023-11-19	2023-2024	Michigan State	Alcorn State	81	49	134996	t	t
+2023-11-23	2023-2024	Michigan State	3 Arizona	74	68	134997	f	t
+2023-11-28	2023-2024	Michigan State	Georgia Southern	86	55	134998	t	t
+2023-12-05	2023-2024	Michigan State	23 Wisconsin	70	57	134999	f	t
+2023-12-10	2023-2024	Michigan State	Nebraska	77	70	135000	f	f
+2023-12-16	2023-2024	Michigan State	6 Baylor	88	64	135001	t	t
+2023-12-18	2023-2024	Michigan State	Oakland	79	62	135002	t	t
+2023-12-21	2023-2024	Michigan State	Stony Brook	99	55	135003	t	t
+2023-12-30	2023-2024	Michigan State	Indiana State	87	75	135004	t	t
+2024-01-04	2023-2024	Michigan State	Penn State	92	61	135005	t	t
+2024-01-07	2023-2024	Michigan State	Northwestern	88	74	135006	f	f
+2024-01-11	2023-2024	Michigan State	10 Illinois	71	68	135007	f	f
+2024-01-14	2023-2024	Michigan State	Rutgers	73	55	135008	t	t
+2024-01-18	2023-2024	Michigan State	Minnesota	76	66	135009	t	t
+2024-01-21	2023-2024	Michigan State	Maryland	61	59	135010	t	f
+2024-01-26	2023-2024	Michigan State	13 Wisconsin	81	66	135011	f	f
+2024-01-30	2023-2024	Michigan State	Michigan	81	62	135012	t	t
+2024-02-03	2023-2024	Michigan State	Maryland	63	54	135013	t	t
+2024-02-06	2023-2024	Michigan State	Minnesota	59	56	135014	f	f
+2024-02-10	2023-2024	Michigan State	10 Illinois	88	80	135015	t	t
+2024-02-14	2023-2024	Michigan State	Penn State	80	72	135016	t	f
+2024-02-17	2023-2024	Michigan State	Michigan	73	63	135017	t	f
+2024-02-20	2023-2024	Michigan State	Iowa	78	71	135018	f	t
+2024-02-25	2023-2024	Michigan State	Ohio State	60	57	135019	f	t
+2024-03-02	2023-2024	Michigan State	2 Purdue	80	74	135020	f	f
+2024-03-06	2023-2024	Michigan State	Northwestern	53	49	135021	t	t
+2024-03-10	2023-2024	Michigan State	Indiana	65	64	135022	f	f
+2024-03-14	2023-2024	Michigan State	Minnesota	77	67	135023	t	t
+2024-03-15	2023-2024	Michigan State	3 Purdue	67	62	135024	f	t
+2023-11-07	2023-2024	Michigan	UNC Asheville	99	74	135025	t	t
+2023-11-10	2023-2024	Michigan	Youngstown State	92	62	135026	t	t
+2023-11-13	2023-2024	Michigan	St. John's	89	73	135027	t	f
+2023-11-17	2023-2024	Michigan	Long Beach State	94	86	135028	f	t
+2023-11-22	2023-2024	Michigan	Memphis	71	67	135029	f	t
+2023-11-23	2023-2024	Michigan	Stanford	83	78	135030	t	t
+2023-11-24	2023-2024	Michigan	Texas Tech	73	57	135031	f	t
+2023-12-05	2023-2024	Michigan	Indiana	78	75	135032	f	t
+2023-12-10	2023-2024	Michigan	Iowa	90	80	135033	t	f
+2023-12-16	2023-2024	Michigan	Eastern Michigan	83	66	135034	t	t
+2023-12-29	2023-2024	Michigan	McNeese	87	76	135035	f	t
+2024-01-04	2023-2024	Michigan	Minnesota	73	71	135036	f	t
+2024-01-07	2023-2024	Michigan	Penn State	79	73	135037	f	t
+2024-01-11	2023-2024	Michigan	Maryland	64	57	135038	f	f
+2024-01-15	2023-2024	Michigan	Ohio State	73	65	135039	t	t
+2024-01-18	2023-2024	Michigan	14 Illinois	88	73	135040	f	t
+2024-01-23	2023-2024	Michigan	2 Purdue	99	67	135041	f	f
+2024-01-27	2023-2024	Michigan	Iowa	88	78	135042	f	t
+2024-01-30	2023-2024	Michigan	Michigan State	81	62	135043	f	f
+2024-02-03	2023-2024	Michigan	Rutgers	69	59	135044	f	t
+2024-02-07	2023-2024	Michigan	11 Wisconsin	72	68	135045	t	t
+2024-02-10	2023-2024	Michigan	Nebraska	79	59	135046	f	f
+2024-02-13	2023-2024	Michigan	14 Illinois	97	68	135047	f	f
+2024-02-17	2023-2024	Michigan	Michigan State	73	63	135048	f	t
+2024-02-22	2023-2024	Michigan	Northwestern	76	62	135049	f	f
+2024-02-25	2023-2024	Michigan	3 Purdue	84	76	135050	f	t
+2024-02-29	2023-2024	Michigan	Rutgers	82	52	135051	f	f
+2024-03-03	2023-2024	Michigan	Ohio State	84	61	135052	f	f
+2024-03-10	2023-2024	Michigan	Nebraska	85	70	135053	f	t
+2024-03-13	2023-2024	Michigan	Penn State	66	57	135054	f	t
+2023-11-06	2023-2024	MTSU	Northern Kentucky	74	57	135055	t	t
+2023-11-13	2023-2024	MTSU	Western Carolina	66	64	135056	f	t
+2023-11-18	2023-2024	MTSU	vsMilligan	88	62	135057	t	t
+2023-11-21	2023-2024	MTSU	UAB	58	57	135058	f	t
+2023-11-24	2023-2024	MTSU	UIC	70	40	135059	f	t
+2023-11-25	2023-2024	MTSU	Ohio	80	68	135060	f	t
+2023-11-26	2023-2024	MTSU	Kansas City	63	59	135061	t	t
+2023-12-09	2023-2024	MTSU	Belmont	75	65	135062	f	t
+2023-12-19	2023-2024	MTSU	St. Mary's	71	34	135063	f	f
+2023-12-22	2023-2024	MTSU	Southern Utah	69	63	135064	f	f
+2023-12-30	2023-2024	MTSU	Murray State	75	54	135065	f	f
+2024-01-03	2023-2024	MTSU	vsReinhardt	84	47	135066	t	t
+2024-01-11	2023-2024	MTSU	Louisiana Tech	60	52	135067	f	t
+2024-01-13	2023-2024	MTSU	Sam Houston	60	51	135068	f	t
+2024-01-18	2023-2024	MTSU	UTEP	73	59	135069	f	f
+2024-01-20	2023-2024	MTSU	New Mexico State	73	62	135070	f	f
+2024-01-24	2023-2024	MTSU	Jacksonville State	75	67	135071	t	t
+2024-01-27	2023-2024	MTSU	Florida International	79	61	135072	t	t
+2024-02-03	2023-2024	MTSU	Western Kentucky	88	65	135073	f	f
+2024-02-08	2023-2024	MTSU	Liberty	88	53	135074	f	f
+2024-02-10	2023-2024	MTSU	Florida International	68	66	135075	t	f
+2024-02-15	2023-2024	MTSU	New Mexico State	76	69	135076	t	t
+2024-02-21	2023-2024	MTSU	Jacksonville State	76	68	135077	f	f
+2024-02-24	2023-2024	MTSU	Western Kentucky	74	72	135078	t	t
+2024-03-02	2023-2024	MTSU	Sam Houston	81	64	135079	f	f
+2024-03-05	2023-2024	MTSU	Liberty	69	61	135080	t	t
+2024-03-09	2023-2024	MTSU	Louisiana Tech	84	70	135081	f	f
+2024-03-13	2023-2024	MTSU	Louisiana Tech	70	67	135082	t	t
+2024-03-15	2023-2024	MTSU	Western Kentucky	85	54	135083	f	t
+2023-11-06	2023-2024	Milwaukee	vsWisconsin-Stout	91	73	135084	t	t
+2023-11-11	2023-2024	Milwaukee	Providence	79	69	135085	f	f
+2023-11-14	2023-2024	Milwaukee	25 Colorado	106	79	135086	f	f
+2023-11-17	2023-2024	Milwaukee	vsLuther	85	56	135087	t	t
+2023-11-20	2023-2024	Milwaukee	Stetson	85	67	135088	f	t
+2023-11-21	2023-2024	Milwaukee	Siena	61	59	135089	t	t
+2023-11-25	2023-2024	Milwaukee	Southern Miss	90	84	135090	f	t
+2023-12-02	2023-2024	Milwaukee	Green Bay	70	58	135091	f	f
+2023-12-06	2023-2024	Milwaukee	St. Thomas-Minnesota	75	71	135092	f	f
+2023-12-09	2023-2024	Milwaukee	UC Davis	81	79	135093	t	f
+2023-12-13	2023-2024	Milwaukee	Longwood	80	67	135094	f	t
+2023-12-29	2023-2024	Milwaukee	Robert Morris	78	75	135095	t	t
+2023-12-31	2023-2024	Milwaukee	Wright State	91	83	135096	t	t
+2024-01-04	2023-2024	Milwaukee	Oakland	100	95	135097	f	f
+2024-01-06	2023-2024	Milwaukee	Detroit Mercy	84	61	135098	t	f
+2024-01-12	2023-2024	Milwaukee	Cleveland State	88	80	135099	t	t
+2024-01-18	2023-2024	Milwaukee	Northern Kentucky	90	72	135100	f	f
+2024-01-20	2023-2024	Milwaukee	Wright State	95	81	135101	f	f
+2024-01-25	2023-2024	Milwaukee	Detroit Mercy	87	71	135102	t	t
+2024-02-01	2023-2024	Milwaukee	Purdue Fort Wayne	68	65	135103	t	f
+2024-02-04	2023-2024	Milwaukee	IUPUI	87	67	135104	t	t
+2024-02-10	2023-2024	Milwaukee	Robert Morris	71	60	135105	f	f
+2024-02-14	2023-2024	Milwaukee	Cleveland State	71	68	135106	t	f
+2024-02-17	2023-2024	Milwaukee	Northern Kentucky	73	72	135107	t	t
+2024-02-25	2023-2024	Milwaukee	Purdue Fort Wayne	96	88	135108	t	t
+2024-02-28	2023-2024	Milwaukee	IUPUI	75	70	135109	t	f
+2024-03-02	2023-2024	Milwaukee	Green Bay	90	69	135110	t	t
+2024-03-05	2023-2024	Milwaukee	Detroit Mercy	83	79	135111	t	t
+2024-03-07	2023-2024	Milwaukee	Green Bay	95	84	135112	t	f
+2024-03-11	2023-2024	Milwaukee	Northern Kentucky	82	75	135113	t	t
+2024-03-12	2023-2024	Milwaukee	Oakland	83	76	135114	f	t
+2023-11-06	2023-2024	Minnesota	Bethune-Cookman	80	60	135115	t	t
+2023-11-10	2023-2024	Minnesota	UTSA	102	76	135116	t	t
+2023-11-16	2023-2024	Minnesota	Missouri	70	68	135117	f	t
+2023-11-18	2023-2024	Minnesota	South Carolina Upstate	67	53	135118	t	t
+2023-11-21	2023-2024	Minnesota	Arkansas-Pine Bluff	86	67	135119	t	t
+2023-11-26	2023-2024	Minnesota	San Francisco	76	58	135120	f	t
+2023-11-30	2023-2024	Minnesota	New Orleans	97	64	135121	t	t
+2023-12-03	2023-2024	Minnesota	Ohio State	84	74	135122	f	f
+2023-12-06	2023-2024	Minnesota	Nebraska	76	65	135123	t	t
+2023-12-09	2023-2024	Minnesota	Florida Gulf Coast	77	57	135124	t	t
+2023-12-12	2023-2024	Minnesota	IUPUI	101	65	135125	t	t
+2023-12-21	2023-2024	Minnesota	Ball State	80	63	135126	t	t
+2023-12-29	2023-2024	Minnesota	Maine	80	62	135127	t	t
+2024-01-04	2023-2024	Minnesota	Michigan	73	71	135128	t	f
+2024-01-07	2023-2024	Minnesota	Maryland	65	62	135129	t	t
+2024-01-12	2023-2024	Minnesota	Indiana	74	62	135130	f	f
+2024-01-15	2023-2024	Minnesota	Iowa	86	77	135131	f	t
+2024-01-18	2023-2024	Minnesota	Michigan State	76	66	135132	f	f
+2024-01-23	2023-2024	Minnesota	13 Wisconsin	61	59	135133	f	t
+2024-01-27	2023-2024	Minnesota	Penn State	83	74	135134	t	f
+2024-02-06	2023-2024	Minnesota	Michigan State	59	56	135135	t	t
+2024-02-11	2023-2024	Minnesota	Iowa	90	85	135136	f	f
+2024-02-15	2023-2024	Minnesota	2 Purdue	84	76	135137	f	f
+2024-02-18	2023-2024	Minnesota	Rutgers	81	70	135138	t	t
+2024-02-22	2023-2024	Minnesota	Ohio State	88	79	135139	t	t
+2024-02-25	2023-2024	Minnesota	Nebraska	73	55	135140	f	f
+2024-02-28	2023-2024	Minnesota	13 Illinois	105	97	135141	f	f
+2024-03-02	2023-2024	Minnesota	Penn State	75	70	135142	t	t
+2024-03-06	2023-2024	Minnesota	Indiana	70	58	135143	f	t
+2024-03-09	2023-2024	Minnesota	Northwestern	90	66	135144	f	f
+2024-03-14	2023-2024	Minnesota	Michigan State	77	67	135145	f	t
+2023-11-08	2023-2024	Mississippi State	Arizona State	71	56	135146	t	t
+2023-11-11	2023-2024	Mississippi State	UT Martin	87	63	135147	t	t
+2023-11-14	2023-2024	Mississippi State	North Alabama	81	54	135148	t	t
+2023-11-18	2023-2024	Mississippi State	Washington State	76	64	135149	t	t
+2023-11-19	2023-2024	Mississippi State	Northwestern	66	57	135150	t	t
+2023-11-24	2023-2024	Mississippi State	Nicholls	74	61	135151	t	t
+2023-11-28	2023-2024	Mississippi State	Georgia Tech	67	59	135152	f	f
+2023-12-03	2023-2024	Mississippi State	Southern	60	59	135153	f	t
+2023-12-09	2023-2024	Mississippi State	Tulane	106	76	135154	t	t
+2023-12-13	2023-2024	Mississippi State	Murray State	85	81	135155	t	t
+2023-12-17	2023-2024	Mississippi State	North Texas	72	54	135156	t	t
+2023-12-23	2023-2024	Mississippi State	Rutgers	70	60	135157	t	t
+2023-12-31	2023-2024	Mississippi State	Bethune-Cookman	85	62	135158	t	t
+2024-01-06	2023-2024	Mississippi State	South Carolina	68	62	135159	f	f
+2024-01-10	2023-2024	Mississippi State	5 Tennessee	77	72	135160	t	t
+2024-01-13	2023-2024	Mississippi State	Alabama	82	74	135161	f	t
+2024-01-17	2023-2024	Mississippi State	8 Kentucky	90	77	135162	f	f
+2024-01-20	2023-2024	Mississippi State	Vanderbilt	68	55	135163	t	t
+2024-01-24	2023-2024	Mississippi State	Florida	79	70	135164	f	f
+2024-01-27	2023-2024	Mississippi State	8 Auburn	64	58	135165	t	t
+2024-01-30	2023-2024	Mississippi State	Ole Miss	86	82	135166	f	f
+2024-02-03	2023-2024	Mississippi State	24 Alabama	99	67	135167	f	f
+2024-02-07	2023-2024	Mississippi State	Georgia	75	62	135168	t	t
+2024-02-10	2023-2024	Mississippi State	Missouri	75	51	135169	t	f
+2024-02-17	2023-2024	Mississippi State	Arkansas	71	67	135170	t	t
+2024-02-21	2023-2024	Mississippi State	Ole Miss	83	71	135171	t	t
+2024-02-24	2023-2024	Mississippi State	LSU	87	67	135172	t	f
+2024-02-27	2023-2024	Mississippi State	16 Kentucky	91	89	135173	f	t
+2024-03-02	2023-2024	Mississippi State	11 Auburn	78	63	135174	f	f
+2024-03-06	2023-2024	Mississippi State	Texas A&M	75	69	135175	f	f
+2024-03-14	2023-2024	Mississippi State	LSU	70	60	135176	t	t
+2024-03-15	2023-2024	Mississippi State	5 Tennessee	73	56	135177	t	t
+2024-03-16	2023-2024	Mississippi State	12 Auburn	73	66	135178	f	t
+2023-11-06	2023-2024	Miss Valley State	LSU	106	60	135179	f	f
+2023-11-10	2023-2024	Miss Valley State	Oklahoma	82	43	135180	f	f
+2023-11-14	2023-2024	Miss Valley State	5 UConn	87	53	135181	f	f
+2023-11-17	2023-2024	Miss Valley State	TCU	86	52	135182	f	f
+2023-11-20	2023-2024	Miss Valley State	Santa Clara	81	39	135183	f	f
+2023-11-24	2023-2024	Miss Valley State	Cal State Northridge	84	48	135184	f	f
+2023-12-02	2023-2024	Miss Valley State	North Texas	79	48	135185	f	f
+2023-12-05	2023-2024	Miss Valley State	Liberty	74	39	135186	f	f
+2023-12-11	2023-2024	Miss Valley State	10 Gonzaga	78	40	135187	f	f
+2023-12-19	2023-2024	Miss Valley State	Tulsa	79	50	135188	f	f
+2023-12-22	2023-2024	Miss Valley State	10 Baylor	107	48	135189	f	f
+2023-12-30	2023-2024	Miss Valley State	San Francisco	92	42	135190	f	f
+2024-01-06	2023-2024	Miss Valley State	Alabama State	54	51	135191	f	t
+2024-01-08	2023-2024	Miss Valley State	Alabama A&M	78	70	135192	f	t
+2024-01-13	2023-2024	Miss Valley State	Prairie View A&M	71	60	135193	f	f
+2024-01-15	2023-2024	Miss Valley State	Texas Southern	93	61	135194	f	f
+2024-01-20	2023-2024	Miss Valley State	Bethune-Cookman	80	64	135195	f	t
+2024-01-22	2023-2024	Miss Valley State	Florida A&M	81	70	135196	f	t
+2024-01-27	2023-2024	Miss Valley State	Grambling	54	46	135197	f	f
+2024-01-29	2023-2024	Miss Valley State	Southern	78	54	135198	f	f
+2024-02-03	2023-2024	Miss Valley State	Arkansas-Pine Bluff	83	77	135199	f	t
+2024-02-10	2023-2024	Miss Valley State	Jackson State	77	69	135200	f	t
+2024-02-12	2023-2024	Miss Valley State	Alcorn State	72	55	135201	f	t
+2024-02-17	2023-2024	Miss Valley State	Alabama A&M	80	57	135202	f	f
+2024-02-19	2023-2024	Miss Valley State	Alabama State	61	46	135203	f	f
+2024-02-24	2023-2024	Miss Valley State	Texas Southern	73	52	135204	f	t
+2024-02-26	2023-2024	Miss Valley State	Prairie View A&M	57	51	135205	t	t
+2024-03-02	2023-2024	Miss Valley State	Arkansas-Pine Bluff	78	69	135206	f	f
+2024-03-07	2023-2024	Miss Valley State	Alcorn State	74	67	135207	f	f
+2024-03-09	2023-2024	Miss Valley State	Jackson State	68	67	135208	f	f
+2023-11-06	2023-2024	Missouri State	West Virginia	67	59	135209	f	f
+2023-11-13	2023-2024	Missouri State	Oral Roberts	84	69	135210	t	t
+2023-11-17	2023-2024	Missouri State	Florida Gulf Coast	70	61	135211	t	t
+2023-11-19	2023-2024	Missouri State	Kent State	56	52	135212	t	t
+2023-11-20	2023-2024	Missouri State	Abilene Christian	87	69	135213	t	t
+2023-11-25	2023-2024	Missouri State	South Carolina State	92	74	135214	t	t
+2023-11-29	2023-2024	Missouri State	Evansville	90	78	135215	t	t
+2023-12-02	2023-2024	Missouri State	Drake	74	57	135216	f	f
+2023-12-09	2023-2024	Missouri State	Sam Houston	69	60	135217	t	t
+2023-12-16	2023-2024	Missouri State	Tulsa	73	72	135218	f	f
+2023-12-19	2023-2024	Missouri State	Lindenwood	79	57	135219	t	t
+2023-12-23	2023-2024	Missouri State	St. Mary's	69	64	135220	t	f
+2024-01-03	2023-2024	Missouri State	Northern Iowa	64	62	135221	f	t
+2024-01-06	2023-2024	Missouri State	Bradley	86	60	135222	f	f
+2024-01-10	2023-2024	Missouri State	Murray State	77	53	135223	f	t
+2024-01-13	2023-2024	Missouri State	Evansville	74	64	135224	t	f
+2024-01-16	2023-2024	Missouri State	Indiana State	88	66	135225	f	f
+2024-01-20	2023-2024	Missouri State	Illinois State	69	60	135226	f	t
+2024-01-27	2023-2024	Missouri State	Valparaiso	81	70	135227	t	f
+2024-02-03	2023-2024	Missouri State	Belmont	87	80	135228	t	t
+2024-02-07	2023-2024	Missouri State	Northern Iowa	72	65	135229	f	f
+2024-02-10	2023-2024	Missouri State	Indiana State	73	71	135230	f	t
+2024-02-14	2023-2024	Missouri State	Murray State	82	72	135231	f	f
+2024-02-17	2023-2024	Missouri State	Valparaiso	82	74	135232	t	t
+2024-02-21	2023-2024	Missouri State	Bradley	86	62	135233	f	t
+2024-02-24	2023-2024	Missouri State	Belmont	93	78	135234	f	f
+2024-02-28	2023-2024	Missouri State	Illinois State	75	74	135235	f	f
+2024-03-03	2023-2024	Missouri State	UIC	69	59	135236	t	t
+2024-03-07	2023-2024	Missouri State	Murray State	60	35	135237	t	t
+2024-03-08	2023-2024	Missouri State	Indiana State	75	59	135238	f	t
+2023-11-06	2023-2024	Missouri	Arkansas-Pine Bluff	101	79	135239	t	t
+2023-11-10	2023-2024	Missouri	Memphis	70	55	135240	f	t
+2023-11-13	2023-2024	Missouri	SIU Edwardsville	68	50	135241	t	t
+2023-11-16	2023-2024	Missouri	Minnesota	70	68	135242	t	f
+2023-11-19	2023-2024	Missouri	Jackson State	73	72	135243	f	t
+2023-11-22	2023-2024	Missouri	South Carolina State	82	59	135244	t	t
+2023-11-25	2023-2024	Missouri	Loyola Maryland	78	70	135245	t	t
+2023-11-28	2023-2024	Missouri	Pittsburgh	71	64	135246	t	f
+2023-12-03	2023-2024	Missouri	Wichita State	82	72	135247	t	t
+2023-12-09	2023-2024	Missouri	2 Kansas	73	64	135248	f	f
+2023-12-17	2023-2024	Missouri	Seton Hall	93	87	135249	f	t
+2023-12-22	2023-2024	Missouri	13 Illinois	97	73	135250	f	t
+2023-12-30	2023-2024	Missouri	Central Arkansas	92	59	135251	t	t
+2024-01-06	2023-2024	Missouri	Georgia	75	68	135252	f	t
+2024-01-09	2023-2024	Missouri	6 Kentucky	90	77	135253	f	f
+2024-01-16	2023-2024	Missouri	Alabama	93	75	135254	f	f
+2024-01-20	2023-2024	Missouri	Florida	79	67	135255	f	t
+2024-01-23	2023-2024	Missouri	Texas A&M	63	57	135256	f	f
+2024-01-27	2023-2024	Missouri	South Carolina	72	64	135257	f	f
+2024-01-31	2023-2024	Missouri	Arkansas	91	84	135258	f	t
+2024-02-03	2023-2024	Missouri	Vanderbilt	68	61	135259	f	f
+2024-02-07	2023-2024	Missouri	Texas A&M	79	60	135260	f	t
+2024-02-10	2023-2024	Missouri	Mississippi State	75	51	135261	f	t
+2024-02-17	2023-2024	Missouri	Ole Miss	79	76	135262	f	f
+2024-02-20	2023-2024	Missouri	5 Tennessee	72	67	135263	f	t
+2024-02-24	2023-2024	Missouri	Arkansas	88	73	135264	f	f
+2024-02-28	2023-2024	Missouri	24 Florida	83	74	135265	f	f
+2024-03-02	2023-2024	Missouri	Ole Miss	84	78	135266	f	t
+2024-03-05	2023-2024	Missouri	13 Auburn	101	74	135267	f	t
+2024-03-09	2023-2024	Missouri	LSU	84	80	135268	f	f
+2024-03-13	2023-2024	Missouri	Georgia	64	59	135269	f	t
+2023-11-06	2023-2024	Monmouth	George Mason	72	61	135270	f	f
+2023-11-10	2023-2024	Monmouth	West Virginia	73	65	135271	t	f
+2023-11-18	2023-2024	Monmouth	Princeton	82	57	135272	f	t
+2023-11-21	2023-2024	Monmouth	Lehigh	88	79	135273	t	t
+2023-11-24	2023-2024	Monmouth	Belmont	93	84	135274	t	t
+2023-11-25	2023-2024	Monmouth	Louisiana-Lafayette	63	53	135275	t	t
+2023-11-26	2023-2024	Monmouth	Pennsylvania	76	61	135276	f	f
+2023-11-29	2023-2024	Monmouth	Cornell	91	87	135277	f	f
+2023-12-09	2023-2024	Monmouth	Northern Illinois	74	71	135278	t	t
+2023-12-12	2023-2024	Monmouth	Seton Hall	70	61	135279	f	f
+2023-12-16	2023-2024	Monmouth	Rider	77	71	135280	t	t
+2023-12-21	2023-2024	Monmouth	Manhattan	77	71	135281	t	t
+2023-12-31	2023-2024	Monmouth	12 Oklahoma	72	56	135282	f	f
+2024-01-04	2023-2024	Monmouth	Towson	51	43	135283	t	t
+2024-01-08	2023-2024	Monmouth	Northeastern	81	62	135284	t	t
+2024-01-11	2023-2024	Monmouth	UNC Wilmington	69	56	135285	f	f
+2024-01-13	2023-2024	Monmouth	Charleston	94	83	135286	f	f
+2024-01-18	2023-2024	Monmouth	Drexel	78	74	135287	f	f
+2024-01-20	2023-2024	Monmouth	Hampton	85	77	135288	t	t
+2024-01-25	2023-2024	Monmouth	Stony Brook	72	65	135289	f	f
+2024-01-27	2023-2024	Monmouth	Hofstra	81	78	135290	t	t
+2024-02-01	2023-2024	Monmouth	Drexel	67	62	135291	t	t
+2024-02-03	2023-2024	Monmouth	Delaware	84	80	135292	f	f
+2024-02-08	2023-2024	Monmouth	William & Mary	68	64	135293	t	t
+2024-02-10	2023-2024	Monmouth	Northeastern	77	65	135294	f	f
+2024-02-15	2023-2024	Monmouth	Campbell	88	87	135295	t	t
+2024-02-17	2023-2024	Monmouth	Stony Brook	84	61	135296	t	t
+2024-02-22	2023-2024	Monmouth	Towson	80	61	135297	f	f
+2024-02-24	2023-2024	Monmouth	North Carolina A&T	83	67	135298	t	t
+2024-02-29	2023-2024	Monmouth	Hampton	64	56	135299	f	f
+2024-03-02	2023-2024	Monmouth	Elon	85	70	135300	t	f
+2024-03-09	2023-2024	Monmouth	Campbell	90	67	135301	t	t
+2024-03-10	2023-2024	Monmouth	Charleston	83	59	135302	f	t
+2023-11-07	2023-2024	Montana	vsNorthwest Indian	107	59	135303	t	t
+2023-11-10	2023-2024	Montana	Oregon	75	61	135304	f	f
+2023-11-12	2023-2024	Montana	UC Davis	78	65	135305	t	t
+2023-11-16	2023-2024	Montana	North Dakota State	78	69	135306	f	t
+2023-11-24	2023-2024	Montana	6 Houston	79	44	135307	f	f
+2023-11-29	2023-2024	Montana	Nevada	77	66	135308	f	f
+2023-12-02	2023-2024	Montana	San José State	75	58	135309	t	t
+2023-12-05	2023-2024	Montana	vsMontana State-Northern	91	67	135310	t	t
+2023-12-09	2023-2024	Montana	vsMontana Tech	88	67	135311	t	t
+2023-12-17	2023-2024	Montana	San José State	86	75	135312	t	f
+2023-12-19	2023-2024	Montana	UC Davis	73	61	135313	t	f
+2023-12-28	2023-2024	Montana	Weber State	93	63	135314	f	f
+2023-12-30	2023-2024	Montana	Idaho State	76	68	135315	t	f
+2024-01-03	2023-2024	Montana	North Dakota State	96	86	135316	t	f
+2024-01-06	2023-2024	Montana	South Dakota	82	63	135317	t	t
+2024-01-13	2023-2024	Montana	Northern Arizona	90	47	135318	t	t
+2024-01-20	2023-2024	Montana	Montana State	87	77	135319	t	f
+2024-01-22	2023-2024	Montana	Weber State	77	62	135320	t	t
+2024-01-25	2023-2024	Montana	Portland State	72	46	135321	f	f
+2024-01-27	2023-2024	Montana	Sacramento State	70	67	135322	t	f
+2024-02-01	2023-2024	Montana	Idaho	73	70	135323	t	t
+2024-02-03	2023-2024	Montana	Eastern Washington	78	65	135324	f	t
+2024-02-08	2023-2024	Montana	Northern Arizona	94	66	135325	t	f
+2024-02-10	2023-2024	Montana	Northern Colorado	87	71	135326	f	f
+2024-02-17	2023-2024	Montana	Montana State	88	69	135327	t	t
+2024-02-22	2023-2024	Montana	Sacramento State	68	61	135328	t	t
+2024-02-24	2023-2024	Montana	Portland State	82	73	135329	t	t
+2024-02-29	2023-2024	Montana	Eastern Washington	89	79	135330	f	f
+2024-03-02	2023-2024	Montana	Idaho	80	57	135331	t	f
+2024-03-04	2023-2024	Montana	Idaho State	79	65	135332	t	t
+2024-03-11	2023-2024	Montana	Portland State	87	81	135333	t	t
+2024-03-12	2023-2024	Montana	Idaho State	72	58	135334	t	t
+2024-03-13	2023-2024	Montana	Montana State	85	70	135335	f	t
+2023-11-06	2023-2024	Montana State	vsNorthwest Indian	103	63	135336	t	t
+2023-11-11	2023-2024	Montana State	Seattle U	71	68	135337	f	f
+2023-11-16	2023-2024	Montana State	California	63	60	135338	t	f
+2023-11-22	2023-2024	Montana State	UC Riverside	69	68	135339	t	t
+2023-11-26	2023-2024	Montana State	Long Beach State	75	69	135340	f	t
+2023-11-30	2023-2024	Montana State	vsRocky Mountain	70	62	135341	f	t
+2023-12-05	2023-2024	Montana State	Washington	85	61	135342	f	f
+2023-12-16	2023-2024	Montana State	vsSagu American Indian College	106	81	135343	t	t
+2023-12-22	2023-2024	Montana State	Cal State Northridge	82	70	135344	f	f
+2023-12-28	2023-2024	Montana State	Idaho State	74	66	135345	t	f
+2023-12-30	2023-2024	Montana State	Weber State	86	64	135346	f	f
+2024-01-03	2023-2024	Montana State	Oral Roberts	82	76	135347	f	t
+2024-01-06	2023-2024	Montana State	South Dakota State	89	61	135348	f	f
+2024-01-11	2023-2024	Montana State	Northern Arizona	79	50	135349	t	t
+2024-01-13	2023-2024	Montana State	Northern Colorado	90	81	135350	t	t
+2024-01-20	2023-2024	Montana State	Montana	87	77	135351	f	t
+2024-01-22	2023-2024	Montana State	Idaho State	77	70	135352	t	t
+2024-01-25	2023-2024	Montana State	Sacramento State	70	62	135353	t	f
+2024-01-27	2023-2024	Montana State	Portland State	94	91	135354	f	f
+2024-02-01	2023-2024	Montana State	Eastern Washington	70	60	135355	t	t
+2024-02-03	2023-2024	Montana State	Idaho	81	75	135356	f	t
+2024-02-08	2023-2024	Montana State	Northern Colorado	73	70	135357	f	f
+2024-02-10	2023-2024	Montana State	Northern Arizona	76	71	135358	f	f
+2024-02-17	2023-2024	Montana State	Montana	88	69	135359	f	f
+2024-02-22	2023-2024	Montana State	Portland State	72	67	135360	t	t
+2024-02-24	2023-2024	Montana State	Sacramento State	66	63	135361	f	t
+2024-02-29	2023-2024	Montana State	Idaho	62	48	135362	t	f
+2024-03-04	2023-2024	Montana State	Weber State	76	64	135363	t	t
+2024-03-11	2023-2024	Montana State	Weber State	91	82	135364	t	t
+2024-03-12	2023-2024	Montana State	Sacramento State	74	71	135365	t	t
+2024-03-13	2023-2024	Montana State	Montana	85	70	135366	t	t
+2023-11-06	2023-2024	Morehead State	24 Alabama	105	73	135367	f	f
+2023-11-08	2023-2024	Morehead State	vsShawnee State	96	40	135368	t	t
+2023-11-10	2023-2024	Morehead State	3 Purdue	87	57	135369	f	f
+2023-11-14	2023-2024	Morehead State	Mercer	74	66	135370	t	t
+2023-11-17	2023-2024	Morehead State	Penn State	74	51	135371	f	f
+2023-11-20	2023-2024	Morehead State	Bellarmine	64	51	135372	t	f
+2023-11-22	2023-2024	Morehead State	vsMidway University	94	53	135373	t	t
+2023-11-29	2023-2024	Morehead State	Austin Peay	61	50	135374	t	f
+2023-12-03	2023-2024	Morehead State	Chattanooga	87	80	135375	t	t
+2023-12-10	2023-2024	Morehead State	North Alabama	86	77	135376	t	f
+2023-12-14	2023-2024	Morehead State	vsSaint Mary-Of-The-Woods College	102	33	135377	t	t
+2023-12-19	2023-2024	Morehead State	Indiana	69	68	135378	f	f
+2023-12-21	2023-2024	Morehead State	vsAlice Lloyd College	101	39	135379	t	t
+2023-12-31	2023-2024	Morehead State	Southeast Missouri State	83	64	135380	t	f
+2024-01-04	2023-2024	Morehead State	Tennessee Tech	82	57	135381	t	t
+2024-01-06	2023-2024	Morehead State	Tennessee State	78	68	135382	t	t
+2024-01-11	2023-2024	Morehead State	Eastern Illinois	78	52	135383	t	f
+2024-01-13	2023-2024	Morehead State	SIU Edwardsville	61	48	135384	f	f
+2024-01-18	2023-2024	Morehead State	UT Martin	84	66	135385	t	t
+2024-01-20	2023-2024	Morehead State	Southern Indiana	81	70	135386	t	f
+2024-01-27	2023-2024	Morehead State	Western Illinois	64	50	135387	t	t
+2024-02-01	2023-2024	Morehead State	Tennessee State	68	49	135388	t	f
+2024-02-03	2023-2024	Morehead State	Tennessee Tech	67	60	135389	t	f
+2024-02-08	2023-2024	Morehead State	SIU Edwardsville	79	68	135390	t	t
+2024-02-10	2023-2024	Morehead State	Eastern Illinois	69	57	135391	t	t
+2024-02-15	2023-2024	Morehead State	Little Rock	69	68	135392	f	f
+2024-02-17	2023-2024	Morehead State	UT Martin	88	82	135393	f	f
+2024-02-20	2023-2024	Morehead State	Southern Indiana	80	73	135394	f	t
+2024-02-22	2023-2024	Morehead State	Western Illinois	78	57	135395	t	f
+2024-02-29	2023-2024	Morehead State	Southeast Missouri State	72	50	135396	t	t
+2024-03-02	2023-2024	Morehead State	Lindenwood	67	49	135397	t	t
+2024-03-07	2023-2024	Morehead State	SIU Edwardsville	78	63	135398	t	t
+2024-03-08	2023-2024	Morehead State	UT Martin	84	78	135399	t	t
+2024-03-09	2023-2024	Morehead State	Little Rock	69	55	135400	t	t
+2023-11-06	2023-2024	Morgan State	12 Arizona	122	59	135401	f	f
+2023-11-09	2023-2024	Morgan State	vsCheyney (PA)	100	52	135402	t	t
+2023-11-12	2023-2024	Morgan State	vsPenn State (Wilkes-Barre)	78	60	135403	t	t
+2023-11-15	2023-2024	Morgan State	Fresno State	87	68	135404	f	f
+2023-11-18	2023-2024	Morgan State	BYU	93	50	135405	f	f
+2023-11-21	2023-2024	Morgan State	Radford	82	72	135406	f	t
+2023-11-22	2023-2024	Morgan State	Chicago State	84	83	135407	f	t
+2023-11-26	2023-2024	Morgan State	Towson	67	58	135408	f	f
+2023-11-29	2023-2024	Morgan State	High Point	77	59	135409	f	f
+2023-12-03	2023-2024	Morgan State	Longwood	88	54	135410	f	t
+2023-12-06	2023-2024	Morgan State	UMBC	92	80	135411	t	t
+2023-12-09	2023-2024	Morgan State	vsVirginia-Lynchburg	120	50	135412	t	t
+2023-12-18	2023-2024	Morgan State	Campbell	83	76	135413	f	f
+2023-12-22	2023-2024	Morgan State	20 James Madison	89	75	135414	f	t
+2023-12-27	2023-2024	Morgan State	Virginia	79	44	135415	f	f
+2023-12-31	2023-2024	Morgan State	NJIT	69	53	135416	f	f
+2024-01-06	2023-2024	Morgan State	Maryland-Eastern Shore	75	74	135417	f	f
+2024-01-08	2023-2024	Morgan State	Delaware State	78	66	135418	f	t
+2024-01-27	2023-2024	Morgan State	Howard	85	79	135419	t	t
+2024-01-29	2023-2024	Morgan State	Norfolk State	83	73	135420	f	f
+2024-02-03	2023-2024	Morgan State	South Carolina State	72	70	135421	t	f
+2024-02-17	2023-2024	Morgan State	Maryland-Eastern Shore	70	65	135422	t	t
+2024-02-19	2023-2024	Morgan State	Delaware State	80	58	135423	f	f
+2024-02-24	2023-2024	Morgan State	Howard	78	72	135424	f	f
+2024-02-26	2023-2024	Morgan State	Norfolk State	85	82	135425	f	t
+2024-03-02	2023-2024	Morgan State	South Carolina State	72	61	135426	f	t
+2024-03-04	2023-2024	Morgan State	North Carolina Central	88	79	135427	t	t
+2024-03-07	2023-2024	Morgan State	Coppin State	78	60	135428	t	t
+2024-03-14	2023-2024	Morgan State	Howard	78	65	135429	f	t
+2023-11-07	2023-2024	Mount St Marys	Maryland	68	53	135430	f	f
+2023-11-11	2023-2024	Mount St Marys	Coppin State	74	60	135431	t	t
+2023-11-18	2023-2024	Mount St Marys	Georgetown	83	72	135432	f	f
+2023-11-22	2023-2024	Mount St Marys	American University	68	65	135433	f	f
+2023-12-03	2023-2024	Mount St Marys	Siena	80	48	135434	t	t
+2023-12-05	2023-2024	Mount St Marys	Ole Miss	77	68	135435	f	f
+2023-12-09	2023-2024	Mount St Marys	Loyola Maryland	77	64	135436	t	f
+2023-12-15	2023-2024	Mount St Marys	St. Francis (PA)	72	65	135437	t	f
+2023-12-20	2023-2024	Mount St Marys	Georgia	94	82	135438	f	f
+2023-12-23	2023-2024	Mount St Marys	Long Island University	87	59	135439	t	t
+2023-12-30	2023-2024	Mount St Marys	Delaware State	77	73	135440	f	f
+2024-01-05	2023-2024	Mount St Marys	Canisius	74	69	135441	t	t
+2024-01-07	2023-2024	Mount St Marys	Saint Peter's	70	64	135442	f	f
+2024-01-14	2023-2024	Mount St Marys	Iona	87	70	135443	f	f
+2024-01-19	2023-2024	Mount St Marys	Marist	65	48	135444	t	t
+2024-01-21	2023-2024	Mount St Marys	Niagara	82	71	135445	f	t
+2024-01-25	2023-2024	Mount St Marys	Quinnipiac	79	65	135446	f	f
+2024-01-27	2023-2024	Mount St Marys	Rider	66	62	135447	f	t
+2024-02-02	2023-2024	Mount St Marys	Marist	76	58	135448	t	f
+2024-02-04	2023-2024	Mount St Marys	Siena	68	61	135449	t	f
+2024-02-08	2023-2024	Mount St Marys	Manhattan	82	78	135450	t	t
+2024-02-10	2023-2024	Mount St Marys	Quinnipiac	96	79	135451	t	t
+2024-02-16	2023-2024	Mount St Marys	Rider	61	57	135452	f	f
+2024-02-18	2023-2024	Mount St Marys	Fairfield	94	80	135453	f	f
+2024-02-23	2023-2024	Mount St Marys	Saint Peter's	70	65	135454	f	t
+2024-02-25	2023-2024	Mount St Marys	Iona	72	65	135455	t	t
+2024-03-01	2023-2024	Mount St Marys	Canisius	61	56	135456	f	f
+2024-03-03	2023-2024	Mount St Marys	Niagara	91	72	135457	t	f
+2024-03-09	2023-2024	Mount St Marys	Fairfield	96	92	135458	f	t
+2024-03-12	2023-2024	Mount St Marys	Canisius	77	61	135459	f	t
+2023-11-06	2023-2024	Murray State	vsMidway University	91	58	135460	t	t
+2023-11-10	2023-2024	Murray State	Tennessee Tech	78	72	135461	t	t
+2023-11-14	2023-2024	Murray State	Western Kentucky	86	81	135462	f	t
+2023-11-22	2023-2024	Murray State	Appalachian State	67	57	135463	f	t
+2023-11-29	2023-2024	Murray State	Bradley	79	72	135464	t	t
+2023-12-03	2023-2024	Murray State	Illinois State	76	72	135465	f	f
+2023-12-09	2023-2024	Murray State	Austin Peay	53	49	135466	f	f
+2023-12-13	2023-2024	Murray State	Mississippi State	85	81	135467	f	f
+2023-12-16	2023-2024	Murray State	SE Louisiana	61	55	135468	f	t
+2023-12-18	2023-2024	Murray State	Little Rock	80	66	135469	f	f
+2023-12-22	2023-2024	Murray State	SMU	92	65	135470	f	t
+2023-12-30	2023-2024	Murray State	Middle Tennessee	75	54	135471	t	t
+2024-01-02	2023-2024	Murray State	UIC	85	73	135472	t	t
+2024-01-06	2023-2024	Murray State	Evansville	81	59	135473	t	f
+2024-01-10	2023-2024	Murray State	Missouri State	77	53	135474	t	f
+2024-01-14	2023-2024	Murray State	Northern Iowa	70	60	135475	f	t
+2024-01-17	2023-2024	Murray State	UIC	73	58	135476	t	f
+2024-01-21	2023-2024	Murray State	Indiana State	72	63	135477	f	t
+2024-01-24	2023-2024	Murray State	Bradley	71	63	135478	f	f
+2024-01-27	2023-2024	Murray State	Southern Illinois	60	58	135479	f	t
+2024-01-30	2023-2024	Murray State	Illinois State	61	59	135480	f	t
+2024-02-03	2023-2024	Murray State	Northern Iowa	71	43	135481	t	f
+2024-02-07	2023-2024	Murray State	Belmont	69	64	135482	f	f
+2024-02-10	2023-2024	Murray State	Evansville	73	70	135483	t	t
+2024-02-14	2023-2024	Murray State	Missouri State	82	72	135484	t	t
+2024-02-18	2023-2024	Murray State	Drake	95	72	135485	f	f
+2024-02-21	2023-2024	Murray State	Southern Illinois	72	68	135486	f	f
+2024-02-24	2023-2024	Murray State	Valparaiso	80	68	135487	t	t
+2024-02-28	2023-2024	Murray State	Belmont	83	61	135488	f	t
+2024-03-03	2023-2024	Murray State	Indiana State	89	77	135489	f	f
+2024-03-07	2023-2024	Murray State	Missouri State	60	35	135490	f	t
+2023-11-06	2023-2024	NC State	The Citadel	72	59	135491	t	t
+2023-11-10	2023-2024	NC State	Abilene Christian	84	64	135492	t	t
+2023-11-17	2023-2024	NC State	Charleston Southern	87	53	135493	t	t
+2023-11-23	2023-2024	NC State	Vanderbilt	84	78	135494	t	t
+2023-11-24	2023-2024	NC State	BYU	95	86	135495	f	t
+2023-11-28	2023-2024	NC State	Ole Miss	72	52	135496	f	f
+2023-12-06	2023-2024	NC State	Maryland-Eastern Shore	93	61	135497	t	t
+2023-12-12	2023-2024	NC State	UT Martin	81	67	135498	t	t
+2023-12-16	2023-2024	NC State	12 Tennessee	79	70	135499	f	t
+2023-12-20	2023-2024	NC State	Saint Louis	82	70	135500	t	t
+2023-12-23	2023-2024	NC State	Detroit Mercy	83	66	135501	t	t
+2024-01-03	2023-2024	NC State	Notre Dame	54	52	135502	t	f
+2024-01-06	2023-2024	NC State	Virginia	76	60	135503	t	t
+2024-01-10	2023-2024	NC State	7 North Carolina	67	54	135504	f	t
+2024-01-13	2023-2024	NC State	Louisville	89	83	135505	t	f
+2024-01-16	2023-2024	NC State	Wake Forest	83	76	135506	t	t
+2024-01-20	2023-2024	NC State	Virginia Tech	84	78	135507	f	t
+2024-01-27	2023-2024	NC State	Syracuse	77	65	135508	f	f
+2024-01-30	2023-2024	NC State	Miami	74	68	135509	t	t
+2024-02-03	2023-2024	NC State	Georgia Tech	82	76	135510	t	t
+2024-02-07	2023-2024	NC State	Pittsburgh	67	64	135511	f	t
+2024-02-10	2023-2024	NC State	Wake Forest	83	79	135512	f	f
+2024-02-17	2023-2024	NC State	Clemson	78	77	135513	t	f
+2024-02-20	2023-2024	NC State	Syracuse	87	83	135514	f	t
+2024-02-24	2023-2024	NC State	Boston College	81	70	135515	t	t
+2024-02-27	2023-2024	NC State	Florida State	90	83	135516	f	f
+2024-03-02	2023-2024	NC State	9 North Carolina	79	70	135517	f	f
+2024-03-04	2023-2024	NC State	9 Duke	79	64	135518	f	t
+2024-03-09	2023-2024	NC State	Pittsburgh	81	73	135519	f	f
+2024-03-12	2023-2024	NC State	Louisville	94	85	135520	t	t
+2024-03-13	2023-2024	NC State	Syracuse	83	65	135521	t	t
+2024-03-14	2023-2024	NC State	11 Duke	74	69	135522	t	t
+2024-03-16	2023-2024	NC State	4 North Carolina	84	76	135523	t	t
+2023-11-06	2023-2024	NJIT	13 Miami	101	60	135524	f	f
+2023-11-11	2023-2024	NJIT	Saint Peter's	75	48	135525	f	t
+2023-11-16	2023-2024	NJIT	American University	87	73	135526	f	f
+2023-11-20	2023-2024	NJIT	Delaware State	81	72	135527	t	t
+2023-11-25	2023-2024	NJIT	Wagner	64	51	135528	f	f
+2023-11-29	2023-2024	NJIT	George Mason	86	68	135529	f	f
+2023-12-02	2023-2024	NJIT	Fairleigh Dickinson	71	68	135530	f	t
+2023-12-06	2023-2024	NJIT	Fordham	80	77	135531	t	f
+2023-12-09	2023-2024	NJIT	Wake Forest	83	59	135532	f	f
+2023-12-16	2023-2024	NJIT	Niagara	89	81	135533	f	f
+2023-12-22	2023-2024	NJIT	vsMedgar Evers	127	51	135534	t	t
+2023-12-31	2023-2024	NJIT	Morgan State	69	53	135535	t	t
+2024-01-06	2023-2024	NJIT	UAlbany	79	73	135536	f	t
+2024-01-11	2023-2024	NJIT	UMass Lowell	70	62	135537	f	f
+2024-01-13	2023-2024	NJIT	Vermont	76	55	135538	f	f
+2024-01-18	2023-2024	NJIT	New Hampshire	70	62	135539	f	t
+2024-01-20	2023-2024	NJIT	Maine	70	64	135540	f	t
+2024-01-25	2023-2024	NJIT	Bryant	70	55	135541	f	t
+2024-01-27	2023-2024	NJIT	UMBC	75	74	135542	t	f
+2024-02-01	2023-2024	NJIT	Binghamton	75	66	135543	f	f
+2024-02-08	2023-2024	NJIT	Vermont	63	61	135544	t	t
+2024-02-10	2023-2024	NJIT	UMass Lowell	71	64	135545	t	t
+2024-02-15	2023-2024	NJIT	UAlbany	83	58	135546	f	f
+2024-02-17	2023-2024	NJIT	Binghamton	69	55	135547	f	t
+2024-02-22	2023-2024	NJIT	New Hampshire	83	78	135548	f	f
+2024-02-24	2023-2024	NJIT	Maine	68	58	135549	f	f
+2024-02-29	2023-2024	NJIT	UMBC	79	60	135550	f	t
+2024-03-02	2023-2024	NJIT	Bryant	101	82	135551	f	f
+2023-11-06	2023-2024	Navy	Campbell	59	48	135552	f	f
+2023-11-10	2023-2024	Navy	Temple	75	68	135553	f	t
+2023-11-18	2023-2024	Navy	UC San Diego	73	55	135554	f	f
+2023-11-20	2023-2024	Navy	San Diego	67	59	135555	f	f
+2023-11-29	2023-2024	Navy	VMI	67	47	135556	t	t
+2023-12-03	2023-2024	Navy	Coppin State	75	52	135557	t	t
+2023-12-08	2023-2024	Navy	Quinnipiac	71	68	135558	f	f
+2023-12-17	2023-2024	Navy	vsWashington College (MD)	91	33	135559	t	t
+2023-12-21	2023-2024	Navy	Youngstown State	75	65	135560	f	f
+2023-12-30	2023-2024	Navy	William & Mary	77	65	135561	t	t
+2024-01-03	2023-2024	Navy	Boston University	62	60	135562	t	t
+2024-01-06	2023-2024	Navy	Colgate	80	72	135563	f	t
+2024-01-10	2023-2024	Navy	Holy Cross	80	70	135564	t	f
+2024-01-13	2023-2024	Navy	Louisiana-Lafayette	78	62	135565	f	f
+2024-01-17	2023-2024	Navy	Lehigh	71	69	135566	t	t
+2024-01-20	2023-2024	Navy	Army	57	53	135567	t	t
+2024-01-24	2023-2024	Navy	Bucknell	71	63	135568	f	f
+2024-01-27	2023-2024	Navy	Loyola Maryland	74	70	135569	f	t
+2024-01-31	2023-2024	Navy	Lehigh	77	65	135570	f	f
+2024-02-03	2023-2024	Navy	Colgate	88	64	135571	f	f
+2024-02-07	2023-2024	Navy	Bucknell	80	67	135572	f	t
+2024-02-14	2023-2024	Navy	American University	59	42	135573	f	t
+2024-02-17	2023-2024	Navy	Boston University	74	65	135574	f	f
+2024-02-21	2023-2024	Navy	Loyola Maryland	69	62	135575	t	f
+2024-02-25	2023-2024	Navy	Holy Cross	76	66	135576	t	t
+2024-02-28	2023-2024	Navy	Louisiana-Lafayette	62	58	135577	t	t
+2024-03-02	2023-2024	Navy	American University	71	65	135578	t	f
+2024-03-05	2023-2024	Navy	Loyola Maryland	64	48	135579	t	t
+2024-03-07	2023-2024	Navy	Boston University	70	61	135580	f	f
+2023-11-06	2023-2024	Nebraska	Lindenwood	84	52	135581	t	t
+2023-11-09	2023-2024	Nebraska	Florida A&M	81	54	135582	t	t
+2023-11-13	2023-2024	Nebraska	Rider	64	50	135583	t	t
+2023-11-15	2023-2024	Nebraska	Stony Brook	84	63	135584	t	t
+2023-11-18	2023-2024	Nebraska	Oregon State	84	63	135585	t	t
+2023-11-22	2023-2024	Nebraska	Duquesne	89	79	135586	t	t
+2023-11-26	2023-2024	Nebraska	Cal State Fullerton	85	72	135587	t	t
+2023-12-03	2023-2024	Nebraska	15 Creighton	89	60	135588	f	t
+2023-12-06	2023-2024	Nebraska	Minnesota	76	65	135589	f	f
+2023-12-10	2023-2024	Nebraska	Michigan State	77	70	135590	t	t
+2023-12-17	2023-2024	Nebraska	Kansas State	62	46	135591	t	f
+2023-12-20	2023-2024	Nebraska	North Dakota	83	75	135592	t	t
+2023-12-29	2023-2024	Nebraska	South Carolina State	91	62	135593	t	t
+2024-01-03	2023-2024	Nebraska	Indiana	86	70	135594	t	t
+2024-01-06	2023-2024	Nebraska	21 Wisconsin	88	72	135595	f	f
+2024-01-09	2023-2024	Nebraska	1 Purdue	88	72	135596	t	t
+2024-01-12	2023-2024	Nebraska	Iowa	94	76	135597	f	f
+2024-01-20	2023-2024	Nebraska	Northwestern	75	69	135598	t	t
+2024-01-23	2023-2024	Nebraska	Ohio State	83	69	135599	t	t
+2024-01-27	2023-2024	Nebraska	Maryland	73	51	135600	f	f
+2024-02-07	2023-2024	Nebraska	Northwestern	80	68	135601	f	f
+2024-02-10	2023-2024	Nebraska	Michigan	79	59	135602	t	t
+2024-02-17	2023-2024	Nebraska	Penn State	68	49	135603	t	t
+2024-02-21	2023-2024	Nebraska	Indiana	85	70	135604	t	f
+2024-02-25	2023-2024	Nebraska	Minnesota	73	55	135605	t	t
+2024-02-29	2023-2024	Nebraska	Ohio State	78	69	135606	f	f
+2024-03-03	2023-2024	Nebraska	Rutgers	67	56	135607	t	t
+2024-03-10	2023-2024	Nebraska	Michigan	85	70	135608	t	f
+2024-03-15	2023-2024	Nebraska	Indiana	93	66	135609	t	t
+2024-03-16	2023-2024	Nebraska	13 Illinois	98	87	135610	f	t
+2023-11-07	2023-2024	Nevada	Sacramento State	77	63	135611	t	t
+2023-11-12	2023-2024	Nevada	Washington	83	76	135612	t	f
+2023-11-15	2023-2024	Nevada	Pacific	88	39	135613	t	t
+2023-11-18	2023-2024	Nevada	Portland	108	83	135614	t	t
+2023-11-29	2023-2024	Nevada	Montana	77	66	135615	t	t
+2023-12-02	2023-2024	Nevada	Loyola Marymount	73	59	135616	t	t
+2023-12-06	2023-2024	Nevada	UC Davis	80	68	135617	t	t
+2023-12-09	2023-2024	Nevada	Drake	72	53	135618	f	t
+2023-12-13	2023-2024	Nevada	Weber State	72	55	135619	t	t
+2023-12-17	2023-2024	Nevada	Hawai'i	72	66	135620	t	f
+2023-12-21	2023-2024	Nevada	Temple	80	56	135621	t	t
+2023-12-22	2023-2024	Nevada	TCU	88	75	135622	t	t
+2023-12-24	2023-2024	Nevada	Georgia Tech	72	64	135623	t	t
+2023-12-30	2023-2024	Nevada	vsFresno Pacific	92	59	135624	t	t
+2024-01-06	2023-2024	Nevada	Fresno State	72	57	135625	t	f
+2024-01-09	2023-2024	Nevada	Air Force	67	54	135626	t	t
+2024-01-12	2023-2024	Nevada	Boise State	64	56	135627	f	t
+2024-01-17	2023-2024	Nevada	San Diego State	71	59	135628	f	f
+2024-01-20	2023-2024	Nevada	Wyoming	98	93	135629	f	f
+2024-01-24	2023-2024	Nevada	24 Colorado State	77	64	135630	t	t
+2024-01-28	2023-2024	Nevada	25 New Mexico	89	55	135631	f	f
+2024-02-02	2023-2024	Nevada	San José State	90	60	135632	t	t
+2024-02-06	2023-2024	Nevada	22 Utah State	77	63	135633	t	f
+2024-02-13	2023-2024	Nevada	New Mexico	83	82	135634	f	t
+2024-02-17	2023-2024	Nevada	UNLV	69	66	135635	t	f
+2024-02-20	2023-2024	Nevada	Wyoming	76	58	135636	t	t
+2024-02-23	2023-2024	Nevada	San José State	84	63	135637	t	f
+2024-02-27	2023-2024	Nevada	Colorado State	77	74	135638	t	f
+2024-03-01	2023-2024	Nevada	Fresno State	74	66	135639	t	t
+2024-03-05	2023-2024	Nevada	Boise State	76	66	135640	t	f
+2024-03-09	2023-2024	Nevada	UNLV	75	65	135641	t	t
+2024-03-14	2023-2024	Nevada	Colorado State	85	78	135642	f	t
+2023-11-06	2023-2024	New Hampshire	Syracuse	83	72	135643	f	f
+2023-11-08	2023-2024	New Hampshire	vsCurry College	115	38	135644	t	t
+2023-11-14	2023-2024	New Hampshire	Brown	82	64	135645	t	t
+2023-11-18	2023-2024	New Hampshire	George Washington	79	67	135646	f	f
+2023-11-21	2023-2024	New Hampshire	Marist	74	71	135647	t	t
+2023-11-24	2023-2024	New Hampshire	Fairfield	83	80	135648	t	f
+2023-11-27	2023-2024	New Hampshire	4 UConn	84	64	135649	f	f
+2023-11-30	2023-2024	New Hampshire	Sacred Heart	90	84	135650	t	f
+2023-12-03	2023-2024	New Hampshire	Columbia	80	71	135651	t	t
+2023-12-06	2023-2024	New Hampshire	Dartmouth	76	64	135652	f	f
+2023-12-11	2023-2024	New Hampshire	Stonehill	75	62	135653	t	t
+2023-12-21	2023-2024	New Hampshire	Rhode Island	81	71	135654	t	f
+2023-12-31	2023-2024	New Hampshire	Iowa State	85	70	135655	f	f
+2024-01-06	2023-2024	New Hampshire	UMass Lowell	82	75	135656	f	t
+2024-01-11	2023-2024	New Hampshire	Maine	79	74	135657	t	f
+2024-01-13	2023-2024	New Hampshire	Bryant	89	74	135658	f	t
+2024-01-18	2023-2024	New Hampshire	NJIT	70	62	135659	t	f
+2024-01-20	2023-2024	New Hampshire	UMBC	64	58	135660	t	f
+2024-01-27	2023-2024	New Hampshire	UAlbany	86	79	135661	f	t
+2024-02-03	2023-2024	New Hampshire	UMass Lowell	89	73	135662	t	f
+2024-02-08	2023-2024	New Hampshire	Bryant	85	66	135663	f	f
+2024-02-10	2023-2024	New Hampshire	Maine	60	57	135664	t	t
+2024-02-15	2023-2024	New Hampshire	Vermont	70	54	135665	f	f
+2024-02-22	2023-2024	New Hampshire	NJIT	83	78	135666	t	t
+2024-02-24	2023-2024	New Hampshire	UMBC	86	68	135667	f	t
+2024-02-29	2023-2024	New Hampshire	UAlbany	91	67	135668	f	f
+2024-03-02	2023-2024	New Hampshire	Binghamton	87	74	135669	f	f
+2024-03-05	2023-2024	New Hampshire	Vermont	68	64	135670	f	t
+2024-03-09	2023-2024	New Hampshire	Binghamton	77	64	135671	t	t
+2024-03-12	2023-2024	New Hampshire	Vermont	66	59	135672	f	f
+2023-11-06	2023-2024	New Mexico	Texas Southern	92	55	135673	t	t
+2023-11-09	2023-2024	New Mexico	23 Saint Mary's	72	58	135674	f	f
+2023-11-16	2023-2024	New Mexico	UT Arlington	82	80	135675	t	t
+2023-11-21	2023-2024	New Mexico	Toledo	92	84	135676	t	t
+2023-11-22	2023-2024	New Mexico	Rice	90	56	135677	t	t
+2023-11-24	2023-2024	New Mexico	Pepperdine	90	71	135678	t	t
+2023-11-29	2023-2024	New Mexico	Louisiana Tech	74	65	135679	t	t
+2023-12-02	2023-2024	New Mexico	New Mexico State	106	62	135680	t	t
+2023-12-06	2023-2024	New Mexico	UC Santa Barbara	84	61	135681	t	t
+2023-12-09	2023-2024	New Mexico	Santa Clara	93	76	135682	t	t
+2023-12-15	2023-2024	New Mexico	New Mexico State	73	72	135683	t	f
+2023-12-20	2023-2024	New Mexico	UC Irvine	78	65	135684	t	t
+2023-12-29	2023-2024	New Mexico	vsE. New Mexico	87	54	135685	t	t
+2024-01-02	2023-2024	New Mexico	13 Colorado State	76	68	135686	f	f
+2024-01-06	2023-2024	New Mexico	Wyoming	77	60	135687	t	t
+2024-01-09	2023-2024	New Mexico	UNLV	83	73	135688	f	f
+2024-01-13	2023-2024	New Mexico	19 San Diego State	88	70	135689	t	t
+2024-01-16	2023-2024	New Mexico	16 Utah State	99	86	135690	t	t
+2024-01-20	2023-2024	New Mexico	Air Force	85	66	135691	t	f
+2024-01-24	2023-2024	New Mexico	San José State	95	75	135692	t	f
+2024-01-28	2023-2024	New Mexico	Nevada	89	55	135693	t	t
+2024-01-31	2023-2024	New Mexico	Boise State	86	78	135694	f	t
+2024-02-06	2023-2024	New Mexico	Wyoming	91	73	135695	t	f
+2024-02-10	2023-2024	New Mexico	UNLV	80	77	135696	f	t
+2024-02-13	2023-2024	New Mexico	Nevada	83	82	135697	t	f
+2024-02-16	2023-2024	New Mexico	San Diego State	81	70	135698	f	f
+2024-02-21	2023-2024	New Mexico	22 Colorado State	68	66	135699	t	t
+2024-02-24	2023-2024	New Mexico	Air Force	78	77	135700	f	t
+2024-03-02	2023-2024	New Mexico	Boise State	89	79	135701	f	f
+2024-03-06	2023-2024	New Mexico	Fresno State	79	58	135702	t	t
+2024-03-09	2023-2024	New Mexico	22 Utah State	87	85	135703	f	f
+2024-03-13	2023-2024	New Mexico	Air Force	82	56	135704	t	t
+2024-03-14	2023-2024	New Mexico	Boise State	76	66	135705	t	t
+2024-03-15	2023-2024	New Mexico	Colorado State	74	61	135706	t	t
+2024-03-16	2023-2024	New Mexico	San Diego State	68	61	135707	t	t
+2023-11-06	2023-2024	NM State	16 Kentucky	86	46	135708	f	f
+2023-11-08	2023-2024	NM State	vsSul Ross State	84	49	135709	t	t
+2023-11-11	2023-2024	NM State	UC Irvine	91	74	135710	f	f
+2023-11-14	2023-2024	NM State	vsWestern New Mexico	78	43	135711	t	t
+2023-11-18	2023-2024	NM State	Northern Colorado	76	71	135712	t	t
+2023-11-22	2023-2024	NM State	Southern Illinois	81	54	135713	f	t
+2023-11-28	2023-2024	NM State	vsUniversity of The Southwest	84	49	135714	t	t
+2023-12-02	2023-2024	NM State	New Mexico	106	62	135715	f	f
+2023-12-12	2023-2024	NM State	vsNorthern New Mexico	76	71	135716	t	t
+2023-12-15	2023-2024	NM State	New Mexico	73	72	135717	f	t
+2023-12-19	2023-2024	NM State	Stephen F. Austin	75	72	135718	f	f
+2023-12-22	2023-2024	NM State	Tulsa	65	59	135719	f	f
+2023-12-30	2023-2024	NM State	California Baptist	66	61	135720	t	t
+2024-01-04	2023-2024	NM State	UTEP	63	53	135721	t	t
+2024-01-11	2023-2024	NM State	Florida International	77	67	135722	f	f
+2024-01-18	2023-2024	NM State	Western Kentucky	72	70	135723	t	t
+2024-01-20	2023-2024	NM State	Middle Tennessee	73	62	135724	t	t
+2024-01-25	2023-2024	NM State	Sam Houston	79	67	135725	f	f
+2024-01-27	2023-2024	NM State	Louisiana Tech	73	53	135726	f	f
+2024-02-03	2023-2024	NM State	Jacksonville State	67	65	135727	t	t
+2024-02-10	2023-2024	NM State	UTEP	74	49	135728	f	f
+2024-02-15	2023-2024	NM State	Middle Tennessee	76	69	135729	f	f
+2024-02-17	2023-2024	NM State	Western Kentucky	72	58	135730	f	f
+2024-02-22	2023-2024	NM State	Sam Houston	79	58	135731	f	t
+2024-02-24	2023-2024	NM State	Louisiana Tech	67	58	135732	f	t
+2024-02-29	2023-2024	NM State	Liberty	83	58	135733	f	f
+2024-03-02	2023-2024	NM State	Jacksonville State	66	64	135734	t	f
+2024-03-09	2023-2024	NM State	Florida International	77	70	135735	t	t
+2024-03-14	2023-2024	NM State	Western Kentucky	89	69	135736	f	t
+2023-11-06	2023-2024	New Orleans	vsMillsaps	100	70	135737	t	t
+2023-11-11	2023-2024	New Orleans	vsSouthern-New Orleans	106	69	135738	t	t
+2023-11-18	2023-2024	New Orleans	Loyola Chicago	73	70	135739	f	f
+2023-11-20	2023-2024	New Orleans	Oklahoma State	96	68	135740	f	f
+2023-11-26	2023-2024	New Orleans	Central Arkansas	79	74	135741	t	f
+2023-11-30	2023-2024	New Orleans	Minnesota	97	64	135742	f	f
+2023-12-05	2023-2024	New Orleans	vsBelhaven	79	65	135743	t	t
+2023-12-09	2023-2024	New Orleans	San José State	87	82	135744	f	f
+2023-12-11	2023-2024	New Orleans	San Francisco	85	72	135745	f	f
+2023-12-14	2023-2024	New Orleans	vsBirmingham-Southern	91	51	135746	t	t
+2023-12-21	2023-2024	New Orleans	Ohio State	78	36	135747	f	f
+2023-12-29	2023-2024	New Orleans	Stephen F. Austin	80	51	135748	f	f
+2024-01-06	2023-2024	New Orleans	SE Louisiana	73	68	135749	f	t
+2024-01-08	2023-2024	New Orleans	Texas A&M-Commerce	88	85	135750	t	t
+2024-01-13	2023-2024	New Orleans	Texas A&M-Corpus Christi	83	80	135751	t	t
+2024-01-15	2023-2024	New Orleans	Nicholls	78	75	135752	f	f
+2024-01-20	2023-2024	New Orleans	Northwestern State	92	67	135753	f	t
+2024-01-22	2023-2024	New Orleans	Houston Christian	88	80	135754	f	f
+2024-01-27	2023-2024	New Orleans	McNeese	102	65	135755	f	f
+2024-01-29	2023-2024	New Orleans	Lamar	98	73	135756	f	f
+2024-02-03	2023-2024	New Orleans	Incarnate Word	82	80	135757	f	t
+2024-02-05	2023-2024	New Orleans	Houston Christian	84	58	135758	t	t
+2024-02-10	2023-2024	New Orleans	Texas A&M-Commerce	89	83	135759	f	f
+2024-02-12	2023-2024	New Orleans	Northwestern State	70	59	135760	f	f
+2024-02-17	2023-2024	New Orleans	Lamar	94	72	135761	f	t
+2024-02-19	2023-2024	New Orleans	Nicholls	89	77	135762	f	t
+2024-02-24	2023-2024	New Orleans	SE Louisiana	77	67	135763	f	f
+2024-03-02	2023-2024	New Orleans	Incarnate Word	87	80	135764	t	f
+2024-03-04	2023-2024	New Orleans	Texas A&M-Corpus Christi	73	60	135765	f	f
+2024-03-06	2023-2024	New Orleans	McNeese	81	57	135766	f	t
+2024-03-10	2023-2024	New Orleans	SE Louisiana	78	66	135767	t	t
+2024-03-11	2023-2024	New Orleans	Lamar	71	57	135768	f	t
+2023-11-06	2023-2024	Niagara	Notre Dame	70	63	135769	f	f
+2023-11-11	2023-2024	Niagara	Bucknell	73	64	135770	f	t
+2023-11-16	2023-2024	Niagara	Hawai'i	92	73	135771	f	f
+2023-11-25	2023-2024	Niagara	St. Francis (PA)	69	61	135772	t	f
+2023-12-01	2023-2024	Niagara	Saint Peter's	72	67	135773	f	t
+2023-12-06	2023-2024	Niagara	St. Bonaventure	94	60	135774	f	t
+2023-12-10	2023-2024	Niagara	vsBuffalo State	113	64	135775	t	t
+2023-12-16	2023-2024	Niagara	NJIT	89	81	135776	t	t
+2023-12-19	2023-2024	Niagara	Binghamton	74	69	135777	f	f
+2023-12-21	2023-2024	Niagara	Syracuse	83	71	135778	f	f
+2023-12-29	2023-2024	Niagara	Buffalo	69	63	135779	t	f
+2024-01-05	2023-2024	Niagara	Manhattan	81	67	135780	t	f
+2024-01-07	2023-2024	Niagara	Iona	75	73	135781	t	f
+2024-01-12	2023-2024	Niagara	Fairfield	96	72	135782	t	t
+2024-01-15	2023-2024	Niagara	Siena	93	88	135783	f	t
+2024-01-19	2023-2024	Niagara	Rider	78	74	135784	t	f
+2024-01-21	2023-2024	Niagara	Mount St. Mary's	82	71	135785	t	f
+2024-01-26	2023-2024	Niagara	Marist	67	62	135786	t	t
+2024-02-06	2023-2024	Niagara	Canisius	69	64	135787	t	t
+2024-02-08	2023-2024	Niagara	Iona	74	71	135788	f	t
+2024-02-16	2023-2024	Niagara	Fairfield	65	63	135789	t	f
+2024-02-18	2023-2024	Niagara	Quinnipiac	80	66	135790	t	f
+2024-02-23	2023-2024	Niagara	Canisius	69	59	135791	f	f
+2024-03-01	2023-2024	Niagara	Rider	71	61	135792	f	t
+2024-03-03	2023-2024	Niagara	Mount St. Mary's	91	72	135793	f	t
+2024-03-07	2023-2024	Niagara	Siena	66	59	135794	t	f
+2024-03-09	2023-2024	Niagara	Marist	63	62	135795	f	f
+2024-03-12	2023-2024	Niagara	Siena	67	65	135796	t	t
+2024-03-14	2023-2024	Niagara	Marist	65	59	135797	f	t
+2023-11-06	2023-2024	Nicholls	Tulane	91	81	135798	f	f
+2023-11-10	2023-2024	Nicholls	LSU	68	66	135799	t	f
+2023-11-15	2023-2024	Nicholls	Denver	91	85	135800	f	t
+2023-11-17	2023-2024	Nicholls	SIU Edwardsville	60	51	135801	f	t
+2023-11-21	2023-2024	Nicholls	vsBlue Mountain	86	56	135802	t	t
+2023-11-24	2023-2024	Nicholls	25 Mississippi State	74	61	135803	f	f
+2023-11-28	2023-2024	Nicholls	9 Baylor	108	70	135804	f	f
+2023-12-02	2023-2024	Nicholls	Louisiana Tech	68	55	135805	f	f
+2023-12-09	2023-2024	Nicholls	vsElizabeth City State	84	70	135806	t	t
+2023-12-19	2023-2024	Nicholls	Maryland	73	67	135807	f	f
+2023-12-22	2023-2024	Nicholls	Towson	65	55	135808	f	f
+2023-12-30	2023-2024	Nicholls	vsMobile	74	65	135809	t	t
+2024-01-09	2023-2024	Nicholls	SE Louisiana	66	61	135810	t	t
+2024-01-15	2023-2024	Nicholls	New Orleans	78	75	135811	t	t
+2024-01-20	2023-2024	Nicholls	Texas A&M-Corpus Christi	69	59	135812	f	f
+2024-02-03	2023-2024	Nicholls	Houston Christian	83	73	135813	t	t
+2024-02-05	2023-2024	Nicholls	Northwestern State	73	66	135814	t	t
+2024-02-10	2023-2024	Nicholls	Lamar	75	56	135815	f	f
+2024-02-12	2023-2024	Nicholls	Texas A&M-Corpus Christi	67	63	135816	t	t
+2024-02-17	2023-2024	Nicholls	McNeese	74	47	135817	f	t
+2024-02-19	2023-2024	Nicholls	New Orleans	89	77	135818	t	f
+2024-02-24	2023-2024	Nicholls	Texas A&M-Commerce	85	70	135819	t	t
+2024-02-26	2023-2024	Nicholls	Incarnate Word	92	82	135820	t	t
+2024-03-02	2023-2024	Nicholls	McNeese	83	62	135821	f	f
+2024-03-04	2023-2024	Nicholls	Northwestern State	68	62	135822	t	f
+2024-03-07	2023-2024	Nicholls	SE Louisiana	80	54	135823	t	f
+2024-03-11	2023-2024	Nicholls	Texas A&M-Commerce	72	51	135824	t	t
+2024-03-13	2023-2024	Nicholls	McNeese	92	76	135825	f	f
+2023-11-06	2023-2024	Norfolk State	vsPenn State (Wilkes-Barre)	102	55	135826	t	t
+2023-11-09	2023-2024	Norfolk State	vsApprentice School	90	56	135827	t	t
+2023-11-13	2023-2024	Norfolk State	Hampton	75	68	135828	t	t
+2023-11-17	2023-2024	Norfolk State	Fordham	77	64	135829	f	t
+2023-11-18	2023-2024	Norfolk State	San José State	77	53	135830	f	t
+2023-11-20	2023-2024	Norfolk State	Florida Gulf Coast	69	66	135831	t	t
+2023-11-25	2023-2024	Norfolk State	Wichita State	80	67	135832	f	f
+2023-11-28	2023-2024	Norfolk State	William & Mary	96	62	135833	t	t
+2023-12-01	2023-2024	Norfolk State	VCU	63	60	135834	t	f
+2023-12-09	2023-2024	Norfolk State	Illinois State	64	58	135835	t	f
+2023-12-13	2023-2024	Norfolk State	Stony Brook	84	78	135836	f	f
+2023-12-16	2023-2024	Norfolk State	Hofstra	74	58	135837	f	f
+2023-12-18	2023-2024	Norfolk State	vsSouthern Virginia	108	52	135838	t	t
+2023-12-20	2023-2024	Norfolk State	UTEP	67	65	135839	f	f
+2023-12-21	2023-2024	Norfolk State	South Dakota State	84	65	135840	t	t
+2024-01-02	2023-2024	Norfolk State	5 Tennessee	87	50	135841	f	f
+2024-01-06	2023-2024	Norfolk State	South Carolina State	79	72	135842	t	f
+2024-01-08	2023-2024	Norfolk State	North Carolina Central	60	58	135843	f	f
+2024-01-15	2023-2024	Norfolk State	vsVirginia-Lynchburg	118	73	135844	t	t
+2024-01-20	2023-2024	Norfolk State	Howard	65	61	135845	t	f
+2024-01-27	2023-2024	Norfolk State	Coppin State	68	58	135846	t	t
+2024-01-29	2023-2024	Norfolk State	Morgan State	83	73	135847	t	t
+2024-02-03	2023-2024	Norfolk State	Delaware State	65	64	135848	t	t
+2024-02-05	2023-2024	Norfolk State	Maryland-Eastern Shore	69	60	135849	f	f
+2024-02-19	2023-2024	Norfolk State	North Carolina Central	80	74	135850	t	t
+2024-02-24	2023-2024	Norfolk State	Coppin State	68	66	135851	t	f
+2024-02-26	2023-2024	Norfolk State	Morgan State	85	82	135852	t	f
+2024-03-02	2023-2024	Norfolk State	Delaware State	85	71	135853	f	f
+2024-03-04	2023-2024	Norfolk State	Maryland-Eastern Shore	69	50	135854	t	t
+2024-03-07	2023-2024	Norfolk State	Howard	77	58	135855	t	t
+2024-03-13	2023-2024	Norfolk State	Coppin State	75	51	135856	t	t
+2024-03-15	2023-2024	Norfolk State	Howard	80	74	135857	f	t
+2023-11-06	2023-2024	North Alabama	vsBlue Mountain	93	60	135858	t	t
+2023-11-09	2023-2024	North Alabama	Alabama A&M	83	67	135859	t	t
+2023-11-14	2023-2024	North Alabama	Mississippi State	81	54	135860	f	f
+2023-11-18	2023-2024	North Alabama	Jacksonville State	61	59	135861	t	t
+2023-11-26	2023-2024	North Alabama	Western Carolina	81	63	135862	f	f
+2023-11-30	2023-2024	North Alabama	Tennessee Tech	86	71	135863	t	t
+2023-12-07	2023-2024	North Alabama	vsRust	109	65	135864	t	t
+2023-12-10	2023-2024	North Alabama	Morehead State	86	77	135865	f	t
+2023-12-13	2023-2024	North Alabama	Charleston Southern	76	64	135866	t	f
+2023-12-16	2023-2024	North Alabama	Tennessee Tech	70	67	135867	f	f
+2023-12-21	2023-2024	North Alabama	Indiana	83	66	135868	f	f
+2024-01-01	2023-2024	North Alabama	Texas Tech	85	57	135869	f	f
+2024-01-06	2023-2024	North Alabama	Central Arkansas	84	81	135870	f	t
+2024-01-11	2023-2024	North Alabama	Bellarmine	69	53	135871	t	t
+2024-01-13	2023-2024	North Alabama	Eastern Kentucky	81	72	135872	f	t
+2024-01-20	2023-2024	North Alabama	Lipscomb	88	79	135873	f	f
+2024-01-24	2023-2024	North Alabama	Kennesaw State	90	84	135874	t	f
+2024-01-27	2023-2024	North Alabama	Queens University	90	84	135875	t	t
+2024-02-01	2023-2024	North Alabama	Stetson	79	72	135876	t	t
+2024-02-03	2023-2024	North Alabama	Florida Gulf Coast	70	69	135877	t	t
+2024-02-08	2023-2024	North Alabama	North Florida	79	74	135878	t	f
+2024-02-10	2023-2024	North Alabama	Jacksonville State	67	63	135879	f	f
+2024-02-15	2023-2024	North Alabama	Lipscomb	75	70	135880	t	t
+2024-02-17	2023-2024	North Alabama	Austin Peay	87	79	135881	f	t
+2024-02-22	2023-2024	North Alabama	Eastern Kentucky	75	72	135882	f	f
+2024-02-24	2023-2024	North Alabama	Bellarmine	82	70	135883	f	f
+2024-03-01	2023-2024	North Alabama	Central Arkansas	82	78	135884	t	f
+2024-03-05	2023-2024	North Alabama	Lipscomb	77	75	135885	t	f
+2024-03-07	2023-2024	North Alabama	Austin Peay	77	71	135886	f	f
+2023-11-06	2023-2024	NC A&T	Pittsburgh	100	52	135887	f	f
+2023-11-10	2023-2024	NC A&T	UNC Greensboro	94	78	135888	f	f
+2023-11-14	2023-2024	NC A&T	Virginia	80	51	135889	f	f
+2023-11-22	2023-2024	NC A&T	Merrimack	96	73	135890	f	t
+2023-11-24	2023-2024	NC A&T	Alabama State	88	73	135891	f	t
+2023-11-25	2023-2024	NC A&T	Samford	101	83	135892	f	f
+2023-12-02	2023-2024	NC A&T	The Citadel	85	68	135893	f	t
+2023-12-08	2023-2024	NC A&T	High Point	75	62	135894	f	f
+2023-12-12	2023-2024	NC A&T	North Carolina Central	67	62	135895	f	t
+2023-12-16	2023-2024	NC A&T	Texas Southern	85	79	135896	t	t
+2023-12-17	2023-2024	NC A&T	Jackson State	68	60	135897	f	t
+2023-12-21	2023-2024	NC A&T	Coastal Carolina	85	82	135898	t	f
+2023-12-30	2023-2024	NC A&T	George Mason	94	69	135899	f	f
+2024-01-04	2023-2024	NC A&T	Campbell	76	62	135900	t	t
+2024-01-06	2023-2024	NC A&T	Elon	77	59	135901	f	f
+2024-01-11	2023-2024	NC A&T	Drexel	67	63	135902	f	t
+2024-01-15	2023-2024	NC A&T	Hampton	81	80	135903	t	f
+2024-01-18	2023-2024	NC A&T	Northeastern	72	65	135904	t	t
+2024-01-20	2023-2024	NC A&T	William & Mary	76	69	135905	t	t
+2024-01-25	2023-2024	NC A&T	Delaware	90	71	135906	f	f
+2024-01-27	2023-2024	NC A&T	Drexel	62	47	135907	f	f
+2024-02-01	2023-2024	NC A&T	Hampton	59	58	135908	t	t
+2024-02-03	2023-2024	NC A&T	Elon	69	65	135909	f	t
+2024-02-08	2023-2024	NC A&T	Charleston	80	58	135910	f	f
+2024-02-10	2023-2024	NC A&T	Hofstra	81	49	135911	f	t
+2024-02-15	2023-2024	NC A&T	UNC Wilmington	73	54	135912	f	f
+2024-02-17	2023-2024	NC A&T	Delaware	62	54	135913	f	t
+2024-02-22	2023-2024	NC A&T	Stony Brook	80	64	135914	f	f
+2024-02-24	2023-2024	NC A&T	Monmouth	83	67	135915	f	f
+2024-02-29	2023-2024	NC A&T	Towson	84	58	135916	f	t
+2024-03-02	2023-2024	NC A&T	Campbell	64	62	135917	f	f
+2024-03-08	2023-2024	NC A&T	William & Mary	79	62	135918	f	t
+2023-11-06	2023-2024	NC Central	1 Kansas	99	56	135919	f	f
+2023-11-09	2023-2024	NC Central	vsVirginia-Lynchburg	107	54	135920	t	t
+2023-11-12	2023-2024	NC Central	Georgia	64	54	135921	f	f
+2023-11-14	2023-2024	NC Central	vsMid-Atlantic Christian	113	50	135922	t	t
+2023-11-18	2023-2024	NC Central	Longwood	73	66	135923	f	f
+2023-11-21	2023-2024	NC Central	The Citadel	67	61	135924	f	t
+2023-11-26	2023-2024	NC Central	Coastal Carolina	70	58	135925	t	f
+2023-12-02	2023-2024	NC Central	South Carolina Upstate	85	82	135926	f	t
+2023-12-05	2023-2024	NC Central	Virginia	77	47	135927	f	f
+2023-12-09	2023-2024	NC Central	Radford	82	74	135928	f	f
+2023-12-12	2023-2024	NC Central	North Carolina A&T	67	62	135929	t	f
+2023-12-15	2023-2024	NC Central	vsSt. Andrews	102	50	135930	t	t
+2023-12-20	2023-2024	NC Central	Longwood	79	70	135931	t	t
+2024-01-03	2023-2024	NC Central	vsTruett-McConnell	112	70	135932	t	t
+2024-01-06	2023-2024	NC Central	Howard	73	54	135933	t	t
+2024-01-08	2023-2024	NC Central	Norfolk State	60	58	135934	t	t
+2024-01-20	2023-2024	NC Central	South Carolina State	71	68	135935	f	f
+2024-01-27	2023-2024	NC Central	Maryland-Eastern Shore	65	57	135936	t	f
+2024-01-29	2023-2024	NC Central	Delaware State	69	66	135937	t	f
+2024-02-03	2023-2024	NC Central	Coppin State	77	46	135938	t	t
+2024-02-17	2023-2024	NC Central	Howard	90	82	135939	f	f
+2024-02-19	2023-2024	NC Central	Norfolk State	80	74	135940	f	f
+2024-02-24	2023-2024	NC Central	Maryland-Eastern Shore	88	55	135941	t	t
+2024-02-26	2023-2024	NC Central	Delaware State	93	81	135942	t	t
+2024-03-02	2023-2024	NC Central	Coppin State	83	58	135943	t	f
+2024-03-04	2023-2024	NC Central	Morgan State	88	79	135944	f	f
+2024-03-07	2023-2024	NC Central	South Carolina State	79	68	135945	t	t
+2024-03-13	2023-2024	NC Central	Maryland-Eastern Shore	87	81	135946	t	t
+2024-03-15	2023-2024	NC Central	Delaware State	71	58	135947	f	t
+2023-11-06	2023-2024	UNC	Radford	86	70	135948	t	t
+2023-11-12	2023-2024	UNC	Lehigh	90	68	135949	t	t
+2023-11-17	2023-2024	UNC	UC Riverside	77	52	135950	t	t
+2023-11-22	2023-2024	UNC	Northern Iowa	91	69	135951	t	t
+2023-11-24	2023-2024	UNC	20 Arkansas	87	72	135952	t	t
+2023-11-29	2023-2024	UNC	10 Tennessee	100	92	135953	t	t
+2023-12-02	2023-2024	UNC	Florida State	78	70	135954	t	t
+2023-12-05	2023-2024	UNC	5 UConn	87	76	135955	f	t
+2023-12-16	2023-2024	UNC	14 Kentucky	87	83	135956	f	t
+2023-12-20	2023-2024	UNC	7 Oklahoma	81	69	135957	t	t
+2023-12-29	2023-2024	UNC	Charleston Southern	105	60	135958	t	t
+2024-01-02	2023-2024	UNC	Pittsburgh	70	57	135959	t	f
+2024-01-06	2023-2024	UNC	16 Clemson	65	55	135960	t	f
+2024-01-10	2023-2024	UNC	NC State	67	54	135961	t	f
+2024-01-13	2023-2024	UNC	Syracuse	103	67	135962	t	t
+2024-01-17	2023-2024	UNC	Louisville	86	70	135963	t	t
+2024-01-20	2023-2024	UNC	Boston College	76	66	135964	t	f
+2024-01-22	2023-2024	UNC	Wake Forest	85	64	135965	t	t
+2024-01-27	2023-2024	UNC	Florida State	75	68	135966	t	f
+2024-01-30	2023-2024	UNC	Georgia Tech	74	73	135967	f	f
+2024-02-03	2023-2024	UNC	7 Duke	93	84	135968	t	t
+2024-02-06	2023-2024	UNC	Clemson	80	76	135969	f	t
+2024-02-10	2023-2024	UNC	Miami	75	72	135970	t	f
+2024-02-13	2023-2024	UNC	Syracuse	86	79	135971	f	f
+2024-02-17	2023-2024	UNC	Virginia Tech	96	81	135972	t	t
+2024-02-24	2023-2024	UNC	Virginia	54	44	135973	t	f
+2024-02-26	2023-2024	UNC	Miami	75	71	135974	t	t
+2024-03-02	2023-2024	UNC	NC State	79	70	135975	t	t
+2024-03-05	2023-2024	UNC	Notre Dame	84	51	135976	t	t
+2024-03-09	2023-2024	UNC	9 Duke	84	79	135977	t	f
+2024-03-14	2023-2024	UNC	Florida State	92	67	135978	t	t
+2024-03-15	2023-2024	UNC	Pittsburgh	72	65	135979	t	t
+2024-03-16	2023-2024	UNC	NC State	84	76	135980	f	t
+2023-11-07	2023-2024	North Dakota	Iowa	110	68	135981	f	f
+2023-11-12	2023-2024	North Dakota	Elon	85	68	135982	t	t
+2023-11-16	2023-2024	North Dakota	vsValley City	93	63	135983	t	t
+2023-11-20	2023-2024	North Dakota	Pacific	73	71	135984	t	f
+2023-11-26	2023-2024	North Dakota	Eastern Michigan	72	70	135985	t	t
+2023-11-28	2023-2024	North Dakota	vsConcordia-St. Paul	87	56	135986	t	t
+2023-12-01	2023-2024	North Dakota	Cal State Fullerton	64	54	135987	f	f
+2023-12-03	2023-2024	North Dakota	UC Riverside	68	62	135988	f	f
+2023-12-09	2023-2024	North Dakota	Portland	83	72	135989	f	t
+2023-12-12	2023-2024	North Dakota	vsWaldorf College	87	36	135990	t	t
+2023-12-16	2023-2024	North Dakota	Utah Tech	79	62	135991	t	f
+2023-12-20	2023-2024	North Dakota	Nebraska	83	75	135992	f	f
+2023-12-29	2023-2024	North Dakota	St. Thomas-Minnesota	70	45	135993	f	t
+2023-12-31	2023-2024	North Dakota	South Dakota State	80	61	135994	f	f
+2024-01-03	2023-2024	North Dakota	Northern Colorado	97	87	135995	f	t
+2024-01-06	2023-2024	North Dakota	Northern Arizona	74	73	135996	f	f
+2024-01-11	2023-2024	North Dakota	Omaha	79	61	135997	f	f
+2024-01-13	2023-2024	North Dakota	Kansas City	82	69	135998	t	f
+2024-01-18	2023-2024	North Dakota	Oral Roberts	87	77	135999	t	t
+2024-01-20	2023-2024	North Dakota	Denver	92	78	136000	t	t
+2024-01-27	2023-2024	North Dakota	St. Thomas-Minnesota	74	64	136001	t	f
+2024-02-01	2023-2024	North Dakota	South Dakota	95	81	136002	t	f
+2024-02-03	2023-2024	North Dakota	North Dakota State	60	58	136003	t	t
+2024-02-08	2023-2024	North Dakota	Omaha	99	78	136004	t	t
+2024-02-10	2023-2024	North Dakota	Kansas City	65	47	136005	f	t
+2024-02-15	2023-2024	North Dakota	Denver	92	78	136006	t	f
+2024-02-17	2023-2024	North Dakota	Oral Roberts	78	65	136007	t	f
+2024-02-24	2023-2024	North Dakota	North Dakota State	73	68	136008	f	f
+2024-02-29	2023-2024	North Dakota	South Dakota State	72	62	136009	f	t
+2024-03-02	2023-2024	North Dakota	South Dakota	95	66	136010	t	t
+2024-03-10	2023-2024	North Dakota	Omaha	73	72	136011	f	t
+2023-11-08	2023-2024	North Dakota State	vsMount Marty College	93	66	136012	t	t
+2023-11-11	2023-2024	North Dakota State	8 Creighton	89	60	136013	f	f
+2023-11-14	2023-2024	North Dakota State	UC Davis	68	53	136014	f	t
+2023-11-16	2023-2024	North Dakota State	Montana	78	69	136015	t	f
+2023-11-20	2023-2024	North Dakota State	vsWisconsin-Stout	101	72	136016	t	t
+2023-11-25	2023-2024	North Dakota State	Grand Canyon	86	71	136017	f	f
+2023-11-27	2023-2024	North Dakota State	San José State	78	65	136018	f	f
+2023-12-07	2023-2024	North Dakota State	Portland	78	67	136019	t	t
+2023-12-10	2023-2024	North Dakota State	vsOak Hills Christian	108	14	136020	t	t
+2023-12-17	2023-2024	North Dakota State	Illinois State	75	65	136021	f	f
+2023-12-19	2023-2024	North Dakota State	Southern Illinois	76	63	136022	f	f
+2023-12-29	2023-2024	North Dakota State	South Dakota	75	66	136023	f	t
+2024-01-03	2023-2024	North Dakota State	Montana	96	86	136024	f	t
+2024-01-06	2023-2024	North Dakota State	Eastern Washington	91	83	136025	f	f
+2024-01-18	2023-2024	North Dakota State	Denver	78	70	136026	f	t
+2024-01-20	2023-2024	North Dakota State	Oral Roberts	72	67	136027	t	t
+2024-01-25	2023-2024	North Dakota State	St. Thomas-Minnesota	79	66	136028	f	f
+2024-02-03	2023-2024	North Dakota State	North Dakota	60	58	136029	f	f
+2024-02-10	2023-2024	North Dakota State	Omaha	81	79	136030	t	t
+2024-02-15	2023-2024	North Dakota State	Oral Roberts	73	60	136031	t	f
+2024-02-17	2023-2024	North Dakota State	Denver	77	71	136032	f	f
+2024-02-22	2023-2024	North Dakota State	St. Thomas-Minnesota	64	50	136033	t	t
+2024-02-24	2023-2024	North Dakota State	North Dakota	73	68	136034	t	t
+2024-02-29	2023-2024	North Dakota State	South Dakota	88	68	136035	f	f
+2024-03-02	2023-2024	North Dakota State	South Dakota State	78	61	136036	f	t
+2024-03-10	2023-2024	North Dakota State	St. Thomas-Minnesota	68	58	136037	f	t
+2023-11-06	2023-2024	North Florida	vsCoastal Georgia	92	55	136038	t	t
+2023-11-09	2023-2024	North Florida	Charleston Southern	81	70	136039	t	f
+2023-11-13	2023-2024	North Florida	South Carolina State	87	77	136040	f	f
+2023-11-16	2023-2024	North Florida	Presbyterian	81	69	136041	f	t
+2023-11-17	2023-2024	North Florida	Northwestern State	80	74	136042	t	t
+2023-11-18	2023-2024	North Florida	Maine	67	58	136043	t	t
+2023-11-24	2023-2024	North Florida	LSU	75	63	136044	f	f
+2023-11-29	2023-2024	North Florida	Iowa	103	78	136045	f	f
+2023-12-02	2023-2024	North Florida	High Point	86	79	136046	f	t
+2023-12-05	2023-2024	North Florida	vsEdward Waters	99	47	136047	t	t
+2023-12-09	2023-2024	North Florida	Georgia Southern	64	56	136048	t	t
+2023-12-16	2023-2024	North Florida	vsTrinity Baptist	113	72	136049	t	t
+2023-12-19	2023-2024	North Florida	Florida State	91	75	136050	f	f
+2023-12-22	2023-2024	North Florida	Georgia	78	60	136051	f	f
+2023-12-29	2023-2024	North Florida	Miami	95	55	136052	f	f
+2024-01-04	2023-2024	North Florida	Stetson	75	74	136053	f	f
+2024-01-06	2023-2024	North Florida	Florida Gulf Coast	78	58	136054	t	f
+2024-01-12	2023-2024	North Florida	Jacksonville State	82	74	136055	t	t
+2024-01-18	2023-2024	North Florida	Kennesaw State	84	75	136056	t	t
+2024-01-20	2023-2024	North Florida	Queens University	91	75	136057	t	t
+2024-01-25	2023-2024	North Florida	Bellarmine	71	63	136058	t	f
+2024-01-27	2023-2024	North Florida	Eastern Kentucky	89	76	136059	f	f
+2024-01-31	2023-2024	North Florida	Lipscomb	85	76	136060	t	t
+2024-02-08	2023-2024	North Florida	North Alabama	79	74	136061	f	t
+2024-02-10	2023-2024	North Florida	Central Arkansas	79	77	136062	f	t
+2024-02-14	2023-2024	North Florida	Queens University	93	79	136063	t	f
+2024-02-16	2023-2024	North Florida	Kennesaw State	82	81	136064	t	f
+2024-02-23	2023-2024	North Florida	Jacksonville State	62	50	136065	f	f
+2024-02-28	2023-2024	North Florida	Florida Gulf Coast	79	60	136066	f	t
+2024-03-01	2023-2024	North Florida	Stetson	78	59	136067	t	t
+2023-11-11	2023-2024	North Texas	Omaha	75	64	136068	t	t
+2023-11-16	2023-2024	North Texas	St. John's	53	52	136069	f	t
+2023-11-17	2023-2024	North Texas	LSU	66	62	136070	f	t
+2023-11-19	2023-2024	North Texas	Towson	65	39	136071	t	t
+2023-11-26	2023-2024	North Texas	vsAngelo State	79	50	136072	t	t
+2023-12-02	2023-2024	North Texas	Mississippi Valley State	79	48	136073	t	t
+2023-12-05	2023-2024	North Texas	Boise State	69	64	136074	f	f
+2023-12-10	2023-2024	North Texas	Fordham	60	59	136075	f	t
+2023-12-17	2023-2024	North Texas	Mississippi State	72	54	136076	f	t
+2023-12-23	2023-2024	North Texas	UT Arlington	78	52	136077	t	t
+2023-12-30	2023-2024	North Texas	vsLSU Shreveport	80	57	136078	t	t
+2024-01-04	2023-2024	North Texas	Wichita State	74	62	136079	t	f
+2024-01-06	2023-2024	North Texas	Tulane	70	56	136080	t	t
+2024-01-13	2023-2024	North Texas	Temple	69	51	136081	t	t
+2024-01-17	2023-2024	North Texas	East Carolina	60	59	136082	t	f
+2024-01-20	2023-2024	North Texas	Charlotte	56	44	136083	f	f
+2024-01-25	2023-2024	North Texas	SMU	68	66	136084	t	t
+2024-01-28	2023-2024	North Texas	22 Florida Atlantic	66	63	136085	f	f
+2024-02-03	2023-2024	North Texas	South Florida	60	55	136086	f	t
+2024-02-07	2023-2024	North Texas	Tulsa	68	55	136087	t	f
+2024-02-11	2023-2024	North Texas	SMU	71	68	136088	f	f
+2024-02-15	2023-2024	North Texas	Memphis	76	66	136089	t	t
+2024-02-18	2023-2024	North Texas	UAB	71	62	136090	f	f
+2024-02-24	2023-2024	North Texas	UTSA	64	62	136091	f	t
+2024-02-28	2023-2024	North Texas	Tulane	80	76	136092	t	f
+2024-03-03	2023-2024	North Texas	East Carolina	84	69	136093	t	t
+2024-03-06	2023-2024	North Texas	Florida Atlantic	80	76	136094	f	t
+2024-03-09	2023-2024	North Texas	Rice	71	55	136095	t	f
+2024-03-14	2023-2024	North Texas	Tulane	81	71	136096	t	t
+2024-03-15	2023-2024	North Texas	Florida Atlantic	77	71	136097	f	t
+2023-11-06	2023-2024	Northeastern	Boston University	67	58	136098	t	t
+2023-11-11	2023-2024	Northeastern	La Salle	79	74	136099	f	f
+2023-11-14	2023-2024	Northeastern	Harvard	80	56	136100	f	f
+2023-11-19	2023-2024	Northeastern	East Carolina	82	76	136101	t	f
+2023-11-20	2023-2024	Northeastern	Kennesaw State	79	77	136102	f	t
+2023-11-21	2023-2024	Northeastern	Georgia Southern	93	76	136103	t	t
+2023-11-25	2023-2024	Northeastern	Princeton	80	66	136104	f	f
+2023-11-29	2023-2024	Northeastern	Seton Hall	88	75	136105	f	f
+2023-12-02	2023-2024	Northeastern	Old Dominion	81	68	136106	t	t
+2023-12-06	2023-2024	Northeastern	Vermont	73	71	136107	f	t
+2023-12-16	2023-2024	Northeastern	22 Virginia	56	54	136108	f	f
+2023-12-19	2023-2024	Northeastern	Central Connecticut	79	74	136109	t	f
+2023-12-30	2023-2024	Northeastern	Rhode Island	82	71	136110	f	f
+2024-01-04	2023-2024	Northeastern	Stony Brook	62	53	136111	f	t
+2024-01-08	2023-2024	Northeastern	Monmouth	81	62	136112	f	f
+2024-01-11	2023-2024	Northeastern	Hofstra	71	68	136113	t	t
+2024-01-13	2023-2024	Northeastern	Towson	67	59	136114	t	t
+2024-01-18	2023-2024	Northeastern	North Carolina A&T	72	65	136115	f	f
+2024-01-20	2023-2024	Northeastern	Elon	84	72	136116	t	f
+2024-01-25	2023-2024	Northeastern	UNC Wilmington	77	54	136117	f	t
+2024-01-27	2023-2024	Northeastern	William & Mary	72	68	136118	f	t
+2024-02-01	2023-2024	Northeastern	Towson	83	76	136119	f	f
+2024-02-03	2023-2024	Northeastern	Stony Brook	59	55	136120	f	f
+2024-02-08	2023-2024	Northeastern	Campbell	86	76	136121	t	f
+2024-02-10	2023-2024	Northeastern	Monmouth	77	65	136122	t	t
+2024-02-15	2023-2024	Northeastern	Charleston	77	73	136123	f	t
+2024-02-17	2023-2024	Northeastern	Hofstra	82	62	136124	f	f
+2024-02-22	2023-2024	Northeastern	Elon	61	58	136125	t	t
+2024-02-24	2023-2024	Northeastern	Hampton	70	62	136126	t	t
+2024-02-29	2023-2024	Northeastern	Delaware	73	67	136127	f	f
+2024-03-02	2023-2024	Northeastern	Drexel	73	59	136128	f	f
+2024-03-09	2023-2024	Northeastern	Stony Brook	75	65	136129	f	t
+2023-11-06	2023-2024	North Arizona	6 UConn	95	52	136130	f	f
+2023-11-12	2023-2024	North Arizona	Grand Canyon	89	55	136131	f	f
+2023-11-15	2023-2024	North Arizona	Seattle U	62	60	136132	t	f
+2023-11-17	2023-2024	North Arizona	Purdue Fort Wayne	77	67	136133	f	t
+2023-11-18	2023-2024	North Arizona	VMI	78	69	136134	t	t
+2023-11-22	2023-2024	North Arizona	Hawai'i	70	61	136135	f	f
+2023-11-29	2023-2024	North Arizona	UC Santa Barbara	70	59	136136	f	f
+2023-12-02	2023-2024	North Arizona	Pacific	78	58	136137	t	t
+2023-12-06	2023-2024	North Arizona	Abilene Christian	78	76	136138	t	f
+2023-12-09	2023-2024	North Arizona	Incarnate Word	76	75	136139	t	f
+2023-12-16	2023-2024	North Arizona	Southern Utah	76	74	136140	t	t
+2023-12-20	2023-2024	North Arizona	San Francisco	91	51	136141	f	f
+2023-12-30	2023-2024	North Arizona	Northern Colorado	92	77	136142	f	f
+2024-01-03	2023-2024	North Arizona	Omaha	81	55	136143	f	f
+2024-01-06	2023-2024	North Arizona	North Dakota	74	73	136144	t	t
+2024-01-11	2023-2024	North Arizona	Montana State	79	50	136145	f	f
+2024-01-13	2023-2024	North Arizona	Montana	90	47	136146	f	f
+2024-01-18	2023-2024	North Arizona	Portland State	84	65	136147	t	t
+2024-01-20	2023-2024	North Arizona	Sacramento State	70	61	136148	t	t
+2024-01-25	2023-2024	North Arizona	Idaho	75	60	136149	t	f
+2024-01-27	2023-2024	North Arizona	Eastern Washington	85	70	136150	f	f
+2024-02-01	2023-2024	North Arizona	Weber State	72	70	136151	f	t
+2024-02-03	2023-2024	North Arizona	Idaho State	81	79	136152	f	t
+2024-02-08	2023-2024	North Arizona	Montana	94	66	136153	f	t
+2024-02-10	2023-2024	North Arizona	Montana State	76	71	136154	t	t
+2024-02-15	2023-2024	North Arizona	Sacramento State	73	58	136155	t	f
+2024-02-17	2023-2024	North Arizona	Portland State	83	68	136156	f	f
+2024-02-22	2023-2024	North Arizona	Eastern Washington	78	71	136157	t	t
+2024-02-24	2023-2024	North Arizona	Idaho	86	76	136158	f	t
+2024-03-02	2023-2024	North Arizona	Weber State	85	58	136159	f	f
+2024-03-04	2023-2024	North Arizona	Northern Colorado	82	74	136160	f	t
+2024-03-09	2023-2024	North Arizona	Idaho State	68	60	136161	f	t
+2023-11-06	2023-2024	North Colorado	vsColorado College	87	58	136162	t	t
+2023-11-08	2023-2024	North Colorado	vsNorthern New Mexico	81	60	136163	t	t
+2023-11-14	2023-2024	North Colorado	Colorado State	83	64	136164	f	t
+2023-11-18	2023-2024	North Colorado	New Mexico State	76	71	136165	f	f
+2023-11-22	2023-2024	North Colorado	Radford	79	68	136166	f	t
+2023-11-29	2023-2024	North Colorado	San Diego	74	72	136167	f	f
+2023-12-02	2023-2024	North Colorado	Cal State Northridge	75	71	136168	t	t
+2023-12-15	2023-2024	North Colorado	Colorado	90	68	136169	f	f
+2023-12-21	2023-2024	North Colorado	Air Force	83	79	136170	t	f
+2023-12-30	2023-2024	North Colorado	Northern Arizona	92	77	136171	t	t
+2024-01-03	2023-2024	North Colorado	North Dakota	97	87	136172	t	f
+2024-01-06	2023-2024	North Colorado	Denver	86	82	136173	t	t
+2024-01-13	2023-2024	North Colorado	Montana State	90	81	136174	f	f
+2024-01-18	2023-2024	North Colorado	Sacramento State	77	75	136175	t	t
+2024-01-20	2023-2024	North Colorado	Portland State	90	61	136176	t	t
+2024-01-25	2023-2024	North Colorado	Eastern Washington	77	74	136177	f	f
+2024-01-27	2023-2024	North Colorado	Idaho	89	68	136178	t	f
+2024-02-03	2023-2024	North Colorado	Weber State	82	63	136179	f	t
+2024-02-08	2023-2024	North Colorado	Montana State	73	70	136180	t	t
+2024-02-10	2023-2024	North Colorado	Montana	87	71	136181	t	t
+2024-02-17	2023-2024	North Colorado	Sacramento State	80	75	136182	t	f
+2024-02-22	2023-2024	North Colorado	Idaho	76	62	136183	t	t
+2024-02-24	2023-2024	North Colorado	Eastern Washington	85	76	136184	f	t
+2024-03-02	2023-2024	North Colorado	Idaho State	81	79	136185	t	f
+2024-03-04	2023-2024	North Colorado	Northern Arizona	82	74	136186	t	f
+2024-03-10	2023-2024	North Colorado	Idaho State	83	76	136187	f	t
+2023-11-06	2023-2024	North Illinois	5 Marquette	92	70	136188	f	f
+2023-11-11	2023-2024	North Illinois	Appalachian State	91	78	136189	t	t
+2023-11-13	2023-2024	North Illinois	vsIllinois Tech	107	55	136190	t	t
+2023-11-17	2023-2024	North Illinois	Georgia State	70	64	136191	t	f
+2023-11-18	2023-2024	North Illinois	Little Rock	98	93	136192	t	t
+2023-11-25	2023-2024	North Illinois	DePaul	89	79	136193	t	f
+2023-11-27	2023-2024	North Illinois	Northwestern	89	67	136194	f	f
+2023-12-05	2023-2024	North Illinois	Indiana State	90	67	136195	f	t
+2023-12-09	2023-2024	North Illinois	Monmouth	74	71	136196	f	f
+2023-12-18	2023-2024	North Illinois	vsCalumet	92	48	136197	t	t
+2023-12-21	2023-2024	North Illinois	Northern Iowa	76	63	136198	f	t
+2023-12-29	2023-2024	North Illinois	Iowa	103	74	136199	f	f
+2024-01-02	2023-2024	North Illinois	Akron	73	51	136200	f	t
+2024-01-06	2023-2024	North Illinois	Ohio	78	66	136201	f	f
+2024-01-13	2023-2024	North Illinois	Bowling Green	83	72	136202	f	t
+2024-01-16	2023-2024	North Illinois	Kent State	83	76	136203	f	t
+2024-01-23	2023-2024	North Illinois	Toledo	89	73	136204	f	t
+2024-01-27	2023-2024	North Illinois	Ball State	81	71	136205	f	f
+2024-02-03	2023-2024	North Illinois	Eastern Michigan	76	66	136206	t	t
+2024-02-06	2023-2024	North Illinois	Miami (OH)	62	59	136207	t	f
+2024-02-10	2023-2024	North Illinois	South Alabama	75	66	136208	f	f
+2024-02-13	2023-2024	North Illinois	Buffalo	72	68	136209	t	t
+2024-02-17	2023-2024	North Illinois	Kent State	85	47	136210	f	f
+2024-02-20	2023-2024	North Illinois	Ball State	70	63	136211	f	t
+2024-02-24	2023-2024	North Illinois	Ohio	80	59	136212	f	t
+2024-02-27	2023-2024	North Illinois	Toledo	75	72	136213	t	f
+2024-03-02	2023-2024	North Illinois	Akron	80	73	136214	f	f
+2024-03-05	2023-2024	North Illinois	Central Michigan	69	63	136215	f	t
+2024-03-08	2023-2024	North Illinois	Buffalo	78	68	136216	t	f
+2023-11-14	2023-2024	Northern Iowa	vsLoras	90	50	136217	t	t
+2023-11-19	2023-2024	Northern Iowa	South Florida	74	65	136218	f	f
+2023-11-22	2023-2024	Northern Iowa	14 North Carolina	91	69	136219	f	t
+2023-11-23	2023-2024	Northern Iowa	Texas Tech	72	70	136220	f	t
+2023-11-24	2023-2024	Northern Iowa	Stanford	73	51	136221	t	t
+2023-11-29	2023-2024	Northern Iowa	Belmont	90	70	136222	f	t
+2023-12-06	2023-2024	Northern Iowa	Richmond	78	73	136223	t	t
+2023-12-09	2023-2024	Northern Iowa	Toledo	84	80	136224	f	f
+2023-12-12	2023-2024	Northern Iowa	Prairie View A&M	74	55	136225	t	t
+2023-12-17	2023-2024	Northern Iowa	Alcorn State	100	82	136226	t	t
+2023-12-21	2023-2024	Northern Iowa	Northern Illinois	76	63	136227	t	f
+2024-01-03	2023-2024	Northern Iowa	Missouri State	64	62	136228	t	f
+2024-01-07	2023-2024	Northern Iowa	Indiana State	77	66	136229	f	t
+2024-01-10	2023-2024	Northern Iowa	UIC	67	59	136230	t	t
+2024-01-14	2023-2024	Northern Iowa	Murray State	70	60	136231	t	f
+2024-01-17	2023-2024	Northern Iowa	Belmont	83	72	136232	t	f
+2024-01-20	2023-2024	Northern Iowa	Southern Illinois	61	57	136233	t	t
+2024-01-23	2023-2024	Northern Iowa	Evansville	70	63	136234	t	t
+2024-01-27	2023-2024	Northern Iowa	Drake	77	63	136235	f	f
+2024-01-31	2023-2024	Northern Iowa	Bradley	85	69	136236	f	f
+2024-02-03	2023-2024	Northern Iowa	Murray State	71	43	136237	f	t
+2024-02-07	2023-2024	Northern Iowa	Missouri State	72	65	136238	t	t
+2024-02-11	2023-2024	Northern Iowa	UIC	71	65	136239	f	f
+2024-02-14	2023-2024	Northern Iowa	Valparaiso	86	67	136240	t	f
+2024-02-18	2023-2024	Northern Iowa	Bradley	74	63	136241	t	t
+2024-02-21	2023-2024	Northern Iowa	Illinois State	81	73	136242	f	f
+2024-02-24	2023-2024	Northern Iowa	Drake	91	77	136243	t	t
+2024-02-27	2023-2024	Northern Iowa	Valparaiso	68	54	136244	t	t
+2024-03-03	2023-2024	Northern Iowa	Southern Illinois	82	70	136245	t	f
+2024-03-08	2023-2024	Northern Iowa	Belmont	67	62	136246	t	t
+2024-03-09	2023-2024	Northern Iowa	Indiana State	94	72	136247	f	t
+2023-11-06	2023-2024	Northern Kentucky	Middle Tennessee	74	57	136248	f	f
+2023-11-09	2023-2024	Northern Kentucky	Washington	75	67	136249	f	f
+2023-11-14	2023-2024	Northern Kentucky	vsDepauw	85	68	136250	t	t
+2023-11-19	2023-2024	Northern Kentucky	Cincinnati	90	66	136251	f	f
+2023-11-22	2023-2024	Northern Kentucky	Texas A&M-Corpus Christi	88	73	136252	t	t
+2023-11-25	2023-2024	Northern Kentucky	Long Island University	72	64	136253	t	t
+2023-11-29	2023-2024	Northern Kentucky	Robert Morris	77	59	136254	t	t
+2023-12-02	2023-2024	Northern Kentucky	IUPUI	71	55	136255	t	f
+2023-12-06	2023-2024	Northern Kentucky	Illinois State	62	59	136256	f	f
+2023-12-09	2023-2024	Northern Kentucky	Akron	77	76	136257	f	t
+2023-12-14	2023-2024	Northern Kentucky	vsCumberland (KY)	94	59	136258	t	t
+2023-12-17	2023-2024	Northern Kentucky	Eastern Kentucky	85	75	136259	t	f
+2023-12-21	2023-2024	Northern Kentucky	St. Mary's	92	56	136260	f	f
+2023-12-29	2023-2024	Northern Kentucky	Purdue Fort Wayne	73	60	136261	f	f
+2024-01-04	2023-2024	Northern Kentucky	Youngstown State	79	76	136262	t	t
+2024-01-13	2023-2024	Northern Kentucky	Detroit Mercy	81	76	136263	t	f
+2024-01-18	2023-2024	Northern Kentucky	Milwaukee	90	72	136264	t	t
+2024-01-20	2023-2024	Northern Kentucky	Green Bay	74	52	136265	t	t
+2024-01-25	2023-2024	Northern Kentucky	Purdue Fort Wayne	63	58	136266	f	t
+2024-01-28	2023-2024	Northern Kentucky	Youngstown State	82	52	136267	f	f
+2024-02-04	2023-2024	Northern Kentucky	Wright State	85	78	136268	f	t
+2024-02-10	2023-2024	Northern Kentucky	Detroit Mercy	79	67	136269	t	t
+2024-02-14	2023-2024	Northern Kentucky	Green Bay	58	57	136270	t	f
+2024-02-17	2023-2024	Northern Kentucky	Milwaukee	73	72	136271	f	f
+2024-02-22	2023-2024	Northern Kentucky	Cleveland State	75	73	136272	t	t
+2024-02-25	2023-2024	Northern Kentucky	IUPUI	80	64	136273	t	t
+2024-02-28	2023-2024	Northern Kentucky	Robert Morris	70	60	136274	t	f
+2024-03-02	2023-2024	Northern Kentucky	Wright State	94	88	136275	f	f
+2024-03-11	2023-2024	Northern Kentucky	Milwaukee	82	75	136276	f	t
+2023-11-06	2023-2024	N'Western State	vsDallas Christian	101	54	136277	t	t
+2023-11-09	2023-2024	N'Western State	Tulane	88	71	136278	f	f
+2023-11-13	2023-2024	N'Western State	Stephen F. Austin	96	70	136279	f	t
+2023-11-16	2023-2024	N'Western State	Maine	78	65	136280	f	t
+2023-11-17	2023-2024	N'Western State	North Florida	80	74	136281	f	f
+2023-11-18	2023-2024	N'Western State	Presbyterian	78	75	136282	f	t
+2023-11-28	2023-2024	N'Western State	UL Monroe	74	70	136283	f	f
+2023-12-02	2023-2024	N'Western State	9 Baylor	91	40	136284	f	f
+2023-12-09	2023-2024	N'Western State	Southern Miss	83	74	136285	f	f
+2023-12-12	2023-2024	N'Western State	Boise State	95	54	136286	f	f
+2023-12-16	2023-2024	N'Western State	Rice	76	51	136287	f	t
+2023-12-19	2023-2024	N'Western State	vsSouthern-New Orleans	99	75	136288	t	t
+2023-12-29	2023-2024	N'Western State	LSU	96	55	136289	f	f
+2024-01-06	2023-2024	N'Western State	Lamar	90	70	136290	f	f
+2024-01-08	2023-2024	N'Western State	McNeese	68	59	136291	f	t
+2024-01-13	2023-2024	N'Western State	Incarnate Word	97	71	136292	t	t
+2024-01-15	2023-2024	N'Western State	Houston Christian	69	64	136293	t	t
+2024-01-20	2023-2024	N'Western State	New Orleans	92	67	136294	t	f
+2024-01-22	2023-2024	N'Western State	SE Louisiana	71	62	136295	f	f
+2024-01-27	2023-2024	N'Western State	Texas A&M-Corpus Christi	79	68	136296	f	t
+2024-01-29	2023-2024	N'Western State	McNeese	89	65	136297	f	f
+2024-02-03	2023-2024	N'Western State	Texas A&M-Commerce	70	57	136298	t	t
+2024-02-05	2023-2024	N'Western State	Nicholls	73	66	136299	f	f
+2024-02-10	2023-2024	N'Western State	SE Louisiana	69	59	136300	f	t
+2024-02-12	2023-2024	N'Western State	New Orleans	70	59	136301	t	t
+2024-02-17	2023-2024	N'Western State	Incarnate Word	81	61	136302	t	f
+2024-02-19	2023-2024	N'Western State	Texas A&M-Corpus Christi	72	61	136303	f	f
+2024-02-24	2023-2024	N'Western State	Houston Christian	86	73	136304	t	f
+2024-03-04	2023-2024	N'Western State	Nicholls	68	62	136305	f	t
+2024-03-10	2023-2024	N'Western State	Texas A&M-Commerce	69	64	136306	f	t
+2023-11-06	2023-2024	Northwestern	Binghamton	72	61	136307	t	t
+2023-11-10	2023-2024	Northwestern	Dayton	71	66	136308	t	t
+2023-11-14	2023-2024	Northwestern	Western Michigan	63	59	136309	t	t
+2023-11-18	2023-2024	Northwestern	Rhode Island	72	61	136310	t	t
+2023-11-19	2023-2024	Northwestern	Mississippi State	66	57	136311	f	t
+2023-11-27	2023-2024	Northwestern	Northern Illinois	89	67	136312	t	t
+2023-12-10	2023-2024	Northwestern	Detroit Mercy	91	59	136313	t	t
+2023-12-13	2023-2024	Northwestern	Chicago State	75	73	136314	f	t
+2023-12-16	2023-2024	Northwestern	DePaul	56	46	136315	t	f
+2023-12-20	2023-2024	Northwestern	Arizona State	65	46	136316	t	t
+2023-12-29	2023-2024	Northwestern	Jackson State	74	63	136317	t	t
+2024-01-02	2023-2024	Northwestern	9 Illinois	96	66	136318	f	f
+2024-01-07	2023-2024	Northwestern	Michigan State	88	74	136319	t	t
+2024-01-10	2023-2024	Northwestern	Penn State	76	72	136320	t	f
+2024-01-13	2023-2024	Northwestern	15 Wisconsin	71	63	136321	f	f
+2024-01-17	2023-2024	Northwestern	Maryland	72	69	136322	t	t
+2024-01-20	2023-2024	Northwestern	Nebraska	75	69	136323	f	f
+2024-01-27	2023-2024	Northwestern	Ohio State	83	58	136324	t	t
+2024-02-07	2023-2024	Northwestern	Nebraska	80	68	136325	t	t
+2024-02-11	2023-2024	Northwestern	Penn State	68	63	136326	t	t
+2024-02-15	2023-2024	Northwestern	Rutgers	63	60	136327	f	f
+2024-02-18	2023-2024	Northwestern	Indiana	76	72	136328	t	f
+2024-02-22	2023-2024	Northwestern	Michigan	76	62	136329	t	t
+2024-02-28	2023-2024	Northwestern	Maryland	68	61	136330	t	f
+2024-03-02	2023-2024	Northwestern	Iowa	87	80	136331	f	t
+2024-03-06	2023-2024	Northwestern	Michigan State	53	49	136332	f	f
+2024-03-09	2023-2024	Northwestern	Minnesota	90	66	136333	t	t
+2024-03-15	2023-2024	Northwestern	Wisconsin	70	61	136334	f	t
+2023-11-06	2023-2024	Notre Dame	Niagara	70	63	136335	t	t
+2023-11-11	2023-2024	Notre Dame	Western Carolina	71	61	136336	f	t
+2023-11-16	2023-2024	Notre Dame	Auburn	83	59	136337	f	t
+2023-11-22	2023-2024	Notre Dame	Maryland-Eastern Shore	75	55	136338	t	t
+2023-11-28	2023-2024	Notre Dame	South Carolina	65	53	136339	f	f
+2023-12-02	2023-2024	Notre Dame	8 Miami	62	49	136340	f	f
+2023-12-05	2023-2024	Notre Dame	Western Michigan	86	65	136341	t	t
+2023-12-09	2023-2024	Notre Dame	8 Marquette	78	59	136342	f	f
+2023-12-19	2023-2024	Notre Dame	The Citadel	65	45	136343	f	t
+2023-12-22	2023-2024	Notre Dame	Marist	60	56	136344	t	t
+2023-12-30	2023-2024	Notre Dame	Virginia	76	54	136345	t	t
+2024-01-03	2023-2024	Notre Dame	NC State	54	52	136346	f	t
+2024-01-06	2023-2024	Notre Dame	14 Duke	67	59	136347	f	t
+2024-01-13	2023-2024	Notre Dame	Florida State	67	58	136348	f	t
+2024-01-15	2023-2024	Notre Dame	Boston College	63	59	136349	f	f
+2024-01-24	2023-2024	Notre Dame	Miami	73	61	136350	f	t
+2024-01-27	2023-2024	Notre Dame	Boston College	61	58	136351	f	t
+2024-01-31	2023-2024	Notre Dame	Virginia	65	53	136352	f	f
+2024-02-03	2023-2024	Notre Dame	Pittsburgh	70	60	136353	f	f
+2024-02-07	2023-2024	Notre Dame	9 Duke	71	53	136354	f	f
+2024-02-10	2023-2024	Notre Dame	Virginia Tech	74	66	136355	t	t
+2024-02-14	2023-2024	Notre Dame	Georgia Tech	58	55	136356	t	t
+2024-02-21	2023-2024	Notre Dame	Louisville	72	50	136357	t	f
+2024-02-24	2023-2024	Notre Dame	Syracuse	88	85	136358	f	f
+2024-02-27	2023-2024	Notre Dame	Wake Forest	70	65	136359	t	t
+2024-03-02	2023-2024	Notre Dame	Clemson	69	62	136360	t	t
+2024-03-05	2023-2024	Notre Dame	7 North Carolina	84	51	136361	f	f
+2024-03-09	2023-2024	Notre Dame	Virginia Tech	82	76	136362	f	f
+2024-03-12	2023-2024	Notre Dame	Georgia Tech	84	80	136363	t	t
+2024-03-13	2023-2024	Notre Dame	Wake Forest	72	59	136364	f	t
+2023-11-06	2023-2024	Oakland	Ohio State	79	73	136365	f	f
+2023-11-10	2023-2024	Oakland	25 Illinois	64	53	136366	f	f
+2023-11-14	2023-2024	Oakland	Bowling Green	81	62	136367	t	t
+2023-11-19	2023-2024	Oakland	Drake	85	77	136368	f	t
+2023-11-20	2023-2024	Oakland	Loyola Marymount	74	69	136369	t	t
+2023-11-21	2023-2024	Oakland	Marshall	78	71	136370	t	t
+2023-11-27	2023-2024	Oakland	Xavier	78	76	136371	t	f
+2023-11-29	2023-2024	Oakland	Detroit Mercy	65	50	136372	t	f
+2023-12-02	2023-2024	Oakland	Purdue Fort Wayne	98	77	136373	f	t
+2023-12-06	2023-2024	Oakland	Toledo	69	68	136374	f	t
+2023-12-08	2023-2024	Oakland	Eastern Michigan	77	63	136375	t	f
+2023-12-18	2023-2024	Oakland	Michigan State	79	62	136376	f	f
+2023-12-20	2023-2024	Oakland	Dayton	91	67	136377	f	f
+2023-12-28	2023-2024	Oakland	Cleveland State	75	67	136378	f	f
+2023-12-31	2023-2024	Oakland	Youngstown State	88	81	136379	t	f
+2024-01-04	2023-2024	Oakland	Milwaukee	100	95	136380	t	t
+2024-01-06	2023-2024	Oakland	Green Bay	79	73	136381	t	t
+2024-01-13	2023-2024	Oakland	IUPUI	88	66	136382	t	f
+2024-01-17	2023-2024	Oakland	Youngstown State	70	67	136383	t	t
+2024-01-25	2023-2024	Oakland	Green Bay	69	59	136384	f	f
+2024-02-01	2023-2024	Oakland	Robert Morris	87	72	136385	t	t
+2024-02-03	2023-2024	Oakland	Cleveland State	83	71	136386	t	t
+2024-02-10	2023-2024	Oakland	Wright State	74	60	136387	t	f
+2024-02-14	2023-2024	Oakland	Purdue Fort Wayne	71	63	136388	t	f
+2024-02-17	2023-2024	Oakland	IUPUI	107	59	136389	t	t
+2024-02-22	2023-2024	Oakland	Robert Morris	63	43	136390	t	f
+2024-02-25	2023-2024	Oakland	Wright State	96	75	136391	f	t
+2024-03-02	2023-2024	Oakland	Detroit Mercy	75	70	136392	t	t
+2024-03-07	2023-2024	Oakland	Purdue Fort Wayne	75	65	136393	t	t
+2024-03-11	2023-2024	Oakland	Cleveland State	74	71	136394	t	t
+2024-03-12	2023-2024	Oakland	Milwaukee	83	76	136395	t	t
+2023-11-08	2023-2024	Ohio	Troy	88	70	136396	t	t
+2023-11-11	2023-2024	Ohio	Cleveland State	82	78	136397	f	f
+2023-11-18	2023-2024	Ohio	Detroit Mercy	71	52	136398	t	t
+2023-11-25	2023-2024	Ohio	Middle Tennessee	80	68	136399	t	t
+2023-11-26	2023-2024	Ohio	Brown	82	77	136400	t	t
+2023-12-02	2023-2024	Ohio	Delaware	74	73	136401	t	t
+2023-12-06	2023-2024	Ohio	Youngstown State	78	72	136402	f	t
+2023-12-09	2023-2024	Ohio	Marshall	74	69	136403	f	t
+2023-12-18	2023-2024	Ohio	vsDefiance	108	28	136404	t	t
+2023-12-22	2023-2024	Ohio	Austin Peay	71	67	136405	f	f
+2023-12-30	2023-2024	Ohio	Davidson	72	69	136406	f	t
+2024-01-02	2023-2024	Ohio	Toledo	86	77	136407	f	t
+2024-01-06	2023-2024	Ohio	Northern Illinois	78	66	136408	t	t
+2024-01-09	2023-2024	Ohio	Bowling Green	83	78	136409	f	f
+2024-01-13	2023-2024	Ohio	Western Michigan	81	79	136410	f	f
+2024-01-16	2023-2024	Ohio	Central Michigan	73	61	136411	t	t
+2024-01-20	2023-2024	Ohio	Eastern Michigan	85	67	136412	t	t
+2024-01-23	2023-2024	Ohio	Akron	67	58	136413	f	f
+2024-01-26	2023-2024	Ohio	Kent State	71	64	136414	t	f
+2024-01-30	2023-2024	Ohio	Buffalo	91	70	136415	t	t
+2024-02-03	2023-2024	Ohio	Miami (OH)	78	69	136416	t	t
+2024-02-10	2023-2024	Ohio	Arkansas State	100	87	136417	f	f
+2024-02-16	2023-2024	Ohio	Toledo	85	83	136418	f	f
+2024-02-20	2023-2024	Ohio	Kent State	63	57	136419	t	t
+2024-02-24	2023-2024	Ohio	Northern Illinois	80	59	136420	t	f
+2024-02-27	2023-2024	Ohio	Akron	74	67	136421	t	t
+2024-03-01	2023-2024	Ohio	Bowling Green	66	59	136422	t	t
+2024-03-05	2023-2024	Ohio	Buffalo	78	66	136423	t	f
+2024-03-08	2023-2024	Ohio	Miami (OH)	72	59	136424	t	f
+2024-03-14	2023-2024	Ohio	Western Michigan	82	55	136425	t	t
+2024-03-15	2023-2024	Ohio	Akron	65	62	136426	f	t
+2023-11-06	2023-2024	Ohio State	Oakland	79	73	136427	t	t
+2023-11-10	2023-2024	Ohio State	15 Texas A&M	73	66	136428	f	t
+2023-11-15	2023-2024	Ohio State	Merrimack	76	52	136429	t	t
+2023-11-19	2023-2024	Ohio State	Western Michigan	73	56	136430	t	t
+2023-11-24	2023-2024	Ohio State	17 Alabama	92	81	136431	t	t
+2023-11-25	2023-2024	Ohio State	Santa Clara	86	56	136432	t	t
+2023-11-29	2023-2024	Ohio State	Central Michigan	88	61	136433	t	t
+2023-12-03	2023-2024	Ohio State	Minnesota	84	74	136434	t	t
+2023-12-06	2023-2024	Ohio State	Miami (OH)	84	64	136435	t	t
+2023-12-09	2023-2024	Ohio State	Penn State	83	80	136436	f	f
+2023-12-16	2023-2024	Ohio State	UCLA	67	60	136437	t	t
+2023-12-21	2023-2024	Ohio State	New Orleans	78	36	136438	t	t
+2024-01-03	2023-2024	Ohio State	Rutgers	76	72	136439	t	t
+2024-01-06	2023-2024	Ohio State	Indiana	71	65	136440	f	f
+2024-01-10	2023-2024	Ohio State	15 Wisconsin	71	60	136441	f	t
+2024-01-15	2023-2024	Ohio State	Michigan	73	65	136442	f	f
+2024-01-20	2023-2024	Ohio State	Penn State	79	67	136443	t	t
+2024-01-23	2023-2024	Ohio State	Nebraska	83	69	136444	f	f
+2024-01-27	2023-2024	Ohio State	Northwestern	83	58	136445	f	f
+2024-01-30	2023-2024	Ohio State	14 Illinois	87	75	136446	f	t
+2024-02-02	2023-2024	Ohio State	Iowa	79	77	136447	f	f
+2024-02-06	2023-2024	Ohio State	Indiana	76	73	136448	f	t
+2024-02-13	2023-2024	Ohio State	20 Wisconsin	62	54	136449	f	f
+2024-02-18	2023-2024	Ohio State	2 Purdue	73	69	136450	t	t
+2024-02-22	2023-2024	Ohio State	Minnesota	88	79	136451	f	f
+2024-02-25	2023-2024	Ohio State	Michigan State	60	57	136452	t	f
+2024-02-29	2023-2024	Ohio State	Nebraska	78	69	136453	t	t
+2024-03-03	2023-2024	Ohio State	Michigan	84	61	136454	t	t
+2024-03-10	2023-2024	Ohio State	Rutgers	73	51	136455	t	f
+2024-03-14	2023-2024	Ohio State	Iowa	90	78	136456	t	t
+2024-03-15	2023-2024	Ohio State	13 Illinois	77	74	136457	f	t
+2023-11-06	2023-2024	Oklahoma	Central Michigan	89	59	136458	t	t
+2023-11-10	2023-2024	Oklahoma	Mississippi Valley State	82	43	136459	t	t
+2023-11-14	2023-2024	Oklahoma	Texas State	93	54	136460	t	t
+2023-11-17	2023-2024	Oklahoma	UT Rio Grande Valley	90	66	136461	t	t
+2023-11-23	2023-2024	Oklahoma	Iowa	79	67	136462	t	t
+2023-11-24	2023-2024	Oklahoma	23 USC	72	70	136463	t	t
+2023-11-30	2023-2024	Oklahoma	Arkansas-Pine Bluff	107	86	136464	t	t
+2023-12-05	2023-2024	Oklahoma	Providence	72	51	136465	t	t
+2023-12-09	2023-2024	Oklahoma	Arkansas	79	70	136466	t	t
+2023-12-16	2023-2024	Oklahoma	Green Bay	81	47	136467	t	t
+2023-12-20	2023-2024	Oklahoma	11 North Carolina	81	69	136468	f	t
+2023-12-28	2023-2024	Oklahoma	Central Arkansas	88	72	136469	t	t
+2023-12-31	2023-2024	Oklahoma	Monmouth	72	56	136470	t	t
+2024-01-06	2023-2024	Oklahoma	Iowa State	71	63	136471	t	t
+2024-01-10	2023-2024	Oklahoma	TCU	80	71	136472	f	f
+2024-01-13	2023-2024	Oklahoma	3 Kansas	78	66	136473	f	f
+2024-01-17	2023-2024	Oklahoma	West Virginia	77	63	136474	t	t
+2024-01-20	2023-2024	Oklahoma	Cincinnati	69	65	136475	t	f
+2024-01-23	2023-2024	Oklahoma	Texas	75	60	136476	f	t
+2024-01-27	2023-2024	Oklahoma	20 Texas Tech	85	84	136477	f	t
+2024-01-30	2023-2024	Oklahoma	Kansas State	73	53	136478	t	f
+2024-02-03	2023-2024	Oklahoma	UCF	74	63	136479	f	f
+2024-02-06	2023-2024	Oklahoma	21 BYU	82	66	136480	t	t
+2024-02-10	2023-2024	Oklahoma	Oklahoma State	66	62	136481	t	t
+2024-02-13	2023-2024	Oklahoma	12 Baylor	79	62	136482	f	f
+2024-02-17	2023-2024	Oklahoma	6 Kansas	67	57	136483	f	t
+2024-02-28	2023-2024	Oklahoma	8 Iowa State	58	45	136484	f	f
+2024-03-02	2023-2024	Oklahoma	1 Houston	87	85	136485	f	t
+2024-03-09	2023-2024	Oklahoma	Texas	94	80	136486	f	f
+2024-03-13	2023-2024	Oklahoma	TCU	77	70	136487	f	t
+2023-11-06	2023-2024	Oklahoma State	Abilene Christian	64	59	136488	f	t
+2023-11-12	2023-2024	Oklahoma State	Sam Houston	85	70	136489	t	t
+2023-11-16	2023-2024	Oklahoma State	St. Bonaventure	66	64	136490	f	t
+2023-11-20	2023-2024	Oklahoma State	New Orleans	96	68	136491	t	t
+2023-11-24	2023-2024	Oklahoma State	Houston Christian	92	65	136492	t	t
+2023-11-30	2023-2024	Oklahoma State	15 Creighton	79	65	136493	f	t
+2023-12-05	2023-2024	Oklahoma State	Southern Illinois	70	68	136494	f	f
+2023-12-10	2023-2024	Oklahoma State	Tulsa	72	57	136495	t	t
+2023-12-17	2023-2024	Oklahoma State	Oral Roberts	81	60	136496	t	t
+2023-12-20	2023-2024	Oklahoma State	Wofford	76	70	136497	t	t
+2023-12-31	2023-2024	Oklahoma State	South Carolina State	86	70	136498	t	t
+2024-01-03	2023-2024	Oklahoma State	Chicago State	72	53	136499	t	t
+2024-01-09	2023-2024	Oklahoma State	Texas Tech	90	73	136500	f	f
+2024-01-13	2023-2024	Oklahoma State	Iowa State	66	42	136501	f	f
+2024-01-16	2023-2024	Oklahoma State	3 Kansas	90	66	136502	f	t
+2024-01-20	2023-2024	Oklahoma State	Kansas State	70	66	136503	f	f
+2024-01-23	2023-2024	Oklahoma State	TCU	74	69	136504	f	t
+2024-01-27	2023-2024	Oklahoma State	West Virginia	70	66	136505	t	t
+2024-01-30	2023-2024	Oklahoma State	8 Kansas	83	54	136506	f	f
+2024-02-03	2023-2024	Oklahoma State	Kansas State	75	72	136507	t	t
+2024-02-06	2023-2024	Oklahoma State	5 Houston	79	63	136508	f	f
+2024-02-10	2023-2024	Oklahoma State	Oklahoma	66	62	136509	f	f
+2024-02-17	2023-2024	Oklahoma State	19 BYU	93	83	136510	t	t
+2024-02-21	2023-2024	Oklahoma State	Cincinnati	80	76	136511	t	f
+2024-02-28	2023-2024	Oklahoma State	UCF	77	71	136512	f	t
+2024-03-02	2023-2024	Oklahoma State	Texas	81	65	136513	f	f
+2024-03-05	2023-2024	Oklahoma State	Texas Tech	75	58	136514	f	t
+2024-03-09	2023-2024	Oklahoma State	20 BYU	85	71	136515	f	f
+2024-03-12	2023-2024	Oklahoma State	UCF	77	62	136516	f	t
+2023-11-06	2023-2024	Old Dominion	vsVirginia Wesleyan	71	57	136517	t	t
+2023-11-11	2023-2024	Old Dominion	Ball State	73	68	136518	f	f
+2023-11-13	2023-2024	Old Dominion	14 Arkansas	86	77	136519	f	f
+2023-11-22	2023-2024	Old Dominion	Princeton	76	56	136520	f	t
+2023-11-29	2023-2024	Old Dominion	Radford	69	68	136521	t	t
+2023-12-02	2023-2024	Old Dominion	Northeastern	81	68	136522	f	f
+2023-12-06	2023-2024	Old Dominion	William & Mary	84	79	136523	f	f
+2023-12-09	2023-2024	Old Dominion	18 James Madison	84	69	136524	f	t
+2023-12-21	2023-2024	Old Dominion	TCU	111	87	136525	f	t
+2023-12-22	2023-2024	Old Dominion	Temple	78	63	136526	t	t
+2023-12-24	2023-2024	Old Dominion	Massachusetts	87	65	136527	f	t
+2023-12-30	2023-2024	Old Dominion	South Alabama	61	59	136528	f	t
+2024-01-04	2023-2024	Old Dominion	Troy	86	73	136529	f	f
+2024-01-06	2023-2024	Old Dominion	Arkansas State	90	75	136530	f	f
+2024-01-11	2023-2024	Old Dominion	Georgia State	77	70	136531	f	f
+2024-01-13	2023-2024	Old Dominion	Coastal Carolina	79	75	136532	f	f
+2024-01-18	2023-2024	Old Dominion	Marshall	91	66	136533	t	t
+2024-01-20	2023-2024	Old Dominion	UL Monroe	80	73	136534	f	t
+2024-01-24	2023-2024	Old Dominion	James Madison	78	62	136535	f	t
+2024-01-27	2023-2024	Old Dominion	Georgia Southern	76	70	136536	f	t
+2024-02-01	2023-2024	Old Dominion	Marshall	83	76	136537	t	f
+2024-02-03	2023-2024	Old Dominion	James Madison	78	63	136538	f	f
+2024-02-07	2023-2024	Old Dominion	Southern Miss	78	73	136539	f	f
+2024-02-10	2023-2024	Old Dominion	Central Michigan	58	57	136540	f	t
+2024-02-15	2023-2024	Old Dominion	Louisiana	68	60	136541	f	t
+2024-02-17	2023-2024	Old Dominion	Georgia State	68	65	136542	f	t
+2024-02-22	2023-2024	Old Dominion	Appalachian State	82	67	136543	f	t
+2024-02-24	2023-2024	Old Dominion	Coastal Carolina	75	59	136544	t	t
+2024-02-28	2023-2024	Old Dominion	Appalachian State	89	64	136545	f	f
+2024-03-01	2023-2024	Old Dominion	Georgia Southern	92	75	136546	f	f
+2023-11-06	2023-2024	Ole Miss	Alabama State	69	59	136547	t	t
+2023-11-10	2023-2024	Ole Miss	Eastern Washington	75	64	136548	t	t
+2023-11-14	2023-2024	Ole Miss	Detroit Mercy	70	69	136549	t	t
+2023-11-17	2023-2024	Ole Miss	Sam Houston	70	67	136550	t	t
+2023-11-22	2023-2024	Ole Miss	Temple	77	76	136551	t	f
+2023-11-28	2023-2024	Ole Miss	NC State	72	52	136552	t	t
+2023-12-02	2023-2024	Ole Miss	Memphis	80	77	136553	t	t
+2023-12-05	2023-2024	Ole Miss	Mount St. Mary's	77	68	136554	t	t
+2023-12-10	2023-2024	Ole Miss	UCF	70	68	136555	t	f
+2023-12-16	2023-2024	Ole Miss	California	88	78	136556	t	t
+2023-12-19	2023-2024	Ole Miss	Troy	74	53	136557	t	t
+2023-12-23	2023-2024	Ole Miss	Southern Miss	89	72	136558	t	t
+2023-12-31	2023-2024	Ole Miss	Bryant	95	78	136559	t	t
+2024-01-06	2023-2024	Ole Miss	5 Tennessee	90	64	136560	f	f
+2024-01-10	2023-2024	Ole Miss	Florida	103	85	136561	t	t
+2024-01-13	2023-2024	Ole Miss	Vanderbilt	69	56	136562	t	t
+2024-01-17	2023-2024	Ole Miss	LSU	89	80	136563	f	f
+2024-01-20	2023-2024	Ole Miss	13 Auburn	82	59	136564	f	f
+2024-01-24	2023-2024	Ole Miss	Arkansas	77	51	136565	t	t
+2024-01-27	2023-2024	Ole Miss	Texas A&M	71	68	136566	t	f
+2024-01-30	2023-2024	Ole Miss	Mississippi State	86	82	136567	t	t
+2024-02-03	2023-2024	Ole Miss	16 Auburn	91	77	136568	f	t
+2024-02-06	2023-2024	Ole Miss	15 South Carolina	68	65	136569	f	f
+2024-02-13	2023-2024	Ole Miss	22 Kentucky	75	63	136570	f	f
+2024-02-17	2023-2024	Ole Miss	Missouri	79	76	136571	t	t
+2024-02-21	2023-2024	Ole Miss	Mississippi State	83	71	136572	f	f
+2024-02-24	2023-2024	Ole Miss	20 South Carolina	72	59	136573	f	t
+2024-02-28	2023-2024	Ole Miss	14 Alabama	103	88	136574	f	t
+2024-03-02	2023-2024	Ole Miss	Missouri	84	78	136575	t	f
+2024-03-05	2023-2024	Ole Miss	Georgia	69	66	136576	f	f
+2024-03-09	2023-2024	Ole Miss	Texas A&M	86	60	136577	f	t
+2024-03-14	2023-2024	Ole Miss	Texas A&M	80	71	136578	f	t
+2023-11-06	2023-2024	Omaha	vsDoane	85	53	136579	t	t
+2023-11-09	2023-2024	Omaha	TCU	82	60	136580	f	f
+2023-11-11	2023-2024	Omaha	North Texas	75	64	136581	f	f
+2023-11-16	2023-2024	Omaha	William & Mary	89	83	136582	t	t
+2023-11-17	2023-2024	Omaha	Lindenwood	72	70	136583	f	t
+2023-11-19	2023-2024	Omaha	Air Force	58	56	136584	f	f
+2023-11-22	2023-2024	Omaha	vsMid-America Christian	76	59	136585	t	t
+2023-11-27	2023-2024	Omaha	vsYork College Nebraska	104	68	136586	t	t
+2023-11-30	2023-2024	Omaha	vsBellevue University	78	59	136587	t	t
+2023-12-06	2023-2024	Omaha	Texas Tech	87	58	136588	f	f
+2023-12-09	2023-2024	Omaha	Texas A&M-Corpus Christi	62	58	136589	f	f
+2023-12-17	2023-2024	Omaha	Stetson	88	80	136590	t	t
+2023-12-21	2023-2024	Omaha	Cal Poly	66	53	136591	f	f
+2023-12-29	2023-2024	Omaha	Denver	95	80	136592	f	t
+2023-12-31	2023-2024	Omaha	South Dakota	67	51	136593	t	f
+2024-01-03	2023-2024	Omaha	Northern Arizona	81	55	136594	t	t
+2024-01-06	2023-2024	Omaha	Idaho State	63	62	136595	f	f
+2024-01-11	2023-2024	Omaha	North Dakota	79	61	136596	t	t
+2024-01-18	2023-2024	Omaha	South Dakota State	90	87	136597	f	f
+2024-01-20	2023-2024	Omaha	Kansas City	74	72	136598	f	t
+2024-01-25	2023-2024	Omaha	Oral Roberts	74	67	136599	f	f
+2024-01-27	2023-2024	Omaha	Denver	91	72	136600	t	f
+2024-02-01	2023-2024	Omaha	St. Thomas-Minnesota	69	65	136601	t	t
+2024-02-08	2023-2024	Omaha	North Dakota	99	78	136602	f	f
+2024-02-10	2023-2024	Omaha	North Dakota State	81	79	136603	f	f
+2024-02-15	2023-2024	Omaha	South Dakota	91	84	136604	t	t
+2024-02-22	2023-2024	Omaha	Oral Roberts	71	70	136605	t	t
+2024-02-24	2023-2024	Omaha	Kansas City	63	58	136606	f	f
+2024-02-29	2023-2024	Omaha	St. Thomas-Minnesota	88	61	136607	f	f
+2024-03-10	2023-2024	Omaha	North Dakota	73	72	136608	t	t
+2024-03-11	2023-2024	Omaha	Denver	66	63	136609	f	t
+2023-11-06	2023-2024	Oral Roberts	UT Arlington	75	71	136610	f	f
+2023-11-10	2023-2024	Oral Roberts	vsMid-America Christian	74	69	136611	t	t
+2023-11-13	2023-2024	Oral Roberts	Missouri State	84	69	136612	f	f
+2023-11-17	2023-2024	Oral Roberts	13 Texas A&M	74	66	136613	f	f
+2023-11-21	2023-2024	Oral Roberts	Texas Southern	65	63	136614	t	t
+2023-12-02	2023-2024	Oral Roberts	Tulsa	79	70	136615	t	t
+2023-12-09	2023-2024	Oral Roberts	vsOzark Christian	110	51	136616	t	t
+2023-12-12	2023-2024	Oral Roberts	Texas Tech	82	76	136617	f	f
+2023-12-17	2023-2024	Oral Roberts	Oklahoma State	81	60	136618	f	f
+2023-12-19	2023-2024	Oral Roberts	vsJohn Brown	71	59	136619	t	t
+2023-12-29	2023-2024	Oral Roberts	Kansas City	77	60	136620	f	f
+2024-01-03	2023-2024	Oral Roberts	Montana State	82	76	136621	t	f
+2024-01-06	2023-2024	Oral Roberts	Weber State	83	78	136622	f	t
+2024-01-11	2023-2024	Oral Roberts	South Dakota	84	66	136623	t	t
+2024-01-13	2023-2024	Oral Roberts	St. Thomas-Minnesota	87	76	136624	f	t
+2024-01-18	2023-2024	Oral Roberts	North Dakota	87	77	136625	f	f
+2024-01-20	2023-2024	Oral Roberts	North Dakota State	72	67	136626	f	f
+2024-01-25	2023-2024	Oral Roberts	Omaha	74	67	136627	t	t
+2024-01-27	2023-2024	Oral Roberts	South Dakota State	87	82	136628	t	t
+2024-02-03	2023-2024	Oral Roberts	Denver	82	76	136629	t	t
+2024-02-08	2023-2024	Oral Roberts	St. Thomas-Minnesota	85	63	136630	f	f
+2024-02-10	2023-2024	Oral Roberts	South Dakota State	83	72	136631	f	f
+2024-02-15	2023-2024	Oral Roberts	North Dakota State	73	60	136632	f	t
+2024-02-17	2023-2024	Oral Roberts	North Dakota	78	65	136633	f	t
+2024-02-22	2023-2024	Oral Roberts	Omaha	71	70	136634	f	f
+2024-02-24	2023-2024	Oral Roberts	South Dakota	77	76	136635	f	f
+2024-03-03	2023-2024	Oral Roberts	Kansas City	71	54	136636	f	t
+2024-03-08	2023-2024	Oral Roberts	South Dakota	77	62	136637	t	t
+2024-03-09	2023-2024	Oral Roberts	South Dakota State	79	63	136638	f	t
+2023-11-06	2023-2024	Oregon	Georgia	82	71	136639	t	t
+2023-11-10	2023-2024	Oregon	Montana	75	61	136640	t	t
+2023-11-17	2023-2024	Oregon	Tennessee State	92	67	136641	t	t
+2023-11-20	2023-2024	Oregon	Florida A&M	67	54	136642	t	f
+2023-11-24	2023-2024	Oregon	Santa Clara	88	82	136643	f	t
+2023-11-25	2023-2024	Oregon	17 Alabama	99	91	136644	f	t
+2023-12-09	2023-2024	Oregon	UTEP	71	49	136645	t	t
+2023-12-12	2023-2024	Oregon	California Baptist	76	55	136646	t	t
+2023-12-17	2023-2024	Oregon	Syracuse	83	63	136647	f	t
+2023-12-21	2023-2024	Oregon	Kent State	84	70	136648	t	t
+2023-12-28	2023-2024	Oregon	USC	82	74	136649	t	t
+2023-12-30	2023-2024	Oregon	UCLA	64	59	136650	t	t
+2024-01-04	2023-2024	Oregon	Washington	76	74	136651	t	f
+2024-01-06	2023-2024	Oregon	Washington State	89	84	136652	t	f
+2024-01-13	2023-2024	Oregon	California	80	73	136653	t	t
+2024-01-18	2023-2024	Oregon	Colorado	86	70	136654	f	f
+2024-01-21	2023-2024	Oregon	Utah	80	77	136655	f	f
+2024-01-25	2023-2024	Oregon	Arizona State	80	61	136656	t	t
+2024-01-27	2023-2024	Oregon	9 Arizona	87	78	136657	f	t
+2024-02-01	2023-2024	Oregon	USC	78	69	136658	t	f
+2024-02-03	2023-2024	Oregon	UCLA	71	63	136659	f	f
+2024-02-08	2023-2024	Oregon	Washington	85	80	136660	t	t
+2024-02-10	2023-2024	Oregon	Washington State	62	56	136661	f	t
+2024-02-17	2023-2024	Oregon	Oregon State	60	58	136662	t	f
+2024-02-22	2023-2024	Oregon	Stanford	78	65	136663	t	f
+2024-02-24	2023-2024	Oregon	California	69	64	136664	f	f
+2024-02-28	2023-2024	Oregon	Oregon State	78	71	136665	t	t
+2024-03-02	2023-2024	Oregon	6 Arizona	103	83	136666	f	f
+2024-03-07	2023-2024	Oregon	Colorado	79	75	136667	f	t
+2024-03-09	2023-2024	Oregon	Utah	66	65	136668	t	t
+2024-03-14	2023-2024	Oregon	UCLA	68	66	136669	t	t
+2024-03-15	2023-2024	Oregon	6 Arizona	67	59	136670	t	t
+2024-03-16	2023-2024	Oregon	Colorado	75	68	136671	t	t
+2023-11-06	2023-2024	Oregon State	vsLinfield College	82	46	136672	t	t
+2023-11-18	2023-2024	Oregon State	Nebraska	84	63	136673	f	t
+2023-11-22	2023-2024	Oregon State	13 Baylor	88	72	136674	f	t
+2023-11-24	2023-2024	Oregon State	Pittsburgh	76	51	136675	f	t
+2023-11-30	2023-2024	Oregon State	UC Davis	71	59	136676	t	t
+2023-12-09	2023-2024	Oregon State	Utah Valley	74	71	136677	t	t
+2023-12-17	2023-2024	Oregon State	UTSA	66	65	136678	t	t
+2023-12-21	2023-2024	Oregon State	Idaho State	76	57	136679	t	t
+2023-12-28	2023-2024	Oregon State	UCLA	69	62	136680	f	t
+2023-12-30	2023-2024	Oregon State	USC	86	70	136681	t	t
+2024-01-04	2023-2024	Oregon State	Washington State	65	58	136682	f	f
+2024-01-06	2023-2024	Oregon State	Washington	79	72	136683	f	f
+2024-01-18	2023-2024	Oregon State	Utah	74	47	136684	f	f
+2024-01-20	2023-2024	Oregon State	Colorado	90	57	136685	f	f
+2024-01-25	2023-2024	Oregon State	9 Arizona	83	80	136686	t	t
+2024-01-27	2023-2024	Oregon State	Arizona State	84	71	136687	t	t
+2024-02-01	2023-2024	Oregon State	UCLA	71	63	136688	f	f
+2024-02-03	2023-2024	Oregon State	USC	82	54	136689	f	f
+2024-02-08	2023-2024	Oregon State	Washington State	64	58	136690	f	t
+2024-02-10	2023-2024	Oregon State	Washington	67	55	136691	f	t
+2024-02-14	2023-2024	Oregon State	Arizona State	79	61	136692	f	f
+2024-02-17	2023-2024	Oregon State	Oregon	60	58	136693	f	t
+2024-02-22	2023-2024	Oregon State	California	81	73	136694	f	f
+2024-02-24	2023-2024	Oregon State	Stanford	85	73	136695	t	f
+2024-02-28	2023-2024	Oregon State	Oregon	78	71	136696	f	f
+2024-03-07	2023-2024	Oregon State	Utah	92	85	136697	t	t
+2024-03-09	2023-2024	Oregon State	Colorado	73	57	136698	f	t
+2024-03-13	2023-2024	Oregon State	UCLA	67	57	136699	f	t
+2023-11-06	2023-2024	Pacific	Sam Houston	64	57	136700	f	t
+2023-11-10	2023-2024	Pacific	California	87	79	136701	t	f
+2023-11-15	2023-2024	Pacific	Nevada	88	39	136702	f	f
+2023-11-18	2023-2024	Pacific	Lamar	77	76	136703	t	t
+2023-11-20	2023-2024	Pacific	North Dakota	73	71	136704	f	t
+2023-11-24	2023-2024	Pacific	Le Moyne	73	71	136705	t	t
+2023-11-29	2023-2024	Pacific	Cal State Northridge	80	69	136706	f	t
+2023-12-02	2023-2024	Pacific	Northern Arizona	78	58	136707	f	f
+2023-12-05	2023-2024	Pacific	Idaho	83	53	136708	f	f
+2023-12-09	2023-2024	Pacific	Fresno State	89	56	136709	f	f
+2023-12-16	2023-2024	Pacific	UC Davis	82	61	136710	f	t
+2023-12-18	2023-2024	Pacific	vsStanislaus State	68	46	136711	t	t
+2023-12-20	2023-2024	Pacific	Cal State Fullerton	67	56	136712	f	f
+2023-12-30	2023-2024	Pacific	vsCal Maritime	80	66	136713	t	t
+2024-01-06	2023-2024	Pacific	Portland	78	64	136714	f	f
+2024-01-11	2023-2024	Pacific	Pepperdine	93	78	136715	f	f
+2024-01-13	2023-2024	Pacific	Loyola Marymount	81	64	136716	f	f
+2024-01-18	2023-2024	Pacific	Santa Clara	88	69	136717	f	t
+2024-01-25	2023-2024	Pacific	St. Mary's	76	28	136718	f	f
+2024-01-27	2023-2024	Pacific	Gonzaga	82	73	136719	f	t
+2024-02-01	2023-2024	Pacific	Portland	65	60	136720	f	t
+2024-02-03	2023-2024	Pacific	San Francisco	79	73	136721	f	f
+2024-02-06	2023-2024	Pacific	St. Mary's	84	43	136722	f	t
+2024-02-10	2023-2024	Pacific	San Diego	89	84	136723	f	t
+2024-02-15	2023-2024	Pacific	Santa Clara	79	53	136724	f	f
+2024-02-17	2023-2024	Pacific	Gonzaga	102	76	136725	f	f
+2024-02-21	2023-2024	Pacific	Pepperdine	89	70	136726	f	t
+2024-02-24	2023-2024	Pacific	Loyola Marymount	86	63	136727	f	t
+2024-03-02	2023-2024	Pacific	San Diego	81	69	136728	f	f
+2024-03-07	2023-2024	Pacific	Pepperdine	102	43	136729	f	t
+2023-11-06	2023-2024	Penn State	Delaware State	79	45	136730	t	t
+2023-11-10	2023-2024	Penn State	Lehigh	74	65	136731	t	t
+2023-11-14	2023-2024	Penn State	St. Francis (PA)	83	53	136732	t	t
+2023-11-17	2023-2024	Penn State	Morehead State	74	51	136733	t	t
+2023-11-23	2023-2024	Penn State	12 Texas A&M	89	77	136734	f	t
+2023-11-24	2023-2024	Penn State	Butler	88	78	136735	f	t
+2023-11-26	2023-2024	Penn State	VCU	86	74	136736	f	t
+2023-12-02	2023-2024	Penn State	Bucknell	76	67	136737	f	t
+2023-12-09	2023-2024	Penn State	Ohio State	83	80	136738	t	t
+2023-12-21	2023-2024	Penn State	Le Moyne	72	55	136739	t	t
+2023-12-29	2023-2024	Penn State	Rider	90	63	136740	t	t
+2024-01-04	2023-2024	Penn State	Michigan State	92	61	136741	f	f
+2024-01-07	2023-2024	Penn State	Michigan	79	73	136742	t	t
+2024-01-10	2023-2024	Penn State	Northwestern	76	72	136743	f	t
+2024-01-13	2023-2024	Penn State	1 Purdue	95	78	136744	f	f
+2024-01-16	2023-2024	Penn State	11 Wisconsin	87	83	136745	t	t
+2024-01-20	2023-2024	Penn State	Ohio State	79	67	136746	f	f
+2024-01-27	2023-2024	Penn State	Minnesota	83	74	136747	f	t
+2024-01-31	2023-2024	Penn State	Rutgers	61	46	136748	t	f
+2024-02-03	2023-2024	Penn State	Indiana	85	71	136749	t	f
+2024-02-08	2023-2024	Penn State	Iowa	89	79	136750	t	t
+2024-02-11	2023-2024	Penn State	Northwestern	68	63	136751	f	f
+2024-02-14	2023-2024	Penn State	Michigan State	80	72	136752	f	t
+2024-02-17	2023-2024	Penn State	Nebraska	68	49	136753	f	f
+2024-02-21	2023-2024	Penn State	12 Illinois	90	89	136754	t	t
+2024-02-24	2023-2024	Penn State	Indiana	83	74	136755	t	t
+2024-02-27	2023-2024	Penn State	Iowa	90	81	136756	f	f
+2024-03-02	2023-2024	Penn State	Minnesota	75	70	136757	f	f
+2024-03-10	2023-2024	Penn State	Maryland	85	69	136758	t	t
+2024-03-13	2023-2024	Penn State	Michigan	66	57	136759	t	t
+2024-03-14	2023-2024	Penn State	Indiana	61	59	136760	f	t
+2023-11-06	2023-2024	Penn	vsJohn Jay College	102	57	136761	t	t
+2023-11-08	2023-2024	Penn	Bucknell	80	61	136762	t	t
+2023-11-10	2023-2024	Penn	Saint Joseph's	69	61	136763	f	f
+2023-11-13	2023-2024	Penn	21 Villanova	76	72	136764	t	t
+2023-11-24	2023-2024	Penn	Louisiana-Lafayette	74	72	136765	t	t
+2023-11-26	2023-2024	Penn	Monmouth	76	61	136766	t	t
+2023-12-06	2023-2024	Penn	vsFDU Florham	111	57	136767	t	t
+2023-12-09	2023-2024	Penn	16 Kentucky	81	66	136768	f	t
+2023-12-11	2023-2024	Penn	Howard	78	68	136769	t	t
+2023-12-30	2023-2024	Penn	3 Houston	81	42	136770	f	f
+2024-01-02	2023-2024	Penn	25 Auburn	88	68	136771	f	f
+2024-01-06	2023-2024	Penn	Dartmouth	80	51	136772	t	t
+2024-01-15	2023-2024	Penn	Cornell	77	60	136773	f	f
+2024-01-20	2023-2024	Penn	Harvard	70	61	136774	f	t
+2024-01-27	2023-2024	Penn	Columbia	84	81	136775	f	f
+2024-02-02	2023-2024	Penn	Brown	70	61	136776	f	f
+2024-02-03	2023-2024	Penn	Yale	74	58	136777	f	f
+2024-02-10	2023-2024	Penn	Princeton	77	70	136778	f	f
+2024-02-16	2023-2024	Penn	Yale	76	62	136779	f	t
+2024-02-17	2023-2024	Penn	Brown	71	64	136780	f	t
+2024-02-23	2023-2024	Penn	Dartmouth	82	69	136781	t	f
+2024-02-24	2023-2024	Penn	Harvard	74	70	136782	f	f
+2024-03-01	2023-2024	Penn	Cornell	87	81	136783	f	t
+2024-03-02	2023-2024	Penn	Columbia	84	72	136784	t	t
+2024-03-09	2023-2024	Penn	Princeton	105	83	136785	f	t
+2023-11-06	2023-2024	Pepperdine	vsConcordia-Irvine	76	64	136786	t	t
+2023-11-09	2023-2024	Pepperdine	UC Davis	79	78	136787	f	f
+2023-11-12	2023-2024	Pepperdine	Louisiana-Lafayette	76	53	136788	t	t
+2023-11-13	2023-2024	Pepperdine	Long Island University	88	53	136789	t	t
+2023-11-17	2023-2024	Pepperdine	UNLV	82	68	136790	f	t
+2023-11-21	2023-2024	Pepperdine	UC Irvine	76	60	136791	f	t
+2023-11-22	2023-2024	Pepperdine	Indiana State	90	82	136792	f	t
+2023-11-24	2023-2024	Pepperdine	New Mexico	90	71	136793	f	t
+2023-11-28	2023-2024	Pepperdine	Idaho State	77	62	136794	t	t
+2023-12-03	2023-2024	Pepperdine	Colorado	91	66	136795	f	f
+2023-12-06	2023-2024	Pepperdine	Cal State Fullerton	60	55	136796	f	t
+2023-12-09	2023-2024	Pepperdine	UC San Diego	68	62	136797	t	t
+2023-12-17	2023-2024	Pepperdine	Louisville	85	63	136798	f	f
+2023-12-21	2023-2024	Pepperdine	William & Mary	71	59	136799	t	t
+2023-12-29	2023-2024	Pepperdine	vsWestcliff	83	47	136800	t	t
+2024-01-04	2023-2024	Pepperdine	24 Gonzaga	86	60	136801	f	f
+2024-01-06	2023-2024	Pepperdine	Santa Clara	78	72	136802	f	t
+2024-01-11	2023-2024	Pepperdine	Pacific	93	78	136803	t	t
+2024-01-13	2023-2024	Pepperdine	San Diego	83	77	136804	t	f
+2024-01-18	2023-2024	Pepperdine	Gonzaga	86	61	136805	f	t
+2024-01-20	2023-2024	Pepperdine	Loyola Marymount	68	61	136806	f	t
+2024-01-25	2023-2024	Pepperdine	Santa Clara	94	71	136807	f	f
+2024-01-27	2023-2024	Pepperdine	San Diego	69	67	136808	f	t
+2024-02-03	2023-2024	Pepperdine	Portland	93	89	136809	f	f
+2024-02-08	2023-2024	Pepperdine	San Francisco	80	74	136810	f	t
+2024-02-10	2023-2024	Pepperdine	Loyola Marymount	72	63	136811	t	f
+2024-02-15	2023-2024	Pepperdine	18 Saint Mary's	103	59	136812	f	f
+2024-02-17	2023-2024	Pepperdine	Portland	91	70	136813	t	t
+2024-02-21	2023-2024	Pepperdine	Pacific	89	70	136814	t	f
+2024-02-24	2023-2024	Pepperdine	San Francisco	92	68	136815	f	f
+2024-02-29	2023-2024	Pepperdine	17 Saint Mary's	83	57	136816	f	t
+2024-03-07	2023-2024	Pepperdine	Pacific	102	43	136817	t	t
+2024-03-08	2023-2024	Pepperdine	San Diego	57	52	136818	f	t
+2023-11-06	2023-2024	Pitt	North Carolina A&T	100	52	136819	t	t
+2023-11-10	2023-2024	Pitt	Binghamton	89	60	136820	t	t
+2023-11-13	2023-2024	Pitt	Florida Gulf Coast	86	74	136821	t	t
+2023-11-17	2023-2024	Pitt	Jacksonville State	107	56	136822	t	t
+2023-11-22	2023-2024	Pitt	Florida	86	71	136823	f	t
+2023-11-24	2023-2024	Pitt	Oregon State	76	51	136824	t	t
+2023-11-28	2023-2024	Pitt	Missouri	71	64	136825	f	t
+2023-12-03	2023-2024	Pitt	Clemson	79	70	136826	f	t
+2023-12-06	2023-2024	Pitt	West Virginia	80	63	136827	t	f
+2023-12-09	2023-2024	Pitt	Canisius	82	71	136828	t	t
+2023-12-16	2023-2024	Pitt	South Carolina State	86	50	136829	t	t
+2023-12-20	2023-2024	Pitt	Purdue Fort Wayne	62	48	136830	t	t
+2023-12-30	2023-2024	Pitt	Syracuse	81	73	136831	f	f
+2024-01-02	2023-2024	Pitt	8 North Carolina	70	57	136832	f	t
+2024-01-06	2023-2024	Pitt	Louisville	83	70	136833	t	f
+2024-01-09	2023-2024	Pitt	11 Duke	75	53	136834	f	t
+2024-01-16	2023-2024	Pitt	Syracuse	69	58	136835	f	t
+2024-01-20	2023-2024	Pitt	7 Duke	80	76	136836	t	f
+2024-01-23	2023-2024	Pitt	Georgia Tech	72	64	136837	t	f
+2024-01-27	2023-2024	Pitt	Miami	72	68	136838	f	f
+2024-01-31	2023-2024	Pitt	Wake Forest	77	72	136839	t	t
+2024-02-03	2023-2024	Pitt	Notre Dame	70	60	136840	t	t
+2024-02-07	2023-2024	Pitt	NC State	67	64	136841	t	f
+2024-02-13	2023-2024	Pitt	21 Virginia	74	63	136842	t	f
+2024-02-17	2023-2024	Pitt	Louisville	86	59	136843	t	t
+2024-02-20	2023-2024	Pitt	Wake Forest	91	58	136844	f	f
+2024-02-24	2023-2024	Pitt	Virginia Tech	79	64	136845	t	t
+2024-02-27	2023-2024	Pitt	Clemson	69	62	136846	f	f
+2024-03-02	2023-2024	Pitt	Boston College	90	65	136847	t	f
+2024-03-05	2023-2024	Pitt	Florida State	88	73	136848	t	t
+2024-03-09	2023-2024	Pitt	NC State	81	73	136849	t	t
+2024-03-14	2023-2024	Pitt	Wake Forest	81	69	136850	t	t
+2024-03-15	2023-2024	Pitt	4 North Carolina	72	65	136851	f	t
+2023-11-06	2023-2024	Portland	Long Beach State	78	73	136852	t	t
+2023-11-08	2023-2024	Portland	vsLewis & Clark	89	72	136853	t	t
+2023-11-12	2023-2024	Portland	UC Riverside	76	65	136854	t	t
+2023-11-15	2023-2024	Portland	Tennessee State	75	65	136855	f	t
+2023-11-18	2023-2024	Portland	Nevada	108	83	136856	f	f
+2023-11-25	2023-2024	Portland	vsWillamette	107	84	136857	t	t
+2023-11-28	2023-2024	Portland	Portland State	75	74	136858	f	f
+2023-12-01	2023-2024	Portland	Wyoming	81	70	136859	t	t
+2023-12-03	2023-2024	Portland	Air Force	80	58	136860	f	t
+2023-12-07	2023-2024	Portland	North Dakota State	78	67	136861	f	f
+2023-12-09	2023-2024	Portland	North Dakota	83	72	136862	t	f
+2023-12-16	2023-2024	Portland	Grand Canyon	91	63	136863	f	t
+2023-12-21	2023-2024	Portland	Hawai'i	69	56	136864	f	f
+2023-12-23	2023-2024	Portland	Massachusetts	100	78	136865	f	t
+2023-12-24	2023-2024	Portland	Temple	55	54	136866	f	t
+2024-01-06	2023-2024	Portland	Pacific	78	64	136867	t	t
+2024-01-11	2023-2024	Portland	St. Mary's	95	52	136868	f	f
+2024-01-13	2023-2024	Portland	San Francisco	96	69	136869	f	f
+2024-01-20	2023-2024	Portland	Santa Clara	101	86	136870	f	f
+2024-01-23	2023-2024	Portland	San Diego	85	81	136871	f	t
+2024-01-25	2023-2024	Portland	Loyola Marymount	92	65	136872	f	f
+2024-01-27	2023-2024	Portland	San Francisco	76	64	136873	f	t
+2024-02-01	2023-2024	Portland	Pacific	65	60	136874	t	f
+2024-02-03	2023-2024	Portland	Pepperdine	93	89	136875	t	t
+2024-02-07	2023-2024	Portland	Gonzaga	96	64	136876	f	f
+2024-02-10	2023-2024	Portland	St. Mary's	76	51	136877	f	t
+2024-02-15	2023-2024	Portland	San Diego	71	66	136878	f	f
+2024-02-17	2023-2024	Portland	Pepperdine	91	70	136879	f	f
+2024-02-22	2023-2024	Portland	Gonzaga	86	65	136880	f	t
+2024-03-02	2023-2024	Portland	Loyola Marymount	70	60	136881	t	t
+2024-03-08	2023-2024	Portland	Loyola Marymount	78	70	136882	t	t
+2024-03-10	2023-2024	Portland	San Francisco	72	51	136883	f	t
+2023-11-06	2023-2024	Portland State	Air Force	62	55	136884	t	f
+2023-11-09	2023-2024	Portland State	UC Santa Barbara	82	76	136885	t	f
+2023-11-12	2023-2024	Portland State	vsLinfield College	70	53	136886	t	t
+2023-11-17	2023-2024	Portland State	California Baptist	66	63	136887	t	f
+2023-11-18	2023-2024	Portland State	Cal Poly	73	57	136888	t	t
+2023-11-19	2023-2024	Portland State	St. Thomas-Minnesota	76	70	136889	f	t
+2023-11-28	2023-2024	Portland State	Portland	75	74	136890	t	t
+2023-12-02	2023-2024	Portland State	Washington State	71	61	136891	f	f
+2023-12-06	2023-2024	Portland State	vsLewis & Clark	104	60	136892	t	t
+2023-12-09	2023-2024	Portland State	vsGeorge Fox	83	77	136893	t	t
+2023-12-15	2023-2024	Portland State	San Diego	69	65	136894	f	f
+2023-12-28	2023-2024	Portland State	Eastern Washington	91	57	136895	f	f
+2023-12-30	2023-2024	Portland State	Idaho	77	72	136896	t	f
+2024-01-06	2023-2024	Portland State	Kansas City	83	67	136897	f	f
+2024-01-11	2023-2024	Portland State	Idaho State	69	63	136898	f	t
+2024-01-13	2023-2024	Portland State	Weber State	69	66	136899	t	t
+2024-01-18	2023-2024	Portland State	Northern Arizona	84	65	136900	f	f
+2024-01-20	2023-2024	Portland State	Northern Colorado	90	61	136901	f	f
+2024-01-25	2023-2024	Portland State	Montana	72	46	136902	t	t
+2024-01-27	2023-2024	Portland State	Montana State	94	91	136903	t	t
+2024-02-03	2023-2024	Portland State	Sacramento State	58	51	136904	t	t
+2024-02-05	2023-2024	Portland State	Eastern Washington	90	77	136905	f	t
+2024-02-08	2023-2024	Portland State	Weber State	84	72	136906	f	f
+2024-02-10	2023-2024	Portland State	Idaho State	68	65	136907	f	f
+2024-02-17	2023-2024	Portland State	Northern Arizona	83	68	136908	t	t
+2024-02-22	2023-2024	Portland State	Montana State	72	67	136909	f	f
+2024-02-24	2023-2024	Portland State	Montana	82	73	136910	f	f
+2024-03-02	2023-2024	Portland State	Sacramento State	73	61	136911	f	f
+2024-03-04	2023-2024	Portland State	Idaho	72	57	136912	t	t
+2024-03-11	2023-2024	Portland State	Montana	87	81	136913	f	t
+2023-11-06	2023-2024	Prairie View	vsKansas Christian	89	66	136914	t	t
+2023-11-08	2023-2024	Prairie View	Seattle U	71	60	136915	f	f
+2023-11-10	2023-2024	Prairie View	Washington State	83	65	136916	f	f
+2023-11-14	2023-2024	Prairie View	Abilene Christian	79	74	136917	t	f
+2023-11-19	2023-2024	Prairie View	UT Martin	78	66	136918	t	t
+2023-11-21	2023-2024	Prairie View	Eastern Kentucky	76	64	136919	t	f
+2023-11-29	2023-2024	Prairie View	Tulane	98	77	136920	f	f
+2023-12-10	2023-2024	Prairie View	Iowa State	107	56	136921	f	f
+2023-12-12	2023-2024	Prairie View	Northern Iowa	74	55	136922	f	f
+2023-12-18	2023-2024	Prairie View	vsNorth American	92	61	136923	t	t
+2023-12-20	2023-2024	Prairie View	Rice	82	56	136924	f	f
+2023-12-28	2023-2024	Prairie View	UTSA	103	89	136925	f	f
+2023-12-30	2023-2024	Prairie View	Texas A&M	79	54	136926	f	f
+2024-01-06	2023-2024	Prairie View	Grambling	69	63	136927	f	f
+2024-01-08	2023-2024	Prairie View	Southern	79	58	136928	f	f
+2024-01-13	2023-2024	Prairie View	Mississippi Valley State	71	60	136929	t	t
+2024-01-20	2023-2024	Prairie View	Jackson State	71	62	136930	t	f
+2024-01-22	2023-2024	Prairie View	Alcorn State	90	78	136931	f	f
+2024-01-27	2023-2024	Prairie View	Alabama State	74	67	136932	f	t
+2024-01-29	2023-2024	Prairie View	Alabama A&M	87	76	136933	t	t
+2024-02-03	2023-2024	Prairie View	Texas Southern	80	69	136934	f	t
+2024-02-05	2023-2024	Prairie View	Arkansas-Pine Bluff	75	74	136935	t	t
+2024-02-10	2023-2024	Prairie View	Bethune-Cookman	84	78	136936	f	f
+2024-02-12	2023-2024	Prairie View	Florida A&M	61	58	136937	t	f
+2024-02-17	2023-2024	Prairie View	Southern	77	71	136938	f	t
+2024-02-19	2023-2024	Prairie View	Grambling	83	74	136939	f	t
+2024-02-24	2023-2024	Prairie View	Arkansas-Pine Bluff	72	59	136940	f	f
+2024-02-26	2023-2024	Prairie View	Mississippi Valley State	57	51	136941	f	f
+2024-03-02	2023-2024	Prairie View	Alcorn State	73	65	136942	f	t
+2024-03-04	2023-2024	Prairie View	Jackson State	79	74	136943	f	t
+2024-03-09	2023-2024	Prairie View	Texas Southern	93	78	136944	f	f
+2023-11-07	2023-2024	Presbyterian	Vanderbilt	68	62	136945	t	f
+2023-11-09	2023-2024	Presbyterian	vsColumbia International	100	58	136946	t	t
+2023-11-13	2023-2024	Presbyterian	The Citadel	71	64	136947	t	t
+2023-11-16	2023-2024	Presbyterian	North Florida	81	69	136948	t	f
+2023-11-17	2023-2024	Presbyterian	Maine	80	66	136949	f	t
+2023-11-18	2023-2024	Presbyterian	Northwestern State	78	75	136950	t	t
+2023-11-27	2023-2024	Presbyterian	Elon	82	79	136951	f	f
+2023-12-02	2023-2024	Presbyterian	VMI	75	71	136952	t	f
+2023-12-06	2023-2024	Presbyterian	Florida A&M	65	60	136953	f	t
+2023-12-13	2023-2024	Presbyterian	vsMid-Atlantic Christian	118	51	136954	t	t
+2023-12-16	2023-2024	Presbyterian	Kennesaw State	94	84	136955	f	t
+2023-12-19	2023-2024	Presbyterian	Furman	76	61	136956	f	f
+2023-12-21	2023-2024	Presbyterian	Wake Forest	91	68	136957	f	f
+2023-12-30	2023-2024	Presbyterian	vsJohnson & Wales (NC)	91	67	136958	t	t
+2024-01-03	2023-2024	Presbyterian	Charleston Southern	68	61	136959	t	f
+2024-01-06	2023-2024	Presbyterian	UNC Asheville	84	80	136960	f	t
+2024-01-10	2023-2024	Presbyterian	Winthrop	81	71	136961	f	t
+2024-01-13	2023-2024	Presbyterian	Gardner-Webb	76	60	136962	f	f
+2024-01-17	2023-2024	Presbyterian	High Point	86	83	136963	f	t
+2024-01-20	2023-2024	Presbyterian	Longwood	80	70	136964	f	f
+2024-01-27	2023-2024	Presbyterian	Radford	73	58	136965	f	f
+2024-01-31	2023-2024	Presbyterian	South Carolina Upstate	80	73	136966	t	t
+2024-02-03	2023-2024	Presbyterian	High Point	78	68	136967	f	f
+2024-02-07	2023-2024	Presbyterian	Gardner-Webb	77	75	136968	t	t
+2024-02-10	2023-2024	Presbyterian	Radford	76	73	136969	t	t
+2024-02-14	2023-2024	Presbyterian	UNC Asheville	71	69	136970	f	f
+2024-02-17	2023-2024	Presbyterian	Longwood	81	73	136971	f	t
+2024-02-21	2023-2024	Presbyterian	Winthrop	78	55	136972	t	f
+2024-02-28	2023-2024	Presbyterian	South Carolina Upstate	74	72	136973	f	f
+2024-03-02	2023-2024	Presbyterian	Charleston Southern	72	65	136974	t	t
+2024-03-08	2023-2024	Presbyterian	Gardner-Webb	61	60	136975	f	t
+2023-11-06	2023-2024	Princeton	Rutgers	68	61	136976	t	t
+2023-11-10	2023-2024	Princeton	Hofstra	74	67	136977	t	f
+2023-11-15	2023-2024	Princeton	Duquesne	70	67	136978	t	f
+2023-11-18	2023-2024	Princeton	Monmouth	82	57	136979	t	f
+2023-11-22	2023-2024	Princeton	Old Dominion	76	56	136980	t	f
+2023-11-25	2023-2024	Princeton	Northeastern	80	66	136981	t	t
+2023-11-29	2023-2024	Princeton	Bucknell	85	71	136982	t	f
+2023-12-02	2023-2024	Princeton	Furman	70	69	136983	t	t
+2023-12-05	2023-2024	Princeton	Drexel	81	70	136984	t	t
+2023-12-10	2023-2024	Princeton	Saint Joseph's	74	70	136985	f	f
+2023-12-13	2023-2024	Princeton	vsBryn Athyn	92	40	136986	t	t
+2023-12-22	2023-2024	Princeton	vsDelaware Valley	84	53	136987	t	t
+2023-12-30	2023-2024	Princeton	Delaware	84	82	136988	t	f
+2024-01-06	2023-2024	Princeton	Harvard	89	58	136989	t	t
+2024-01-15	2023-2024	Princeton	Dartmouth	76	58	136990	t	t
+2024-01-20	2023-2024	Princeton	Columbia	70	62	136991	t	f
+2024-01-27	2023-2024	Princeton	Cornell	83	68	136992	f	f
+2024-02-02	2023-2024	Princeton	Yale	70	64	136993	f	f
+2024-02-03	2023-2024	Princeton	Brown	70	60	136994	t	f
+2024-02-10	2023-2024	Princeton	Pennsylvania	77	70	136995	t	t
+2024-02-16	2023-2024	Princeton	Brown	72	63	136996	t	t
+2024-02-17	2023-2024	Princeton	Yale	73	62	136997	t	t
+2024-02-23	2023-2024	Princeton	Harvard	66	53	136998	t	f
+2024-02-24	2023-2024	Princeton	Dartmouth	68	56	136999	t	f
+2024-03-01	2023-2024	Princeton	Columbia	84	70	137000	t	t
+2024-03-02	2023-2024	Princeton	Cornell	79	77	137001	t	t
+2024-03-09	2023-2024	Princeton	Pennsylvania	105	83	137002	t	f
+2024-03-16	2023-2024	Princeton	Brown	90	81	137003	f	t
+2023-11-06	2023-2024	Providence	Columbia	78	59	137004	t	t
+2023-11-11	2023-2024	Providence	Milwaukee	79	69	137005	t	t
+2023-11-14	2023-2024	Providence	Wisconsin	72	59	137006	t	t
+2023-11-19	2023-2024	Providence	Georgia	71	64	137007	t	t
+2023-11-24	2023-2024	Providence	Lehigh	78	64	137008	t	t
+2023-11-28	2023-2024	Providence	Wagner	86	52	137009	t	t
+2023-12-02	2023-2024	Providence	Rhode Island	84	69	137010	t	t
+2023-12-05	2023-2024	Providence	19 Oklahoma	72	51	137011	f	f
+2023-12-10	2023-2024	Providence	Brown	74	54	137012	t	t
+2023-12-16	2023-2024	Providence	Sacred Heart	78	64	137013	t	t
+2023-12-19	2023-2024	Providence	6 Marquette	72	57	137014	t	t
+2024-01-03	2023-2024	Providence	Seton Hall	61	57	137015	f	t
+2024-01-06	2023-2024	Providence	Creighton	69	60	137016	f	f
+2024-01-10	2023-2024	Providence	St. John's	75	73	137017	f	f
+2024-01-13	2023-2024	Providence	Xavier	85	65	137018	f	t
+2024-01-17	2023-2024	Providence	DePaul	100	62	137019	t	f
+2024-01-24	2023-2024	Providence	Seton Hall	67	63	137020	t	f
+2024-01-27	2023-2024	Providence	Georgetown	84	76	137021	t	t
+2024-01-31	2023-2024	Providence	1 UConn	74	65	137022	f	f
+2024-02-04	2023-2024	Providence	Villanova	68	50	137023	f	f
+2024-02-10	2023-2024	Providence	Butler	75	72	137024	f	f
+2024-02-13	2023-2024	Providence	St. John's	75	72	137025	t	t
+2024-02-17	2023-2024	Providence	DePaul	81	70	137026	t	t
+2024-02-21	2023-2024	Providence	Xavier	79	75	137027	t	f
+2024-02-28	2023-2024	Providence	5 Marquette	91	69	137028	f	f
+2024-03-02	2023-2024	Providence	Villanova	71	60	137029	f	t
+2024-03-05	2023-2024	Providence	Georgetown	71	58	137030	t	f
+2024-03-09	2023-2024	Providence	2 UConn	74	60	137031	f	t
+2024-03-13	2023-2024	Providence	Georgetown	74	56	137032	t	t
+2024-03-14	2023-2024	Providence	8 Creighton	78	73	137033	t	t
+2024-03-15	2023-2024	Providence	10 Marquette	79	68	137034	f	t
+2023-11-06	2023-2024	Purdue	Samford	98	45	137035	t	t
+2023-11-10	2023-2024	Purdue	Morehead State	87	57	137036	t	t
+2023-11-13	2023-2024	Purdue	Xavier	83	71	137037	t	t
+2023-11-20	2023-2024	Purdue	11 Gonzaga	73	63	137038	t	t
+2023-11-21	2023-2024	Purdue	7 Tennessee	71	67	137039	t	t
+2023-11-22	2023-2024	Purdue	4 Marquette	78	75	137040	t	t
+2023-11-28	2023-2024	Purdue	Texas Southern	99	67	137041	t	t
+2023-12-04	2023-2024	Purdue	Iowa	87	68	137042	t	t
+2023-12-09	2023-2024	Purdue	Alabama	92	86	137043	t	t
+2023-12-16	2023-2024	Purdue	1 Arizona	92	84	137044	t	t
+2023-12-21	2023-2024	Purdue	Jacksonville State	100	57	137045	t	t
+2023-12-29	2023-2024	Purdue	Eastern Kentucky	80	53	137046	t	t
+2024-01-02	2023-2024	Purdue	Maryland	67	53	137047	t	f
+2024-01-05	2023-2024	Purdue	9 Illinois	83	78	137048	t	t
+2024-01-09	2023-2024	Purdue	Nebraska	88	72	137049	f	f
+2024-01-13	2023-2024	Purdue	Penn State	95	78	137050	t	t
+2024-01-16	2023-2024	Purdue	Indiana	87	66	137051	t	f
+2024-01-20	2023-2024	Purdue	Iowa	84	70	137052	t	f
+2024-01-23	2023-2024	Purdue	Michigan	99	67	137053	t	t
+2024-01-28	2023-2024	Purdue	Rutgers	68	60	137054	t	f
+2024-02-04	2023-2024	Purdue	6 Wisconsin	75	69	137055	t	f
+2024-02-10	2023-2024	Purdue	Indiana	79	59	137056	t	t
+2024-02-15	2023-2024	Purdue	Minnesota	84	76	137057	t	t
+2024-02-18	2023-2024	Purdue	Ohio State	73	69	137058	f	f
+2024-02-22	2023-2024	Purdue	Rutgers	96	68	137059	t	t
+2024-02-25	2023-2024	Purdue	Michigan	84	76	137060	t	f
+2024-03-02	2023-2024	Purdue	Michigan State	80	74	137061	t	t
+2024-03-05	2023-2024	Purdue	12 Illinois	77	71	137062	t	f
+2024-03-10	2023-2024	Purdue	Wisconsin	78	70	137063	t	t
+2024-03-15	2023-2024	Purdue	Michigan State	67	62	137064	t	t
+2023-11-07	2023-2024	Purdue FW	DePaul	82	74	137065	t	f
+2023-11-09	2023-2024	Purdue FW	vsAndrews University	130	34	137066	t	t
+2023-11-12	2023-2024	Purdue FW	Texas A&M-Commerce	86	64	137067	t	t
+2023-11-17	2023-2024	Purdue FW	Northern Arizona	77	67	137068	t	t
+2023-11-18	2023-2024	Purdue FW	South Dakota	93	81	137069	t	t
+2023-11-22	2023-2024	Purdue FW	San Francisco	76	60	137070	f	f
+2023-11-25	2023-2024	Purdue FW	vsWittenberg	95	64	137071	t	t
+2023-11-29	2023-2024	Purdue FW	Green Bay	75	71	137072	t	t
+2023-12-02	2023-2024	Purdue FW	Oakland	98	77	137073	t	f
+2023-12-06	2023-2024	Purdue FW	Southern Indiana	70	57	137074	t	f
+2023-12-09	2023-2024	Purdue FW	Southeast Missouri State	89	80	137075	t	t
+2023-12-16	2023-2024	Purdue FW	Bethune-Cookman	86	63	137076	t	t
+2023-12-20	2023-2024	Purdue FW	Pittsburgh	62	48	137077	f	f
+2023-12-29	2023-2024	Purdue FW	Northern Kentucky	73	60	137078	t	t
+2023-12-31	2023-2024	Purdue FW	Detroit Mercy	91	56	137079	t	t
+2024-01-06	2023-2024	Purdue FW	Wright State	106	98	137080	f	t
+2024-01-10	2023-2024	Purdue FW	Youngstown State	93	85	137081	f	f
+2024-01-17	2023-2024	Purdue FW	IUPUI	85	79	137082	f	t
+2024-01-20	2023-2024	Purdue FW	Cleveland State	75	68	137083	f	f
+2024-01-25	2023-2024	Purdue FW	Northern Kentucky	63	58	137084	t	f
+2024-02-01	2023-2024	Purdue FW	Milwaukee	68	65	137085	f	t
+2024-02-04	2023-2024	Purdue FW	Youngstown State	82	78	137086	t	t
+2024-02-07	2023-2024	Purdue FW	Cleveland State	75	72	137087	f	t
+2024-02-10	2023-2024	Purdue FW	IUPUI	92	65	137088	t	f
+2024-02-14	2023-2024	Purdue FW	Oakland	71	63	137089	f	t
+2024-02-17	2023-2024	Purdue FW	Detroit Mercy	83	69	137090	t	f
+2024-02-23	2023-2024	Purdue FW	Green Bay	85	59	137091	t	f
+2024-02-25	2023-2024	Purdue FW	Milwaukee	96	88	137092	f	f
+2024-03-02	2023-2024	Purdue FW	Robert Morris	83	65	137093	t	t
+2024-03-05	2023-2024	Purdue FW	Robert Morris	78	63	137094	t	t
+2024-03-07	2023-2024	Purdue FW	Oakland	75	65	137095	f	f
+2023-11-06	2023-2024	Quinnipiac	vsCoast Guard	116	48	137096	t	t
+2023-11-10	2023-2024	Quinnipiac	Central Connecticut	74	70	137097	t	t
+2023-11-13	2023-2024	Quinnipiac	Massachusetts	102	81	137098	f	f
+2023-11-17	2023-2024	Quinnipiac	Army	67	58	137099	t	f
+2023-11-19	2023-2024	Quinnipiac	UAlbany	85	82	137100	t	t
+2023-11-26	2023-2024	Quinnipiac	Stonehill	80	69	137101	t	t
+2023-12-01	2023-2024	Quinnipiac	Canisius	93	73	137102	f	f
+2023-12-08	2023-2024	Quinnipiac	Navy	71	68	137103	t	t
+2023-12-11	2023-2024	Quinnipiac	Yale	73	66	137104	f	t
+2023-12-18	2023-2024	Quinnipiac	Holy Cross	77	57	137105	t	f
+2023-12-21	2023-2024	Quinnipiac	Louisiana-Lafayette	78	60	137106	t	f
+2023-12-30	2023-2024	Quinnipiac	Florida	97	72	137107	f	f
+2024-01-05	2023-2024	Quinnipiac	Rider	88	84	137108	t	t
+2024-01-07	2023-2024	Quinnipiac	Manhattan	76	59	137109	t	t
+2024-01-12	2023-2024	Quinnipiac	Marist	66	55	137110	t	f
+2024-01-19	2023-2024	Quinnipiac	Siena	82	70	137111	t	f
+2024-01-21	2023-2024	Quinnipiac	Iona	91	87	137112	t	t
+2024-01-25	2023-2024	Quinnipiac	Mount St. Mary's	79	65	137113	t	t
+2024-01-28	2023-2024	Quinnipiac	Fairfield	66	64	137114	t	f
+2024-02-02	2023-2024	Quinnipiac	Manhattan	77	71	137115	t	f
+2024-02-04	2023-2024	Quinnipiac	Canisius	88	63	137116	t	t
+2024-02-08	2023-2024	Quinnipiac	Saint Peter's	84	73	137117	t	t
+2024-02-10	2023-2024	Quinnipiac	Mount St. Mary's	96	79	137118	f	f
+2024-02-18	2023-2024	Quinnipiac	Niagara	80	66	137119	f	t
+2024-02-23	2023-2024	Quinnipiac	Fairfield	85	81	137120	f	t
+2024-02-25	2023-2024	Quinnipiac	Rider	88	78	137121	f	f
+2024-03-01	2023-2024	Quinnipiac	Iona	82	64	137122	t	f
+2024-03-03	2023-2024	Quinnipiac	Siena	71	57	137123	t	t
+2024-03-07	2023-2024	Quinnipiac	Marist	73	64	137124	t	t
+2024-03-09	2023-2024	Quinnipiac	Saint Peter's	89	74	137125	t	f
+2024-03-13	2023-2024	Quinnipiac	Canisius	76	52	137126	t	t
+2024-03-15	2023-2024	Quinnipiac	Saint Peter's	62	60	137127	f	t
+2023-11-06	2023-2024	Radford	19 North Carolina	86	70	137128	f	f
+2023-11-10	2023-2024	Radford	Marshall	66	62	137129	t	t
+2023-11-12	2023-2024	Radford	vsEastern Mennonite	84	47	137130	t	t
+2023-11-15	2023-2024	Radford	VCU	73	50	137131	f	f
+2023-11-17	2023-2024	Radford	24 James Madison	76	73	137132	f	f
+2023-11-21	2023-2024	Radford	Morgan State	82	72	137133	t	t
+2023-11-22	2023-2024	Radford	Northern Colorado	79	68	137134	t	t
+2023-11-26	2023-2024	Radford	vsNotre Dame (MD)	100	53	137135	t	t
+2023-11-29	2023-2024	Radford	Old Dominion	69	68	137136	f	f
+2023-12-03	2023-2024	Radford	Elon	82	72	137137	t	t
+2023-12-09	2023-2024	Radford	North Carolina Central	82	74	137138	t	t
+2023-12-12	2023-2024	Radford	VMI	73	56	137139	t	t
+2023-12-16	2023-2024	Radford	Bucknell	70	63	137140	t	f
+2023-12-20	2023-2024	Radford	West Virginia	66	65	137141	t	f
+2023-12-29	2023-2024	Radford	18 Clemson	93	58	137142	f	f
+2024-01-03	2023-2024	Radford	High Point	85	71	137143	f	t
+2024-01-11	2023-2024	Radford	Longwood	69	58	137144	t	f
+2024-01-17	2023-2024	Radford	Gardner-Webb	74	68	137145	f	t
+2024-01-20	2023-2024	Radford	South Carolina Upstate	64	61	137146	t	t
+2024-01-24	2023-2024	Radford	UNC Asheville	81	69	137147	f	f
+2024-01-27	2023-2024	Radford	Presbyterian	73	58	137148	t	t
+2024-01-31	2023-2024	Radford	Charleston Southern	63	60	137149	f	t
+2024-02-03	2023-2024	Radford	South Carolina Upstate	78	69	137150	f	f
+2024-02-10	2023-2024	Radford	Presbyterian	76	73	137151	f	f
+2024-02-15	2023-2024	Radford	Winthrop	85	69	137152	f	t
+2024-02-17	2023-2024	Radford	High Point	99	74	137153	f	f
+2024-02-22	2023-2024	Radford	Gardner-Webb	90	74	137154	t	f
+2024-02-24	2023-2024	Radford	Longwood	88	82	137155	t	t
+2024-02-28	2023-2024	Radford	Charleston Southern	58	57	137156	f	f
+2024-03-02	2023-2024	Radford	UNC Asheville	71	62	137157	f	t
+2024-03-06	2023-2024	Radford	South Carolina Upstate	67	60	137158	t	t
+2024-03-08	2023-2024	Radford	High Point	77	63	137159	f	f
+2023-11-06	2023-2024	Rhode Island	Central Connecticut	81	70	137160	t	t
+2023-11-09	2023-2024	Rhode Island	Fairfield	93	80	137161	t	t
+2023-11-14	2023-2024	Rhode Island	Wagner	69	53	137162	t	t
+2023-11-18	2023-2024	Rhode Island	Northwestern	72	61	137163	f	t
+2023-11-19	2023-2024	Rhode Island	Washington State	78	57	137164	f	t
+2023-11-22	2023-2024	Rhode Island	vsJohnson & Wales (RI)	97	59	137165	t	t
+2023-11-26	2023-2024	Rhode Island	Yale	76	72	137166	t	t
+2023-12-02	2023-2024	Rhode Island	Providence	84	69	137167	f	f
+2023-12-06	2023-2024	Rhode Island	Brown	67	64	137168	f	t
+2023-12-10	2023-2024	Rhode Island	Charleston	85	70	137169	f	f
+2023-12-16	2023-2024	Rhode Island	Delaware	67	56	137170	f	t
+2023-12-21	2023-2024	Rhode Island	New Hampshire	81	71	137171	f	t
+2023-12-30	2023-2024	Rhode Island	Northeastern	82	71	137172	t	t
+2024-01-03	2023-2024	Rhode Island	Saint Joseph's	78	74	137173	t	t
+2024-01-09	2023-2024	Rhode Island	Davidson	79	74	137174	t	f
+2024-01-13	2023-2024	Rhode Island	Massachusetts	89	77	137175	t	t
+2024-01-17	2023-2024	Rhode Island	St. Bonaventure	99	64	137176	f	f
+2024-01-20	2023-2024	Rhode Island	21 Dayton	96	62	137177	f	f
+2024-01-24	2023-2024	Rhode Island	Fordham	71	68	137178	f	t
+2024-01-27	2023-2024	Rhode Island	George Mason	92	84	137179	f	f
+2024-01-31	2023-2024	Rhode Island	La Salle	71	69	137180	t	t
+2024-02-03	2023-2024	Rhode Island	Duquesne	85	71	137181	f	t
+2024-02-06	2023-2024	Rhode Island	George Washington	88	65	137182	t	f
+2024-02-11	2023-2024	Rhode Island	Massachusetts	81	79	137183	f	f
+2024-02-18	2023-2024	Rhode Island	Loyola Chicago	77	67	137184	f	t
+2024-02-21	2023-2024	Rhode Island	Richmond	85	77	137185	f	t
+2024-02-25	2023-2024	Rhode Island	La Salle	84	61	137186	f	f
+2024-02-28	2023-2024	Rhode Island	VCU	88	67	137187	f	f
+2024-03-02	2023-2024	Rhode Island	Saint Louis	94	91	137188	f	t
+2024-03-06	2023-2024	Rhode Island	George Mason	69	51	137189	f	t
+2024-03-09	2023-2024	Rhode Island	Fordham	58	50	137190	t	f
+2024-03-12	2023-2024	Rhode Island	Saint Louis	74	71	137191	f	t
+2023-11-07	2023-2024	Rice	vsSt. Thomas (TX)	101	57	137192	t	t
+2023-11-10	2023-2024	Rice	Harvard	89	76	137193	f	t
+2023-11-15	2023-2024	Rice	19 Texas	80	64	137194	f	f
+2023-11-21	2023-2024	Rice	Indiana State	103	88	137195	f	t
+2023-11-22	2023-2024	Rice	New Mexico	90	56	137196	f	t
+2023-11-24	2023-2024	Rice	UC Irvine	83	68	137197	f	t
+2023-11-30	2023-2024	Rice	UT Martin	98	78	137198	t	t
+2023-12-02	2023-2024	Rice	Houston Christian	65	56	137199	t	t
+2023-12-06	2023-2024	Rice	3 Houston	75	39	137200	f	f
+2023-12-13	2023-2024	Rice	Incarnate Word	80	57	137201	t	t
+2023-12-16	2023-2024	Rice	Northwestern State	76	51	137202	t	f
+2023-12-20	2023-2024	Rice	Prairie View A&M	82	56	137203	t	t
+2023-12-22	2023-2024	Rice	Louisiana	84	67	137204	f	t
+2024-01-03	2023-2024	Rice	Tulane	84	59	137205	f	f
+2024-01-12	2023-2024	Rice	South Florida	81	73	137206	f	f
+2024-01-20	2023-2024	Rice	Temple	69	66	137207	t	f
+2024-01-24	2023-2024	Rice	22 Florida Atlantic	69	56	137208	f	t
+2024-01-27	2023-2024	Rice	Tulsa	85	83	137209	f	t
+2024-01-31	2023-2024	Rice	Memphis	74	71	137210	t	f
+2024-02-03	2023-2024	Rice	UTSA	80	76	137211	t	f
+2024-02-07	2023-2024	Rice	SMU	95	69	137212	f	t
+2024-02-10	2023-2024	Rice	South Florida	69	65	137213	f	t
+2024-02-21	2023-2024	Rice	UAB	94	71	137214	t	f
+2024-02-24	2023-2024	Rice	East Carolina	70	52	137215	t	t
+2024-02-28	2023-2024	Rice	Temple	65	43	137216	f	t
+2024-03-02	2023-2024	Rice	Wichita State	87	66	137217	f	f
+2024-03-06	2023-2024	Rice	Charlotte	69	64	137218	f	f
+2024-03-09	2023-2024	Rice	North Texas	71	55	137219	f	t
+2024-03-13	2023-2024	Rice	Wichita State	88	81	137220	f	t
+2023-11-06	2023-2024	Richmond	VMI	93	75	137221	t	t
+2023-11-11	2023-2024	Richmond	Siena	90	48	137222	t	t
+2023-11-15	2023-2024	Richmond	Boston College	68	61	137223	f	f
+2023-11-20	2023-2024	Richmond	18 Colorado	64	59	137224	f	t
+2023-11-21	2023-2024	Richmond	UNLV	82	65	137225	t	t
+2023-11-25	2023-2024	Richmond	Queens University	90	61	137226	t	t
+2023-11-29	2023-2024	Richmond	Wichita State	80	68	137227	f	f
+2023-12-02	2023-2024	Richmond	William & Mary	88	69	137228	t	t
+2023-12-06	2023-2024	Richmond	Northern Iowa	78	73	137229	f	f
+2023-12-09	2023-2024	Richmond	Florida	87	76	137230	f	t
+2023-12-16	2023-2024	Richmond	Charlotte	64	56	137231	t	t
+2023-12-21	2023-2024	Richmond	Buffalo	72	66	137232	t	t
+2023-12-30	2023-2024	Richmond	Louisiana-Lafayette	59	38	137233	t	t
+2024-01-06	2023-2024	Richmond	St. Bonaventure	65	54	137234	t	t
+2024-01-09	2023-2024	Richmond	Loyola Chicago	58	56	137235	t	f
+2024-01-13	2023-2024	Richmond	George Mason	77	70	137236	t	t
+2024-01-16	2023-2024	Richmond	Duquesne	63	61	137237	t	f
+2024-01-24	2023-2024	Richmond	George Washington	82	74	137238	t	t
+2024-01-27	2023-2024	Richmond	16 Dayton	69	64	137239	t	t
+2024-01-31	2023-2024	Richmond	Fordham	83	69	137240	t	f
+2024-02-03	2023-2024	Richmond	VCU	63	52	137241	f	f
+2024-02-10	2023-2024	Richmond	La Salle	82	65	137242	t	t
+2024-02-14	2023-2024	Richmond	Massachusetts	69	59	137243	f	t
+2024-02-17	2023-2024	Richmond	George Washington	90	74	137244	t	f
+2024-02-21	2023-2024	Richmond	Rhode Island	85	77	137245	t	f
+2024-02-24	2023-2024	Richmond	Davidson	66	63	137246	t	t
+2024-02-28	2023-2024	Richmond	Saint Louis	80	64	137247	t	f
+2024-03-02	2023-2024	Richmond	VCU	79	76	137248	t	t
+2024-03-06	2023-2024	Richmond	Saint Joseph's	73	66	137249	t	t
+2024-03-09	2023-2024	Richmond	George Mason	64	46	137250	f	f
+2024-03-14	2023-2024	Richmond	Saint Joseph's	66	61	137251	f	t
+2023-11-06	2023-2024	Rider	vsImmaculata	113	67	137252	t	t
+2023-11-10	2023-2024	Rider	5 Marquette	95	65	137253	f	f
+2023-11-13	2023-2024	Rider	Nebraska	64	50	137254	f	f
+2023-11-17	2023-2024	Rider	Duquesne	77	58	137255	f	f
+2023-11-20	2023-2024	Rider	Stony Brook	55	48	137256	f	f
+2023-11-28	2023-2024	Rider	Maryland	103	76	137257	f	f
+2023-12-01	2023-2024	Rider	Siena	67	65	137258	f	f
+2023-12-03	2023-2024	Rider	Fairfield	88	81	137259	f	t
+2023-12-08	2023-2024	Rider	Stonehill	73	56	137260	t	t
+2023-12-16	2023-2024	Rider	Monmouth	77	71	137261	f	f
+2023-12-29	2023-2024	Rider	Penn State	90	63	137262	f	f
+2024-01-05	2023-2024	Rider	Quinnipiac	88	84	137263	f	f
+2024-01-12	2023-2024	Rider	Manhattan	71	58	137264	t	t
+2024-01-14	2023-2024	Rider	Marist	83	60	137265	f	f
+2024-01-19	2023-2024	Rider	Niagara	78	74	137266	f	t
+2024-01-25	2023-2024	Rider	Saint Peter's	62	57	137267	t	f
+2024-01-27	2023-2024	Rider	Mount St. Mary's	66	62	137268	t	f
+2024-02-02	2023-2024	Rider	Siena	91	50	137269	t	t
+2024-02-04	2023-2024	Rider	Iona	94	93	137270	f	f
+2024-02-08	2023-2024	Rider	Fairfield	84	67	137271	f	f
+2024-02-10	2023-2024	Rider	Marist	77	62	137272	f	t
+2024-02-16	2023-2024	Rider	Mount St. Mary's	61	57	137273	t	t
+2024-02-18	2023-2024	Rider	Manhattan	104	62	137274	t	f
+2024-02-23	2023-2024	Rider	Iona	78	75	137275	t	t
+2024-02-25	2023-2024	Rider	Quinnipiac	88	78	137276	t	t
+2024-03-01	2023-2024	Rider	Niagara	71	61	137277	t	f
+2024-03-03	2023-2024	Rider	Canisius	65	61	137278	t	f
+2024-03-07	2023-2024	Rider	Saint Peter's	61	56	137279	t	t
+2024-03-14	2023-2024	Rider	Saint Peter's	50	48	137280	f	t
+2023-11-06	2023-2024	Robert Morris	Xavier	77	63	137281	f	f
+2023-11-09	2023-2024	Robert Morris	vsPoint Park	66	56	137282	t	t
+2023-11-12	2023-2024	Robert Morris	Towson	66	62	137283	f	f
+2023-11-17	2023-2024	Robert Morris	Wisconsin	78	68	137284	f	f
+2023-11-24	2023-2024	Robert Morris	Jacksonville State	74	65	137285	f	t
+2023-11-26	2023-2024	Robert Morris	Fairleigh Dickinson	97	86	137286	t	t
+2023-11-29	2023-2024	Robert Morris	Northern Kentucky	77	59	137287	f	f
+2023-12-02	2023-2024	Robert Morris	Youngstown State	71	57	137288	f	t
+2023-12-06	2023-2024	Robert Morris	Canisius	87	80	137289	f	f
+2023-12-11	2023-2024	Robert Morris	Delaware	73	69	137290	f	t
+2023-12-17	2023-2024	Robert Morris	vsSaint Vincent	95	46	137291	t	t
+2023-12-20	2023-2024	Robert Morris	St. Francis (PA)	75	73	137292	t	f
+2023-12-22	2023-2024	Robert Morris	Cornell	90	85	137293	f	t
+2023-12-29	2023-2024	Robert Morris	Milwaukee	78	75	137294	f	f
+2023-12-31	2023-2024	Robert Morris	Green Bay	78	61	137295	f	f
+2024-01-04	2023-2024	Robert Morris	IUPUI	92	48	137296	t	t
+2024-01-10	2023-2024	Robert Morris	Wright State	101	76	137297	f	t
+2024-01-20	2023-2024	Robert Morris	IUPUI	80	63	137298	t	f
+2024-01-28	2023-2024	Robert Morris	Cleveland State	66	64	137299	f	f
+2024-02-01	2023-2024	Robert Morris	Oakland	87	72	137300	f	f
+2024-02-03	2023-2024	Robert Morris	Detroit Mercy	75	67	137301	t	f
+2024-02-10	2023-2024	Robert Morris	Milwaukee	71	60	137302	t	t
+2024-02-14	2023-2024	Robert Morris	Youngstown State	87	77	137303	f	f
+2024-02-17	2023-2024	Robert Morris	Wright State	101	71	137304	f	f
+2024-02-22	2023-2024	Robert Morris	Oakland	63	43	137305	f	t
+2024-02-25	2023-2024	Robert Morris	Cleveland State	73	71	137306	f	t
+2024-02-28	2023-2024	Robert Morris	Northern Kentucky	70	60	137307	f	t
+2024-03-02	2023-2024	Robert Morris	Purdue Fort Wayne	83	65	137308	f	f
+2024-03-05	2023-2024	Robert Morris	Purdue Fort Wayne	78	63	137309	f	f
+2023-11-06	2023-2024	Rutgers	Princeton	68	61	137310	f	t
+2023-11-10	2023-2024	Rutgers	Boston University	69	45	137311	t	t
+2023-11-12	2023-2024	Rutgers	Bryant	66	57	137312	t	t
+2023-11-15	2023-2024	Rutgers	Georgetown	71	60	137313	t	t
+2023-11-18	2023-2024	Rutgers	Howard	85	63	137314	t	t
+2023-11-27	2023-2024	Rutgers	Saint Peter's	71	40	137315	t	t
+2023-12-02	2023-2024	Rutgers	24 Illinois	76	58	137316	f	t
+2023-12-06	2023-2024	Rutgers	Wake Forest	76	57	137317	f	f
+2023-12-09	2023-2024	Rutgers	Seton Hall	70	63	137318	t	f
+2023-12-16	2023-2024	Rutgers	Long Island University	83	61	137319	t	t
+2023-12-23	2023-2024	Rutgers	Mississippi State	70	60	137320	f	t
+2023-12-30	2023-2024	Rutgers	Stonehill	59	58	137321	t	t
+2024-01-03	2023-2024	Rutgers	Ohio State	76	72	137322	f	f
+2024-01-06	2023-2024	Rutgers	Iowa	86	77	137323	f	f
+2024-01-09	2023-2024	Rutgers	Indiana	66	57	137324	t	t
+2024-01-14	2023-2024	Rutgers	Michigan State	73	55	137325	f	f
+2024-01-21	2023-2024	Rutgers	14 Illinois	86	63	137326	f	f
+2024-01-28	2023-2024	Rutgers	2 Purdue	68	60	137327	f	t
+2024-01-31	2023-2024	Rutgers	Penn State	61	46	137328	f	t
+2024-02-03	2023-2024	Rutgers	Michigan	69	59	137329	t	f
+2024-02-06	2023-2024	Rutgers	Maryland	56	53	137330	t	f
+2024-02-10	2023-2024	Rutgers	11 Wisconsin	78	56	137331	t	t
+2024-02-15	2023-2024	Rutgers	Northwestern	63	60	137332	t	t
+2024-02-18	2023-2024	Rutgers	Minnesota	81	70	137333	f	f
+2024-02-22	2023-2024	Rutgers	3 Purdue	96	68	137334	f	f
+2024-02-25	2023-2024	Rutgers	Maryland	63	46	137335	f	t
+2024-02-29	2023-2024	Rutgers	Michigan	82	52	137336	t	t
+2024-03-03	2023-2024	Rutgers	Nebraska	67	56	137337	f	f
+2024-03-07	2023-2024	Rutgers	Wisconsin	78	66	137338	f	f
+2024-03-10	2023-2024	Rutgers	Ohio State	73	51	137339	f	t
+2024-03-13	2023-2024	Rutgers	Maryland	65	51	137340	f	t
+2023-11-06	2023-2024	SE Louisiana	vsDelta State	90	71	137341	t	t
+2023-11-10	2023-2024	SE Louisiana	Auburn	86	71	137342	f	f
+2023-11-15	2023-2024	SE Louisiana	BYU	105	48	137343	f	f
+2023-11-18	2023-2024	SE Louisiana	Santa Clara	65	63	137344	f	f
+2023-11-24	2023-2024	SE Louisiana	Western Michigan	68	67	137345	f	t
+2023-11-25	2023-2024	SE Louisiana	Tennessee State	91	77	137346	f	t
+2023-11-28	2023-2024	SE Louisiana	vsSouthern-New Orleans	101	55	137347	t	t
+2023-12-01	2023-2024	SE Louisiana	LSU	73	66	137348	f	f
+2023-12-09	2023-2024	SE Louisiana	Southern	69	44	137349	f	f
+2023-12-12	2023-2024	SE Louisiana	Louisiana Tech	89	60	137350	f	f
+2023-12-16	2023-2024	SE Louisiana	Murray State	61	55	137351	t	f
+2023-12-20	2023-2024	SE Louisiana	Grambling	48	47	137352	t	t
+2023-12-30	2023-2024	SE Louisiana	vsLoyola New Orleans	87	64	137353	t	t
+2024-01-06	2023-2024	SE Louisiana	New Orleans	73	68	137354	t	f
+2024-01-09	2023-2024	SE Louisiana	Nicholls	66	61	137355	f	f
+2024-01-13	2023-2024	SE Louisiana	McNeese	74	65	137356	f	f
+2024-01-15	2023-2024	SE Louisiana	Texas A&M-Corpus Christi	73	68	137357	f	t
+2024-01-20	2023-2024	SE Louisiana	Texas A&M-Commerce	68	52	137358	f	t
+2024-01-22	2023-2024	SE Louisiana	Northwestern State	71	62	137359	t	t
+2024-01-27	2023-2024	SE Louisiana	Lamar	74	64	137360	f	f
+2024-01-29	2023-2024	SE Louisiana	Houston Christian	80	58	137361	t	f
+2024-02-03	2023-2024	SE Louisiana	McNeese	77	74	137362	t	t
+2024-02-05	2023-2024	SE Louisiana	Incarnate Word	76	64	137363	t	t
+2024-02-10	2023-2024	SE Louisiana	Northwestern State	69	59	137364	t	f
+2024-02-17	2023-2024	SE Louisiana	Houston Christian	81	78	137365	t	t
+2024-02-24	2023-2024	SE Louisiana	New Orleans	77	67	137366	t	t
+2024-03-02	2023-2024	SE Louisiana	Texas A&M-Corpus Christi	80	68	137367	f	f
+2024-03-04	2023-2024	SE Louisiana	Incarnate Word	73	56	137368	t	f
+2024-03-07	2023-2024	SE Louisiana	Nicholls	80	54	137369	f	t
+2024-03-10	2023-2024	SE Louisiana	New Orleans	78	66	137370	f	t
+2023-11-06	2023-2024	SIUE	Dayton	63	47	137371	f	f
+2023-11-09	2023-2024	SIUE	vsNorth Park	92	67	137372	t	t
+2023-11-13	2023-2024	SIUE	Missouri	68	50	137373	f	f
+2023-11-16	2023-2024	SIUE	Denver	77	74	137374	t	t
+2023-11-17	2023-2024	SIUE	Nicholls	60	51	137375	t	t
+2023-11-19	2023-2024	SIUE	South Alabama	86	74	137376	f	f
+2023-11-25	2023-2024	SIUE	Detroit Mercy	81	67	137377	t	t
+2023-11-28	2023-2024	SIUE	vsMissouri Baptist	86	62	137378	t	t
+2023-12-01	2023-2024	SIUE	Troy	83	60	137379	f	f
+2023-12-06	2023-2024	SIUE	Green Bay	78	69	137380	t	t
+2023-12-10	2023-2024	SIUE	Ball State	83	71	137381	f	f
+2023-12-18	2023-2024	SIUE	vsCentral Christian College	99	56	137382	t	t
+2023-12-21	2023-2024	SIUE	Bradley	75	64	137383	f	f
+2023-12-29	2023-2024	SIUE	Eastern Illinois	67	58	137384	t	t
+2023-12-31	2023-2024	SIUE	Western Illinois	78	70	137385	f	t
+2024-01-04	2023-2024	SIUE	Little Rock	88	80	137386	f	f
+2024-01-11	2023-2024	SIUE	Southern Indiana	67	64	137387	t	t
+2024-01-13	2023-2024	SIUE	Morehead State	61	48	137388	t	t
+2024-01-18	2023-2024	SIUE	Lindenwood	78	59	137389	t	f
+2024-01-20	2023-2024	SIUE	Southeast Missouri State	52	47	137390	f	f
+2024-01-27	2023-2024	SIUE	Tennessee Tech	74	57	137391	t	t
+2024-02-01	2023-2024	SIUE	Little Rock	68	66	137392	t	t
+2024-02-03	2023-2024	SIUE	UT Martin	90	79	137393	f	t
+2024-02-08	2023-2024	SIUE	Morehead State	79	68	137394	f	f
+2024-02-10	2023-2024	SIUE	Southern Indiana	84	67	137395	f	f
+2024-02-15	2023-2024	SIUE	Lindenwood	91	63	137396	t	t
+2024-02-17	2023-2024	SIUE	Southeast Missouri State	80	76	137397	t	t
+2024-02-22	2023-2024	SIUE	Tennessee Tech	78	77	137398	t	f
+2024-02-24	2023-2024	SIUE	Tennessee State	76	71	137399	f	f
+2024-02-27	2023-2024	SIUE	Eastern Illinois	84	79	137400	f	f
+2024-03-02	2023-2024	SIUE	Western Illinois	76	65	137401	f	f
+2024-03-06	2023-2024	SIUE	Eastern Illinois	68	57	137402	t	t
+2024-03-07	2023-2024	SIUE	Morehead State	78	63	137403	f	t
+2023-11-06	2023-2024	SMU	vsSouthwestern Assemblies of God	82	63	137404	t	t
+2023-11-08	2023-2024	SMU	Western Illinois	90	53	137405	t	t
+2023-11-09	2023-2024	SMU	Lamar	78	67	137406	t	t
+2023-11-14	2023-2024	SMU	13 Texas A&M	79	66	137407	f	t
+2023-11-20	2023-2024	SMU	West Virginia	70	58	137408	t	t
+2023-11-22	2023-2024	SMU	Wisconsin	69	61	137409	f	t
+2023-11-26	2023-2024	SMU	UL Monroe	70	57	137410	t	t
+2023-11-29	2023-2024	SMU	Dayton	65	63	137411	f	t
+2023-12-03	2023-2024	SMU	Texas A&M-Commerce	90	47	137412	t	t
+2023-12-06	2023-2024	SMU	Arizona State	76	74	137413	f	f
+2023-12-16	2023-2024	SMU	Florida State	68	57	137414	t	f
+2023-12-19	2023-2024	SMU	Houston Christian	89	53	137415	t	t
+2023-12-22	2023-2024	SMU	Murray State	92	65	137416	t	f
+2024-01-02	2023-2024	SMU	Charlotte	66	54	137417	t	t
+2024-01-07	2023-2024	SMU	15 Memphis	62	59	137418	f	f
+2024-01-13	2023-2024	SMU	East Carolina	75	64	137419	t	f
+2024-01-16	2023-2024	SMU	Temple	77	64	137420	t	t
+2024-01-20	2023-2024	SMU	Tulsa	103	70	137421	t	t
+2024-01-25	2023-2024	SMU	North Texas	68	66	137422	f	f
+2024-01-28	2023-2024	SMU	Wichita State	77	72	137423	f	f
+2024-02-01	2023-2024	SMU	Tulane	80	76	137424	t	t
+2024-02-04	2023-2024	SMU	UAB	72	69	137425	t	t
+2024-02-07	2023-2024	SMU	Rice	95	69	137426	t	f
+2024-02-11	2023-2024	SMU	North Texas	71	68	137427	t	t
+2024-02-15	2023-2024	SMU	Tulane	87	79	137428	t	f
+2024-02-18	2023-2024	SMU	Memphis	106	79	137429	t	t
+2024-02-22	2023-2024	SMU	Florida Atlantic	80	70	137430	f	f
+2024-02-25	2023-2024	SMU	South Florida	79	68	137431	f	f
+2024-03-02	2023-2024	SMU	UTSA	77	73	137432	f	t
+2024-03-10	2023-2024	SMU	UAB	74	70	137433	f	f
+2024-03-14	2023-2024	SMU	Temple	75	60	137434	f	t
+2023-11-07	2023-2024	Sacramento State	Nevada	77	63	137435	f	f
+2023-11-10	2023-2024	Sacramento State	Stanford	91	73	137436	f	f
+2023-11-14	2023-2024	Sacramento State	vsPacific Union	128	66	137437	t	t
+2023-11-17	2023-2024	Sacramento State	Tulane	92	57	137438	f	f
+2023-11-20	2023-2024	Sacramento State	Cal State Bakersfield	75	71	137439	f	t
+2023-11-22	2023-2024	Sacramento State	Austin Peay	74	71	137440	f	t
+2023-11-26	2023-2024	Sacramento State	UC Davis	69	63	137441	t	f
+2023-12-02	2023-2024	Sacramento State	Long Beach State	83	73	137442	f	f
+2023-12-09	2023-2024	Sacramento State	Cal State Fullerton	62	60	137443	f	t
+2023-12-18	2023-2024	Sacramento State	UC San Diego	83	52	137444	f	t
+2023-12-21	2023-2024	Sacramento State	vsBethesda University	100	45	137445	t	t
+2023-12-28	2023-2024	Sacramento State	Idaho	61	58	137446	f	f
+2023-12-30	2023-2024	Sacramento State	Eastern Washington	87	61	137447	f	f
+2024-01-03	2023-2024	Sacramento State	Kansas City	67	64	137448	t	t
+2024-01-06	2023-2024	Sacramento State	St. Thomas-Minnesota	63	50	137449	f	f
+2024-01-11	2023-2024	Sacramento State	Weber State	71	69	137450	t	t
+2024-01-13	2023-2024	Sacramento State	Idaho State	66	64	137451	t	t
+2024-01-18	2023-2024	Sacramento State	Northern Colorado	77	75	137452	f	f
+2024-01-20	2023-2024	Sacramento State	Northern Arizona	70	61	137453	f	f
+2024-01-25	2023-2024	Sacramento State	Montana State	70	62	137454	f	t
+2024-01-27	2023-2024	Sacramento State	Montana	70	67	137455	f	t
+2024-02-03	2023-2024	Sacramento State	Portland State	58	51	137456	f	f
+2024-02-05	2023-2024	Sacramento State	Idaho	61	45	137457	f	t
+2024-02-08	2023-2024	Sacramento State	Idaho State	68	40	137458	f	f
+2024-02-10	2023-2024	Sacramento State	Weber State	58	53	137459	f	f
+2024-02-15	2023-2024	Sacramento State	Northern Arizona	73	58	137460	f	t
+2024-02-17	2023-2024	Sacramento State	Northern Colorado	80	75	137461	f	t
+2024-02-22	2023-2024	Sacramento State	Montana	68	61	137462	f	f
+2024-02-24	2023-2024	Sacramento State	Montana State	66	63	137463	t	f
+2024-03-02	2023-2024	Sacramento State	Portland State	73	61	137464	t	t
+2024-03-04	2023-2024	Sacramento State	Eastern Washington	91	88	137465	f	t
+2024-03-09	2023-2024	Sacramento State	Idaho	72	64	137466	t	t
+2024-03-10	2023-2024	Sacramento State	Eastern Washington	74	69	137467	t	t
+2024-03-12	2023-2024	Sacramento State	Montana State	74	71	137468	f	t
+2023-11-06	2023-2024	Sacred Heart	vsSarah Lawrence	95	51	137469	t	t
+2023-11-10	2023-2024	Sacred Heart	Iona	88	81	137470	f	f
+2023-11-14	2023-2024	Sacred Heart	Holy Cross	84	77	137471	t	f
+2023-11-17	2023-2024	Sacred Heart	UMBC	85	80	137472	f	f
+2023-11-18	2023-2024	Sacred Heart	Loyola Maryland	66	51	137473	t	t
+2023-11-21	2023-2024	Sacred Heart	Binghamton	89	75	137474	t	t
+2023-11-26	2023-2024	Sacred Heart	Saint Joseph's	64	55	137475	f	f
+2023-11-30	2023-2024	Sacred Heart	New Hampshire	90	84	137476	f	t
+2023-12-02	2023-2024	Sacred Heart	Boston University	70	49	137477	f	t
+2023-12-06	2023-2024	Sacred Heart	St. John's	85	50	137478	f	f
+2023-12-09	2023-2024	Sacred Heart	Fairfield	67	57	137479	f	t
+2023-12-16	2023-2024	Sacred Heart	Providence	78	64	137480	f	f
+2023-12-19	2023-2024	Sacred Heart	UAlbany	93	79	137481	f	f
+2023-12-21	2023-2024	Sacred Heart	Dartmouth	67	57	137482	t	t
+2023-12-30	2023-2024	Sacred Heart	vsMercy	92	63	137483	t	t
+2024-01-04	2023-2024	Sacred Heart	St. Francis (PA)	79	67	137484	t	t
+2024-01-06	2023-2024	Sacred Heart	Merrimack	82	58	137485	f	f
+2024-01-13	2023-2024	Sacred Heart	Long Island University	89	55	137486	t	t
+2024-01-15	2023-2024	Sacred Heart	Le Moyne	80	73	137487	t	f
+2024-01-21	2023-2024	Sacred Heart	Wagner	66	61	137488	t	t
+2024-01-25	2023-2024	Sacred Heart	St. Francis (PA)	75	71	137489	f	f
+2024-01-27	2023-2024	Sacred Heart	Fairleigh Dickinson	93	91	137490	f	f
+2024-02-01	2023-2024	Sacred Heart	Stonehill	77	72	137491	t	t
+2024-02-03	2023-2024	Sacred Heart	Le Moyne	87	81	137492	t	t
+2024-02-08	2023-2024	Sacred Heart	Central Connecticut	77	70	137493	f	f
+2024-02-10	2023-2024	Sacred Heart	Long Island University	75	58	137494	f	f
+2024-02-17	2023-2024	Sacred Heart	Wagner	63	53	137495	t	f
+2024-02-22	2023-2024	Sacred Heart	Fairleigh Dickinson	99	91	137496	t	t
+2024-02-24	2023-2024	Sacred Heart	Central Connecticut	68	67	137497	f	t
+2024-02-29	2023-2024	Sacred Heart	Stonehill	79	51	137498	t	f
+2024-03-02	2023-2024	Sacred Heart	Merrimack	89	85	137499	t	t
+2024-03-06	2023-2024	Sacred Heart	Wagner	60	57	137500	f	t
+2023-11-06	2023-2024	Saint Joseph's	Louisiana-Lafayette	81	60	137501	t	t
+2023-11-10	2023-2024	Saint Joseph's	Pennsylvania	69	61	137502	t	t
+2023-11-14	2023-2024	Saint Joseph's	Stonehill	100	56	137503	t	t
+2023-11-17	2023-2024	Saint Joseph's	Texas A&M-Commerce	57	54	137504	f	t
+2023-11-26	2023-2024	Saint Joseph's	Sacred Heart	64	55	137505	t	t
+2023-11-29	2023-2024	Saint Joseph's	18 Villanova	78	65	137506	t	f
+2023-12-02	2023-2024	Saint Joseph's	Temple	74	65	137507	t	t
+2023-12-06	2023-2024	Saint Joseph's	American University	69	53	137508	t	t
+2023-12-10	2023-2024	Saint Joseph's	Princeton	74	70	137509	t	t
+2023-12-16	2023-2024	Saint Joseph's	Iona	83	58	137510	t	t
+2023-12-21	2023-2024	Saint Joseph's	Charleston	89	82	137511	f	f
+2023-12-29	2023-2024	Saint Joseph's	Loyola Maryland	97	56	137512	t	t
+2024-01-03	2023-2024	Saint Joseph's	Rhode Island	78	74	137513	f	f
+2024-01-10	2023-2024	Saint Joseph's	Saint Louis	88	85	137514	f	f
+2024-01-13	2023-2024	Saint Joseph's	Loyola Chicago	78	75	137515	f	t
+2024-01-15	2023-2024	Saint Joseph's	La Salle	82	62	137516	t	t
+2024-01-20	2023-2024	Saint Joseph's	Duquesne	71	69	137517	t	t
+2024-01-23	2023-2024	Saint Joseph's	Massachusetts	78	77	137518	t	f
+2024-01-26	2023-2024	Saint Joseph's	St. Bonaventure	91	72	137519	f	f
+2024-01-31	2023-2024	Saint Joseph's	George Mason	75	73	137520	t	t
+2024-02-03	2023-2024	Saint Joseph's	La Salle	88	82	137521	t	f
+2024-02-06	2023-2024	Saint Joseph's	18 Dayton	94	79	137522	f	t
+2024-02-10	2023-2024	Saint Joseph's	Saint Louis	87	86	137523	t	t
+2024-02-14	2023-2024	Saint Joseph's	Loyola Chicago	64	59	137524	f	f
+2024-02-17	2023-2024	Saint Joseph's	Duquesne	66	56	137525	f	f
+2024-02-21	2023-2024	Saint Joseph's	George Washington	79	75	137526	t	t
+2024-02-25	2023-2024	Saint Joseph's	VCU	73	69	137527	f	f
+2024-03-02	2023-2024	Saint Joseph's	Fordham	82	69	137528	t	t
+2024-03-06	2023-2024	Saint Joseph's	Richmond	73	66	137529	f	f
+2024-03-09	2023-2024	Saint Joseph's	Davidson	89	71	137530	t	t
+2024-03-13	2023-2024	Saint Joseph's	George Mason	64	57	137531	t	t
+2024-03-14	2023-2024	Saint Joseph's	Richmond	66	61	137532	t	t
+2024-03-16	2023-2024	Saint Joseph's	VCU	66	60	137533	f	t
+2023-11-06	2023-2024	Saint Louis	Southern Indiana	75	63	137534	t	t
+2023-11-08	2023-2024	Saint Louis	vsLincoln (MO)	102	66	137535	t	t
+2023-11-11	2023-2024	Saint Louis	Illinois State	80	71	137536	t	t
+2023-11-16	2023-2024	Saint Louis	Wyoming	79	69	137537	t	t
+2023-11-17	2023-2024	Saint Louis	Vermont	78	68	137538	f	t
+2023-11-19	2023-2024	Saint Louis	Wichita State	88	69	137539	f	t
+2023-11-25	2023-2024	Saint Louis	Dartmouth	66	65	137540	t	t
+2023-11-28	2023-2024	Saint Louis	Utah State	81	76	137541	f	t
+2023-12-02	2023-2024	Saint Louis	Southern Illinois	101	62	137542	f	f
+2023-12-06	2023-2024	Saint Louis	Drake	75	69	137543	f	f
+2023-12-09	2023-2024	Saint Louis	Hofstra	71	68	137544	t	t
+2023-12-16	2023-2024	Saint Louis	Louisiana Tech	75	74	137545	t	t
+2023-12-20	2023-2024	Saint Louis	NC State	82	70	137546	f	f
+2024-01-03	2023-2024	Saint Louis	Loyola Chicago	80	73	137547	f	t
+2024-01-06	2023-2024	Saint Louis	George Mason	79	67	137548	f	f
+2024-01-10	2023-2024	Saint Louis	Saint Joseph's	88	85	137549	t	t
+2024-01-16	2023-2024	Saint Louis	21 Dayton	70	65	137550	f	f
+2024-01-19	2023-2024	Saint Louis	VCU	85	61	137551	f	f
+2024-01-24	2023-2024	Saint Louis	Davidson	84	61	137552	f	t
+2024-01-27	2023-2024	Saint Louis	Massachusetts	84	73	137553	f	t
+2024-01-30	2023-2024	Saint Louis	Loyola Chicago	77	62	137554	f	f
+2024-02-03	2023-2024	Saint Louis	Fordham	67	65	137555	f	t
+2024-02-07	2023-2024	Saint Louis	La Salle	102	84	137556	t	f
+2024-02-10	2023-2024	Saint Louis	Saint Joseph's	87	86	137557	f	f
+2024-02-16	2023-2024	Saint Louis	VCU	95	85	137558	f	t
+2024-02-20	2023-2024	Saint Louis	Duquesne	81	66	137559	f	f
+2024-02-24	2023-2024	Saint Louis	George Washington	96	91	137560	t	t
+2024-02-28	2023-2024	Saint Louis	Richmond	80	64	137561	f	t
+2024-03-02	2023-2024	Saint Louis	Rhode Island	94	91	137562	t	f
+2024-03-05	2023-2024	Saint Louis	25 Dayton	100	83	137563	f	t
+2024-03-09	2023-2024	Saint Louis	St. Bonaventure	73	65	137564	t	f
+2024-03-12	2023-2024	Saint Louis	Rhode Island	74	71	137565	t	t
+2024-03-13	2023-2024	Saint Louis	Duquesne	83	73	137566	f	t
+2023-11-06	2023-2024	St. Mary's	vsStanislaus State	107	28	137567	t	t
+2023-11-09	2023-2024	St. Mary's	New Mexico	72	58	137568	t	t
+2023-11-12	2023-2024	St. Mary's	Weber State	61	57	137569	f	t
+2023-11-17	2023-2024	St. Mary's	San Diego State	79	54	137570	f	t
+2023-11-19	2023-2024	St. Mary's	Xavier	66	49	137571	f	t
+2023-11-24	2023-2024	St. Mary's	Davidson	89	55	137572	t	t
+2023-11-27	2023-2024	St. Mary's	Utah	78	71	137573	f	t
+2023-12-01	2023-2024	St. Mary's	Boise State	63	60	137574	f	t
+2023-12-05	2023-2024	St. Mary's	Cleveland State	70	57	137575	t	t
+2023-12-09	2023-2024	St. Mary's	13 Colorado State	64	61	137576	t	f
+2023-12-19	2023-2024	St. Mary's	Middle Tennessee	71	34	137577	t	t
+2023-12-21	2023-2024	St. Mary's	Northern Kentucky	92	56	137578	t	t
+2023-12-23	2023-2024	St. Mary's	Missouri State	69	64	137579	f	t
+2023-12-29	2023-2024	St. Mary's	Kent State	66	46	137580	t	t
+2024-01-04	2023-2024	St. Mary's	San Diego	81	70	137581	t	f
+2024-01-06	2023-2024	St. Mary's	Loyola Marymount	68	64	137582	t	f
+2024-01-11	2023-2024	St. Mary's	Portland	95	52	137583	t	t
+2024-01-13	2023-2024	St. Mary's	Santa Clara	73	49	137584	t	f
+2024-01-20	2023-2024	St. Mary's	San Francisco	77	60	137585	t	f
+2024-01-25	2023-2024	St. Mary's	Pacific	76	28	137586	t	t
+2024-01-27	2023-2024	St. Mary's	Loyola Marymount	70	65	137587	t	t
+2024-01-31	2023-2024	St. Mary's	Santa Clara	82	77	137588	t	t
+2024-02-03	2023-2024	St. Mary's	Gonzaga	64	62	137589	t	f
+2024-02-06	2023-2024	St. Mary's	Pacific	84	43	137590	t	f
+2024-02-10	2023-2024	St. Mary's	Portland	76	51	137591	t	f
+2024-02-15	2023-2024	St. Mary's	Pepperdine	103	59	137592	t	t
+2024-02-20	2023-2024	St. Mary's	San Francisco	70	66	137593	t	t
+2024-02-24	2023-2024	St. Mary's	San Diego	88	62	137594	t	t
+2024-02-29	2023-2024	St. Mary's	Pepperdine	83	57	137595	t	f
+2024-03-02	2023-2024	St. Mary's	23 Gonzaga	70	57	137596	f	t
+2024-03-11	2023-2024	St. Mary's	Santa Clara	79	65	137597	t	t
+2024-03-12	2023-2024	St. Mary's	17 Gonzaga	69	60	137598	t	t
+2023-11-06	2023-2024	Saint Peter's	Seton Hall	70	59	137599	f	f
+2023-11-11	2023-2024	Saint Peter's	NJIT	75	48	137600	t	f
+2023-11-15	2023-2024	Saint Peter's	Fairleigh Dickinson	71	70	137601	f	f
+2023-11-20	2023-2024	Saint Peter's	UMass Lowell	69	61	137602	f	t
+2023-11-27	2023-2024	Saint Peter's	Rutgers	71	40	137603	f	f
+2023-12-01	2023-2024	Saint Peter's	Niagara	72	67	137604	t	f
+2023-12-03	2023-2024	Saint Peter's	Canisius	54	52	137605	t	f
+2023-12-08	2023-2024	Saint Peter's	Duquesne	68	59	137606	f	f
+2023-12-12	2023-2024	Saint Peter's	UMBC	66	60	137607	t	t
+2023-12-22	2023-2024	Saint Peter's	vsKean	73	70	137608	t	t
+2023-12-30	2023-2024	Saint Peter's	Bucknell	67	58	137609	t	f
+2024-01-05	2023-2024	Saint Peter's	Iona	69	57	137610	t	t
+2024-01-07	2023-2024	Saint Peter's	Mount St. Mary's	70	64	137611	t	t
+2024-01-14	2023-2024	Saint Peter's	Manhattan	81	68	137612	t	f
+2024-01-19	2023-2024	Saint Peter's	Fairfield	76	67	137613	f	f
+2024-01-21	2023-2024	Saint Peter's	Canisius	70	59	137614	t	t
+2024-01-25	2023-2024	Saint Peter's	Rider	62	57	137615	f	t
+2024-01-28	2023-2024	Saint Peter's	Siena	63	52	137616	t	f
+2024-02-04	2023-2024	Saint Peter's	Marist	63	52	137617	f	f
+2024-02-08	2023-2024	Saint Peter's	Quinnipiac	84	73	137618	f	f
+2024-02-10	2023-2024	Saint Peter's	Fairfield	64	62	137619	f	t
+2024-02-16	2023-2024	Saint Peter's	Siena	75	53	137620	t	t
+2024-02-18	2023-2024	Saint Peter's	Iona	59	53	137621	t	f
+2024-02-23	2023-2024	Saint Peter's	Mount St. Mary's	70	65	137622	t	f
+2024-02-25	2023-2024	Saint Peter's	Marist	69	60	137623	t	t
+2024-03-03	2023-2024	Saint Peter's	Manhattan	89	57	137624	t	t
+2024-03-07	2023-2024	Saint Peter's	Rider	61	56	137625	f	f
+2024-03-09	2023-2024	Saint Peter's	Quinnipiac	89	74	137626	f	t
+2024-03-14	2023-2024	Saint Peter's	Rider	50	48	137627	t	t
+2024-03-15	2023-2024	Saint Peter's	Quinnipiac	62	60	137628	t	t
+2024-03-16	2023-2024	Saint Peter's	Fairfield	68	63	137629	t	t
+2023-11-06	2023-2024	Sam Houston	Pacific	64	57	137630	t	f
+2023-11-12	2023-2024	Sam Houston	Oklahoma State	85	70	137631	f	f
+2023-11-17	2023-2024	Sam Houston	Ole Miss	70	67	137632	f	f
+2023-11-22	2023-2024	Sam Houston	Grambling	86	68	137633	t	t
+2023-11-25	2023-2024	Sam Houston	vsPaul Quinn	78	61	137634	t	t
+2023-11-29	2023-2024	Sam Houston	Arizona State	78	61	137635	f	f
+2023-12-03	2023-2024	Sam Houston	Lamar	90	70	137636	t	t
+2023-12-09	2023-2024	Sam Houston	Missouri State	69	60	137637	f	f
+2023-12-12	2023-2024	Sam Houston	UL Monroe	63	62	137638	t	t
+2023-12-15	2023-2024	Sam Houston	Texas State	73	60	137639	f	t
+2023-12-20	2023-2024	Sam Houston	Grand Canyon	76	64	137640	f	f
+2023-12-28	2023-2024	Sam Houston	Texas Tech	96	60	137641	f	f
+2024-01-02	2023-2024	Sam Houston	vsDallas	93	53	137642	t	t
+2024-01-06	2023-2024	Sam Houston	Louisiana Tech	81	77	137643	t	t
+2024-01-10	2023-2024	Sam Houston	Western Kentucky	78	74	137644	t	t
+2024-01-13	2023-2024	Sam Houston	Middle Tennessee	60	51	137645	t	f
+2024-01-20	2023-2024	Sam Houston	Liberty	82	66	137646	f	f
+2024-01-25	2023-2024	Sam Houston	New Mexico State	79	67	137647	t	t
+2024-01-27	2023-2024	Sam Houston	UTEP	60	56	137648	t	t
+2024-02-01	2023-2024	Sam Houston	Western Kentucky	79	77	137649	t	f
+2024-02-03	2023-2024	Sam Houston	Florida International	68	61	137650	f	f
+2024-02-08	2023-2024	Sam Houston	Jacksonville State	79	68	137651	f	f
+2024-02-15	2023-2024	Sam Houston	Florida International	70	56	137652	t	t
+2024-02-17	2023-2024	Sam Houston	Liberty	83	73	137653	t	t
+2024-02-22	2023-2024	Sam Houston	New Mexico State	79	58	137654	t	f
+2024-02-24	2023-2024	Sam Houston	UTEP	65	54	137655	t	f
+2024-03-02	2023-2024	Sam Houston	Middle Tennessee	81	64	137656	t	t
+2024-03-07	2023-2024	Sam Houston	Louisiana Tech	72	66	137657	t	f
+2024-03-09	2023-2024	Sam Houston	Jacksonville State	81	73	137658	t	t
+2024-03-13	2023-2024	Sam Houston	Florida International	78	59	137659	t	t
+2024-03-15	2023-2024	Sam Houston	UTEP	65	63	137660	f	t
+2023-11-06	2023-2024	Samford	3 Purdue	98	45	137661	f	f
+2023-11-10	2023-2024	Samford	VCU	75	65	137662	f	f
+2023-11-14	2023-2024	Samford	vsMississippi College	96	52	137663	t	t
+2023-11-17	2023-2024	Samford	South Carolina State	89	72	137664	t	t
+2023-11-22	2023-2024	Samford	Alabama State	99	67	137665	t	t
+2023-11-24	2023-2024	Samford	Merrimack	79	71	137666	t	t
+2023-11-25	2023-2024	Samford	North Carolina A&T	101	83	137667	t	t
+2023-11-30	2023-2024	Samford	Louisiana	88	65	137668	t	t
+2023-12-03	2023-2024	Samford	vsLaGrange	128	82	137669	t	t
+2023-12-11	2023-2024	Samford	Alabama A&M	118	91	137670	t	t
+2023-12-16	2023-2024	Samford	Belmont	99	93	137671	t	t
+2023-12-19	2023-2024	Samford	Valparaiso	79	61	137672	t	f
+2023-12-21	2023-2024	Samford	Texas Southern	87	65	137673	t	f
+2024-01-03	2023-2024	Samford	Chattanooga	89	74	137674	t	t
+2024-01-06	2023-2024	Samford	The Citadel	80	64	137675	t	f
+2024-01-11	2023-2024	Samford	UNC Greensboro	79	70	137676	t	t
+2024-01-13	2023-2024	Samford	VMI	134	96	137677	t	t
+2024-01-16	2023-2024	Samford	Western Carolina	75	71	137678	t	f
+2024-01-20	2023-2024	Samford	Mercer	87	80	137679	t	t
+2024-01-24	2023-2024	Samford	Furman	78	68	137680	f	f
+2024-01-27	2023-2024	Samford	East Tennessee State	75	72	137681	t	f
+2024-01-31	2023-2024	Samford	Wofford	81	79	137682	t	t
+2024-02-03	2023-2024	Samford	Chattanooga	78	56	137683	t	f
+2024-02-08	2023-2024	Samford	UNC Greensboro	78	69	137684	t	f
+2024-02-10	2023-2024	Samford	VMI	102	63	137685	t	f
+2024-02-14	2023-2024	Samford	Western Carolina	88	62	137686	t	t
+2024-02-17	2023-2024	Samford	Mercer	88	84	137687	f	f
+2024-02-21	2023-2024	Samford	Furman	74	72	137688	t	t
+2024-02-24	2023-2024	Samford	East Tennessee State	87	71	137689	t	t
+2024-02-28	2023-2024	Samford	Wofford	91	69	137690	f	f
+2024-03-02	2023-2024	Samford	The Citadel	92	80	137691	t	t
+2024-03-09	2023-2024	Samford	Mercer	70	57	137692	t	t
+2024-03-10	2023-2024	Samford	Furman	84	77	137693	t	t
+2024-03-11	2023-2024	Samford	East Tennessee State	76	69	137694	t	t
+2023-11-06	2023-2024	SDSU	Cal State Fullerton	83	57	137695	t	t
+2023-11-10	2023-2024	SDSU	BYU	74	65	137696	f	f
+2023-11-14	2023-2024	SDSU	Long Beach State	88	76	137697	t	t
+2023-11-17	2023-2024	SDSU	St. Mary's	79	54	137698	t	t
+2023-11-27	2023-2024	SDSU	vsPoint Loma Nazarene	71	51	137699	t	t
+2023-12-01	2023-2024	SDSU	UC San Diego	63	62	137700	t	f
+2023-12-05	2023-2024	SDSU	Grand Canyon	79	73	137701	f	f
+2023-12-09	2023-2024	SDSU	UC Irvine	63	62	137702	t	t
+2023-12-19	2023-2024	SDSU	vsUniversity of Saint Katherine	91	57	137703	t	t
+2023-12-21	2023-2024	SDSU	Stanford	74	60	137704	t	t
+2023-12-29	2023-2024	SDSU	13 Gonzaga	84	74	137705	t	f
+2024-01-03	2023-2024	SDSU	Fresno State	74	47	137706	t	t
+2024-01-06	2023-2024	SDSU	UNLV	72	61	137707	t	t
+2024-01-09	2023-2024	SDSU	San José State	81	78	137708	t	f
+2024-01-13	2023-2024	SDSU	New Mexico	88	70	137709	f	f
+2024-01-17	2023-2024	SDSU	Nevada	71	59	137710	t	t
+2024-01-20	2023-2024	SDSU	Boise State	67	66	137711	f	f
+2024-01-23	2023-2024	SDSU	Wyoming	81	65	137712	t	t
+2024-01-30	2023-2024	SDSU	Colorado State	79	71	137713	f	f
+2024-02-03	2023-2024	SDSU	17 Utah State	81	67	137714	t	t
+2024-02-06	2023-2024	SDSU	Air Force	77	64	137715	t	f
+2024-02-13	2023-2024	SDSU	Colorado State	71	55	137716	t	t
+2024-02-16	2023-2024	SDSU	New Mexico	81	70	137717	t	t
+2024-02-20	2023-2024	SDSU	Utah State	68	63	137718	f	f
+2024-02-24	2023-2024	SDSU	Fresno State	73	41	137719	t	f
+2024-02-27	2023-2024	SDSU	San José State	72	64	137720	t	t
+2024-03-05	2023-2024	SDSU	UNLV	62	58	137721	f	f
+2024-03-15	2023-2024	SDSU	18 Utah State	86	70	137722	t	t
+2024-03-16	2023-2024	SDSU	New Mexico	68	61	137723	f	t
+2023-11-06	2023-2024	San Diego	vsSonoma State	68	64	137724	t	t
+2023-11-08	2023-2024	San Diego	Jackson State	87	61	137725	t	t
+2023-11-11	2023-2024	San Diego	UC San Diego	69	63	137726	f	f
+2023-11-17	2023-2024	San Diego	Le Moyne	80	71	137727	t	t
+2023-11-20	2023-2024	San Diego	Navy	67	59	137728	t	t
+2023-11-24	2023-2024	San Diego	Arkansas State	71	57	137729	t	t
+2023-11-25	2023-2024	San Diego	Hawai'i	77	66	137730	f	t
+2023-11-29	2023-2024	San Diego	Northern Colorado	74	72	137731	t	t
+2023-12-03	2023-2024	San Diego	Stanford	88	64	137732	f	f
+2023-12-06	2023-2024	San Diego	Utah State	108	81	137733	f	f
+2023-12-09	2023-2024	San Diego	Arizona State	89	84	137734	t	t
+2023-12-15	2023-2024	San Diego	Portland State	69	65	137735	t	t
+2023-12-21	2023-2024	San Diego	South Dakota	69	66	137736	t	t
+2023-12-29	2023-2024	San Diego	Fresno State	71	67	137737	f	t
+2023-12-31	2023-2024	San Diego	vsWestcliff	78	65	137738	t	t
+2024-01-04	2023-2024	San Diego	St. Mary's	81	70	137739	f	t
+2024-01-06	2023-2024	San Diego	24 Gonzaga	101	74	137740	f	f
+2024-01-11	2023-2024	San Diego	San Francisco	83	63	137741	f	t
+2024-01-13	2023-2024	San Diego	Pepperdine	83	77	137742	f	t
+2024-01-20	2023-2024	San Diego	Gonzaga	105	63	137743	f	t
+2024-01-23	2023-2024	San Diego	Portland	85	81	137744	t	f
+2024-01-27	2023-2024	San Diego	Pepperdine	69	67	137745	t	f
+2024-02-01	2023-2024	San Diego	San Francisco	95	79	137746	f	f
+2024-02-03	2023-2024	San Diego	Santa Clara	70	59	137747	t	f
+2024-02-07	2023-2024	San Diego	Loyola Marymount	79	77	137748	t	t
+2024-02-10	2023-2024	San Diego	Pacific	89	84	137749	t	f
+2024-02-15	2023-2024	San Diego	Portland	71	66	137750	t	t
+2024-02-17	2023-2024	San Diego	Santa Clara	82	69	137751	f	t
+2024-02-24	2023-2024	San Diego	18 Saint Mary's	88	62	137752	f	f
+2024-02-29	2023-2024	San Diego	Loyola Marymount	96	62	137753	f	f
+2024-03-02	2023-2024	San Diego	Pacific	81	69	137754	t	t
+2024-03-08	2023-2024	San Diego	Pepperdine	57	52	137755	t	t
+2024-03-09	2023-2024	San Diego	Santa Clara	104	79	137756	f	t
+2023-11-06	2023-2024	San Francisco	vsBethesda University	128	59	137757	t	t
+2023-11-09	2023-2024	San Francisco	St. Francis (PA)	84	52	137758	t	t
+2023-11-12	2023-2024	San Francisco	Boise State	63	58	137759	f	f
+2023-11-17	2023-2024	San Francisco	Grand Canyon	76	72	137760	f	t
+2023-11-19	2023-2024	San Francisco	DePaul	70	54	137761	t	t
+2023-11-22	2023-2024	San Francisco	Purdue Fort Wayne	76	60	137762	t	t
+2023-11-26	2023-2024	San Francisco	Minnesota	76	58	137763	t	t
+2023-12-03	2023-2024	San Francisco	Arizona State	72	61	137764	f	f
+2023-12-06	2023-2024	San Francisco	Vanderbilt	73	60	137765	t	f
+2023-12-11	2023-2024	San Francisco	New Orleans	85	72	137766	t	t
+2023-12-13	2023-2024	San Francisco	Seattle U	62	59	137767	t	t
+2023-12-16	2023-2024	San Francisco	Utah State	54	53	137768	f	t
+2023-12-20	2023-2024	San Francisco	Northern Arizona	91	51	137769	t	t
+2023-12-22	2023-2024	San Francisco	Fresno State	77	57	137770	t	t
+2023-12-30	2023-2024	San Francisco	Mississippi Valley State	92	42	137771	t	t
+2024-01-11	2023-2024	San Francisco	San Diego	83	63	137772	t	f
+2024-01-13	2023-2024	San Francisco	Portland	96	69	137773	t	t
+2024-01-18	2023-2024	San Francisco	Loyola Marymount	90	74	137774	t	t
+2024-01-20	2023-2024	San Francisco	St. Mary's	77	60	137775	f	t
+2024-01-25	2023-2024	San Francisco	Gonzaga	77	72	137776	f	f
+2024-01-27	2023-2024	San Francisco	Portland	76	64	137777	t	f
+2024-02-01	2023-2024	San Francisco	San Diego	95	79	137778	t	t
+2024-02-03	2023-2024	San Francisco	Pacific	79	73	137779	t	t
+2024-02-08	2023-2024	San Francisco	Pepperdine	80	74	137780	t	f
+2024-02-10	2023-2024	San Francisco	Santa Clara	71	70	137781	t	t
+2024-02-17	2023-2024	San Francisco	Loyola Marymount	82	59	137782	t	f
+2024-02-20	2023-2024	San Francisco	18 Saint Mary's	70	66	137783	f	f
+2024-02-24	2023-2024	San Francisco	Pepperdine	92	68	137784	t	t
+2024-02-29	2023-2024	San Francisco	23 Gonzaga	86	68	137785	f	t
+2024-03-02	2023-2024	San Francisco	Santa Clara	69	62	137786	f	f
+2024-03-10	2023-2024	San Francisco	Portland	72	51	137787	t	t
+2024-03-11	2023-2024	San Francisco	17 Gonzaga	89	77	137788	f	t
+2023-11-07	2023-2024	San José State	UC Irvine	72	64	137789	t	t
+2023-11-09	2023-2024	San José State	vsBethesda University	117	72	137790	t	t
+2023-11-12	2023-2024	San José State	Texas Tech	56	42	137791	f	f
+2023-11-17	2023-2024	San José State	Abilene Christian	77	71	137792	f	t
+2023-11-18	2023-2024	San José State	Norfolk State	77	53	137793	t	t
+2023-11-20	2023-2024	San José State	Hampton	71	52	137794	t	t
+2023-11-27	2023-2024	San José State	North Dakota State	78	65	137795	t	t
+2023-12-02	2023-2024	San José State	Montana	75	58	137796	f	f
+2023-12-09	2023-2024	San José State	New Orleans	87	82	137797	t	t
+2023-12-17	2023-2024	San José State	Montana	86	75	137798	f	t
+2023-12-20	2023-2024	San José State	Santa Clara	81	78	137799	t	t
+2024-01-02	2023-2024	San José State	Wyoming	75	73	137800	f	f
+2024-01-05	2023-2024	San José State	Boise State	78	69	137801	f	t
+2024-01-09	2023-2024	San José State	19 San Diego State	81	78	137802	f	t
+2024-01-13	2023-2024	San José State	Air Force	70	67	137803	t	f
+2024-01-16	2023-2024	San José State	Fresno State	85	82	137804	f	f
+2024-01-24	2023-2024	San José State	25 New Mexico	95	75	137805	f	t
+2024-01-27	2023-2024	San José State	UNLV	77	65	137806	f	t
+2024-01-30	2023-2024	San José State	17 Utah State	82	61	137807	f	f
+2024-02-02	2023-2024	San José State	Nevada	90	60	137808	f	f
+2024-02-06	2023-2024	San José State	Fresno State	69	57	137809	f	t
+2024-02-09	2023-2024	San José State	Colorado State	66	47	137810	f	f
+2024-02-13	2023-2024	San José State	Air Force	73	66	137811	t	t
+2024-02-17	2023-2024	San José State	Wyoming	80	75	137812	f	t
+2024-02-20	2023-2024	San José State	Boise State	82	50	137813	f	f
+2024-02-23	2023-2024	San José State	Nevada	84	63	137814	f	t
+2024-02-27	2023-2024	San José State	20 San Diego State	72	64	137815	f	f
+2024-03-02	2023-2024	San José State	UNLV	68	50	137816	f	f
+2024-03-06	2023-2024	San José State	22 Utah State	90	70	137817	f	t
+2024-03-13	2023-2024	San José State	Colorado State	72	62	137818	f	t
+2023-11-08	2023-2024	Santa Clara	Utah Tech	77	69	137819	t	t
+2023-11-11	2023-2024	Santa Clara	St. Francis (PA)	82	59	137820	t	t
+2023-11-14	2023-2024	Santa Clara	Stanford	89	77	137821	t	f
+2023-11-18	2023-2024	Santa Clara	SE Louisiana	65	63	137822	t	t
+2023-11-20	2023-2024	Santa Clara	Mississippi Valley State	81	39	137823	t	t
+2023-11-24	2023-2024	Santa Clara	Oregon	88	82	137824	t	t
+2023-11-25	2023-2024	Santa Clara	Ohio State	86	56	137825	f	t
+2023-11-29	2023-2024	Santa Clara	vsMenlo	106	69	137826	t	t
+2023-12-02	2023-2024	Santa Clara	California	84	69	137827	f	f
+2023-12-09	2023-2024	Santa Clara	New Mexico	93	76	137828	f	t
+2023-12-13	2023-2024	Santa Clara	Utah State	84	82	137829	f	t
+2023-12-16	2023-2024	Santa Clara	Washington State	69	61	137830	t	t
+2023-12-20	2023-2024	Santa Clara	San José State	81	78	137831	f	f
+2023-12-23	2023-2024	Santa Clara	Duquesne	81	73	137832	t	t
+2023-12-30	2023-2024	Santa Clara	Yale	66	58	137833	f	t
+2024-01-04	2023-2024	Santa Clara	Loyola Marymount	68	57	137834	t	f
+2024-01-06	2023-2024	Santa Clara	Pepperdine	78	72	137835	t	f
+2024-01-11	2023-2024	Santa Clara	23 Gonzaga	77	76	137836	t	t
+2024-01-13	2023-2024	Santa Clara	St. Mary's	73	49	137837	f	t
+2024-01-18	2023-2024	Santa Clara	Pacific	88	69	137838	t	f
+2024-01-20	2023-2024	Santa Clara	Portland	101	86	137839	t	t
+2024-01-25	2023-2024	Santa Clara	Pepperdine	94	71	137840	t	t
+2024-01-31	2023-2024	Santa Clara	St. Mary's	82	77	137841	f	f
+2024-02-03	2023-2024	Santa Clara	San Diego	70	59	137842	f	t
+2024-02-10	2023-2024	Santa Clara	San Francisco	71	70	137843	f	f
+2024-02-15	2023-2024	Santa Clara	Pacific	79	53	137844	t	t
+2024-02-17	2023-2024	Santa Clara	San Diego	82	69	137845	t	f
+2024-02-22	2023-2024	Santa Clara	Loyola Marymount	65	55	137846	t	t
+2024-02-24	2023-2024	Santa Clara	Gonzaga	94	81	137847	f	f
+2024-03-02	2023-2024	Santa Clara	San Francisco	69	62	137848	t	t
+2024-03-09	2023-2024	Santa Clara	San Diego	104	79	137849	t	t
+2024-03-11	2023-2024	Santa Clara	21 Saint Mary's	79	65	137850	f	t
+2023-11-08	2023-2024	Seattle U	Prairie View A&M	71	60	137851	t	t
+2023-11-11	2023-2024	Seattle U	Montana State	71	68	137852	t	t
+2023-11-15	2023-2024	Seattle U	Northern Arizona	62	60	137853	f	t
+2023-11-18	2023-2024	Seattle U	VCU	60	56	137854	f	f
+2023-11-22	2023-2024	Seattle U	Idaho	92	55	137855	t	t
+2023-11-26	2023-2024	Seattle U	UC San Diego	79	67	137856	t	t
+2023-11-29	2023-2024	Seattle U	Utah Valley	78	72	137857	f	f
+2023-12-02	2023-2024	Seattle U	Southern Utah	73	63	137858	t	t
+2023-12-09	2023-2024	Seattle U	vsNorthwest University	101	46	137859	t	t
+2023-12-13	2023-2024	Seattle U	San Francisco	62	59	137860	f	f
+2023-12-30	2023-2024	Seattle U	UTEP	73	61	137861	t	f
+2024-01-04	2023-2024	Seattle U	Utah Tech	70	53	137862	t	t
+2024-01-06	2023-2024	Seattle U	California Baptist	48	46	137863	t	t
+2024-01-13	2023-2024	Seattle U	UT Arlington	80	75	137864	f	f
+2024-01-20	2023-2024	Seattle U	Grand Canyon	86	79	137865	t	t
+2024-01-26	2023-2024	Seattle U	Utah Valley	62	61	137866	t	t
+2024-02-03	2023-2024	Seattle U	California Baptist	61	60	137867	t	f
+2024-02-08	2023-2024	Seattle U	Abilene Christian	75	52	137868	t	t
+2024-02-10	2023-2024	Seattle U	Tarleton State	82	77	137869	f	t
+2024-02-15	2023-2024	Seattle U	Southern Utah	78	68	137870	t	f
+2024-02-17	2023-2024	Seattle U	Utah Tech	66	65	137871	t	f
+2024-02-22	2023-2024	Seattle U	Stephen F. Austin	69	49	137872	t	t
+2024-02-24	2023-2024	Seattle U	UT Rio Grande Valley	84	56	137873	t	t
+2024-02-29	2023-2024	Seattle U	UT Arlington	82	62	137874	f	t
+2024-03-07	2023-2024	Seattle U	Abilene Christian	64	59	137875	f	f
+2024-03-09	2023-2024	Seattle U	Tarleton State	69	66	137876	f	f
+2024-03-14	2023-2024	Seattle U	California Baptist	81	57	137877	t	t
+2024-03-15	2023-2024	Seattle U	Grand Canyon	80	72	137878	f	t
+2023-11-06	2023-2024	Seton Hall	Saint Peter's	70	59	137879	t	t
+2023-11-11	2023-2024	Seton Hall	Fairleigh Dickinson	85	55	137880	t	t
+2023-11-15	2023-2024	Seton Hall	UAlbany	96	71	137881	t	t
+2023-11-18	2023-2024	Seton Hall	Wagner	72	51	137882	t	t
+2023-11-23	2023-2024	Seton Hall	23 USC	71	63	137883	f	t
+2023-11-24	2023-2024	Seton Hall	Iowa	85	72	137884	f	t
+2023-11-29	2023-2024	Seton Hall	Northeastern	88	75	137885	t	t
+2023-12-05	2023-2024	Seton Hall	6 Baylor	78	60	137886	f	f
+2023-12-09	2023-2024	Seton Hall	Rutgers	70	63	137887	f	t
+2023-12-12	2023-2024	Seton Hall	Monmouth	70	61	137888	t	t
+2023-12-17	2023-2024	Seton Hall	Missouri	93	87	137889	t	t
+2023-12-20	2023-2024	Seton Hall	5 UConn	75	60	137890	t	t
+2023-12-23	2023-2024	Seton Hall	Xavier	74	54	137891	f	f
+2024-01-03	2023-2024	Seton Hall	23 Providence	61	57	137892	t	f
+2024-01-06	2023-2024	Seton Hall	7 Marquette	78	75	137893	t	t
+2024-01-09	2023-2024	Seton Hall	Georgetown	74	70	137894	t	f
+2024-01-13	2023-2024	Seton Hall	Butler	78	72	137895	t	f
+2024-01-16	2023-2024	Seton Hall	St. John's	80	65	137896	t	t
+2024-01-24	2023-2024	Seton Hall	Providence	67	63	137897	f	t
+2024-01-27	2023-2024	Seton Hall	14 Marquette	75	57	137898	f	f
+2024-01-30	2023-2024	Seton Hall	DePaul	72	39	137899	t	f
+2024-02-07	2023-2024	Seton Hall	Georgetown	76	70	137900	t	t
+2024-02-11	2023-2024	Seton Hall	Villanova	80	54	137901	f	f
+2024-02-14	2023-2024	Seton Hall	Xavier	88	70	137902	t	t
+2024-02-18	2023-2024	Seton Hall	St. John's	68	62	137903	t	f
+2024-02-24	2023-2024	Seton Hall	Butler	76	64	137904	t	t
+2024-02-28	2023-2024	Seton Hall	12 Creighton	85	64	137905	f	f
+2024-03-03	2023-2024	Seton Hall	3 UConn	91	61	137906	f	f
+2024-03-06	2023-2024	Seton Hall	Villanova	66	56	137907	t	t
+2024-03-09	2023-2024	Seton Hall	DePaul	86	62	137908	t	t
+2024-03-14	2023-2024	Seton Hall	St. John's	91	72	137909	f	t
+2023-11-06	2023-2024	Siena	Holy Cross	73	71	137910	t	t
+2023-11-11	2023-2024	Siena	Richmond	90	48	137911	f	f
+2023-11-13	2023-2024	Siena	American University	78	58	137912	f	f
+2023-11-20	2023-2024	Siena	Central Michigan	70	56	137913	f	t
+2023-11-21	2023-2024	Siena	Milwaukee	61	59	137914	f	t
+2023-11-26	2023-2024	Siena	UAlbany	86	51	137915	f	t
+2023-12-01	2023-2024	Siena	Rider	67	65	137916	t	t
+2023-12-03	2023-2024	Siena	Mount St. Mary's	80	48	137917	f	f
+2023-12-06	2023-2024	Siena	Bryant	67	51	137918	f	t
+2023-12-09	2023-2024	Siena	St. Bonaventure	89	56	137919	f	f
+2023-12-19	2023-2024	Siena	Cornell	95	74	137920	f	t
+2023-12-22	2023-2024	Siena	Brown	71	67	137921	f	f
+2023-12-30	2023-2024	Siena	Massachusetts	79	66	137922	f	f
+2024-01-05	2023-2024	Siena	Fairfield	93	69	137923	f	t
+2024-01-12	2023-2024	Siena	Canisius	67	63	137924	f	f
+2024-01-15	2023-2024	Siena	Niagara	93	88	137925	t	f
+2024-01-19	2023-2024	Siena	Quinnipiac	82	70	137926	f	t
+2024-01-21	2023-2024	Siena	Marist	50	48	137927	f	f
+2024-01-26	2023-2024	Siena	Iona	70	51	137928	f	t
+2024-01-28	2023-2024	Siena	Saint Peter's	63	52	137929	f	t
+2024-02-02	2023-2024	Siena	Rider	91	50	137930	f	f
+2024-02-04	2023-2024	Siena	Mount St. Mary's	68	61	137931	f	t
+2024-02-08	2023-2024	Siena	Marist	67	51	137932	f	t
+2024-02-10	2023-2024	Siena	Manhattan	68	63	137933	t	f
+2024-02-16	2023-2024	Siena	Saint Peter's	75	53	137934	f	f
+2024-02-18	2023-2024	Siena	Canisius	73	64	137935	f	t
+2024-02-25	2023-2024	Siena	Fairfield	88	64	137936	f	f
+2024-03-01	2023-2024	Siena	Manhattan	70	68	137937	f	t
+2024-03-03	2023-2024	Siena	Quinnipiac	71	57	137938	f	f
+2024-03-07	2023-2024	Siena	Niagara	66	59	137939	f	t
+2024-03-09	2023-2024	Siena	Iona	68	54	137940	f	f
+2024-03-12	2023-2024	Siena	Niagara	67	65	137941	f	t
+2023-11-06	2023-2024	South Alabama	vsMobile	83	74	137942	f	t
+2023-11-11	2023-2024	South Alabama	Buffalo	70	56	137943	t	f
+2023-11-14	2023-2024	South Alabama	22 Alabama	102	46	137944	f	f
+2023-11-17	2023-2024	South Alabama	Denver	82	75	137945	t	t
+2023-11-19	2023-2024	South Alabama	SIU Edwardsville	86	74	137946	t	t
+2023-11-21	2023-2024	South Alabama	vsLynn	74	62	137947	t	t
+2023-11-25	2023-2024	South Alabama	Maryland	68	55	137948	f	f
+2023-11-30	2023-2024	South Alabama	Jacksonville State	70	52	137949	f	f
+2023-12-06	2023-2024	South Alabama	Mercer	83	62	137950	t	f
+2023-12-09	2023-2024	South Alabama	vsSpring Hill	91	74	137951	t	t
+2023-12-21	2023-2024	South Alabama	Alabama A&M	83	67	137952	t	t
+2023-12-30	2023-2024	South Alabama	Old Dominion	61	59	137953	t	f
+2024-01-06	2023-2024	South Alabama	Georgia State	90	76	137954	f	t
+2024-01-11	2023-2024	South Alabama	James Madison	89	55	137955	f	f
+2024-01-13	2023-2024	South Alabama	Marshall	91	85	137956	t	f
+2024-01-18	2023-2024	South Alabama	Troy	74	71	137957	t	t
+2024-01-20	2023-2024	South Alabama	Louisiana	88	79	137958	f	t
+2024-01-25	2023-2024	South Alabama	UL Monroe	80	66	137959	f	f
+2024-01-27	2023-2024	South Alabama	Troy	83	79	137960	f	f
+2024-02-01	2023-2024	South Alabama	Texas State	74	66	137961	f	f
+2024-02-03	2023-2024	South Alabama	Louisiana	80	60	137962	f	f
+2024-02-07	2023-2024	South Alabama	Georgia Southern	78	65	137963	t	t
+2024-02-10	2023-2024	South Alabama	Northern Illinois	75	66	137964	t	t
+2024-02-15	2023-2024	South Alabama	Texas State	72	55	137965	t	t
+2024-02-17	2023-2024	South Alabama	Arkansas State	76	73	137966	f	t
+2024-02-22	2023-2024	South Alabama	Southern Miss	83	64	137967	t	f
+2024-02-24	2023-2024	South Alabama	Arkansas State	95	78	137968	f	f
+2024-02-28	2023-2024	South Alabama	Southern Miss	73	70	137969	t	t
+2024-03-01	2023-2024	South Alabama	UL Monroe	80	69	137970	t	t
+2024-03-07	2023-2024	South Alabama	Georgia Southern	76	71	137971	f	t
+2023-11-06	2023-2024	South Carolina	South Carolina Upstate	82	53	137972	t	t
+2023-11-10	2023-2024	South Carolina	Virginia Tech	79	77	137973	t	t
+2023-11-13	2023-2024	South Carolina	VMI	74	64	137974	t	t
+2023-11-17	2023-2024	South Carolina	DePaul	73	68	137975	t	t
+2023-11-19	2023-2024	South Carolina	Grand Canyon	75	68	137976	t	t
+2023-11-28	2023-2024	South Carolina	Notre Dame	65	53	137977	t	t
+2023-12-01	2023-2024	South Carolina	George Washington	89	67	137978	t	t
+2023-12-06	2023-2024	South Carolina	24 Clemson	72	67	137979	f	f
+2023-12-09	2023-2024	South Carolina	East Carolina	68	62	137980	t	f
+2023-12-16	2023-2024	South Carolina	Charleston Southern	73	69	137981	t	t
+2023-12-19	2023-2024	South Carolina	Winthrop	72	62	137982	t	t
+2023-12-22	2023-2024	South Carolina	Elon	70	43	137983	t	t
+2023-12-30	2023-2024	South Carolina	Florida A&M	94	62	137984	t	t
+2024-01-06	2023-2024	South Carolina	Mississippi State	68	62	137985	t	t
+2024-01-09	2023-2024	South Carolina	Alabama	74	47	137986	f	f
+2024-01-16	2023-2024	South Carolina	Georgia	74	69	137987	f	t
+2024-01-20	2023-2024	South Carolina	Arkansas	77	64	137988	t	f
+2024-01-23	2023-2024	South Carolina	6 Kentucky	79	62	137989	t	t
+2024-01-27	2023-2024	South Carolina	Missouri	72	64	137990	t	t
+2024-01-30	2023-2024	South Carolina	5 Tennessee	63	59	137991	t	f
+2024-02-03	2023-2024	South Carolina	Georgia	72	62	137992	t	f
+2024-02-06	2023-2024	South Carolina	Ole Miss	68	65	137993	t	t
+2024-02-10	2023-2024	South Carolina	Vanderbilt	75	60	137994	t	t
+2024-02-14	2023-2024	South Carolina	13 Auburn	101	61	137995	f	f
+2024-02-17	2023-2024	South Carolina	LSU	64	63	137996	f	t
+2024-02-24	2023-2024	South Carolina	Ole Miss	72	59	137997	t	f
+2024-02-28	2023-2024	South Carolina	Texas A&M	70	68	137998	t	f
+2024-03-02	2023-2024	South Carolina	24 Florida	82	76	137999	t	t
+2024-03-06	2023-2024	South Carolina	4 Tennessee	66	59	138000	f	t
+2024-03-14	2023-2024	South Carolina	Arkansas	80	66	138001	t	t
+2024-03-15	2023-2024	South Carolina	12 Auburn	86	55	138002	f	t
+2023-11-06	2023-2024	SC State	vsVoorhees	65	57	138003	t	t
+2023-11-09	2023-2024	SC State	South Florida	96	52	138004	f	f
+2023-11-13	2023-2024	SC State	North Florida	87	77	138005	t	t
+2023-11-17	2023-2024	SC State	Samford	89	72	138006	f	f
+2023-11-20	2023-2024	SC State	Tulsa	90	70	138007	f	f
+2023-11-22	2023-2024	SC State	Missouri	82	59	138008	f	f
+2023-11-25	2023-2024	SC State	Missouri State	92	74	138009	f	f
+2023-11-28	2023-2024	SC State	Furman	86	78	138010	f	f
+2023-12-02	2023-2024	SC State	Charleston Southern	66	64	138011	f	f
+2023-12-09	2023-2024	SC State	Bethune-Cookman	80	71	138012	f	t
+2023-12-16	2023-2024	SC State	Pittsburgh	86	50	138013	f	f
+2023-12-18	2023-2024	SC State	UNC Asheville	79	75	138014	f	f
+2023-12-22	2023-2024	SC State	vsBrewton-Parker	101	84	138015	t	t
+2023-12-29	2023-2024	SC State	Nebraska	91	62	138016	f	f
+2023-12-31	2023-2024	SC State	Oklahoma State	86	70	138017	f	f
+2024-01-06	2023-2024	SC State	Norfolk State	79	72	138018	f	t
+2024-01-08	2023-2024	SC State	Howard	82	78	138019	f	t
+2024-01-20	2023-2024	SC State	North Carolina Central	71	68	138020	t	t
+2024-01-27	2023-2024	SC State	Delaware State	66	64	138021	t	f
+2024-01-29	2023-2024	SC State	Maryland-Eastern Shore	63	53	138022	t	f
+2024-02-03	2023-2024	SC State	Morgan State	72	70	138023	f	t
+2024-02-05	2023-2024	SC State	Coppin State	77	65	138024	t	t
+2024-02-10	2023-2024	SC State	Chicago State	78	55	138025	t	t
+2024-02-19	2023-2024	SC State	Howard	75	68	138026	t	f
+2024-02-24	2023-2024	SC State	Delaware State	69	62	138027	t	t
+2024-02-26	2023-2024	SC State	Maryland-Eastern Shore	64	56	138028	t	t
+2024-03-02	2023-2024	SC State	Morgan State	72	61	138029	t	f
+2024-03-04	2023-2024	SC State	Coppin State	61	58	138030	t	f
+2024-03-07	2023-2024	SC State	North Carolina Central	79	68	138031	f	f
+2024-03-14	2023-2024	SC State	Delaware State	71	58	138032	f	t
+2023-11-06	2023-2024	SC Upstate	South Carolina	82	53	138033	f	f
+2023-11-10	2023-2024	SC Upstate	Vanderbilt	74	67	138034	f	f
+2023-11-12	2023-2024	SC Upstate	vsCarolina University	106	48	138035	t	t
+2023-11-15	2023-2024	SC Upstate	East Carolina	83	81	138036	t	f
+2023-11-18	2023-2024	SC Upstate	Minnesota	67	53	138037	f	f
+2023-11-21	2023-2024	SC Upstate	Ball State	75	58	138038	f	f
+2023-11-25	2023-2024	SC Upstate	vsVoorhees	79	44	138039	t	t
+2023-12-02	2023-2024	SC Upstate	North Carolina Central	85	82	138040	t	f
+2023-12-09	2023-2024	SC Upstate	Kennesaw State	84	77	138041	f	t
+2023-12-16	2023-2024	SC Upstate	Western Carolina	70	53	138042	f	t
+2023-12-21	2023-2024	SC Upstate	Davidson	62	59	138043	f	f
+2023-12-30	2023-2024	SC Upstate	vsCoker	96	76	138044	t	t
+2024-01-03	2023-2024	SC Upstate	UNC Asheville	95	67	138045	f	f
+2024-01-13	2023-2024	SC Upstate	Charleston Southern	77	70	138046	f	f
+2024-01-17	2023-2024	SC Upstate	Longwood	73	71	138047	t	t
+2024-01-20	2023-2024	SC Upstate	Radford	64	61	138048	f	f
+2024-01-24	2023-2024	SC Upstate	High Point	78	67	138049	f	t
+2024-01-27	2023-2024	SC Upstate	Gardner-Webb	75	70	138050	f	f
+2024-01-31	2023-2024	SC Upstate	Presbyterian	80	73	138051	f	f
+2024-02-03	2023-2024	SC Upstate	Radford	78	69	138052	t	t
+2024-02-07	2023-2024	SC Upstate	Longwood	69	64	138053	t	f
+2024-02-10	2023-2024	SC Upstate	UNC Asheville	77	64	138054	f	t
+2024-02-17	2023-2024	SC Upstate	Gardner-Webb	73	65	138055	f	t
+2024-02-21	2023-2024	SC Upstate	Charleston Southern	63	60	138056	f	t
+2024-02-24	2023-2024	SC Upstate	Winthrop	83	74	138057	f	f
+2024-02-28	2023-2024	SC Upstate	Presbyterian	74	72	138058	t	t
+2024-03-06	2023-2024	SC Upstate	Radford	67	60	138059	f	t
+2023-11-06	2023-2024	South Dakota	vsMount Marty College	85	53	138060	t	t
+2023-11-10	2023-2024	South Dakota	UT Rio Grande Valley	100	79	138061	t	t
+2023-11-14	2023-2024	South Dakota	DePaul	72	60	138062	f	f
+2023-11-17	2023-2024	South Dakota	VMI	85	81	138063	t	t
+2023-11-18	2023-2024	South Dakota	Purdue Fort Wayne	93	81	138064	f	t
+2023-11-22	2023-2024	South Dakota	vsNorthland	100	48	138065	t	t
+2023-11-26	2023-2024	South Dakota	Air Force	58	57	138066	f	t
+2023-11-28	2023-2024	South Dakota	vsWaldorf College	93	71	138067	t	t
+2023-12-03	2023-2024	South Dakota	Western Illinois	70	68	138068	t	f
+2023-12-09	2023-2024	South Dakota	Cal State Bakersfield	78	73	138069	t	t
+2023-12-16	2023-2024	South Dakota	UC Irvine	121	78	138070	f	f
+2023-12-19	2023-2024	South Dakota	Cal State Bakersfield	96	76	138071	f	f
+2023-12-21	2023-2024	South Dakota	San Diego	69	66	138072	f	f
+2023-12-29	2023-2024	South Dakota	North Dakota State	75	66	138073	t	f
+2023-12-31	2023-2024	South Dakota	Omaha	67	51	138074	f	t
+2024-01-03	2023-2024	South Dakota	Eastern Washington	93	79	138075	f	t
+2024-01-06	2023-2024	South Dakota	Montana	82	63	138076	f	f
+2024-01-11	2023-2024	South Dakota	Oral Roberts	84	66	138077	f	f
+2024-01-20	2023-2024	South Dakota	South Dakota State	73	55	138078	f	t
+2024-01-27	2023-2024	South Dakota	Kansas City	81	57	138079	f	f
+2024-02-01	2023-2024	South Dakota	North Dakota	95	81	138080	f	t
+2024-02-04	2023-2024	South Dakota	South Dakota State	70	67	138081	f	f
+2024-02-15	2023-2024	South Dakota	Omaha	91	84	138082	f	f
+2024-02-17	2023-2024	South Dakota	St. Thomas-Minnesota	83	80	138083	f	f
+2024-02-22	2023-2024	South Dakota	Kansas City	82	78	138084	f	t
+2024-02-24	2023-2024	South Dakota	Oral Roberts	77	76	138085	t	t
+2024-02-29	2023-2024	South Dakota	North Dakota State	88	68	138086	t	t
+2024-03-02	2023-2024	South Dakota	North Dakota	95	66	138087	f	f
+2024-03-08	2023-2024	South Dakota	Oral Roberts	77	62	138088	f	t
+2023-11-06	2023-2024	South Dakota State	Akron	81	75	138089	f	t
+2023-11-08	2023-2024	South Dakota State	vsDakota Wesleyan	83	55	138090	t	t
+2023-11-13	2023-2024	South Dakota State	Kansas State	91	68	138091	f	f
+2023-11-19	2023-2024	South Dakota State	UCF	83	80	138092	f	t
+2023-11-20	2023-2024	South Dakota State	George Mason	73	71	138093	f	t
+2023-11-22	2023-2024	South Dakota State	Southern Miss	65	54	138094	t	f
+2023-11-27	2023-2024	South Dakota State	vsMount Marty College	92	70	138095	t	t
+2023-12-01	2023-2024	South Dakota State	Towson	61	48	138096	t	t
+2023-12-05	2023-2024	South Dakota State	Kent State	82	73	138097	f	t
+2023-12-09	2023-2024	South Dakota State	Wichita State	79	69	138098	t	t
+2023-12-14	2023-2024	South Dakota State	vsMayville State	94	62	138099	t	t
+2023-12-20	2023-2024	South Dakota State	Wyoming	78	65	138100	f	t
+2023-12-21	2023-2024	South Dakota State	Norfolk State	84	65	138101	f	t
+2023-12-31	2023-2024	South Dakota State	North Dakota	80	61	138102	t	t
+2024-01-03	2023-2024	South Dakota State	Weber State	75	73	138103	f	f
+2024-01-06	2023-2024	South Dakota State	Montana State	89	61	138104	t	t
+2024-01-11	2023-2024	South Dakota State	St. Thomas-Minnesota	81	80	138105	t	f
+2024-01-13	2023-2024	South Dakota State	Denver	99	80	138106	f	f
+2024-01-18	2023-2024	South Dakota State	Omaha	90	87	138107	t	t
+2024-01-20	2023-2024	South Dakota State	South Dakota	73	55	138108	t	f
+2024-01-25	2023-2024	South Dakota State	Kansas City	75	66	138109	t	t
+2024-01-27	2023-2024	South Dakota State	Oral Roberts	87	82	138110	f	f
+2024-02-04	2023-2024	South Dakota State	South Dakota	70	67	138111	t	t
+2024-02-10	2023-2024	South Dakota State	Oral Roberts	83	72	138112	t	t
+2024-02-15	2023-2024	South Dakota State	Kansas City	72	67	138113	f	f
+2024-02-22	2023-2024	South Dakota State	Denver	97	70	138114	t	t
+2024-02-24	2023-2024	South Dakota State	St. Thomas-Minnesota	77	72	138115	t	t
+2024-02-29	2023-2024	South Dakota State	North Dakota	72	62	138116	t	f
+2024-03-02	2023-2024	South Dakota State	North Dakota State	78	61	138117	t	f
+2024-03-09	2023-2024	South Dakota State	Oral Roberts	79	63	138118	t	t
+2024-03-11	2023-2024	South Dakota State	St. Thomas-Minnesota	59	49	138119	t	t
+2024-03-12	2023-2024	South Dakota State	Denver	76	68	138120	t	t
+2023-11-09	2023-2024	South Florida	South Carolina State	96	52	138121	t	t
+2023-11-15	2023-2024	South Florida	Central Michigan	68	63	138122	f	t
+2023-11-19	2023-2024	South Florida	Northern Iowa	74	65	138123	t	t
+2023-11-22	2023-2024	South Florida	Maine	70	59	138124	f	t
+2023-11-30	2023-2024	South Florida	Hofstra	82	63	138125	f	f
+2023-12-02	2023-2024	South Florida	Massachusetts	66	56	138126	f	f
+2023-12-09	2023-2024	South Florida	Florida State	88	72	138127	t	t
+2023-12-12	2023-2024	South Florida	Arkansas-Pine Bluff	104	86	138128	t	t
+2023-12-16	2023-2024	South Florida	Loyola Chicago	77	64	138129	t	t
+2023-12-22	2023-2024	South Florida	UAlbany	89	73	138130	t	t
+2023-12-29	2023-2024	South Florida	Alabama State	73	70	138131	t	t
+2024-01-04	2023-2024	South Florida	Temple	76	68	138132	t	t
+2024-01-07	2023-2024	South Florida	UAB	75	71	138133	f	f
+2024-01-12	2023-2024	South Florida	Rice	81	73	138134	t	t
+2024-01-18	2023-2024	South Florida	10 Memphis	74	73	138135	t	f
+2024-01-21	2023-2024	South Florida	Wichita State	72	68	138136	t	t
+2024-01-24	2023-2024	South Florida	Temple	75	69	138137	t	f
+2024-01-27	2023-2024	South Florida	UTSA	89	72	138138	t	t
+2024-01-31	2023-2024	South Florida	East Carolina	71	60	138139	t	f
+2024-02-03	2023-2024	South Florida	North Texas	60	55	138140	t	f
+2024-02-06	2023-2024	South Florida	Charlotte	72	69	138141	t	t
+2024-02-10	2023-2024	South Florida	Rice	69	65	138142	t	f
+2024-02-14	2023-2024	South Florida	Tulsa	69	50	138143	t	t
+2024-02-18	2023-2024	South Florida	24 Florida Atlantic	90	86	138144	t	t
+2024-02-21	2023-2024	South Florida	UTSA	66	61	138145	t	f
+2024-02-25	2023-2024	South Florida	SMU	79	68	138146	t	t
+2024-03-02	2023-2024	South Florida	Charlotte	76	61	138147	t	f
+2024-03-05	2023-2024	South Florida	Tulane	85	72	138148	t	t
+2024-03-09	2023-2024	South Florida	Tulsa	76	70	138149	f	f
+2024-03-15	2023-2024	South Florida	East Carolina	81	59	138150	t	t
+2024-03-16	2023-2024	South Florida	UAB	93	83	138151	f	t
+2023-11-06	2023-2024	SE Missouri	Grand Canyon	88	67	138152	f	f
+2023-11-10	2023-2024	SE Missouri	Butler	91	56	138153	f	f
+2023-11-15	2023-2024	SE Missouri	Evansville	76	57	138154	f	t
+2023-11-20	2023-2024	SE Missouri	Central Arkansas	70	68	138155	t	t
+2023-11-25	2023-2024	SE Missouri	Evansville	93	74	138156	f	t
+2023-11-26	2023-2024	SE Missouri	Chattanooga	72	56	138157	f	f
+2023-11-30	2023-2024	SE Missouri	Kansas City	74	44	138158	f	f
+2023-12-03	2023-2024	SE Missouri	vsMissouri Baptist	84	56	138159	t	t
+2023-12-06	2023-2024	SE Missouri	vsHarris-Stowe State	95	45	138160	t	t
+2023-12-09	2023-2024	SE Missouri	Purdue Fort Wayne	89	80	138161	f	f
+2023-12-17	2023-2024	SE Missouri	vsLindsey Wilson College	87	59	138162	t	t
+2023-12-21	2023-2024	SE Missouri	Illinois State	85	64	138163	f	f
+2023-12-31	2023-2024	SE Missouri	Morehead State	83	64	138164	f	t
+2024-01-04	2023-2024	SE Missouri	Western Illinois	68	61	138165	f	f
+2024-01-06	2023-2024	SE Missouri	vsBethel (TN)	71	61	138166	t	t
+2024-01-11	2023-2024	SE Missouri	Lindenwood	74	68	138167	f	t
+2024-01-13	2023-2024	SE Missouri	Tennessee Tech	70	59	138168	f	f
+2024-01-20	2023-2024	SE Missouri	SIU Edwardsville	52	47	138169	t	t
+2024-01-25	2023-2024	SE Missouri	UT Martin	84	58	138170	f	f
+2024-01-27	2023-2024	SE Missouri	Little Rock	66	61	138171	f	f
+2024-01-30	2023-2024	SE Missouri	Lindenwood	58	54	138172	f	f
+2024-02-03	2023-2024	SE Missouri	Western Illinois	76	55	138173	f	t
+2024-02-08	2023-2024	SE Missouri	Tennessee Tech	88	69	138174	t	t
+2024-02-10	2023-2024	SE Missouri	Tennessee State	77	74	138175	f	t
+2024-02-15	2023-2024	SE Missouri	Eastern Illinois	75	57	138176	f	f
+2024-02-17	2023-2024	SE Missouri	SIU Edwardsville	80	76	138177	f	f
+2024-02-22	2023-2024	SE Missouri	Little Rock	83	61	138178	f	t
+2024-02-24	2023-2024	SE Missouri	UT Martin	82	72	138179	f	t
+2024-02-29	2023-2024	SE Missouri	Morehead State	72	50	138180	f	f
+2024-03-02	2023-2024	SE Missouri	Southern Indiana	70	66	138181	t	f
+2023-11-06	2023-2024	South Illinois	vsKentucky State	88	57	138182	t	t
+2023-11-10	2023-2024	South Illinois	Queens University	91	68	138183	t	t
+2023-11-16	2023-2024	South Illinois	Chicago State	71	55	138184	t	t
+2023-11-21	2023-2024	South Illinois	22 James Madison	82	76	138185	f	t
+2023-11-22	2023-2024	South Illinois	New Mexico State	81	54	138186	t	t
+2023-11-28	2023-2024	South Illinois	Indiana State	77	48	138187	f	f
+2023-12-02	2023-2024	South Illinois	Saint Louis	101	62	138188	t	t
+2023-12-05	2023-2024	South Illinois	Oklahoma State	70	68	138189	t	t
+2023-12-12	2023-2024	South Illinois	Austin Peay	70	68	138190	f	t
+2023-12-16	2023-2024	South Illinois	Wichita State	69	68	138191	f	f
+2023-12-19	2023-2024	South Illinois	North Dakota State	76	63	138192	t	t
+2023-12-22	2023-2024	South Illinois	Southern Indiana	81	50	138193	t	t
+2023-12-30	2023-2024	South Illinois	UIC	62	50	138194	t	t
+2024-01-02	2023-2024	South Illinois	Belmont	73	63	138195	t	t
+2024-01-06	2023-2024	South Illinois	Illinois State	71	64	138196	t	f
+2024-01-10	2023-2024	South Illinois	Valparaiso	77	68	138197	t	f
+2024-01-13	2023-2024	South Illinois	Drake	76	58	138198	f	t
+2024-01-17	2023-2024	South Illinois	Bradley	70	69	138199	f	t
+2024-01-20	2023-2024	South Illinois	Northern Iowa	61	57	138200	f	f
+2024-01-24	2023-2024	South Illinois	Valparaiso	75	69	138201	t	t
+2024-01-27	2023-2024	South Illinois	Murray State	60	58	138202	t	f
+2024-02-03	2023-2024	South Illinois	UIC	74	71	138203	t	f
+2024-02-10	2023-2024	South Illinois	Illinois State	69	66	138204	t	t
+2024-02-14	2023-2024	South Illinois	Belmont	82	68	138205	f	f
+2024-02-17	2023-2024	South Illinois	23 Indiana State	74	69	138206	t	t
+2024-02-21	2023-2024	South Illinois	Murray State	72	68	138207	t	t
+2024-02-25	2023-2024	South Illinois	Evansville	65	53	138208	t	f
+2024-02-28	2023-2024	South Illinois	Bradley	86	67	138209	f	f
+2024-03-03	2023-2024	South Illinois	Northern Iowa	82	70	138210	f	t
+2023-11-06	2023-2024	Southern	TCU	108	75	138211	f	f
+2023-11-08	2023-2024	Southern	UNLV	85	71	138212	t	f
+2023-11-13	2023-2024	Southern	3 Arizona	97	59	138213	f	f
+2023-11-19	2023-2024	Southern	23 Illinois	88	60	138214	f	f
+2023-11-25	2023-2024	Southern	Valparaiso	71	59	138215	f	f
+2023-11-28	2023-2024	Southern	3 Marquette	93	56	138216	f	f
+2023-12-03	2023-2024	Southern	21 Mississippi State	60	59	138217	t	f
+2023-12-09	2023-2024	Southern	SE Louisiana	69	44	138218	t	t
+2023-12-12	2023-2024	Southern	vsChampion Christian	109	61	138219	t	t
+2023-12-16	2023-2024	Southern	Tulane	105	81	138220	f	f
+2023-12-19	2023-2024	Southern	vsWiley	82	49	138221	t	t
+2023-12-31	2023-2024	Southern	vsEcclesia	115	42	138222	t	t
+2024-01-06	2023-2024	Southern	Texas Southern	58	51	138223	t	t
+2024-01-08	2023-2024	Southern	Prairie View A&M	79	58	138224	t	t
+2024-01-13	2023-2024	Southern	Florida A&M	74	65	138225	t	f
+2024-01-20	2023-2024	Southern	Grambling	79	62	138226	f	f
+2024-01-27	2023-2024	Southern	Arkansas-Pine Bluff	80	66	138227	t	t
+2024-01-29	2023-2024	Southern	Mississippi Valley State	78	54	138228	t	t
+2024-02-03	2023-2024	Southern	Alcorn State	71	70	138229	t	f
+2024-02-05	2023-2024	Southern	Jackson State	72	63	138230	t	f
+2024-02-10	2023-2024	Southern	Alabama A&M	69	62	138231	t	t
+2024-02-12	2023-2024	Southern	Alabama State	73	62	138232	t	t
+2024-02-17	2023-2024	Southern	Prairie View A&M	77	71	138233	t	f
+2024-02-19	2023-2024	Southern	Texas Southern	68	56	138234	f	f
+2024-02-24	2023-2024	Southern	Grambling	63	57	138235	f	t
+2024-03-02	2023-2024	Southern	Bethune-Cookman	67	61	138236	f	t
+2024-03-04	2023-2024	Southern	Florida A&M	58	44	138237	t	t
+2024-03-07	2023-2024	Southern	Alabama State	65	57	138238	t	f
+2024-03-09	2023-2024	Southern	Alabama A&M	66	56	138239	f	f
+2024-03-14	2023-2024	Southern	Bethune-Cookman	73	58	138240	f	t
+2023-11-06	2023-2024	Southern Miss	vsWilliam Carey	64	42	138241	t	t
+2023-11-10	2023-2024	Southern Miss	Akron	72	54	138242	f	f
+2023-11-15	2023-2024	Southern Miss	vsXavier (LA)	76	45	138243	t	t
+2023-11-19	2023-2024	Southern Miss	Utah Valley	67	65	138244	f	t
+2023-11-20	2023-2024	Southern Miss	Cal State Fullerton	74	67	138245	f	t
+2023-11-22	2023-2024	Southern Miss	South Dakota State	65	54	138246	f	t
+2023-11-25	2023-2024	Southern Miss	Milwaukee	90	84	138247	t	f
+2023-12-01	2023-2024	Southern Miss	UAB	85	82	138248	t	f
+2023-12-09	2023-2024	Southern Miss	Northwestern State	83	74	138249	t	t
+2023-12-13	2023-2024	Southern Miss	McNeese	67	48	138250	f	f
+2023-12-18	2023-2024	Southern Miss	Lamar	82	79	138251	t	f
+2023-12-23	2023-2024	Southern Miss	25 Ole Miss	89	72	138252	f	t
+2023-12-30	2023-2024	Southern Miss	Georgia Southern	88	67	138253	f	f
+2024-01-04	2023-2024	Southern Miss	Georgia State	79	73	138254	t	t
+2024-01-06	2023-2024	Southern Miss	19 James Madison	81	71	138255	t	t
+2024-01-11	2023-2024	Southern Miss	UL Monroe	71	58	138256	t	f
+2024-01-13	2023-2024	Southern Miss	Troy	82	56	138257	f	f
+2024-01-17	2023-2024	Southern Miss	Arkansas State	69	66	138258	t	t
+2024-01-20	2023-2024	Southern Miss	Troy	64	63	138259	t	t
+2024-01-24	2023-2024	Southern Miss	Coastal Carolina	79	63	138260	t	f
+2024-01-27	2023-2024	Southern Miss	Marshall	83	67	138261	f	f
+2024-01-31	2023-2024	Southern Miss	Arkansas State	78	71	138262	f	f
+2024-02-03	2023-2024	Southern Miss	Texas State	60	55	138263	f	f
+2024-02-07	2023-2024	Southern Miss	Old Dominion	78	73	138264	t	t
+2024-02-10	2023-2024	Southern Miss	Western Michigan	86	54	138265	t	t
+2024-02-15	2023-2024	Southern Miss	UL Monroe	68	59	138266	f	t
+2024-02-17	2023-2024	Southern Miss	Texas State	78	74	138267	t	t
+2024-02-22	2023-2024	Southern Miss	South Alabama	83	64	138268	f	t
+2024-02-24	2023-2024	Southern Miss	Louisiana	82	71	138269	t	t
+2024-02-28	2023-2024	Southern Miss	South Alabama	73	70	138270	f	f
+2024-03-01	2023-2024	Southern Miss	Louisiana	77	61	138271	f	f
+2024-03-07	2023-2024	Southern Miss	Texas State	75	59	138272	f	t
+2023-11-06	2023-2024	Southern Utah	Cal State Bakersfield	73	72	138273	f	f
+2023-11-09	2023-2024	Southern Utah	vsLife Pacific	108	73	138274	t	t
+2023-11-14	2023-2024	Southern Utah	Utah State	93	84	138275	f	f
+2023-11-21	2023-2024	Southern Utah	Louisiana Tech	67	53	138276	f	f
+2023-11-22	2023-2024	Southern Utah	Texas State	74	67	138277	t	t
+2023-11-29	2023-2024	Southern Utah	California Baptist	91	66	138278	f	t
+2023-12-02	2023-2024	Southern Utah	Seattle U	73	63	138279	f	f
+2023-12-05	2023-2024	Southern Utah	Utah	88	86	138280	f	f
+2023-12-09	2023-2024	Southern Utah	Idaho State	82	74	138281	t	t
+2023-12-16	2023-2024	Southern Utah	Northern Arizona	76	74	138282	f	f
+2023-12-22	2023-2024	Southern Utah	Middle Tennessee	69	63	138283	t	t
+2023-12-30	2023-2024	Southern Utah	vsAntelope Valley	95	78	138284	t	t
+2024-01-04	2023-2024	Southern Utah	Grand Canyon	96	75	138285	f	t
+2024-01-06	2023-2024	Southern Utah	Utah Valley	80	62	138286	f	f
+2024-01-13	2023-2024	Southern Utah	Stephen F. Austin	84	82	138287	f	t
+2024-01-18	2023-2024	Southern Utah	Utah Tech	75	65	138288	t	t
+2024-01-20	2023-2024	Southern Utah	California Baptist	83	76	138289	f	f
+2024-01-25	2023-2024	Southern Utah	Tarleton State	73	70	138290	t	f
+2024-01-27	2023-2024	Southern Utah	Abilene Christian	82	67	138291	t	f
+2024-02-01	2023-2024	Southern Utah	UT Arlington	76	68	138292	f	t
+2024-02-03	2023-2024	Southern Utah	UT Rio Grande Valley	79	59	138293	t	t
+2024-02-08	2023-2024	Southern Utah	Utah Tech	70	68	138294	f	f
+2024-02-10	2023-2024	Southern Utah	Grand Canyon	94	65	138295	f	f
+2024-02-15	2023-2024	Southern Utah	Seattle U	78	68	138296	f	t
+2024-02-17	2023-2024	Southern Utah	Utah Valley	78	75	138297	f	t
+2024-02-22	2023-2024	Southern Utah	UT Arlington	90	85	138298	f	f
+2024-02-29	2023-2024	Southern Utah	Abilene Christian	77	68	138299	f	t
+2024-03-02	2023-2024	Southern Utah	Tarleton State	88	83	138300	f	t
+2024-03-07	2023-2024	Southern Utah	Stephen F. Austin	87	60	138301	f	f
+2024-03-09	2023-2024	Southern Utah	UT Rio Grande Valley	68	59	138302	t	f
+2023-11-06	2023-2024	St Bonaventure	Longwood	73	69	138303	t	t
+2023-11-11	2023-2024	St Bonaventure	Canisius	70	67	138304	f	t
+2023-11-16	2023-2024	St Bonaventure	Oklahoma State	66	64	138305	t	t
+2023-11-17	2023-2024	St Bonaventure	Auburn	77	60	138306	f	t
+2023-11-22	2023-2024	St Bonaventure	Bucknell	67	61	138307	t	t
+2023-11-25	2023-2024	St Bonaventure	Miami (OH)	90	60	138308	t	t
+2023-12-02	2023-2024	St Bonaventure	Buffalo	80	65	138309	t	f
+2023-12-06	2023-2024	St Bonaventure	Niagara	94	60	138310	t	f
+2023-12-09	2023-2024	St Bonaventure	Siena	89	56	138311	t	t
+2023-12-16	2023-2024	St Bonaventure	15 Florida Atlantic	64	54	138312	f	t
+2023-12-22	2023-2024	St Bonaventure	Binghamton	90	64	138313	t	t
+2023-12-30	2023-2024	St Bonaventure	Akron	62	61	138314	t	t
+2024-01-03	2023-2024	St Bonaventure	VCU	89	78	138315	t	f
+2024-01-06	2023-2024	St Bonaventure	Richmond	65	54	138316	f	f
+2024-01-13	2023-2024	St Bonaventure	Fordham	80	74	138317	f	t
+2024-01-17	2023-2024	St Bonaventure	Rhode Island	99	64	138318	t	t
+2024-01-20	2023-2024	St Bonaventure	George Mason	69	60	138319	f	f
+2024-01-23	2023-2024	St Bonaventure	Duquesne	54	50	138320	f	f
+2024-01-26	2023-2024	St Bonaventure	Saint Joseph's	91	72	138321	t	t
+2024-01-30	2023-2024	St Bonaventure	VCU	67	62	138322	t	t
+2024-02-02	2023-2024	St Bonaventure	21 Dayton	76	71	138323	f	f
+2024-02-07	2023-2024	St Bonaventure	Massachusetts	79	73	138324	t	t
+2024-02-10	2023-2024	St Bonaventure	Duquesne	75	69	138325	f	t
+2024-02-14	2023-2024	St Bonaventure	Fordham	85	67	138326	t	f
+2024-02-21	2023-2024	St Bonaventure	La Salle	72	59	138327	f	f
+2024-02-24	2023-2024	St Bonaventure	Massachusetts	75	67	138328	t	f
+2024-02-27	2023-2024	St Bonaventure	Loyola Chicago	79	64	138329	t	t
+2024-03-06	2023-2024	St Bonaventure	George Washington	86	75	138330	f	f
+2024-03-09	2023-2024	St Bonaventure	Saint Louis	73	65	138331	f	t
+2024-03-13	2023-2024	St Bonaventure	La Salle	75	73	138332	t	t
+2024-03-16	2023-2024	St Bonaventure	Duquesne	70	60	138333	f	t
+2023-11-06	2023-2024	St Francis PA	UCLA	75	44	138334	f	f
+2023-11-09	2023-2024	St Francis PA	San Francisco	84	52	138335	f	f
+2023-11-11	2023-2024	St Francis PA	Santa Clara	82	59	138336	f	f
+2023-11-14	2023-2024	St Francis PA	Penn State	83	53	138337	f	f
+2023-11-20	2023-2024	St Francis PA	vsPittsburgh - Greensburg	77	63	138338	t	t
+2023-11-22	2023-2024	St Francis PA	vsFranciscan University	107	54	138339	t	t
+2023-11-25	2023-2024	St Francis PA	Niagara	69	61	138340	f	t
+2023-11-29	2023-2024	St Francis PA	Lehigh	62	61	138341	t	f
+2023-12-02	2023-2024	St Francis PA	American University	75	73	138342	t	f
+2023-12-10	2023-2024	St Francis PA	Iona	61	54	138343	f	f
+2023-12-15	2023-2024	St Francis PA	Mount St. Mary's	72	65	138344	f	t
+2023-12-20	2023-2024	St Francis PA	Robert Morris	75	73	138345	f	t
+2023-12-30	2023-2024	St Francis PA	Campbell	78	76	138346	t	t
+2024-01-04	2023-2024	St Francis PA	Sacred Heart	79	67	138347	f	f
+2024-01-06	2023-2024	St Francis PA	Wagner	71	56	138348	f	f
+2024-01-13	2023-2024	St Francis PA	Central Connecticut	75	61	138349	f	t
+2024-01-15	2023-2024	St Francis PA	Fairleigh Dickinson	81	71	138350	f	t
+2024-01-19	2023-2024	St Francis PA	Long Island University	72	66	138351	t	t
+2024-01-21	2023-2024	St Francis PA	Le Moyne	94	57	138352	f	f
+2024-01-25	2023-2024	St Francis PA	Sacred Heart	75	71	138353	t	t
+2024-01-27	2023-2024	St Francis PA	Merrimack	74	55	138354	f	t
+2024-02-01	2023-2024	St Francis PA	Central Connecticut	63	62	138355	f	f
+2024-02-03	2023-2024	St Francis PA	Long Island University	70	67	138356	f	f
+2024-02-10	2023-2024	St Francis PA	Stonehill	72	63	138357	t	t
+2024-02-17	2023-2024	St Francis PA	Fairleigh Dickinson	93	74	138358	f	f
+2024-02-22	2023-2024	St Francis PA	Merrimack	71	60	138359	f	f
+2024-02-24	2023-2024	St Francis PA	Stonehill	72	63	138360	f	f
+2024-03-02	2023-2024	St Francis PA	Le Moyne	74	58	138361	f	t
+2024-03-06	2023-2024	St Francis PA	Central Connecticut	71	62	138362	f	f
+2023-11-07	2023-2024	St John's	Stony Brook	90	74	138363	t	t
+2023-11-13	2023-2024	St John's	Michigan	89	73	138364	f	t
+2023-11-16	2023-2024	St John's	North Texas	53	52	138365	t	t
+2023-11-17	2023-2024	St John's	Dayton	88	81	138366	f	t
+2023-11-19	2023-2024	St John's	Utah	91	82	138367	t	t
+2023-11-25	2023-2024	St John's	Holy Cross	91	45	138368	t	t
+2023-12-01	2023-2024	St John's	West Virginia	79	73	138369	t	f
+2023-12-06	2023-2024	St John's	Sacred Heart	85	50	138370	t	t
+2023-12-10	2023-2024	St John's	Boston College	86	80	138371	f	t
+2023-12-16	2023-2024	St John's	Fordham	77	55	138372	t	t
+2023-12-20	2023-2024	St John's	Xavier	81	66	138373	t	t
+2023-12-23	2023-2024	St John's	5 UConn	69	65	138374	f	f
+2023-12-30	2023-2024	St John's	Hofstra	84	79	138375	t	t
+2024-01-02	2023-2024	St John's	Butler	86	70	138376	t	t
+2024-01-06	2023-2024	St John's	Villanova	81	71	138377	t	f
+2024-01-10	2023-2024	St John's	Providence	75	73	138378	t	t
+2024-01-13	2023-2024	St John's	22 Creighton	66	65	138379	f	f
+2024-01-16	2023-2024	St John's	Seton Hall	80	65	138380	f	f
+2024-01-20	2023-2024	St John's	17 Marquette	73	72	138381	f	t
+2024-01-24	2023-2024	St John's	Villanova	70	50	138382	t	t
+2024-01-31	2023-2024	St John's	Xavier	88	77	138383	f	f
+2024-02-03	2023-2024	St John's	1 UConn	77	64	138384	f	t
+2024-02-06	2023-2024	St John's	DePaul	85	57	138385	t	t
+2024-02-10	2023-2024	St John's	7 Marquette	86	75	138386	f	f
+2024-02-13	2023-2024	St John's	Providence	75	72	138387	f	f
+2024-02-18	2023-2024	St John's	Seton Hall	68	62	138388	f	t
+2024-02-21	2023-2024	St John's	Georgetown	90	85	138389	t	f
+2024-02-25	2023-2024	St John's	15 Creighton	80	66	138390	t	t
+2024-02-28	2023-2024	St John's	Butler	82	59	138391	t	f
+2024-03-05	2023-2024	St John's	DePaul	104	77	138392	t	f
+2024-03-09	2023-2024	St John's	Georgetown	86	78	138393	t	t
+2024-03-14	2023-2024	St John's	Seton Hall	91	72	138394	t	f
+2024-03-15	2023-2024	St John's	2 UConn	95	90	138395	f	f
+2023-11-06	2023-2024	St Thomas (MN)	California	71	66	138396	f	f
+2023-11-10	2023-2024	St Thomas (MN)	Idaho State	54	53	138397	t	t
+2023-11-12	2023-2024	St Thomas (MN)	vsNorth Central (MN)	100	54	138398	t	t
+2023-11-17	2023-2024	St Thomas (MN)	Cal Poly	61	60	138399	f	t
+2023-11-18	2023-2024	St Thomas (MN)	California Baptist	66	62	138400	f	f
+2023-11-19	2023-2024	St Thomas (MN)	Portland State	76	70	138401	t	t
+2023-11-25	2023-2024	St Thomas (MN)	Green Bay	64	51	138402	f	f
+2023-12-01	2023-2024	St Thomas (MN)	Western Michigan	65	51	138403	t	f
+2023-12-06	2023-2024	St Thomas (MN)	Milwaukee	75	71	138404	t	t
+2023-12-10	2023-2024	St Thomas (MN)	Chicago State	66	50	138405	t	f
+2023-12-14	2023-2024	St Thomas (MN)	7 Marquette	84	79	138406	f	f
+2023-12-17	2023-2024	St Thomas (MN)	vsCrown College	85	66	138407	t	t
+2023-12-21	2023-2024	St Thomas (MN)	vsUniversity of Wisconsin River Falls	104	51	138408	t	t
+2023-12-29	2023-2024	St Thomas (MN)	North Dakota	70	45	138409	t	f
+2023-12-31	2023-2024	St Thomas (MN)	Kansas City	77	56	138410	t	t
+2024-01-03	2023-2024	St Thomas (MN)	Idaho	75	67	138411	t	f
+2024-01-06	2023-2024	St Thomas (MN)	Sacramento State	63	50	138412	t	t
+2024-01-11	2023-2024	St Thomas (MN)	South Dakota State	81	80	138413	f	t
+2024-01-13	2023-2024	St Thomas (MN)	Oral Roberts	87	76	138414	t	f
+2024-01-25	2023-2024	St Thomas (MN)	North Dakota State	79	66	138415	t	t
+2024-01-27	2023-2024	St Thomas (MN)	North Dakota	74	64	138416	f	t
+2024-02-01	2023-2024	St Thomas (MN)	Omaha	69	65	138417	f	f
+2024-02-03	2023-2024	St Thomas (MN)	Kansas City	71	56	138418	t	f
+2024-02-08	2023-2024	St Thomas (MN)	Oral Roberts	85	63	138419	t	t
+2024-02-10	2023-2024	St Thomas (MN)	Denver	94	77	138420	f	f
+2024-02-17	2023-2024	St Thomas (MN)	South Dakota	83	80	138421	t	t
+2024-02-22	2023-2024	St Thomas (MN)	North Dakota State	64	50	138422	f	f
+2024-02-24	2023-2024	St Thomas (MN)	South Dakota State	77	72	138423	f	f
+2024-02-29	2023-2024	St Thomas (MN)	Omaha	88	61	138424	t	t
+2024-03-02	2023-2024	St Thomas (MN)	Denver	83	58	138425	t	t
+2024-03-10	2023-2024	St Thomas (MN)	North Dakota State	68	58	138426	t	t
+2024-03-11	2023-2024	St Thomas (MN)	South Dakota State	59	49	138427	f	t
+2023-11-06	2023-2024	Stanford	Cal State Northridge	88	79	138428	t	t
+2023-11-10	2023-2024	Stanford	Sacramento State	91	73	138429	t	t
+2023-11-14	2023-2024	Stanford	Santa Clara	89	77	138430	f	t
+2023-11-17	2023-2024	Stanford	Eastern Washington	95	70	138431	t	t
+2023-11-23	2023-2024	Stanford	Michigan	83	78	138432	f	t
+2023-11-24	2023-2024	Stanford	Northern Iowa	73	51	138433	f	t
+2023-12-03	2023-2024	Stanford	San Diego	88	64	138434	t	t
+2023-12-17	2023-2024	Stanford	Idaho	82	64	138435	t	t
+2023-12-21	2023-2024	Stanford	San Diego State	74	60	138436	f	f
+2023-12-29	2023-2024	Stanford	Arizona State	76	73	138437	f	t
+2023-12-31	2023-2024	Stanford	4 Arizona	100	82	138438	t	t
+2024-01-03	2023-2024	Stanford	UCLA	59	53	138439	t	f
+2024-01-06	2023-2024	Stanford	USC	93	79	138440	f	f
+2024-01-14	2023-2024	Stanford	Utah	79	73	138441	t	t
+2024-01-18	2023-2024	Stanford	Washington State	89	75	138442	f	t
+2024-01-20	2023-2024	Stanford	Washington	90	80	138443	t	t
+2024-01-26	2023-2024	Stanford	California	73	71	138444	f	f
+2024-02-01	2023-2024	Stanford	Arizona State	71	62	138445	t	f
+2024-02-04	2023-2024	Stanford	11 Arizona	82	71	138446	f	f
+2024-02-07	2023-2024	Stanford	UCLA	82	74	138447	f	t
+2024-02-10	2023-2024	Stanford	USC	99	68	138448	t	t
+2024-02-15	2023-2024	Stanford	Washington	85	65	138449	f	f
+2024-02-17	2023-2024	Stanford	Washington State	72	59	138450	f	f
+2024-02-22	2023-2024	Stanford	Oregon	78	65	138451	f	t
+2024-02-24	2023-2024	Stanford	Oregon State	85	73	138452	f	t
+2024-02-29	2023-2024	Stanford	Utah	90	68	138453	f	f
+2024-03-03	2023-2024	Stanford	Colorado	81	71	138454	f	f
+2024-03-07	2023-2024	Stanford	California	80	58	138455	t	t
+2024-03-14	2023-2024	Stanford	22 Washington State	79	62	138456	f	t
+2023-11-06	2023-2024	SF Austin	vsNorth American	96	68	138457	t	t
+2023-11-13	2023-2024	SF Austin	Northwestern State	96	70	138458	t	f
+2023-11-19	2023-2024	SF Austin	Loyola Marymount	86	76	138459	t	t
+2023-11-20	2023-2024	SF Austin	Drake	92	68	138460	t	t
+2023-11-21	2023-2024	SF Austin	Utah State	79	49	138461	f	t
+2023-11-29	2023-2024	SF Austin	Tarleton State	68	66	138462	f	t
+2023-12-05	2023-2024	SF Austin	Louisiana Tech	56	49	138463	f	t
+2023-12-09	2023-2024	SF Austin	Wyoming	78	70	138464	f	f
+2023-12-19	2023-2024	SF Austin	New Mexico State	75	72	138465	t	t
+2023-12-22	2023-2024	SF Austin	vsPaul Quinn	115	58	138466	t	t
+2023-12-29	2023-2024	SF Austin	New Orleans	80	51	138467	t	t
+2024-01-04	2023-2024	SF Austin	UT Rio Grande Valley	85	78	138468	t	f
+2024-01-06	2023-2024	SF Austin	UT Arlington	92	73	138469	t	t
+2024-01-11	2023-2024	SF Austin	Utah Tech	75	70	138470	f	f
+2024-01-13	2023-2024	SF Austin	Southern Utah	84	82	138471	t	f
+2024-01-25	2023-2024	SF Austin	Grand Canyon	53	51	138472	f	t
+2024-01-27	2023-2024	SF Austin	California Baptist	81	79	138473	f	t
+2024-02-01	2023-2024	SF Austin	Utah Valley	77	72	138474	t	t
+2024-02-03	2023-2024	SF Austin	Tarleton State	75	64	138475	f	f
+2024-02-08	2023-2024	SF Austin	UT Rio Grande Valley	92	84	138476	t	t
+2024-02-17	2023-2024	SF Austin	Abilene Christian	63	62	138477	f	t
+2024-02-22	2023-2024	SF Austin	Seattle U	69	49	138478	f	f
+2024-02-24	2023-2024	SF Austin	Utah Valley	71	62	138479	f	f
+2024-03-02	2023-2024	SF Austin	Grand Canyon	80	58	138480	f	f
+2024-03-07	2023-2024	SF Austin	Southern Utah	87	60	138481	t	t
+2024-03-09	2023-2024	SF Austin	Utah Tech	84	71	138482	t	t
+2024-03-13	2023-2024	SF Austin	Abilene Christian	60	57	138483	t	t
+2024-03-14	2023-2024	SF Austin	UT Arlington	109	78	138484	f	t
+2023-11-06	2023-2024	Stetson	vsTrinity Baptist	109	54	138485	t	t
+2023-11-11	2023-2024	Stetson	UNLV	71	55	138486	f	f
+2023-11-13	2023-2024	Stetson	6 Houston	79	48	138487	f	f
+2023-11-20	2023-2024	Stetson	Milwaukee	85	67	138488	t	t
+2023-11-21	2023-2024	Stetson	Central Michigan	71	61	138489	t	t
+2023-11-26	2023-2024	Stetson	UCF	85	82	138490	t	f
+2023-11-29	2023-2024	Stetson	vsCoastal Georgia	94	49	138491	t	t
+2023-12-03	2023-2024	Stetson	Chicago State	77	54	138492	f	f
+2023-12-05	2023-2024	Stetson	Charlotte	85	62	138493	f	f
+2023-12-10	2023-2024	Stetson	vsJohnson University Florida	123	43	138494	t	t
+2023-12-17	2023-2024	Stetson	Omaha	88	80	138495	f	f
+2023-12-19	2023-2024	Stetson	Florida International	80	68	138496	t	f
+2023-12-22	2023-2024	Stetson	Cincinnati	83	75	138497	f	f
+2023-12-29	2023-2024	Stetson	Charlotte	79	75	138498	t	t
+2024-01-04	2023-2024	Stetson	North Florida	75	74	138499	t	t
+2024-01-06	2023-2024	Stetson	Jacksonville State	71	55	138500	t	t
+2024-01-10	2023-2024	Stetson	Kennesaw State	88	70	138501	f	f
+2024-01-12	2023-2024	Stetson	Queens University	84	66	138502	t	f
+2024-01-15	2023-2024	Stetson	Chicago State	77	70	138503	f	t
+2024-01-20	2023-2024	Stetson	Florida Gulf Coast	80	56	138504	f	f
+2024-01-25	2023-2024	Stetson	Austin Peay	83	82	138505	t	t
+2024-01-27	2023-2024	Stetson	Lipscomb	80	59	138506	t	t
+2024-02-01	2023-2024	Stetson	North Alabama	79	72	138507	f	f
+2024-02-07	2023-2024	Stetson	Bellarmine	84	77	138508	t	f
+2024-02-10	2023-2024	Stetson	Eastern Kentucky	87	79	138509	t	t
+2024-02-17	2023-2024	Stetson	Florida Gulf Coast	61	60	138510	t	t
+2024-02-22	2023-2024	Stetson	Queens University	83	75	138511	f	t
+2024-02-24	2023-2024	Stetson	Kennesaw State	84	72	138512	t	t
+2024-02-28	2023-2024	Stetson	Jacksonville State	86	73	138513	t	f
+2024-03-01	2023-2024	Stetson	North Florida	78	59	138514	f	f
+2024-03-05	2023-2024	Stetson	Queens University	83	71	138515	t	t
+2024-03-07	2023-2024	Stetson	Jacksonville State	88	87	138516	t	t
+2024-03-10	2023-2024	Stetson	Austin Peay	94	91	138517	t	t
+2023-11-06	2023-2024	Stonehill	George Washington	89	44	138518	f	f
+2023-11-09	2023-2024	Stonehill	Army	57	44	138519	t	t
+2023-11-11	2023-2024	Stonehill	6 UConn	107	67	138520	f	f
+2023-11-14	2023-2024	Stonehill	Saint Joseph's	100	56	138521	f	f
+2023-11-17	2023-2024	Stonehill	17 Kentucky	101	67	138522	f	f
+2023-11-20	2023-2024	Stonehill	Texas A&M-Commerce	97	86	138523	f	f
+2023-11-26	2023-2024	Stonehill	Quinnipiac	80	69	138524	f	f
+2023-11-29	2023-2024	Stonehill	UMass Lowell	80	74	138525	f	t
+2023-12-02	2023-2024	Stonehill	Binghamton	79	64	138526	f	t
+2023-12-06	2023-2024	Stonehill	Stony Brook	81	63	138527	f	f
+2023-12-08	2023-2024	Stonehill	Rider	73	56	138528	f	f
+2023-12-11	2023-2024	Stonehill	New Hampshire	75	62	138529	f	f
+2023-12-17	2023-2024	Stonehill	vsHartford	71	44	138530	t	t
+2023-12-21	2023-2024	Stonehill	Miami	97	59	138531	f	f
+2023-12-30	2023-2024	Stonehill	Rutgers	59	58	138532	f	f
+2024-01-04	2023-2024	Stonehill	Central Connecticut	74	59	138533	f	t
+2024-01-06	2023-2024	Stonehill	Long Island University	73	68	138534	f	t
+2024-01-15	2023-2024	Stonehill	Wagner	64	54	138535	f	f
+2024-01-19	2023-2024	Stonehill	Fairleigh Dickinson	76	69	138536	f	t
+2024-01-21	2023-2024	Stonehill	Merrimack	63	47	138537	f	f
+2024-01-25	2023-2024	Stonehill	Long Island University	63	60	138538	f	f
+2024-02-01	2023-2024	Stonehill	Sacred Heart	77	72	138539	f	f
+2024-02-03	2023-2024	Stonehill	Wagner	71	61	138540	t	t
+2024-02-08	2023-2024	Stonehill	Le Moyne	88	57	138541	f	t
+2024-02-10	2023-2024	Stonehill	St. Francis (PA)	72	63	138542	f	f
+2024-02-15	2023-2024	Stonehill	Merrimack	66	63	138543	f	t
+2024-02-17	2023-2024	Stonehill	Le Moyne	75	67	138544	f	f
+2024-02-24	2023-2024	Stonehill	St. Francis (PA)	72	63	138545	t	t
+2024-02-29	2023-2024	Stonehill	Sacred Heart	79	51	138546	f	t
+2024-03-02	2023-2024	Stonehill	Central Connecticut	79	67	138547	f	f
+2023-11-07	2023-2024	Stony Brook	St. John's	90	74	138548	f	f
+2023-11-10	2023-2024	Stony Brook	vsSaint Josephs Long Island	91	50	138549	t	t
+2023-11-13	2023-2024	Stony Brook	Duquesne	85	63	138550	f	f
+2023-11-15	2023-2024	Stony Brook	Nebraska	84	63	138551	f	f
+2023-11-20	2023-2024	Stony Brook	Rider	55	48	138552	t	t
+2023-11-29	2023-2024	Stony Brook	Yale	79	71	138553	f	f
+2023-12-02	2023-2024	Stony Brook	Wagner	60	59	138554	f	t
+2023-12-06	2023-2024	Stony Brook	Stonehill	81	63	138555	t	t
+2023-12-09	2023-2024	Stony Brook	Bryant	86	75	138556	t	t
+2023-12-13	2023-2024	Stony Brook	Norfolk State	84	78	138557	t	t
+2023-12-21	2023-2024	Stony Brook	Michigan State	99	55	138558	f	f
+2023-12-29	2023-2024	Stony Brook	Brown	69	65	138559	t	t
+2024-01-04	2023-2024	Stony Brook	Northeastern	62	53	138560	t	f
+2024-01-06	2023-2024	Stony Brook	Charleston	93	87	138561	f	t
+2024-01-13	2023-2024	Stony Brook	William & Mary	63	59	138562	t	f
+2024-01-18	2023-2024	Stony Brook	Delaware	71	68	138563	f	f
+2024-01-22	2023-2024	Stony Brook	Hofstra	80	74	138564	f	t
+2024-01-25	2023-2024	Stony Brook	Monmouth	72	65	138565	t	t
+2024-02-01	2023-2024	Stony Brook	Hofstra	72	71	138566	f	f
+2024-02-03	2023-2024	Stony Brook	Northeastern	59	55	138567	t	t
+2024-02-08	2023-2024	Stony Brook	Elon	79	64	138568	t	f
+2024-02-10	2023-2024	Stony Brook	Campbell	95	77	138569	f	f
+2024-02-15	2023-2024	Stony Brook	Hampton	93	73	138570	t	t
+2024-02-17	2023-2024	Stony Brook	Monmouth	84	61	138571	f	f
+2024-02-22	2023-2024	Stony Brook	North Carolina A&T	80	64	138572	t	t
+2024-02-24	2023-2024	Stony Brook	William & Mary	75	62	138573	t	t
+2024-02-29	2023-2024	Stony Brook	Drexel	90	86	138574	f	f
+2024-03-02	2023-2024	Stony Brook	Delaware	79	56	138575	t	t
+2024-03-09	2023-2024	Stony Brook	Northeastern	75	65	138576	t	t
+2024-03-11	2023-2024	Stony Brook	Hofstra	63	59	138577	t	t
+2023-11-06	2023-2024	Syracuse	New Hampshire	83	72	138578	t	t
+2023-11-08	2023-2024	Syracuse	Canisius	89	77	138579	t	t
+2023-11-14	2023-2024	Syracuse	Colgate	79	75	138580	t	t
+2023-11-20	2023-2024	Syracuse	7 Tennessee	73	56	138581	f	t
+2023-11-21	2023-2024	Syracuse	11 Gonzaga	76	57	138582	f	t
+2023-11-22	2023-2024	Syracuse	vsChaminade	105	56	138583	t	t
+2023-11-28	2023-2024	Syracuse	LSU	80	57	138584	t	t
+2023-12-02	2023-2024	Syracuse	Virginia	84	62	138585	f	f
+2023-12-05	2023-2024	Syracuse	Cornell	81	70	138586	t	t
+2023-12-09	2023-2024	Syracuse	Georgetown	80	68	138587	t	f
+2023-12-17	2023-2024	Syracuse	Oregon	83	63	138588	t	t
+2023-12-21	2023-2024	Syracuse	Niagara	83	71	138589	t	t
+2023-12-30	2023-2024	Syracuse	Pittsburgh	81	73	138590	t	t
+2024-01-02	2023-2024	Syracuse	14 Duke	86	66	138591	f	f
+2024-01-10	2023-2024	Syracuse	Boston College	69	59	138592	t	t
+2024-01-13	2023-2024	Syracuse	7 North Carolina	103	67	138593	f	f
+2024-01-16	2023-2024	Syracuse	Pittsburgh	69	58	138594	t	f
+2024-01-20	2023-2024	Syracuse	Miami	72	69	138595	t	t
+2024-01-23	2023-2024	Syracuse	Florida State	85	69	138596	f	t
+2024-01-27	2023-2024	Syracuse	NC State	77	65	138597	t	t
+2024-01-30	2023-2024	Syracuse	Boston College	80	75	138598	f	f
+2024-02-03	2023-2024	Syracuse	Wake Forest	99	70	138599	f	f
+2024-02-07	2023-2024	Syracuse	Louisville	94	92	138600	t	t
+2024-02-10	2023-2024	Syracuse	Clemson	77	68	138601	f	t
+2024-02-13	2023-2024	Syracuse	7 North Carolina	86	79	138602	t	t
+2024-02-17	2023-2024	Syracuse	Georgia Tech	65	60	138603	f	f
+2024-02-20	2023-2024	Syracuse	NC State	87	83	138604	t	f
+2024-02-24	2023-2024	Syracuse	Notre Dame	88	85	138605	t	t
+2024-02-27	2023-2024	Syracuse	Virginia Tech	84	71	138606	t	t
+2024-03-02	2023-2024	Syracuse	Louisville	82	76	138607	t	f
+2024-03-05	2023-2024	Syracuse	Clemson	90	75	138608	f	f
+2024-03-13	2023-2024	Syracuse	NC State	83	65	138609	f	t
+2023-11-06	2023-2024	TCU	Southern	108	75	138610	t	t
+2023-11-09	2023-2024	TCU	Omaha	82	60	138611	t	t
+2023-11-14	2023-2024	TCU	UT Rio Grande Valley	88	55	138612	t	t
+2023-11-17	2023-2024	TCU	Mississippi Valley State	86	52	138613	t	t
+2023-11-21	2023-2024	TCU	Alcorn State	93	74	138614	t	t
+2023-11-27	2023-2024	TCU	Houston Christian	101	64	138615	t	t
+2023-12-02	2023-2024	TCU	Georgetown	84	83	138616	t	f
+2023-12-09	2023-2024	TCU	24 Clemson	74	66	138617	f	t
+2023-12-16	2023-2024	TCU	Arizona State	79	59	138618	t	t
+2023-12-21	2023-2024	TCU	Old Dominion	111	87	138619	t	t
+2023-12-22	2023-2024	TCU	Nevada	88	75	138620	f	t
+2023-12-24	2023-2024	TCU	Hawai'i	65	51	138621	t	f
+2024-01-01	2023-2024	TCU	Texas A&M-Commerce	77	42	138622	t	t
+2024-01-06	2023-2024	TCU	2 Kansas	83	81	138623	f	f
+2024-01-10	2023-2024	TCU	9 Oklahoma	80	71	138624	t	t
+2024-01-13	2023-2024	TCU	2 Houston	68	67	138625	t	t
+2024-01-20	2023-2024	TCU	24 Iowa State	73	72	138626	f	t
+2024-01-23	2023-2024	TCU	Oklahoma State	74	69	138627	t	f
+2024-01-30	2023-2024	TCU	15 Texas Tech	85	78	138628	t	t
+2024-02-03	2023-2024	TCU	Texas	77	66	138629	f	t
+2024-02-10	2023-2024	TCU	14 Iowa State	71	59	138630	f	f
+2024-02-12	2023-2024	TCU	West Virginia	81	65	138631	t	t
+2024-02-17	2023-2024	TCU	Kansas State	75	72	138632	t	f
+2024-02-20	2023-2024	TCU	23 Texas Tech	82	81	138633	f	f
+2024-02-24	2023-2024	TCU	Cincinnati	75	57	138634	t	t
+2024-02-26	2023-2024	TCU	15 Baylor	62	54	138635	f	t
+2024-03-02	2023-2024	TCU	BYU	87	75	138636	f	f
+2024-03-06	2023-2024	TCU	West Virginia	93	81	138637	t	f
+2024-03-09	2023-2024	TCU	UCF	79	77	138638	f	t
+2024-03-13	2023-2024	TCU	Oklahoma	77	70	138639	t	t
+2024-03-14	2023-2024	TCU	1 Houston	60	45	138640	f	t
+2023-11-06	2023-2024	Tarleton State	Virginia	80	50	138641	f	f
+2023-11-09	2023-2024	Tarleton State	Florida International	82	65	138642	t	f
+2023-11-11	2023-2024	Tarleton State	vsNorth Texas-Dallas	93	52	138643	t	t
+2023-11-14	2023-2024	Tarleton State	Bradley	86	63	138644	f	f
+2023-11-20	2023-2024	Tarleton State	Austin Peay	66	59	138645	t	t
+2023-11-22	2023-2024	Tarleton State	Cal State Bakersfield	59	40	138646	t	t
+2023-11-29	2023-2024	Tarleton State	Stephen F. Austin	68	66	138647	t	f
+2023-12-02	2023-2024	Tarleton State	UT Rio Grande Valley	77	75	138648	t	t
+2023-12-05	2023-2024	Tarleton State	vsHardin-Simmons	92	56	138649	t	t
+2023-12-12	2023-2024	Tarleton State	vsSterling College (KS)	85	47	138650	t	t
+2023-12-18	2023-2024	Tarleton State	Jacksonville State	65	62	138651	f	t
+2023-12-21	2023-2024	Tarleton State	8 Tennessee	65	46	138652	f	f
+2023-12-29	2023-2024	Tarleton State	Loyola Marymount	79	66	138653	t	f
+2024-01-04	2023-2024	Tarleton State	UT Arlington	78	76	138654	t	t
+2024-01-11	2023-2024	Tarleton State	California Baptist	77	63	138655	f	f
+2024-01-13	2023-2024	Tarleton State	Grand Canyon	74	48	138656	f	f
+2024-01-18	2023-2024	Tarleton State	Abilene Christian	79	71	138657	t	t
+2024-01-20	2023-2024	Tarleton State	UT Rio Grande Valley	77	73	138658	t	f
+2024-01-25	2023-2024	Tarleton State	Southern Utah	73	70	138659	f	t
+2024-01-27	2023-2024	Tarleton State	Utah Tech	86	68	138660	t	t
+2024-02-03	2023-2024	Tarleton State	Stephen F. Austin	75	64	138661	t	t
+2024-02-08	2023-2024	Tarleton State	Utah Valley	72	61	138662	t	f
+2024-02-10	2023-2024	Tarleton State	Seattle U	82	77	138663	t	f
+2024-02-15	2023-2024	Tarleton State	UT Arlington	80	78	138664	t	f
+2024-02-22	2023-2024	Tarleton State	Grand Canyon	77	74	138665	t	t
+2024-02-24	2023-2024	Tarleton State	California Baptist	82	65	138666	t	t
+2024-02-29	2023-2024	Tarleton State	Utah Tech	85	74	138667	t	f
+2024-03-02	2023-2024	Tarleton State	Southern Utah	88	83	138668	t	f
+2024-03-07	2023-2024	Tarleton State	Utah Valley	63	60	138669	f	t
+2024-03-09	2023-2024	Tarleton State	Seattle U	69	66	138670	t	t
+2024-03-15	2023-2024	Tarleton State	UT Arlington	87	84	138671	f	t
+2023-11-06	2023-2024	Temple	Maryland-Eastern Shore	85	65	138672	t	t
+2023-11-10	2023-2024	Temple	Navy	75	68	138673	t	f
+2023-11-14	2023-2024	Temple	Drexel	66	64	138674	t	f
+2023-11-18	2023-2024	Temple	Columbia	78	73	138675	f	t
+2023-11-22	2023-2024	Temple	Ole Miss	77	76	138676	f	t
+2023-12-02	2023-2024	Temple	Saint Joseph's	74	65	138677	f	t
+2023-12-06	2023-2024	Temple	vsBloomsburg	85	55	138678	t	t
+2023-12-10	2023-2024	Temple	UAlbany	78	73	138679	t	t
+2023-12-16	2023-2024	Temple	VCU	87	78	138680	f	f
+2023-12-21	2023-2024	Temple	Nevada	80	56	138681	f	t
+2023-12-22	2023-2024	Temple	Old Dominion	78	63	138682	f	t
+2023-12-24	2023-2024	Temple	Portland	55	54	138683	t	t
+2024-01-04	2023-2024	Temple	South Florida	76	68	138684	f	f
+2024-01-07	2023-2024	Temple	Wichita State	68	61	138685	t	t
+2024-01-10	2023-2024	Temple	East Carolina	73	62	138686	f	t
+2024-01-13	2023-2024	Temple	North Texas	69	51	138687	f	f
+2024-01-16	2023-2024	Temple	SMU	77	64	138688	f	f
+2024-01-20	2023-2024	Temple	Rice	69	66	138689	f	t
+2024-01-24	2023-2024	Temple	South Florida	75	69	138690	f	t
+2024-02-08	2023-2024	Temple	Memphis	84	77	138691	f	t
+2024-02-11	2023-2024	Temple	Charlotte	73	70	138692	f	t
+2024-02-15	2023-2024	Temple	24 Florida Atlantic	80	68	138693	f	f
+2024-02-18	2023-2024	Temple	UTSA	83	77	138694	t	t
+2024-02-28	2023-2024	Temple	Rice	65	43	138695	t	f
+2024-03-02	2023-2024	Temple	Tulsa	72	67	138696	f	t
+2024-03-07	2023-2024	Temple	UAB	100	72	138697	f	t
+2024-03-10	2023-2024	Temple	UTSA	84	82	138698	t	f
+2024-03-13	2023-2024	Temple	UTSA	64	61	138699	t	t
+2024-03-14	2023-2024	Temple	SMU	75	60	138700	t	t
+2024-03-15	2023-2024	Temple	Charlotte	58	54	138701	t	t
+2024-03-16	2023-2024	Temple	Florida Atlantic	74	73	138702	t	t
+2024-03-17	2023-2024	Temple	UAB	85	69	138703	f	t
+2023-11-06	2023-2024	Tennessee State	vsFisk	76	61	138704	t	t
+2023-11-09	2023-2024	Tennessee State	vsKentucky State	83	58	138705	t	t
+2023-11-15	2023-2024	Tennessee State	Portland	75	65	138706	t	f
+2023-11-17	2023-2024	Tennessee State	Oregon	92	67	138707	f	f
+2023-11-20	2023-2024	Tennessee State	vsMidway University	87	70	138708	t	t
+2023-11-24	2023-2024	Tennessee State	Mercer	60	59	138709	f	t
+2023-11-25	2023-2024	Tennessee State	SE Louisiana	91	77	138710	t	t
+2023-12-02	2023-2024	Tennessee State	Austin Peay	69	65	138711	t	t
+2023-12-10	2023-2024	Tennessee State	Lipscomb	78	71	138712	f	f
+2023-12-13	2023-2024	Tennessee State	Liberty	74	52	138713	f	f
+2023-12-16	2023-2024	Tennessee State	vsBoyce	117	59	138714	t	t
+2023-12-19	2023-2024	Tennessee State	Indiana State	90	69	138715	f	f
+2023-12-28	2023-2024	Tennessee State	UT Martin	91	75	138716	f	t
+2023-12-30	2023-2024	Tennessee State	Little Rock	90	82	138717	t	t
+2024-01-04	2023-2024	Tennessee State	Southern Indiana	69	67	138718	f	f
+2024-01-06	2023-2024	Tennessee State	Morehead State	78	68	138719	f	f
+2024-01-13	2023-2024	Tennessee State	Lindenwood	75	60	138720	t	t
+2024-01-18	2023-2024	Tennessee State	Tennessee Tech	85	53	138721	t	t
+2024-01-20	2023-2024	Tennessee State	Western Illinois	58	57	138722	t	f
+2024-01-27	2023-2024	Tennessee State	Eastern Illinois	64	60	138723	t	f
+2024-02-01	2023-2024	Tennessee State	Morehead State	68	49	138724	f	t
+2024-02-03	2023-2024	Tennessee State	Southern Indiana	79	74	138725	t	t
+2024-02-08	2023-2024	Tennessee State	Lindenwood	65	55	138726	t	f
+2024-02-10	2023-2024	Tennessee State	Southeast Missouri State	77	74	138727	t	f
+2024-02-13	2023-2024	Tennessee State	Tennessee Tech	70	50	138728	f	f
+2024-02-17	2023-2024	Tennessee State	Western Illinois	68	61	138729	f	t
+2024-02-22	2023-2024	Tennessee State	Eastern Illinois	78	73	138730	t	t
+2024-02-24	2023-2024	Tennessee State	SIU Edwardsville	76	71	138731	t	t
+2024-02-29	2023-2024	Tennessee State	Little Rock	85	60	138732	f	f
+2024-03-02	2023-2024	Tennessee State	UT Martin	96	87	138733	f	f
+2024-03-06	2023-2024	Tennessee State	Southern Indiana	78	64	138734	t	t
+2024-03-07	2023-2024	Tennessee State	Western Illinois	61	59	138735	f	t
+2023-11-06	2023-2024	Tennessee Tech	9 Tennessee	80	42	138736	f	f
+2023-11-10	2023-2024	Tennessee Tech	Murray State	78	72	138737	f	f
+2023-11-14	2023-2024	Tennessee Tech	Lipscomb	96	65	138738	f	t
+2023-11-16	2023-2024	Tennessee Tech	vsMidway University	82	70	138739	t	t
+2023-11-19	2023-2024	Tennessee Tech	Chattanooga	68	63	138740	f	f
+2023-11-28	2023-2024	Tennessee Tech	Western Carolina	69	65	138741	f	t
+2023-11-30	2023-2024	Tennessee Tech	North Alabama	86	71	138742	f	f
+2023-12-03	2023-2024	Tennessee Tech	vsAlice Lloyd College	108	82	138743	t	t
+2023-12-10	2023-2024	Tennessee Tech	East Tennessee State	73	72	138744	f	f
+2023-12-12	2023-2024	Tennessee Tech	vsBethel (TN)	81	74	138745	t	t
+2023-12-16	2023-2024	Tennessee Tech	North Alabama	70	67	138746	t	t
+2023-12-20	2023-2024	Tennessee Tech	Evansville	82	51	138747	f	f
+2023-12-28	2023-2024	Tennessee Tech	Little Rock	81	75	138748	f	t
+2023-12-30	2023-2024	Tennessee Tech	UT Martin	81	73	138749	f	t
+2024-01-04	2023-2024	Tennessee Tech	Morehead State	82	57	138750	f	f
+2024-01-06	2023-2024	Tennessee Tech	Southern Indiana	73	59	138751	t	f
+2024-01-13	2023-2024	Tennessee Tech	Southeast Missouri State	70	59	138752	t	t
+2024-01-18	2023-2024	Tennessee Tech	Tennessee State	85	53	138753	f	f
+2024-01-25	2023-2024	Tennessee Tech	Eastern Illinois	68	59	138754	f	f
+2024-01-27	2023-2024	Tennessee Tech	SIU Edwardsville	74	57	138755	f	f
+2024-02-01	2023-2024	Tennessee Tech	Southern Indiana	74	71	138756	f	t
+2024-02-03	2023-2024	Tennessee Tech	Morehead State	67	60	138757	f	t
+2024-02-08	2023-2024	Tennessee Tech	Southeast Missouri State	88	69	138758	f	f
+2024-02-13	2023-2024	Tennessee Tech	Tennessee State	70	50	138759	t	t
+2024-02-15	2023-2024	Tennessee Tech	Western Illinois	62	55	138760	f	t
+2024-02-22	2023-2024	Tennessee Tech	SIU Edwardsville	78	77	138761	f	t
+2024-02-24	2023-2024	Tennessee Tech	Eastern Illinois	75	67	138762	t	t
+2024-02-29	2023-2024	Tennessee Tech	UT Martin	80	69	138763	f	f
+2024-03-02	2023-2024	Tennessee Tech	Little Rock	81	43	138764	f	f
+2023-11-06	2023-2024	Tennessee	Tennessee Tech	80	42	138765	t	t
+2023-11-10	2023-2024	Tennessee	Wisconsin	80	70	138766	t	f
+2023-11-14	2023-2024	Tennessee	Wofford	82	61	138767	t	t
+2023-11-20	2023-2024	Tennessee	Syracuse	73	56	138768	t	t
+2023-11-21	2023-2024	Tennessee	2 Purdue	71	67	138769	f	t
+2023-11-22	2023-2024	Tennessee	1 Kansas	69	60	138770	f	t
+2023-11-29	2023-2024	Tennessee	17 North Carolina	100	92	138771	f	f
+2023-12-05	2023-2024	Tennessee	George Mason	87	66	138772	t	t
+2023-12-09	2023-2024	Tennessee	20 Illinois	86	79	138773	t	t
+2023-12-12	2023-2024	Tennessee	Georgia Southern	74	56	138774	t	t
+2023-12-16	2023-2024	Tennessee	NC State	79	70	138775	t	t
+2023-12-21	2023-2024	Tennessee	Tarleton State	65	46	138776	t	t
+2024-01-02	2023-2024	Tennessee	Norfolk State	87	50	138777	t	t
+2024-01-06	2023-2024	Tennessee	22 Ole Miss	90	64	138778	t	t
+2024-01-10	2023-2024	Tennessee	Mississippi State	77	72	138779	f	f
+2024-01-13	2023-2024	Tennessee	Georgia	85	79	138780	t	f
+2024-01-16	2023-2024	Tennessee	Florida	85	66	138781	t	t
+2024-01-20	2023-2024	Tennessee	Alabama	91	71	138782	t	t
+2024-01-27	2023-2024	Tennessee	Vanderbilt	75	62	138783	t	f
+2024-01-30	2023-2024	Tennessee	South Carolina	63	59	138784	f	t
+2024-02-03	2023-2024	Tennessee	10 Kentucky	103	92	138785	t	f
+2024-02-07	2023-2024	Tennessee	LSU	88	68	138786	t	t
+2024-02-10	2023-2024	Tennessee	Texas A&M	85	69	138787	f	f
+2024-02-14	2023-2024	Tennessee	Arkansas	92	63	138788	t	f
+2024-02-17	2023-2024	Tennessee	Vanderbilt	88	53	138789	t	t
+2024-02-20	2023-2024	Tennessee	Missouri	72	67	138790	t	f
+2024-02-24	2023-2024	Tennessee	Texas A&M	86	51	138791	t	t
+2024-02-28	2023-2024	Tennessee	11 Auburn	92	84	138792	t	t
+2024-03-02	2023-2024	Tennessee	14 Alabama	81	74	138793	t	f
+2024-03-06	2023-2024	Tennessee	17 South Carolina	66	59	138794	t	f
+2024-03-09	2023-2024	Tennessee	15 Kentucky	85	81	138795	f	t
+2024-03-15	2023-2024	Tennessee	Mississippi State	73	56	138796	f	t
+2023-11-06	2023-2024	Texas A&M	Texas A&M-Commerce	78	46	138797	t	t
+2023-11-10	2023-2024	Texas A&M	Ohio State	73	66	138798	t	f
+2023-11-14	2023-2024	Texas A&M	SMU	79	66	138799	t	f
+2023-11-17	2023-2024	Texas A&M	Oral Roberts	74	66	138800	t	t
+2023-11-23	2023-2024	Texas A&M	Penn State	89	77	138801	t	t
+2023-11-24	2023-2024	Texas A&M	19 Florida Atlantic	96	89	138802	f	t
+2023-11-26	2023-2024	Texas A&M	Iowa State	73	69	138803	t	t
+2023-11-29	2023-2024	Texas A&M	Virginia	59	47	138804	f	f
+2023-12-06	2023-2024	Texas A&M	DePaul	89	64	138805	t	t
+2023-12-10	2023-2024	Texas A&M	Memphis	81	75	138806	f	t
+2023-12-16	2023-2024	Texas A&M	4 Houston	70	66	138807	f	t
+2023-12-22	2023-2024	Texas A&M	Houston Christian	79	52	138808	t	t
+2023-12-30	2023-2024	Texas A&M	Prairie View A&M	79	54	138809	t	t
+2024-01-06	2023-2024	Texas A&M	LSU	68	53	138810	f	t
+2024-01-09	2023-2024	Texas A&M	16 Auburn	66	55	138811	f	f
+2024-01-16	2023-2024	Texas A&M	Arkansas	78	77	138812	f	f
+2024-01-20	2023-2024	Texas A&M	LSU	73	69	138813	t	f
+2024-01-23	2023-2024	Texas A&M	Missouri	63	57	138814	t	t
+2024-01-27	2023-2024	Texas A&M	Ole Miss	71	68	138815	f	t
+2024-02-03	2023-2024	Texas A&M	Florida	67	66	138816	t	t
+2024-02-07	2023-2024	Texas A&M	Missouri	79	60	138817	t	f
+2024-02-10	2023-2024	Texas A&M	6 Tennessee	85	69	138818	t	t
+2024-02-13	2023-2024	Texas A&M	Vanderbilt	74	73	138819	f	f
+2024-02-17	2023-2024	Texas A&M	15 Alabama	100	75	138820	f	f
+2024-02-20	2023-2024	Texas A&M	Arkansas	78	71	138821	f	t
+2024-02-24	2023-2024	Texas A&M	5 Tennessee	86	51	138822	f	f
+2024-02-28	2023-2024	Texas A&M	18 South Carolina	70	68	138823	f	t
+2024-03-02	2023-2024	Texas A&M	Georgia	70	56	138824	t	f
+2024-03-06	2023-2024	Texas A&M	Mississippi State	75	69	138825	t	t
+2024-03-09	2023-2024	Texas A&M	Ole Miss	86	60	138826	t	f
+2024-03-14	2023-2024	Texas A&M	Ole Miss	80	71	138827	t	t
+2024-03-15	2023-2024	Texas A&M	9 Kentucky	97	87	138828	t	t
+2024-03-16	2023-2024	Texas A&M	Florida	95	90	138829	f	t
+2023-11-06	2023-2024	Texas A&M-Comm	15 Texas A&M	78	46	138830	f	f
+2023-11-08	2023-2024	Texas A&M-Comm	Texas Tech	73	46	138831	f	f
+2023-11-10	2023-2024	Texas A&M-Comm	16 Kentucky	81	61	138832	f	f
+2023-11-12	2023-2024	Texas A&M-Comm	Purdue Fort Wayne	86	64	138833	f	f
+2023-11-15	2023-2024	Texas A&M-Comm	vsScience & Arts (OK)	113	63	138834	t	t
+2023-11-17	2023-2024	Texas A&M-Comm	Saint Joseph's	57	54	138835	t	f
+2023-11-20	2023-2024	Texas A&M-Comm	Stonehill	97	86	138836	t	t
+2023-11-26	2023-2024	Texas A&M-Comm	Denver	71	61	138837	f	t
+2023-11-29	2023-2024	Texas A&M-Comm	vsDallas Christian	100	48	138838	t	t
+2023-12-03	2023-2024	Texas A&M-Comm	SMU	90	47	138839	f	f
+2023-12-18	2023-2024	Texas A&M-Comm	vsArlington Baptist	130	53	138840	t	t
+2024-01-01	2023-2024	Texas A&M-Comm	TCU	77	42	138841	f	f
+2024-01-06	2023-2024	Texas A&M-Comm	McNeese	73	67	138842	f	t
+2024-01-08	2023-2024	Texas A&M-Comm	New Orleans	88	85	138843	f	f
+2024-01-13	2023-2024	Texas A&M-Comm	Houston Christian	69	65	138844	f	t
+2024-01-20	2023-2024	Texas A&M-Comm	SE Louisiana	68	52	138845	t	f
+2024-01-22	2023-2024	Texas A&M-Comm	Lamar	76	65	138846	f	f
+2024-01-29	2023-2024	Texas A&M-Comm	Texas A&M-Corpus Christi	69	54	138847	f	t
+2024-01-31	2023-2024	Texas A&M-Comm	Incarnate Word	71	66	138848	t	t
+2024-02-03	2023-2024	Texas A&M-Comm	Northwestern State	70	57	138849	f	f
+2024-02-05	2023-2024	Texas A&M-Comm	McNeese	77	51	138850	f	f
+2024-02-10	2023-2024	Texas A&M-Comm	New Orleans	89	83	138851	t	t
+2024-02-17	2023-2024	Texas A&M-Comm	Texas A&M-Corpus Christi	86	63	138852	f	f
+2024-02-24	2023-2024	Texas A&M-Comm	Nicholls	85	70	138853	f	f
+2024-03-02	2023-2024	Texas A&M-Comm	Houston Christian	98	85	138854	t	f
+2024-03-04	2023-2024	Texas A&M-Comm	Lamar	70	53	138855	f	t
+2024-03-10	2023-2024	Texas A&M-Comm	Northwestern State	69	64	138856	t	t
+2024-03-11	2023-2024	Texas A&M-Comm	Nicholls	72	51	138857	f	t
+2023-11-07	2023-2024	AMCC	vsSouthwestern Adventist	111	46	138858	t	t
+2023-11-11	2023-2024	AMCC	7 Houston	82	50	138859	f	f
+2023-11-13	2023-2024	AMCC	vsDallas Christian	104	45	138860	t	t
+2023-11-16	2023-2024	AMCC	Texas Tech	73	64	138861	f	f
+2023-11-22	2023-2024	AMCC	Northern Kentucky	88	73	138862	f	f
+2023-11-24	2023-2024	AMCC	Long Island University	83	68	138863	f	t
+2023-11-29	2023-2024	AMCC	UTEP	67	63	138864	t	f
+2023-12-06	2023-2024	AMCC	UT Rio Grande Valley	76	74	138865	f	t
+2023-12-09	2023-2024	AMCC	Omaha	62	58	138866	t	t
+2023-12-15	2023-2024	AMCC	UT Rio Grande Valley	86	76	138867	t	f
+2023-12-18	2023-2024	AMCC	vsTexas Lutheran	102	50	138868	t	t
+2023-12-22	2023-2024	AMCC	19 Texas	71	55	138869	f	f
+2023-12-30	2023-2024	AMCC	vsSchreiner	84	61	138870	t	t
+2024-01-06	2023-2024	AMCC	Incarnate Word	75	65	138871	t	f
+2024-01-08	2023-2024	AMCC	Houston Christian	81	59	138872	t	t
+2024-01-13	2023-2024	AMCC	New Orleans	83	80	138873	f	f
+2024-01-15	2023-2024	AMCC	SE Louisiana	73	68	138874	t	f
+2024-01-20	2023-2024	AMCC	Nicholls	69	59	138875	t	t
+2024-01-22	2023-2024	AMCC	McNeese	62	61	138876	f	t
+2024-01-27	2023-2024	AMCC	Northwestern State	79	68	138877	t	f
+2024-01-29	2023-2024	AMCC	Texas A&M-Commerce	69	54	138878	t	f
+2024-02-03	2023-2024	AMCC	Lamar	79	71	138879	t	t
+2024-02-10	2023-2024	AMCC	McNeese	74	67	138880	f	f
+2024-02-12	2023-2024	AMCC	Nicholls	67	63	138881	f	f
+2024-02-17	2023-2024	AMCC	Texas A&M-Commerce	86	63	138882	t	t
+2024-02-19	2023-2024	AMCC	Northwestern State	72	61	138883	t	t
+2024-02-24	2023-2024	AMCC	Lamar	75	61	138884	t	f
+2024-02-26	2023-2024	AMCC	Houston Christian	91	79	138885	t	f
+2024-03-02	2023-2024	AMCC	SE Louisiana	80	68	138886	t	t
+2024-03-04	2023-2024	AMCC	New Orleans	73	60	138887	t	t
+2024-03-06	2023-2024	AMCC	Incarnate Word	71	52	138888	t	t
+2023-11-06	2023-2024	Texas	Incarnate Word	88	56	138889	t	t
+2023-11-10	2023-2024	Texas	Delaware State	86	59	138890	t	t
+2023-11-15	2023-2024	Texas	Rice	80	64	138891	t	t
+2023-11-19	2023-2024	Texas	Louisville	81	80	138892	t	t
+2023-11-20	2023-2024	Texas	5 UConn	81	71	138893	f	t
+2023-11-26	2023-2024	Texas	Wyoming	86	63	138894	t	t
+2023-11-30	2023-2024	Texas	Texas State	77	58	138895	t	t
+2023-12-06	2023-2024	Texas	8 Marquette	86	65	138896	f	f
+2023-12-09	2023-2024	Texas	Houston Christian	77	50	138897	t	t
+2023-12-16	2023-2024	Texas	LSU	96	85	138898	t	t
+2023-12-22	2023-2024	Texas	Texas A&M-Corpus Christi	71	55	138899	t	t
+2023-12-29	2023-2024	Texas	UNC Greensboro	72	37	138900	t	t
+2024-01-01	2023-2024	Texas	UT Arlington	79	62	138901	t	t
+2024-01-06	2023-2024	Texas	Texas Tech	78	67	138902	f	t
+2024-01-09	2023-2024	Texas	Cincinnati	74	73	138903	t	f
+2024-01-13	2023-2024	Texas	West Virginia	76	73	138904	f	f
+2024-01-17	2023-2024	Texas	UCF	77	71	138905	f	t
+2024-01-20	2023-2024	Texas	9 Baylor	75	73	138906	t	t
+2024-01-23	2023-2024	Texas	11 Oklahoma	75	60	138907	t	f
+2024-01-27	2023-2024	Texas	21 BYU	84	72	138908	f	f
+2024-02-03	2023-2024	Texas	25 TCU	77	66	138909	t	f
+2024-02-06	2023-2024	Texas	14 Iowa State	70	65	138910	f	t
+2024-02-10	2023-2024	Texas	West Virginia	94	58	138911	t	t
+2024-02-17	2023-2024	Texas	3 Houston	82	61	138912	f	f
+2024-02-19	2023-2024	Texas	Kansas State	62	56	138913	t	t
+2024-02-24	2023-2024	Texas	9 Kansas	86	67	138914	f	f
+2024-02-27	2023-2024	Texas	Texas Tech	81	69	138915	t	f
+2024-03-02	2023-2024	Texas	Oklahoma State	81	65	138916	t	t
+2024-03-04	2023-2024	Texas	11 Baylor	93	85	138917	f	f
+2024-03-09	2023-2024	Texas	Oklahoma	94	80	138918	t	t
+2024-03-13	2023-2024	Texas	Kansas State	78	74	138919	f	t
+2023-11-06	2023-2024	Texas Southern	New Mexico	92	55	138920	f	f
+2023-11-11	2023-2024	Texas Southern	Arizona State	63	52	138921	f	f
+2023-11-16	2023-2024	Texas Southern	Virginia	62	33	138922	f	f
+2023-11-18	2023-2024	Texas Southern	8 Creighton	82	50	138923	f	f
+2023-11-21	2023-2024	Texas Southern	Oral Roberts	65	63	138924	f	f
+2023-11-25	2023-2024	Texas Southern	Drake	77	71	138925	f	f
+2023-11-28	2023-2024	Texas Southern	1 Purdue	99	67	138926	f	f
+2023-12-16	2023-2024	Texas Southern	North Carolina A&T	85	79	138927	f	t
+2023-12-17	2023-2024	Texas Southern	Howard	79	78	138928	t	t
+2023-12-21	2023-2024	Texas Southern	Samford	87	65	138929	f	t
+2023-12-28	2023-2024	Texas Southern	vsCollege Of Biblical Studies	108	72	138930	t	t
+2024-01-06	2023-2024	Texas Southern	Southern	58	51	138931	f	f
+2024-01-08	2023-2024	Texas Southern	Grambling	54	52	138932	t	f
+2024-01-13	2023-2024	Texas Southern	Arkansas-Pine Bluff	70	67	138933	f	t
+2024-01-15	2023-2024	Texas Southern	Mississippi Valley State	93	61	138934	t	t
+2024-01-20	2023-2024	Texas Southern	Alcorn State	72	61	138935	t	f
+2024-01-22	2023-2024	Texas Southern	Jackson State	73	64	138936	f	f
+2024-01-27	2023-2024	Texas Southern	Alabama A&M	85	69	138937	t	t
+2024-01-29	2023-2024	Texas Southern	Alabama State	56	55	138938	t	t
+2024-02-03	2023-2024	Texas Southern	Prairie View A&M	80	69	138939	t	f
+2024-02-12	2023-2024	Texas Southern	Bethune-Cookman	83	79	138940	f	f
+2024-02-17	2023-2024	Texas Southern	Grambling	66	63	138941	f	t
+2024-02-19	2023-2024	Texas Southern	Southern	68	56	138942	t	t
+2024-02-24	2023-2024	Texas Southern	Mississippi Valley State	73	52	138943	t	f
+2024-02-26	2023-2024	Texas Southern	Arkansas-Pine Bluff	77	70	138944	t	f
+2024-03-02	2023-2024	Texas Southern	Jackson State	80	70	138945	t	t
+2024-03-04	2023-2024	Texas Southern	Alcorn State	82	79	138946	f	t
+2024-03-09	2023-2024	Texas Southern	Prairie View A&M	93	78	138947	t	t
+2024-03-14	2023-2024	Texas Southern	Jackson State	73	62	138948	t	t
+2024-03-15	2023-2024	Texas Southern	Alabama A&M	72	65	138949	t	t
+2024-03-16	2023-2024	Texas Southern	Grambling	75	66	138950	f	t
+2023-11-06	2023-2024	Texas State	Little Rock	71	66	138951	f	f
+2023-11-11	2023-2024	Texas State	Miami (OH)	75	65	138952	t	f
+2023-11-14	2023-2024	Texas State	Oklahoma	93	54	138953	f	f
+2023-11-17	2023-2024	Texas State	UTSA	72	62	138954	t	t
+2023-11-21	2023-2024	Texas State	McNeese	59	48	138955	f	t
+2023-11-22	2023-2024	Texas State	Southern Utah	74	67	138956	f	t
+2023-11-25	2023-2024	Texas State	UT Arlington	73	66	138957	t	f
+2023-11-30	2023-2024	Texas State	16 Texas	77	58	138958	f	f
+2023-12-11	2023-2024	Texas State	vsJarvis Christian	107	58	138959	t	t
+2023-12-15	2023-2024	Texas State	Sam Houston	73	60	138960	t	f
+2023-12-18	2023-2024	Texas State	vsLeTourneau	110	68	138961	t	t
+2023-12-21	2023-2024	Texas State	3 Houston	72	37	138962	f	f
+2023-12-30	2023-2024	Texas State	20 James Madison	82	65	138963	f	f
+2024-01-04	2023-2024	Texas State	Coastal Carolina	71	63	138964	f	t
+2024-01-06	2023-2024	Texas State	Marshall	79	75	138965	f	t
+2024-01-11	2023-2024	Texas State	Arkansas State	85	82	138966	f	f
+2024-01-13	2023-2024	Texas State	UL Monroe	67	54	138967	t	f
+2024-01-17	2023-2024	Texas State	Louisiana	86	68	138968	f	t
+2024-01-20	2023-2024	Texas State	Arkansas State	79	72	138969	f	t
+2024-01-24	2023-2024	Texas State	Troy	78	65	138970	f	f
+2024-01-28	2023-2024	Texas State	Louisiana	66	46	138971	f	f
+2024-02-01	2023-2024	Texas State	South Alabama	74	66	138972	t	t
+2024-02-03	2023-2024	Texas State	Southern Miss	60	55	138973	t	t
+2024-02-07	2023-2024	Texas State	Appalachian State	63	56	138974	t	t
+2024-02-10	2023-2024	Texas State	Ball State	68	60	138975	t	t
+2024-02-15	2023-2024	Texas State	South Alabama	72	55	138976	f	f
+2024-02-17	2023-2024	Texas State	Southern Miss	78	74	138977	f	f
+2024-02-22	2023-2024	Texas State	Georgia Southern	84	76	138978	f	f
+2024-02-24	2023-2024	Texas State	Georgia State	68	59	138979	t	f
+2024-02-27	2023-2024	Texas State	UL Monroe	73	55	138980	t	t
+2024-03-07	2023-2024	Texas State	Southern Miss	75	59	138981	t	t
+2024-03-09	2023-2024	Texas State	Troy	74	68	138982	t	t
+2024-03-10	2023-2024	Texas State	James Madison	73	68	138983	f	t
+2023-11-08	2023-2024	Texas Tech	Texas A&M-Commerce	73	46	138984	t	t
+2023-11-12	2023-2024	Texas Tech	San José State	56	42	138985	t	t
+2023-11-16	2023-2024	Texas Tech	Texas A&M-Corpus Christi	73	64	138986	t	t
+2023-11-22	2023-2024	Texas Tech	Villanova	85	69	138987	f	t
+2023-11-23	2023-2024	Texas Tech	Northern Iowa	72	70	138988	t	t
+2023-11-24	2023-2024	Texas Tech	Michigan	73	57	138989	t	t
+2023-12-06	2023-2024	Texas Tech	Omaha	87	58	138990	t	t
+2023-12-12	2023-2024	Texas Tech	Oral Roberts	82	76	138991	t	t
+2023-12-16	2023-2024	Texas Tech	Vanderbilt	76	54	138992	t	t
+2023-12-21	2023-2024	Texas Tech	UT Arlington	77	66	138993	t	t
+2023-12-28	2023-2024	Texas Tech	Sam Houston	96	60	138994	t	t
+2024-01-01	2023-2024	Texas Tech	North Alabama	85	57	138995	t	t
+2024-01-06	2023-2024	Texas Tech	20 Texas	78	67	138996	t	f
+2024-01-09	2023-2024	Texas Tech	Oklahoma State	90	73	138997	t	t
+2024-01-13	2023-2024	Texas Tech	Kansas State	60	59	138998	t	t
+2024-01-17	2023-2024	Texas Tech	5 Houston	77	54	138999	f	f
+2024-01-20	2023-2024	Texas Tech	20 BYU	85	78	139000	t	t
+2024-01-27	2023-2024	Texas Tech	11 Oklahoma	85	84	139001	t	f
+2024-01-30	2023-2024	Texas Tech	25 TCU	85	78	139002	f	f
+2024-02-03	2023-2024	Texas Tech	Cincinnati	75	72	139003	f	t
+2024-02-06	2023-2024	Texas Tech	13 Baylor	79	73	139004	f	f
+2024-02-10	2023-2024	Texas Tech	UCF	66	59	139005	t	t
+2024-02-12	2023-2024	Texas Tech	6 Kansas	79	50	139006	t	t
+2024-02-17	2023-2024	Texas Tech	10 Iowa State	82	74	139007	f	f
+2024-02-20	2023-2024	Texas Tech	TCU	82	81	139008	t	t
+2024-02-24	2023-2024	Texas Tech	UCF	75	61	139009	f	f
+2024-02-27	2023-2024	Texas Tech	Texas	81	69	139010	f	t
+2024-03-02	2023-2024	Texas Tech	West Virginia	81	70	139011	t	f
+2024-03-05	2023-2024	Texas Tech	Oklahoma State	75	58	139012	t	f
+2024-03-09	2023-2024	Texas Tech	11 Baylor	78	68	139013	t	t
+2024-03-14	2023-2024	Texas Tech	20 BYU	81	67	139014	t	t
+2024-03-15	2023-2024	Texas Tech	1 Houston	82	59	139015	f	t
+2023-11-06	2023-2024	The Citadel	NC State	72	59	139016	f	f
+2023-11-10	2023-2024	The Citadel	Boston College	75	71	139017	f	t
+2023-11-13	2023-2024	The Citadel	Presbyterian	71	64	139018	f	f
+2023-11-16	2023-2024	The Citadel	vsNorth Greenville	77	59	139019	t	t
+2023-11-20	2023-2024	The Citadel	Idaho State	62	61	139020	t	t
+2023-11-21	2023-2024	The Citadel	North Carolina Central	67	61	139021	t	t
+2023-11-22	2023-2024	The Citadel	Campbell	65	58	139022	f	f
+2023-11-28	2023-2024	The Citadel	Charleston Southern	81	52	139023	t	t
+2023-12-02	2023-2024	The Citadel	North Carolina A&T	85	68	139024	t	f
+2023-12-05	2023-2024	The Citadel	vsPfeiffer	88	60	139025	t	t
+2023-12-14	2023-2024	The Citadel	Charleston	86	71	139026	f	f
+2023-12-19	2023-2024	The Citadel	Notre Dame	65	45	139027	t	f
+2023-12-30	2023-2024	The Citadel	vsToccoa Falls	106	76	139028	t	t
+2024-01-03	2023-2024	The Citadel	Western Carolina	80	71	139029	f	t
+2024-01-06	2023-2024	The Citadel	Samford	80	64	139030	f	t
+2024-01-10	2023-2024	The Citadel	Furman	82	68	139031	f	f
+2024-01-13	2023-2024	The Citadel	Wofford	72	71	139032	f	t
+2024-01-17	2023-2024	The Citadel	UNC Greensboro	73	67	139033	f	f
+2024-01-20	2023-2024	The Citadel	VMI	70	63	139034	f	f
+2024-01-24	2023-2024	The Citadel	Mercer	68	66	139035	t	t
+2024-01-27	2023-2024	The Citadel	Chattanooga	90	62	139036	f	f
+2024-02-03	2023-2024	The Citadel	East Tennessee State	62	60	139037	f	f
+2024-02-07	2023-2024	The Citadel	Western Carolina	71	64	139038	f	f
+2024-02-10	2023-2024	The Citadel	Wofford	77	64	139039	f	f
+2024-02-14	2023-2024	The Citadel	UNC Greensboro	76	61	139040	f	t
+2024-02-17	2023-2024	The Citadel	VMI	76	51	139041	t	t
+2024-02-21	2023-2024	The Citadel	Mercer	87	78	139042	f	f
+2024-02-24	2023-2024	The Citadel	Chattanooga	71	62	139043	t	t
+2024-02-28	2023-2024	The Citadel	East Tennessee State	81	63	139044	f	t
+2024-03-02	2023-2024	The Citadel	Samford	92	80	139045	f	f
+2024-03-08	2023-2024	The Citadel	Mercer	84	76	139046	f	t
+2023-11-06	2023-2024	Toledo	Detroit Mercy	94	60	139047	t	t
+2023-11-11	2023-2024	Toledo	Louisiana	87	78	139048	t	t
+2023-11-14	2023-2024	Toledo	Wright State	78	77	139049	t	f
+2023-11-21	2023-2024	Toledo	New Mexico	92	84	139050	f	t
+2023-11-22	2023-2024	Toledo	UC Irvine	77	71	139051	f	t
+2023-11-24	2023-2024	Toledo	Indiana State	76	74	139052	f	t
+2023-12-02	2023-2024	Toledo	George Mason	86	77	139053	f	t
+2023-12-06	2023-2024	Toledo	Oakland	69	68	139054	t	f
+2023-12-09	2023-2024	Toledo	Northern Iowa	84	80	139055	t	t
+2023-12-13	2023-2024	Toledo	Marshall	88	87	139056	t	t
+2023-12-20	2023-2024	Toledo	Vermont	86	60	139057	f	t
+2023-12-23	2023-2024	Toledo	West Virginia	91	81	139058	f	f
+2024-01-02	2023-2024	Toledo	Ohio	86	77	139059	t	f
+2024-01-05	2023-2024	Toledo	Miami (OH)	68	64	139060	t	t
+2024-01-09	2023-2024	Toledo	Kent State	89	75	139061	t	f
+2024-01-13	2023-2024	Toledo	Ball State	77	72	139062	t	t
+2024-01-16	2023-2024	Toledo	Buffalo	77	66	139063	t	t
+2024-01-19	2023-2024	Toledo	Central Michigan	65	62	139064	f	f
+2024-01-23	2023-2024	Toledo	Northern Illinois	89	73	139065	t	f
+2024-01-27	2023-2024	Toledo	Bowling Green	88	72	139066	t	t
+2024-01-30	2023-2024	Toledo	Western Michigan	88	63	139067	t	t
+2024-02-02	2023-2024	Toledo	Akron	77	70	139068	f	f
+2024-02-06	2023-2024	Toledo	Eastern Michigan	91	87	139069	t	f
+2024-02-16	2023-2024	Toledo	Ohio	85	83	139070	t	t
+2024-02-20	2023-2024	Toledo	Akron	72	64	139071	t	t
+2024-02-23	2023-2024	Toledo	Bowling Green	76	68	139072	f	f
+2024-02-27	2023-2024	Toledo	Northern Illinois	75	72	139073	f	t
+2024-03-02	2023-2024	Toledo	Buffalo	85	79	139074	t	f
+2024-03-05	2023-2024	Toledo	Miami (OH)	97	63	139075	t	f
+2024-03-08	2023-2024	Toledo	Kent State	86	71	139076	t	t
+2024-03-14	2023-2024	Toledo	Kent State	67	59	139077	f	t
+2023-11-06	2023-2024	Towson	Colorado	75	57	139078	f	f
+2023-11-09	2023-2024	Towson	Coppin State	70	49	139079	t	f
+2023-11-12	2023-2024	Towson	Robert Morris	66	62	139080	t	t
+2023-11-16	2023-2024	Towson	6 Houston	65	49	139081	f	t
+2023-11-17	2023-2024	Towson	Wake Forest	71	61	139082	f	t
+2023-11-19	2023-2024	Towson	North Texas	65	39	139083	f	t
+2023-11-26	2023-2024	Towson	Morgan State	67	58	139084	t	t
+2023-12-01	2023-2024	Towson	South Dakota State	61	48	139085	f	t
+2023-12-06	2023-2024	Towson	Massachusetts	81	71	139086	t	t
+2023-12-09	2023-2024	Towson	UMBC	89	73	139087	t	f
+2023-12-22	2023-2024	Towson	Nicholls	65	55	139088	t	t
+2023-12-30	2023-2024	Towson	vsArcadia	97	46	139089	t	t
+2024-01-04	2023-2024	Towson	Monmouth	51	43	139090	f	f
+2024-01-06	2023-2024	Towson	UNC Wilmington	67	64	139091	t	t
+2024-01-13	2023-2024	Towson	Northeastern	67	59	139092	f	f
+2024-01-18	2023-2024	Towson	Charleston	82	78	139093	t	f
+2024-01-20	2023-2024	Towson	Campbell	77	43	139094	t	t
+2024-01-25	2023-2024	Towson	Drexel	70	67	139095	t	t
+2024-01-27	2023-2024	Towson	Delaware	67	56	139096	t	f
+2024-02-01	2023-2024	Towson	Northeastern	83	76	139097	t	t
+2024-02-03	2023-2024	Towson	Hofstra	59	56	139098	f	f
+2024-02-08	2023-2024	Towson	Delaware	74	62	139099	f	t
+2024-02-12	2023-2024	Towson	Elon	80	55	139100	t	t
+2024-02-15	2023-2024	Towson	William & Mary	61	52	139101	t	f
+2024-02-17	2023-2024	Towson	Hampton	67	61	139102	f	f
+2024-02-22	2023-2024	Towson	Monmouth	80	61	139103	t	t
+2024-02-24	2023-2024	Towson	Charleston	72	56	139104	f	t
+2024-02-29	2023-2024	Towson	North Carolina A&T	84	58	139105	t	f
+2024-03-02	2023-2024	Towson	UNC Wilmington	75	64	139106	f	f
+2024-03-09	2023-2024	Towson	William & Mary	67	56	139107	t	t
+2024-03-10	2023-2024	Towson	UNC Wilmington	66	56	139108	t	t
+2024-03-11	2023-2024	Towson	Charleston	61	56	139109	f	t
+2023-11-06	2023-2024	Troy	vsFort Lauderdale	92	47	139110	t	t
+2023-11-08	2023-2024	Troy	Ohio	88	70	139111	f	f
+2023-11-14	2023-2024	Troy	vsReinhardt	111	46	139112	t	t
+2023-11-24	2023-2024	Troy	Grambling	80	67	139113	t	t
+2023-11-27	2023-2024	Troy	Eastern Kentucky	77	76	139114	f	f
+2023-12-01	2023-2024	Troy	SIU Edwardsville	83	60	139115	t	t
+2023-12-09	2023-2024	Troy	Dayton	82	70	139116	f	f
+2023-12-12	2023-2024	Troy	vsSouthern-New Orleans	110	63	139117	t	t
+2023-12-19	2023-2024	Troy	25 Ole Miss	74	53	139118	f	f
+2023-12-21	2023-2024	Troy	Eastern Kentucky	88	81	139119	t	t
+2023-12-30	2023-2024	Troy	Coastal Carolina	72	65	139120	t	f
+2024-01-04	2023-2024	Troy	Old Dominion	86	73	139121	t	t
+2024-01-06	2023-2024	Troy	Appalachian State	66	62	139122	t	t
+2024-01-10	2023-2024	Troy	Louisiana	79	73	139123	t	t
+2024-01-13	2023-2024	Troy	Southern Miss	82	56	139124	t	t
+2024-01-18	2023-2024	Troy	South Alabama	74	71	139125	f	f
+2024-01-20	2023-2024	Troy	Southern Miss	64	63	139126	f	f
+2024-01-24	2023-2024	Troy	Texas State	78	65	139127	t	t
+2024-01-27	2023-2024	Troy	South Alabama	83	79	139128	t	t
+2024-02-01	2023-2024	Troy	Georgia Southern	84	63	139129	t	f
+2024-02-03	2023-2024	Troy	Georgia State	78	74	139130	t	f
+2024-02-07	2023-2024	Troy	Marshall	82	66	139131	t	t
+2024-02-10	2023-2024	Troy	Kent State	78	68	139132	t	t
+2024-02-15	2023-2024	Troy	Arkansas State	82	71	139133	f	t
+2024-02-17	2023-2024	Troy	UL Monroe	85	57	139134	t	t
+2024-02-22	2023-2024	Troy	Arkansas State	79	71	139135	f	f
+2024-02-24	2023-2024	Troy	UL Monroe	84	78	139136	t	f
+2024-02-28	2023-2024	Troy	Louisiana	87	73	139137	t	f
+2024-03-09	2023-2024	Troy	Texas State	74	68	139138	f	t
+2023-11-06	2023-2024	Tulane	Nicholls	91	81	139139	t	t
+2023-11-09	2023-2024	Tulane	Northwestern State	88	71	139140	t	t
+2023-11-17	2023-2024	Tulane	Sacramento State	92	57	139141	t	t
+2023-11-20	2023-2024	Tulane	Bradley	80	77	139142	f	t
+2023-11-23	2023-2024	Tulane	California	84	81	139143	t	t
+2023-11-29	2023-2024	Tulane	Prairie View A&M	98	77	139144	t	t
+2023-12-03	2023-2024	Tulane	Fordham	89	81	139145	t	f
+2023-12-09	2023-2024	Tulane	Mississippi State	106	76	139146	f	t
+2023-12-16	2023-2024	Tulane	Southern	105	81	139147	t	t
+2023-12-22	2023-2024	Tulane	George Mason	69	66	139148	f	t
+2023-12-29	2023-2024	Tulane	vsDillard	94	64	139149	t	t
+2024-01-03	2023-2024	Tulane	Rice	84	59	139150	t	t
+2024-01-06	2023-2024	Tulane	North Texas	70	56	139151	f	f
+2024-01-11	2023-2024	Tulane	24 Florida Atlantic	85	84	139152	f	t
+2024-01-17	2023-2024	Tulane	UAB	83	69	139153	f	f
+2024-01-21	2023-2024	Tulane	10 Memphis	81	79	139154	t	t
+2024-01-24	2023-2024	Tulane	UTSA	89	88	139155	f	f
+2024-01-27	2023-2024	Tulane	Charlotte	75	71	139156	f	t
+2024-02-01	2023-2024	Tulane	SMU	80	76	139157	f	f
+2024-02-11	2023-2024	Tulane	Memphis	90	78	139158	f	f
+2024-02-15	2023-2024	Tulane	SMU	87	79	139159	f	t
+2024-02-18	2023-2024	Tulane	East Carolina	81	67	139160	f	f
+2024-02-25	2023-2024	Tulane	UAB	78	67	139161	f	t
+2024-02-28	2023-2024	Tulane	North Texas	80	76	139162	f	t
+2024-03-02	2023-2024	Tulane	Florida Atlantic	79	73	139163	f	f
+2024-03-05	2023-2024	Tulane	24 South Florida	85	72	139164	f	f
+2024-03-08	2023-2024	Tulane	Wichita State	85	75	139165	t	t
+2024-03-14	2023-2024	Tulane	North Texas	81	71	139166	f	t
+2023-11-06	2023-2024	Tulsa	Central Arkansas	70	53	139167	t	t
+2023-11-11	2023-2024	Tulsa	Incarnate Word	85	71	139168	t	t
+2023-11-16	2023-2024	Tulsa	Jackson State	72	52	139169	t	t
+2023-11-20	2023-2024	Tulsa	South Carolina State	90	70	139170	t	t
+2023-12-02	2023-2024	Tulsa	Oral Roberts	79	70	139171	f	f
+2023-12-05	2023-2024	Tulsa	Loyola Chicago	88	77	139172	t	t
+2023-12-10	2023-2024	Tulsa	Oklahoma State	72	57	139173	f	t
+2023-12-16	2023-2024	Tulsa	Missouri State	73	72	139174	t	t
+2023-12-19	2023-2024	Tulsa	Mississippi Valley State	79	50	139175	t	t
+2023-12-22	2023-2024	Tulsa	New Mexico State	65	59	139176	t	t
+2023-12-29	2023-2024	Tulsa	vsSouthwestern Oklahoma State	95	54	139177	t	t
+2024-01-04	2023-2024	Tulsa	15 Memphis	78	75	139178	f	t
+2024-01-07	2023-2024	Tulsa	East Carolina	62	57	139179	f	f
+2024-01-10	2023-2024	Tulsa	Charlotte	84	76	139180	f	f
+2024-01-17	2023-2024	Tulsa	UTSA	107	78	139181	t	t
+2024-01-20	2023-2024	Tulsa	SMU	103	70	139182	f	f
+2024-01-27	2023-2024	Tulsa	Rice	85	83	139183	t	f
+2024-01-31	2023-2024	Tulsa	Wichita State	79	68	139184	t	t
+2024-02-03	2023-2024	Tulsa	20 Florida Atlantic	102	70	139185	f	f
+2024-02-07	2023-2024	Tulsa	North Texas	68	55	139186	f	t
+2024-02-11	2023-2024	Tulsa	UAB	70	63	139187	f	t
+2024-02-14	2023-2024	Tulsa	South Florida	69	50	139188	f	f
+2024-02-21	2023-2024	Tulsa	Wichita State	79	63	139189	f	f
+2024-02-24	2023-2024	Tulsa	Charlotte	69	67	139190	t	t
+2024-02-28	2023-2024	Tulsa	UTSA	89	73	139191	f	f
+2024-03-02	2023-2024	Tulsa	Temple	72	67	139192	t	f
+2024-03-09	2023-2024	Tulsa	24 South Florida	76	70	139193	t	t
+2024-03-14	2023-2024	Tulsa	East Carolina	84	79	139194	f	t
+2023-11-10	2023-2024	UAB	Clemson	77	76	139195	f	t
+2023-11-12	2023-2024	UAB	Maryland	66	63	139196	t	t
+2023-11-16	2023-2024	UAB	Alcorn State	80	77	139197	t	t
+2023-11-21	2023-2024	UAB	Middle Tennessee	58	57	139198	t	f
+2023-11-25	2023-2024	UAB	Furman	92	86	139199	t	t
+2023-11-28	2023-2024	UAB	McNeese	81	60	139200	f	t
+2023-12-01	2023-2024	UAB	Southern Miss	85	82	139201	f	t
+2023-12-09	2023-2024	UAB	Arkansas State	87	68	139202	f	f
+2023-12-13	2023-2024	UAB	Alabama A&M	93	82	139203	t	f
+2023-12-17	2023-2024	UAB	vsMontevallo	92	56	139204	t	t
+2023-12-29	2023-2024	UAB	UNC Asheville	90	85	139205	t	t
+2024-01-02	2023-2024	UAB	UTSA	78	76	139206	t	f
+2024-01-07	2023-2024	UAB	South Florida	75	71	139207	t	t
+2024-01-14	2023-2024	UAB	24 Florida Atlantic	86	73	139208	f	f
+2024-01-17	2023-2024	UAB	Tulane	83	69	139209	t	t
+2024-01-20	2023-2024	UAB	East Carolina	69	61	139210	t	t
+2024-01-23	2023-2024	UAB	Charlotte	76	70	139211	f	f
+2024-01-28	2023-2024	UAB	19 Memphis	97	88	139212	t	t
+2024-02-04	2023-2024	UAB	SMU	72	69	139213	f	f
+2024-02-11	2023-2024	UAB	Tulsa	70	63	139214	t	f
+2024-02-18	2023-2024	UAB	North Texas	71	62	139215	t	t
+2024-02-21	2023-2024	UAB	Rice	94	71	139216	f	t
+2024-02-25	2023-2024	UAB	Tulane	78	67	139217	t	f
+2024-02-28	2023-2024	UAB	Wichita State	74	66	139218	f	t
+2024-03-03	2023-2024	UAB	Memphis	106	87	139219	f	f
+2024-03-07	2023-2024	UAB	Temple	100	72	139220	t	f
+2024-03-10	2023-2024	UAB	SMU	74	70	139221	t	t
+2024-03-15	2023-2024	UAB	Wichita State	72	60	139222	t	t
+2024-03-16	2023-2024	UAB	South Florida	93	83	139223	t	t
+2024-03-17	2023-2024	UAB	Temple	85	69	139224	t	t
+2023-11-07	2023-2024	UAlbany	Massachusetts	92	71	139225	f	f
+2023-11-11	2023-2024	UAlbany	Columbia	78	75	139226	t	f
+2023-11-15	2023-2024	UAlbany	Seton Hall	96	71	139227	f	f
+2023-11-19	2023-2024	UAlbany	Quinnipiac	85	82	139228	f	f
+2023-11-21	2023-2024	UAlbany	Army	62	59	139229	t	t
+2023-11-26	2023-2024	UAlbany	Siena	86	51	139230	t	f
+2023-11-29	2023-2024	UAlbany	Boston University	86	72	139231	t	t
+2023-12-02	2023-2024	UAlbany	Dartmouth	73	68	139232	t	t
+2023-12-05	2023-2024	UAlbany	vsSUNY-Potsdam	98	59	139233	t	t
+2023-12-10	2023-2024	UAlbany	Temple	78	73	139234	f	t
+2023-12-16	2023-2024	UAlbany	Drexel	71	52	139235	f	f
+2023-12-19	2023-2024	UAlbany	Sacred Heart	93	79	139236	t	t
+2023-12-22	2023-2024	UAlbany	South Florida	89	73	139237	f	f
+2023-12-28	2023-2024	UAlbany	Long Island University	86	69	139238	t	t
+2024-01-02	2023-2024	UAlbany	Harvard	76	71	139239	f	f
+2024-01-06	2023-2024	UAlbany	NJIT	79	73	139240	t	f
+2024-01-13	2023-2024	UAlbany	Binghamton	95	75	139241	t	t
+2024-01-18	2023-2024	UAlbany	UMass Lowell	97	76	139242	f	t
+2024-01-20	2023-2024	UAlbany	Bryant	98	89	139243	f	t
+2024-01-25	2023-2024	UAlbany	Maine	81	73	139244	f	f
+2024-01-27	2023-2024	UAlbany	New Hampshire	86	79	139245	t	f
+2024-02-01	2023-2024	UAlbany	Vermont	81	59	139246	f	f
+2024-02-03	2023-2024	UAlbany	UMBC	114	102	139247	f	t
+2024-02-08	2023-2024	UAlbany	Binghamton	69	57	139248	f	f
+2024-02-15	2023-2024	UAlbany	NJIT	83	58	139249	t	t
+2024-02-17	2023-2024	UAlbany	UMBC	80	75	139250	f	f
+2024-02-22	2023-2024	UAlbany	Vermont	94	80	139251	f	t
+2024-02-24	2023-2024	UAlbany	UMass Lowell	104	95	139252	f	f
+2024-02-29	2023-2024	UAlbany	New Hampshire	91	67	139253	t	t
+2024-03-05	2023-2024	UAlbany	Bryant	83	79	139254	f	f
+2024-03-09	2023-2024	UAlbany	Vermont	75	72	139255	f	f
+2023-11-06	2023-2024	UC Davis	vsWilliam Jessup	86	51	139256	t	t
+2023-11-09	2023-2024	UC Davis	Pepperdine	79	78	139257	t	t
+2023-11-12	2023-2024	UC Davis	Montana	78	65	139258	f	f
+2023-11-14	2023-2024	UC Davis	North Dakota State	68	53	139259	t	t
+2023-11-26	2023-2024	UC Davis	Sacramento State	69	63	139260	f	t
+2023-11-30	2023-2024	UC Davis	Oregon State	71	59	139261	f	f
+2023-12-06	2023-2024	UC Davis	Nevada	80	68	139262	f	f
+2023-12-09	2023-2024	UC Davis	Milwaukee	81	79	139263	f	t
+2023-12-16	2023-2024	UC Davis	Pacific	82	61	139264	t	f
+2023-12-19	2023-2024	UC Davis	Montana	73	61	139265	f	t
+2023-12-21	2023-2024	UC Davis	vsUC Merced	80	57	139266	t	t
+2023-12-28	2023-2024	UC Davis	UC Santa Barbara	76	62	139267	t	t
+2023-12-30	2023-2024	UC Davis	Cal Poly	71	46	139268	t	t
+2024-01-04	2023-2024	UC Davis	UC Riverside	83	63	139269	t	f
+2024-01-11	2023-2024	UC Davis	Cal State Northridge	95	75	139270	t	t
+2024-01-18	2023-2024	UC Davis	Cal State Fullerton	67	65	139271	t	f
+2024-01-20	2023-2024	UC Davis	UC Irvine	54	52	139272	t	t
+2024-01-27	2023-2024	UC Davis	UC San Diego	92	59	139273	f	t
+2024-02-01	2023-2024	UC Davis	UC Santa Barbara	79	69	139274	t	f
+2024-02-03	2023-2024	UC Davis	Cal Poly	59	52	139275	t	f
+2024-02-08	2023-2024	UC Davis	Cal State Fullerton	71	58	139276	t	t
+2024-02-10	2023-2024	UC Davis	Hawai'i	87	70	139277	f	f
+2024-02-15	2023-2024	UC Davis	Long Beach State	78	74	139278	f	t
+2024-02-17	2023-2024	UC Davis	UC Riverside	67	61	139279	f	t
+2024-02-22	2023-2024	UC Davis	Cal State Northridge	66	65	139280	t	f
+2024-02-24	2023-2024	UC Davis	Cal State Bakersfield	75	56	139281	f	f
+2024-02-29	2023-2024	UC Davis	Hawai'i	75	63	139282	t	t
+2024-03-07	2023-2024	UC Davis	UC San Diego	70	63	139283	t	f
+2024-03-09	2023-2024	UC Davis	Long Beach State	88	78	139284	t	f
+2024-03-15	2023-2024	UC Davis	Hawai'i	68	65	139285	t	t
+2024-03-16	2023-2024	UC Davis	Long Beach State	74	70	139286	f	t
+2023-11-07	2023-2024	UC Irvine	San José State	72	64	139287	f	f
+2023-11-11	2023-2024	UC Irvine	New Mexico State	91	74	139288	t	t
+2023-11-14	2023-2024	UC Irvine	16 USC	70	60	139289	t	f
+2023-11-17	2023-2024	UC Irvine	vsOccidental	111	51	139290	t	t
+2023-11-21	2023-2024	UC Irvine	Pepperdine	76	60	139291	t	t
+2023-11-22	2023-2024	UC Irvine	Toledo	77	71	139292	t	t
+2023-11-24	2023-2024	UC Irvine	Rice	83	68	139293	t	t
+2023-11-29	2023-2024	UC Irvine	Duquesne	66	62	139294	f	f
+2023-12-02	2023-2024	UC Irvine	Utah State	79	69	139295	f	f
+2023-12-09	2023-2024	UC Irvine	25 San Diego State	63	62	139296	f	f
+2023-12-16	2023-2024	UC Irvine	South Dakota	121	78	139297	t	t
+2023-12-20	2023-2024	UC Irvine	New Mexico	78	65	139298	f	f
+2023-12-28	2023-2024	UC Irvine	UC Riverside	73	66	139299	t	t
+2023-12-30	2023-2024	UC Irvine	Cal State Bakersfield	75	56	139300	t	f
+2024-01-04	2023-2024	UC Irvine	Cal State Fullerton	75	67	139301	t	t
+2024-01-11	2023-2024	UC Irvine	Hawai'i	60	50	139302	t	f
+2024-01-18	2023-2024	UC Irvine	UC San Diego	76	65	139303	t	t
+2024-01-20	2023-2024	UC Irvine	UC Davis	54	52	139304	f	f
+2024-01-25	2023-2024	UC Irvine	Long Beach State	72	61	139305	t	f
+2024-01-27	2023-2024	UC Irvine	Cal State Northridge	77	72	139306	t	t
+2024-02-01	2023-2024	UC Irvine	Cal Poly	73	59	139307	t	f
+2024-02-03	2023-2024	UC Irvine	Hawai'i	93	68	139308	t	t
+2024-02-08	2023-2024	UC Irvine	UC Santa Barbara	76	61	139309	t	f
+2024-02-10	2023-2024	UC Irvine	UC Riverside	88	78	139310	f	f
+2024-02-17	2023-2024	UC Irvine	Cal State Bakersfield	77	71	139311	t	t
+2024-02-22	2023-2024	UC Irvine	UC Santa Barbara	81	69	139312	t	t
+2024-02-29	2023-2024	UC Irvine	Cal State Northridge	89	64	139313	t	f
+2024-03-02	2023-2024	UC Irvine	Long Beach State	82	61	139314	t	t
+2024-03-07	2023-2024	UC Irvine	Cal Poly	82	68	139315	t	t
+2024-03-09	2023-2024	UC Irvine	Cal State Fullerton	81	71	139316	t	f
+2024-03-15	2023-2024	UC Irvine	Long Beach State	83	79	139317	f	t
+2023-11-07	2023-2024	UC Riverside	vsUC Merced	76	69	139318	t	t
+2023-11-10	2023-2024	UC Riverside	Utah	82	53	139319	f	f
+2023-11-12	2023-2024	UC Riverside	Portland	76	65	139320	f	f
+2023-11-17	2023-2024	UC Riverside	20 North Carolina	77	52	139321	f	f
+2023-11-21	2023-2024	UC Riverside	Green Bay	74	68	139322	t	t
+2023-11-22	2023-2024	UC Riverside	Montana State	69	68	139323	f	f
+2023-11-26	2023-2024	UC Riverside	vsBethesda University	109	63	139324	t	t
+2023-11-30	2023-2024	UC Riverside	UCLA	66	65	139325	f	f
+2023-12-03	2023-2024	UC Riverside	North Dakota	68	62	139326	t	t
+2023-12-06	2023-2024	UC Riverside	Washington State	86	49	139327	f	f
+2023-12-16	2023-2024	UC Riverside	California Baptist	70	69	139328	f	t
+2023-12-21	2023-2024	UC Riverside	Idaho	82	67	139329	t	t
+2023-12-28	2023-2024	UC Riverside	UC Irvine	73	66	139330	f	f
+2023-12-30	2023-2024	UC Riverside	UC Santa Barbara	79	77	139331	t	t
+2024-01-04	2023-2024	UC Riverside	UC Davis	83	63	139332	f	t
+2024-01-06	2023-2024	UC Riverside	Long Beach State	83	75	139333	f	f
+2024-01-11	2023-2024	UC Riverside	Cal Poly	71	56	139334	t	t
+2024-01-13	2023-2024	UC Riverside	Hawai'i	63	56	139335	f	f
+2024-01-18	2023-2024	UC Riverside	Cal State Bakersfield	80	56	139336	f	f
+2024-01-20	2023-2024	UC Riverside	Cal State Northridge	82	63	139337	t	t
+2024-01-25	2023-2024	UC Riverside	UC San Diego	66	65	139338	f	f
+2024-01-27	2023-2024	UC Riverside	Long Beach State	65	53	139339	f	t
+2024-02-03	2023-2024	UC Riverside	Cal State Northridge	76	70	139340	f	f
+2024-02-08	2023-2024	UC Riverside	Cal State Bakersfield	65	63	139341	t	t
+2024-02-10	2023-2024	UC Riverside	UC Irvine	88	78	139342	t	t
+2024-02-15	2023-2024	UC Riverside	Cal State Fullerton	81	73	139343	t	f
+2024-02-17	2023-2024	UC Riverside	UC Davis	67	61	139344	t	f
+2024-02-22	2023-2024	UC Riverside	UC San Diego	77	65	139345	f	t
+2024-02-24	2023-2024	UC Riverside	Cal Poly	84	78	139346	t	f
+2024-03-07	2023-2024	UC Riverside	Cal State Fullerton	84	74	139347	t	t
+2024-03-09	2023-2024	UC Riverside	UC Santa Barbara	81	64	139348	t	f
+2024-03-13	2023-2024	UC Riverside	Cal State Bakersfield	83	78	139349	t	t
+2024-03-14	2023-2024	UC Riverside	Long Beach State	86	67	139350	f	t
+2023-11-06	2023-2024	UC San Diego	Denver	95	87	139351	t	t
+2023-11-11	2023-2024	UC San Diego	San Diego	69	63	139352	t	t
+2023-11-13	2023-2024	UC San Diego	vsLa Verne	116	57	139353	t	t
+2023-11-18	2023-2024	UC San Diego	Navy	73	55	139354	t	t
+2023-11-26	2023-2024	UC San Diego	Seattle U	79	67	139355	f	f
+2023-11-28	2023-2024	UC San Diego	Washington	83	56	139356	f	t
+2023-12-01	2023-2024	UC San Diego	San Diego State	63	62	139357	f	t
+2023-12-05	2023-2024	UC San Diego	vsOccidental	98	67	139358	t	t
+2023-12-09	2023-2024	UC San Diego	Pepperdine	68	62	139359	f	f
+2023-12-18	2023-2024	UC San Diego	Sacramento State	83	52	139360	t	f
+2023-12-20	2023-2024	UC San Diego	California	71	67	139361	f	f
+2023-12-28	2023-2024	UC San Diego	Cal State Bakersfield	76	64	139362	t	t
+2024-01-04	2023-2024	UC San Diego	UC Santa Barbara	79	72	139363	t	f
+2024-01-06	2023-2024	UC San Diego	Cal State Fullerton	76	58	139364	t	f
+2024-01-11	2023-2024	UC San Diego	Long Beach State	88	74	139365	t	t
+2024-01-13	2023-2024	UC San Diego	Cal Poly	86	61	139366	t	f
+2024-01-18	2023-2024	UC San Diego	UC Irvine	76	65	139367	f	f
+2024-01-20	2023-2024	UC San Diego	Hawai'i	67	61	139368	t	t
+2024-01-25	2023-2024	UC San Diego	UC Riverside	66	65	139369	t	t
+2024-01-27	2023-2024	UC San Diego	UC Davis	92	59	139370	t	f
+2024-02-01	2023-2024	UC San Diego	Cal State Northridge	83	62	139371	t	t
+2024-02-03	2023-2024	UC San Diego	Long Beach State	85	76	139372	f	f
+2024-02-15	2023-2024	UC San Diego	UC Santa Barbara	61	46	139373	t	t
+2024-02-17	2023-2024	UC San Diego	Cal State Fullerton	76	69	139374	t	t
+2024-02-22	2023-2024	UC San Diego	UC Riverside	77	65	139375	t	f
+2024-02-29	2023-2024	UC San Diego	Cal State Bakersfield	70	57	139376	f	f
+2024-03-02	2023-2024	UC San Diego	Cal State Northridge	79	69	139377	t	f
+2024-03-07	2023-2024	UC San Diego	UC Davis	70	63	139378	f	t
+2024-03-09	2023-2024	UC San Diego	Cal Poly	92	87	139379	t	t
+2023-11-09	2023-2024	Santa Barbara	Portland State	82	76	139380	f	t
+2023-11-13	2023-2024	Santa Barbara	UTEP	89	76	139381	f	f
+2023-11-19	2023-2024	Santa Barbara	Le Moyne	96	72	139382	t	t
+2023-11-22	2023-2024	Santa Barbara	vsWestmont	91	79	139383	t	t
+2023-11-27	2023-2024	Santa Barbara	Fresno State	69	65	139384	t	f
+2023-11-29	2023-2024	Santa Barbara	Northern Arizona	70	59	139385	t	t
+2023-12-06	2023-2024	Santa Barbara	New Mexico	84	61	139386	f	f
+2023-12-09	2023-2024	Santa Barbara	vsBethesda University	126	76	139387	t	t
+2023-12-16	2023-2024	Santa Barbara	Loyola Marymount	68	59	139388	t	t
+2023-12-20	2023-2024	Santa Barbara	Howard	94	81	139389	t	t
+2023-12-28	2023-2024	Santa Barbara	UC Davis	76	62	139390	f	f
+2023-12-30	2023-2024	Santa Barbara	UC Riverside	79	77	139391	f	f
+2024-01-04	2023-2024	Santa Barbara	UC San Diego	79	72	139392	f	t
+2024-01-06	2023-2024	Santa Barbara	Cal Poly	61	52	139393	t	f
+2024-01-13	2023-2024	Santa Barbara	Long Beach State	85	76	139394	t	t
+2024-01-18	2023-2024	Santa Barbara	Cal State Northridge	97	69	139395	t	f
+2024-01-20	2023-2024	Santa Barbara	Cal State Fullerton	73	69	139396	f	t
+2024-01-25	2023-2024	Santa Barbara	Hawai'i	78	61	139397	t	f
+2024-02-01	2023-2024	Santa Barbara	UC Davis	79	69	139398	f	t
+2024-02-03	2023-2024	Santa Barbara	Cal State Bakersfield	70	59	139399	t	f
+2024-02-08	2023-2024	Santa Barbara	UC Irvine	76	61	139400	f	t
+2024-02-10	2023-2024	Santa Barbara	Cal State Northridge	82	74	139401	f	t
+2024-02-15	2023-2024	Santa Barbara	UC San Diego	61	46	139402	f	f
+2024-02-17	2023-2024	Santa Barbara	Hawai'i	77	71	139403	t	t
+2024-02-22	2023-2024	Santa Barbara	UC Irvine	81	69	139404	f	f
+2024-02-29	2023-2024	Santa Barbara	Cal Poly	83	75	139405	t	t
+2024-03-02	2023-2024	Santa Barbara	Cal State Fullerton	79	70	139406	f	f
+2024-03-07	2023-2024	Santa Barbara	Long Beach State	76	74	139407	t	f
+2024-03-09	2023-2024	Santa Barbara	UC Riverside	81	64	139408	f	t
+2023-11-06	2023-2024	UCF	Florida International	85	62	139409	t	t
+2023-11-10	2023-2024	UCF	13 Miami	88	72	139410	f	f
+2023-11-16	2023-2024	UCF	Cal State Fullerton	72	44	139411	t	t
+2023-11-19	2023-2024	UCF	South Dakota State	83	80	139412	t	t
+2023-11-26	2023-2024	UCF	Stetson	85	82	139413	f	t
+2023-12-02	2023-2024	UCF	Lipscomb	72	57	139414	t	t
+2023-12-06	2023-2024	UCF	Jacksonville State	94	52	139415	t	t
+2023-12-10	2023-2024	UCF	Ole Miss	70	68	139416	f	t
+2023-12-18	2023-2024	UCF	Maine	74	51	139417	t	t
+2023-12-21	2023-2024	UCF	Florida A&M	69	56	139418	t	t
+2023-12-29	2023-2024	UCF	Bethune-Cookman	98	54	139419	t	t
+2024-01-06	2023-2024	UCF	Kansas State	77	52	139420	f	f
+2024-01-10	2023-2024	UCF	3 Kansas	65	60	139421	t	t
+2024-01-13	2023-2024	UCF	18 BYU	63	58	139422	f	t
+2024-01-17	2023-2024	UCF	Texas	77	71	139423	t	f
+2024-01-20	2023-2024	UCF	5 Houston	57	42	139424	f	f
+2024-01-23	2023-2024	UCF	West Virginia	72	59	139425	t	t
+2024-01-27	2023-2024	UCF	Cincinnati	68	57	139426	f	f
+2024-01-31	2023-2024	UCF	18 Baylor	77	69	139427	f	t
+2024-02-03	2023-2024	UCF	23 Oklahoma	74	63	139428	t	t
+2024-02-10	2023-2024	UCF	23 Texas Tech	66	59	139429	f	f
+2024-02-13	2023-2024	UCF	19 BYU	90	88	139430	f	f
+2024-02-17	2023-2024	UCF	Cincinnati	76	74	139431	f	t
+2024-02-20	2023-2024	UCF	West Virginia	77	67	139432	f	f
+2024-02-24	2023-2024	UCF	23 Texas Tech	75	61	139433	t	t
+2024-02-28	2023-2024	UCF	Oklahoma State	77	71	139434	t	f
+2024-03-02	2023-2024	UCF	8 Iowa State	60	52	139435	f	t
+2024-03-06	2023-2024	UCF	1 Houston	67	59	139436	f	t
+2024-03-09	2023-2024	UCF	TCU	79	77	139437	t	f
+2024-03-12	2023-2024	UCF	Oklahoma State	77	62	139438	t	t
+2024-03-13	2023-2024	UCF	20 BYU	87	73	139439	f	t
+2023-11-06	2023-2024	UCLA	St. Francis (PA)	75	44	139440	t	t
+2023-11-10	2023-2024	UCLA	Louisiana-Lafayette	68	50	139441	t	t
+2023-11-15	2023-2024	UCLA	Long Island University	78	58	139442	t	t
+2023-11-20	2023-2024	UCLA	4 Marquette	71	69	139443	f	t
+2023-11-21	2023-2024	UCLA	vsChaminade	76	48	139444	t	t
+2023-11-22	2023-2024	UCLA	11 Gonzaga	69	65	139445	f	t
+2023-11-30	2023-2024	UCLA	UC Riverside	66	65	139446	t	t
+2023-12-09	2023-2024	UCLA	Villanova	65	56	139447	f	f
+2023-12-16	2023-2024	UCLA	Ohio State	67	60	139448	f	t
+2023-12-19	2023-2024	UCLA	Cal State Northridge	76	72	139449	f	t
+2023-12-22	2023-2024	UCLA	Maryland	69	60	139450	f	t
+2023-12-28	2023-2024	UCLA	Oregon State	69	62	139451	t	f
+2023-12-30	2023-2024	UCLA	Oregon	64	59	139452	f	f
+2024-01-03	2023-2024	UCLA	Stanford	59	53	139453	f	t
+2024-01-06	2023-2024	UCLA	California	66	57	139454	f	t
+2024-01-11	2023-2024	UCLA	Utah	90	44	139455	f	f
+2024-01-14	2023-2024	UCLA	Washington	73	61	139456	t	t
+2024-01-17	2023-2024	UCLA	Arizona State	68	66	139457	t	f
+2024-01-20	2023-2024	UCLA	12 Arizona	77	71	139458	f	f
+2024-01-27	2023-2024	UCLA	USC	65	50	139459	t	f
+2024-02-01	2023-2024	UCLA	Oregon State	71	63	139460	t	t
+2024-02-03	2023-2024	UCLA	Oregon	71	63	139461	t	t
+2024-02-07	2023-2024	UCLA	Stanford	82	74	139462	t	f
+2024-02-10	2023-2024	UCLA	California	61	60	139463	t	f
+2024-02-15	2023-2024	UCLA	Colorado	64	60	139464	t	t
+2024-02-18	2023-2024	UCLA	Utah	70	69	139465	f	t
+2024-02-24	2023-2024	UCLA	USC	62	56	139466	f	t
+2024-02-29	2023-2024	UCLA	Washington	94	77	139467	f	f
+2024-03-02	2023-2024	UCLA	19 Washington State	77	65	139468	f	f
+2024-03-07	2023-2024	UCLA	5 Arizona	88	65	139469	f	t
+2024-03-09	2023-2024	UCLA	Arizona State	59	47	139470	t	t
+2024-03-13	2023-2024	UCLA	Oregon State	67	57	139471	t	t
+2024-03-14	2023-2024	UCLA	Oregon	68	66	139472	f	t
+2023-11-06	2023-2024	UConn	Northern Arizona	95	52	139473	t	t
+2023-11-11	2023-2024	UConn	Stonehill	107	67	139474	t	t
+2023-11-14	2023-2024	UConn	Mississippi Valley State	87	53	139475	t	t
+2023-11-19	2023-2024	UConn	Indiana	77	57	139476	t	t
+2023-11-20	2023-2024	UConn	15 Texas	81	71	139477	t	t
+2023-11-24	2023-2024	UConn	Manhattan	90	60	139478	t	t
+2023-11-27	2023-2024	UConn	New Hampshire	84	64	139479	t	t
+2023-12-01	2023-2024	UConn	5 Kansas	69	65	139480	f	f
+2023-12-05	2023-2024	UConn	9 North Carolina	87	76	139481	t	t
+2023-12-09	2023-2024	UConn	Arkansas-Pine Bluff	101	63	139482	t	t
+2023-12-15	2023-2024	UConn	10 Gonzaga	76	63	139483	t	t
+2023-12-20	2023-2024	UConn	Seton Hall	75	60	139484	f	f
+2023-12-23	2023-2024	UConn	St. John's	69	65	139485	t	t
+2024-01-02	2023-2024	UConn	DePaul	85	56	139486	t	t
+2024-01-05	2023-2024	UConn	Butler	88	81	139487	t	f
+2024-01-10	2023-2024	UConn	Xavier	80	75	139488	t	f
+2024-01-14	2023-2024	UConn	Georgetown	80	67	139489	t	t
+2024-01-17	2023-2024	UConn	18 Creighton	62	48	139490	t	t
+2024-01-20	2023-2024	UConn	Villanova	66	65	139491	t	f
+2024-01-28	2023-2024	UConn	Xavier	99	56	139492	t	t
+2024-01-31	2023-2024	UConn	Providence	74	65	139493	t	t
+2024-02-03	2023-2024	UConn	St. John's	77	64	139494	t	f
+2024-02-06	2023-2024	UConn	Butler	71	62	139495	t	t
+2024-02-10	2023-2024	UConn	Georgetown	89	64	139496	t	f
+2024-02-14	2023-2024	UConn	DePaul	101	65	139497	t	f
+2024-02-17	2023-2024	UConn	4 Marquette	81	53	139498	t	t
+2024-02-20	2023-2024	UConn	15 Creighton	85	66	139499	f	f
+2024-02-24	2023-2024	UConn	Villanova	78	54	139500	t	t
+2024-03-03	2023-2024	UConn	Seton Hall	91	61	139501	t	t
+2024-03-06	2023-2024	UConn	8 Marquette	74	67	139502	t	f
+2024-03-09	2023-2024	UConn	Providence	74	60	139503	t	f
+2024-03-14	2023-2024	UConn	Xavier	87	60	139504	t	t
+2024-03-15	2023-2024	UConn	St. John's	95	90	139505	t	t
+2024-03-16	2023-2024	UConn	10 Marquette	73	57	139506	t	t
+2023-11-06	2023-2024	UIC	Cincinnati	69	58	139507	f	f
+2023-11-10	2023-2024	UIC	Little Rock	86	71	139508	t	t
+2023-11-14	2023-2024	UIC	Loyola Chicago	72	67	139509	t	f
+2023-11-19	2023-2024	UIC	vsAurora	99	48	139510	t	t
+2023-11-24	2023-2024	UIC	Middle Tennessee	70	40	139511	t	t
+2023-11-25	2023-2024	UIC	George Washington	89	79	139512	t	t
+2023-11-26	2023-2024	UIC	UNC Greensboro	58	57	139513	f	t
+2023-11-30	2023-2024	UIC	Illinois State	69	64	139514	f	t
+2023-12-08	2023-2024	UIC	Jacksonville State	55	49	139515	t	f
+2023-12-12	2023-2024	UIC	Green Bay	70	68	139516	f	t
+2023-12-16	2023-2024	UIC	Western Michigan	89	68	139517	t	t
+2023-12-21	2023-2024	UIC	Incarnate Word	67	66	139518	f	t
+2023-12-30	2023-2024	UIC	Southern Illinois	62	50	139519	f	f
+2024-01-02	2023-2024	UIC	Murray State	85	73	139520	f	f
+2024-01-06	2023-2024	UIC	Valparaiso	70	64	139521	t	t
+2024-01-10	2023-2024	UIC	Northern Iowa	67	59	139522	f	f
+2024-01-13	2023-2024	UIC	Bradley	77	59	139523	f	t
+2024-01-17	2023-2024	UIC	Murray State	73	58	139524	f	t
+2024-01-20	2023-2024	UIC	Valparaiso	84	77	139525	f	f
+2024-01-24	2023-2024	UIC	Indiana State	89	83	139526	f	t
+2024-01-27	2023-2024	UIC	Belmont	74	65	139527	f	f
+2024-01-31	2023-2024	UIC	Evansville	77	60	139528	f	f
+2024-02-03	2023-2024	UIC	Southern Illinois	74	71	139529	f	t
+2024-02-07	2023-2024	UIC	Illinois State	61	56	139530	t	f
+2024-02-11	2023-2024	UIC	Northern Iowa	71	65	139531	t	t
+2024-02-14	2023-2024	UIC	Bradley	85	73	139532	f	f
+2024-02-18	2023-2024	UIC	Belmont	75	60	139533	f	t
+2024-02-21	2023-2024	UIC	Evansville	88	79	139534	t	t
+2024-02-24	2023-2024	UIC	Indiana State	88	73	139535	f	f
+2024-03-03	2023-2024	UIC	Missouri State	69	59	139536	f	f
+2024-03-08	2023-2024	UIC	Bradley	74	47	139537	f	t
+2023-11-06	2023-2024	UL Monroe	7 Houston	84	31	139538	f	f
+2023-11-11	2023-2024	UL Monroe	Central Michigan	74	64	139539	t	f
+2023-11-16	2023-2024	UL Monroe	Louisiana Tech	73	63	139540	f	t
+2023-11-20	2023-2024	UL Monroe	vsEcclesia	103	74	139541	t	t
+2023-11-26	2023-2024	UL Monroe	SMU	70	57	139542	f	f
+2023-11-28	2023-2024	UL Monroe	Northwestern State	74	70	139543	t	t
+2023-12-05	2023-2024	UL Monroe	vsChampion Christian	110	63	139544	t	t
+2023-12-12	2023-2024	UL Monroe	Sam Houston	63	62	139545	f	f
+2023-12-14	2023-2024	UL Monroe	Lamar	97	73	139546	f	f
+2023-12-18	2023-2024	UL Monroe	Jacksonville State	75	65	139547	f	f
+2023-12-30	2023-2024	UL Monroe	Appalachian State	67	55	139548	f	f
+2024-01-03	2023-2024	UL Monroe	Marshall	68	57	139549	f	t
+2024-01-06	2023-2024	UL Monroe	Georgia Southern	76	68	139550	f	t
+2024-01-11	2023-2024	UL Monroe	Southern Miss	71	58	139551	f	t
+2024-01-13	2023-2024	UL Monroe	Texas State	67	54	139552	f	t
+2024-01-18	2023-2024	UL Monroe	James Madison	89	70	139553	f	f
+2024-01-20	2023-2024	UL Monroe	Old Dominion	80	73	139554	t	f
+2024-01-25	2023-2024	UL Monroe	South Alabama	80	66	139555	t	t
+2024-01-31	2023-2024	UL Monroe	Louisiana	80	72	139556	f	f
+2024-02-03	2023-2024	UL Monroe	Arkansas State	95	80	139557	f	f
+2024-02-07	2023-2024	UL Monroe	Coastal Carolina	79	75	139558	t	t
+2024-02-10	2023-2024	UL Monroe	Eastern Michigan	82	76	139559	t	t
+2024-02-15	2023-2024	UL Monroe	Southern Miss	68	59	139560	t	f
+2024-02-17	2023-2024	UL Monroe	Troy	85	57	139561	f	f
+2024-02-22	2023-2024	UL Monroe	Louisiana	66	59	139562	t	t
+2024-02-24	2023-2024	UL Monroe	Troy	84	78	139563	f	t
+2024-02-27	2023-2024	UL Monroe	Texas State	73	55	139564	f	f
+2024-03-01	2023-2024	UL Monroe	South Alabama	80	69	139565	f	f
+2024-03-05	2023-2024	UL Monroe	Coastal Carolina	75	71	139566	f	t
+2023-11-06	2023-2024	UMBC	Louisville	94	93	139567	f	f
+2023-11-11	2023-2024	UMBC	Marist	65	59	139568	f	t
+2023-11-14	2023-2024	UMBC	vsPenn State-York	84	65	139569	t	t
+2023-11-17	2023-2024	UMBC	Sacred Heart	85	80	139570	t	t
+2023-11-19	2023-2024	UMBC	Loyola Maryland	94	79	139571	t	t
+2023-11-21	2023-2024	UMBC	Maryland	92	68	139572	f	f
+2023-11-25	2023-2024	UMBC	William & Mary	96	81	139573	f	f
+2023-11-27	2023-2024	UMBC	Hampton	80	76	139574	t	f
+2023-11-30	2023-2024	UMBC	Coppin State	89	70	139575	f	f
+2023-12-02	2023-2024	UMBC	Lehigh	92	87	139576	t	t
+2023-12-06	2023-2024	UMBC	Morgan State	92	80	139577	f	f
+2023-12-09	2023-2024	UMBC	Towson	89	73	139578	f	t
+2023-12-12	2023-2024	UMBC	Saint Peter's	66	60	139579	f	f
+2023-12-20	2023-2024	UMBC	Iowa	103	81	139580	f	f
+2023-12-29	2023-2024	UMBC	American University	87	85	139581	f	t
+2024-01-06	2023-2024	UMBC	Bryant	81	67	139582	f	t
+2024-01-11	2023-2024	UMBC	Vermont	77	72	139583	f	f
+2024-01-13	2023-2024	UMBC	UMass Lowell	86	82	139584	f	f
+2024-01-18	2023-2024	UMBC	Maine	70	65	139585	t	t
+2024-01-20	2023-2024	UMBC	New Hampshire	64	58	139586	f	t
+2024-01-27	2023-2024	UMBC	NJIT	75	74	139587	f	t
+2024-02-01	2023-2024	UMBC	Bryant	99	95	139588	f	f
+2024-02-03	2023-2024	UMBC	UAlbany	114	102	139589	t	f
+2024-02-08	2023-2024	UMBC	UMass Lowell	93	80	139590	f	t
+2024-02-10	2023-2024	UMBC	Vermont	72	70	139591	f	t
+2024-02-15	2023-2024	UMBC	Binghamton	89	78	139592	t	f
+2024-02-17	2023-2024	UMBC	UAlbany	80	75	139593	t	t
+2024-02-22	2023-2024	UMBC	Maine	62	56	139594	f	f
+2024-02-24	2023-2024	UMBC	New Hampshire	86	68	139595	t	f
+2024-02-29	2023-2024	UMBC	NJIT	79	60	139596	t	f
+2024-03-05	2023-2024	UMBC	Binghamton	72	71	139597	f	t
+2023-11-06	2023-2024	UMass Lowell	vsRivier	96	51	139598	t	t
+2023-11-10	2023-2024	UMass Lowell	Dartmouth	81	48	139599	t	f
+2023-11-14	2023-2024	UMass Lowell	Georgia Tech	74	71	139600	t	f
+2023-11-16	2023-2024	UMass Lowell	Arizona State	71	69	139601	f	f
+2023-11-20	2023-2024	UMass Lowell	Saint Peter's	69	61	139602	t	f
+2023-11-29	2023-2024	UMass Lowell	Stonehill	80	74	139603	t	f
+2023-12-02	2023-2024	UMass Lowell	Merrimack	74	68	139604	f	f
+2023-12-05	2023-2024	UMass Lowell	vsFisher College	117	69	139605	t	t
+2023-12-09	2023-2024	UMass Lowell	Massachusetts	91	77	139606	f	f
+2023-12-12	2023-2024	UMass Lowell	Long Island University	78	65	139607	t	t
+2023-12-16	2023-2024	UMass Lowell	Central Connecticut	57	54	139608	f	t
+2023-12-22	2023-2024	UMass Lowell	Boston University	71	63	139609	t	f
+2023-12-31	2023-2024	UMass Lowell	vsEmerson	116	48	139610	t	t
+2024-01-06	2023-2024	UMass Lowell	New Hampshire	82	75	139611	t	f
+2024-01-11	2023-2024	UMass Lowell	NJIT	70	62	139612	t	t
+2024-01-13	2023-2024	UMass Lowell	UMBC	86	82	139613	t	t
+2024-01-18	2023-2024	UMass Lowell	UAlbany	97	76	139614	t	f
+2024-01-20	2023-2024	UMass Lowell	Binghamton	80	60	139615	t	f
+2024-02-01	2023-2024	UMass Lowell	Maine	76	62	139616	t	t
+2024-02-03	2023-2024	UMass Lowell	New Hampshire	89	73	139617	f	t
+2024-02-08	2023-2024	UMass Lowell	UMBC	93	80	139618	t	f
+2024-02-10	2023-2024	UMass Lowell	NJIT	71	64	139619	f	f
+2024-02-17	2023-2024	UMass Lowell	Bryant	86	77	139620	t	f
+2024-02-22	2023-2024	UMass Lowell	Binghamton	87	80	139621	t	t
+2024-02-24	2023-2024	UMass Lowell	UAlbany	104	95	139622	t	t
+2024-02-29	2023-2024	UMass Lowell	Bryant	89	67	139623	t	t
+2024-03-02	2023-2024	UMass Lowell	Vermont	74	62	139624	f	f
+2024-03-05	2023-2024	UMass Lowell	Maine	71	65	139625	f	f
+2024-03-12	2023-2024	UMass Lowell	Bryant	77	70	139626	t	t
+2024-03-16	2023-2024	UMass Lowell	Vermont	66	61	139627	f	f
+2023-11-07	2023-2024	UNC Asheville	Michigan	99	74	139628	f	f
+2023-11-11	2023-2024	UNC Asheville	UNC Wilmington	83	66	139629	f	t
+2023-11-14	2023-2024	UNC Asheville	vsCarolina University	117	54	139630	t	t
+2023-11-18	2023-2024	UNC Asheville	vsVirginia-Lynchburg	114	59	139631	t	t
+2023-11-24	2023-2024	UNC Asheville	Lipscomb	86	75	139632	f	t
+2023-11-26	2023-2024	UNC Asheville	Western Kentucky	77	67	139633	t	t
+2023-12-01	2023-2024	UNC Asheville	vsJohnson University (TN)	97	51	139634	t	t
+2023-12-09	2023-2024	UNC Asheville	Western Carolina	78	63	139635	f	f
+2023-12-13	2023-2024	UNC Asheville	Auburn	87	62	139636	f	t
+2023-12-18	2023-2024	UNC Asheville	South Carolina State	79	75	139637	t	t
+2023-12-21	2023-2024	UNC Asheville	Appalachian State	76	63	139638	t	t
+2023-12-23	2023-2024	UNC Asheville	Kennesaw State	79	70	139639	t	t
+2023-12-29	2023-2024	UNC Asheville	UAB	90	85	139640	f	f
+2024-01-03	2023-2024	UNC Asheville	South Carolina Upstate	95	67	139641	t	t
+2024-01-06	2023-2024	UNC Asheville	Presbyterian	84	80	139642	t	f
+2024-01-10	2023-2024	UNC Asheville	High Point	84	79	139643	f	f
+2024-01-13	2023-2024	UNC Asheville	Longwood	65	61	139644	t	t
+2024-01-18	2023-2024	UNC Asheville	Winthrop	82	77	139645	t	f
+2024-01-24	2023-2024	UNC Asheville	Radford	81	69	139646	t	t
+2024-01-27	2023-2024	UNC Asheville	Charleston Southern	71	65	139647	t	f
+2024-01-31	2023-2024	UNC Asheville	Gardner-Webb	80	73	139648	f	f
+2024-02-03	2023-2024	UNC Asheville	Winthrop	82	78	139649	t	t
+2024-02-07	2023-2024	UNC Asheville	High Point	86	81	139650	t	t
+2024-02-10	2023-2024	UNC Asheville	South Carolina Upstate	77	64	139651	t	f
+2024-02-14	2023-2024	UNC Asheville	Presbyterian	71	69	139652	t	t
+2024-02-17	2023-2024	UNC Asheville	Charleston Southern	86	55	139653	t	t
+2024-02-21	2023-2024	UNC Asheville	Longwood	80	75	139654	f	f
+2024-02-24	2023-2024	UNC Asheville	Gardner-Webb	78	77	139655	f	t
+2024-03-02	2023-2024	UNC Asheville	Radford	71	62	139656	t	f
+2024-03-08	2023-2024	UNC Asheville	Charleston Southern	60	55	139657	t	t
+2024-03-10	2023-2024	UNC Asheville	Longwood	85	59	139658	f	t
+2023-11-10	2023-2024	UNC Greensboro	North Carolina A&T	94	78	139659	t	t
+2023-11-14	2023-2024	UNC Greensboro	Vanderbilt	74	70	139660	f	f
+2023-11-17	2023-2024	UNC Greensboro	14 Arkansas	78	72	139661	t	f
+2023-11-24	2023-2024	UNC Greensboro	Kansas City	76	64	139662	t	t
+2023-11-25	2023-2024	UNC Greensboro	Delaware	88	77	139663	t	t
+2023-11-26	2023-2024	UNC Greensboro	UIC	58	57	139664	t	t
+2023-12-01	2023-2024	UNC Greensboro	vsWilliam Peace	88	56	139665	t	t
+2023-12-10	2023-2024	UNC Greensboro	Elon	82	73	139666	t	t
+2023-12-16	2023-2024	UNC Greensboro	Marshall	72	65	139667	f	f
+2023-12-19	2023-2024	UNC Greensboro	High Point	74	63	139668	f	f
+2023-12-21	2023-2024	UNC Greensboro	vsVirginia-Lynchburg	135	57	139669	t	t
+2023-12-29	2023-2024	UNC Greensboro	21 Texas	72	37	139670	f	f
+2024-01-03	2023-2024	UNC Greensboro	Furman	79	68	139671	t	t
+2024-01-06	2023-2024	UNC Greensboro	East Tennessee State	70	54	139672	t	t
+2024-01-11	2023-2024	UNC Greensboro	Samford	79	70	139673	f	f
+2024-01-13	2023-2024	UNC Greensboro	Chattanooga	70	54	139674	t	f
+2024-01-17	2023-2024	UNC Greensboro	The Citadel	73	67	139675	t	t
+2024-01-20	2023-2024	UNC Greensboro	Wofford	82	59	139676	t	t
+2024-01-27	2023-2024	UNC Greensboro	Mercer	70	64	139677	f	t
+2024-01-31	2023-2024	UNC Greensboro	VMI	85	79	139678	t	f
+2024-02-04	2023-2024	UNC Greensboro	Furman	89	87	139679	t	f
+2024-02-08	2023-2024	UNC Greensboro	Samford	78	69	139680	f	t
+2024-02-10	2023-2024	UNC Greensboro	Chattanooga	89	61	139681	f	t
+2024-02-14	2023-2024	UNC Greensboro	The Citadel	76	61	139682	t	f
+2024-02-17	2023-2024	UNC Greensboro	Wofford	58	47	139683	t	f
+2024-02-21	2023-2024	UNC Greensboro	Western Carolina	71	65	139684	t	t
+2024-02-24	2023-2024	UNC Greensboro	Mercer	86	72	139685	f	f
+2024-02-28	2023-2024	UNC Greensboro	VMI	100	58	139686	t	t
+2024-03-02	2023-2024	UNC Greensboro	East Tennessee State	66	65	139687	f	f
+2023-11-22	2023-2024	UT Arlington	Alcorn State	82	69	139779	t	t
+2024-03-09	2023-2024	UNC Greensboro	East Tennessee State	73	62	139688	f	t
+2023-11-06	2023-2024	UNC Wilmington	vsMount Olive	105	66	139689	t	t
+2023-11-11	2023-2024	UNC Wilmington	UNC Asheville	83	66	139690	t	f
+2023-11-14	2023-2024	UNC Wilmington	vsColumbia International	116	80	139691	t	t
+2023-11-21	2023-2024	UNC Wilmington	Appalachian State	86	56	139692	f	t
+2023-11-25	2023-2024	UNC Wilmington	Florida Gulf Coast	71	55	139693	t	f
+2023-11-30	2023-2024	UNC Wilmington	East Carolina	74	66	139694	f	f
+2023-12-02	2023-2024	UNC Wilmington	12 Kentucky	80	73	139695	t	f
+2023-12-10	2023-2024	UNC Wilmington	vsMontreat	119	50	139696	t	t
+2023-12-16	2023-2024	UNC Wilmington	Georgia Southern	82	77	139697	t	f
+2023-12-21	2023-2024	UNC Wilmington	Marshall	78	69	139698	t	f
+2023-12-30	2023-2024	UNC Wilmington	Arkansas	106	90	139699	f	f
+2024-01-04	2023-2024	UNC Wilmington	Drexel	78	63	139700	f	f
+2024-01-06	2023-2024	UNC Wilmington	Towson	67	64	139701	f	f
+2024-01-11	2023-2024	UNC Wilmington	Monmouth	69	56	139702	t	t
+2024-01-14	2023-2024	UNC Wilmington	Delaware	79	74	139703	t	t
+2024-01-18	2023-2024	UNC Wilmington	Elon	82	70	139704	t	f
+2024-01-20	2023-2024	UNC Wilmington	Charleston	78	69	139705	t	t
+2024-01-25	2023-2024	UNC Wilmington	Northeastern	77	54	139706	t	f
+2024-02-01	2023-2024	UNC Wilmington	Charleston	80	74	139707	t	f
+2024-02-03	2023-2024	UNC Wilmington	Campbell	77	74	139708	t	t
+2024-02-08	2023-2024	UNC Wilmington	Drexel	75	56	139709	t	t
+2024-02-10	2023-2024	UNC Wilmington	Hampton	95	65	139710	t	f
+2024-02-15	2023-2024	UNC Wilmington	North Carolina A&T	73	54	139711	t	t
+2024-02-17	2023-2024	UNC Wilmington	Elon	73	72	139712	f	t
+2024-02-22	2023-2024	UNC Wilmington	William & Mary	81	65	139713	t	f
+2024-02-29	2023-2024	UNC Wilmington	Hofstra	69	58	139714	f	t
+2024-03-02	2023-2024	UNC Wilmington	Towson	75	64	139715	t	t
+2024-03-10	2023-2024	UNC Wilmington	Towson	66	56	139716	f	t
+2023-11-08	2023-2024	UNLV	Southern	85	71	139717	f	t
+2023-11-11	2023-2024	UNLV	Stetson	71	55	139718	t	t
+2023-11-17	2023-2024	UNLV	Pepperdine	82	68	139719	t	f
+2023-11-20	2023-2024	UNLV	Florida State	83	75	139720	f	t
+2023-11-21	2023-2024	UNLV	Richmond	82	65	139721	f	t
+2023-11-28	2023-2024	UNLV	Akron	72	70	139722	t	t
+2023-12-09	2023-2024	UNLV	Loyola Marymount	78	75	139723	f	t
+2023-12-13	2023-2024	UNLV	8 Creighton	79	64	139724	t	t
+2023-12-21	2023-2024	UNLV	Hofstra	74	56	139725	t	t
+2023-12-31	2023-2024	UNLV	vsCarroll (MT)	87	51	139726	t	t
+2024-01-02	2023-2024	UNLV	vsBethesda University	112	56	139727	t	t
+2024-01-06	2023-2024	UNLV	San Diego State	72	61	139728	f	f
+2024-01-09	2023-2024	UNLV	New Mexico	83	73	139729	t	t
+2024-01-13	2023-2024	UNLV	20 Utah State	87	86	139730	f	t
+2024-01-16	2023-2024	UNLV	Boise State	68	64	139731	t	f
+2024-01-19	2023-2024	UNLV	Colorado State	78	75	139732	f	f
+2024-01-23	2023-2024	UNLV	Air Force	90	58	139733	f	t
+2024-01-27	2023-2024	UNLV	San José State	77	65	139734	t	f
+2024-01-30	2023-2024	UNLV	Fresno State	78	69	139735	t	t
+2024-02-03	2023-2024	UNLV	Wyoming	62	48	139736	t	t
+2024-02-10	2023-2024	UNLV	25 New Mexico	80	77	139737	t	f
+2024-02-14	2023-2024	UNLV	Fresno State	67	65	139738	t	f
+2024-02-17	2023-2024	UNLV	Nevada	69	66	139739	f	t
+2024-02-21	2023-2024	UNLV	Air Force	72	43	139740	t	f
+2024-02-24	2023-2024	UNLV	22 Colorado State	66	60	139741	t	t
+2024-03-02	2023-2024	UNLV	San José State	68	50	139742	t	t
+2024-03-05	2023-2024	UNLV	21 San Diego State	62	58	139743	t	t
+2024-03-09	2023-2024	UNLV	Nevada	75	65	139744	f	f
+2023-11-06	2023-2024	USC	Kansas State	82	69	139745	t	t
+2023-11-09	2023-2024	USC	Cal State Bakersfield	85	59	139746	t	t
+2023-11-14	2023-2024	USC	UC Irvine	70	60	139747	f	t
+2023-11-19	2023-2024	USC	Brown	81	70	139748	t	t
+2023-11-23	2023-2024	USC	Seton Hall	71	63	139749	t	t
+2023-11-24	2023-2024	USC	Oklahoma	72	70	139750	f	t
+2023-11-29	2023-2024	USC	Eastern Washington	106	78	139751	t	t
+2023-12-02	2023-2024	USC	11 Gonzaga	89	76	139752	f	t
+2023-12-17	2023-2024	USC	Auburn	91	75	139753	f	f
+2023-12-19	2023-2024	USC	Alabama State	79	59	139754	t	f
+2023-12-28	2023-2024	USC	Oregon	82	74	139755	f	f
+2023-12-30	2023-2024	USC	Oregon State	86	70	139756	f	f
+2024-01-03	2023-2024	USC	California	82	74	139757	t	t
+2024-01-06	2023-2024	USC	Stanford	93	79	139758	t	t
+2024-01-10	2023-2024	USC	Washington State	72	64	139759	f	t
+2024-01-13	2023-2024	USC	Colorado	68	58	139760	f	f
+2024-01-17	2023-2024	USC	12 Arizona	82	67	139761	f	f
+2024-01-20	2023-2024	USC	Arizona State	82	67	139762	f	f
+2024-01-27	2023-2024	USC	UCLA	65	50	139763	f	t
+2024-02-01	2023-2024	USC	Oregon	78	69	139764	f	t
+2024-02-03	2023-2024	USC	Oregon State	82	54	139765	t	t
+2024-02-10	2023-2024	USC	Stanford	99	68	139766	f	f
+2024-02-15	2023-2024	USC	Utah	68	64	139767	t	t
+2024-02-24	2023-2024	USC	UCLA	62	56	139768	t	f
+2024-02-29	2023-2024	USC	19 Washington State	75	72	139769	f	f
+2024-03-02	2023-2024	USC	Washington	82	75	139770	t	f
+2024-03-07	2023-2024	USC	Arizona State	81	73	139771	t	t
+2024-03-09	2023-2024	USC	5 Arizona	78	65	139772	t	t
+2024-03-13	2023-2024	USC	Washington	80	74	139773	t	t
+2024-03-14	2023-2024	USC	6 Arizona	70	49	139774	f	t
+2023-11-06	2023-2024	UT Arlington	Oral Roberts	75	71	139775	t	t
+2023-11-11	2023-2024	UT Arlington	vsUT Tyler	95	64	139776	t	t
+2023-11-16	2023-2024	UT Arlington	New Mexico	82	80	139777	f	f
+2023-11-19	2023-2024	UT Arlington	3 Arizona	101	56	139778	f	f
+2023-11-25	2023-2024	UT Arlington	Texas State	73	66	139780	f	t
+2023-11-29	2023-2024	UT Arlington	Abilene Christian	86	71	139781	t	t
+2023-12-02	2023-2024	UT Arlington	Grand Canyon	76	69	139782	f	f
+2023-12-06	2023-2024	UT Arlington	vsNorth Texas-Dallas	74	37	139783	t	t
+2023-12-16	2023-2024	UT Arlington	Air Force	76	73	139784	t	t
+2023-12-21	2023-2024	UT Arlington	Texas Tech	77	66	139785	f	f
+2023-12-23	2023-2024	UT Arlington	North Texas	78	52	139786	f	f
+2024-01-01	2023-2024	UT Arlington	20 Texas	79	62	139787	f	f
+2024-01-04	2023-2024	UT Arlington	Tarleton State	78	76	139788	f	f
+2024-01-06	2023-2024	UT Arlington	Stephen F. Austin	92	73	139789	f	f
+2024-01-11	2023-2024	UT Arlington	Utah Valley	83	69	139790	t	t
+2024-01-13	2023-2024	UT Arlington	Seattle U	80	75	139791	t	t
+2024-01-18	2023-2024	UT Arlington	UT Rio Grande Valley	91	73	139792	t	t
+2024-01-20	2023-2024	UT Arlington	Abilene Christian	78	67	139793	f	f
+2024-01-27	2023-2024	UT Arlington	Grand Canyon	67	61	139794	f	t
+2024-02-01	2023-2024	UT Arlington	Southern Utah	76	68	139795	t	f
+2024-02-03	2023-2024	UT Arlington	Utah Tech	87	66	139796	t	f
+2024-02-08	2023-2024	UT Arlington	California Baptist	64	63	139797	f	f
+2024-02-15	2023-2024	UT Arlington	Tarleton State	80	78	139798	f	t
+2024-02-17	2023-2024	UT Arlington	UT Rio Grande Valley	89	70	139799	t	f
+2024-02-22	2023-2024	UT Arlington	Southern Utah	90	85	139800	t	t
+2024-02-24	2023-2024	UT Arlington	Utah Tech	89	78	139801	t	t
+2024-02-29	2023-2024	UT Arlington	Seattle U	82	62	139802	t	f
+2024-03-02	2023-2024	UT Arlington	Utah Valley	78	65	139803	t	f
+2024-03-07	2023-2024	UT Arlington	California Baptist	71	57	139804	t	t
+2024-03-14	2023-2024	UT Arlington	Stephen F. Austin	109	78	139805	t	t
+2024-03-15	2023-2024	UT Arlington	Tarleton State	87	84	139806	t	t
+2024-03-16	2023-2024	UT Arlington	Grand Canyon	89	74	139807	f	t
+2023-11-06	2023-2024	UT Martin	vsChampion Christian	104	76	139808	t	t
+2023-11-11	2023-2024	UT Martin	Mississippi State	87	63	139809	f	f
+2023-11-13	2023-2024	UT Martin	vsBrescia	90	72	139810	t	t
+2023-11-17	2023-2024	UT Martin	Eastern Kentucky	80	74	139811	t	f
+2023-11-19	2023-2024	UT Martin	Prairie View A&M	78	66	139812	f	t
+2023-11-25	2023-2024	UT Martin	Chicago State	94	71	139813	t	f
+2023-11-30	2023-2024	UT Martin	Rice	98	78	139814	f	f
+2023-12-02	2023-2024	UT Martin	McNeese	91	80	139815	f	f
+2023-12-10	2023-2024	UT Martin	vsEcclesia	110	52	139816	t	t
+2023-12-12	2023-2024	UT Martin	NC State	81	67	139817	f	f
+2023-12-18	2023-2024	UT Martin	Evansville	98	91	139818	f	f
+2023-12-20	2023-2024	UT Martin	vsWilliam Woods	78	75	139819	t	t
+2023-12-28	2023-2024	UT Martin	Tennessee State	91	75	139820	t	f
+2023-12-30	2023-2024	UT Martin	Tennessee Tech	81	73	139821	t	f
+2024-01-04	2023-2024	UT Martin	Eastern Illinois	79	72	139822	f	t
+2024-01-11	2023-2024	UT Martin	Western Illinois	73	64	139823	f	t
+2024-01-13	2023-2024	UT Martin	Little Rock	77	72	139824	t	t
+2024-01-18	2023-2024	UT Martin	Morehead State	84	66	139825	f	f
+2024-01-25	2023-2024	UT Martin	Southeast Missouri State	84	58	139826	t	t
+2024-01-27	2023-2024	UT Martin	Lindenwood	76	67	139827	t	t
+2024-02-01	2023-2024	UT Martin	Eastern Illinois	76	59	139828	t	f
+2024-02-03	2023-2024	UT Martin	SIU Edwardsville	90	79	139829	t	f
+2024-02-06	2023-2024	UT Martin	Little Rock	77	57	139830	f	f
+2024-02-10	2023-2024	UT Martin	Western Illinois	62	59	139831	t	f
+2024-02-15	2023-2024	UT Martin	Southern Indiana	77	68	139832	t	t
+2024-02-17	2023-2024	UT Martin	Morehead State	88	82	139833	t	t
+2024-02-22	2023-2024	UT Martin	Lindenwood	106	82	139834	t	f
+2024-02-24	2023-2024	UT Martin	Southeast Missouri State	82	72	139835	t	f
+2024-02-29	2023-2024	UT Martin	Tennessee Tech	80	69	139836	t	t
+2024-03-02	2023-2024	UT Martin	Tennessee State	96	87	139837	t	t
+2024-03-08	2023-2024	UT Martin	Morehead State	84	78	139838	f	t
+2023-11-06	2023-2024	UT Rio Grande	vsSouthwestern Adventist	110	59	139839	t	t
+2023-11-10	2023-2024	UT Rio Grande	South Dakota	100	79	139840	f	t
+2023-11-14	2023-2024	UT Rio Grande	TCU	88	55	139841	f	f
+2023-11-17	2023-2024	UT Rio Grande	Oklahoma	90	66	139842	f	f
+2023-11-20	2023-2024	UT Rio Grande	vsNorth American	92	73	139843	t	t
+2023-11-24	2023-2024	UT Rio Grande	Hawai'i	76	57	139844	f	t
+2023-11-25	2023-2024	UT Rio Grande	Arkansas State	75	58	139845	f	t
+2023-11-29	2023-2024	UT Rio Grande	Grand Canyon	79	69	139846	f	t
+2023-12-02	2023-2024	UT Rio Grande	Tarleton State	77	75	139847	f	f
+2023-12-06	2023-2024	UT Rio Grande	Texas A&M-Corpus Christi	76	74	139848	t	f
+2023-12-15	2023-2024	UT Rio Grande	Texas A&M-Corpus Christi	86	76	139849	f	t
+2023-12-18	2023-2024	UT Rio Grande	Chicago State	78	68	139850	f	f
+2023-12-30	2023-2024	UT Rio Grande	Incarnate Word	77	74	139851	t	t
+2024-01-04	2023-2024	UT Rio Grande	Stephen F. Austin	85	78	139852	f	t
+2024-01-13	2023-2024	UT Rio Grande	Utah Valley	76	68	139853	t	t
+2024-01-18	2023-2024	UT Rio Grande	UT Arlington	91	73	139854	f	f
+2024-01-20	2023-2024	UT Rio Grande	Tarleton State	77	73	139855	f	t
+2024-01-25	2023-2024	UT Rio Grande	California Baptist	63	54	139856	f	t
+2024-02-01	2023-2024	UT Rio Grande	Utah Tech	81	64	139857	f	f
+2024-02-03	2023-2024	UT Rio Grande	Southern Utah	79	59	139858	f	f
+2024-02-08	2023-2024	UT Rio Grande	Stephen F. Austin	92	84	139859	f	f
+2024-02-15	2023-2024	UT Rio Grande	Abilene Christian	87	79	139860	f	t
+2024-02-17	2023-2024	UT Rio Grande	UT Arlington	89	70	139861	f	t
+2024-02-22	2023-2024	UT Rio Grande	Utah Valley	70	59	139862	f	f
+2024-02-24	2023-2024	UT Rio Grande	Seattle U	84	56	139863	f	f
+2024-02-29	2023-2024	UT Rio Grande	Grand Canyon	72	43	139864	f	f
+2024-03-02	2023-2024	UT Rio Grande	California Baptist	88	52	139865	f	f
+2024-03-07	2023-2024	UT Rio Grande	Utah Tech	79	74	139866	f	t
+2024-03-09	2023-2024	UT Rio Grande	Southern Utah	68	59	139867	f	t
+2023-11-06	2023-2024	UTEP	vsMcMurry	120	71	139868	t	t
+2023-11-09	2023-2024	UTEP	vsScience & Arts (OK)	123	72	139869	t	t
+2023-11-13	2023-2024	UTEP	UC Santa Barbara	89	76	139870	t	t
+2023-11-17	2023-2024	UTEP	Austin Peay	71	63	139871	t	t
+2023-11-21	2023-2024	UTEP	California	75	72	139872	t	t
+2023-11-22	2023-2024	UTEP	Bradley	63	59	139873	f	t
+2023-11-25	2023-2024	UTEP	Loyola Marymount	67	47	139874	f	f
+2023-11-29	2023-2024	UTEP	Texas A&M-Corpus Christi	67	63	139875	f	t
+2023-12-04	2023-2024	UTEP	vsWestern New Mexico	90	62	139876	t	t
+2023-12-09	2023-2024	UTEP	Oregon	71	49	139877	f	f
+2023-12-17	2023-2024	UTEP	Abilene Christian	88	82	139878	f	f
+2023-12-20	2023-2024	UTEP	Norfolk State	67	65	139879	t	t
+2023-12-21	2023-2024	UTEP	Wyoming	78	67	139880	t	t
+2023-12-30	2023-2024	UTEP	Seattle U	73	61	139881	f	t
+2024-01-04	2023-2024	UTEP	New Mexico State	63	53	139882	f	f
+2024-01-07	2023-2024	UTEP	Chicago State	74	69	139883	t	t
+2024-01-13	2023-2024	UTEP	Florida International	72	68	139884	f	f
+2024-01-18	2023-2024	UTEP	Middle Tennessee	73	59	139885	t	t
+2024-01-20	2023-2024	UTEP	Western Kentucky	93	87	139886	t	t
+2024-01-25	2023-2024	UTEP	Louisiana Tech	68	54	139887	f	f
+2024-01-27	2023-2024	UTEP	Sam Houston	60	56	139888	f	f
+2024-02-01	2023-2024	UTEP	Jacksonville State	79	71	139889	t	t
+2024-02-03	2023-2024	UTEP	Liberty	67	65	139890	f	t
+2024-02-10	2023-2024	UTEP	New Mexico State	74	49	139891	t	t
+2024-02-15	2023-2024	UTEP	Western Kentucky	90	80	139892	f	f
+2024-02-22	2023-2024	UTEP	Louisiana Tech	65	59	139893	f	t
+2024-02-24	2023-2024	UTEP	Sam Houston	65	54	139894	f	t
+2024-02-29	2023-2024	UTEP	Jacksonville State	72	65	139895	t	f
+2024-03-02	2023-2024	UTEP	Liberty	67	51	139896	t	f
+2024-03-07	2023-2024	UTEP	Florida International	83	76	139897	t	t
+2024-03-14	2023-2024	UTEP	Liberty	66	57	139898	t	t
+2024-03-15	2023-2024	UTEP	Sam Houston	65	63	139899	t	t
+2024-03-16	2023-2024	UTEP	Western Kentucky	78	71	139900	f	t
+2023-11-10	2023-2024	UTSA	Minnesota	102	76	139901	f	f
+2023-11-14	2023-2024	UTSA	Lamar	90	82	139902	f	f
+2023-11-17	2023-2024	UTSA	Texas State	72	62	139903	f	f
+2023-11-20	2023-2024	UTSA	Houston Christian	89	87	139904	t	f
+2023-11-24	2023-2024	UTSA	Jacksonville State	77	62	139905	f	t
+2023-11-25	2023-2024	UTSA	Incarnate Word	90	80	139906	t	t
+2023-11-30	2023-2024	UTSA	Lamar	86	83	139907	t	t
+2023-12-10	2023-2024	UTSA	vsArkansas-Fort Smith	93	60	139908	t	t
+2023-12-13	2023-2024	UTSA	Little Rock	93	84	139909	f	f
+2023-12-17	2023-2024	UTSA	Oregon State	66	65	139910	f	f
+2023-12-21	2023-2024	UTSA	Army	63	53	139911	f	t
+2023-12-28	2023-2024	UTSA	Prairie View A&M	103	89	139912	t	t
+2024-01-02	2023-2024	UTSA	UAB	78	76	139913	f	t
+2024-01-13	2023-2024	UTSA	Charlotte	66	58	139914	f	t
+2024-01-17	2023-2024	UTSA	Tulsa	107	78	139915	f	f
+2024-01-24	2023-2024	UTSA	Tulane	89	88	139916	t	t
+2024-01-27	2023-2024	UTSA	South Florida	89	72	139917	f	f
+2024-02-03	2023-2024	UTSA	Rice	80	76	139918	f	t
+2024-02-07	2023-2024	UTSA	Wichita State	84	64	139919	f	f
+2024-02-10	2023-2024	UTSA	East Carolina	84	73	139920	f	t
+2024-02-15	2023-2024	UTSA	Charlotte	79	70	139921	f	f
+2024-02-18	2023-2024	UTSA	Temple	83	77	139922	f	f
+2024-02-21	2023-2024	UTSA	South Florida	66	61	139923	f	t
+2024-02-24	2023-2024	UTSA	North Texas	64	62	139924	t	f
+2024-02-28	2023-2024	UTSA	Tulsa	89	73	139925	t	t
+2024-03-02	2023-2024	UTSA	SMU	77	73	139926	t	f
+2024-03-10	2023-2024	UTSA	Temple	84	82	139927	f	t
+2024-03-13	2023-2024	UTSA	Temple	64	61	139928	f	t
+2023-11-06	2023-2024	Utah State	vsSouth Dakota Mines	101	48	139929	t	t
+2023-11-14	2023-2024	Utah State	Southern Utah	93	84	139930	t	t
+2023-11-19	2023-2024	Utah State	Marshall	83	60	139931	t	t
+2023-11-20	2023-2024	Utah State	Akron	65	62	139932	t	t
+2023-11-21	2023-2024	Utah State	Stephen F. Austin	79	49	139933	t	t
+2023-11-28	2023-2024	Utah State	Saint Louis	81	76	139934	t	f
+2023-12-02	2023-2024	Utah State	UC Irvine	79	69	139935	t	t
+2023-12-06	2023-2024	Utah State	San Diego	108	81	139936	t	t
+2023-12-09	2023-2024	Utah State	vsNorthwest Nazarene	84	53	139937	t	t
+2023-12-13	2023-2024	Utah State	Santa Clara	84	82	139938	t	f
+2023-12-16	2023-2024	Utah State	San Francisco	54	53	139939	t	t
+2023-12-22	2023-2024	Utah State	East Tennessee State	80	65	139940	t	t
+2024-01-02	2023-2024	Utah State	Air Force	88	60	139941	t	f
+2024-01-06	2023-2024	Utah State	13 Colorado State	77	72	139942	t	t
+2024-01-09	2023-2024	Utah State	Wyoming	83	59	139943	t	t
+2024-01-13	2023-2024	Utah State	UNLV	87	86	139944	t	f
+2024-01-16	2023-2024	Utah State	New Mexico	99	86	139945	f	f
+2024-01-20	2023-2024	Utah State	Fresno State	83	62	139946	t	t
+2024-01-30	2023-2024	Utah State	San José State	82	61	139947	t	t
+2024-02-03	2023-2024	Utah State	San Diego State	81	67	139948	f	f
+2024-02-06	2023-2024	Utah State	Nevada	77	63	139949	f	t
+2024-02-10	2023-2024	Utah State	Boise State	80	61	139950	t	t
+2024-02-14	2023-2024	Utah State	Wyoming	84	76	139951	t	f
+2024-02-17	2023-2024	Utah State	Colorado State	75	55	139952	f	f
+2024-02-20	2023-2024	Utah State	19 San Diego State	68	63	139953	t	t
+2024-03-01	2023-2024	Utah State	Air Force	72	60	139954	t	t
+2024-03-06	2023-2024	Utah State	San José State	90	70	139955	t	f
+2024-03-09	2023-2024	Utah State	New Mexico	87	85	139956	t	t
+2024-03-15	2023-2024	Utah State	San Diego State	86	70	139957	f	t
+2023-11-08	2023-2024	Utah Tech	Santa Clara	77	69	139958	f	f
+2023-11-17	2023-2024	Utah Tech	Youngstown State	75	68	139959	f	f
+2023-11-18	2023-2024	Utah Tech	vsLake Erie	81	69	139960	t	t
+2023-11-24	2023-2024	Utah Tech	Washington State	93	53	139961	f	f
+2023-11-27	2023-2024	Utah Tech	Lindenwood	73	66	139962	t	f
+2023-12-02	2023-2024	Utah Tech	Utah Valley	65	53	139963	t	t
+2023-12-06	2023-2024	Utah Tech	California Baptist	72	69	139964	t	f
+2023-12-09	2023-2024	Utah Tech	Idaho	63	62	139965	f	t
+2023-12-11	2023-2024	Utah Tech	Cal State Northridge	80	75	139966	f	f
+2023-12-16	2023-2024	Utah Tech	North Dakota	79	62	139967	f	t
+2023-12-21	2023-2024	Utah Tech	Colorado	98	71	139968	f	f
+2024-01-04	2023-2024	Utah Tech	Seattle U	70	53	139969	f	f
+2024-01-06	2023-2024	Utah Tech	Grand Canyon	75	65	139970	f	t
+2024-01-11	2023-2024	Utah Tech	Stephen F. Austin	75	70	139971	t	t
+2024-01-18	2023-2024	Utah Tech	Southern Utah	75	65	139972	f	f
+2024-01-20	2023-2024	Utah Tech	Utah Valley	84	71	139973	f	f
+2024-01-25	2023-2024	Utah Tech	Abilene Christian	82	60	139974	f	f
+2024-01-27	2023-2024	Utah Tech	Tarleton State	86	68	139975	f	f
+2024-02-01	2023-2024	Utah Tech	UT Rio Grande Valley	81	64	139976	t	t
+2024-02-03	2023-2024	Utah Tech	UT Arlington	87	66	139977	f	t
+2024-02-08	2023-2024	Utah Tech	Southern Utah	70	68	139978	t	t
+2024-02-10	2023-2024	Utah Tech	California Baptist	85	78	139979	t	t
+2024-02-15	2023-2024	Utah Tech	Grand Canyon	73	61	139980	f	f
+2024-02-17	2023-2024	Utah Tech	Seattle U	66	65	139981	f	t
+2024-02-24	2023-2024	Utah Tech	UT Arlington	89	78	139982	f	f
+2024-02-29	2023-2024	Utah Tech	Tarleton State	85	74	139983	f	t
+2024-03-02	2023-2024	Utah Tech	Abilene Christian	86	79	139984	f	t
+2024-03-07	2023-2024	Utah Tech	UT Rio Grande Valley	79	74	139985	t	f
+2024-03-09	2023-2024	Utah Tech	Stephen F. Austin	84	71	139986	f	f
+2023-11-06	2023-2024	Utah	Eastern Washington	101	66	139987	t	t
+2023-11-10	2023-2024	Utah	UC Riverside	82	53	139988	t	t
+2023-11-16	2023-2024	Utah	Wake Forest	77	70	139989	t	t
+2023-11-17	2023-2024	Utah	6 Houston	76	66	139990	f	t
+2023-11-19	2023-2024	Utah	St. John's	91	82	139991	f	t
+2023-11-27	2023-2024	Utah	St. Mary's	78	71	139992	t	f
+2023-11-30	2023-2024	Utah	Hawai'i	79	66	139993	t	t
+2023-12-05	2023-2024	Utah	Southern Utah	88	86	139994	t	t
+2023-12-09	2023-2024	Utah	14 BYU	73	69	139995	t	t
+2023-12-16	2023-2024	Utah	Utah Valley	76	62	139996	t	t
+2023-12-20	2023-2024	Utah	Bellarmine	85	43	139997	t	t
+2023-12-29	2023-2024	Utah	Washington State	80	58	139998	t	t
+2023-12-31	2023-2024	Utah	Washington	95	90	139999	t	t
+2024-01-04	2023-2024	Utah	Arizona State	82	70	140000	f	f
+2024-01-06	2023-2024	Utah	10 Arizona	92	73	140001	f	f
+2024-01-11	2023-2024	Utah	UCLA	90	44	140002	t	t
+2024-01-14	2023-2024	Utah	Stanford	79	73	140003	f	f
+2024-01-18	2023-2024	Utah	Oregon State	74	47	140004	t	t
+2024-01-21	2023-2024	Utah	Oregon	80	77	140005	t	t
+2024-01-24	2023-2024	Utah	Washington State	79	57	140006	f	f
+2024-01-27	2023-2024	Utah	Washington	98	73	140007	f	f
+2024-02-03	2023-2024	Utah	Colorado	73	68	140008	t	t
+2024-02-10	2023-2024	Utah	Arizona State	85	77	140009	f	t
+2024-02-15	2023-2024	Utah	USC	68	64	140010	f	f
+2024-02-18	2023-2024	Utah	UCLA	70	69	140011	t	f
+2024-02-24	2023-2024	Utah	Colorado	89	65	140012	f	f
+2024-02-29	2023-2024	Utah	Stanford	90	68	140013	t	t
+2024-03-02	2023-2024	Utah	California	88	59	140014	t	t
+2024-03-07	2023-2024	Utah	Oregon State	92	85	140015	f	f
+2024-03-09	2023-2024	Utah	Oregon	66	65	140016	f	f
+2024-03-13	2023-2024	Utah	Arizona State	90	57	140017	t	t
+2024-03-14	2023-2024	Utah	Colorado	72	58	140018	f	t
+2023-11-06	2023-2024	Utah Valley	vsCarroll (MT)	81	73	140019	t	t
+2023-11-15	2023-2024	Utah Valley	Charlotte	62	45	140020	f	f
+2023-11-19	2023-2024	Utah Valley	Southern Miss	67	65	140021	t	t
+2023-11-20	2023-2024	Utah Valley	Cornell	74	61	140022	f	t
+2023-11-24	2023-2024	Utah Valley	vsWestern Colorado	87	52	140023	t	t
+2023-11-29	2023-2024	Utah Valley	Seattle U	78	72	140024	t	t
+2023-12-02	2023-2024	Utah Valley	Utah Tech	65	53	140025	f	f
+2023-12-05	2023-2024	Utah Valley	Weber State	70	54	140026	t	t
+2023-12-09	2023-2024	Utah Valley	Oregon State	74	71	140027	f	f
+2023-12-16	2023-2024	Utah Valley	Utah	76	62	140028	f	f
+2023-12-20	2023-2024	Utah Valley	Liberty	79	63	140029	f	t
+2023-12-29	2023-2024	Utah Valley	Boise State	85	63	140030	f	f
+2024-01-04	2023-2024	Utah Valley	California Baptist	65	58	140031	t	t
+2024-01-06	2023-2024	Utah Valley	Southern Utah	80	62	140032	t	t
+2024-01-11	2023-2024	Utah Valley	UT Arlington	83	69	140033	f	f
+2024-01-13	2023-2024	Utah Valley	UT Rio Grande Valley	76	68	140034	f	f
+2024-01-18	2023-2024	Utah Valley	Grand Canyon	78	65	140035	f	f
+2024-01-20	2023-2024	Utah Valley	Utah Tech	84	71	140036	t	t
+2024-01-26	2023-2024	Utah Valley	Seattle U	62	61	140037	f	f
+2024-02-01	2023-2024	Utah Valley	Stephen F. Austin	77	72	140038	f	f
+2024-02-03	2023-2024	Utah Valley	Grand Canyon	86	67	140039	f	t
+2024-02-08	2023-2024	Utah Valley	Tarleton State	72	61	140040	f	t
+2024-02-10	2023-2024	Utah Valley	Abilene Christian	74	45	140041	t	t
+2024-02-15	2023-2024	Utah Valley	California Baptist	69	46	140042	t	f
+2024-02-17	2023-2024	Utah Valley	Southern Utah	78	75	140043	t	f
+2024-02-22	2023-2024	Utah Valley	UT Rio Grande Valley	70	59	140044	t	t
+2024-02-24	2023-2024	Utah Valley	Stephen F. Austin	71	62	140045	t	t
+2024-03-02	2023-2024	Utah Valley	UT Arlington	78	65	140046	f	t
+2024-03-07	2023-2024	Utah Valley	Tarleton State	63	60	140047	t	f
+2024-03-09	2023-2024	Utah Valley	Abilene Christian	74	67	140048	t	f
+2023-11-06	2023-2024	VCU	McNeese	76	65	140049	f	t
+2023-11-10	2023-2024	VCU	Samford	75	65	140050	t	t
+2023-11-15	2023-2024	VCU	Radford	73	50	140051	t	t
+2023-11-18	2023-2024	VCU	Seattle U	60	56	140052	t	t
+2023-11-23	2023-2024	VCU	Iowa State	68	64	140053	f	t
+2023-11-24	2023-2024	VCU	Boise State	65	61	140054	f	t
+2023-11-26	2023-2024	VCU	Penn State	86	74	140055	t	t
+2023-12-01	2023-2024	VCU	Norfolk State	63	60	140056	f	t
+2023-12-10	2023-2024	VCU	Alcorn State	86	58	140057	t	t
+2023-12-16	2023-2024	VCU	Temple	87	78	140058	t	t
+2023-12-22	2023-2024	VCU	Maryland-Eastern Shore	75	51	140059	t	t
+2023-12-30	2023-2024	VCU	Gardner-Webb	87	73	140060	t	t
+2024-01-03	2023-2024	VCU	St. Bonaventure	89	78	140061	f	t
+2024-01-06	2023-2024	VCU	George Washington	84	82	140062	f	t
+2024-01-09	2023-2024	VCU	George Mason	54	50	140063	t	f
+2024-01-13	2023-2024	VCU	La Salle	71	65	140064	t	f
+2024-01-19	2023-2024	VCU	Saint Louis	85	61	140065	t	t
+2024-01-23	2023-2024	VCU	Loyola Chicago	74	67	140066	t	t
+2024-01-27	2023-2024	VCU	Davidson	63	58	140067	t	f
+2024-01-30	2023-2024	VCU	St. Bonaventure	67	62	140068	f	f
+2024-02-03	2023-2024	VCU	Richmond	63	52	140069	t	t
+2024-02-06	2023-2024	VCU	Fordham	75	60	140070	t	f
+2024-02-09	2023-2024	VCU	18 Dayton	49	47	140071	t	t
+2024-02-16	2023-2024	VCU	Saint Louis	95	85	140072	t	f
+2024-02-20	2023-2024	VCU	Massachusetts	74	52	140073	f	f
+2024-02-25	2023-2024	VCU	Saint Joseph's	73	69	140074	t	t
+2024-02-28	2023-2024	VCU	Rhode Island	88	67	140075	t	t
+2024-03-02	2023-2024	VCU	Richmond	79	76	140076	f	f
+2024-03-05	2023-2024	VCU	Duquesne	69	59	140077	f	t
+2024-03-13	2023-2024	VCU	Fordham	69	62	140078	t	t
+2024-03-14	2023-2024	VCU	Massachusetts	73	59	140079	t	t
+2024-03-16	2023-2024	VCU	Saint Joseph's	66	60	140080	t	t
+2024-03-17	2023-2024	VCU	Duquesne	57	51	140081	f	t
+2023-11-06	2023-2024	VMI	Richmond	93	75	140082	f	f
+2023-11-09	2023-2024	VMI	vsChristendom	87	53	140083	t	t
+2023-11-13	2023-2024	VMI	South Carolina	74	64	140084	f	f
+2023-11-17	2023-2024	VMI	South Dakota	85	81	140085	f	t
+2023-11-18	2023-2024	VMI	Northern Arizona	78	69	140086	f	t
+2023-11-22	2023-2024	VMI	Air Force	64	54	140087	f	f
+2023-11-25	2023-2024	VMI	vsClarks Summit	100	63	140088	t	t
+2023-11-29	2023-2024	VMI	Navy	67	47	140089	f	f
+2023-12-02	2023-2024	VMI	Presbyterian	75	71	140090	f	t
+2023-12-09	2023-2024	VMI	American University	77	69	140091	f	t
+2023-12-12	2023-2024	VMI	Radford	73	56	140092	f	f
+2023-12-17	2023-2024	VMI	Longwood	68	49	140093	f	f
+2023-12-22	2023-2024	VMI	vsPenn State-New Kensington	82	65	140094	t	t
+2024-01-06	2023-2024	VMI	Mercer	86	64	140095	f	t
+2024-01-11	2023-2024	VMI	Chattanooga	109	61	140096	f	f
+2024-01-13	2023-2024	VMI	Samford	134	96	140097	f	f
+2024-01-17	2023-2024	VMI	Furman	100	60	140098	f	t
+2024-01-20	2023-2024	VMI	The Citadel	70	63	140099	t	t
+2024-01-24	2023-2024	VMI	East Tennessee State	74	73	140100	f	t
+2024-01-27	2023-2024	VMI	Western Carolina	102	77	140101	f	f
+2024-01-31	2023-2024	VMI	UNC Greensboro	85	79	140102	f	t
+2024-02-03	2023-2024	VMI	Mercer	90	69	140103	f	f
+2024-02-08	2023-2024	VMI	Chattanooga	88	84	140104	f	t
+2024-02-10	2023-2024	VMI	Samford	102	63	140105	f	t
+2024-02-14	2023-2024	VMI	Furman	75	62	140106	f	f
+2024-02-17	2023-2024	VMI	The Citadel	76	51	140107	f	f
+2024-02-21	2023-2024	VMI	East Tennessee State	82	69	140108	f	f
+2024-02-24	2023-2024	VMI	Western Carolina	84	51	140109	f	t
+2024-02-28	2023-2024	VMI	UNC Greensboro	100	58	140110	f	f
+2024-03-02	2023-2024	VMI	Wofford	74	62	140111	f	t
+2024-03-08	2023-2024	VMI	East Tennessee State	98	66	140112	f	t
+2023-11-06	2023-2024	Valparaiso	vsTrinity Christian (IL)	100	61	140113	t	t
+2023-11-10	2023-2024	Valparaiso	IUPUI	66	56	140114	f	t
+2023-11-14	2023-2024	Valparaiso	Green Bay	64	59	140115	t	t
+2023-11-17	2023-2024	Valparaiso	23 Illinois	87	64	140116	f	f
+2023-11-21	2023-2024	Valparaiso	Western Illinois	73	66	140117	t	t
+2023-11-25	2023-2024	Valparaiso	Southern	71	59	140118	t	t
+2023-11-29	2023-2024	Valparaiso	Drake	83	65	140119	f	t
+2023-12-02	2023-2024	Valparaiso	Belmont	77	68	140120	f	f
+2023-12-06	2023-2024	Valparaiso	Central Michigan	71	67	140121	f	f
+2023-12-09	2023-2024	Valparaiso	Virginia Tech	71	50	140122	f	f
+2023-12-16	2023-2024	Valparaiso	Chicago State	63	62	140123	f	t
+2023-12-19	2023-2024	Valparaiso	Samford	79	61	140124	f	t
+2023-12-29	2023-2024	Valparaiso	Elon	82	78	140125	f	f
+2024-01-03	2023-2024	Valparaiso	Bradley	86	61	140126	f	t
+2024-01-06	2023-2024	Valparaiso	UIC	70	64	140127	f	f
+2024-01-10	2023-2024	Valparaiso	Southern Illinois	77	68	140128	f	t
+2024-01-14	2023-2024	Valparaiso	Illinois State	59	50	140129	t	f
+2024-01-17	2023-2024	Valparaiso	Evansville	78	75	140130	f	f
+2024-01-20	2023-2024	Valparaiso	UIC	84	77	140131	t	t
+2024-01-24	2023-2024	Valparaiso	Southern Illinois	75	69	140132	f	f
+2024-01-27	2023-2024	Valparaiso	Missouri State	81	70	140133	f	t
+2024-01-31	2023-2024	Valparaiso	Drake	81	70	140134	f	f
+2024-02-03	2023-2024	Valparaiso	Evansville	63	62	140135	f	t
+2024-02-07	2023-2024	Valparaiso	Indiana State	101	61	140136	f	f
+2024-02-10	2023-2024	Valparaiso	Belmont	96	78	140137	f	t
+2024-02-14	2023-2024	Valparaiso	Northern Iowa	86	67	140138	f	t
+2024-02-17	2023-2024	Valparaiso	Missouri State	82	74	140139	f	f
+2024-02-21	2023-2024	Valparaiso	Indiana State	83	64	140140	f	t
+2024-02-24	2023-2024	Valparaiso	Murray State	80	68	140141	f	f
+2024-02-27	2023-2024	Valparaiso	Northern Iowa	68	54	140142	f	f
+2024-03-03	2023-2024	Valparaiso	Illinois State	75	72	140143	t	t
+2024-03-07	2023-2024	Valparaiso	Belmont	86	61	140144	f	t
+2023-11-07	2023-2024	Vanderbilt	Presbyterian	68	62	140145	f	t
+2023-11-10	2023-2024	Vanderbilt	South Carolina Upstate	74	67	140146	t	t
+2023-11-14	2023-2024	Vanderbilt	UNC Greensboro	74	70	140147	t	t
+2023-11-17	2023-2024	Vanderbilt	Central Arkansas	75	71	140148	t	t
+2023-11-23	2023-2024	Vanderbilt	NC State	84	78	140149	f	t
+2023-11-24	2023-2024	Vanderbilt	Arizona State	82	67	140150	f	t
+2023-11-29	2023-2024	Vanderbilt	Boston College	80	62	140151	f	t
+2023-12-02	2023-2024	Vanderbilt	Alabama A&M	78	59	140152	t	t
+2023-12-06	2023-2024	Vanderbilt	San Francisco	73	60	140153	f	t
+2023-12-16	2023-2024	Vanderbilt	Texas Tech	76	54	140154	f	t
+2023-12-19	2023-2024	Vanderbilt	Western Carolina	63	62	140155	f	t
+2023-12-23	2023-2024	Vanderbilt	23 Memphis	77	75	140156	f	f
+2023-12-30	2023-2024	Vanderbilt	Dartmouth	69	53	140157	t	t
+2024-01-06	2023-2024	Vanderbilt	Alabama	78	75	140158	f	t
+2024-01-09	2023-2024	Vanderbilt	LSU	77	69	140159	f	f
+2024-01-13	2023-2024	Vanderbilt	Ole Miss	69	56	140160	f	f
+2024-01-17	2023-2024	Vanderbilt	13 Auburn	80	65	140161	f	t
+2024-01-20	2023-2024	Vanderbilt	Mississippi State	68	55	140162	f	f
+2024-01-27	2023-2024	Vanderbilt	5 Tennessee	75	62	140163	f	t
+2024-01-31	2023-2024	Vanderbilt	16 Auburn	81	54	140164	f	f
+2024-02-03	2023-2024	Vanderbilt	Missouri	68	61	140165	t	t
+2024-02-06	2023-2024	Vanderbilt	17 Kentucky	109	77	140166	f	t
+2024-02-10	2023-2024	Vanderbilt	15 South Carolina	75	60	140167	f	f
+2024-02-13	2023-2024	Vanderbilt	Texas A&M	74	73	140168	t	t
+2024-02-17	2023-2024	Vanderbilt	8 Tennessee	88	53	140169	f	f
+2024-02-21	2023-2024	Vanderbilt	Georgia	76	64	140170	f	t
+2024-02-24	2023-2024	Vanderbilt	24 Florida	77	64	140171	f	f
+2024-02-27	2023-2024	Vanderbilt	Arkansas	85	82	140172	t	f
+2024-03-02	2023-2024	Vanderbilt	LSU	75	61	140173	f	t
+2024-03-06	2023-2024	Vanderbilt	15 Kentucky	93	77	140174	f	f
+2024-03-09	2023-2024	Vanderbilt	Florida	79	78	140175	t	t
+2023-11-06	2023-2024	Vermont	Merrimack	67	55	140176	t	t
+2023-11-11	2023-2024	Vermont	vsPlattsburgh State	92	41	140177	t	t
+2023-11-16	2023-2024	Vermont	Charleston	73	64	140178	t	t
+2023-11-17	2023-2024	Vermont	Saint Louis	78	68	140179	t	t
+2023-11-19	2023-2024	Vermont	Liberty	71	61	140180	f	t
+2023-11-22	2023-2024	Vermont	vsNorthern Vermont - Johnson	106	57	140181	t	t
+2023-11-25	2023-2024	Vermont	Bradley	79	70	140182	f	f
+2023-11-29	2023-2024	Vermont	Dartmouth	64	53	140183	t	t
+2023-12-02	2023-2024	Vermont	Yale	66	65	140184	t	t
+2023-12-06	2023-2024	Vermont	Northeastern	73	71	140185	t	f
+2023-12-09	2023-2024	Vermont	Colgate	77	71	140186	f	t
+2023-12-16	2023-2024	Vermont	Virginia Tech	73	51	140187	f	f
+2023-12-20	2023-2024	Vermont	Toledo	86	60	140188	t	f
+2023-12-22	2023-2024	Vermont	Miami (OH)	70	69	140189	f	f
+2024-01-02	2023-2024	Vermont	Brown	71	70	140190	t	f
+2024-01-06	2023-2024	Vermont	Maine	65	58	140191	t	t
+2024-01-11	2023-2024	Vermont	UMBC	77	72	140192	t	t
+2024-01-13	2023-2024	Vermont	NJIT	76	55	140193	t	t
+2024-01-18	2023-2024	Vermont	Binghamton	82	62	140194	t	f
+2024-01-27	2023-2024	Vermont	Bryant	67	57	140195	t	f
+2024-02-01	2023-2024	Vermont	UAlbany	81	59	140196	t	t
+2024-02-03	2023-2024	Vermont	Binghamton	62	49	140197	t	t
+2024-02-08	2023-2024	Vermont	NJIT	63	61	140198	f	f
+2024-02-10	2023-2024	Vermont	UMBC	72	70	140199	t	f
+2024-02-15	2023-2024	Vermont	New Hampshire	70	54	140200	t	t
+2024-02-17	2023-2024	Vermont	Maine	68	57	140201	t	f
+2024-02-22	2023-2024	Vermont	UAlbany	94	80	140202	t	f
+2024-02-24	2023-2024	Vermont	Bryant	65	48	140203	t	t
+2024-03-02	2023-2024	Vermont	UMass Lowell	74	62	140204	t	t
+2024-03-05	2023-2024	Vermont	New Hampshire	68	64	140205	t	f
+2024-03-09	2023-2024	Vermont	UAlbany	75	72	140206	t	t
+2024-03-12	2023-2024	Vermont	New Hampshire	66	59	140207	t	t
+2024-03-16	2023-2024	Vermont	UMass Lowell	66	61	140208	t	t
+2023-11-06	2023-2024	Villanova	American University	90	63	140209	t	t
+2023-11-10	2023-2024	Villanova	Le Moyne	83	57	140210	t	t
+2023-11-13	2023-2024	Villanova	Pennsylvania	76	72	140211	f	f
+2023-11-17	2023-2024	Villanova	Maryland	57	40	140212	t	t
+2023-11-22	2023-2024	Villanova	Texas Tech	85	69	140213	t	t
+2023-11-24	2023-2024	Villanova	Memphis	79	63	140214	t	t
+2023-11-29	2023-2024	Villanova	Saint Joseph's	78	65	140215	f	t
+2023-12-02	2023-2024	Villanova	Drexel	57	55	140216	f	t
+2023-12-09	2023-2024	Villanova	UCLA	65	56	140217	t	t
+2023-12-23	2023-2024	Villanova	DePaul	84	48	140218	t	f
+2024-01-03	2023-2024	Villanova	Xavier	66	65	140219	t	t
+2024-01-06	2023-2024	Villanova	St. John's	81	71	140220	f	t
+2024-01-12	2023-2024	Villanova	DePaul	94	69	140221	t	t
+2024-01-15	2023-2024	Villanova	17 Marquette	87	74	140222	f	f
+2024-01-20	2023-2024	Villanova	1 UConn	66	65	140223	f	t
+2024-01-24	2023-2024	Villanova	St. John's	70	50	140224	f	f
+2024-01-30	2023-2024	Villanova	9 Marquette	85	80	140225	f	t
+2024-02-04	2023-2024	Villanova	Providence	68	50	140226	t	t
+2024-02-07	2023-2024	Villanova	Xavier	56	53	140227	f	f
+2024-02-11	2023-2024	Villanova	Seton Hall	80	54	140228	t	t
+2024-02-16	2023-2024	Villanova	Georgetown	70	54	140229	t	f
+2024-02-20	2023-2024	Villanova	Butler	72	62	140230	t	t
+2024-02-24	2023-2024	Villanova	1 UConn	78	54	140231	f	f
+2024-02-27	2023-2024	Villanova	Georgetown	75	47	140232	t	t
+2024-03-02	2023-2024	Villanova	Providence	71	60	140233	t	f
+2024-03-06	2023-2024	Villanova	Seton Hall	66	56	140234	f	f
+2024-03-09	2023-2024	Villanova	10 Creighton	69	67	140235	f	t
+2024-03-13	2023-2024	Villanova	DePaul	58	57	140236	t	t
+2023-11-06	2023-2024	Virginia	Tarleton State	80	50	140237	t	t
+2023-11-10	2023-2024	Virginia	Florida	73	70	140238	t	t
+2023-11-14	2023-2024	Virginia	North Carolina A&T	80	51	140239	t	t
+2023-11-16	2023-2024	Virginia	Texas Southern	62	33	140240	t	t
+2023-11-20	2023-2024	Virginia	Wisconsin	65	41	140241	f	t
+2023-11-22	2023-2024	Virginia	West Virginia	56	54	140242	t	t
+2023-11-29	2023-2024	Virginia	14 Texas A&M	59	47	140243	t	t
+2023-12-02	2023-2024	Virginia	Syracuse	84	62	140244	t	t
+2023-12-05	2023-2024	Virginia	North Carolina Central	77	47	140245	t	t
+2023-12-16	2023-2024	Virginia	Northeastern	56	54	140246	t	t
+2023-12-19	2023-2024	Virginia	23 Memphis	77	54	140247	f	f
+2023-12-27	2023-2024	Virginia	Morgan State	79	44	140248	t	t
+2023-12-30	2023-2024	Virginia	Notre Dame	76	54	140249	f	f
+2024-01-03	2023-2024	Virginia	Louisville	77	53	140250	t	t
+2024-01-06	2023-2024	Virginia	NC State	76	60	140251	f	f
+2024-01-13	2023-2024	Virginia	Wake Forest	66	47	140252	f	f
+2024-01-17	2023-2024	Virginia	Virginia Tech	65	57	140253	t	t
+2024-01-20	2023-2024	Virginia	Georgia Tech	75	66	140254	t	f
+2024-01-27	2023-2024	Virginia	Louisville	69	52	140255	t	f
+2024-01-31	2023-2024	Virginia	Notre Dame	65	53	140256	t	t
+2024-02-03	2023-2024	Virginia	Clemson	66	65	140257	t	f
+2024-02-05	2023-2024	Virginia	Miami	60	38	140258	t	t
+2024-02-10	2023-2024	Virginia	Florida State	80	76	140259	t	f
+2024-02-13	2023-2024	Virginia	Pittsburgh	74	63	140260	f	t
+2024-02-17	2023-2024	Virginia	Wake Forest	49	47	140261	t	t
+2024-02-19	2023-2024	Virginia	Virginia Tech	75	41	140262	f	f
+2024-02-24	2023-2024	Virginia	10 North Carolina	54	44	140263	f	t
+2024-02-28	2023-2024	Virginia	Boston College	72	68	140264	t	f
+2024-03-02	2023-2024	Virginia	10 Duke	73	48	140265	f	f
+2024-03-09	2023-2024	Virginia	Georgia Tech	72	57	140266	t	t
+2023-11-06	2023-2024	Virginia Tech	Coppin State	100	55	140267	t	t
+2023-11-10	2023-2024	Virginia Tech	South Carolina	79	77	140268	f	t
+2023-11-15	2023-2024	Virginia Tech	Campbell	60	44	140269	t	t
+2023-11-19	2023-2024	Virginia Tech	Wofford	98	76	140270	t	t
+2023-11-23	2023-2024	Virginia Tech	Boise State	82	75	140271	t	t
+2023-11-24	2023-2024	Virginia Tech	Iowa State	71	62	140272	t	t
+2023-11-26	2023-2024	Virginia Tech	19 Florida Atlantic	84	50	140273	f	t
+2023-11-29	2023-2024	Virginia Tech	Auburn	74	57	140274	f	f
+2023-12-03	2023-2024	Virginia Tech	Louisville	75	68	140275	t	t
+2023-12-09	2023-2024	Virginia Tech	Valparaiso	71	50	140276	t	t
+2023-12-16	2023-2024	Virginia Tech	Vermont	73	51	140277	t	t
+2023-12-21	2023-2024	Virginia Tech	American University	77	55	140278	t	t
+2023-12-30	2023-2024	Virginia Tech	Wake Forest	86	63	140279	f	f
+2024-01-06	2023-2024	Virginia Tech	Florida State	77	74	140280	f	f
+2024-01-10	2023-2024	Virginia Tech	21 Clemson	87	72	140281	t	t
+2024-01-13	2023-2024	Virginia Tech	Miami	75	71	140282	f	t
+2024-01-17	2023-2024	Virginia Tech	Virginia	65	57	140283	f	f
+2024-01-20	2023-2024	Virginia Tech	NC State	84	78	140284	t	f
+2024-01-23	2023-2024	Virginia Tech	Boston College	76	71	140285	t	t
+2024-01-27	2023-2024	Virginia Tech	Georgia Tech	91	67	140286	t	t
+2024-01-29	2023-2024	Virginia Tech	7 Duke	77	67	140287	f	t
+2024-02-03	2023-2024	Virginia Tech	Miami	82	74	140288	f	f
+2024-02-10	2023-2024	Virginia Tech	Notre Dame	74	66	140289	f	f
+2024-02-13	2023-2024	Virginia Tech	Florida State	83	75	140290	t	t
+2024-02-17	2023-2024	Virginia Tech	7 North Carolina	96	81	140291	f	f
+2024-02-19	2023-2024	Virginia Tech	Virginia	75	41	140292	t	t
+2024-02-24	2023-2024	Virginia Tech	Pittsburgh	79	64	140293	f	f
+2024-02-27	2023-2024	Virginia Tech	Syracuse	84	71	140294	f	f
+2024-03-02	2023-2024	Virginia Tech	Wake Forest	87	76	140295	t	t
+2024-03-05	2023-2024	Virginia Tech	Louisville	80	64	140296	t	f
+2024-03-09	2023-2024	Virginia Tech	Notre Dame	82	76	140297	t	t
+2024-03-13	2023-2024	Virginia Tech	Florida State	86	76	140298	f	t
+2023-11-09	2023-2024	Wagner	vsMolloy	83	48	140299	t	t
+2023-11-14	2023-2024	Wagner	Rhode Island	69	53	140300	f	f
+2023-11-18	2023-2024	Wagner	Seton Hall	72	51	140301	f	f
+2023-11-25	2023-2024	Wagner	NJIT	64	51	140302	t	t
+2023-11-28	2023-2024	Wagner	Providence	86	52	140303	f	f
+2023-12-02	2023-2024	Wagner	Stony Brook	60	59	140304	t	f
+2023-12-06	2023-2024	Wagner	Coppin State	62	59	140305	t	f
+2023-12-10	2023-2024	Wagner	Boston University	73	59	140306	f	t
+2023-12-17	2023-2024	Wagner	Fairfield	63	51	140307	f	f
+2023-12-22	2023-2024	Wagner	vsGwynedd-Mercy	98	49	140308	t	t
+2023-12-30	2023-2024	Wagner	Manhattan	68	56	140309	t	f
+2024-01-04	2023-2024	Wagner	Long Island University	69	67	140310	f	f
+2024-01-06	2023-2024	Wagner	St. Francis (PA)	71	56	140311	t	t
+2024-01-15	2023-2024	Wagner	Stonehill	64	54	140312	t	t
+2024-01-19	2023-2024	Wagner	Merrimack	71	65	140313	t	f
+2024-01-21	2023-2024	Wagner	Sacred Heart	66	61	140314	f	f
+2024-01-25	2023-2024	Wagner	Merrimack	60	44	140315	f	t
+2024-02-01	2023-2024	Wagner	Le Moyne	80	57	140316	t	t
+2024-02-03	2023-2024	Wagner	Stonehill	71	61	140317	f	f
+2024-02-08	2023-2024	Wagner	Fairleigh Dickinson	66	62	140318	t	f
+2024-02-17	2023-2024	Wagner	Sacred Heart	63	53	140319	f	t
+2024-02-22	2023-2024	Wagner	Central Connecticut	73	72	140320	f	t
+2024-02-25	2023-2024	Wagner	Long Island University	72	57	140321	t	t
+2024-02-29	2023-2024	Wagner	Le Moyne	70	56	140322	f	f
+2024-03-02	2023-2024	Wagner	Fairleigh Dickinson	57	54	140323	f	t
+2024-03-06	2023-2024	Wagner	Sacred Heart	60	57	140324	t	f
+2024-03-09	2023-2024	Wagner	Central Connecticut	66	56	140325	t	f
+2024-03-12	2023-2024	Wagner	Merrimack	54	47	140326	t	f
+2023-11-06	2023-2024	Wake Forest	Elon	101	78	140327	t	t
+2023-11-10	2023-2024	Wake Forest	Georgia	80	77	140328	f	f
+2023-11-16	2023-2024	Wake Forest	Utah	77	70	140329	f	t
+2023-11-17	2023-2024	Wake Forest	Towson	71	61	140330	t	t
+2023-11-24	2023-2024	Wake Forest	Charleston Southern	71	56	140331	t	t
+2023-11-29	2023-2024	Wake Forest	Florida	82	71	140332	t	t
+2023-12-06	2023-2024	Wake Forest	Rutgers	76	57	140333	t	t
+2023-12-09	2023-2024	Wake Forest	NJIT	83	59	140334	t	t
+2023-12-18	2023-2024	Wake Forest	Delaware State	88	59	140335	t	t
+2023-12-21	2023-2024	Wake Forest	Presbyterian	91	68	140336	t	t
+2023-12-30	2023-2024	Wake Forest	Virginia Tech	86	63	140337	t	t
+2024-01-02	2023-2024	Wake Forest	Boston College	84	78	140338	t	f
+2024-01-09	2023-2024	Wake Forest	Florida State	87	82	140339	f	f
+2024-01-13	2023-2024	Wake Forest	Virginia	66	47	140340	t	t
+2024-01-16	2023-2024	Wake Forest	NC State	83	76	140341	f	f
+2024-01-20	2023-2024	Wake Forest	Louisville	90	65	140342	t	t
+2024-01-22	2023-2024	Wake Forest	3 North Carolina	85	64	140343	f	f
+2024-01-31	2023-2024	Wake Forest	Pittsburgh	77	72	140344	f	f
+2024-02-03	2023-2024	Wake Forest	Syracuse	99	70	140345	t	t
+2024-02-06	2023-2024	Wake Forest	Georgia Tech	80	51	140346	t	f
+2024-02-10	2023-2024	Wake Forest	NC State	83	79	140347	t	t
+2024-02-12	2023-2024	Wake Forest	9 Duke	77	69	140348	f	f
+2024-02-17	2023-2024	Wake Forest	21 Virginia	49	47	140349	f	f
+2024-02-20	2023-2024	Wake Forest	Pittsburgh	91	58	140350	t	t
+2024-02-24	2023-2024	Wake Forest	8 Duke	83	79	140351	t	t
+2024-02-27	2023-2024	Wake Forest	Notre Dame	70	65	140352	f	f
+2024-03-02	2023-2024	Wake Forest	Virginia Tech	87	76	140353	f	f
+2024-03-05	2023-2024	Wake Forest	Georgia Tech	70	69	140354	f	t
+2024-03-09	2023-2024	Wake Forest	Clemson	81	76	140355	t	t
+2024-03-13	2023-2024	Wake Forest	Notre Dame	72	59	140356	t	t
+2024-03-14	2023-2024	Wake Forest	Pittsburgh	81	69	140357	f	t
+2023-11-06	2023-2024	Washington	Bellarmine	91	57	140358	t	t
+2023-11-09	2023-2024	Washington	Northern Kentucky	75	67	140359	t	t
+2023-11-12	2023-2024	Washington	Nevada	83	76	140360	f	t
+2023-11-17	2023-2024	Washington	Xavier	74	71	140361	t	t
+2023-11-28	2023-2024	Washington	UC San Diego	83	56	140362	t	t
+2023-12-02	2023-2024	Washington	20 Colorado State	86	81	140363	f	t
+2023-12-05	2023-2024	Washington	Montana State	85	61	140364	t	t
+2023-12-09	2023-2024	Washington	7 Gonzaga	78	73	140365	t	t
+2023-12-21	2023-2024	Washington	Eastern Washington	73	66	140366	t	t
+2023-12-29	2023-2024	Washington	Colorado	73	69	140367	f	f
+2023-12-31	2023-2024	Washington	Utah	95	90	140368	f	f
+2024-01-04	2023-2024	Washington	Oregon	76	74	140369	f	t
+2024-01-06	2023-2024	Washington	Oregon State	79	72	140370	t	t
+2024-01-11	2023-2024	Washington	Arizona State	82	67	140371	t	t
+2024-01-14	2023-2024	Washington	UCLA	73	61	140372	f	f
+2024-01-18	2023-2024	Washington	California	77	75	140373	t	f
+2024-01-20	2023-2024	Washington	Stanford	90	80	140374	f	f
+2024-01-24	2023-2024	Washington	Colorado	98	81	140375	f	t
+2024-01-27	2023-2024	Washington	Utah	98	73	140376	t	t
+2024-02-08	2023-2024	Washington	Oregon	85	80	140377	f	f
+2024-02-10	2023-2024	Washington	Oregon State	67	55	140378	t	f
+2024-02-15	2023-2024	Washington	Stanford	85	65	140379	t	t
+2024-02-17	2023-2024	Washington	California	82	80	140380	f	t
+2024-02-24	2023-2024	Washington	4 Arizona	91	75	140381	f	f
+2024-02-29	2023-2024	Washington	UCLA	94	77	140382	t	t
+2024-03-02	2023-2024	Washington	USC	82	75	140383	f	t
+2024-03-07	2023-2024	Washington	18 Washington State	74	68	140384	t	f
+2024-03-13	2023-2024	Washington	USC	80	74	140385	f	t
+2023-11-06	2023-2024	Washington State	Idaho	84	59	140386	t	t
+2023-11-10	2023-2024	Washington State	Prairie View A&M	83	65	140387	t	t
+2023-11-18	2023-2024	Washington State	Mississippi State	76	64	140388	f	t
+2023-11-19	2023-2024	Washington State	Rhode Island	78	57	140389	t	t
+2023-11-24	2023-2024	Washington State	Utah Tech	93	53	140390	t	t
+2023-11-27	2023-2024	Washington State	Eastern Washington	82	72	140391	t	t
+2023-12-02	2023-2024	Washington State	Portland State	71	61	140392	t	t
+2023-12-06	2023-2024	Washington State	UC Riverside	86	49	140393	t	t
+2023-12-10	2023-2024	Washington State	Grambling	83	65	140394	t	t
+2023-12-16	2023-2024	Washington State	Santa Clara	69	61	140395	f	t
+2023-12-21	2023-2024	Washington State	Boise State	66	61	140396	t	t
+2023-12-29	2023-2024	Washington State	Utah	80	58	140397	f	f
+2023-12-31	2023-2024	Washington State	Colorado	74	67	140398	f	f
+2024-01-04	2023-2024	Washington State	Oregon State	65	58	140399	t	t
+2024-01-06	2023-2024	Washington State	Oregon	89	84	140400	f	t
+2024-01-10	2023-2024	Washington State	USC	72	64	140401	t	f
+2024-01-13	2023-2024	Washington State	8 Arizona	73	70	140402	t	t
+2024-01-18	2023-2024	Washington State	Stanford	89	75	140403	t	f
+2024-01-24	2023-2024	Washington State	Utah	79	57	140404	t	t
+2024-01-27	2023-2024	Washington State	Colorado	78	69	140405	t	t
+2024-02-08	2023-2024	Washington State	Oregon State	64	58	140406	t	f
+2024-02-10	2023-2024	Washington State	Oregon	62	56	140407	t	f
+2024-02-15	2023-2024	Washington State	California	84	65	140408	t	t
+2024-02-17	2023-2024	Washington State	Stanford	72	59	140409	t	t
+2024-02-22	2023-2024	Washington State	4 Arizona	77	74	140410	t	f
+2024-02-24	2023-2024	Washington State	Arizona State	73	61	140411	f	f
+2024-02-29	2023-2024	Washington State	USC	75	72	140412	t	t
+2024-03-02	2023-2024	Washington State	UCLA	77	65	140413	t	t
+2024-03-07	2023-2024	Washington State	Washington	74	68	140414	f	t
+2024-03-14	2023-2024	Washington State	Stanford	79	62	140415	t	t
+2024-03-15	2023-2024	Washington State	Colorado	58	52	140416	f	t
+2023-11-07	2023-2024	Weber State	vsBenedictine (AZ)	96	62	140417	t	t
+2023-11-12	2023-2024	Weber State	23 Saint Mary's	61	57	140418	t	f
+2023-11-17	2023-2024	Weber State	Gardner-Webb	62	61	140419	f	t
+2023-11-19	2023-2024	Weber State	Colgate	57	55	140420	f	t
+2023-11-27	2023-2024	Weber State	vsNavajo Tech	107	45	140421	t	t
+2023-12-05	2023-2024	Weber State	Utah Valley	70	54	140422	f	f
+2023-12-09	2023-2024	Weber State	Cal Poly	78	50	140423	t	t
+2023-12-13	2023-2024	Weber State	Nevada	72	55	140424	f	f
+2023-12-16	2023-2024	Weber State	Wyoming	84	71	140425	t	f
+2023-12-21	2023-2024	Weber State	vsPark University Gilbert	90	39	140426	t	t
+2023-12-28	2023-2024	Weber State	Montana	93	63	140427	t	t
+2023-12-30	2023-2024	Weber State	Montana State	86	64	140428	t	t
+2024-01-03	2023-2024	Weber State	South Dakota State	75	73	140429	t	t
+2024-01-06	2023-2024	Weber State	Oral Roberts	83	78	140430	t	f
+2024-01-11	2023-2024	Weber State	Sacramento State	71	69	140431	f	f
+2024-01-13	2023-2024	Weber State	Portland State	69	66	140432	f	f
+2024-01-18	2023-2024	Weber State	Eastern Washington	80	78	140433	f	t
+2024-01-20	2023-2024	Weber State	Idaho	88	65	140434	t	t
+2024-01-22	2023-2024	Weber State	Montana	77	62	140435	f	f
+2024-01-27	2023-2024	Weber State	Idaho State	74	64	140436	f	t
+2024-02-01	2023-2024	Weber State	Northern Arizona	72	70	140437	t	f
+2024-02-03	2023-2024	Weber State	Northern Colorado	82	63	140438	t	f
+2024-02-08	2023-2024	Weber State	Portland State	84	72	140439	t	t
+2024-02-10	2023-2024	Weber State	Sacramento State	58	53	140440	t	t
+2024-02-15	2023-2024	Weber State	Idaho	70	69	140441	t	f
+2024-02-17	2023-2024	Weber State	Eastern Washington	90	84	140442	t	f
+2024-02-24	2023-2024	Weber State	Idaho State	80	62	140443	f	f
+2024-03-02	2023-2024	Weber State	Northern Arizona	85	58	140444	t	t
+2024-03-04	2023-2024	Weber State	Montana State	76	64	140445	f	f
+2024-03-11	2023-2024	Weber State	Montana State	91	82	140446	f	t
+2023-11-06	2023-2024	West Virginia	Missouri State	67	59	140447	t	t
+2023-11-10	2023-2024	West Virginia	Monmouth	73	65	140448	f	t
+2023-11-14	2023-2024	West Virginia	Jacksonville State	70	57	140449	t	t
+2023-11-20	2023-2024	West Virginia	SMU	70	58	140450	f	t
+2023-11-22	2023-2024	West Virginia	24 Virginia	56	54	140451	f	t
+2023-11-26	2023-2024	West Virginia	Bellarmine	62	58	140452	t	t
+2023-12-01	2023-2024	West Virginia	St. John's	79	73	140453	f	t
+2023-12-06	2023-2024	West Virginia	Pittsburgh	80	63	140454	f	t
+2023-12-09	2023-2024	West Virginia	Drexel	66	60	140455	t	t
+2023-12-16	2023-2024	West Virginia	Massachusetts	87	79	140456	f	t
+2023-12-20	2023-2024	West Virginia	Radford	66	65	140457	f	t
+2023-12-23	2023-2024	West Virginia	Toledo	91	81	140458	t	t
+2024-01-06	2023-2024	West Virginia	3 Houston	89	55	140459	f	f
+2024-01-09	2023-2024	West Virginia	Kansas State	81	67	140460	f	t
+2024-01-13	2023-2024	West Virginia	25 Texas	76	73	140461	t	t
+2024-01-17	2023-2024	West Virginia	15 Oklahoma	77	63	140462	f	f
+2024-01-20	2023-2024	West Virginia	3 Kansas	91	85	140463	t	t
+2024-01-23	2023-2024	West Virginia	UCF	72	59	140464	f	f
+2024-01-27	2023-2024	West Virginia	Oklahoma State	70	66	140465	f	f
+2024-01-31	2023-2024	West Virginia	Cincinnati	69	65	140466	t	t
+2024-02-03	2023-2024	West Virginia	22 BYU	86	73	140467	f	t
+2024-02-10	2023-2024	West Virginia	Texas	94	58	140468	f	f
+2024-02-12	2023-2024	West Virginia	TCU	81	65	140469	f	f
+2024-02-17	2023-2024	West Virginia	12 Baylor	94	81	140470	f	t
+2024-02-20	2023-2024	West Virginia	UCF	77	67	140471	t	t
+2024-02-24	2023-2024	West Virginia	6 Iowa State	71	64	140472	f	f
+2024-03-02	2023-2024	West Virginia	Texas Tech	81	70	140473	f	t
+2024-03-06	2023-2024	West Virginia	TCU	93	81	140474	f	t
+2024-03-09	2023-2024	West Virginia	Cincinnati	92	56	140475	f	f
+2024-03-12	2023-2024	West Virginia	Cincinnati	90	85	140476	f	t
+2023-11-07	2023-2024	West Carolina	vsDalton State	106	65	140477	t	t
+2023-11-11	2023-2024	West Carolina	Notre Dame	71	61	140478	t	f
+2023-11-13	2023-2024	West Carolina	Middle Tennessee	66	64	140479	t	f
+2023-11-18	2023-2024	West Carolina	McNeese	76	74	140480	t	t
+2023-11-26	2023-2024	West Carolina	North Alabama	81	63	140481	t	t
+2023-11-28	2023-2024	West Carolina	Tennessee Tech	69	65	140482	t	f
+2023-12-02	2023-2024	West Carolina	Gardner-Webb	82	77	140483	f	f
+2023-12-05	2023-2024	West Carolina	High Point	97	71	140484	f	f
+2023-12-09	2023-2024	West Carolina	UNC Asheville	78	63	140485	t	t
+2023-12-16	2023-2024	West Carolina	South Carolina Upstate	70	53	140486	t	f
+2023-12-19	2023-2024	West Carolina	Vanderbilt	63	62	140487	t	f
+2023-12-21	2023-2024	West Carolina	vsBrescia	85	47	140488	t	t
+2023-12-30	2023-2024	West Carolina	vsKing (TN)	90	62	140489	t	t
+2024-01-03	2023-2024	West Carolina	The Citadel	80	71	140490	t	f
+2024-01-06	2023-2024	West Carolina	Wofford	70	66	140491	t	t
+2024-01-10	2023-2024	West Carolina	East Tennessee State	80	66	140492	t	f
+2024-01-13	2023-2024	West Carolina	Mercer	64	52	140493	t	f
+2024-01-16	2023-2024	West Carolina	Samford	75	71	140494	f	t
+2024-01-20	2023-2024	West Carolina	Furman	65	62	140495	f	f
+2024-01-27	2023-2024	West Carolina	VMI	102	77	140496	t	t
+2024-01-31	2023-2024	West Carolina	Chattanooga	91	85	140497	f	t
+2024-02-07	2023-2024	West Carolina	The Citadel	71	64	140498	t	t
+2024-02-10	2023-2024	West Carolina	Mercer	79	46	140499	t	t
+2024-02-14	2023-2024	West Carolina	Samford	88	62	140500	f	f
+2024-02-17	2023-2024	West Carolina	East Tennessee State	70	65	140501	t	t
+2024-02-21	2023-2024	West Carolina	UNC Greensboro	71	65	140502	f	f
+2024-02-24	2023-2024	West Carolina	VMI	84	51	140503	t	f
+2024-02-28	2023-2024	West Carolina	Furman	85	77	140504	t	t
+2024-03-02	2023-2024	West Carolina	Chattanooga	82	63	140505	t	f
+2023-11-08	2023-2024	West Illinois	SMU	90	53	140506	f	f
+2023-11-12	2023-2024	West Illinois	vsSt. Ambrose	94	59	140507	t	t
+2023-11-21	2023-2024	West Illinois	Valparaiso	73	66	140508	f	f
+2023-11-24	2023-2024	West Illinois	Illinois	84	52	140509	f	f
+2023-11-27	2023-2024	West Illinois	Wisconsin	71	49	140510	f	f
+2023-11-30	2023-2024	West Illinois	vsHannibal-Lagrange	92	40	140511	t	t
+2023-12-03	2023-2024	West Illinois	South Dakota	70	68	140512	f	t
+2023-12-06	2023-2024	West Illinois	vsCoe	80	58	140513	t	t
+2023-12-09	2023-2024	West Illinois	Green Bay	68	59	140514	t	f
+2023-12-18	2023-2024	West Illinois	vsEureka	92	56	140515	t	t
+2023-12-20	2023-2024	West Illinois	Central Arkansas	65	54	140516	t	f
+2023-12-31	2023-2024	West Illinois	SIU Edwardsville	78	70	140517	t	f
+2024-01-04	2023-2024	West Illinois	Southeast Missouri State	68	61	140518	t	t
+2024-01-06	2023-2024	West Illinois	Lindenwood	68	57	140519	t	t
+2024-01-11	2023-2024	West Illinois	UT Martin	73	64	140520	t	f
+2024-01-13	2023-2024	West Illinois	Eastern Illinois	63	60	140521	t	f
+2024-01-20	2023-2024	West Illinois	Tennessee State	58	57	140522	f	t
+2024-01-25	2023-2024	West Illinois	Southern Indiana	73	68	140523	t	f
+2024-01-27	2023-2024	West Illinois	Morehead State	64	50	140524	f	f
+2024-02-01	2023-2024	West Illinois	Lindenwood	79	71	140525	t	f
+2024-02-03	2023-2024	West Illinois	Southeast Missouri State	76	55	140526	t	f
+2024-02-08	2023-2024	West Illinois	Little Rock	63	60	140527	f	t
+2024-02-10	2023-2024	West Illinois	UT Martin	62	59	140528	f	t
+2024-02-15	2023-2024	West Illinois	Tennessee Tech	62	55	140529	t	f
+2024-02-17	2023-2024	West Illinois	Tennessee State	68	61	140530	t	f
+2024-02-22	2023-2024	West Illinois	Morehead State	78	57	140531	f	t
+2024-02-24	2023-2024	West Illinois	Southern Indiana	82	76	140532	t	t
+2024-02-29	2023-2024	West Illinois	Eastern Illinois	70	66	140533	t	t
+2024-03-02	2023-2024	West Illinois	SIU Edwardsville	76	65	140534	t	t
+2024-03-07	2023-2024	West Illinois	Tennessee State	61	59	140535	t	t
+2024-03-08	2023-2024	West Illinois	Little Rock	82	57	140536	f	t
+2023-11-06	2023-2024	Western KY	vsKentucky Wesleyan	90	64	140537	t	t
+2023-11-09	2023-2024	Western KY	Wichita State	71	61	140538	f	f
+2023-11-14	2023-2024	Western KY	Murray State	86	81	140539	t	f
+2023-11-18	2023-2024	Western KY	vsKentucky State	95	75	140540	t	t
+2023-11-24	2023-2024	Western KY	Bowling Green	72	65	140541	t	t
+2023-11-25	2023-2024	Western KY	Canisius	85	77	140542	f	t
+2023-11-26	2023-2024	Western KY	UNC Asheville	77	67	140543	f	t
+2023-11-29	2023-2024	Western KY	vsCampbellsville	101	77	140544	t	t
+2023-12-03	2023-2024	Western KY	Eastern Kentucky	79	69	140545	t	t
+2023-12-09	2023-2024	Western KY	Buffalo	82	65	140546	t	f
+2023-12-12	2023-2024	Western KY	Wright State	91	84	140547	t	f
+2023-12-16	2023-2024	Western KY	Austin Peay	65	64	140548	t	t
+2023-12-19	2023-2024	Western KY	California Baptist	73	70	140549	t	f
+2023-12-30	2023-2024	Western KY	Abilene Christian	86	84	140550	t	t
+2024-01-06	2023-2024	Western KY	Liberty	70	68	140551	t	t
+2024-01-10	2023-2024	Western KY	Sam Houston	78	74	140552	f	f
+2024-01-13	2023-2024	Western KY	Jacksonville State	80	69	140553	t	t
+2024-01-18	2023-2024	Western KY	New Mexico State	72	70	140554	f	f
+2024-01-20	2023-2024	Western KY	UTEP	93	87	140555	f	f
+2024-01-25	2023-2024	Western KY	Florida International	105	91	140556	t	t
+2024-02-01	2023-2024	Western KY	Sam Houston	79	77	140557	f	t
+2024-02-03	2023-2024	Western KY	Middle Tennessee	88	65	140558	t	t
+2024-02-07	2023-2024	Western KY	Louisiana Tech	81	76	140559	t	f
+2024-02-10	2023-2024	Western KY	Jacksonville State	70	59	140560	t	f
+2024-02-15	2023-2024	Western KY	UTEP	90	80	140561	t	t
+2024-02-17	2023-2024	Western KY	New Mexico State	72	58	140562	t	t
+2024-02-24	2023-2024	Western KY	Middle Tennessee	74	72	140563	f	f
+2024-02-28	2023-2024	Western KY	Louisiana Tech	90	84	140564	f	t
+2024-03-02	2023-2024	Western KY	Florida International	85	83	140565	f	f
+2024-03-09	2023-2024	Western KY	Liberty	82	79	140566	f	f
+2024-03-14	2023-2024	Western KY	New Mexico State	89	69	140567	t	t
+2024-03-15	2023-2024	Western KY	Middle Tennessee	85	54	140568	t	t
+2024-03-16	2023-2024	Western KY	UTEP	78	71	140569	t	t
+2023-11-11	2023-2024	West Michigan	Georgia State	77	70	140570	f	t
+2023-11-14	2023-2024	West Michigan	Northwestern	63	59	140571	f	f
+2023-11-19	2023-2024	West Michigan	Ohio State	73	56	140572	f	f
+2023-11-24	2023-2024	West Michigan	SE Louisiana	68	67	140573	t	t
+2023-11-25	2023-2024	West Michigan	Mercer	72	66	140574	t	t
+2023-12-01	2023-2024	West Michigan	St. Thomas-Minnesota	65	51	140575	f	t
+2023-12-05	2023-2024	West Michigan	Notre Dame	86	65	140576	f	f
+2023-12-09	2023-2024	West Michigan	Youngstown State	72	68	140577	f	t
+2023-12-16	2023-2024	West Michigan	UIC	89	68	140578	f	f
+2023-12-21	2023-2024	West Michigan	Cleveland State	90	77	140579	f	f
+2023-12-29	2023-2024	West Michigan	vsAquinas	127	71	140580	t	t
+2024-01-02	2023-2024	West Michigan	Miami (OH)	83	74	140581	t	f
+2024-01-06	2023-2024	West Michigan	Buffalo	82	77	140582	t	f
+2024-01-13	2023-2024	West Michigan	Ohio	81	79	140583	t	t
+2024-01-16	2023-2024	West Michigan	Akron	77	66	140584	f	f
+2024-01-20	2023-2024	West Michigan	Bowling Green	84	79	140585	f	f
+2024-01-23	2023-2024	West Michigan	Eastern Michigan	73	56	140586	t	t
+2024-01-27	2023-2024	West Michigan	Central Michigan	62	55	140587	f	t
+2024-01-30	2023-2024	West Michigan	Toledo	88	63	140588	f	f
+2024-02-03	2023-2024	West Michigan	Ball State	77	67	140589	f	t
+2024-02-06	2023-2024	West Michigan	Kent State	63	61	140590	f	f
+2024-02-10	2023-2024	West Michigan	Southern Miss	86	54	140591	f	f
+2024-02-17	2023-2024	West Michigan	Central Michigan	69	42	140592	f	f
+2024-02-20	2023-2024	West Michigan	Miami (OH)	77	58	140593	t	t
+2024-02-24	2023-2024	West Michigan	Buffalo	91	72	140594	t	t
+2024-02-27	2023-2024	West Michigan	Eastern Michigan	70	67	140595	f	f
+2024-03-05	2023-2024	West Michigan	Bowling Green	73	65	140596	f	t
+2024-03-08	2023-2024	West Michigan	Akron	90	84	140597	t	t
+2024-03-14	2023-2024	West Michigan	Ohio	82	55	140598	f	t
+2023-11-06	2023-2024	Wichita State	Lipscomb	76	59	140599	t	t
+2023-11-09	2023-2024	Wichita State	Western Kentucky	71	61	140600	t	t
+2023-11-12	2023-2024	Wichita State	vsFriends University	95	65	140601	t	t
+2023-11-16	2023-2024	Wichita State	Coastal Carolina	86	77	140602	t	f
+2023-11-17	2023-2024	Wichita State	Liberty	83	66	140603	f	t
+2023-11-19	2023-2024	Wichita State	Saint Louis	88	69	140604	t	t
+2023-11-25	2023-2024	Wichita State	Norfolk State	80	67	140605	t	t
+2023-11-29	2023-2024	Wichita State	Richmond	80	68	140606	t	t
+2023-12-03	2023-2024	Wichita State	Missouri	82	72	140607	f	f
+2023-12-09	2023-2024	Wichita State	South Dakota State	79	69	140608	f	t
+2023-12-16	2023-2024	Wichita State	Southern Illinois	69	68	140609	t	t
+2023-12-21	2023-2024	Wichita State	Kansas State	69	60	140610	f	t
+2023-12-30	2023-2024	Wichita State	2 Kansas	86	67	140611	f	t
+2024-01-04	2023-2024	Wichita State	North Texas	74	62	140612	f	t
+2024-01-07	2023-2024	Wichita State	Temple	68	61	140613	f	f
+2024-01-14	2023-2024	Wichita State	13 Memphis	112	86	140614	f	t
+2024-01-18	2023-2024	Wichita State	23 Florida Atlantic	86	77	140615	f	f
+2024-01-21	2023-2024	Wichita State	South Florida	72	68	140616	f	f
+2024-01-24	2023-2024	Wichita State	East Carolina	54	52	140617	f	t
+2024-01-28	2023-2024	Wichita State	SMU	77	72	140618	t	t
+2024-01-31	2023-2024	Wichita State	Tulsa	79	68	140619	f	f
+2024-02-03	2023-2024	Wichita State	Memphis	65	63	140620	f	f
+2024-02-07	2023-2024	Wichita State	UTSA	84	64	140621	t	t
+2024-02-15	2023-2024	Wichita State	East Carolina	68	55	140622	f	f
+2024-02-18	2023-2024	Wichita State	Charlotte	72	61	140623	f	f
+2024-02-21	2023-2024	Wichita State	Tulsa	79	63	140624	t	t
+2024-02-28	2023-2024	Wichita State	UAB	74	66	140625	t	f
+2024-03-02	2023-2024	Wichita State	Rice	87	66	140626	t	t
+2024-03-08	2023-2024	Wichita State	Tulane	85	75	140627	f	f
+2024-03-13	2023-2024	Wichita State	Rice	88	81	140628	t	t
+2024-03-14	2023-2024	Wichita State	Memphis	71	65	140629	t	t
+2024-03-15	2023-2024	Wichita State	UAB	72	60	140630	f	t
+2023-11-06	2023-2024	William & Mary	vsRegent	84	29	140631	t	t
+2023-11-09	2023-2024	William & Mary	American University	75	56	140632	t	t
+2023-11-11	2023-2024	William & Mary	George Washington	95	89	140633	f	f
+2023-11-16	2023-2024	William & Mary	Omaha	89	83	140634	f	t
+2023-11-19	2023-2024	William & Mary	Lindenwood	71	60	140635	f	t
+2023-11-25	2023-2024	William & Mary	UMBC	96	81	140636	t	t
+2023-11-28	2023-2024	William & Mary	Norfolk State	96	62	140637	f	f
+2023-12-02	2023-2024	William & Mary	Richmond	88	69	140638	f	f
+2023-12-06	2023-2024	William & Mary	Old Dominion	84	79	140639	t	t
+2023-12-10	2023-2024	William & Mary	vsVirginia-Lynchburg	99	50	140640	t	t
+2023-12-21	2023-2024	William & Mary	Pepperdine	71	59	140641	f	f
+2023-12-30	2023-2024	William & Mary	Navy	77	65	140642	f	f
+2024-01-04	2023-2024	William & Mary	Elon	77	70	140643	t	t
+2024-01-06	2023-2024	William & Mary	Drexel	77	55	140644	f	t
+2024-01-11	2023-2024	William & Mary	Hampton	73	61	140645	t	f
+2024-01-13	2023-2024	William & Mary	Stony Brook	63	59	140646	f	t
+2024-01-18	2023-2024	William & Mary	Campbell	77	64	140647	f	t
+2024-01-20	2023-2024	William & Mary	North Carolina A&T	76	69	140648	f	f
+2024-01-25	2023-2024	William & Mary	Hofstra	64	55	140649	f	f
+2024-01-27	2023-2024	William & Mary	Northeastern	72	68	140650	t	f
+2024-02-01	2023-2024	William & Mary	Delaware	81	53	140651	f	t
+2024-02-03	2023-2024	William & Mary	Charleston	84	83	140652	f	t
+2024-02-08	2023-2024	William & Mary	Monmouth	68	64	140653	f	f
+2024-02-10	2023-2024	William & Mary	Delaware	69	58	140654	f	f
+2024-02-15	2023-2024	William & Mary	Towson	61	52	140655	f	t
+2024-02-19	2023-2024	William & Mary	Charleston	65	57	140656	f	f
+2024-02-22	2023-2024	William & Mary	UNC Wilmington	81	65	140657	f	t
+2024-02-24	2023-2024	William & Mary	Stony Brook	75	62	140658	f	f
+2024-02-29	2023-2024	William & Mary	Elon	76	71	140659	f	f
+2024-03-02	2023-2024	William & Mary	Hampton	85	73	140660	t	t
+2024-03-08	2023-2024	William & Mary	North Carolina A&T	79	62	140661	t	t
+2024-03-09	2023-2024	William & Mary	Towson	67	56	140662	f	t
+2023-11-06	2023-2024	Winthrop	Clemson	78	56	140663	f	f
+2023-11-08	2023-2024	Winthrop	vsBrevard	98	44	140664	t	t
+2023-11-11	2023-2024	Winthrop	Drexel	74	72	140665	f	t
+2023-11-17	2023-2024	Winthrop	Holy Cross	89	51	140666	t	t
+2023-11-18	2023-2024	Winthrop	IUPUI	74	61	140667	t	t
+2023-11-19	2023-2024	Winthrop	Elon	78	70	140668	t	t
+2023-11-24	2023-2024	Winthrop	Georgia	78	69	140669	f	f
+2023-11-28	2023-2024	Winthrop	vsBob Jones	90	49	140670	t	t
+2023-12-02	2023-2024	Winthrop	Coastal Carolina	90	87	140671	t	f
+2023-12-05	2023-2024	Winthrop	Queens University	88	82	140672	t	t
+2023-12-10	2023-2024	Winthrop	Little Rock	85	68	140673	t	f
+2023-12-16	2023-2024	Winthrop	Xavier	75	59	140674	f	f
+2023-12-19	2023-2024	Winthrop	South Carolina	72	62	140675	f	f
+2023-12-22	2023-2024	Winthrop	Florida State	67	61	140676	f	f
+2023-12-29	2023-2024	Winthrop	vsToccoa Falls	113	62	140677	t	t
+2024-01-10	2023-2024	Winthrop	Presbyterian	81	71	140678	t	f
+2024-01-18	2023-2024	Winthrop	UNC Asheville	82	77	140679	f	t
+2024-01-20	2023-2024	Winthrop	Gardner-Webb	79	74	140680	f	f
+2024-01-24	2023-2024	Winthrop	Charleston Southern	78	59	140681	t	f
+2024-01-27	2023-2024	Winthrop	High Point	83	81	140682	f	t
+2024-02-03	2023-2024	Winthrop	UNC Asheville	82	78	140683	f	f
+2024-02-07	2023-2024	Winthrop	Charleston Southern	67	46	140684	t	t
+2024-02-10	2023-2024	Winthrop	Longwood	84	74	140685	f	f
+2024-02-15	2023-2024	Winthrop	Radford	85	69	140686	t	f
+2024-02-21	2023-2024	Winthrop	Presbyterian	78	55	140687	f	t
+2024-02-24	2023-2024	Winthrop	South Carolina Upstate	83	74	140688	t	t
+2024-03-02	2023-2024	Winthrop	Gardner-Webb	65	64	140689	f	t
+2024-03-08	2023-2024	Winthrop	Longwood	69	56	140690	f	t
+2023-11-06	2023-2024	Wisconsin	Arkansas State	105	76	140691	t	t
+2023-11-10	2023-2024	Wisconsin	9 Tennessee	80	70	140692	f	t
+2023-11-14	2023-2024	Wisconsin	Providence	72	59	140693	f	f
+2023-11-17	2023-2024	Wisconsin	Robert Morris	78	68	140694	t	t
+2023-11-20	2023-2024	Wisconsin	24 Virginia	65	41	140695	t	t
+2023-11-22	2023-2024	Wisconsin	SMU	69	61	140696	t	t
+2023-11-27	2023-2024	Wisconsin	Western Illinois	71	49	140697	t	t
+2023-12-02	2023-2024	Wisconsin	3 Marquette	75	64	140698	t	t
+2023-12-05	2023-2024	Wisconsin	Michigan State	70	57	140699	t	f
+2023-12-09	2023-2024	Wisconsin	1 Arizona	98	73	140700	f	f
+2023-12-14	2023-2024	Wisconsin	Jacksonville State	75	60	140701	t	t
+2023-12-22	2023-2024	Wisconsin	Chicago State	80	53	140702	t	t
+2024-01-02	2023-2024	Wisconsin	Iowa	83	72	140703	t	t
+2024-01-06	2023-2024	Wisconsin	Nebraska	88	72	140704	t	t
+2024-01-10	2023-2024	Wisconsin	Ohio State	71	60	140705	t	f
+2024-01-13	2023-2024	Wisconsin	Northwestern	71	63	140706	t	t
+2024-01-16	2023-2024	Wisconsin	Penn State	87	83	140707	f	f
+2024-01-19	2023-2024	Wisconsin	Indiana	91	79	140708	t	t
+2024-01-23	2023-2024	Wisconsin	Minnesota	61	59	140709	t	f
+2024-01-26	2023-2024	Wisconsin	Michigan State	81	66	140710	t	t
+2024-02-04	2023-2024	Wisconsin	2 Purdue	75	69	140711	f	t
+2024-02-07	2023-2024	Wisconsin	Michigan	72	68	140712	f	f
+2024-02-10	2023-2024	Wisconsin	Rutgers	78	56	140713	f	f
+2024-02-13	2023-2024	Wisconsin	Ohio State	62	54	140714	t	t
+2024-02-20	2023-2024	Wisconsin	Maryland	74	70	140715	t	t
+2024-02-27	2023-2024	Wisconsin	Indiana	74	70	140716	f	f
+2024-03-02	2023-2024	Wisconsin	13 Illinois	91	83	140717	f	t
+2024-03-07	2023-2024	Wisconsin	Rutgers	78	66	140718	t	t
+2024-03-10	2023-2024	Wisconsin	3 Purdue	78	70	140719	f	f
+2024-03-14	2023-2024	Wisconsin	Maryland	87	56	140720	t	t
+2024-03-15	2023-2024	Wisconsin	Northwestern	70	61	140721	t	t
+2024-03-17	2023-2024	Wisconsin	13 Illinois	93	87	140722	f	t
+2023-11-06	2023-2024	Wofford	vsBrevard	85	68	140723	t	t
+2023-11-11	2023-2024	Wofford	High Point	99	98	140724	t	t
+2023-11-14	2023-2024	Wofford	7 Tennessee	82	61	140725	f	f
+2023-11-19	2023-2024	Wofford	Virginia Tech	98	76	140726	f	f
+2023-11-24	2023-2024	Wofford	Canisius	76	67	140727	f	t
+2023-11-26	2023-2024	Wofford	Lipscomb	85	78	140728	f	t
+2023-12-06	2023-2024	Wofford	Gardner-Webb	81	66	140729	t	f
+2023-12-09	2023-2024	Wofford	Coastal Carolina	88	80	140730	t	f
+2023-12-17	2023-2024	Wofford	vsKentucky Christian	105	54	140731	t	t
+2023-12-20	2023-2024	Wofford	Oklahoma State	76	70	140732	f	f
+2023-12-29	2023-2024	Wofford	vsSouthern Wesleyan	75	55	140733	t	t
+2024-01-06	2023-2024	Wofford	Western Carolina	70	66	140734	f	f
+2024-01-10	2023-2024	Wofford	Mercer	74	73	140735	t	t
+2024-01-13	2023-2024	Wofford	The Citadel	72	71	140736	t	f
+2024-01-17	2023-2024	Wofford	East Tennessee State	75	73	140737	t	t
+2024-01-20	2023-2024	Wofford	UNC Greensboro	82	59	140738	f	f
+2024-01-24	2023-2024	Wofford	Chattanooga	79	65	140739	f	t
+2024-01-27	2023-2024	Wofford	Furman	77	67	140740	t	t
+2024-01-31	2023-2024	Wofford	Samford	81	79	140741	f	f
+2024-02-07	2023-2024	Wofford	East Tennessee State	57	50	140742	f	f
+2024-02-10	2023-2024	Wofford	The Citadel	77	64	140743	t	t
+2024-02-14	2023-2024	Wofford	Mercer	73	60	140744	t	f
+2024-02-17	2023-2024	Wofford	UNC Greensboro	58	47	140745	f	t
+2024-02-21	2023-2024	Wofford	Chattanooga	81	65	140746	f	f
+2024-02-24	2023-2024	Wofford	Furman	82	67	140747	f	f
+2024-02-28	2023-2024	Wofford	Samford	91	69	140748	t	t
+2024-03-02	2023-2024	Wofford	VMI	74	62	140749	t	f
+2024-03-09	2023-2024	Wofford	Chattanooga	75	57	140750	f	t
+2023-11-10	2023-2024	Wright State	Colorado State	105	77	140751	f	f
+2023-11-14	2023-2024	Wright State	Toledo	78	77	140752	f	t
+2023-11-16	2023-2024	Wright State	Indiana	89	80	140753	f	f
+2023-11-20	2023-2024	Wright State	Louisiana	91	85	140754	t	t
+2023-11-21	2023-2024	Wright State	Hofstra	85	76	140755	f	t
+2023-11-22	2023-2024	Wright State	Illinois State	74	49	140756	t	t
+2023-11-29	2023-2024	Wright State	IUPUI	103	74	140757	t	t
+2023-12-02	2023-2024	Wright State	Davidson	82	73	140758	f	f
+2023-12-07	2023-2024	Wright State	vsBethel (IN)	81	62	140759	t	t
+2023-12-12	2023-2024	Wright State	Western Kentucky	91	84	140760	f	t
+2023-12-19	2023-2024	Wright State	Miami (OH)	92	82	140761	t	t
+2023-12-22	2023-2024	Wright State	vsMuskingum	101	54	140762	t	t
+2023-12-29	2023-2024	Wright State	Green Bay	88	77	140763	f	f
+2023-12-31	2023-2024	Wright State	Milwaukee	91	83	140764	f	f
+2024-01-04	2023-2024	Wright State	Cleveland State	82	70	140765	t	t
+2024-01-06	2023-2024	Wright State	Purdue Fort Wayne	106	98	140766	t	f
+2024-01-10	2023-2024	Wright State	Robert Morris	101	76	140767	t	f
+2024-01-12	2023-2024	Wright State	Youngstown State	81	71	140768	f	f
+2024-01-18	2023-2024	Wright State	Green Bay	88	81	140769	f	t
+2024-01-20	2023-2024	Wright State	Milwaukee	95	81	140770	t	t
+2024-01-28	2023-2024	Wright State	IUPUI	83	76	140771	t	f
+2024-02-01	2023-2024	Wright State	Youngstown State	88	77	140772	f	t
+2024-02-04	2023-2024	Wright State	Northern Kentucky	85	78	140773	t	f
+2024-02-08	2023-2024	Wright State	Detroit Mercy	92	85	140774	t	t
+2024-02-10	2023-2024	Wright State	Oakland	74	60	140775	f	t
+2024-02-17	2023-2024	Wright State	Robert Morris	101	71	140776	t	t
+2024-02-22	2023-2024	Wright State	Detroit Mercy	93	78	140777	t	f
+2024-02-25	2023-2024	Wright State	Oakland	96	75	140778	t	f
+2024-03-02	2023-2024	Wright State	Northern Kentucky	94	88	140779	t	t
+2023-11-07	2023-2024	Wyoming	vsNorthern New Mexico	104	56	140780	t	t
+2023-11-11	2023-2024	Wyoming	Cal Poly	80	66	140781	t	t
+2023-11-16	2023-2024	Wyoming	Saint Louis	79	69	140782	f	t
+2023-11-17	2023-2024	Wyoming	Charleston	67	60	140783	t	t
+2023-11-19	2023-2024	Wyoming	Furman	78	71	140784	t	t
+2023-11-26	2023-2024	Wyoming	15 Texas	86	63	140785	f	f
+2023-12-01	2023-2024	Wyoming	Portland	81	70	140786	f	f
+2023-12-05	2023-2024	Wyoming	vsSouth Dakota Mines	80	59	140787	t	t
+2023-12-09	2023-2024	Wyoming	Stephen F. Austin	78	70	140788	t	t
+2023-12-16	2023-2024	Wyoming	Weber State	84	71	140789	f	t
+2023-12-20	2023-2024	Wyoming	South Dakota State	78	65	140790	t	t
+2023-12-21	2023-2024	Wyoming	UTEP	78	67	140791	f	f
+2023-12-30	2023-2024	Wyoming	14 BYU	94	68	140792	f	f
+2024-01-02	2023-2024	Wyoming	San José State	75	73	140793	t	t
+2024-01-06	2023-2024	Wyoming	New Mexico	77	60	140794	f	f
+2024-01-09	2023-2024	Wyoming	20 Utah State	83	59	140795	f	f
+2024-01-13	2023-2024	Wyoming	Fresno State	68	67	140796	t	t
+2024-01-20	2023-2024	Wyoming	Nevada	98	93	140797	t	t
+2024-01-23	2023-2024	Wyoming	San Diego State	81	65	140798	f	f
+2024-01-30	2023-2024	Wyoming	Air Force	83	72	140799	t	f
+2024-02-03	2023-2024	Wyoming	UNLV	62	48	140800	f	f
+2024-02-06	2023-2024	Wyoming	25 New Mexico	91	73	140801	f	t
+2024-02-14	2023-2024	Wyoming	Utah State	84	76	140802	f	t
+2024-02-17	2023-2024	Wyoming	San José State	80	75	140803	t	f
+2024-02-20	2023-2024	Wyoming	Nevada	76	58	140804	f	f
+2024-02-24	2023-2024	Wyoming	Boise State	92	72	140805	f	t
+2024-03-02	2023-2024	Wyoming	Colorado State	70	62	140806	f	f
+2024-03-05	2023-2024	Wyoming	Air Force	74	63	140807	t	t
+2024-03-09	2023-2024	Wyoming	Fresno State	86	47	140808	t	f
+2024-03-13	2023-2024	Wyoming	Fresno State	77	73	140809	f	t
+2023-11-06	2023-2024	Xavier	Robert Morris	77	63	140810	t	t
+2023-11-10	2023-2024	Xavier	Jacksonville State	79	56	140811	t	t
+2023-11-13	2023-2024	Xavier	2 Purdue	83	71	140812	f	f
+2023-11-17	2023-2024	Xavier	Washington	74	71	140813	f	t
+2023-11-19	2023-2024	Xavier	St. Mary's	66	49	140814	t	t
+2023-11-24	2023-2024	Xavier	Bryant	100	75	140815	t	t
+2023-11-27	2023-2024	Xavier	Oakland	78	76	140816	f	t
+2023-12-01	2023-2024	Xavier	6 Houston	66	60	140817	f	t
+2023-12-05	2023-2024	Xavier	Delaware	87	80	140818	f	t
+2023-12-09	2023-2024	Xavier	Cincinnati	84	79	140819	t	t
+2023-12-16	2023-2024	Xavier	Winthrop	75	59	140820	t	t
+2023-12-20	2023-2024	Xavier	St. John's	81	66	140821	f	f
+2023-12-23	2023-2024	Xavier	Seton Hall	74	54	140822	t	t
+2024-01-03	2023-2024	Xavier	Villanova	66	65	140823	f	f
+2024-01-10	2023-2024	Xavier	4 UConn	80	75	140824	f	t
+2024-01-13	2023-2024	Xavier	Providence	85	65	140825	t	f
+2024-01-16	2023-2024	Xavier	Butler	85	71	140826	t	t
+2024-01-19	2023-2024	Xavier	Georgetown	92	91	140827	t	t
+2024-01-23	2023-2024	Xavier	17 Creighton	85	78	140828	f	f
+2024-01-28	2023-2024	Xavier	1 UConn	99	56	140829	f	f
+2024-01-31	2023-2024	Xavier	St. John's	88	77	140830	t	t
+2024-02-03	2023-2024	Xavier	DePaul	93	68	140831	t	f
+2024-02-07	2023-2024	Xavier	Villanova	56	53	140832	t	t
+2024-02-10	2023-2024	Xavier	19 Creighton	78	71	140833	f	t
+2024-02-14	2023-2024	Xavier	Seton Hall	88	70	140834	f	f
+2024-02-21	2023-2024	Xavier	Providence	79	75	140835	f	t
+2024-02-25	2023-2024	Xavier	7 Marquette	88	64	140836	f	f
+2024-02-28	2023-2024	Xavier	DePaul	91	58	140837	t	t
+2024-03-02	2023-2024	Xavier	Georgetown	98	93	140838	t	f
+2024-03-06	2023-2024	Xavier	Butler	72	66	140839	f	f
+2024-03-09	2023-2024	Xavier	8 Marquette	86	80	140840	f	t
+2024-03-13	2023-2024	Xavier	Butler	76	72	140841	t	t
+2024-03-14	2023-2024	Xavier	2 UConn	87	60	140842	f	t
+2023-11-06	2023-2024	Yale	vsVassar	102	53	140843	t	t
+2023-11-10	2023-2024	Yale	11 Gonzaga	86	71	140844	f	f
+2023-11-12	2023-2024	Yale	Loyola Marymount	83	80	140845	t	f
+2023-11-17	2023-2024	Yale	Colgate	68	50	140846	t	t
+2023-11-26	2023-2024	Yale	Rhode Island	76	72	140847	f	f
+2023-11-29	2023-2024	Yale	Stony Brook	79	71	140848	t	t
+2023-12-02	2023-2024	Yale	Vermont	66	65	140849	f	f
+2023-12-06	2023-2024	Yale	Fairfield	75	71	140850	f	t
+2023-12-08	2023-2024	Yale	vsColby-Sawyer	95	36	140851	t	t
+2023-12-11	2023-2024	Yale	Quinnipiac	73	66	140852	t	f
+2023-12-22	2023-2024	Yale	2 Kansas	75	60	140853	f	f
+2023-12-30	2023-2024	Yale	Santa Clara	66	58	140854	t	f
+2024-01-09	2023-2024	Yale	Brown	80	70	140855	t	f
+2024-01-15	2023-2024	Yale	Columbia	89	70	140856	t	t
+2024-01-20	2023-2024	Yale	Dartmouth	76	51	140857	t	f
+2024-01-27	2023-2024	Yale	Harvard	78	65	140858	t	f
+2024-02-02	2023-2024	Yale	Princeton	70	64	140859	t	t
+2024-02-03	2023-2024	Yale	Pennsylvania	74	58	140860	t	t
+2024-02-10	2023-2024	Yale	Cornell	80	78	140861	t	t
+2024-02-16	2023-2024	Yale	Pennsylvania	76	62	140862	t	f
+2024-02-17	2023-2024	Yale	Princeton	73	62	140863	f	f
+2024-02-23	2023-2024	Yale	Cornell	65	62	140864	f	f
+2024-02-24	2023-2024	Yale	Columbia	84	76	140865	t	f
+2024-03-01	2023-2024	Yale	Dartmouth	80	56	140866	t	t
+2024-03-02	2023-2024	Yale	Harvard	80	60	140867	t	t
+2024-03-16	2023-2024	Yale	Cornell	69	57	140868	t	t
+2024-03-17	2023-2024	Yale	Brown	62	61	140869	t	t
+2023-11-06	2023-2024	Youngstown State	Louisiana	72	62	140870	f	f
+2023-11-10	2023-2024	Youngstown State	Michigan	92	62	140871	f	f
+2023-11-13	2023-2024	Youngstown State	Ohio Christian	99	71	140872	t	t
+2023-11-17	2023-2024	Youngstown State	Utah Tech	75	68	140873	t	t
+2023-11-19	2023-2024	Youngstown State	vsLake Erie	79	57	140874	t	t
+2023-11-24	2023-2024	Youngstown State	Dayton	77	69	140875	f	f
+2023-11-29	2023-2024	Youngstown State	Cleveland State	94	69	140876	t	t
+2023-12-02	2023-2024	Youngstown State	Robert Morris	71	57	140877	t	f
+2023-12-06	2023-2024	Youngstown State	Ohio	78	72	140878	t	f
+2023-12-09	2023-2024	Youngstown State	Western Michigan	72	68	140879	t	f
+2023-12-14	2023-2024	Youngstown State	vsBethany (WV)	107	70	140880	t	t
+2023-12-18	2023-2024	Youngstown State	vsWestminster (PA)	117	45	140881	t	t
+2023-12-21	2023-2024	Youngstown State	Navy	75	65	140882	t	t
+2023-12-31	2023-2024	Youngstown State	Oakland	88	81	140883	f	t
+2024-01-04	2023-2024	Youngstown State	Northern Kentucky	79	76	140884	f	f
+2024-01-07	2023-2024	Youngstown State	IUPUI	75	65	140885	t	t
+2024-01-10	2023-2024	Youngstown State	Purdue Fort Wayne	93	85	140886	t	t
+2024-01-12	2023-2024	Youngstown State	Wright State	81	71	140887	t	t
+2024-01-17	2023-2024	Youngstown State	Oakland	70	67	140888	f	f
+2024-01-20	2023-2024	Youngstown State	Detroit Mercy	105	64	140889	t	f
+2024-01-25	2023-2024	Youngstown State	IUPUI	78	50	140890	t	f
+2024-01-28	2023-2024	Youngstown State	Northern Kentucky	82	52	140891	t	t
+2024-02-01	2023-2024	Youngstown State	Wright State	88	77	140892	t	f
+2024-02-04	2023-2024	Youngstown State	Purdue Fort Wayne	82	78	140893	f	f
+2024-02-10	2023-2024	Youngstown State	Green Bay	84	83	140894	f	t
+2024-02-14	2023-2024	Youngstown State	Robert Morris	87	77	140895	t	t
+2024-02-17	2023-2024	Youngstown State	Cleveland State	81	73	140896	f	f
+2024-02-25	2023-2024	Youngstown State	Green Bay	71	59	140897	t	f
+2024-02-28	2023-2024	Youngstown State	Detroit Mercy	69	55	140898	t	t
+2024-03-07	2023-2024	Youngstown State	Cleveland State	82	70	140899	f	t
 \.
 
 
@@ -40628,14 +51584,14 @@ SELECT pg_catalog.setval('public.django_migrations_id_seq', 33, true);
 -- Name: marchmadness_apranking_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.marchmadness_apranking_id_seq', 150, true);
+SELECT pg_catalog.setval('public.marchmadness_apranking_id_seq', 176, true);
 
 
 --
 -- Name: marchmadness_game_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.marchmadness_game_id_seq', 129968, true);
+SELECT pg_catalog.setval('public.marchmadness_game_id_seq', 140899, true);
 
 
 --
