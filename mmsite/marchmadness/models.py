@@ -148,8 +148,16 @@ class TournamentRanking(models.Model):
         r.append(f"{self.ranking}. {self.school_name}")
         if self.ap_ranking:
             r.append(f"AP Rank: {self.ap_ranking}")
-        r.append(f"Conference: {self.school.conference}")
-        r.append(f"Record: {self.record}  ({self.recent_record(10)} in last 10 games)")
+        try:
+            r.append(f"Conference: {self.school.conference}")
+        except AttributeError:
+            pass
+        try:
+            r.append(
+                f"Record: {self.record}  ({self.recent_record(10)} in last 10 games)"
+            )
+        except AttributeError:
+            pass
         return r
 
     @property

@@ -23,7 +23,7 @@ parser.add_argument(
     "-y",
     "--year",
     type=int,
-    default=2023,
+    default=2024,
     help="Year of tournament; must be 2022 or later",
 )
 parser.add_argument(

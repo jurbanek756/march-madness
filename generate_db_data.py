@@ -1,10 +1,8 @@
-"""
-Hacky script used to populate databases from previously captured static data
-"""
+#!/usr/bin/env python
 
-# Regular Imports
 import argparse
 import datetime
+import importlib
 import logging
 from math import isnan
 import os
@@ -79,54 +77,51 @@ def add_schools():
     logging.info("Adding location and is_private info")
     add_location_and_is_private_to_dataframe(df)
     df = df[~df["Name"].duplicated(keep=False)]
-    schools_to_insert = []
     for i, row in df.iterrows():
-        school = School(
-            name=row["Name"],
-            formal_name=row["School"],
-            nickname=row["Nickname"],
-            home_arena=row["Home arena"],
-            conference=row["Conference"],
-            tournament_appearances=get_parens_num(row["Tournament appearances"]),
-            final_four_appearances=get_parens_num(row["Final Four appearances"]),
-            championship_wins=get_parens_num(row["Championship wins"]),
-            primary_color=row["Primary Color"],
-            secondary_color=row["Secondary Color"],
-            location=row["Location"],
-            is_private=insert_bool(row["Is Private"]),
-        )
-        schools_to_insert.append(school)
-    School.objects.bulk_create(schools_to_insert)
+        defaults = {
+            "formal_name": row["School"],
+            "nickname": row["Nickname"],
+            "home_arena": row["Home arena"],
+            "conference": row["Conference"],
+            "tournament_appearances": get_parens_num(row["Tournament appearances"]),
+            "final_four_appearances": get_parens_num(row["Final Four appearances"]),
+            "championship_wins": get_parens_num(row["Championship wins"]),
+            "primary_color": row["Primary Color"],
+            "secondary_color": row["Secondary Color"],
+            "location": row["Location"],
+            "is_private": insert_bool(row["Is Private"]),
+        }
+        unique_fields = {"name": row["Name"]}
+        School.objects.update_or_create(defaults=defaults, **unique_fields)
 
 
 def add_games(year):
     previous_year = year - 1
     games_dict = get_regular_season_games(SESSION, year)
-    games_to_insert = []
     for school, games in games_dict.items():
         for game in games:
             try:
                 home_score, away_score = parse_score(game["score"])
             except ValueError:
                 continue
-            game_model = Game(
-                date=game["game_date"],
-                season=f"{previous_year}-{year}",
-                school_name=school,
-                opponent=game["opponent"],
-                school_score=home_score,
-                opponent_score=away_score,
-                home_game=game["home_game"],
-                win=game["win"],
-            )
-            games_to_insert.append(game_model)
-    Game.objects.bulk_create(games_to_insert)
+            defaults = {
+                "season": f"{previous_year}-{year}",
+                "home_game": game["home_game"],
+                "win": game["win"],
+            }
+            unique_fields = {
+                "date": game["game_date"],
+                "school_name": school,
+                "opponent": game["opponent"],
+                "school_score": home_score,
+                "opponent_score": away_score,
+            }
+            Game.objects.update_or_create(defaults=defaults, **unique_fields)
 
 
 def add_ap_ranking(year):
     data = SESSION.get(AP_RANKINGS).content
     ap_ranks = BeautifulSoup(data, "html.parser")
-    schools_to_insert = list()
     for d in ap_ranks.find("table").find_all("tr")[1:]:
         td = d.find_all("td")
         name = td[1].string.split("(")[0].strip()
@@ -134,51 +129,52 @@ def add_ap_ranking(year):
         if name in ap_replacement_dict:
             name = ap_replacement_dict[name]
         ranking = int(td[0].string)
-        school = APRanking(school_name=name, ranking=ranking, year=year)
-        schools_to_insert.append(school)
-    APRanking.objects.bulk_create(schools_to_insert)
+        defaults = {"ranking": ranking}
+        unique_fields = {"school_name": name, "year": year}
+        APRanking.objects.update_or_create(defaults=defaults, **unique_fields)
 
 
 def add_tournament_rankings_helper(data, conference_name, year):
-    schools = []
     play_in_rank = data.pop("play_in_rank")
     for rank, school_name in data.items():
         play_in = False
         if rank == play_in_rank or rank == "play_in":
             play_in = True
             rank = play_in_rank
-        school = TournamentRanking(
-            school_name=school_name,
-            ranking=rank,
-            region=conference_name,
-            play_in=play_in,
-            year=year,
-        )
-        schools.append(school)
-    return schools
+        defaults = {
+            "ranking": rank,
+            "region": conference_name,
+            "play_in": play_in,
+        }
+        unique_fields = {
+            "school_name": school_name,
+            "year": year,
+        }
+        TournamentRanking.objects.update_or_create(defaults=defaults, **unique_fields)
 
 
 def add_tournament_rankings(year):
-    schools = []
-    if year == 2022:
-        import tournament_rankings.r2022 as ranking_year
-    elif year == 2023:
-        import tournament_rankings.r2023 as ranking_year
-    else:
-        logging.error("Unhandled year provided")
-        return
-    schools.extend(add_tournament_rankings_helper(ranking_year.west, WEST, year))
-    schools.extend(add_tournament_rankings_helper(ranking_year.east, EAST, year))
-    schools.extend(add_tournament_rankings_helper(ranking_year.south, MIDWEST, year))
-    schools.extend(add_tournament_rankings_helper(ranking_year.midwest, SOUTH, year))
-    TournamentRanking.objects.bulk_create(schools)
+    try:
+        ranking_year = importlib.import_module(f"tournament_rankings.r{year}")
+    except ModuleNotFoundError:
+        logging.error(f"No tournament rankings found for year {year}")
+        raise
+    add_tournament_rankings_helper(ranking_year.west, WEST, year)
+    add_tournament_rankings_helper(ranking_year.east, EAST, year)
+    add_tournament_rankings_helper(ranking_year.south, MIDWEST, year)
+    add_tournament_rankings_helper(ranking_year.midwest, SOUTH, year)
 
 
 def add_tournament_info(year):
-    tournaments = [
-        Tournament(year, SOUTH, EAST, MIDWEST, WEST),
-    ]
-    Tournament.objects.bulk_create(tournaments)
+    # TODO: This needs to be changeable
+    defaults = {
+        "left_top_region": EAST,
+        "left_bottom_region": WEST,
+        "right_top_region": SOUTH,
+        "right_bottom_region": MIDWEST,
+    }
+    unique_fields = {"year": year}
+    Tournament.objects.update_or_create(defaults=defaults, **unique_fields)
 
 
 if __name__ == "__main__":
