@@ -127,7 +127,7 @@ class MarchMadnessTournament:
         return self.predict(left, right, **self.prediction_method_kwargs)
 
     def first_four(self):
-        lt = self.left_top.first_four()
+        lt = None
         if self.log_results:
             logger.info(
                 "%s First Four Winner: %s\n", self.tournament_info.left_top_region, lt

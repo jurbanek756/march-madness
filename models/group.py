@@ -14,11 +14,11 @@ from marchmadness.models import TournamentRanking
 
 class Group:
     def __init__(
-        self,
-        year,
-        region,
-        prediction_method,
-        prediction_method_kwargs,
+            self,
+            year,
+            region,
+            prediction_method,
+            prediction_method_kwargs,
     ):
         self.year = year
         self.region = region
@@ -65,35 +65,41 @@ class Group:
             16: self.sixteen,
         }
         play_in_teams = self.teams.filter(play_in=True)
-        play_in_rank = play_in_teams.first().ranking
-        rankings[play_in_rank] = play_in_teams[0], play_in_teams[1]
+        if play_in_teams.first() is not None:
+            i=0
+            for x in range(play_in_teams.count() // 2):
+                play_in_rank = play_in_teams[x+i].ranking
+                rankings[play_in_rank] = play_in_teams[i], play_in_teams[i+1]
+                i = i+2
+            # play_in_rank = play_in_teams.first().ranking
         return rankings
 
     def first_four(self):
         play_in_teams = self.teams.filter(play_in=True)
-        first_four_winner = self.predict(
-            play_in_teams[0],
-            play_in_teams[1],
-            region=self.region,
-            round_name="First Four",
-            **self.prediction_method_kwargs,
-        )
-        if first_four_winner.ranking == 16:
-            self.sixteen = first_four_winner
-        elif first_four_winner.ranking == 15:
-            self.fifteen = first_four_winner
-        elif first_four_winner.ranking == 14:
-            self.fourteen = first_four_winner
-        elif first_four_winner.ranking == 13:
-            self.thirteen = first_four_winner
-        elif first_four_winner.ranking == 12:
-            self.twelve = first_four_winner
-        elif first_four_winner.ranking == 11:
-            self.eleven = first_four_winner
-        elif first_four_winner.ranking == 10:
-            self.ten = first_four_winner
-        else:
-            raise ValueError("Unhandled play-in rank")
+        for x in range(play_in_teams.count() // 2):
+            first_four_winner = self.predict(
+                play_in_teams[2*x],
+                play_in_teams[2*x+1],
+                region=self.region,
+                round_name="First Four",
+                **self.prediction_method_kwargs,
+            )
+            if first_four_winner.ranking == 16:
+                self.sixteen = first_four_winner
+            elif first_four_winner.ranking == 15:
+                self.fifteen = first_four_winner
+            elif first_four_winner.ranking == 14:
+                self.fourteen = first_four_winner
+            elif first_four_winner.ranking == 13:
+                self.thirteen = first_four_winner
+            elif first_four_winner.ranking == 12:
+                self.twelve = first_four_winner
+            elif first_four_winner.ranking == 11:
+                self.eleven = first_four_winner
+            elif first_four_winner.ranking == 10:
+                self.ten = first_four_winner
+            else:
+                raise ValueError("Unhandled play-in rank")
         return first_four_winner
 
     def first_round(self):
